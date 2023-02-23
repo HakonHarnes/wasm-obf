@@ -10,3 +10,4 @@ WORKDIR /minos
 
 COPY . .
 
+cmd ["python", "run_minos.py"]

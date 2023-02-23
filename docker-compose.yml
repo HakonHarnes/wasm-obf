@@ -1,0 +1,7 @@
+version: "3"
+services:
+  minos:
+    build: ./detection/minos
+    volumes:
+      - /home/hakon/wasm-obfuscation/binaries:/minos/binaries
+      - /home/hakon/wasm-obfuscation/utils/:/minos/utils
