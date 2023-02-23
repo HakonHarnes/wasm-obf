@@ -1,0 +1,8 @@
+keras
+matplotlib
+modin
+numpy
+pandas
+Pillow
+scikit_learn
+tensorflow
