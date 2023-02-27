@@ -24,7 +24,8 @@ def analyze():
     print('---------\n')
 
     similarity = calculate_cosine_similarity(
-        "./binaries/original/mutated.wasm", "./binaries/original/original-miner.wasm", 8)
+        "./binaries/original/mutated.wasm",
+        "./binaries/original/original-miner.wasm", 8)
 
     print(similarity)
 

@@ -14,7 +14,8 @@ def calculate_cosine_similarity(f1, f2, n):
     hex_list1 = [hex(byte) for byte in c1]
     hex_list2 = [hex(byte) for byte in c2]
 
-    # Convert the hex lists to strings and create a CountVectorizer object with n-grams
+    # Convert the hex lists to strings and create a CountVectorizer
+    # object with n-grams
     hex_str1 = ' '.join(hex_list1)
     hex_str2 = ' '.join(hex_list2)
 
