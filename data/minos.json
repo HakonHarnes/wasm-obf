@@ -4,6 +4,14 @@
         "malicious": true,
         "input": {
             "path": "/minos/binaries/original",
+            "filename": "miner-mod.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": true,
+        "input": {
+            "path": "/minos/binaries/original",
             "filename": "original-miner.wasm"
         }
     },
@@ -13,6 +21,14 @@
         "input": {
             "path": "/minos/binaries/original",
             "filename": "original-benign.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "mutated.wasm"
         }
     }
 ]

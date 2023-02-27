@@ -11,4 +11,4 @@ else
 fi
 
 # Remove files ending with "{keyword}.json" recursively in ../binaries
-find "${dir}/../detection/data" -name "*${keyword}.json" -type f -delete
+find "${dir}/../data" -name "*${keyword}.json" -type f -delete

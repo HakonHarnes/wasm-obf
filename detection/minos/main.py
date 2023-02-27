@@ -1,4 +1,5 @@
 from utils.file_utils import get_unanalyzed_binaries, get_metadata_filename, write_json
+from src.imaginator import encode
 
 import os
 
@@ -11,6 +12,8 @@ metadata_path = f'{dir_path}/data'
 def run_minos(file):
     status = os.system(f"python src/minio.py {file} >/dev/null 2>&1")
     malicious = status != 0
+
+    encode(file, "./data")
 
     return malicious
 

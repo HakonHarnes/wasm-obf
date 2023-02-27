@@ -1,0 +1,8 @@
+{
+    "method": "minos",
+    "malicious": false,
+    "input": {
+        "path": "/minos/binaries/original",
+        "filename": "mutated.wasm"
+    }
+}
