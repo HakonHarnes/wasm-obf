@@ -3,5 +3,15 @@ services:
   minos:
     build: ./detection/minos
     volumes:
-      - /home/hakon/wasm-obfuscation/binaries:/minos/binaries
-      - /home/hakon/wasm-obfuscation/utils/:/minos/utils
+      - ./detection/minos/main.py:/minos/main.py
+      - ./binaries:/minos/binaries
+      - ./data/:/minos/data
+      - ./utils/:/minos/utils
+  analysis:
+    build: ./analysis
+    volumes:
+      - ./analysis/main.py:/analysis/main.py
+      - ./analysis/scripts:/analysis/scripts
+      - ./data/:/analysis/data
+      - ./binaries/:/analysis/binaries
+      - ./utils/:/analysis/utils

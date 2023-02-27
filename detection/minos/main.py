@@ -4,6 +4,9 @@ import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
+binary_path = f'{dir_path}/binaries'
+metadata_path = f'{dir_path}/data'
+
 
 def run_minos(file):
     status = os.system(f"python src/minio.py {file} >/dev/null 2>&1")
@@ -14,9 +17,9 @@ def run_minos(file):
 
 if __name__ == "__main__":
 
-    binaries = get_unanalyzed_binaries(f'{dir_path}/binaries', "minos")
+    binaries = get_unanalyzed_binaries(binary_path, metadata_path, "minos")
     if not binaries:
-        print("No binaries to analyze")
+        print("No binaries to analyze!")
         exit(0)
 
     for binary in binaries:
@@ -27,7 +30,7 @@ if __name__ == "__main__":
         print(f'Malicious: {malicious}\n')
 
         metadata_filename = get_metadata_filename(binary["filename"], "minos")
-        output_path = os.path.join(binary["path"], metadata_filename)
+        output_path = os.path.join(metadata_path, metadata_filename)
 
         data = {
             "method": "minos",
