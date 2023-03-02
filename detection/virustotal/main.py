@@ -110,7 +110,7 @@ if __name__ == "__main__":
             "result": {k: v for k, v in file.last_analysis_stats.items()}
         }
 
-        print(data)
+        print(f'Malicious: {file.last_analysis_stats["malicious"]}\n')
 
         write_json(output_path, data)
         client.close()
