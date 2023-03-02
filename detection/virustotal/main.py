@@ -12,6 +12,9 @@ import vt
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
+binary_path = f'{dir_path}/binaries'
+metadata_path = f'{dir_path}/data'
+
 
 def calculate_file_hash(file_path):
     """
@@ -27,16 +30,9 @@ def check_existing_file(client, file_hash):
     Checks if a file with the specified hash already exists on VirusTotal.
     """
     try:
-        file_report = client.get_object('/files/{}'.format(file_hash))
-        if file_report['attributes']['total_votes']['malicious'] > 0:
-            print('File already detected as malicious on VirusTotal')
-        else:
-            print('File already uploaded to VirusTotal')
-        return True
-    except vt.error.APIError as e:
-        if e.code != 404:
-            raise
-        return False
+        return client.get_object(f'/files/{file_hash}')
+    except:
+        return None
 
 
 def upload_file(client, file_path):
@@ -54,34 +50,29 @@ def poll_analysis_status(client, analysis_id):
     Polls the status of a VirusTotal analysis until it is complete.
     """
     while True:
-        analysis = client.get_object('/analyses/{}'.format(analysis_id))
+        analysis = client.get_object(f'/analyses/{analysis_id}')
         if analysis.status == 'completed':
             break
 
         time.sleep(10)
 
 
-def check_scan_results(client, hashes):
+def check_scan_results(client, file_hash):
     """
     Checks the scan results for the specified file hashes and reports whether each file was detected as malicious or not.
     """
-    for file_hash in hashes:
-        file_report = client.get_object('/files/{}'.format(file_hash))
-        if file_report['attributes']['total_votes']['malicious'] > 0:
-            print('File {} detected as malicious on VirusTotal'.format(
-                file_report['attributes']['md5']))
-        else:
-            print('File {} not detected as malicious on VirusTotal'.format(
-                file_report['attributes']['md5']))
+    file_report = client.get_object(f'/files/{file_hash}')
+    return file_report
 
 
 if __name__ == "__main__":
     # Set up VirusTotal client
-    api_key = '<your_api_key_here>'
+    api_key = '06824e020451c6b96e58f072e9cf1e25b61203a72afa61aab7773fd7d02f28cb'
     client = vt.Client(api_key)
 
     # Get list of unanalyzed binaries
-    binaries = get_unanalyzed_binaries(f'{dir_path}/binaries', "minos")
+    binaries = get_unanalyzed_binaries(
+        f'{dir_path}/binaries', metadata_path, "virustotal")
     if not binaries:
         print("No binaries to analyze")
         exit(0)
@@ -90,40 +81,36 @@ if __name__ == "__main__":
         input_path = os.path.join(binary["path"], binary["filename"])
         print(f'Processing {input_path}...')
 
-        # Calculate file hash for duplicate checking
         file_hash = calculate_file_hash(input_path)
+        file = check_existing_file(client, file_hash)
 
-        # Check if file already exists on VirusTotal
-        if check_existing_file(client, file_hash):
+        if file is None:
+            analysis_id = upload_file(client, input_path)
+            poll_analysis_status(client, analysis_id)
+            file = check_scan_results(client, file_hash)
+
+        if file is None:
             continue
 
-        # Upload file to VirusTotal
-        analysis_id = upload_file(client, input_path)
-
-        # Poll analysis status until complete
-        poll_analysis_status(client, analysis_id)
-
-        # Check scan results
-        check_scan_results(client, [file_hash])
-
-        metadata_filename = get_metadata_filename(binary["filename"], "minos")
-        output_path = os.path.join(binary["path"], metadata_filename)
+        # Write result to file
+        metadata_filename = get_metadata_filename(
+            binary["filename"], "virustotal")
+        output_path = os.path.join(metadata_path, metadata_filename)
 
         data = {
-            "method": "vt-py",
-            "malicious": None,
+            "method": "virustotal",
+            "malicious": file.last_analysis_stats["malicious"] > 0,
 
             "input": {
                 "path": binary["path"],
                 "filename": binary["filename"]
             },
 
-            "vt_analysis_id": analysis_id,
-            "vt_file_hash": file_hash
+            "file_hash": file_hash,
+            "result": {k: v for k, v in file.last_analysis_stats.items()}
         }
 
-        # Write metadata to file
-        write_json(output_path, data)
+        print(data)
 
-        # Close VirusTotal client
+        write_json(output_path, data)
         client.close()

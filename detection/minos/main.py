@@ -13,7 +13,7 @@ def run_minos(file):
     status = os.system(f"python src/minio.py {file} >/dev/null 2>&1")
     malicious = status != 0
 
-    encode(file, "./data")
+    encode(file, "./data/img")
 
     return malicious
 

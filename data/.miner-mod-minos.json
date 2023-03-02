@@ -1,8 +1,0 @@
-{
-    "method": "minos",
-    "malicious": true,
-    "input": {
-        "path": "/minos/binaries/original",
-        "filename": "miner-mod.wasm"
-    }
-}

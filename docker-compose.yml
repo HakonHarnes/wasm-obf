@@ -7,6 +7,13 @@ services:
       - ./binaries:/minos/binaries
       - ./data/:/minos/data
       - ./utils/:/minos/utils
+  virustotal:
+    build: ./detection/virustotal
+    volumes:
+      - ./detection/virustotal/main.py:/virustotal/main.py
+      - ./binaries:/virustotal/binaries
+      - ./data/:/virustotal/data
+      - ./utils/:/virustotal/utils
   analysis:
     build: ./analysis
     volumes:
