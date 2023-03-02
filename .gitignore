@@ -1,1 +1,7 @@
 __pycache__
+node_modules 
+*.wasm
+*.wat
+*.png
+*.7z
+.*.json

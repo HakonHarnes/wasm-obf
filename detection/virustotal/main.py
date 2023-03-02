@@ -39,9 +39,12 @@ def upload_file(client, file_path):
     """
     Uploads a file to VirusTotal and returns the analysis ID.
     """
-    print('Uploading file: {}'.format(file_path))
-    with open(file_path, 'rb') as f:
-        analysis = client.scan_file(f)
+    print(f'Uploading file: {file_path}')
+    with open(file_path, 'rb') as file:
+        try:
+            analysis = client.scan_file(file)
+        except:
+            return None
     return analysis.id
 
 
@@ -77,15 +80,17 @@ if __name__ == "__main__":
         print("No binaries to analyze")
         exit(0)
 
-    for binary in binaries:
+    for i, binary in enumerate(binaries):
         input_path = os.path.join(binary["path"], binary["filename"])
-        print(f'Processing {input_path}...')
+        print(f'Processing [{i}/{len(binaries)}] {input_path}')
 
         file_hash = calculate_file_hash(input_path)
         file = check_existing_file(client, file_hash)
 
         if file is None:
             analysis_id = upload_file(client, input_path)
+            if analysis_id is None:
+                continue
             poll_analysis_status(client, analysis_id)
             file = check_scan_results(client, file_hash)
 

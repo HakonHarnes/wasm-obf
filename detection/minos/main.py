@@ -25,9 +25,9 @@ if __name__ == "__main__":
         print("No binaries to analyze!")
         exit(0)
 
-    for binary in binaries:
+    for i, binary in enumerate(binaries):
         input_path = os.path.join(binary["path"], binary["filename"])
-        print(f'Processing {input_path}...')
+        print(f'Processing [{i}/{len(binaries)}] {input_path}')
 
         malicious = run_minos(input_path)
         print(f'Malicious: {malicious}\n')
