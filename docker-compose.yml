@@ -19,6 +19,7 @@ services:
     build: ./detection/virustotal
     volumes:
       - ./detection/virustotal/main.py:/virustotal/main.py
+      - ./detection/virustotal/.env:/virustotal/.env
       - ./binaries:/virustotal/binaries
       - ./data/:/virustotal/data
       - ./utils/:/virustotal/utils
