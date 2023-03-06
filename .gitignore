@@ -5,3 +5,4 @@ node_modules
 *.png
 *.7z
 .*.json
+*.env
