@@ -15,5 +15,4 @@ RUN npm install
 
 WORKDIR /miner-ray
 
-# Start Redis
 CMD ["sh", "-c", "redis-server --daemonize yes && python main.py"]

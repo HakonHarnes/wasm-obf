@@ -6,3 +6,4 @@ node_modules
 *.7z
 .*.json
 *.env
+obfuscation/tigress/tigress

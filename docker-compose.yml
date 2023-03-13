@@ -23,6 +23,14 @@ services:
       - ./binaries:/virustotal/binaries
       - ./data/:/virustotal/data
       - ./utils/:/virustotal/utils
+  tigress:
+    build: ./obfuscation/tigress/
+    volumes:
+      - ./obfuscation/tigress/main.py:/tigress/main.py
+      - ./dataset/:/tigress/dataset
+      - ./binaries:/tigress/binaries
+  ollvm:
+    build: ./obfuscation/ollvm/
   analysis:
     build: ./analysis
     volumes:
