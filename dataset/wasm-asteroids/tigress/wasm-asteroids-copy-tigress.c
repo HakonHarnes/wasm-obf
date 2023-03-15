@@ -61,15 +61,9 @@ BEGIN-UNIVERSE
     "get_direction", "init"
   ],
   "Transformations": [
-    { "TransformationNumber": 3, "TransformationKind": "Virtualize",
-    "TransformationUpdates": {
-      "Modified Function Implementations": [ "main" ],
-      "New Global Variables": {
-        "_3_main_$array": "INIT",
-        "_3_main_$strings": "INIT"
-      },
-      "New Types": [ "_3_main_$op", "_3_main_$node" ]
-    } }, { "TransformationNumber": 2, "TransformationKind": "InitEntropy",
+    { "TransformationNumber": 3, "TransformationKind": "Copy",
+    "TransformationUpdates": { "New Functions": [ "main_6317132" ] } }, {
+    "TransformationNumber": 2, "TransformationKind": "InitEntropy",
     "TransformationUpdates": {
       "New Global Variables": {
         "_2_alwaysZero": "INIT",
@@ -688,709 +682,706 @@ END-UNIVERSE
 /* #pragma merger("0","/tmp/cil-_cQJmEHO.i","-sUSE_SDL=2") */
 /* #pragma merger("0","/tmp/cil-79UqWnJE.i","-sUSE_SDL=2") */
 
-/* BEGIN STRUCT-DECL _em_promise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:19 */
-struct _em_promise ;
-/* END STRUCT-DECL _em_promise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:19 */
-
-/* BEGIN STRUCT-DECL sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
-struct sigaltstack ;
-/* END STRUCT-DECL sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
-
-/* BEGIN STRUCT-DECL SDL_Thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:46 */
-struct SDL_Thread ;
-/* END STRUCT-DECL SDL_Thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:46 */
-
-/* BEGIN STRUCT-DECL SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:185 */
-struct SDL_AudioCVT ;
-/* END STRUCT-DECL SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:185 */
-
-/* BEGIN STRUCT-DECL _IO_FILE LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:398 */
-struct _IO_FILE ;
-/* END STRUCT-DECL _IO_FILE LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:398 */
-
-/* BEGIN STRUCT-DECL SDL_mutex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:60 */
-struct SDL_mutex ;
-/* END STRUCT-DECL SDL_mutex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:60 */
+/* BEGIN STRUCT-DECL SDL_BlitMap LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
+struct SDL_BlitMap ;
+/* END STRUCT-DECL SDL_BlitMap LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
 
 /* BEGIN STRUCT-DECL SDL_semaphore LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:101 */
 struct SDL_semaphore ;
 /* END STRUCT-DECL SDL_semaphore LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:101 */
 
-/* BEGIN STRUCT-DECL SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
-struct SDL_Window ;
-/* END STRUCT-DECL SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
-
-/* BEGIN STRUCT-DECL __locale_struct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:410 */
-struct __locale_struct ;
-/* END STRUCT-DECL __locale_struct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:410 */
-
-/* BEGIN STRUCT-DECL SDL_Renderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:107 */
-struct SDL_Renderer ;
-/* END STRUCT-DECL SDL_Renderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:107 */
+/* BEGIN STRUCT-DECL __pthread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:356 */
+struct __pthread ;
+/* END STRUCT-DECL __pthread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:356 */
 
 /* BEGIN STRUCT-DECL _SDL_Joystick LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:51 */
 struct _SDL_Joystick ;
 /* END STRUCT-DECL _SDL_Joystick LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:51 */
 
-/* BEGIN STRUCT-DECL SDL_SysWMinfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:210 */
-struct SDL_SysWMinfo ;
-/* END STRUCT-DECL SDL_SysWMinfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:210 */
-
-/* BEGIN STRUCT-DECL SDL_Texture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:113 */
-struct SDL_Texture ;
-/* END STRUCT-DECL SDL_Texture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:113 */
-
-/* BEGIN STRUCT-DECL SDL_SysWMmsg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:391 */
-struct SDL_SysWMmsg ;
-/* END STRUCT-DECL SDL_SysWMmsg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:391 */
-
-/* BEGIN STRUCT-DECL _SDL_iconv_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:734 */
-struct _SDL_iconv_t ;
-/* END STRUCT-DECL _SDL_iconv_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:734 */
-
-/* BEGIN STRUCT-DECL SDL_cond LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:161 */
-struct SDL_cond ;
-/* END STRUCT-DECL SDL_cond LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:161 */
-
-/* BEGIN STRUCT-DECL private_yuvhwfuncs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
-struct private_yuvhwfuncs ;
-/* END STRUCT-DECL private_yuvhwfuncs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
-
-/* BEGIN STRUCT-DECL SDL_BlitMap LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
-struct SDL_BlitMap ;
-/* END STRUCT-DECL SDL_BlitMap LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
-
-/* BEGIN STRUCT-DECL __pthread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:356 */
-struct __pthread ;
-/* END STRUCT-DECL __pthread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:356 */
-
-/* BEGIN STRUCT-DECL private_yuvhwdata LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
-struct private_yuvhwdata ;
-/* END STRUCT-DECL private_yuvhwdata LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
+/* BEGIN STRUCT-DECL _IO_FILE LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:398 */
+struct _IO_FILE ;
+/* END STRUCT-DECL _IO_FILE LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:398 */
 
 /* BEGIN STRUCT-DECL SDL_Cursor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:59 */
 struct SDL_Cursor ;
 /* END STRUCT-DECL SDL_Cursor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:59 */
 
-/* BEGIN STRUCT-DECL __anonstruct_pthread_rwlockattr_t_32904004 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:392 */
-struct __anonstruct_pthread_rwlockattr_t_32904004 ;
-/* END STRUCT-DECL __anonstruct_pthread_rwlockattr_t_32904004 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:392 */
+/* BEGIN STRUCT-DECL _em_promise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:19 */
+struct _em_promise ;
+/* END STRUCT-DECL _em_promise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:19 */
 
-/* BEGIN STRUCT-DECL SDL_TouchFingerEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:307 */
-struct SDL_TouchFingerEvent ;
-/* END STRUCT-DECL SDL_TouchFingerEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:307 */
+/* BEGIN STRUCT-DECL SDL_Texture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:113 */
+struct SDL_Texture ;
+/* END STRUCT-DECL SDL_Texture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:113 */
 
-/* BEGIN STRUCT-DECL sigcontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:46 */
-struct sigcontext ;
-/* END STRUCT-DECL sigcontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:46 */
+/* BEGIN STRUCT-DECL SDL_Thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:46 */
+struct SDL_Thread ;
+/* END STRUCT-DECL SDL_Thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:46 */
 
-/* BEGIN STRUCT-DECL SDL_Surface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
-struct SDL_Surface ;
-/* END STRUCT-DECL SDL_Surface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
+/* BEGIN STRUCT-DECL sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
+struct sigaltstack ;
+/* END STRUCT-DECL sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
 
-/* BEGIN STRUCT-DECL __anonstruct_pthread_barrierattr_t_32904003 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:387 */
-struct __anonstruct_pthread_barrierattr_t_32904003 ;
-/* END STRUCT-DECL __anonstruct_pthread_barrierattr_t_32904003 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:387 */
+/* BEGIN STRUCT-DECL private_yuvhwdata LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
+struct private_yuvhwdata ;
+/* END STRUCT-DECL private_yuvhwdata LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
+
+/* BEGIN STRUCT-DECL _SDL_iconv_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:734 */
+struct _SDL_iconv_t ;
+/* END STRUCT-DECL _SDL_iconv_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:734 */
+
+/* BEGIN STRUCT-DECL SDL_SysWMmsg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:391 */
+struct SDL_SysWMmsg ;
+/* END STRUCT-DECL SDL_SysWMmsg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:391 */
+
+/* BEGIN STRUCT-DECL SDL_mutex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:60 */
+struct SDL_mutex ;
+/* END STRUCT-DECL SDL_mutex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:60 */
+
+/* BEGIN STRUCT-DECL SDL_cond LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:161 */
+struct SDL_cond ;
+/* END STRUCT-DECL SDL_cond LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:161 */
+
+/* BEGIN STRUCT-DECL __locale_struct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:410 */
+struct __locale_struct ;
+/* END STRUCT-DECL __locale_struct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:410 */
+
+/* BEGIN STRUCT-DECL private_yuvhwfuncs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
+struct private_yuvhwfuncs ;
+/* END STRUCT-DECL private_yuvhwfuncs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
+
+/* BEGIN STRUCT-DECL SDL_Renderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:107 */
+struct SDL_Renderer ;
+/* END STRUCT-DECL SDL_Renderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:107 */
+
+/* BEGIN STRUCT-DECL SDL_SysWMinfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:210 */
+struct SDL_SysWMinfo ;
+/* END STRUCT-DECL SDL_SysWMinfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:210 */
+
+/* BEGIN STRUCT-DECL SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:185 */
+struct SDL_AudioCVT ;
+/* END STRUCT-DECL SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:185 */
+
+/* BEGIN STRUCT-DECL SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
+struct SDL_Window ;
+/* END STRUCT-DECL SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
 
 /* BEGIN UNION-DECL __wasi_subscription_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1293 */
 union __wasi_subscription_u_t ;
 /* END UNION-DECL __wasi_subscription_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1293 */
 
-/* BEGIN STRUCT-DECL __anonstruct_max_align_t_835649992 LOC=/usr/lib/emsdk/upstream/lib/clang/17/include/__stddef_max_align_t.h:19 */
-struct __anonstruct_max_align_t_835649992 ;
-/* END STRUCT-DECL __anonstruct_max_align_t_835649992 LOC=/usr/lib/emsdk/upstream/lib/clang/17/include/__stddef_max_align_t.h:19 */
-
-/* BEGIN STRUCT-DECL SDL_VideoInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:134 */
-struct SDL_VideoInfo ;
-/* END STRUCT-DECL SDL_VideoInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:134 */
-
-/* BEGIN STRUCT-DECL SDL_Finger LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:50 */
-struct SDL_Finger ;
-/* END STRUCT-DECL SDL_Finger LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:50 */
-
-/* BEGIN STRUCT-DECL SDL_AudioSpec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:171 */
-struct SDL_AudioSpec ;
-/* END STRUCT-DECL SDL_AudioSpec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:171 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_bool_780193226 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:115 */
-enum __anonenum_SDL_bool_780193226 ;
-/* END ENUM-DECL __anonenum_SDL_bool_780193226 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:115 */
-
-/* BEGIN STRUCT-DECL __anonstruct___addr_bnd_5259977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct___addr_bnd_5259977 ;
-/* END STRUCT-DECL __anonstruct___addr_bnd_5259977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_Scancode_605597982 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_scancode.h:43 */
-enum __anonenum_SDL_Scancode_605597982 ;
-/* END ENUM-DECL __anonenum_SDL_Scancode_605597982 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_scancode.h:43 */
-
-/* BEGIN UNION-DECL __anonunion_hidden_739382560 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-union __anonunion_hidden_739382560 ;
-/* END UNION-DECL __anonunion_hidden_739382560 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-
-/* BEGIN UNION-DECL __anonunion___si_fields_141173307 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-union __anonunion___si_fields_141173307 ;
-/* END UNION-DECL __anonunion___si_fields_141173307 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN STRUCT-DECL __anonstruct_ldiv_t_721778306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:65 */
-struct __anonstruct_ldiv_t_721778306 ;
-/* END STRUCT-DECL __anonstruct_ldiv_t_721778306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:65 */
-
-/* BEGIN STRUCT-DECL __anonstruct_div_t_109580352 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:64 */
-struct __anonstruct_div_t_109580352 ;
-/* END STRUCT-DECL __anonstruct_div_t_109580352 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:64 */
-
-/* BEGIN UNION-DECL __anonunion___u_477865197 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-union __anonunion___u_477865197 ;
-/* END UNION-DECL __anonunion___u_477865197 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-
-/* BEGIN STRUCT-DECL __wasi_prestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1642 */
-struct __wasi_prestat_t ;
-/* END STRUCT-DECL __wasi_prestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1642 */
-
-/* BEGIN STRUCT-DECL __anonstruct_pthread_condattr_t_32904002 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:382 */
-struct __anonstruct_pthread_condattr_t_32904002 ;
-/* END STRUCT-DECL __anonstruct_pthread_condattr_t_32904002 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:382 */
-
-/* BEGIN STRUCT-DECL SDL_MouseButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:213 */
-struct SDL_MouseButtonEvent ;
-/* END STRUCT-DECL SDL_MouseButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:213 */
-
-/* BEGIN STRUCT-DECL __anonstruct___sigpoll_872129836 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct___sigpoll_872129836 ;
-/* END STRUCT-DECL __anonstruct___sigpoll_872129836 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN STRUCT-DECL __anonstruct___timer_773697287 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct___timer_773697287 ;
-/* END STRUCT-DECL __anonstruct___timer_773697287 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN UNION-DECL sigval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:94 */
-union sigval ;
-/* END UNION-DECL sigval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:94 */
-
-/* BEGIN UNION-DECL __anonunion___u_477865197___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-union __anonunion___u_477865197___1 ;
-/* END UNION-DECL __anonunion___u_477865197___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-
-/* BEGIN STRUCT-DECL sigevent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
-struct sigevent ;
-/* END STRUCT-DECL sigevent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_PowerState_675147179 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:44 */
-enum __anonenum_SDL_PowerState_675147179 ;
-/* END ENUM-DECL __anonenum_SDL_PowerState_675147179 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:44 */
-
-/* BEGIN ENUM-DECL __anonenum_1039529339 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:104 */
-enum __anonenum_1039529339 ;
-/* END ENUM-DECL __anonenum_1039529339 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:104 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_Keymod_474209642 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:320 */
-enum __anonenum_SDL_Keymod_474209642 ;
-/* END ENUM-DECL __anonenum_SDL_Keymod_474209642 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:320 */
-
-/* BEGIN UNION-DECL __anonunion___sa_handler_872129837 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
-union __anonunion___sa_handler_872129837 ;
-/* END UNION-DECL __anonunion___sa_handler_872129837 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
-
-/* BEGIN UNION-DECL __anonunion___first_906096932 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-union __anonunion___first_906096932 ;
-/* END UNION-DECL __anonunion___first_906096932 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN ENUM-DECL __anonenum_311483714 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:70 */
-enum __anonenum_311483714 ;
-/* END ENUM-DECL __anonenum_311483714 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:70 */
-
-/* BEGIN STRUCT-DECL player LOC=../asteroids/player.h:18 */
-struct player ;
-/* END STRUCT-DECL player LOC=../asteroids/player.h:18 */
-
-/* BEGIN UNION-DECL __anonunion___u_477865197___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-union __anonunion___u_477865197___2 ;
-/* END UNION-DECL __anonunion___u_477865197___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-
-/* BEGIN UNION-DECL __anonunion___u_546072648 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
-union __anonunion___u_546072648 ;
-/* END UNION-DECL __anonunion___u_546072648 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_LogPriority_273529134 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:100 */
-enum __anonenum_SDL_LogPriority_273529134 ;
-/* END ENUM-DECL __anonenum_SDL_LogPriority_273529134 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:100 */
-
-/* BEGIN STRUCT-DECL __anonstruct_fd_set_143082958 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:22 */
-struct __anonstruct_fd_set_143082958 ;
-/* END STRUCT-DECL __anonstruct_fd_set_143082958 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:22 */
-
-/* BEGIN STRUCT-DECL SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
-struct SDL_WindowEvent ;
-/* END STRUCT-DECL SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_TextureModulate_412417660 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:97 */
-enum __anonenum_SDL_TextureModulate_412417660 ;
-/* END ENUM-DECL __anonenum_SDL_TextureModulate_412417660 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:97 */
-
-/* BEGIN STRUCT-DECL vector2d LOC=../asteroids/vector.h:7 */
-struct vector2d ;
-/* END STRUCT-DECL vector2d LOC=../asteroids/vector.h:7 */
-
-/* BEGIN STRUCT-DECL SDL_MultiGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:339 */
-struct SDL_MultiGestureEvent ;
-/* END STRUCT-DECL SDL_MultiGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:339 */
-
-/* BEGIN UNION-DECL __anonunion___u_302425027 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-union __anonunion___u_302425027 ;
-/* END UNION-DECL __anonunion___u_302425027 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-
-/* BEGIN STRUCT-DECL __ucontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:67 */
-struct __ucontext ;
-/* END STRUCT-DECL __ucontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:67 */
-
-/* BEGIN UNION-DECL __anonunion___sev_fields_752101520 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
-union __anonunion___sev_fields_752101520 ;
-/* END UNION-DECL __anonunion___sev_fields_752101520 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
-
-/* BEGIN STRUCT-DECL __anonstruct_mem_553591186 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-struct __anonstruct_mem_553591186 ;
-/* END STRUCT-DECL __anonstruct_mem_553591186 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_ThreadPriority_602432781 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:56 */
-enum __anonenum_SDL_ThreadPriority_602432781 ;
-/* END ENUM-DECL __anonenum_SDL_ThreadPriority_602432781 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:56 */
-
-/* BEGIN UNION-DECL __anonunion___u_867429678 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
-union __anonunion___u_867429678 ;
-/* END UNION-DECL __anonunion___u_867429678 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
-
-/* BEGIN STRUCT-DECL __anonstruct___sev_thread_746770901 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
-struct __anonstruct___sev_thread_746770901 ;
-/* END STRUCT-DECL __anonstruct___sev_thread_746770901 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
-
-/* BEGIN ENUM-DECL em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
-enum em_promise_result_t ;
-/* END ENUM-DECL em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_EventType_410331439 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:59 */
-enum __anonenum_SDL_EventType_410331439 ;
-/* END ENUM-DECL __anonenum_SDL_EventType_410331439 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:59 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_WindowEventID_619750628 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:134 */
-enum __anonenum_SDL_WindowEventID_619750628 ;
-/* END ENUM-DECL __anonenum_SDL_WindowEventID_619750628 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:134 */
-
-/* BEGIN STRUCT-DECL SDL_MouseMotionEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:193 */
-struct SDL_MouseMotionEvent ;
-/* END STRUCT-DECL SDL_MouseMotionEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:193 */
-
-/* BEGIN STRUCT-DECL SDL_UserEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:381 */
-struct SDL_UserEvent ;
-/* END STRUCT-DECL SDL_UserEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:381 */
-
-/* BEGIN UNION-DECL __anonunion___u_302425027___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-union __anonunion___u_302425027___0 ;
-/* END UNION-DECL __anonunion___u_302425027___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_DUMMY_ENUM_229850056 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:187 */
-enum __anonenum_SDL_DUMMY_ENUM_229850056 ;
-/* END ENUM-DECL __anonenum_SDL_DUMMY_ENUM_229850056 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:187 */
-
-/* BEGIN STRUCT-DECL __wasi_event_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1157 */
-struct __wasi_event_fd_readwrite_t ;
-/* END STRUCT-DECL __wasi_event_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1157 */
-
-/* BEGIN STRUCT-DECL SDL_TextEditingEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:164 */
-struct SDL_TextEditingEvent ;
-/* END STRUCT-DECL SDL_TextEditingEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:164 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_TextureAccess_487062899 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:88 */
-enum __anonenum_SDL_TextureAccess_487062899 ;
-/* END ENUM-DECL __anonenum_SDL_TextureAccess_487062899 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:88 */
-
-/* BEGIN STRUCT-DECL __wasi_subscription_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1278 */
-struct __wasi_subscription_fd_readwrite_t ;
-/* END STRUCT-DECL __wasi_subscription_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1278 */
-
-/* BEGIN STRUCT-DECL SDL_SysWMEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:399 */
-struct SDL_SysWMEvent ;
-/* END STRUCT-DECL SDL_SysWMEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:399 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_RendererFlags_280426716 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:63 */
-enum __anonenum_SDL_RendererFlags_280426716 ;
-/* END ENUM-DECL __anonenum_SDL_RendererFlags_280426716 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:63 */
-
-/* BEGIN STRUCT-DECL __wasi_filestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1050 */
-struct __wasi_filestat_t ;
-/* END STRUCT-DECL __wasi_filestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1050 */
-
-/* BEGIN STRUCT-DECL __wasi_iovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:677 */
-struct __wasi_iovec_t ;
-/* END STRUCT-DECL __wasi_iovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:677 */
-
-/* BEGIN STRUCT-DECL __anonstruct_lldiv_t_989260392 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:66 */
-struct __anonstruct_lldiv_t_989260392 ;
-/* END STRUCT-DECL __anonstruct_lldiv_t_989260392 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:66 */
-
-/* BEGIN STRUCT-DECL SDL_ActiveEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:415 */
-struct SDL_ActiveEvent ;
-/* END STRUCT-DECL SDL_ActiveEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:415 */
-
-/* BEGIN STRUCT-DECL SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
-struct SDL_JoyBallEvent ;
-/* END STRUCT-DECL SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
-
-/* BEGIN STRUCT-DECL __anonstruct___piduid_471658986 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct___piduid_471658986 ;
-/* END STRUCT-DECL __anonstruct___piduid_471658986 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN STRUCT-DECL __anonstruct_pthread_attr_t_919219569 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
-struct __anonstruct_pthread_attr_t_919219569 ;
-/* END STRUCT-DECL __anonstruct_pthread_attr_t_919219569 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
-
-/* BEGIN ENUM-DECL __anonenum_703616793 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:64 */
-enum __anonenum_703616793 ;
-/* END ENUM-DECL __anonenum_703616793 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:64 */
-
-/* BEGIN STRUCT-DECL __wasi_dirent_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:824 */
-struct __wasi_dirent_t ;
-/* END STRUCT-DECL __wasi_dirent_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:824 */
-
-/* BEGIN STRUCT-DECL __anonstruct_pthread_mutex_t_976653634 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
-struct __anonstruct_pthread_mutex_t_976653634 ;
-/* END STRUCT-DECL __anonstruct_pthread_mutex_t_976653634 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
-
-/* BEGIN UNION-DECL __anonunion___u_477865197___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-union __anonunion___u_477865197___0 ;
-/* END UNION-DECL __anonunion___u_477865197___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-
-/* BEGIN STRUCT-DECL SDL_PixelFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:269 */
-struct SDL_PixelFormat ;
-/* END STRUCT-DECL SDL_PixelFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:269 */
-
-/* BEGIN STRUCT-DECL __anonstruct___si_common_197685055 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct___si_common_197685055 ;
-/* END STRUCT-DECL __anonstruct___si_common_197685055 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN ENUM-DECL boolean LOC=../asteroids/player.h:9 */
-enum boolean ;
-/* END ENUM-DECL boolean LOC=../asteroids/player.h:9 */
-
-/* BEGIN ENUM-DECL __anonenum_873948031 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:78 */
-enum __anonenum_873948031 ;
-/* END ENUM-DECL __anonenum_873948031 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:78 */
-
-/* BEGIN STRUCT-DECL bullet LOC=../asteroids/player.h:11 */
-struct bullet ;
-/* END STRUCT-DECL bullet LOC=../asteroids/player.h:11 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_assert_state_1070053763 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:96 */
-enum __anonenum_SDL_assert_state_1070053763 ;
-/* END ENUM-DECL __anonenum_SDL_assert_state_1070053763 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:96 */
-
-/* BEGIN ENUM-DECL __anonenum_205146292 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:150 */
-enum __anonenum_205146292 ;
-/* END ENUM-DECL __anonenum_205146292 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:150 */
-
-/* BEGIN ENUM-DECL _3_main_$op LOC=UNKNOWN */
-enum _3_main_$op ;
-/* END ENUM-DECL _3_main_$op LOC=UNKNOWN */
-
-/* BEGIN STRUCT-DECL SDL_KeyboardEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:149 */
-struct SDL_KeyboardEvent ;
-/* END STRUCT-DECL SDL_KeyboardEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:149 */
-
-/* BEGIN STRUCT-DECL SDL_QuitEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:372 */
-struct SDL_QuitEvent ;
-/* END STRUCT-DECL SDL_QuitEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:372 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_GLattr_994110948 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
-enum __anonenum_SDL_GLattr_994110948 ;
-/* END ENUM-DECL __anonenum_SDL_GLattr_994110948 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
-
-/* BEGIN STRUCT-DECL __wasi_fdstat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:930 */
-struct __wasi_fdstat_t ;
-/* END STRUCT-DECL __wasi_fdstat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:930 */
-
-/* BEGIN STRUCT-DECL SDL_Overlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
-struct SDL_Overlay ;
-/* END STRUCT-DECL SDL_Overlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
-
-/* BEGIN STRUCT-DECL __sigset_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:416 */
-struct __sigset_t ;
-/* END STRUCT-DECL __sigset_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:416 */
-
-/* BEGIN STRUCT-DECL SDL_DollarGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:353 */
-struct SDL_DollarGestureEvent ;
-/* END STRUCT-DECL SDL_DollarGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:353 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
-enum __anonenum_SDL_AudioStatus_415475965 ;
-/* END ENUM-DECL __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
-
-/* BEGIN UNION-DECL __wasi_prestat_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1628 */
-union __wasi_prestat_u_t ;
-/* END UNION-DECL __wasi_prestat_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1628 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_GrabMode_279849253 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:203 */
-enum __anonenum_SDL_GrabMode_279849253 ;
-/* END ENUM-DECL __anonenum_SDL_GrabMode_279849253 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:203 */
-
-/* BEGIN STRUCT-DECL SDL_RendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:75 */
-struct SDL_RendererInfo ;
-/* END STRUCT-DECL SDL_RendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:75 */
-
-/* BEGIN STRUCT-DECL __anonstruct___sigchld_989164977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct___sigchld_989164977 ;
-/* END STRUCT-DECL __anonstruct___sigchld_989164977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN STRUCT-DECL _1_main_1_opaque_NodeStruct LOC=UNKNOWN */
-struct _1_main_1_opaque_NodeStruct ;
-/* END STRUCT-DECL _1_main_1_opaque_NodeStruct LOC=UNKNOWN */
-
-/* BEGIN UNION-DECL __anonunion___u_357071066 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
-union __anonunion___u_357071066 ;
-/* END UNION-DECL __anonunion___u_357071066 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
-
-/* BEGIN STRUCT-DECL SDL_MouseWheelEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:230 */
-struct SDL_MouseWheelEvent ;
-/* END STRUCT-DECL SDL_MouseWheelEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:230 */
-
-/* BEGIN STRUCT-DECL __anonstruct_siginfo_t_48430433 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct_siginfo_t_48430433 ;
-/* END STRUCT-DECL __anonstruct_siginfo_t_48430433 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN STRUCT-DECL __anonstruct_pthread_mutexattr_t_32904001 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:377 */
-struct __anonstruct_pthread_mutexattr_t_32904001 ;
-/* END STRUCT-DECL __anonstruct_pthread_mutexattr_t_32904001 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:377 */
-
-/* BEGIN STRUCT-DECL __anonstruct_SDL_Point_1070053765 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:49 */
-struct __anonstruct_SDL_Point_1070053765 ;
-/* END STRUCT-DECL __anonstruct_SDL_Point_1070053765 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:49 */
-
-/* BEGIN ENUM-DECL sizes LOC=../asteroids/asteroids.h:6 */
-enum sizes ;
-/* END ENUM-DECL sizes LOC=../asteroids/asteroids.h:6 */
-
-/* BEGIN STRUCT-DECL __anonstruct_pthread_cond_t_726266814 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
-struct __anonstruct_pthread_cond_t_726266814 ;
-/* END STRUCT-DECL __anonstruct_pthread_cond_t_726266814 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
-
-/* BEGIN STRUCT-DECL SDL_Palette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:258 */
-struct SDL_Palette ;
-/* END STRUCT-DECL SDL_Palette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:258 */
-
-/* BEGIN STRUCT-DECL timespec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:312 */
-struct timespec ;
-/* END STRUCT-DECL timespec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:312 */
-
-/* BEGIN STRUCT-DECL __anonstruct_SDL_atomic_t_1070053764 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:188 */
-struct __anonstruct_SDL_atomic_t_1070053764 ;
-/* END STRUCT-DECL __anonstruct_SDL_atomic_t_1070053764 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:188 */
-
-/* BEGIN STRUCT-DECL __anonstruct__st_638665849 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
-struct __anonstruct__st_638665849 ;
-/* END STRUCT-DECL __anonstruct__st_638665849 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
-
-/* BEGIN STRUCT-DECL SDL_version LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:53 */
-struct SDL_version ;
-/* END STRUCT-DECL SDL_version LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:53 */
-
-/* BEGIN ENUM-DECL __anonenum_665040861 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:53 */
-enum __anonenum_665040861 ;
-/* END ENUM-DECL __anonenum_665040861 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:53 */
-
-/* BEGIN STRUCT-DECL SDL_Color LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:249 */
-struct SDL_Color ;
-/* END STRUCT-DECL SDL_Color LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:249 */
-
-/* BEGIN STRUCT-DECL __wasi_subscription_clock_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1243 */
-struct __wasi_subscription_clock_t ;
-/* END STRUCT-DECL __wasi_subscription_clock_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1243 */
-
-/* BEGIN STRUCT-DECL SDL_assert_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:105 */
-struct SDL_assert_data ;
-/* END STRUCT-DECL SDL_assert_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:105 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_eventaction_247177825 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:480 */
-enum __anonenum_SDL_eventaction_247177825 ;
-/* END ENUM-DECL __anonenum_SDL_eventaction_247177825 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:480 */
-
-/* BEGIN STRUCT-DECL __wasi_prestat_dir_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1613 */
-struct __wasi_prestat_dir_t ;
-/* END STRUCT-DECL __wasi_prestat_dir_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1613 */
-
-/* BEGIN STRUCT-DECL __wasi_subscription_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1312 */
-struct __wasi_subscription_t ;
-/* END STRUCT-DECL __wasi_subscription_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1312 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_WindowFlags_1065803870 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:97 */
-enum __anonenum_SDL_WindowFlags_1065803870 ;
-/* END ENUM-DECL __anonenum_SDL_WindowFlags_1065803870 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:97 */
-
-/* BEGIN UNION-DECL _G_fpos64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:66 */
-union _G_fpos64_t ;
-/* END UNION-DECL _G_fpos64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:66 */
-
-/* BEGIN UNION-DECL __anonunion___u_302425027___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-union __anonunion___u_302425027___1 ;
-/* END UNION-DECL __anonunion___u_302425027___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-
-/* BEGIN STRUCT-DECL SDL_JoyAxisEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:243 */
-struct SDL_JoyAxisEvent ;
-/* END STRUCT-DECL SDL_JoyAxisEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:243 */
-
-/* BEGIN UNION-DECL SDL_Event LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:436 */
-union SDL_Event ;
-/* END UNION-DECL SDL_Event LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:436 */
-
-/* BEGIN STRUCT-DECL sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
-struct sigaction ;
-/* END STRUCT-DECL sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
-
-/* BEGIN STRUCT-DECL __anonstruct___sigsys_539673668 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-struct __anonstruct___sigsys_539673668 ;
-/* END STRUCT-DECL __anonstruct___sigsys_539673668 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN STRUCT-DECL timeval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:307 */
-struct timeval ;
-/* END STRUCT-DECL timeval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:307 */
-
-/* BEGIN UNION-DECL __anonunion___u_302425027___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-union __anonunion___u_302425027___2 ;
-/* END UNION-DECL __anonunion___u_302425027___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-
-/* BEGIN STRUCT-DECL __anonstruct_pthread_barrier_t_867429677 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
-struct __anonstruct_pthread_barrier_t_867429677 ;
-/* END STRUCT-DECL __anonstruct_pthread_barrier_t_867429677 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
-
-/* BEGIN STRUCT-DECL __anonstruct_SDL_DisplayMode_299185306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:55 */
-struct __anonstruct_SDL_DisplayMode_299185306 ;
-/* END STRUCT-DECL __anonstruct_SDL_DisplayMode_299185306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:55 */
-
-/* BEGIN STRUCT-DECL SDL_Keysym LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:47 */
-struct SDL_Keysym ;
-/* END STRUCT-DECL SDL_Keysym LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:47 */
-
-/* BEGIN STRUCT-DECL SDL_JoyButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:288 */
-struct SDL_JoyButtonEvent ;
-/* END STRUCT-DECL SDL_JoyButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:288 */
-
-/* BEGIN UNION-DECL __anonunion___u_656646311 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
-union __anonunion___u_656646311 ;
-/* END UNION-DECL __anonunion___u_656646311 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
-
-/* BEGIN ENUM-DECL __anonenum_233217090 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:92 */
-enum __anonenum_233217090 ;
-/* END ENUM-DECL __anonenum_233217090 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:92 */
-
 /* BEGIN UNION-DECL __anonunion___u_302425027___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
 union __anonunion___u_302425027___3 ;
 /* END UNION-DECL __anonunion___u_302425027___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
-
-/* BEGIN UNION-DECL _3_main_$node LOC=UNKNOWN */
-union _3_main_$node ;
-/* END UNION-DECL _3_main_$node LOC=UNKNOWN */
-
-/* BEGIN UNION-DECL __anonunion___u_477865197___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-union __anonunion___u_477865197___3 ;
-/* END UNION-DECL __anonunion___u_477865197___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
-
-/* BEGIN STRUCT-DECL SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
-struct SDL_TextInputEvent ;
-/* END STRUCT-DECL SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
-
-/* BEGIN UNION-DECL __anonunion___first_361836570 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-union __anonunion___first_361836570 ;
-/* END UNION-DECL __anonunion___first_361836570 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-
-/* BEGIN STRUCT-DECL _fpstate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
-struct _fpstate ;
-/* END STRUCT-DECL _fpstate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
-
-/* BEGIN STRUCT-DECL SDL_ResizeEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:422 */
-struct SDL_ResizeEvent ;
-/* END STRUCT-DECL SDL_ResizeEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:422 */
-
-/* BEGIN STRUCT-DECL __anonstruct_pthread_rwlock_t_656646310 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
-struct __anonstruct_pthread_rwlock_t_656646310 ;
-/* END STRUCT-DECL __anonstruct_pthread_rwlock_t_656646310 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
-
-/* BEGIN STRUCT-DECL __wasi_ciovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:698 */
-struct __wasi_ciovec_t ;
-/* END STRUCT-DECL __wasi_ciovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:698 */
-
-/* BEGIN STRUCT-DECL SDL_JoyHatEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:270 */
-struct SDL_JoyHatEvent ;
-/* END STRUCT-DECL SDL_JoyHatEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:270 */
-
-/* BEGIN STRUCT-DECL SDL_TouchButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:324 */
-struct SDL_TouchButtonEvent ;
-/* END STRUCT-DECL SDL_TouchButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:324 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_HintPriority_680791259 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:151 */
-enum __anonenum_SDL_HintPriority_680791259 ;
-/* END ENUM-DECL __anonenum_SDL_HintPriority_680791259 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:151 */
-
-/* BEGIN UNION-DECL __wasi_event_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1178 */
-union __wasi_event_u_t ;
-/* END UNION-DECL __wasi_event_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1178 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_BlendMode_116682172 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_blendmode.h:42 */
-enum __anonenum_SDL_BlendMode_116682172 ;
-/* END ENUM-DECL __anonenum_SDL_BlendMode_116682172 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_blendmode.h:42 */
-
-/* BEGIN ENUM-DECL __anonenum_94526748 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:49 */
-enum __anonenum_94526748 ;
-/* END ENUM-DECL __anonenum_94526748 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:49 */
-
-/* BEGIN STRUCT-DECL asteroid LOC=../asteroids/asteroids.h:8 */
-struct asteroid ;
-/* END STRUCT-DECL asteroid LOC=../asteroids/asteroids.h:8 */
-
-/* BEGIN ENUM-DECL __anonenum_SDL_errorcode_840487938 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:55 */
-enum __anonenum_SDL_errorcode_840487938 ;
-/* END ENUM-DECL __anonenum_SDL_errorcode_840487938 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:55 */
-
-/* BEGIN STRUCT-DECL SDL_RWops LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-struct SDL_RWops ;
-/* END STRUCT-DECL SDL_RWops LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-
-/* BEGIN UNION-DECL __anonunion_swapper_599864594 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_endian.h:201 */
-union __anonunion_swapper_599864594 ;
-/* END UNION-DECL __anonunion_swapper_599864594 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_endian.h:201 */
-
-/* BEGIN STRUCT-DECL __anonstruct_imaxdiv_t_882638284 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:14 */
-struct __anonstruct_imaxdiv_t_882638284 ;
-/* END STRUCT-DECL __anonstruct_imaxdiv_t_882638284 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:14 */
-
-/* BEGIN STRUCT-DECL __anonstruct_mcontext_t_311202863 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:56 */
-struct __anonstruct_mcontext_t_311202863 ;
-/* END STRUCT-DECL __anonstruct_mcontext_t_311202863 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:56 */
-
-/* BEGIN STRUCT-DECL SDL_Rect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:65 */
-struct SDL_Rect ;
-/* END STRUCT-DECL SDL_Rect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:65 */
-
-/* BEGIN UNION-DECL __anonunion___second_397282236 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
-union __anonunion___second_397282236 ;
-/* END UNION-DECL __anonunion___second_397282236 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
 
 /* BEGIN STRUCT-DECL __wasi_event_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1192 */
 struct __wasi_event_t ;
 /* END STRUCT-DECL __wasi_event_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1192 */
 
-/* BEGIN STRUCT-DECL __anonstruct_stdio_61930941 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-struct __anonstruct_stdio_61930941 ;
-/* END STRUCT-DECL __anonstruct_stdio_61930941 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+/* BEGIN STRUCT-DECL __wasi_subscription_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1312 */
+struct __wasi_subscription_t ;
+/* END STRUCT-DECL __wasi_subscription_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1312 */
+
+/* BEGIN STRUCT-DECL SDL_Palette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:258 */
+struct SDL_Palette ;
+/* END STRUCT-DECL SDL_Palette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:258 */
+
+/* BEGIN STRUCT-DECL sigcontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:46 */
+struct sigcontext ;
+/* END STRUCT-DECL sigcontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:46 */
+
+/* BEGIN STRUCT-DECL SDL_DollarGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:353 */
+struct SDL_DollarGestureEvent ;
+/* END STRUCT-DECL SDL_DollarGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:353 */
+
+/* BEGIN STRUCT-DECL __ucontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:67 */
+struct __ucontext ;
+/* END STRUCT-DECL __ucontext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:67 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_attr_t_919219569 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
+struct __anonstruct_pthread_attr_t_919219569 ;
+/* END STRUCT-DECL __anonstruct_pthread_attr_t_919219569 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
+
+/* BEGIN STRUCT-DECL __anonstruct___timer_773697287 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct___timer_773697287 ;
+/* END STRUCT-DECL __anonstruct___timer_773697287 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_errorcode_840487938 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:55 */
+enum __anonenum_SDL_errorcode_840487938 ;
+/* END ENUM-DECL __anonenum_SDL_errorcode_840487938 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:55 */
+
+/* BEGIN STRUCT-DECL SDL_MouseWheelEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:230 */
+struct SDL_MouseWheelEvent ;
+/* END STRUCT-DECL SDL_MouseWheelEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:230 */
+
+/* BEGIN STRUCT-DECL SDL_KeyboardEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:149 */
+struct SDL_KeyboardEvent ;
+/* END STRUCT-DECL SDL_KeyboardEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:149 */
+
+/* BEGIN STRUCT-DECL __anonstruct___piduid_471658986 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct___piduid_471658986 ;
+/* END STRUCT-DECL __anonstruct___piduid_471658986 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL __wasi_dirent_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:824 */
+struct __wasi_dirent_t ;
+/* END STRUCT-DECL __wasi_dirent_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:824 */
+
+/* BEGIN UNION-DECL __anonunion___sev_fields_752101520 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
+union __anonunion___sev_fields_752101520 ;
+/* END UNION-DECL __anonunion___sev_fields_752101520 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
+
+/* BEGIN STRUCT-DECL SDL_Keysym LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:47 */
+struct SDL_Keysym ;
+/* END STRUCT-DECL SDL_Keysym LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:47 */
+
+/* BEGIN STRUCT-DECL SDL_RendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:75 */
+struct SDL_RendererInfo ;
+/* END STRUCT-DECL SDL_RendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:75 */
+
+/* BEGIN UNION-DECL __anonunion___u_477865197___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+union __anonunion___u_477865197___2 ;
+/* END UNION-DECL __anonunion___u_477865197___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_TextureAccess_487062899 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:88 */
+enum __anonenum_SDL_TextureAccess_487062899 ;
+/* END ENUM-DECL __anonenum_SDL_TextureAccess_487062899 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:88 */
+
+/* BEGIN STRUCT-DECL __anonstruct_mcontext_t_311202863 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:56 */
+struct __anonstruct_mcontext_t_311202863 ;
+/* END STRUCT-DECL __anonstruct_mcontext_t_311202863 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:56 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_Keymod_474209642 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:320 */
+enum __anonenum_SDL_Keymod_474209642 ;
+/* END ENUM-DECL __anonenum_SDL_Keymod_474209642 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:320 */
+
+/* BEGIN STRUCT-DECL __anonstruct_mem_553591186 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+struct __anonstruct_mem_553591186 ;
+/* END STRUCT-DECL __anonstruct_mem_553591186 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+
+/* BEGIN UNION-DECL __anonunion___first_906096932 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+union __anonunion___first_906096932 ;
+/* END UNION-DECL __anonunion___first_906096932 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN UNION-DECL __anonunion___u_302425027___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+union __anonunion___u_302425027___1 ;
+/* END UNION-DECL __anonunion___u_302425027___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+
+/* BEGIN STRUCT-DECL __anonstruct_SDL_DisplayMode_299185306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:55 */
+struct __anonstruct_SDL_DisplayMode_299185306 ;
+/* END STRUCT-DECL __anonstruct_SDL_DisplayMode_299185306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:55 */
+
+/* BEGIN STRUCT-DECL SDL_assert_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:105 */
+struct SDL_assert_data ;
+/* END STRUCT-DECL SDL_assert_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:105 */
+
+/* BEGIN STRUCT-DECL __wasi_filestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1050 */
+struct __wasi_filestat_t ;
+/* END STRUCT-DECL __wasi_filestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1050 */
+
+/* BEGIN ENUM-DECL __anonenum_703616793 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:64 */
+enum __anonenum_703616793 ;
+/* END ENUM-DECL __anonenum_703616793 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:64 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_EventType_410331439 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:59 */
+enum __anonenum_SDL_EventType_410331439 ;
+/* END ENUM-DECL __anonenum_SDL_EventType_410331439 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:59 */
+
+/* BEGIN UNION-DECL __anonunion___u_302425027___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+union __anonunion___u_302425027___2 ;
+/* END UNION-DECL __anonunion___u_302425027___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+
+/* BEGIN UNION-DECL __anonunion___u_546072648 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
+union __anonunion___u_546072648 ;
+/* END UNION-DECL __anonunion___u_546072648 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
+
+/* BEGIN STRUCT-DECL __anonstruct___sigpoll_872129836 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct___sigpoll_872129836 ;
+/* END STRUCT-DECL __anonstruct___sigpoll_872129836 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL __anonstruct_imaxdiv_t_882638284 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:14 */
+struct __anonstruct_imaxdiv_t_882638284 ;
+/* END STRUCT-DECL __anonstruct_imaxdiv_t_882638284 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:14 */
+
+/* BEGIN STRUCT-DECL __anonstruct_max_align_t_835649992 LOC=/usr/lib/emsdk/upstream/lib/clang/17/include/__stddef_max_align_t.h:19 */
+struct __anonstruct_max_align_t_835649992 ;
+/* END STRUCT-DECL __anonstruct_max_align_t_835649992 LOC=/usr/lib/emsdk/upstream/lib/clang/17/include/__stddef_max_align_t.h:19 */
+
+/* BEGIN ENUM-DECL sizes LOC=../asteroids/asteroids.h:6 */
+enum sizes ;
+/* END ENUM-DECL sizes LOC=../asteroids/asteroids.h:6 */
+
+/* BEGIN STRUCT-DECL SDL_JoyButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:288 */
+struct SDL_JoyButtonEvent ;
+/* END STRUCT-DECL SDL_JoyButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:288 */
+
+/* BEGIN UNION-DECL __anonunion___u_898357595 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
+union __anonunion___u_898357595 ;
+/* END UNION-DECL __anonunion___u_898357595 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_LogPriority_273529134 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:100 */
+enum __anonenum_SDL_LogPriority_273529134 ;
+/* END ENUM-DECL __anonenum_SDL_LogPriority_273529134 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:100 */
+
+/* BEGIN UNION-DECL __wasi_prestat_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1628 */
+union __wasi_prestat_u_t ;
+/* END UNION-DECL __wasi_prestat_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1628 */
+
+/* BEGIN ENUM-DECL __anonenum_665040861 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:53 */
+enum __anonenum_665040861 ;
+/* END ENUM-DECL __anonenum_665040861 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:53 */
+
+/* BEGIN UNION-DECL __anonunion___si_fields_141173307 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+union __anonunion___si_fields_141173307 ;
+/* END UNION-DECL __anonunion___si_fields_141173307 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_DUMMY_ENUM_229850056 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:187 */
+enum __anonenum_SDL_DUMMY_ENUM_229850056 ;
+/* END ENUM-DECL __anonenum_SDL_DUMMY_ENUM_229850056 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:187 */
+
+/* BEGIN STRUCT-DECL timespec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:312 */
+struct timespec ;
+/* END STRUCT-DECL timespec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:312 */
+
+/* BEGIN ENUM-DECL __anonenum_873948031 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:78 */
+enum __anonenum_873948031 ;
+/* END ENUM-DECL __anonenum_873948031 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:78 */
+
+/* BEGIN STRUCT-DECL SDL_MouseButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:213 */
+struct SDL_MouseButtonEvent ;
+/* END STRUCT-DECL SDL_MouseButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:213 */
 
 /* BEGIN STRUCT-DECL __anonstruct_unknown_642786129 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
 struct __anonstruct_unknown_642786129 ;
 /* END STRUCT-DECL __anonstruct_unknown_642786129 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
 
+/* BEGIN STRUCT-DECL SDL_TouchFingerEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:307 */
+struct SDL_TouchFingerEvent ;
+/* END STRUCT-DECL SDL_TouchFingerEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:307 */
+
+/* BEGIN STRUCT-DECL SDL_JoyAxisEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:243 */
+struct SDL_JoyAxisEvent ;
+/* END STRUCT-DECL SDL_JoyAxisEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:243 */
+
+/* BEGIN ENUM-DECL boolean LOC=../asteroids/player.h:9 */
+enum boolean ;
+/* END ENUM-DECL boolean LOC=../asteroids/player.h:9 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_Scancode_605597982 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_scancode.h:43 */
+enum __anonenum_SDL_Scancode_605597982 ;
+/* END ENUM-DECL __anonenum_SDL_Scancode_605597982 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_scancode.h:43 */
+
+/* BEGIN STRUCT-DECL SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
+struct SDL_TextInputEvent ;
+/* END STRUCT-DECL SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
+
+/* BEGIN STRUCT-DECL SDL_Surface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
+struct SDL_Surface ;
+/* END STRUCT-DECL SDL_Surface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_rwlockattr_t_32904004 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:392 */
+struct __anonstruct_pthread_rwlockattr_t_32904004 ;
+/* END STRUCT-DECL __anonstruct_pthread_rwlockattr_t_32904004 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:392 */
+
+/* BEGIN STRUCT-DECL __anonstruct_SDL_Point_1070053765 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:49 */
+struct __anonstruct_SDL_Point_1070053765 ;
+/* END STRUCT-DECL __anonstruct_SDL_Point_1070053765 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:49 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_BlendMode_116682172 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_blendmode.h:42 */
+enum __anonenum_SDL_BlendMode_116682172 ;
+/* END ENUM-DECL __anonenum_SDL_BlendMode_116682172 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_blendmode.h:42 */
+
+/* BEGIN STRUCT-DECL SDL_QuitEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:372 */
+struct SDL_QuitEvent ;
+/* END STRUCT-DECL SDL_QuitEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:372 */
+
+/* BEGIN STRUCT-DECL player LOC=../asteroids/player.h:18 */
+struct player ;
+/* END STRUCT-DECL player LOC=../asteroids/player.h:18 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_TextureModulate_412417660 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:97 */
+enum __anonenum_SDL_TextureModulate_412417660 ;
+/* END ENUM-DECL __anonenum_SDL_TextureModulate_412417660 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:97 */
+
+/* BEGIN STRUCT-DECL __anonstruct___si_common_197685055 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct___si_common_197685055 ;
+/* END STRUCT-DECL __anonstruct___si_common_197685055 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL SDL_Finger LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:50 */
+struct SDL_Finger ;
+/* END STRUCT-DECL SDL_Finger LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:50 */
+
+/* BEGIN STRUCT-DECL __anonstruct___sigchld_989164977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct___sigchld_989164977 ;
+/* END STRUCT-DECL __anonstruct___sigchld_989164977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN ENUM-DECL __anonenum_205146292 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:150 */
+enum __anonenum_205146292 ;
+/* END ENUM-DECL __anonenum_205146292 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:150 */
+
+/* BEGIN STRUCT-DECL __wasi_subscription_clock_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1243 */
+struct __wasi_subscription_clock_t ;
+/* END STRUCT-DECL __wasi_subscription_clock_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1243 */
+
+/* BEGIN STRUCT-DECL __wasi_prestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1642 */
+struct __wasi_prestat_t ;
+/* END STRUCT-DECL __wasi_prestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1642 */
+
+/* BEGIN STRUCT-DECL _fpstate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
+struct _fpstate ;
+/* END STRUCT-DECL _fpstate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
+
+/* BEGIN STRUCT-DECL SDL_TextEditingEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:164 */
+struct SDL_TextEditingEvent ;
+/* END STRUCT-DECL SDL_TextEditingEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:164 */
+
+/* BEGIN ENUM-DECL __anonenum_1039529339 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:104 */
+enum __anonenum_1039529339 ;
+/* END ENUM-DECL __anonenum_1039529339 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:104 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_ThreadPriority_602432781 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:56 */
+enum __anonenum_SDL_ThreadPriority_602432781 ;
+/* END ENUM-DECL __anonenum_SDL_ThreadPriority_602432781 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:56 */
+
+/* BEGIN STRUCT-DECL SDL_AudioSpec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:171 */
+struct SDL_AudioSpec ;
+/* END STRUCT-DECL SDL_AudioSpec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:171 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_WindowFlags_1065803870 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:97 */
+enum __anonenum_SDL_WindowFlags_1065803870 ;
+/* END ENUM-DECL __anonenum_SDL_WindowFlags_1065803870 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:97 */
+
+/* BEGIN UNION-DECL __anonunion___u_357071066 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
+union __anonunion___u_357071066 ;
+/* END UNION-DECL __anonunion___u_357071066 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
+
+/* BEGIN STRUCT-DECL __anonstruct___sigsys_539673668 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct___sigsys_539673668 ;
+/* END STRUCT-DECL __anonstruct___sigsys_539673668 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL SDL_PixelFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:269 */
+struct SDL_PixelFormat ;
+/* END STRUCT-DECL SDL_PixelFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:269 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_HintPriority_680791259 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:151 */
+enum __anonenum_SDL_HintPriority_680791259 ;
+/* END ENUM-DECL __anonenum_SDL_HintPriority_680791259 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:151 */
+
+/* BEGIN STRUCT-DECL _1_main_1_opaque_NodeStruct LOC=UNKNOWN */
+struct _1_main_1_opaque_NodeStruct ;
+/* END STRUCT-DECL _1_main_1_opaque_NodeStruct LOC=UNKNOWN */
+
+/* BEGIN ENUM-DECL __anonenum_94526748 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:49 */
+enum __anonenum_94526748 ;
+/* END ENUM-DECL __anonenum_94526748 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:49 */
+
+/* BEGIN STRUCT-DECL __sigset_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:416 */
+struct __sigset_t ;
+/* END STRUCT-DECL __sigset_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:416 */
+
+/* BEGIN STRUCT-DECL __anonstruct_fd_set_143082958 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:22 */
+struct __anonstruct_fd_set_143082958 ;
+/* END STRUCT-DECL __anonstruct_fd_set_143082958 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:22 */
+
+/* BEGIN UNION-DECL __anonunion___first_361836570 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+union __anonunion___first_361836570 ;
+/* END UNION-DECL __anonunion___first_361836570 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL SDL_Color LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:249 */
+struct SDL_Color ;
+/* END STRUCT-DECL SDL_Color LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:249 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_GLattr_994110948 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
+enum __anonenum_SDL_GLattr_994110948 ;
+/* END ENUM-DECL __anonenum_SDL_GLattr_994110948 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
+
+/* BEGIN STRUCT-DECL __wasi_prestat_dir_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1613 */
+struct __wasi_prestat_dir_t ;
+/* END STRUCT-DECL __wasi_prestat_dir_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1613 */
+
+/* BEGIN STRUCT-DECL SDL_ResizeEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:422 */
+struct SDL_ResizeEvent ;
+/* END STRUCT-DECL SDL_ResizeEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:422 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_mutexattr_t_32904001 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:377 */
+struct __anonstruct_pthread_mutexattr_t_32904001 ;
+/* END STRUCT-DECL __anonstruct_pthread_mutexattr_t_32904001 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:377 */
+
+/* BEGIN STRUCT-DECL SDL_TouchButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:324 */
+struct SDL_TouchButtonEvent ;
+/* END STRUCT-DECL SDL_TouchButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:324 */
+
 /* BEGIN STRUCT-DECL __anonstruct___sigfault_449097580 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
 struct __anonstruct___sigfault_449097580 ;
 /* END STRUCT-DECL __anonstruct___sigfault_449097580 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
 
-/* BEGIN UNION-DECL __anonunion___u_898357595 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
-union __anonunion___u_898357595 ;
-/* END UNION-DECL __anonunion___u_898357595 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:92 */
+/* BEGIN STRUCT-DECL SDL_RWops LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+struct SDL_RWops ;
+/* END STRUCT-DECL SDL_RWops LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+
+/* BEGIN STRUCT-DECL SDL_ActiveEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:415 */
+struct SDL_ActiveEvent ;
+/* END STRUCT-DECL SDL_ActiveEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:415 */
+
+/* BEGIN STRUCT-DECL SDL_version LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:53 */
+struct SDL_version ;
+/* END STRUCT-DECL SDL_version LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:53 */
+
+/* BEGIN STRUCT-DECL __anonstruct___sev_thread_746770901 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
+struct __anonstruct___sev_thread_746770901 ;
+/* END STRUCT-DECL __anonstruct___sev_thread_746770901 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_bool_780193226 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:115 */
+enum __anonenum_SDL_bool_780193226 ;
+/* END ENUM-DECL __anonenum_SDL_bool_780193226 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:115 */
+
+/* BEGIN STRUCT-DECL asteroid LOC=../asteroids/asteroids.h:8 */
+struct asteroid ;
+/* END STRUCT-DECL asteroid LOC=../asteroids/asteroids.h:8 */
+
+/* BEGIN STRUCT-DECL SDL_MouseMotionEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:193 */
+struct SDL_MouseMotionEvent ;
+/* END STRUCT-DECL SDL_MouseMotionEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:193 */
+
+/* BEGIN UNION-DECL __anonunion___second_397282236 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+union __anonunion___second_397282236 ;
+/* END UNION-DECL __anonunion___second_397282236 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL __wasi_iovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:677 */
+struct __wasi_iovec_t ;
+/* END STRUCT-DECL __wasi_iovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:677 */
+
+/* BEGIN STRUCT-DECL __anonstruct__st_638665849 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
+struct __anonstruct__st_638665849 ;
+/* END STRUCT-DECL __anonstruct__st_638665849 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
+
+/* BEGIN UNION-DECL __anonunion___u_302425027 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+union __anonunion___u_302425027 ;
+/* END UNION-DECL __anonunion___u_302425027 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+
+/* BEGIN UNION-DECL __anonunion___u_302425027___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+union __anonunion___u_302425027___0 ;
+/* END UNION-DECL __anonunion___u_302425027___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
+
+/* BEGIN STRUCT-DECL __anonstruct_SDL_atomic_t_1070053764 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:188 */
+struct __anonstruct_SDL_atomic_t_1070053764 ;
+/* END STRUCT-DECL __anonstruct_SDL_atomic_t_1070053764 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:188 */
+
+/* BEGIN STRUCT-DECL vector2d LOC=../asteroids/vector.h:7 */
+struct vector2d ;
+/* END STRUCT-DECL vector2d LOC=../asteroids/vector.h:7 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_RendererFlags_280426716 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:63 */
+enum __anonenum_SDL_RendererFlags_280426716 ;
+/* END ENUM-DECL __anonenum_SDL_RendererFlags_280426716 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:63 */
+
+/* BEGIN STRUCT-DECL __anonstruct___addr_bnd_5259977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct___addr_bnd_5259977 ;
+/* END STRUCT-DECL __anonstruct___addr_bnd_5259977 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL bullet LOC=../asteroids/player.h:11 */
+struct bullet ;
+/* END STRUCT-DECL bullet LOC=../asteroids/player.h:11 */
+
+/* BEGIN UNION-DECL __anonunion_swapper_599864594 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_endian.h:201 */
+union __anonunion_swapper_599864594 ;
+/* END UNION-DECL __anonunion_swapper_599864594 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_endian.h:201 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_WindowEventID_619750628 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:134 */
+enum __anonenum_SDL_WindowEventID_619750628 ;
+/* END ENUM-DECL __anonenum_SDL_WindowEventID_619750628 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:134 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_cond_t_726266814 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
+struct __anonstruct_pthread_cond_t_726266814 ;
+/* END STRUCT-DECL __anonstruct_pthread_cond_t_726266814 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_PowerState_675147179 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:44 */
+enum __anonenum_SDL_PowerState_675147179 ;
+/* END ENUM-DECL __anonenum_SDL_PowerState_675147179 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:44 */
+
+/* BEGIN UNION-DECL SDL_Event LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:436 */
+union SDL_Event ;
+/* END UNION-DECL SDL_Event LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:436 */
+
+/* BEGIN ENUM-DECL __anonenum_233217090 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:92 */
+enum __anonenum_233217090 ;
+/* END ENUM-DECL __anonenum_233217090 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:92 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_barrierattr_t_32904003 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:387 */
+struct __anonstruct_pthread_barrierattr_t_32904003 ;
+/* END STRUCT-DECL __anonstruct_pthread_barrierattr_t_32904003 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:387 */
+
+/* BEGIN STRUCT-DECL __anonstruct_div_t_109580352 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:64 */
+struct __anonstruct_div_t_109580352 ;
+/* END STRUCT-DECL __anonstruct_div_t_109580352 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:64 */
+
+/* BEGIN UNION-DECL __anonunion___sa_handler_872129837 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
+union __anonunion___sa_handler_872129837 ;
+/* END UNION-DECL __anonunion___sa_handler_872129837 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_mutex_t_976653634 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
+struct __anonstruct_pthread_mutex_t_976653634 ;
+/* END STRUCT-DECL __anonstruct_pthread_mutex_t_976653634 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
+
+/* BEGIN STRUCT-DECL sigevent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
+struct sigevent ;
+/* END STRUCT-DECL sigevent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:184 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_barrier_t_867429677 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
+struct __anonstruct_pthread_barrier_t_867429677 ;
+/* END STRUCT-DECL __anonstruct_pthread_barrier_t_867429677 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
+
+/* BEGIN UNION-DECL __anonunion_hidden_739382560 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+union __anonunion_hidden_739382560 ;
+/* END UNION-DECL __anonunion_hidden_739382560 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+
+/* BEGIN ENUM-DECL em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
+enum em_promise_result_t ;
+/* END ENUM-DECL em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
+
+/* BEGIN STRUCT-DECL __anonstruct_lldiv_t_989260392 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:66 */
+struct __anonstruct_lldiv_t_989260392 ;
+/* END STRUCT-DECL __anonstruct_lldiv_t_989260392 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:66 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_eventaction_247177825 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:480 */
+enum __anonenum_SDL_eventaction_247177825 ;
+/* END ENUM-DECL __anonenum_SDL_eventaction_247177825 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:480 */
+
+/* BEGIN STRUCT-DECL SDL_VideoInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:134 */
+struct SDL_VideoInfo ;
+/* END STRUCT-DECL SDL_VideoInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:134 */
+
+/* BEGIN ENUM-DECL __anonenum_311483714 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:70 */
+enum __anonenum_311483714 ;
+/* END ENUM-DECL __anonenum_311483714 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:70 */
+
+/* BEGIN STRUCT-DECL SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
+struct SDL_WindowEvent ;
+/* END STRUCT-DECL SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
+
+/* BEGIN STRUCT-DECL __anonstruct_ldiv_t_721778306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:65 */
+struct __anonstruct_ldiv_t_721778306 ;
+/* END STRUCT-DECL __anonstruct_ldiv_t_721778306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:65 */
+
+/* BEGIN STRUCT-DECL timeval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:307 */
+struct timeval ;
+/* END STRUCT-DECL timeval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:307 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_assert_state_1070053763 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:96 */
+enum __anonenum_SDL_assert_state_1070053763 ;
+/* END ENUM-DECL __anonenum_SDL_assert_state_1070053763 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:96 */
+
+/* BEGIN UNION-DECL __anonunion___u_477865197___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+union __anonunion___u_477865197___3 ;
+/* END UNION-DECL __anonunion___u_477865197___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+
+/* BEGIN STRUCT-DECL __wasi_ciovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:698 */
+struct __wasi_ciovec_t ;
+/* END STRUCT-DECL __wasi_ciovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:698 */
+
+/* BEGIN UNION-DECL sigval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:94 */
+union sigval ;
+/* END UNION-DECL sigval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:94 */
+
+/* BEGIN STRUCT-DECL __anonstruct_siginfo_t_48430433 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+struct __anonstruct_siginfo_t_48430433 ;
+/* END STRUCT-DECL __anonstruct_siginfo_t_48430433 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
+
+/* BEGIN STRUCT-DECL __wasi_event_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1157 */
+struct __wasi_event_fd_readwrite_t ;
+/* END STRUCT-DECL __wasi_event_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1157 */
+
+/* BEGIN UNION-DECL __wasi_event_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1178 */
+union __wasi_event_u_t ;
+/* END UNION-DECL __wasi_event_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1178 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_condattr_t_32904002 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:382 */
+struct __anonstruct_pthread_condattr_t_32904002 ;
+/* END STRUCT-DECL __anonstruct_pthread_condattr_t_32904002 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:382 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_GrabMode_279849253 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:203 */
+enum __anonenum_SDL_GrabMode_279849253 ;
+/* END ENUM-DECL __anonenum_SDL_GrabMode_279849253 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:203 */
+
+/* BEGIN STRUCT-DECL SDL_UserEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:381 */
+struct SDL_UserEvent ;
+/* END STRUCT-DECL SDL_UserEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:381 */
+
+/* BEGIN STRUCT-DECL __anonstruct_stdio_61930941 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+struct __anonstruct_stdio_61930941 ;
+/* END STRUCT-DECL __anonstruct_stdio_61930941 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
+
+/* BEGIN UNION-DECL __anonunion___u_867429678 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
+union __anonunion___u_867429678 ;
+/* END UNION-DECL __anonunion___u_867429678 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:133 */
+
+/* BEGIN STRUCT-DECL __wasi_subscription_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1278 */
+struct __wasi_subscription_fd_readwrite_t ;
+/* END STRUCT-DECL __wasi_subscription_fd_readwrite_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1278 */
+
+/* BEGIN ENUM-DECL __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
+enum __anonenum_SDL_AudioStatus_415475965 ;
+/* END ENUM-DECL __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
+
+/* BEGIN STRUCT-DECL __wasi_fdstat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:930 */
+struct __wasi_fdstat_t ;
+/* END STRUCT-DECL __wasi_fdstat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:930 */
+
+/* BEGIN STRUCT-DECL SDL_SysWMEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:399 */
+struct SDL_SysWMEvent ;
+/* END STRUCT-DECL SDL_SysWMEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:399 */
+
+/* BEGIN STRUCT-DECL SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
+struct SDL_JoyBallEvent ;
+/* END STRUCT-DECL SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
+
+/* BEGIN STRUCT-DECL SDL_Rect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:65 */
+struct SDL_Rect ;
+/* END STRUCT-DECL SDL_Rect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:65 */
+
+/* BEGIN STRUCT-DECL SDL_MultiGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:339 */
+struct SDL_MultiGestureEvent ;
+/* END STRUCT-DECL SDL_MultiGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:339 */
+
+/* BEGIN UNION-DECL __anonunion___u_477865197___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+union __anonunion___u_477865197___0 ;
+/* END UNION-DECL __anonunion___u_477865197___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+
+/* BEGIN STRUCT-DECL sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
+struct sigaction ;
+/* END STRUCT-DECL sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
+
+/* BEGIN STRUCT-DECL SDL_Overlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
+struct SDL_Overlay ;
+/* END STRUCT-DECL SDL_Overlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
+
+/* BEGIN STRUCT-DECL __anonstruct_pthread_rwlock_t_656646310 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
+struct __anonstruct_pthread_rwlock_t_656646310 ;
+/* END STRUCT-DECL __anonstruct_pthread_rwlock_t_656646310 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
+
+/* BEGIN STRUCT-DECL SDL_JoyHatEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:270 */
+struct SDL_JoyHatEvent ;
+/* END STRUCT-DECL SDL_JoyHatEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:270 */
+
+/* BEGIN UNION-DECL _G_fpos64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:66 */
+union _G_fpos64_t ;
+/* END UNION-DECL _G_fpos64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:66 */
+
+/* BEGIN UNION-DECL __anonunion___u_477865197___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+union __anonunion___u_477865197___1 ;
+/* END UNION-DECL __anonunion___u_477865197___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+
+/* BEGIN UNION-DECL __anonunion___u_477865197 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+union __anonunion___u_477865197 ;
+/* END UNION-DECL __anonunion___u_477865197 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
+
+/* BEGIN UNION-DECL __anonunion___u_656646311 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
+union __anonunion___u_656646311 ;
+/* END UNION-DECL __anonunion___u_656646311 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
+
+/* BEGIN FUNCTION-DECL __builtin_strchr LOC=BUILTIN */
+/* compiler builtin: 
+   char *__builtin_strchr(char * , int  ) ;  */
+/* END FUNCTION-DECL __builtin_strchr LOC=BUILTIN */
 
 /* BEGIN TYPEDEF uint16_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:205 */
 typedef unsigned short uint16_t;
@@ -1452,11 +1443,6 @@ typedef float float_t;
 __inline static int __isgreaterequalf(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __isgreaterequalf LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL __builtin_strchr LOC=BUILTIN */
-/* compiler builtin: 
-   char *__builtin_strchr(char * , int  ) ;  */
-/* END FUNCTION-DECL __builtin_strchr LOC=BUILTIN */
-
 /* BEGIN TYPEDEF u_int LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:66 */
 typedef unsigned int u_int;
 /* END TYPEDEF u_int LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:66 */
@@ -1469,26 +1455,6 @@ typedef uint32_t __wasi_dirnamlen_t;
 extern char const __attribute__((__visibility__("default")))  *SDL_GetAudioDeviceName(int index ,
                                                                                       int iscapture ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetAudioDeviceName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:322 */
-
-/* BEGIN TYPEDEF Uint32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:144 */
-typedef uint32_t Uint32;
-/* END TYPEDEF Uint32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:144 */
-
-/* BEGIN TYPEDEF Uint8 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:128 */
-typedef uint8_t Uint8;
-/* END TYPEDEF Uint8 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:128 */
-
-/* BEGIN STRUCT SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
-struct SDL_JoyBallEvent {
-   Uint32 type ;
-   Uint8 which ;
-   Uint8 ball ;
-   Uint8 padding1 ;
-   Uint8 padding2 ;
-   int xrel ;
-   int yrel ;
-};
-/* END STRUCT SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
 
 /* BEGIN TYPEDEF __wasi_eventrwflags_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1143 */
 typedef uint16_t __wasi_eventrwflags_t;
@@ -1511,13 +1477,33 @@ union __wasi_event_u_t {
 };
 /* END UNION __wasi_event_u_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1178 */
 
-/* BEGIN FUNCTION-DECL-EXTERN isdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:14 */
-extern int isdigit(int  ) ;
-/* END FUNCTION-DECL-EXTERN isdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:14 */
+/* BEGIN TYPEDEF Uint32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:144 */
+typedef uint32_t Uint32;
+/* END TYPEDEF Uint32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:144 */
+
+/* BEGIN TYPEDEF Uint8 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:128 */
+typedef uint8_t Uint8;
+/* END TYPEDEF Uint8 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:128 */
+
+/* BEGIN STRUCT SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
+struct SDL_JoyBallEvent {
+   Uint32 type ;
+   Uint8 which ;
+   Uint8 ball ;
+   Uint8 padding1 ;
+   Uint8 padding2 ;
+   int xrel ;
+   int yrel ;
+};
+/* END STRUCT SDL_JoyBallEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:256 */
 
 /* BEGIN FUNCTION-DECL-EXTERN mrand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:132 */
 extern long mrand48(void) ;
 /* END FUNCTION-DECL-EXTERN mrand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:132 */
+
+/* BEGIN FUNCTION-DECL-EXTERN isdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:14 */
+extern int isdigit(int  ) ;
+/* END FUNCTION-DECL-EXTERN isdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:14 */
 
 /* BEGIN FUNCTION-DECL __builtin_ctz LOC=BUILTIN */
 /* compiler builtin: 
@@ -1532,11 +1518,6 @@ typedef enum __anonenum_SDL_AudioStatus_415475965 SDL_AudioStatus;
 typedef unsigned long long ino_t;
 /* END TYPEDEF ino_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:246 */
 
-/* BEGIN FUNCTION-DECL __builtin_acosf LOC=BUILTIN */
-/* compiler builtin: 
-   float __builtin_acosf(float  ) ;  */
-/* END FUNCTION-DECL __builtin_acosf LOC=BUILTIN */
-
 /* BEGIN TYPEDEF SDL_Surface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
 typedef struct SDL_Surface SDL_Surface;
 /* END TYPEDEF SDL_Surface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:72 */
@@ -1545,6 +1526,11 @@ typedef struct SDL_Surface SDL_Surface;
 extern void __attribute__((__visibility__("default")))  SDL_WM_SetIcon(SDL_Surface *icon ,
                                                                        Uint8 *mask ) ;
 /* END FUNCTION-DECL-EXTERN SDL_WM_SetIcon LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:305 */
+
+/* BEGIN FUNCTION-DECL __builtin_acosf LOC=BUILTIN */
+/* compiler builtin: 
+   float __builtin_acosf(float  ) ;  */
+/* END FUNCTION-DECL __builtin_acosf LOC=BUILTIN */
 
 /* BEGIN TYPEDEF FILE LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:398 */
 typedef struct _IO_FILE FILE;
@@ -1558,6 +1544,11 @@ extern int putc(int  , FILE * ) ;
 typedef int blksize_t;
 /* END TYPEDEF blksize_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:256 */
 
+/* BEGIN FUNCTION-DECL __builtin_strcmp LOC=BUILTIN */
+/* compiler builtin: 
+   int __builtin_strcmp(char const   * , char const   * ) ;  */
+/* END FUNCTION-DECL __builtin_strcmp LOC=BUILTIN */
+
 /* BEGIN TYPEDEF SDL_atomic_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:188 */
 typedef struct __anonstruct_SDL_atomic_t_1070053764 SDL_atomic_t;
 /* END TYPEDEF SDL_atomic_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:188 */
@@ -1565,11 +1556,6 @@ typedef struct __anonstruct_SDL_atomic_t_1070053764 SDL_atomic_t;
 /* BEGIN FUNCTION-DECL SDL_AtomicGet LOC=UNKNOWN */
 __inline static int SDL_AtomicGet(SDL_atomic_t *a ) ;
 /* END FUNCTION-DECL SDL_AtomicGet LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL __builtin_strcmp LOC=BUILTIN */
-/* compiler builtin: 
-   int __builtin_strcmp(char const   * , char const   * ) ;  */
-/* END FUNCTION-DECL __builtin_strcmp LOC=BUILTIN */
 
 /* BEGIN STRUCT vector2d LOC=../asteroids/vector.h:7 */
 struct vector2d {
@@ -1651,6 +1637,14 @@ extern void __attribute__((__visibility__("default")))  SDL_FlushEvents(Uint32 m
    float __builtin_fmodf(float  ) ;  */
 /* END FUNCTION-DECL __builtin_fmodf LOC=BUILTIN */
 
+/* BEGIN FUNCTION-DECL main_6317132 LOC=UNKNOWN */
+int main_6317132(int argc , char **args , char **_formal_envp ) ;
+/* END FUNCTION-DECL main_6317132 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL rotate_vector LOC=UNKNOWN */
+void rotate_vector(struct vector2d *v , float degrees ) ;
+/* END FUNCTION-DECL rotate_vector LOC=UNKNOWN */
+
 /* BEGIN TYPEDEF SDL_RWops LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
 typedef struct SDL_RWops SDL_RWops;
 /* END TYPEDEF SDL_RWops LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
@@ -1662,10 +1656,6 @@ typedef uint16_t Uint16;
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ReadLE16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:187 */
 extern Uint16 __attribute__((__visibility__("default")))  SDL_ReadLE16(SDL_RWops *src ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ReadLE16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:187 */
-
-/* BEGIN FUNCTION-DECL rotate_vector LOC=UNKNOWN */
-void rotate_vector(struct vector2d *v , float degrees ) ;
-/* END FUNCTION-DECL rotate_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN fputs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:116 */
 extern int fputs(char const   * __restrict   , FILE * __restrict   ) ;
@@ -1679,19 +1669,15 @@ typedef struct __wasi_subscription_fd_readwrite_t __wasi_subscription_fd_readwri
 extern void funlockfile(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN funlockfile LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:159 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumTouchDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:67 */
-extern int __attribute__((__visibility__("default")))  SDL_GetNumTouchDevices(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetNumTouchDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:67 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_dlopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:176 */
 extern void emscripten_dlopen(char const   *filename , int flags , void *user_data ,
                               void (*onsuccess)(void *handle , void *user_data ) ,
                               void (*onerror)(void * ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_dlopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:176 */
 
-/* BEGIN TYPEDEF SDL_threadID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:50 */
-typedef unsigned long SDL_threadID;
-/* END TYPEDEF SDL_threadID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:50 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumTouchDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:67 */
+extern int __attribute__((__visibility__("default")))  SDL_GetNumTouchDevices(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetNumTouchDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:67 */
 
 /* BEGIN TYPEDEF SDL_Color LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:249 */
 typedef struct SDL_Color SDL_Color;
@@ -1705,6 +1691,10 @@ struct SDL_Palette {
    int refcount ;
 };
 /* END STRUCT SDL_Palette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:258 */
+
+/* BEGIN TYPEDEF SDL_threadID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:50 */
+typedef unsigned long SDL_threadID;
+/* END TYPEDEF SDL_threadID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:50 */
 
 /* BEGIN TYPEDEF size_t LOC=/usr/lib/emsdk/upstream/lib/clang/17/include/stddef.h:46 */
 typedef unsigned long size_t;
@@ -1745,13 +1735,13 @@ union __anonunion___u_867429678 {
 extern int sigignore(int  ) ;
 /* END FUNCTION-DECL-EXTERN sigignore LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:242 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_async_run_script LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:38 */
-extern void emscripten_async_run_script(char const   *script , int millis ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_async_run_script LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:38 */
-
 /* BEGIN FUNCTION-DECL-EXTERN asinl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:145 */
 extern long double asinl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN asinl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:145 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_async_run_script LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:38 */
+extern void emscripten_async_run_script(char const   *script , int millis ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_async_run_script LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:38 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_async_wget2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:26 */
 extern int emscripten_async_wget2(char const   *url , char const   *file , char const   *requesttype ,
@@ -2039,6 +2029,14 @@ struct _1_main_1_opaque_NodeStruct {
 struct _1_main_1_opaque_NodeStruct *_1_main_1_opaque_list_1  =    (struct _1_main_1_opaque_NodeStruct *)0;
 /* END VARIABLE-DEF _1_main_1_opaque_list_1 LOC=UNKNOWN */
 
+/* BEGIN TYPEDEF SDL_GLattr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
+typedef enum __anonenum_SDL_GLattr_994110948 SDL_GLattr;
+/* END TYPEDEF SDL_GLattr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
+
+/* BEGIN TYPEDEF u_int64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:220 */
+typedef unsigned long long u_int64_t;
+/* END TYPEDEF u_int64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:220 */
+
 /* BEGIN UNION __anonunion___u_546072648 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
 union __anonunion___u_546072648 {
    int __i[6] ;
@@ -2053,21 +2051,9 @@ struct __anonstruct_pthread_mutex_t_976653634 {
 };
 /* END STRUCT __anonstruct_pthread_mutex_t_976653634 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
 
-/* BEGIN TYPEDEF SDL_GLattr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
-typedef enum __anonenum_SDL_GLattr_994110948 SDL_GLattr;
-/* END TYPEDEF SDL_GLattr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
-
-/* BEGIN TYPEDEF u_int64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:220 */
-typedef unsigned long long u_int64_t;
-/* END TYPEDEF u_int64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:220 */
-
 /* BEGIN FUNCTION-DECL-EXTERN tmpfile LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:142 */
 extern FILE *tmpfile(void) ;
 /* END FUNCTION-DECL-EXTERN tmpfile LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:142 */
-
-/* BEGIN FUNCTION-DECL-EXTERN getloadavg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:8 */
-extern int getloadavg(double *loadavg , int nelem ) ;
-/* END FUNCTION-DECL-EXTERN getloadavg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:8 */
 
 /* BEGIN TYPEDEF SDL_bool LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:115 */
 typedef enum __anonenum_SDL_bool_780193226 SDL_bool;
@@ -2076,6 +2062,10 @@ typedef enum __anonenum_SDL_bool_780193226 SDL_bool;
 /* BEGIN FUNCTION-DECL-EXTERN SDL_HasSSE42 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:137 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasSSE42(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_HasSSE42 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:137 */
+
+/* BEGIN FUNCTION-DECL-EXTERN getloadavg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:8 */
+extern int getloadavg(double *loadavg , int nelem ) ;
+/* END FUNCTION-DECL-EXTERN getloadavg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:8 */
 
 /* BEGIN UNION __anonunion___u_656646311 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
 union __anonunion___u_656646311 {
@@ -2110,14 +2100,14 @@ extern Sint16 __attribute__((__visibility__("default")))  SDL_JoystickGetAxis(SD
                                                                               int axis ) ;
 /* END FUNCTION-DECL-EXTERN SDL_JoystickGetAxis LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:137 */
 
-/* BEGIN FUNCTION-DECL-EXTERN at_quick_exit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:50 */
-extern int at_quick_exit(void (*)(void) ) ;
-/* END FUNCTION-DECL-EXTERN at_quick_exit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:50 */
-
 /* BEGIN FUNCTION-DECL __builtin_va_arg_pack LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_va_arg_pack(void) ;  */
 /* END FUNCTION-DECL __builtin_va_arg_pack LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN at_quick_exit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:50 */
+extern int at_quick_exit(void (*)(void) ) ;
+/* END FUNCTION-DECL-EXTERN at_quick_exit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:50 */
 
 /* BEGIN TYPEDEF SDL_Rect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:65 */
 typedef struct SDL_Rect SDL_Rect;
@@ -2193,15 +2183,15 @@ typedef __builtin_va_list __isoc_va_list;
 extern int vsprintf(char * __restrict   , char const   * __restrict   , __isoc_va_list  ) ;
 /* END FUNCTION-DECL-EXTERN vsprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:126 */
 
+/* BEGIN FUNCTION-DECL-EXTERN fileno LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:152 */
+extern int fileno(FILE * ) ;
+/* END FUNCTION-DECL-EXTERN fileno LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:152 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RenderFillRects LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:544 */
 extern int __attribute__((__visibility__("default")))  SDL_RenderFillRects(SDL_Renderer *renderer ,
                                                                            SDL_Rect const   *rects ,
                                                                            int count ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderFillRects LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:544 */
-
-/* BEGIN FUNCTION-DECL-EXTERN fileno LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:152 */
-extern int fileno(FILE * ) ;
-/* END FUNCTION-DECL-EXTERN fileno LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:152 */
 
 /* BEGIN ENUM __anonenum_SDL_WindowEventID_619750628 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:134 */
 enum __anonenum_SDL_WindowEventID_619750628 {
@@ -2257,13 +2247,13 @@ typedef struct __wasi_prestat_t __wasi_prestat_t;
 extern int strcasecmp(char const   * , char const   * ) ;
 /* END FUNCTION-DECL-EXTERN strcasecmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:29 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_scan_registers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:170 */
-extern void emscripten_scan_registers(void (*func)(void * , void * ) ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_scan_registers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:170 */
-
 /* BEGIN FUNCTION-DECL-EXTERN fmin LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:223 */
 extern double fmin(double  , double  ) ;
 /* END FUNCTION-DECL-EXTERN fmin LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:223 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_scan_registers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:170 */
+extern void emscripten_scan_registers(void (*func)(void * , void * ) ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_scan_registers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:170 */
 
 /* BEGIN TYPEDEF pthread_spinlock_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:372 */
 typedef int pthread_spinlock_t;
@@ -2277,14 +2267,14 @@ typedef struct __anonstruct_fd_set_143082958 fd_set;
 extern char *ptsname(int  ) ;
 /* END FUNCTION-DECL-EXTERN ptsname LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:124 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_FreeRW LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:161 */
-extern void __attribute__((__visibility__("default")))  SDL_FreeRW(SDL_RWops *area ) ;
-/* END FUNCTION-DECL-EXTERN SDL_FreeRW LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:161 */
-
 /* BEGIN FUNCTION-DECL __builtin_asin LOC=BUILTIN */
 /* compiler builtin: 
    double __builtin_asin(double  ) ;  */
 /* END FUNCTION-DECL __builtin_asin LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_FreeRW LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:161 */
+extern void __attribute__((__visibility__("default")))  SDL_FreeRW(SDL_RWops *area ) ;
+/* END FUNCTION-DECL-EXTERN SDL_FreeRW LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:161 */
 
 /* BEGIN FUNCTION-DECL-EXTERN rand_r LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:108 */
 extern int rand_r(unsigned int * ) ;
@@ -2327,14 +2317,14 @@ extern int finite(double  ) ;
 typedef unsigned long fd_mask;
 /* END TYPEDEF fd_mask LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:20 */
 
+/* BEGIN FUNCTION-DECL-EXTERN tolower LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:22 */
+extern int tolower(int  ) ;
+/* END FUNCTION-DECL-EXTERN tolower LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:22 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RenderDrawRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:510 */
 extern int __attribute__((__visibility__("default")))  SDL_RenderDrawRect(SDL_Renderer *renderer ,
                                                                           SDL_Rect const   *rect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderDrawRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:510 */
-
-/* BEGIN FUNCTION-DECL-EXTERN tolower LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:22 */
-extern int tolower(int  ) ;
-/* END FUNCTION-DECL-EXTERN tolower LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:22 */
 
 /* BEGIN TYPEDEF SDL_MultiGestureEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:339 */
 typedef struct SDL_MultiGestureEvent SDL_MultiGestureEvent;
@@ -2365,14 +2355,9 @@ typedef long register_t;
 extern long double fabsl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN fabsl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:205 */
 
-/* BEGIN FUNCTION-DECL __builtin_strpbrk LOC=BUILTIN */
-/* compiler builtin: 
-   char *__builtin_strpbrk(char const   * , char const   * ) ;  */
-/* END FUNCTION-DECL __builtin_strpbrk LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN getw LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:192 */
-extern int getw(FILE * ) ;
-/* END FUNCTION-DECL-EXTERN getw LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:192 */
+/* BEGIN FUNCTION-DECL-EXTERN modfl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:289 */
+extern long double modfl(long double  , long double * ) ;
+/* END FUNCTION-DECL-EXTERN modfl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:289 */
 
 /* BEGIN TYPEDEF Uint64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:153 */
 typedef uint64_t Uint64;
@@ -2382,9 +2367,14 @@ typedef uint64_t Uint64;
 extern Uint64 __attribute__((__visibility__("default")))  SDL_GetPerformanceCounter(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetPerformanceCounter LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:52 */
 
-/* BEGIN FUNCTION-DECL-EXTERN modfl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:289 */
-extern long double modfl(long double  , long double * ) ;
-/* END FUNCTION-DECL-EXTERN modfl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:289 */
+/* BEGIN FUNCTION-DECL-EXTERN getw LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:192 */
+extern int getw(FILE * ) ;
+/* END FUNCTION-DECL-EXTERN getw LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:192 */
+
+/* BEGIN FUNCTION-DECL __builtin_strpbrk LOC=BUILTIN */
+/* compiler builtin: 
+   char *__builtin_strpbrk(char const   * , char const   * ) ;  */
+/* END FUNCTION-DECL __builtin_strpbrk LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN realpath LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:115 */
 extern char *realpath(char const   * __restrict   , char * __restrict   ) ;
@@ -2419,6 +2409,10 @@ extern void __attribute__((__visibility__("default")))  SDL_LockAudioDevice(SDL_
 typedef struct SDL_ResizeEvent SDL_ResizeEvent;
 /* END TYPEDEF SDL_ResizeEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:422 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_ReadBE32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:190 */
+extern Uint32 __attribute__((__visibility__("default")))  SDL_ReadBE32(SDL_RWops *src ) ;
+/* END FUNCTION-DECL-EXTERN SDL_ReadBE32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:190 */
+
 /* BEGIN ENUM __anonenum_SDL_HintPriority_680791259 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:151 */
 enum __anonenum_SDL_HintPriority_680791259 {
     SDL_HINT_DEFAULT = 0,
@@ -2436,10 +2430,6 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_SetHintWithPrior
                                                                                     char const   *value ,
                                                                                     SDL_HintPriority priority ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetHintWithPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:168 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_ReadBE32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:190 */
-extern Uint32 __attribute__((__visibility__("default")))  SDL_ReadBE32(SDL_RWops *src ) ;
-/* END FUNCTION-DECL-EXTERN SDL_ReadBE32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:190 */
 
 /* BEGIN FUNCTION-DECL-EXTERN remainderf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:312 */
 extern float remainderf(float  , float  ) ;
@@ -2509,14 +2499,22 @@ enum boolean {
 } ;
 /* END ENUM boolean LOC=../asteroids/player.h:9 */
 
-/* BEGIN FUNCTION-DECL-EXTERN ffs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:24 */
-extern int ffs(int  ) ;
-/* END FUNCTION-DECL-EXTERN ffs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:24 */
-
 /* BEGIN FUNCTION-DECL __builtin_unreachable LOC=BUILTIN */
 /* compiler builtin: 
    void __builtin_unreachable(void) ;  */
 /* END FUNCTION-DECL __builtin_unreachable LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN ffs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:24 */
+extern int ffs(int  ) ;
+/* END FUNCTION-DECL-EXTERN ffs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:24 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickClose LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:195 */
+extern void __attribute__((__visibility__("default")))  SDL_JoystickClose(SDL_Joystick *joystick ) ;
+/* END FUNCTION-DECL-EXTERN SDL_JoystickClose LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:195 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_RenderPresent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:586 */
+extern void __attribute__((__visibility__("default")))  SDL_RenderPresent(SDL_Renderer *renderer ) ;
+/* END FUNCTION-DECL-EXTERN SDL_RenderPresent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:586 */
 
 /* BEGIN TYPEDEF __wasi_iovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:677 */
 typedef struct __wasi_iovec_t __wasi_iovec_t;
@@ -2544,14 +2542,6 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_sock_recv
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_sock_recv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2670 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_RenderPresent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:586 */
-extern void __attribute__((__visibility__("default")))  SDL_RenderPresent(SDL_Renderer *renderer ) ;
-/* END FUNCTION-DECL-EXTERN SDL_RenderPresent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:586 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickClose LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:195 */
-extern void __attribute__((__visibility__("default")))  SDL_JoystickClose(SDL_Joystick *joystick ) ;
-/* END FUNCTION-DECL-EXTERN SDL_JoystickClose LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:195 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_LogError LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:163 */
 extern void __attribute__((__visibility__("default")))  SDL_LogError(int category ,
                                                                      char const   *fmt 
@@ -2562,15 +2552,15 @@ extern void __attribute__((__visibility__("default")))  SDL_LogError(int categor
 extern int isspace(int  ) ;
 /* END FUNCTION-DECL-EXTERN isspace LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:19 */
 
+/* BEGIN FUNCTION-DECL __isgreater___2 LOC=UNKNOWN */
+__inline static int __isgreater___2(double_t __x , double_t __y ) ;
+/* END FUNCTION-DECL __isgreater___2 LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_asm_const_int_sync_on_main_thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_asm.h:26 */
 extern  __attribute__((__nothrow__)) int emscripten_asm_const_int_sync_on_main_thread(char const   *code ,
                                                                                       char const   *arg_sigs 
                                                                                       , ...) ;
 /* END FUNCTION-DECL-EXTERN emscripten_asm_const_int_sync_on_main_thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_asm.h:26 */
-
-/* BEGIN FUNCTION-DECL __isgreater___2 LOC=UNKNOWN */
-__inline static int __isgreater___2(double_t __x , double_t __y ) ;
-/* END FUNCTION-DECL __isgreater___2 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL __builtin___memset_chk LOC=BUILTIN */
 /* compiler builtin: 
@@ -2589,14 +2579,14 @@ typedef struct _fpstate *fpregset_t;
 extern int clearenv(void) ;
 /* END FUNCTION-DECL-EXTERN clearenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:147 */
 
+/* BEGIN FUNCTION-DECL-EXTERN sinl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:337 */
+extern long double sinl(long double  ) ;
+/* END FUNCTION-DECL-EXTERN sinl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:337 */
+
 /* BEGIN FUNCTION-DECL __builtin_coshf LOC=BUILTIN */
 /* compiler builtin: 
    float __builtin_coshf(float  ) ;  */
 /* END FUNCTION-DECL __builtin_coshf LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN sinl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:337 */
-extern long double sinl(long double  ) ;
-/* END FUNCTION-DECL-EXTERN sinl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:337 */
 
 /* BEGIN FUNCTION-DECL-EXTERN vsnprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:127 */
 extern int vsnprintf(char * __restrict   , size_t  , char const   * __restrict   ,
@@ -2607,6 +2597,11 @@ extern int vsnprintf(char * __restrict   , size_t  , char const   * __restrict  
 typedef enum __anonenum_SDL_GrabMode_279849253 SDL_GrabMode;
 /* END TYPEDEF SDL_GrabMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:203 */
 
+/* BEGIN FUNCTION-DECL __builtin_floor LOC=BUILTIN */
+/* compiler builtin: 
+   double __builtin_floor(double  ) ;  */
+/* END FUNCTION-DECL __builtin_floor LOC=BUILTIN */
+
 /* BEGIN FUNCTION-DECL-EXTERN copysign LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:171 */
 extern double copysign(double  , double  ) ;
 /* END FUNCTION-DECL-EXTERN copysign LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:171 */
@@ -2615,11 +2610,6 @@ extern double copysign(double  , double  ) ;
 extern float modff(float  , float * ) ;
 /* END FUNCTION-DECL-EXTERN modff LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:288 */
 
-/* BEGIN FUNCTION-DECL __builtin_floor LOC=BUILTIN */
-/* compiler builtin: 
-   double __builtin_floor(double  ) ;  */
-/* END FUNCTION-DECL __builtin_floor LOC=BUILTIN */
-
 /* BEGIN STRUCT __wasi_ciovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:698 */
 struct __wasi_ciovec_t {
    uint8_t const   *buf ;
@@ -2627,18 +2617,18 @@ struct __wasi_ciovec_t {
 };
 /* END STRUCT __wasi_ciovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:698 */
 
-/* BEGIN FUNCTION-DECL __builtin_infl LOC=BUILTIN */
-/* compiler builtin: 
-   long double __builtin_infl(void) ;  */
-/* END FUNCTION-DECL __builtin_infl LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_lazy_load_code LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:118 */
+extern void emscripten_lazy_load_code(void) ;
+/* END FUNCTION-DECL-EXTERN emscripten_lazy_load_code LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:118 */
 
 /* BEGIN FUNCTION-DECL-EXTERN erand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:129 */
 extern double erand48(unsigned short * ) ;
 /* END FUNCTION-DECL-EXTERN erand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:129 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_lazy_load_code LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:118 */
-extern void emscripten_lazy_load_code(void) ;
-/* END FUNCTION-DECL-EXTERN emscripten_lazy_load_code LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:118 */
+/* BEGIN FUNCTION-DECL __builtin_infl LOC=BUILTIN */
+/* compiler builtin: 
+   long double __builtin_infl(void) ;  */
+/* END FUNCTION-DECL __builtin_infl LOC=BUILTIN */
 
 /* BEGIN STRUCT SDL_Overlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
 struct SDL_Overlay {
@@ -2655,10 +2645,6 @@ struct SDL_Overlay {
 };
 /* END STRUCT SDL_Overlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:178 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_hide_mouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:83 */
-extern void emscripten_hide_mouse(void) ;
-/* END FUNCTION-DECL-EXTERN emscripten_hide_mouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:83 */
-
 /* BEGIN TYPEDEF intmax_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:195 */
 typedef long long intmax_t;
 /* END TYPEDEF intmax_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:195 */
@@ -2671,6 +2657,10 @@ typedef int wchar_t___0;
 extern intmax_t wcstoimax(wchar_t___0 const   * __restrict   , wchar_t___0 ** __restrict   ,
                           int  ) ;
 /* END FUNCTION-DECL-EXTERN wcstoimax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:22 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_hide_mouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:83 */
+extern void emscripten_hide_mouse(void) ;
+/* END FUNCTION-DECL-EXTERN emscripten_hide_mouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:83 */
 
 /* BEGIN VARIABLE-DECL-EXTERN stdout LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:73 */
 extern FILE * const  stdout ;
@@ -2696,29 +2686,6 @@ extern double exp(double  ) ;
 extern void exit(int  ) ;
 /* END FUNCTION-DECL-EXTERN exit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:48 */
 
-/* BEGIN TYPEDEF SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
-typedef struct SDL_Window SDL_Window;
-/* END TYPEDEF SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_CreateRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:161 */
-extern SDL_Renderer __attribute__((__visibility__("default")))  *SDL_CreateRenderer(SDL_Window *window ,
-                                                                                    int index ,
-                                                                                    Uint32 flags ) ;
-/* END FUNCTION-DECL-EXTERN SDL_CreateRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:161 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_CreateWindowFrom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:388 */
-extern SDL_Window __attribute__((__visibility__("default")))  *SDL_CreateWindowFrom(void const   *data ) ;
-/* END FUNCTION-DECL-EXTERN SDL_CreateWindowFrom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:388 */
-
-/* BEGIN FUNCTION-DECL __builtin_strncmp LOC=BUILTIN */
-/* compiler builtin: 
-   int __builtin_strncmp(char const   * , char const   * , unsigned long  ) ;  */
-/* END FUNCTION-DECL __builtin_strncmp LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN remquo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:315 */
-extern double remquo(double  , double  , int * ) ;
-/* END FUNCTION-DECL-EXTERN remquo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:315 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_asm_const_async_on_main_thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_asm.h:33 */
 extern  __attribute__((__nothrow__)) void emscripten_asm_const_async_on_main_thread(char const   *code ,
                                                                                     char const   *arg_sigs 
@@ -2728,6 +2695,29 @@ extern  __attribute__((__nothrow__)) void emscripten_asm_const_async_on_main_thr
 /* BEGIN FUNCTION-DECL-EXTERN putc_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:162 */
 extern int putc_unlocked(int  , FILE * ) ;
 /* END FUNCTION-DECL-EXTERN putc_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:162 */
+
+/* BEGIN TYPEDEF SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
+typedef struct SDL_Window SDL_Window;
+/* END TYPEDEF SDL_Window LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:90 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_CreateWindowFrom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:388 */
+extern SDL_Window __attribute__((__visibility__("default")))  *SDL_CreateWindowFrom(void const   *data ) ;
+/* END FUNCTION-DECL-EXTERN SDL_CreateWindowFrom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:388 */
+
+/* BEGIN FUNCTION-DECL-EXTERN remquo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:315 */
+extern double remquo(double  , double  , int * ) ;
+/* END FUNCTION-DECL-EXTERN remquo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:315 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_CreateRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:161 */
+extern SDL_Renderer __attribute__((__visibility__("default")))  *SDL_CreateRenderer(SDL_Window *window ,
+                                                                                    int index ,
+                                                                                    Uint32 flags ) ;
+/* END FUNCTION-DECL-EXTERN SDL_CreateRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:161 */
+
+/* BEGIN FUNCTION-DECL __builtin_strncmp LOC=BUILTIN */
+/* compiler builtin: 
+   int __builtin_strncmp(char const   * , char const   * , unsigned long  ) ;  */
+/* END FUNCTION-DECL __builtin_strncmp LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetMouseFocus LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:67 */
 extern SDL_Window __attribute__((__visibility__("default")))  *SDL_GetMouseFocus(void) ;
@@ -3038,15 +3028,15 @@ extern int __attribute__((__visibility__("default")))  SDL_SetPixelFormatPalette
 extern int sigaddset(sigset_t * , int  ) ;
 /* END FUNCTION-DECL-EXTERN sigaddset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:217 */
 
+/* BEGIN FUNCTION-DECL-EXTERN fminf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:224 */
+extern float fminf(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN fminf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:224 */
+
 /* BEGIN FUNCTION-DECL __builtin___vsnprintf_chk LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin___vsnprintf_chk(char * , unsigned long  , int  , unsigned long  ,
                                  char const   * , __builtin_va_list  ) ;  */
 /* END FUNCTION-DECL __builtin___vsnprintf_chk LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN fminf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:224 */
-extern float fminf(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN fminf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:224 */
 
 /* BEGIN VARIABLE-DEF _1_main_1_opaque_ptr_2 LOC=UNKNOWN */
 struct _1_main_1_opaque_NodeStruct *_1_main_1_opaque_ptr_2  =    (struct _1_main_1_opaque_NodeStruct *)0;
@@ -3056,13 +3046,13 @@ struct _1_main_1_opaque_NodeStruct *_1_main_1_opaque_ptr_2  =    (struct _1_main
 extern int __attribute__((__visibility__("default")))  SDL_GetNumTouchFingers(SDL_TouchID touchID ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetNumTouchFingers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:77 */
 
-/* BEGIN FUNCTION-DECL __islessf___1 LOC=UNKNOWN */
-__inline static int __islessf___1(float_t __x , float_t __y ) ;
-/* END FUNCTION-DECL __islessf___1 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowGrab LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:607 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_GetWindowGrab(SDL_Window *window ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetWindowGrab LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:607 */
+
+/* BEGIN FUNCTION-DECL __islessf___1 LOC=UNKNOWN */
+__inline static int __islessf___1(float_t __x , float_t __y ) ;
+/* END FUNCTION-DECL __islessf___1 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN memmove LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:28 */
 extern void *memmove(void * , void const   * , size_t  ) ;
@@ -3080,14 +3070,29 @@ typedef uint8_t uint_least8_t;
 extern void __attribute__((__visibility__("default")))  SDL_ResetAssertionReport(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_ResetAssertionReport LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:229 */
 
-/* BEGIN FUNCTION-DECL-EXTERN toupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:23 */
-extern int toupper(int  ) ;
-/* END FUNCTION-DECL-EXTERN toupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:23 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_DisplayYUVOverlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:326 */
 extern int __attribute__((__visibility__("default")))  SDL_DisplayYUVOverlay(SDL_Overlay *overlay ,
                                                                              SDL_Rect *dstrect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_DisplayYUVOverlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:326 */
+
+/* BEGIN FUNCTION-DECL-EXTERN toupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:23 */
+extern int toupper(int  ) ;
+/* END FUNCTION-DECL-EXTERN toupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:23 */
+
+/* BEGIN TYPEDEF em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
+typedef enum em_promise_result_t em_promise_result_t;
+/* END TYPEDEF em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_promise_then LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:88 */
+extern em_promise_t ( __attribute__((__warn_unused_result__)) emscripten_promise_then)(em_promise_t promise ,
+                                                                                       em_promise_result_t (*on_fulfilled)(void **result ,
+                                                                                                                           void *data ,
+                                                                                                                           void *value ) ,
+                                                                                       em_promise_result_t (*on_rejected)(void **result ,
+                                                                                                                          void *data ,
+                                                                                                                          void *value ) ,
+                                                                                       void *data ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_promise_then LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:88 */
 
 /* BEGIN TYPEDEF __wasi_fstflags_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:973 */
 typedef uint16_t __wasi_fstflags_t;
@@ -3108,36 +3113,21 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_file
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_path_filestat_set_times LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2287 */
 
-/* BEGIN TYPEDEF em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
-typedef enum em_promise_result_t em_promise_result_t;
-/* END TYPEDEF em_promise_result_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:21 */
-
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_promise_then LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:88 */
-extern em_promise_t ( __attribute__((__warn_unused_result__)) emscripten_promise_then)(em_promise_t promise ,
-                                                                                       em_promise_result_t (*on_fulfilled)(void **result ,
-                                                                                                                           void *data ,
-                                                                                                                           void *value ) ,
-                                                                                       em_promise_result_t (*on_rejected)(void **result ,
-                                                                                                                          void *data ,
-                                                                                                                          void *value ) ,
-                                                                                       void *data ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_promise_then LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:88 */
+/* BEGIN FUNCTION-DECL-EXTERN significand LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:407 */
+extern double significand(double  ) ;
+/* END FUNCTION-DECL-EXTERN significand LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:407 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_async_call LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:73 */
 extern void emscripten_async_call(void (*func)(void * ) , void *arg , int millis ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_async_call LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:73 */
 
-/* BEGIN FUNCTION-DECL-EXTERN significand LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:407 */
-extern double significand(double  ) ;
-/* END FUNCTION-DECL-EXTERN significand LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:407 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_CreateSoftwareRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:174 */
+extern SDL_Renderer __attribute__((__visibility__("default")))  *SDL_CreateSoftwareRenderer(SDL_Surface *surface ) ;
+/* END FUNCTION-DECL-EXTERN SDL_CreateSoftwareRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:174 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_promise_create LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:61 */
 extern em_promise_t ( __attribute__((__warn_unused_result__)) emscripten_promise_create)(void) ;
 /* END FUNCTION-DECL-EXTERN emscripten_promise_create LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:61 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_CreateSoftwareRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:174 */
-extern SDL_Renderer __attribute__((__visibility__("default")))  *SDL_CreateSoftwareRenderer(SDL_Surface *surface ) ;
-/* END FUNCTION-DECL-EXTERN SDL_CreateSoftwareRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:174 */
 
 /* BEGIN STRUCT __anonstruct_mem_553591186 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
 struct __anonstruct_mem_553591186 {
@@ -3146,10 +3136,6 @@ struct __anonstruct_mem_553591186 {
    Uint8 *stop ;
 };
 /* END STRUCT __anonstruct_mem_553591186 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:46 */
-
-/* BEGIN TYPEDEF SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:192 */
-typedef struct SDL_AudioCVT SDL_AudioCVT;
-/* END TYPEDEF SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:192 */
 
 /* BEGIN TYPEDEF suseconds_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:86 */
 typedef int suseconds_t;
@@ -3166,9 +3152,13 @@ struct timeval {
 };
 /* END STRUCT timeval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:307 */
 
-/* BEGIN FUNCTION-DECL-EXTERN nanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:293 */
-extern long double nanl(char const   * ) ;
-/* END FUNCTION-DECL-EXTERN nanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:293 */
+/* BEGIN TYPEDEF SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:192 */
+typedef struct SDL_AudioCVT SDL_AudioCVT;
+/* END TYPEDEF SDL_AudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:192 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fwrite LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:100 */
+extern size_t fwrite(void const   * __restrict   , size_t  , size_t  , FILE * __restrict   ) ;
+/* END FUNCTION-DECL-EXTERN fwrite LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:100 */
 
 /* BEGIN TYPEDEF __wasi_oflags_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1014 */
 typedef uint16_t __wasi_oflags_t;
@@ -3187,18 +3177,18 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_open
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_path_open LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2376 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fwrite LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:100 */
-extern size_t fwrite(void const   * __restrict   , size_t  , size_t  , FILE * __restrict   ) ;
-/* END FUNCTION-DECL-EXTERN fwrite LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:100 */
-
-/* BEGIN FUNCTION-DECL-EXTERN log2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:271 */
-extern double log2(double  ) ;
-/* END FUNCTION-DECL-EXTERN log2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:271 */
+/* BEGIN FUNCTION-DECL-EXTERN nanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:293 */
+extern long double nanl(char const   * ) ;
+/* END FUNCTION-DECL-EXTERN nanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:293 */
 
 /* BEGIN FUNCTION-DECL-EXTERN pselect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:32 */
 extern int pselect(int  , fd_set * __restrict   , fd_set * __restrict   , fd_set * __restrict   ,
                    struct timespec  const  * __restrict   , sigset_t const   * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN pselect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:32 */
+
+/* BEGIN FUNCTION-DECL-EXTERN log2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:271 */
+extern double log2(double  ) ;
+/* END FUNCTION-DECL-EXTERN log2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:271 */
 
 /* BEGIN FUNCTION-DECL __islessgreater___0 LOC=UNKNOWN */
 __inline static int __islessgreater___0(double_t __x , double_t __y ) ;
@@ -3248,14 +3238,14 @@ extern int isblank(int  ) ;
 typedef int pthread_once_t;
 /* END TYPEDEF pthread_once_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:362 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_DisplayFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:298 */
-extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_DisplayFormat(SDL_Surface *surface ) ;
-/* END FUNCTION-DECL-EXTERN SDL_DisplayFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:298 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_socket_open_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:58 */
 extern void emscripten_set_socket_open_callback(void *userData , void (*callback)(int fd ,
                                                                                   void *userData ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_set_socket_open_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:58 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_DisplayFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:298 */
+extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_DisplayFormat(SDL_Surface *surface ) ;
+/* END FUNCTION-DECL-EXTERN SDL_DisplayFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:298 */
 
 /* BEGIN TYPEDEF SDL_Keymod LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keycode.h:320 */
 typedef enum __anonenum_SDL_Keymod_474209642 SDL_Keymod;
@@ -3295,22 +3285,22 @@ union __anonunion___u_477865197 {
 };
 /* END UNION __anonunion___u_477865197 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
 
+/* BEGIN FUNCTION-DECL-EXTERN fmal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:217 */
+extern long double fmal(long double  , long double  , long double  ) ;
+/* END FUNCTION-DECL-EXTERN fmal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:217 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_WriteBE32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:204 */
 extern size_t __attribute__((__visibility__("default")))  SDL_WriteBE32(SDL_RWops *dst ,
                                                                         Uint32 value ) ;
 /* END FUNCTION-DECL-EXTERN SDL_WriteBE32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:204 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fmal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:217 */
-extern long double fmal(long double  , long double  , long double  ) ;
-/* END FUNCTION-DECL-EXTERN fmal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:217 */
+/* BEGIN FUNCTION-DECL-EXTERN isprint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:17 */
+extern int isprint(int  ) ;
+/* END FUNCTION-DECL-EXTERN isprint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:17 */
 
 /* BEGIN FUNCTION-DECL-EXTERN strtoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:34 */
 extern long long strtoll(char const   * __restrict   , char ** __restrict   , int  ) ;
 /* END FUNCTION-DECL-EXTERN strtoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:34 */
-
-/* BEGIN FUNCTION-DECL-EXTERN isprint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:17 */
-extern int isprint(int  ) ;
-/* END FUNCTION-DECL-EXTERN isprint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:17 */
 
 /* BEGIN FUNCTION-DECL __builtin_memcpy LOC=BUILTIN */
 /* compiler builtin: 
@@ -3322,10 +3312,6 @@ extern int isprint(int  ) ;
    float __builtin_huge_valf(void) ;  */
 /* END FUNCTION-DECL __builtin_huge_valf LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN acos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:135 */
-extern double acos(double  ) ;
-/* END FUNCTION-DECL-EXTERN acos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:135 */
-
 /* BEGIN TYPEDEF SDL_Point LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:49 */
 typedef struct __anonstruct_SDL_Point_1070053765 SDL_Point;
 /* END TYPEDEF SDL_Point LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:49 */
@@ -3336,6 +3322,10 @@ extern int __attribute__((__visibility__("default")))  SDL_RenderDrawPoints(SDL_
                                                                             int count ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderDrawPoints LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:474 */
 
+/* BEGIN FUNCTION-DECL-EXTERN acos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:135 */
+extern double acos(double  ) ;
+/* END FUNCTION-DECL-EXTERN acos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:135 */
+
 /* BEGIN VARIABLE-DEF _global_argv LOC=UNKNOWN */
 char **_global_argv  ;
 /* END VARIABLE-DEF _global_argv LOC=UNKNOWN */
@@ -3344,18 +3334,22 @@ char **_global_argv  ;
 extern char const __attribute__((__visibility__("default")))  *SDL_GetCurrentAudioDriver(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetCurrentAudioDriver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:237 */
 
-/* BEGIN FUNCTION-DECL-EXTERN posix_memalign LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:101 */
-extern int posix_memalign(void ** , size_t  , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN posix_memalign LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:101 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_WaitEventTimeout LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:551 */
 extern int __attribute__((__visibility__("default")))  SDL_WaitEventTimeout(SDL_Event *event ,
                                                                             int timeout ) ;
 /* END FUNCTION-DECL-EXTERN SDL_WaitEventTimeout LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:551 */
 
+/* BEGIN FUNCTION-DECL-EXTERN posix_memalign LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:101 */
+extern int posix_memalign(void ** , size_t  , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN posix_memalign LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:101 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumAudioDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:217 */
 extern int __attribute__((__visibility__("default")))  SDL_GetNumAudioDrivers(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetNumAudioDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:217 */
+
+/* BEGIN FUNCTION-DECL-EXTERN isascii LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:63 */
+extern int isascii(int  ) ;
+/* END FUNCTION-DECL-EXTERN isascii LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:63 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_PauseAudio LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:380 */
 extern void __attribute__((__visibility__("default")))  SDL_PauseAudio(int pause_on ) ;
@@ -3365,35 +3359,31 @@ extern void __attribute__((__visibility__("default")))  SDL_PauseAudio(int pause
 extern int __attribute__((__visibility__("default")))  SDL_EnableUNICODE(int enable ) ;
 /* END FUNCTION-DECL-EXTERN SDL_EnableUNICODE LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:338 */
 
-/* BEGIN FUNCTION-DECL-EXTERN isascii LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:63 */
-extern int isascii(int  ) ;
-/* END FUNCTION-DECL-EXTERN isascii LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:63 */
-
 /* BEGIN TYPEDEF pthread_rwlockattr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:392 */
 typedef struct __anonstruct_pthread_rwlockattr_t_32904004 pthread_rwlockattr_t;
 /* END TYPEDEF pthread_rwlockattr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:392 */
-
-/* BEGIN FUNCTION-DECL-EXTERN random LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:116 */
-extern long random(void) ;
-/* END FUNCTION-DECL-EXTERN random LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:116 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickIndex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:86 */
 extern int __attribute__((__visibility__("default")))  SDL_JoystickIndex(SDL_Joystick *joystick ) ;
 /* END FUNCTION-DECL-EXTERN SDL_JoystickIndex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:86 */
 
+/* BEGIN FUNCTION-DECL-EXTERN random LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:116 */
+extern long random(void) ;
+/* END FUNCTION-DECL-EXTERN random LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:116 */
+
 /* BEGIN TYPEDEF u_int16_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:61 */
 typedef unsigned short u_int16_t;
 /* END TYPEDEF u_int16_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:61 */
-
-/* BEGIN FUNCTION-DECL-EXTERN fmaxf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:220 */
-extern float fmaxf(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN fmaxf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:220 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_wcslcat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:430 */
 extern size_t __attribute__((__visibility__("default")))  SDL_wcslcat(wchar_t___0 *dst ,
                                                                       wchar_t___0 const   *src ,
                                                                       size_t maxlen ) ;
 /* END FUNCTION-DECL-EXTERN SDL_wcslcat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:430 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fmaxf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:220 */
+extern float fmaxf(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN fmaxf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:220 */
 
 /* BEGIN TYPEDEF SDL_RendererFlags LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:63 */
 typedef enum __anonenum_SDL_RendererFlags_280426716 SDL_RendererFlags;
@@ -3403,17 +3393,21 @@ typedef enum __anonenum_SDL_RendererFlags_280426716 SDL_RendererFlags;
 __inline static int __isgreaterf___0(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __isgreaterf___0 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN memcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:30 */
-extern int memcmp(void const   * , void const   * , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN memcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:30 */
-
 /* BEGIN FUNCTION-DECL-EXTERN flockfile LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:157 */
 extern void flockfile(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN flockfile LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:157 */
 
+/* BEGIN FUNCTION-DECL-EXTERN memcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:30 */
+extern int memcmp(void const   * , void const   * , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN memcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:30 */
+
 /* BEGIN FUNCTION-DECL __islessgreaterl___2 LOC=UNKNOWN */
 __inline static int __islessgreaterl___2(long double __x , long double __y ) ;
 /* END FUNCTION-DECL __islessgreaterl___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL SDL_Swap16 LOC=UNKNOWN */
+__inline static Uint16 SDL_Swap16(Uint16 x ) ;
+/* END FUNCTION-DECL SDL_Swap16 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_socket_close_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:62 */
 extern void emscripten_set_socket_close_callback(void *userData , void (*callback)(int fd ,
@@ -3425,10 +3419,6 @@ extern void __attribute__((__visibility__("default")))  SDL_UpdateRects(SDL_Surf
                                                                         int numrects ,
                                                                         SDL_Rect *rects ) ;
 /* END FUNCTION-DECL-EXTERN SDL_UpdateRects LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:290 */
-
-/* BEGIN FUNCTION-DECL SDL_Swap16 LOC=UNKNOWN */
-__inline static Uint16 SDL_Swap16(Uint16 x ) ;
-/* END FUNCTION-DECL SDL_Swap16 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN putenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:120 */
 extern int putenv(char * ) ;
@@ -3455,10 +3445,6 @@ extern void _emscripten_push_main_loop_blocker(void (*func)(void * ) , void *arg
 void multiply_vector(struct vector2d *v , float n ) ;
 /* END FUNCTION-DECL multiply_vector LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN getsubopt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:107 */
-extern int getsubopt(char ** , char * const  * , char ** ) ;
-/* END FUNCTION-DECL-EXTERN getsubopt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:107 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumRenderDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:130 */
 extern int __attribute__((__visibility__("default")))  SDL_GetNumRenderDrivers(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetNumRenderDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:130 */
@@ -3467,6 +3453,10 @@ extern int __attribute__((__visibility__("default")))  SDL_GetNumRenderDrivers(v
 /* compiler builtin: 
    double __builtin_huge_val(void) ;  */
 /* END FUNCTION-DECL __builtin_huge_val LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN getsubopt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:107 */
+extern int getsubopt(char ** , char * const  * , char ** ) ;
+/* END FUNCTION-DECL-EXTERN getsubopt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:107 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ReadLE64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:191 */
 extern Uint64 __attribute__((__visibility__("default")))  SDL_ReadLE64(SDL_RWops *src ) ;
@@ -3485,47 +3475,13 @@ __inline static int __islessl___1(long double __x , long double __y ) ;
    void *__builtin_extract_return_addr(void * ) ;  */
 /* END FUNCTION-DECL __builtin_extract_return_addr LOC=BUILTIN */
 
-/* BEGIN TYPEDEF em_idb_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:92 */
-typedef void (*em_idb_onload_func)(void * , void * , int  );
-/* END TYPEDEF em_idb_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:92 */
-
 /* BEGIN TYPEDEF pthread_barrierattr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:387 */
 typedef struct __anonstruct_pthread_barrierattr_t_32904003 pthread_barrierattr_t;
 /* END TYPEDEF pthread_barrierattr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:387 */
 
-/* BEGIN ENUM _3_main_$op LOC=UNKNOWN */
-enum _3_main_$op {
-    _3_main__constant_int$result_STA_0$value_LIT_0 = 79,
-    _3_main__global$result_STA_0$value_LIT_0 = 196,
-    _3_main__constant_unsigned_int$result_STA_0$value_LIT_0 = 244,
-    _3_main__goto$label_LAB_0 = 113,
-    _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0 = 92,
-    _3_main__memcpy$right_STA_0$size_LIT_0$left_STA_1 = 60,
-    _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1 = 106,
-    _3_main__return_int$expr_STA_0 = 145,
-    _3_main__Lt_int_int2int$right_STA_0$result_STA_0$left_STA_1 = 83,
-    _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1 = 38,
-    _3_main__load_int$left_STA_0$result_STA_0 = 193,
-    _3_main__PlusA_int_int2int$right_STA_0$result_STA_0$left_STA_1 = 133,
-    _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1 = 215,
-    _3_main__store_float$right_STA_0$left_STA_1 = 2,
-    _3_main__Eq_int_int2int$right_STA_0$result_STA_0$left_STA_1 = 216,
-    _3_main__convert_int2float$left_STA_0$result_STA_0 = 17,
-    _3_main__call$func_LIT_0 = 178,
-    _3_main__constant_void_star$result_STA_0$value_LIT_0 = 95,
-    _3_main__branchIfTrue$expr_STA_0$label_LAB_0 = 211,
-    _3_main__store_void_star$left_STA_0$right_STA_1 = 218,
-    _3_main__local$result_STA_0$value_LIT_0 = 254,
-    _3_main__store_int$left_STA_0$right_STA_1 = 82
-} ;
-/* END ENUM _3_main_$op LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_async_wget_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:21 */
-extern void emscripten_async_wget_data(char const   *url , void *arg , void (*onload)(void * ,
-                                                                                      void * ,
-                                                                                      int  ) ,
-                                       void (*onerror)(void * ) ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_async_wget_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:21 */
+/* BEGIN TYPEDEF em_idb_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:92 */
+typedef void (*em_idb_onload_func)(void * , void * , int  );
+/* END TYPEDEF em_idb_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:92 */
 
 /* BEGIN TYPEDEF SDL_DisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:55 */
 typedef struct __anonstruct_SDL_DisplayMode_299185306 SDL_DisplayMode;
@@ -3535,6 +3491,13 @@ typedef struct __anonstruct_SDL_DisplayMode_299185306 SDL_DisplayMode;
 extern int __attribute__((__visibility__("default")))  SDL_GetDesktopDisplayMode(int displayIndex ,
                                                                                  SDL_DisplayMode *mode ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetDesktopDisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:285 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_async_wget_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:21 */
+extern void emscripten_async_wget_data(char const   *url , void *arg , void (*onload)(void * ,
+                                                                                      void * ,
+                                                                                      int  ) ,
+                                       void (*onerror)(void * ) ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_async_wget_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:21 */
 
 /* BEGIN FUNCTION-DECL-EXTERN signal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:289 */
 extern void (*signal(int  , void (*)(int  ) ))(int  ) ;
@@ -3567,13 +3530,13 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasIntersection(
                                                                                 SDL_Rect const   *B ) ;
 /* END FUNCTION-DECL-EXTERN SDL_HasIntersection LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:87 */
 
-/* BEGIN FUNCTION-DECL magnitude_vector LOC=UNKNOWN */
-float magnitude_vector(struct vector2d *v ) ;
-/* END FUNCTION-DECL magnitude_vector LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN setstate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:119 */
 extern char *setstate(char * ) ;
 /* END FUNCTION-DECL-EXTERN setstate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:119 */
+
+/* BEGIN FUNCTION-DECL magnitude_vector LOC=UNKNOWN */
+float magnitude_vector(struct vector2d *v ) ;
+/* END FUNCTION-DECL magnitude_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN rint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:319 */
 extern double rint(double  ) ;
@@ -3627,17 +3590,17 @@ struct __anonstruct___addr_bnd_5259977 {
 extern long double fdiml(long double  , long double  ) ;
 /* END FUNCTION-DECL-EXTERN fdiml LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:209 */
 
-/* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_renumber LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2133 */
-extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_renumber)(__wasi_fd_t fd ,
-                                                                                    __wasi_fd_t to )  __attribute__((__import_name__("fd_renumber"),
-__import_module__("wasi_snapshot_preview1"))) ;
-/* END FUNCTION-DECL-EXTERN __wasi_fd_renumber LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2133 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_LogInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:153 */
 extern void __attribute__((__visibility__("default")))  SDL_LogInfo(int category ,
                                                                     char const   *fmt 
                                                                     , ...) ;
 /* END FUNCTION-DECL-EXTERN SDL_LogInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:153 */
+
+/* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_renumber LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2133 */
+extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_renumber)(__wasi_fd_t fd ,
+                                                                                    __wasi_fd_t to )  __attribute__((__import_name__("fd_renumber"),
+__import_module__("wasi_snapshot_preview1"))) ;
+/* END FUNCTION-DECL-EXTERN __wasi_fd_renumber LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2133 */
 
 /* BEGIN FUNCTION-DECL-EXTERN rewind LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:94 */
 extern void rewind(FILE * ) ;
@@ -3670,18 +3633,26 @@ extern int __attribute__((__visibility__("default")))  SDL_AudioDeviceConnected(
 extern size_t strxfrm(char * __restrict   , char const   * __restrict   , size_t  ) ;
 /* END FUNCTION-DECL-EXTERN strxfrm LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:43 */
 
-/* BEGIN FUNCTION-DECL __islessequall___0 LOC=UNKNOWN */
-__inline static int __islessequall___0(long double __x , long double __y ) ;
-/* END FUNCTION-DECL __islessequall___0 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN ilogb LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:239 */
 extern int ilogb(double  ) ;
 /* END FUNCTION-DECL-EXTERN ilogb LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:239 */
+
+/* BEGIN FUNCTION-DECL __islessequall___0 LOC=UNKNOWN */
+__inline static int __islessequall___0(long double __x , long double __y ) ;
+/* END FUNCTION-DECL __islessequall___0 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN strtoull LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:35 */
 extern unsigned long long strtoull(char const   * __restrict   , char ** __restrict   ,
                                    int  ) ;
 /* END FUNCTION-DECL-EXTERN strtoull LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:35 */
+
+/* BEGIN TYPEDEF stack_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
+typedef struct sigaltstack stack_t;
+/* END TYPEDEF stack_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
+
+/* BEGIN FUNCTION-DECL-EXTERN sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:240 */
+extern int sigaltstack(stack_t const   * __restrict   , stack_t * __restrict   ) ;
+/* END FUNCTION-DECL-EXTERN sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:240 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowDisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:347 */
 extern int __attribute__((__visibility__("default")))  SDL_GetWindowDisplayMode(SDL_Window *window ,
@@ -3696,14 +3667,6 @@ typedef int pid_t;
 extern int kill(pid_t  , int  ) ;
 /* END FUNCTION-DECL-EXTERN kill LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:213 */
 
-/* BEGIN TYPEDEF stack_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
-typedef struct sigaltstack stack_t;
-/* END TYPEDEF stack_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:44 */
-
-/* BEGIN FUNCTION-DECL-EXTERN sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:240 */
-extern int sigaltstack(stack_t const   * __restrict   , stack_t * __restrict   ) ;
-/* END FUNCTION-DECL-EXTERN sigaltstack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:240 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_sleep LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:190 */
 extern void emscripten_sleep(unsigned int ms ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_sleep LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:190 */
@@ -3712,13 +3675,13 @@ extern void emscripten_sleep(unsigned int ms ) ;
 extern void __attribute__((__visibility__("default")))  SDL_QuitSubSystem(Uint32 flags ) ;
 /* END FUNCTION-DECL-EXTERN SDL_QuitSubSystem LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL.h:136 */
 
-/* BEGIN FUNCTION-DECL __isgreaterequalf___0 LOC=UNKNOWN */
-__inline static int __isgreaterequalf___0(float_t __x , float_t __y ) ;
-/* END FUNCTION-DECL __isgreaterequalf___0 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN cosf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:176 */
 extern float cosf(float  ) ;
 /* END FUNCTION-DECL-EXTERN cosf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:176 */
+
+/* BEGIN FUNCTION-DECL __isgreaterequalf___0 LOC=UNKNOWN */
+__inline static int __isgreaterequalf___0(float_t __x , float_t __y ) ;
+/* END FUNCTION-DECL __isgreaterequalf___0 LOC=UNKNOWN */
 
 /* BEGIN TYPEDEF pthread_cond_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
 typedef struct __anonstruct_pthread_cond_t_726266814 pthread_cond_t;
@@ -3739,6 +3702,10 @@ extern int __attribute__((__visibility__("default")))  SDL_RenderDrawLines(SDL_R
 extern FILE * const  stderr ;
 /* END VARIABLE-DECL-EXTERN stderr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:74 */
 
+/* BEGIN FUNCTION-DECL-EXTERN lrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:279 */
+extern long lrint(double  ) ;
+/* END FUNCTION-DECL-EXTERN lrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:279 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetWindowSize LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:490 */
 extern void __attribute__((__visibility__("default")))  SDL_SetWindowSize(SDL_Window *window ,
                                                                           int w ,
@@ -3748,10 +3715,6 @@ extern void __attribute__((__visibility__("default")))  SDL_SetWindowSize(SDL_Wi
 /* BEGIN FUNCTION-DECL-EXTERN tgamma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:355 */
 extern double tgamma(double  ) ;
 /* END FUNCTION-DECL-EXTERN tgamma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:355 */
-
-/* BEGIN FUNCTION-DECL-EXTERN lrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:279 */
-extern long lrint(double  ) ;
-/* END FUNCTION-DECL-EXTERN lrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:279 */
 
 /* BEGIN FUNCTION-DECL __isgreaterequall___2 LOC=UNKNOWN */
 __inline static int __isgreaterequall___2(long double __x , long double __y ) ;
@@ -3771,6 +3734,10 @@ extern void __attribute__((__visibility__("default")))  SDL_SetAssertionHandler(
                                                                                 void *userdata ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetAssertionHandler LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:194 */
 
+/* BEGIN FUNCTION-DECL-EXTERN strcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:39 */
+extern int strcmp(char const   * , char const   * ) ;
+/* END FUNCTION-DECL-EXTERN strcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:39 */
+
 /* BEGIN TYPEDEF locale_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:410 */
 typedef struct __locale_struct *locale_t;
 /* END TYPEDEF locale_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:410 */
@@ -3779,9 +3746,9 @@ typedef struct __locale_struct *locale_t;
 extern int iscntrl_l(int  , locale_t  ) ;
 /* END FUNCTION-DECL-EXTERN iscntrl_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:51 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:39 */
-extern int strcmp(char const   * , char const   * ) ;
-/* END FUNCTION-DECL-EXTERN strcmp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:39 */
+/* BEGIN FUNCTION-DECL-EXTERN index LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:19 */
+extern char *index(char const   * , int  ) ;
+/* END FUNCTION-DECL-EXTERN index LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:19 */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_prestat_dir_name LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2013 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_prestat_dir_name)(__wasi_fd_t fd ,
@@ -3790,9 +3757,9 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_presta
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_prestat_dir_name LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2013 */
 
-/* BEGIN FUNCTION-DECL-EXTERN index LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:19 */
-extern char *index(char const   * , int  ) ;
-/* END FUNCTION-DECL-EXTERN index LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:19 */
+/* BEGIN FUNCTION-DECL-EXTERN scalbnl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:333 */
+extern long double scalbnl(long double  , int  ) ;
+/* END FUNCTION-DECL-EXTERN scalbnl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:333 */
 
 /* BEGIN TYPEDEF SDL_GLContext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:160 */
 typedef void *SDL_GLContext;
@@ -3803,23 +3770,19 @@ extern int __attribute__((__visibility__("default")))  SDL_GL_MakeCurrent(SDL_Wi
                                                                           SDL_GLContext context ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GL_MakeCurrent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:768 */
 
-/* BEGIN FUNCTION-DECL-EXTERN scalbnl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:333 */
-extern long double scalbnl(long double  , int  ) ;
-/* END FUNCTION-DECL-EXTERN scalbnl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:333 */
-
 /* BEGIN FUNCTION-DECL-EXTERN iscntrl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:13 */
 extern int iscntrl(int  ) ;
 /* END FUNCTION-DECL-EXTERN iscntrl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:13 */
+
+/* BEGIN FUNCTION-DECL-EXTERN strcspn LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:48 */
+extern size_t strcspn(char const   * , char const   * ) ;
+/* END FUNCTION-DECL-EXTERN strcspn LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:48 */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_args_sizes_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1682 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_args_sizes_get)(__wasi_size_t *argc ,
                                                                                        __wasi_size_t *argv_buf_size )  __attribute__((__import_name__("args_sizes_get"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_args_sizes_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1682 */
-
-/* BEGIN FUNCTION-DECL-EXTERN strcspn LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:48 */
-extern size_t strcspn(char const   * , char const   * ) ;
-/* END FUNCTION-DECL-EXTERN strcspn LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:48 */
 
 /* BEGIN UNION sigval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:94 */
 union sigval {
@@ -3890,17 +3853,13 @@ extern int emscripten_run_preload_plugins(char const   *file , void (*onload)(ch
                                           void (*onerror)(char const   * ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_run_preload_plugins LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:113 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetRevision LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:144 */
-extern char const __attribute__((__visibility__("default")))  *SDL_GetRevision(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetRevision LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:144 */
-
 /* BEGIN FUNCTION-DECL-EXTERN asinhl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:149 */
 extern long double asinhl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN asinhl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:149 */
 
-/* BEGIN FUNCTION-DECL-EXTERN asinf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:144 */
-extern float asinf(float  ) ;
-/* END FUNCTION-DECL-EXTERN asinf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:144 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetRevision LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:144 */
+extern char const __attribute__((__visibility__("default")))  *SDL_GetRevision(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetRevision LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:144 */
 
 /* BEGIN TYPEDEF SDL_Thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:47 */
 typedef struct SDL_Thread SDL_Thread;
@@ -3910,6 +3869,10 @@ typedef struct SDL_Thread SDL_Thread;
 extern SDL_Thread __attribute__((__visibility__("default")))  *SDL_CreateThread(int (*fn)(void *data ) ,
                                                                                 void *data ) ;
 /* END FUNCTION-DECL-EXTERN SDL_CreateThread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:141 */
+
+/* BEGIN FUNCTION-DECL-EXTERN asinf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:144 */
+extern float asinf(float  ) ;
+/* END FUNCTION-DECL-EXTERN asinf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:144 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_run_preload_plugins_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:116 */
 extern void emscripten_run_preload_plugins_data(char *data , int size , char const   *suffix ,
@@ -3938,21 +3901,21 @@ extern int posix_openpt(int  ) ;
 typedef struct __anonstruct_pthread_rwlock_t_656646310 pthread_rwlock_t;
 /* END TYPEDEF pthread_rwlock_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
 
-/* BEGIN FUNCTION-DECL __islessgreaterf LOC=UNKNOWN */
-__inline static int __islessgreaterf(float_t __x , float_t __y ) ;
-/* END FUNCTION-DECL __islessgreaterf LOC=UNKNOWN */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_VideoQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:231 */
+extern void __attribute__((__visibility__("default")))  SDL_VideoQuit(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_VideoQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:231 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetTouchDevice LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:72 */
 extern SDL_TouchID __attribute__((__visibility__("default")))  SDL_GetTouchDevice(int index ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetTouchDevice LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_touch.h:72 */
 
+/* BEGIN FUNCTION-DECL __islessgreaterf LOC=UNKNOWN */
+__inline static int __islessgreaterf(float_t __x , float_t __y ) ;
+/* END FUNCTION-DECL __islessgreaterf LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DECL-EXTERN tan LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:347 */
 extern double tan(double  ) ;
 /* END FUNCTION-DECL-EXTERN tan LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:347 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_VideoQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:231 */
-extern void __attribute__((__visibility__("default")))  SDL_VideoQuit(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_VideoQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:231 */
 
 /* BEGIN ENUM __anonenum_SDL_bool_780193226 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:115 */
 enum __anonenum_SDL_bool_780193226 {
@@ -4083,6 +4046,10 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_clock_res
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_clock_res_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1735 */
 
+/* BEGIN FUNCTION-DECL-EXTERN lrintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:280 */
+extern long lrintf(float  ) ;
+/* END FUNCTION-DECL-EXTERN lrintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:280 */
+
 /* BEGIN TYPEDEF SDL_LogOutputFunction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:187 */
 typedef void (*SDL_LogOutputFunction)(void *userdata , int category , SDL_LogPriority priority ,
                                       char const   *message );
@@ -4092,10 +4059,6 @@ typedef void (*SDL_LogOutputFunction)(void *userdata , int category , SDL_LogPri
 extern void __attribute__((__visibility__("default")))  SDL_LogGetOutputFunction(SDL_LogOutputFunction *callback ,
                                                                                  void **userdata ) ;
 /* END FUNCTION-DECL-EXTERN SDL_LogGetOutputFunction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:192 */
-
-/* BEGIN FUNCTION-DECL-EXTERN lrintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:280 */
-extern long lrintf(float  ) ;
-/* END FUNCTION-DECL-EXTERN lrintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:280 */
 
 /* BEGIN ENUM __anonenum_311483714 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:70 */
 enum __anonenum_311483714 {
@@ -4143,15 +4106,19 @@ extern  __attribute__((__nothrow__)) void *emscripten_asm_const_ptr(char const  
 typedef struct __wasi_subscription_clock_t __wasi_subscription_clock_t;
 /* END TYPEDEF __wasi_subscription_clock_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1243 */
 
-/* BEGIN FUNCTION-DECL-EXTERN __libc_current_sigrtmin LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:207 */
-extern int __libc_current_sigrtmin(void) ;
-/* END FUNCTION-DECL-EXTERN __libc_current_sigrtmin LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:207 */
-
 /* BEGIN FUNCTION-DECL __builtin___vsprintf_chk LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin___vsprintf_chk(char * , int  , unsigned long  , char const   * ,
                                 __builtin_va_list  ) ;  */
 /* END FUNCTION-DECL __builtin___vsprintf_chk LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN __libc_current_sigrtmin LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:207 */
+extern int __libc_current_sigrtmin(void) ;
+/* END FUNCTION-DECL-EXTERN __libc_current_sigrtmin LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:207 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetVideoSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:289 */
+extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_GetVideoSurface(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetVideoSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:289 */
 
 /* BEGIN FUNCTION-DECL-EXTERN lrand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:130 */
 extern long lrand48(void) ;
@@ -4162,29 +4129,25 @@ extern long lrand48(void) ;
    float __builtin_atan2f(float  , float  ) ;  */
 /* END FUNCTION-DECL __builtin_atan2f LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetVideoSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:289 */
-extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_GetVideoSurface(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetVideoSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:289 */
-
-/* BEGIN FUNCTION-DECL-EXTERN atan2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:156 */
-extern float atan2f(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN atan2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:156 */
-
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_prestat_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1997 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_prestat_get)(__wasi_fd_t fd ,
                                                                                        __wasi_prestat_t *buf )  __attribute__((__import_name__("fd_prestat_get"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_prestat_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1997 */
 
-/* BEGIN FUNCTION-DECL __builtin_bswap64 LOC=BUILTIN */
-/* compiler builtin: 
-   long long __builtin_bswap64(long long  ) ;  */
-/* END FUNCTION-DECL __builtin_bswap64 LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL-EXTERN atan2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:156 */
+extern float atan2f(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN atan2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:156 */
 
 /* BEGIN FUNCTION-DECL __builtin_clzll LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_clzll(unsigned long long  ) ;  */
 /* END FUNCTION-DECL __builtin_clzll LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL __builtin_bswap64 LOC=BUILTIN */
+/* compiler builtin: 
+   long long __builtin_bswap64(long long  ) ;  */
+/* END FUNCTION-DECL __builtin_bswap64 LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_wcslcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:424 */
 extern size_t __attribute__((__visibility__("default")))  SDL_wcslcpy(wchar_t___0 *dst ,
@@ -4311,6 +4274,10 @@ extern float frexpf(float  , int * ) ;
 typedef struct SDL_AudioSpec SDL_AudioSpec;
 /* END TYPEDEF SDL_AudioSpec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:171 */
 
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_async_wget2_abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:34 */
+extern void emscripten_async_wget2_abort(int handle ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_async_wget2_abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:34 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_HasClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:62 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasClipboardText(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_HasClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:62 */
@@ -4318,10 +4285,6 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasClipboardText
 /* BEGIN FUNCTION-DECL __isgreaterl___3 LOC=UNKNOWN */
 __inline static int __isgreaterl___3(long double __x , long double __y ) ;
 /* END FUNCTION-DECL __isgreaterl___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_async_wget2_abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:34 */
-extern void emscripten_async_wget2_abort(int handle ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_async_wget2_abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:34 */
 
 /* BEGIN FUNCTION-DECL-EXTERN quick_exit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:51 */
 extern void quick_exit(int  ) ;
@@ -4347,10 +4310,6 @@ typedef unsigned char u_int8_t;
 typedef unsigned short u_short;
 /* END TYPEDEF u_short LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:65 */
 
-/* BEGIN FUNCTION-DECL-EXTERN log10l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:265 */
-extern long double log10l(long double  ) ;
-/* END FUNCTION-DECL-EXTERN log10l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:265 */
-
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_path_unlink_file LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2556 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_unlink_file)(__wasi_fd_t fd ,
                                                                                          char const   *path ,
@@ -4358,13 +4317,17 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_unli
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_path_unlink_file LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2556 */
 
-/* BEGIN TYPEDEF quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:68 */
-typedef long long quad_t;
-/* END TYPEDEF quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:68 */
+/* BEGIN FUNCTION-DECL-EXTERN log10l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:265 */
+extern long double log10l(long double  ) ;
+/* END FUNCTION-DECL-EXTERN log10l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:265 */
 
 /* BEGIN TYPEDEF gregset_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:38 */
 typedef int gregset_t[19];
 /* END TYPEDEF gregset_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:38 */
+
+/* BEGIN TYPEDEF quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:68 */
+typedef long long quad_t;
+/* END TYPEDEF quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:68 */
 
 /* BEGIN FUNCTION-DECL __isgreaterequalf___1 LOC=UNKNOWN */
 __inline static int __isgreaterequalf___1(float_t __x , float_t __y ) ;
@@ -4407,15 +4370,15 @@ struct __anonstruct_pthread_cond_t_726266814 {
 };
 /* END STRUCT __anonstruct_pthread_cond_t_726266814 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:118 */
 
-/* BEGIN FUNCTION-DECL-EXTERN nan LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:291 */
-extern double nan(char const   * ) ;
-/* END FUNCTION-DECL-EXTERN nan LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:291 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_IntersectRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:95 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_IntersectRect(SDL_Rect const   *A ,
                                                                               SDL_Rect const   *B ,
                                                                               SDL_Rect *result ) ;
 /* END FUNCTION-DECL-EXTERN SDL_IntersectRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:95 */
+
+/* BEGIN FUNCTION-DECL-EXTERN nan LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:291 */
+extern double nan(char const   * ) ;
+/* END FUNCTION-DECL-EXTERN nan LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:291 */
 
 /* BEGIN TYPEDEF __wasi_ciovec_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:698 */
 typedef struct __wasi_ciovec_t __wasi_ciovec_t;
@@ -4425,14 +4388,14 @@ typedef struct __wasi_ciovec_t __wasi_ciovec_t;
 extern double atan2(double  , double  ) ;
 /* END FUNCTION-DECL-EXTERN atan2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:155 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumAudioDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:307 */
+extern int __attribute__((__visibility__("default")))  SDL_GetNumAudioDevices(int iscapture ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetNumAudioDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:307 */
+
 /* BEGIN FUNCTION-DECL __builtin_logf LOC=BUILTIN */
 /* compiler builtin: 
    float __builtin_logf(float  ) ;  */
 /* END FUNCTION-DECL __builtin_logf LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumAudioDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:307 */
-extern int __attribute__((__visibility__("default")))  SDL_GetNumAudioDevices(int iscapture ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetNumAudioDevices LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:307 */
 
 /* BEGIN TYPEDEF SDL_VideoInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:134 */
 typedef struct SDL_VideoInfo SDL_VideoInfo;
@@ -4446,10 +4409,6 @@ extern SDL_VideoInfo const __attribute__((__visibility__("default")))  *SDL_GetV
 extern long double rintl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN rintl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:321 */
 
-/* BEGIN FUNCTION-DECL-EXTERN sqrt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:343 */
-extern double sqrt(double  ) ;
-/* END FUNCTION-DECL-EXTERN sqrt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:343 */
-
 /* BEGIN TYPEDEF off_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:241 */
 typedef long long off_t;
 /* END TYPEDEF off_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:241 */
@@ -4457,6 +4416,10 @@ typedef long long off_t;
 /* BEGIN FUNCTION-DECL-EXTERN ftello LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:154 */
 extern off_t ftello(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN ftello LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:154 */
+
+/* BEGIN FUNCTION-DECL-EXTERN sqrt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:343 */
+extern double sqrt(double  ) ;
+/* END FUNCTION-DECL-EXTERN sqrt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:343 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetScancodeName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:121 */
 extern char const __attribute__((__visibility__("default")))  *SDL_GetScancodeName(SDL_Scancode scancode ) ;
@@ -4478,10 +4441,10 @@ typedef uint8_t __wasi_advice_t;
 extern long double ceill(long double  ) ;
 /* END FUNCTION-DECL-EXTERN ceill LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:169 */
 
-/* BEGIN FUNCTION-DECL __builtin_nan LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL __builtin_inf LOC=BUILTIN */
 /* compiler builtin: 
-   double __builtin_nan(char const   * ) ;  */
-/* END FUNCTION-DECL __builtin_nan LOC=BUILTIN */
+   double __builtin_inf(void) ;  */
+/* END FUNCTION-DECL __builtin_inf LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetSurfaceColorMod LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:262 */
 extern int __attribute__((__visibility__("default")))  SDL_GetSurfaceColorMod(SDL_Surface *surface ,
@@ -4494,10 +4457,10 @@ extern int __attribute__((__visibility__("default")))  SDL_GetSurfaceColorMod(SD
 extern double emscripten_get_now(void) ;
 /* END FUNCTION-DECL-EXTERN emscripten_get_now LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:87 */
 
-/* BEGIN FUNCTION-DECL __builtin_inf LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL __builtin_nan LOC=BUILTIN */
 /* compiler builtin: 
-   double __builtin_inf(void) ;  */
-/* END FUNCTION-DECL __builtin_inf LOC=BUILTIN */
+   double __builtin_nan(char const   * ) ;  */
+/* END FUNCTION-DECL __builtin_nan LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN isalnum_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:48 */
 extern int isalnum_l(int  , locale_t  ) ;
@@ -4598,26 +4561,26 @@ enum __anonenum_703616793 {
 } ;
 /* END ENUM __anonenum_703616793 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:64 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:55 */
+extern char __attribute__((__visibility__("default")))  *SDL_GetClipboardText(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:55 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_EventState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:641 */
 extern Uint8 __attribute__((__visibility__("default")))  SDL_EventState(Uint32 type ,
                                                                         int state ) ;
 /* END FUNCTION-DECL-EXTERN SDL_EventState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:641 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:55 */
-extern char __attribute__((__visibility__("default")))  *SDL_GetClipboardText(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:55 */
-
 /* BEGIN FUNCTION-DECL __isgreaterequall___3 LOC=UNKNOWN */
 __inline static int __isgreaterequall___3(long double __x , long double __y ) ;
 /* END FUNCTION-DECL __isgreaterequall___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN lcong48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:136 */
-extern void lcong48(unsigned short * ) ;
-/* END FUNCTION-DECL-EXTERN lcong48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:136 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_log LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:163 */
 extern void emscripten_log(int flags , char const   *format  , ...) ;
 /* END FUNCTION-DECL-EXTERN emscripten_log LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:163 */
+
+/* BEGIN FUNCTION-DECL-EXTERN lcong48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:136 */
+extern void lcong48(unsigned short * ) ;
+/* END FUNCTION-DECL-EXTERN lcong48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:136 */
 
 /* BEGIN VARIABLE-DEF _1_main_1_opaque_list_2 LOC=UNKNOWN */
 struct _1_main_1_opaque_NodeStruct *_1_main_1_opaque_list_2  =    (struct _1_main_1_opaque_NodeStruct *)0;
@@ -4651,27 +4614,19 @@ extern float emscripten_random(void) ;
 extern int raise(int  ) ;
 /* END FUNCTION-DECL-EXTERN raise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:290 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_HasAltiVec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:102 */
-extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasAltiVec(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_HasAltiVec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:102 */
+/* BEGIN FUNCTION-DECL __builtin_sinhl LOC=BUILTIN */
+/* compiler builtin: 
+   long double __builtin_sinhl(long double  ) ;  */
+/* END FUNCTION-DECL __builtin_sinhl LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL __builtin_log10f LOC=BUILTIN */
 /* compiler builtin: 
    float __builtin_log10f(float  ) ;  */
 /* END FUNCTION-DECL __builtin_log10f LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL __builtin_sinhl LOC=BUILTIN */
-/* compiler builtin: 
-   long double __builtin_sinhl(long double  ) ;  */
-/* END FUNCTION-DECL __builtin_sinhl LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:223 */
-extern int sigaction(int  , struct sigaction  const  * __restrict   , struct sigaction * __restrict   ) ;
-/* END FUNCTION-DECL-EXTERN sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:223 */
-
-/* BEGIN FUNCTION-DECL-EXTERN mkstemp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:104 */
-extern int mkstemp(char * ) ;
-/* END FUNCTION-DECL-EXTERN mkstemp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:104 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_HasAltiVec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:102 */
+extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasAltiVec(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_HasAltiVec LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:102 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_Linked_Version LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:278 */
 extern SDL_version const __attribute__((__visibility__("default")))  *SDL_Linked_Version(void) ;
@@ -4689,10 +4644,23 @@ extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_CreateRGBSur
                                                                                          Uint32 Amask ) ;
 /* END FUNCTION-DECL-EXTERN SDL_CreateRGBSurfaceFrom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:117 */
 
+/* BEGIN FUNCTION-DECL-EXTERN sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:223 */
+extern int sigaction(int  , struct sigaction  const  * __restrict   , struct sigaction * __restrict   ) ;
+/* END FUNCTION-DECL-EXTERN sigaction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:223 */
+
+/* BEGIN FUNCTION-DECL-EXTERN mkstemp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:104 */
+extern int mkstemp(char * ) ;
+/* END FUNCTION-DECL-EXTERN mkstemp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:104 */
+
 /* BEGIN FUNCTION-DECL __builtin___vprintf_chk LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin___vprintf_chk(int  , char const   * , __builtin_va_list  ) ;  */
 /* END FUNCTION-DECL __builtin___vprintf_chk LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_WriteBE64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:206 */
+extern size_t __attribute__((__visibility__("default")))  SDL_WriteBE64(SDL_RWops *dst ,
+                                                                        Uint64 value ) ;
+/* END FUNCTION-DECL-EXTERN SDL_WriteBE64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:206 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_promise_destroy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:70 */
 extern void emscripten_promise_destroy(em_promise_t promise ) ;
@@ -4701,11 +4669,6 @@ extern void emscripten_promise_destroy(em_promise_t promise ) ;
 /* BEGIN FUNCTION-DECL-EXTERN a64l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:126 */
 extern long a64l(char const   * ) ;
 /* END FUNCTION-DECL-EXTERN a64l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:126 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_WriteBE64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:206 */
-extern size_t __attribute__((__visibility__("default")))  SDL_WriteBE64(SDL_RWops *dst ,
-                                                                        Uint64 value ) ;
-/* END FUNCTION-DECL-EXTERN SDL_WriteBE64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:206 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RenderDrawPoint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:463 */
 extern int __attribute__((__visibility__("default")))  SDL_RenderDrawPoint(SDL_Renderer *renderer ,
@@ -4717,13 +4680,13 @@ extern int __attribute__((__visibility__("default")))  SDL_RenderDrawPoint(SDL_R
 typedef enum __anonenum_SDL_errorcode_840487938 SDL_errorcode;
 /* END TYPEDEF SDL_errorcode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:55 */
 
-/* BEGIN FUNCTION-DECL-EXTERN expl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:193 */
-extern long double expl(long double  ) ;
-/* END FUNCTION-DECL-EXTERN expl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:193 */
-
 /* BEGIN FUNCTION-DECL add_vector_new LOC=UNKNOWN */
 struct vector2d add_vector_new(struct vector2d *a , struct vector2d *b ) ;
 /* END FUNCTION-DECL add_vector_new LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL-EXTERN expl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:193 */
+extern long double expl(long double  ) ;
+/* END FUNCTION-DECL-EXTERN expl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:193 */
 
 /* BEGIN TYPEDEF int_fast8_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:22 */
 typedef int8_t int_fast8_t;
@@ -4733,13 +4696,13 @@ typedef int8_t int_fast8_t;
 typedef struct SDL_MouseButtonEvent SDL_MouseButtonEvent;
 /* END TYPEDEF SDL_MouseButtonEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:213 */
 
-/* BEGIN FUNCTION-DECL-EXTERN isxdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:59 */
-extern int isxdigit_l(int  , locale_t  ) ;
-/* END FUNCTION-DECL-EXTERN isxdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:59 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:48 */
 extern int __attribute__((__visibility__("default")))  SDL_SetClipboardText(char const   *text ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetClipboardText LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_clipboard.h:48 */
+
+/* BEGIN FUNCTION-DECL-EXTERN isxdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:59 */
+extern int isxdigit_l(int  , locale_t  ) ;
+/* END FUNCTION-DECL-EXTERN isxdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:59 */
 
 /* BEGIN UNION __anonunion___u_302425027___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
 union __anonunion___u_302425027___1 {
@@ -4748,9 +4711,9 @@ union __anonunion___u_302425027___1 {
 };
 /* END UNION __anonunion___u_302425027___1 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
 
-/* BEGIN FUNCTION-DECL-EXTERN nextafterf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:300 */
-extern float nextafterf(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN nextafterf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:300 */
+/* BEGIN FUNCTION-DECL __islessl___0 LOC=UNKNOWN */
+__inline static int __islessl___0(long double __x , long double __y ) ;
+/* END FUNCTION-DECL __islessl___0 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_idb_async_exists LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:97 */
 extern void emscripten_idb_async_exists(char const   *db_name , char const   *file_id ,
@@ -4758,9 +4721,9 @@ extern void emscripten_idb_async_exists(char const   *db_name , char const   *fi
                                         void (*onerror)(void * ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_idb_async_exists LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:97 */
 
-/* BEGIN FUNCTION-DECL __islessl___0 LOC=UNKNOWN */
-__inline static int __islessl___0(long double __x , long double __y ) ;
-/* END FUNCTION-DECL __islessl___0 LOC=UNKNOWN */
+/* BEGIN FUNCTION-DECL-EXTERN nextafterf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:300 */
+extern float nextafterf(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN nextafterf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:300 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_VideoInit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:222 */
 extern int __attribute__((__visibility__("default")))  SDL_VideoInit(char const   *driver_name ) ;
@@ -4808,22 +4771,23 @@ extern int sscanf(char const   * __restrict   , char const   * __restrict    , .
 extern void explicit_bzero(void * , size_t  ) ;
 /* END FUNCTION-DECL-EXTERN explicit_bzero LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:87 */
 
-/* BEGIN FUNCTION-DECL-EXTERN significandf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:408 */
-extern float significandf(float  ) ;
-/* END FUNCTION-DECL-EXTERN significandf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:408 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickEventState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:128 */
 extern int __attribute__((__visibility__("default")))  SDL_JoystickEventState(int state ) ;
 /* END FUNCTION-DECL-EXTERN SDL_JoystickEventState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:128 */
+
+/* BEGIN FUNCTION-DECL-EXTERN significandf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:408 */
+extern float significandf(float  ) ;
+/* END FUNCTION-DECL-EXTERN significandf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:408 */
 
 /* BEGIN FUNCTION-DECL __builtin_prefetch LOC=BUILTIN */
 /* compiler builtin: 
    void __builtin_prefetch(void const   *  , ...) ;  */
 /* END FUNCTION-DECL __builtin_prefetch LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_ClearHints LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:193 */
-extern void __attribute__((__visibility__("default")))  SDL_ClearHints(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_ClearHints LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:193 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_iconv_open LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:735 */
+extern SDL_iconv_t __attribute__((__visibility__("default")))  SDL_iconv_open(char const   *tocode ,
+                                                                              char const   *fromcode ) ;
+/* END FUNCTION-DECL-EXTERN SDL_iconv_open LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:735 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetWindowData LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:441 */
 extern void __attribute__((__visibility__("default")))  *SDL_SetWindowData(SDL_Window *window ,
@@ -4831,10 +4795,9 @@ extern void __attribute__((__visibility__("default")))  *SDL_SetWindowData(SDL_W
                                                                            void *userdata ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetWindowData LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:441 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_iconv_open LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:735 */
-extern SDL_iconv_t __attribute__((__visibility__("default")))  SDL_iconv_open(char const   *tocode ,
-                                                                              char const   *fromcode ) ;
-/* END FUNCTION-DECL-EXTERN SDL_iconv_open LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:735 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_ClearHints LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:193 */
+extern void __attribute__((__visibility__("default")))  SDL_ClearHints(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_ClearHints LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_hints.h:193 */
 
 /* BEGIN ENUM __anonenum_SDL_PowerState_675147179 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:44 */
 enum __anonenum_SDL_PowerState_675147179 {
@@ -4858,6 +4821,11 @@ struct SDL_assert_data {
 };
 /* END STRUCT SDL_assert_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:105 */
 
+/* BEGIN FUNCTION-DECL __builtin_mempcpy LOC=BUILTIN */
+/* compiler builtin: 
+   void *__builtin_mempcpy(void * , void const   * , unsigned long  ) ;  */
+/* END FUNCTION-DECL __builtin_mempcpy LOC=BUILTIN */
+
 /* BEGIN FUNCTION-DECL-EXTERN getchar LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:104 */
 extern int getchar(void) ;
 /* END FUNCTION-DECL-EXTERN getchar LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:104 */
@@ -4865,11 +4833,6 @@ extern int getchar(void) ;
 /* BEGIN FUNCTION-DECL-EXTERN cbrt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:163 */
 extern double cbrt(double  ) ;
 /* END FUNCTION-DECL-EXTERN cbrt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:163 */
-
-/* BEGIN FUNCTION-DECL __builtin_mempcpy LOC=BUILTIN */
-/* compiler builtin: 
-   void *__builtin_mempcpy(void * , void const   * , unsigned long  ) ;  */
-/* END FUNCTION-DECL __builtin_mempcpy LOC=BUILTIN */
 
 /* BEGIN TYPEDEF SDL_AudioFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:66 */
 typedef Uint16 SDL_AudioFormat;
@@ -4916,14 +4879,6 @@ extern int __attribute__((__visibility__("default")))  SDL_CondWait(SDL_cond *co
 typedef struct SDL_MouseWheelEvent SDL_MouseWheelEvent;
 /* END TYPEDEF SDL_MouseWheelEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:230 */
 
-/* BEGIN ENUM __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
-enum __anonenum_SDL_AudioStatus_415475965 {
-    SDL_AUDIO_STOPPED = 0,
-    SDL_AUDIO_PLAYING = 1,
-    SDL_AUDIO_PAUSED = 2
-} ;
-/* END ENUM __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
-
 /* BEGIN ENUM __anonenum_665040861 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:53 */
 enum __anonenum_665040861 {
     SDL_PIXELTYPE_UNKNOWN = 0,
@@ -4941,9 +4896,13 @@ enum __anonenum_665040861 {
 } ;
 /* END ENUM __anonenum_665040861 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:53 */
 
-/* BEGIN TYPEDEF mode_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:231 */
-typedef unsigned int mode_t;
-/* END TYPEDEF mode_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:231 */
+/* BEGIN ENUM __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
+enum __anonenum_SDL_AudioStatus_415475965 {
+    SDL_AUDIO_STOPPED = 0,
+    SDL_AUDIO_PLAYING = 1,
+    SDL_AUDIO_PAUSED = 2
+} ;
+/* END ENUM __anonenum_SDL_AudioStatus_415475965 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:358 */
 
 /* BEGIN TYPEDEF SDL_ThreadFunction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:65 */
 typedef int (*SDL_ThreadFunction)(void *data );
@@ -4954,6 +4913,10 @@ struct __anonstruct_fd_set_143082958 {
    unsigned long fds_bits[128UL / sizeof(long )] ;
 };
 /* END STRUCT __anonstruct_fd_set_143082958 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:22 */
+
+/* BEGIN TYPEDEF mode_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:231 */
+typedef unsigned int mode_t;
+/* END TYPEDEF mode_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:231 */
 
 /* BEGIN ENUM __anonenum_SDL_DUMMY_ENUM_229850056 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:187 */
 enum __anonenum_SDL_DUMMY_ENUM_229850056 {
@@ -4992,16 +4955,16 @@ struct __anonstruct___piduid_471658986 {
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_GetRelativeMouseMode(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetRelativeMouseMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:123 */
 
+/* BEGIN FUNCTION-DECL-EXTERN strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:86 */
+extern size_t strlcpy(char * , char const   * , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:86 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_EnclosePoints LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:111 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_EnclosePoints(SDL_Point const   *points ,
                                                                               int count ,
                                                                               SDL_Rect const   *clip ,
                                                                               SDL_Rect *result ) ;
 /* END FUNCTION-DECL-EXTERN SDL_EnclosePoints LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:111 */
-
-/* BEGIN FUNCTION-DECL-EXTERN strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:86 */
-extern size_t strlcpy(char * , char const   * , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:86 */
 
 /* BEGIN TYPEDEF SDL_SysWMmsg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:392 */
 typedef struct SDL_SysWMmsg SDL_SysWMmsg;
@@ -5027,25 +4990,25 @@ extern char const __attribute__((__visibility__("default")))  *SDL_GetPlatform(v
 extern int fseeko(FILE * , off_t  , int  ) ;
 /* END FUNCTION-DECL-EXTERN fseeko LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:153 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strcat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:36 */
-extern char *strcat(char * __restrict   , char const   * __restrict   ) ;
-/* END FUNCTION-DECL-EXTERN strcat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:36 */
-
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_filestat_set_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1922 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_filestat_set_size)(__wasi_fd_t fd ,
                                                                                              __wasi_filesize_t size )  __attribute__((__import_name__("fd_filestat_set_size"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_filestat_set_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1922 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fwrite_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:187 */
-extern size_t fwrite_unlocked(void const   * , size_t  , size_t  , FILE * ) ;
-/* END FUNCTION-DECL-EXTERN fwrite_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:187 */
+/* BEGIN FUNCTION-DECL-EXTERN strcat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:36 */
+extern char *strcat(char * __restrict   , char const   * __restrict   ) ;
+/* END FUNCTION-DECL-EXTERN strcat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:36 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_WarpMouseInWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:97 */
 extern void __attribute__((__visibility__("default")))  SDL_WarpMouseInWindow(SDL_Window *window ,
                                                                               int x ,
                                                                               int y ) ;
 /* END FUNCTION-DECL-EXTERN SDL_WarpMouseInWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:97 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fwrite_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:187 */
+extern size_t fwrite_unlocked(void const   * , size_t  , size_t  , FILE * ) ;
+/* END FUNCTION-DECL-EXTERN fwrite_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:187 */
 
 /* BEGIN TYPEDEF em_worker_callback_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:131 */
 typedef void (*em_worker_callback_func)(char * , int  , void * );
@@ -5055,6 +5018,14 @@ typedef void (*em_worker_callback_func)(char * , int  , void * );
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_proc_raise)(__wasi_signal_t sig )  __attribute__((__import_name__("proc_raise"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_proc_raise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2621 */
+
+/* BEGIN STRUCT SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
+struct SDL_TextInputEvent {
+   Uint32 type ;
+   Uint32 windowID ;
+   char text[32] ;
+};
+/* END STRUCT SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
 
 /* BEGIN ENUM __anonenum_233217090 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:92 */
 enum __anonenum_233217090 {
@@ -5068,27 +5039,19 @@ enum __anonenum_233217090 {
 } ;
 /* END ENUM __anonenum_233217090 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:92 */
 
-/* BEGIN STRUCT SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
-struct SDL_TextInputEvent {
-   Uint32 type ;
-   Uint32 windowID ;
-   char text[32] ;
-};
-/* END STRUCT SDL_TextInputEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:178 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetDisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:279 */
 extern int __attribute__((__visibility__("default")))  SDL_GetDisplayMode(int displayIndex ,
                                                                           int modeIndex ,
                                                                           SDL_DisplayMode *mode ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetDisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:279 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowTitle LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:418 */
-extern char const __attribute__((__visibility__("default")))  *SDL_GetWindowTitle(SDL_Window *window ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetWindowTitle LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:418 */
-
 /* BEGIN FUNCTION-DECL-EXTERN erfc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:187 */
 extern double erfc(double  ) ;
 /* END FUNCTION-DECL-EXTERN erfc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:187 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowTitle LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:418 */
+extern char const __attribute__((__visibility__("default")))  *SDL_GetWindowTitle(SDL_Window *window ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetWindowTitle LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:418 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_main_loop_expected_blockers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:71 */
 extern void emscripten_set_main_loop_expected_blockers(int num ) ;
@@ -5153,6 +5116,10 @@ typedef double __attribute__((__aligned__(4)))  emscripten_align4_double;
 typedef struct __wasi_event_t __wasi_event_t;
 /* END TYPEDEF __wasi_event_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1192 */
 
+/* BEGIN FUNCTION-DECL-EXTERN realloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:42 */
+extern void *realloc(void * , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN realloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:42 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetError LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:42 */
 extern void __attribute__((__visibility__("default")))  SDL_SetError(char const   *fmt 
                                                                      , ...) ;
@@ -5161,10 +5128,6 @@ extern void __attribute__((__visibility__("default")))  SDL_SetError(char const 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GL_GetProcAddress LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:728 */
 extern void __attribute__((__visibility__("default")))  *SDL_GL_GetProcAddress(char const   *proc ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GL_GetProcAddress LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:728 */
-
-/* BEGIN FUNCTION-DECL-EXTERN realloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:42 */
-extern void *realloc(void * , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN realloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:42 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_LoadObject LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_loadso.h:60 */
 extern void __attribute__((__visibility__("default")))  *SDL_LoadObject(char const   *sofile ) ;
@@ -5185,14 +5148,14 @@ extern int fileno_unlocked(FILE * ) ;
 __inline static uint16_t __bswap16(uint16_t __x ) ;
 /* END FUNCTION-DECL __bswap16 LOC=UNKNOWN */
 
+/* BEGIN FUNCTION-DECL-EXTERN siginterrupt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:243 */
+extern int siginterrupt(int  , int  ) ;
+/* END FUNCTION-DECL-EXTERN siginterrupt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:243 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_WriteBE16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:202 */
 extern size_t __attribute__((__visibility__("default")))  SDL_WriteBE16(SDL_RWops *dst ,
                                                                         Uint16 value ) ;
 /* END FUNCTION-DECL-EXTERN SDL_WriteBE16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:202 */
-
-/* BEGIN FUNCTION-DECL-EXTERN siginterrupt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:243 */
-extern int siginterrupt(int  , int  ) ;
-/* END FUNCTION-DECL-EXTERN siginterrupt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:243 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetKeyboardFocus LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:60 */
 extern SDL_Window __attribute__((__visibility__("default")))  *SDL_GetKeyboardFocus(void) ;
@@ -5248,14 +5211,14 @@ extern int __attribute__((__visibility__("default")))  SDL_RenderDrawLine(SDL_Re
 extern float fdimf(float  , float  ) ;
 /* END FUNCTION-DECL-EXTERN fdimf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:208 */
 
+/* BEGIN FUNCTION-DECL __isgreaterl___2 LOC=UNKNOWN */
+__inline static int __isgreaterl___2(long double __x , long double __y ) ;
+/* END FUNCTION-DECL __isgreaterl___2 LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DECL __builtin_sin LOC=BUILTIN */
 /* compiler builtin: 
    double __builtin_sin(double  ) ;  */
 /* END FUNCTION-DECL __builtin_sin LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL __isgreaterl___2 LOC=UNKNOWN */
-__inline static int __isgreaterl___2(long double __x , long double __y ) ;
-/* END FUNCTION-DECL __isgreaterl___2 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_wget LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:38 */
 extern void emscripten_wget(char const   *url , char const   *file ) ;
@@ -5278,6 +5241,10 @@ extern double y1(double  ) ;
 extern int atexit(void (*)(void) ) ;
 /* END FUNCTION-DECL-EXTERN atexit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:47 */
 
+/* BEGIN TYPEDEF u_quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:69 */
+typedef unsigned long long u_quad_t;
+/* END TYPEDEF u_quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:69 */
+
 /* BEGIN STRUCT SDL_ResizeEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:422 */
 struct SDL_ResizeEvent {
    Uint32 type ;
@@ -5285,10 +5252,6 @@ struct SDL_ResizeEvent {
    int h ;
 };
 /* END STRUCT SDL_ResizeEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:422 */
-
-/* BEGIN TYPEDEF u_quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:69 */
-typedef unsigned long long u_quad_t;
-/* END TYPEDEF u_quad_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:69 */
 
 /* BEGIN UNION __anonunion___first_361836570 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
 union __anonunion___first_361836570 {
@@ -5310,15 +5273,15 @@ extern void emscripten_promise_resolve(em_promise_t promise , em_promise_result_
                                        void *value ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_promise_resolve LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/promise.h:79 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_DestroyRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:602 */
+extern void __attribute__((__visibility__("default")))  SDL_DestroyRenderer(SDL_Renderer *renderer ) ;
+/* END FUNCTION-DECL-EXTERN SDL_DestroyRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:602 */
+
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_SDL_SetEventHandler LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:623 */
 extern void __attribute__((__visibility__("default")))  emscripten_SDL_SetEventHandler(int (*handler)(void *userdata ,
                                                                                                       SDL_Event *event ) ,
                                                                                        void *userdata ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_SDL_SetEventHandler LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:623 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_DestroyRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:602 */
-extern void __attribute__((__visibility__("default")))  SDL_DestroyRenderer(SDL_Renderer *renderer ) ;
-/* END FUNCTION-DECL-EXTERN SDL_DestroyRenderer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:602 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetColors LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:313 */
 extern int __attribute__((__visibility__("default")))  SDL_SetColors(SDL_Surface *surface ,
@@ -5377,6 +5340,10 @@ extern void __attribute__((__visibility__("default")))  SDL_WM_SetCaption(char c
 extern size_t strnlen(char const   * , size_t  ) ;
 /* END FUNCTION-DECL-EXTERN strnlen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:69 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:472 */
+extern char __attribute__((__visibility__("default")))  *SDL_strlwr(char *string ) ;
+/* END FUNCTION-DECL-EXTERN SDL_strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:472 */
+
 /* BEGIN FUNCTION-DECL __builtin_strncat LOC=BUILTIN */
 /* compiler builtin: 
    char *__builtin_strncat(char * , char const   * , unsigned long  ) ;  */
@@ -5390,18 +5357,14 @@ extern int bcmp(void const   * , void const   * , size_t  ) ;
 extern int emscripten_has_asyncify(void) ;
 /* END FUNCTION-DECL-EXTERN emscripten_has_asyncify LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:141 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:472 */
-extern char __attribute__((__visibility__("default")))  *SDL_strlwr(char *string ) ;
-/* END FUNCTION-DECL-EXTERN SDL_strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:472 */
+/* BEGIN FUNCTION-DECL __islessequal___2 LOC=UNKNOWN */
+__inline static int __islessequal___2(double_t __x , double_t __y ) ;
+/* END FUNCTION-DECL __islessequal___2 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_OpenAudio LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:281 */
 extern int __attribute__((__visibility__("default")))  SDL_OpenAudio(SDL_AudioSpec *desired ,
                                                                      SDL_AudioSpec *obtained ) ;
 /* END FUNCTION-DECL-EXTERN SDL_OpenAudio LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:281 */
-
-/* BEGIN FUNCTION-DECL __islessequal___2 LOC=UNKNOWN */
-__inline static int __islessequal___2(double_t __x , double_t __y ) ;
-/* END FUNCTION-DECL __islessequal___2 LOC=UNKNOWN */
 
 /* BEGIN TYPEDEF u_int32_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:62 */
 typedef unsigned int u_int32_t;
@@ -5413,13 +5376,13 @@ typedef unsigned int u_int32_t;
                                                                         float __attribute__((____vector_size____(16)))   ) ;  */
 /* END FUNCTION-DECL __builtin_ia32_maxps LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN fopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:80 */
-extern FILE *fopen(char const   * __restrict   , char const   * __restrict   ) ;
-/* END FUNCTION-DECL-EXTERN fopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:80 */
-
 /* BEGIN FUNCTION-DECL-EXTERN log2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:272 */
 extern float log2f(float  ) ;
 /* END FUNCTION-DECL-EXTERN log2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:272 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:80 */
+extern FILE *fopen(char const   * __restrict   , char const   * __restrict   ) ;
+/* END FUNCTION-DECL-EXTERN fopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:80 */
 
 /* BEGIN FUNCTION-DECL-EXTERN atanh LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:159 */
 extern double atanh(double  ) ;
@@ -5498,23 +5461,23 @@ extern double atof(char const   * ) ;
 typedef void (*em_str_callback_func)(char const   * );
 /* END TYPEDEF em_str_callback_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_types.h:30 */
 
-/* BEGIN FUNCTION-DECL-EXTERN logf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:260 */
-extern float logf(float  ) ;
-/* END FUNCTION-DECL-EXTERN logf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:260 */
-
 /* BEGIN FUNCTION-DECL __builtin_ffsl LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_ffsl(unsigned long  ) ;  */
 /* END FUNCTION-DECL __builtin_ffsl LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL __builtin_fmodl LOC=BUILTIN */
-/* compiler builtin: 
-   long double __builtin_fmodl(long double  ) ;  */
-/* END FUNCTION-DECL __builtin_fmodl LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL-EXTERN logf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:260 */
+extern float logf(float  ) ;
+/* END FUNCTION-DECL-EXTERN logf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:260 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_resume_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:51 */
 extern void emscripten_resume_main_loop(void) ;
 /* END FUNCTION-DECL-EXTERN emscripten_resume_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:51 */
+
+/* BEGIN FUNCTION-DECL __builtin_fmodl LOC=BUILTIN */
+/* compiler builtin: 
+   long double __builtin_fmodl(long double  ) ;  */
+/* END FUNCTION-DECL __builtin_fmodl LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_WriteLE16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:201 */
 extern size_t __attribute__((__visibility__("default")))  SDL_WriteLE16(SDL_RWops *dst ,
@@ -5549,17 +5512,13 @@ extern int __attribute__((__visibility__("default")))  SDL_UpdateTexture(SDL_Tex
                                                                          int pitch ) ;
 /* END FUNCTION-DECL-EXTERN SDL_UpdateTexture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:342 */
 
-/* BEGIN FUNCTION-DECL-EXTERN expm1l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:201 */
-extern long double expm1l(long double  ) ;
-/* END FUNCTION-DECL-EXTERN expm1l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:201 */
-
 /* BEGIN FUNCTION-DECL-EXTERN setlinebuf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:181 */
 extern void setlinebuf(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN setlinebuf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:181 */
 
-/* BEGIN FUNCTION-DECL-EXTERN cos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:175 */
-extern double cos(double  ) ;
-/* END FUNCTION-DECL-EXTERN cos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:175 */
+/* BEGIN FUNCTION-DECL-EXTERN expm1l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:201 */
+extern long double expm1l(long double  ) ;
+/* END FUNCTION-DECL-EXTERN expm1l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:201 */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_advise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1780 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_advise)(__wasi_fd_t fd ,
@@ -5568,6 +5527,10 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_advise
                                                                                   __wasi_advice_t advice )  __attribute__((__import_name__("fd_advise"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_advise LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1780 */
+
+/* BEGIN FUNCTION-DECL-EXTERN cos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:175 */
+extern double cos(double  ) ;
+/* END FUNCTION-DECL-EXTERN cos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:175 */
 
 /* BEGIN TYPEDEF siginfo_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:99 */
 typedef struct __anonstruct_siginfo_t_48430433 siginfo_t;
@@ -5581,16 +5544,16 @@ typedef int64_t int_fast64_t;
 extern double atan(double  ) ;
 /* END FUNCTION-DECL-EXTERN atan LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:151 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_AudioDriverName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:279 */
-extern char const __attribute__((__visibility__("default")))  *SDL_AudioDriverName(char *namebuf ,
-                                                                                   int maxlen ) ;
-/* END FUNCTION-DECL-EXTERN SDL_AudioDriverName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:279 */
-
 /* BEGIN FUNCTION-DECL __builtin_ia32_mulps LOC=BUILTIN */
 /* compiler builtin: 
    float __attribute__((____vector_size____(16)))  __builtin_ia32_mulps(float __attribute__((____vector_size____(16)))   ,
                                                                         float __attribute__((____vector_size____(16)))   ) ;  */
 /* END FUNCTION-DECL __builtin_ia32_mulps LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_AudioDriverName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:279 */
+extern char const __attribute__((__visibility__("default")))  *SDL_AudioDriverName(char *namebuf ,
+                                                                                   int maxlen ) ;
+/* END FUNCTION-DECL-EXTERN SDL_AudioDriverName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:279 */
 
 /* BEGIN TYPEDEF em_async_wget2_data_onerror_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:29 */
 typedef void (*em_async_wget2_data_onerror_func)(unsigned int  , void * , int  , char const   * );
@@ -5600,23 +5563,23 @@ typedef void (*em_async_wget2_data_onerror_func)(unsigned int  , void * , int  ,
 extern int vasprintf(char ** , char const   * , __isoc_va_list  ) ;
 /* END FUNCTION-DECL-EXTERN vasprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:196 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_SetSurfacePalette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:135 */
-extern int __attribute__((__visibility__("default")))  SDL_SetSurfacePalette(SDL_Surface *surface ,
-                                                                             SDL_Palette *palette ) ;
-/* END FUNCTION-DECL-EXTERN SDL_SetSurfacePalette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:135 */
+/* BEGIN FUNCTION-DECL __isgreaterequalf___3 LOC=UNKNOWN */
+__inline static int __isgreaterequalf___3(float_t __x , float_t __y ) ;
+/* END FUNCTION-DECL __isgreaterequalf___3 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_wget_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:39 */
 extern void emscripten_wget_data(char const   *url , void **pbuffer , int *pnum ,
                                  int *perror ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_wget_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:39 */
 
-/* BEGIN FUNCTION-DECL __isgreaterequalf___3 LOC=UNKNOWN */
-__inline static int __isgreaterequalf___3(float_t __x , float_t __y ) ;
-/* END FUNCTION-DECL __isgreaterequalf___3 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetVideoDriver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:206 */
 extern char const __attribute__((__visibility__("default")))  *SDL_GetVideoDriver(int index ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetVideoDriver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:206 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_SetSurfacePalette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:135 */
+extern int __attribute__((__visibility__("default")))  SDL_SetSurfacePalette(SDL_Surface *surface ,
+                                                                             SDL_Palette *palette ) ;
+/* END FUNCTION-DECL-EXTERN SDL_SetSurfacePalette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:135 */
 
 /* BEGIN FUNCTION-DECL-EXTERN sigwait LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:225 */
 extern int sigwait(sigset_t const   * __restrict   , int * __restrict   ) ;
@@ -5640,52 +5603,48 @@ extern int __attribute__((__visibility__("default")))  SDL_RenderClear(SDL_Rende
 __inline static unsigned long long __DOUBLE_BITS___2(double __f ) ;
 /* END FUNCTION-DECL __DOUBLE_BITS___2 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL __builtin_parityl LOC=BUILTIN */
-/* compiler builtin: 
-   int __builtin_parityl(unsigned long  ) ;  */
-/* END FUNCTION-DECL __builtin_parityl LOC=BUILTIN */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetKeyRepeat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:337 */
 extern void __attribute__((__visibility__("default")))  SDL_GetKeyRepeat(int *delay ,
                                                                          int *interval ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetKeyRepeat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:337 */
 
-/* BEGIN FUNCTION-DECL-EXTERN reallocarray LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:150 */
-extern void *reallocarray(void * , size_t  , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN reallocarray LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:150 */
-
 /* BEGIN FUNCTION-DECL-EXTERN getc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:103 */
 extern int getc(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN getc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:103 */
 
-/* BEGIN TYPEDEF SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
-typedef struct SDL_WindowEvent SDL_WindowEvent;
-/* END TYPEDEF SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
+/* BEGIN FUNCTION-DECL __builtin_parityl LOC=BUILTIN */
+/* compiler builtin: 
+   int __builtin_parityl(unsigned long  ) ;  */
+/* END FUNCTION-DECL __builtin_parityl LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN reallocarray LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:150 */
+extern void *reallocarray(void * , size_t  , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN reallocarray LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:150 */
 
 /* BEGIN TYPEDEF SDL_Keysym LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:47 */
 typedef struct SDL_Keysym SDL_Keysym;
 /* END TYPEDEF SDL_Keysym LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:47 */
 
+/* BEGIN TYPEDEF SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
+typedef struct SDL_WindowEvent SDL_WindowEvent;
+/* END TYPEDEF SDL_WindowEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:134 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetScancodeFromKey LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:109 */
 extern SDL_Scancode __attribute__((__visibility__("default")))  SDL_GetScancodeFromKey(SDL_Keycode key ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetScancodeFromKey LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:109 */
-
-/* BEGIN FUNCTION-DECL-EXTERN fdopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:149 */
-extern FILE *fdopen(int  , char const   * ) ;
-/* END FUNCTION-DECL-EXTERN fdopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:149 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_get_screen_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:82 */
 extern void emscripten_get_screen_size(int *width , int *height ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_get_screen_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:82 */
 
+/* BEGIN FUNCTION-DECL-EXTERN fdopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:149 */
+extern FILE *fdopen(int  , char const   * ) ;
+/* END FUNCTION-DECL-EXTERN fdopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:149 */
+
 /* BEGIN FUNCTION-DECL __builtin_strlen LOC=BUILTIN */
 /* compiler builtin: 
    unsigned long __builtin_strlen(char const   * ) ;  */
 /* END FUNCTION-DECL __builtin_strlen LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL divide_vector LOC=UNKNOWN */
-void divide_vector(struct vector2d *v , float n ) ;
-/* END FUNCTION-DECL divide_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_pwrite LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2032 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_pwrite)(__wasi_fd_t fd ,
@@ -5696,9 +5655,9 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_pwrite
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_pwrite LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2032 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_throw_string LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:184 */
-extern void emscripten_throw_string(char const   *utf8String ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_throw_string LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:184 */
+/* BEGIN FUNCTION-DECL divide_vector LOC=UNKNOWN */
+void divide_vector(struct vector2d *v , float n ) ;
+/* END FUNCTION-DECL divide_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetRenderDrawColor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:402 */
 extern int __attribute__((__visibility__("default")))  SDL_SetRenderDrawColor(SDL_Renderer *renderer ,
@@ -5707,6 +5666,10 @@ extern int __attribute__((__visibility__("default")))  SDL_SetRenderDrawColor(SD
                                                                               Uint8 b ,
                                                                               Uint8 a ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetRenderDrawColor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:402 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_throw_string LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:184 */
+extern void emscripten_throw_string(char const   *utf8String ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_throw_string LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:184 */
 
 /* BEGIN UNION __anonunion___sa_handler_872129837 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:169 */
 union __anonunion___sa_handler_872129837 {
@@ -5814,18 +5777,18 @@ void update_player(struct player *p___0 ) ;
 extern float y0f(float  ) ;
 /* END FUNCTION-DECL-EXTERN y0f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:417 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowDisplay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:321 */
-extern int __attribute__((__visibility__("default")))  SDL_GetWindowDisplay(SDL_Window *window ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetWindowDisplay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:321 */
+/* BEGIN FUNCTION-DECL __builtin_fmod LOC=BUILTIN */
+/* compiler builtin: 
+   double __builtin_fmod(double  ) ;  */
+/* END FUNCTION-DECL __builtin_fmod LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN cbrtl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:165 */
 extern long double cbrtl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN cbrtl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:165 */
 
-/* BEGIN FUNCTION-DECL __builtin_fmod LOC=BUILTIN */
-/* compiler builtin: 
-   double __builtin_fmod(double  ) ;  */
-/* END FUNCTION-DECL __builtin_fmod LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowDisplay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:321 */
+extern int __attribute__((__visibility__("default")))  SDL_GetWindowDisplay(SDL_Window *window ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetWindowDisplay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:321 */
 
 /* BEGIN TYPEDEF SDL_dummy_sint64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:169 */
 typedef int SDL_dummy_sint64[(sizeof(Sint64 ) == 8UL) * 2 - 1];
@@ -5841,26 +5804,31 @@ struct SDL_JoyHatEvent {
 };
 /* END STRUCT SDL_JoyHatEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:270 */
 
+/* BEGIN FUNCTION-DECL-EXTERN psiginfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:233 */
+extern void psiginfo(siginfo_t const   * , char const   * ) ;
+/* END FUNCTION-DECL-EXTERN psiginfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:233 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SemWaitTimeout LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:138 */
 extern int __attribute__((__visibility__("default")))  SDL_SemWaitTimeout(SDL_sem *sem ,
                                                                           Uint32 ms ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SemWaitTimeout LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:138 */
 
-/* BEGIN FUNCTION-DECL-EXTERN psiginfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:233 */
-extern void psiginfo(siginfo_t const   * , char const   * ) ;
-/* END FUNCTION-DECL-EXTERN psiginfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:233 */
+/* BEGIN FUNCTION-DECL-EXTERN tgammaf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:356 */
+extern float tgammaf(float  ) ;
+/* END FUNCTION-DECL-EXTERN tgammaf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:356 */
 
 /* BEGIN FUNCTION-DECL __isgreaterequalf___2 LOC=UNKNOWN */
 __inline static int __isgreaterequalf___2(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __isgreaterequalf___2 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN tgammaf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:356 */
-extern float tgammaf(float  ) ;
-/* END FUNCTION-DECL-EXTERN tgammaf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:356 */
-
 /* BEGIN VARIABLE-DEF renderer LOC=UNKNOWN */
 SDL_Renderer *renderer  ;
 /* END VARIABLE-DEF renderer LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL __builtin_return_address LOC=BUILTIN */
+/* compiler builtin: 
+   void *__builtin_return_address(unsigned int  ) ;  */
+/* END FUNCTION-DECL __builtin_return_address LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_path_rename LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2486 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_rename)(__wasi_fd_t fd ,
@@ -5871,11 +5839,6 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_rena
                                                                                     size_t new_path_len )  __attribute__((__import_name__("path_rename"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_path_rename LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2486 */
-
-/* BEGIN FUNCTION-DECL __builtin_return_address LOC=BUILTIN */
-/* compiler builtin: 
-   void *__builtin_return_address(unsigned int  ) ;  */
-/* END FUNCTION-DECL __builtin_return_address LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RemoveTimer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:95 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_RemoveTimer(SDL_TimerID t ) ;
@@ -5919,13 +5882,13 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_args_get)
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_args_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1669 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_PollEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:530 */
-extern int __attribute__((__visibility__("default")))  SDL_PollEvent(SDL_Event *event ) ;
-/* END FUNCTION-DECL-EXTERN SDL_PollEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:530 */
-
 /* BEGIN FUNCTION-DECL-EXTERN fabsf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:204 */
 extern float fabsf(float  ) ;
 /* END FUNCTION-DECL-EXTERN fabsf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:204 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_PollEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:530 */
+extern int __attribute__((__visibility__("default")))  SDL_PollEvent(SDL_Event *event ) ;
+/* END FUNCTION-DECL-EXTERN SDL_PollEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:530 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_HasEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:513 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasEvent(Uint32 type ) ;
@@ -5956,47 +5919,47 @@ extern SDL_GLContext __attribute__((__visibility__("default")))  SDL_GL_CreateCo
 extern int killpg(pid_t  , int  ) ;
 /* END FUNCTION-DECL-EXTERN killpg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:239 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_SetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:781 */
-extern int __attribute__((__visibility__("default")))  SDL_GL_SetSwapInterval(int interval ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GL_SetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:781 */
-
 /* BEGIN FUNCTION-DECL __builtin_constant_p LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_constant_p(int  ) ;  */
 /* END FUNCTION-DECL __builtin_constant_p LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_HasRDTSC LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:97 */
-extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasRDTSC(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_HasRDTSC LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:97 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_SetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:781 */
+extern int __attribute__((__visibility__("default")))  SDL_GL_SetSwapInterval(int interval ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GL_SetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:781 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RenderSetViewport LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:382 */
 extern int __attribute__((__visibility__("default")))  SDL_RenderSetViewport(SDL_Renderer *renderer ,
                                                                              SDL_Rect const   *rect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderSetViewport LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:382 */
 
-/* BEGIN FUNCTION-DECL-EXTERN isxdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:21 */
-extern int isxdigit(int  ) ;
-/* END FUNCTION-DECL-EXTERN isxdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:21 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_PumpEvents LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:477 */
-extern void __attribute__((__visibility__("default")))  SDL_PumpEvents(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_PumpEvents LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:477 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_HasRDTSC LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:97 */
+extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasRDTSC(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_HasRDTSC LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:97 */
 
 /* BEGIN FUNCTION-DECL-EXTERN acosh LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:139 */
 extern double acosh(double  ) ;
 /* END FUNCTION-DECL-EXTERN acosh LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:139 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_PumpEvents LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:477 */
+extern void __attribute__((__visibility__("default")))  SDL_PumpEvents(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_PumpEvents LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:477 */
+
+/* BEGIN FUNCTION-DECL-EXTERN isxdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:21 */
+extern int isxdigit(int  ) ;
+/* END FUNCTION-DECL-EXTERN isxdigit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:21 */
+
 /* BEGIN FUNCTION-DECL __isgreaterequal LOC=UNKNOWN */
 __inline static int __isgreaterequal(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __isgreaterequal LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN ceilf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:168 */
-extern float ceilf(float  ) ;
-/* END FUNCTION-DECL-EXTERN ceilf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:168 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SemWait LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:119 */
 extern int __attribute__((__visibility__("default")))  SDL_SemWait(SDL_sem *sem ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SemWait LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:119 */
+
+/* BEGIN FUNCTION-DECL-EXTERN ceilf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:168 */
+extern float ceilf(float  ) ;
+/* END FUNCTION-DECL-EXTERN ceilf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:168 */
 
 /* BEGIN TYPEDEF __wasi_filestat_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1050 */
 typedef struct __wasi_filestat_t __wasi_filestat_t;
@@ -6109,6 +6072,10 @@ struct sigaltstack {
 typedef int blkcnt_t;
 /* END TYPEDEF blkcnt_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:261 */
 
+/* BEGIN FUNCTION-DECL-EXTERN tgammal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:357 */
+extern long double tgammal(long double  ) ;
+/* END FUNCTION-DECL-EXTERN tgammal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:357 */
+
 /* BEGIN FUNCTION-DECL-EXTERN nexttowardl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:305 */
 extern long double nexttowardl(long double  , long double  ) ;
 /* END FUNCTION-DECL-EXTERN nexttowardl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:305 */
@@ -6116,10 +6083,6 @@ extern long double nexttowardl(long double  , long double  ) ;
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetRevisionNumber LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:153 */
 extern int __attribute__((__visibility__("default")))  SDL_GetRevisionNumber(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetRevisionNumber LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_version.h:153 */
-
-/* BEGIN FUNCTION-DECL-EXTERN tgammal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:357 */
-extern long double tgammal(long double  ) ;
-/* END FUNCTION-DECL-EXTERN tgammal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:357 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_FreeCursor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:172 */
 extern void __attribute__((__visibility__("default")))  SDL_FreeCursor(SDL_Cursor *cursor ) ;
@@ -6189,6 +6152,10 @@ enum __anonenum_SDL_assert_state_1070053763 {
 } ;
 /* END ENUM __anonenum_SDL_assert_state_1070053763 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:96 */
 
+/* BEGIN FUNCTION-DECL-EXTERN isupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:20 */
+extern int isupper(int  ) ;
+/* END FUNCTION-DECL-EXTERN isupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:20 */
+
 /* BEGIN TYPEDEF uintmax_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:225 */
 typedef unsigned long long uintmax_t;
 /* END TYPEDEF uintmax_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:225 */
@@ -6197,10 +6164,6 @@ typedef unsigned long long uintmax_t;
 extern uintmax_t wcstoumax(wchar_t___0 const   * __restrict   , wchar_t___0 ** __restrict   ,
                            int  ) ;
 /* END FUNCTION-DECL-EXTERN wcstoumax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:23 */
-
-/* BEGIN FUNCTION-DECL-EXTERN isupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:20 */
-extern int isupper(int  ) ;
-/* END FUNCTION-DECL-EXTERN isupper LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:20 */
 
 /* BEGIN VARIABLE-DEF _global_envp LOC=UNKNOWN */
 char **_global_envp  ;
@@ -6218,13 +6181,13 @@ typedef double __attribute__((__aligned__(2)))  emscripten_align2_double;
 extern void *valloc(size_t  ) ;
 /* END FUNCTION-DECL-EXTERN valloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:144 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_set_canvas_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:84 */
-extern void emscripten_set_canvas_size(int width , int height )  __attribute__((__deprecated__("This variant does not allow specifying the target canvas","Use emscripten_set_canvas_element_size() instead"))) ;
-/* END FUNCTION-DECL-EXTERN emscripten_set_canvas_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:84 */
-
 /* BEGIN FUNCTION-DECL-EXTERN vfprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:125 */
 extern int vfprintf(FILE * __restrict   , char const   * __restrict   , __isoc_va_list  ) ;
 /* END FUNCTION-DECL-EXTERN vfprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:125 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_set_canvas_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:84 */
+extern void emscripten_set_canvas_size(int width , int height )  __attribute__((__deprecated__("This variant does not allow specifying the target canvas","Use emscripten_set_canvas_element_size() instead"))) ;
+/* END FUNCTION-DECL-EXTERN emscripten_set_canvas_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:84 */
 
 /* BEGIN STRUCT __anonstruct_pthread_mutexattr_t_32904001 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:377 */
 struct __anonstruct_pthread_mutexattr_t_32904001 {
@@ -6242,17 +6205,13 @@ __import_module__("wasi_snapshot_preview1"))) ;
 extern float tanf(float  ) ;
 /* END FUNCTION-DECL-EXTERN tanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:348 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_SemValue LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:150 */
-extern Uint32 __attribute__((__visibility__("default")))  SDL_SemValue(SDL_sem *sem ) ;
-/* END FUNCTION-DECL-EXTERN SDL_SemValue LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:150 */
-
 /* BEGIN FUNCTION-DECL __islessgreaterf___1 LOC=UNKNOWN */
 __inline static int __islessgreaterf___1(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __islessgreaterf___1 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN truncl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:361 */
-extern long double truncl(long double  ) ;
-/* END FUNCTION-DECL-EXTERN truncl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:361 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_SemValue LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:150 */
+extern Uint32 __attribute__((__visibility__("default")))  SDL_SemValue(SDL_sem *sem ) ;
+/* END FUNCTION-DECL-EXTERN SDL_SemValue LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:150 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_FillRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:377 */
 extern int __attribute__((__visibility__("default")))  SDL_FillRect(SDL_Surface *dst ,
@@ -6260,36 +6219,40 @@ extern int __attribute__((__visibility__("default")))  SDL_FillRect(SDL_Surface 
                                                                     Uint32 color ) ;
 /* END FUNCTION-DECL-EXTERN SDL_FillRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:377 */
 
-/* BEGIN FUNCTION-DECL-EXTERN copysignf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:172 */
-extern float copysignf(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN copysignf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:172 */
+/* BEGIN FUNCTION-DECL-EXTERN truncl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:361 */
+extern long double truncl(long double  ) ;
+/* END FUNCTION-DECL-EXTERN truncl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:361 */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_close LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1829 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_close)(__wasi_fd_t fd )  __attribute__((__import_name__("fd_close"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_close LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1829 */
 
-/* BEGIN FUNCTION-DECL __builtin_cos LOC=BUILTIN */
-/* compiler builtin: 
-   double __builtin_cos(double  ) ;  */
-/* END FUNCTION-DECL __builtin_cos LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL-EXTERN copysignf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:172 */
+extern float copysignf(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN copysignf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:172 */
 
 /* BEGIN FUNCTION-DECL __builtin_log LOC=BUILTIN */
 /* compiler builtin: 
    double __builtin_log(double  ) ;  */
 /* END FUNCTION-DECL __builtin_log LOC=BUILTIN */
 
+/* BEGIN FUNCTION-DECL __builtin_cos LOC=BUILTIN */
+/* compiler builtin: 
+   double __builtin_cos(double  ) ;  */
+/* END FUNCTION-DECL __builtin_cos LOC=BUILTIN */
+
 /* BEGIN FUNCTION-DECL-EXTERN free LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:43 */
 extern void free(void * ) ;
 /* END FUNCTION-DECL-EXTERN free LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:43 */
 
-/* BEGIN FUNCTION-DECL-EXTERN alloca LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:11 */
-extern void *alloca(size_t  ) ;
-/* END FUNCTION-DECL-EXTERN alloca LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:11 */
-
 /* BEGIN FUNCTION-DECL-EXTERN bcopy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:17 */
 extern void bcopy(void const   * , void * , size_t  ) ;
 /* END FUNCTION-DECL-EXTERN bcopy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:17 */
+
+/* BEGIN FUNCTION-DECL-EXTERN alloca LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:11 */
+extern void *alloca(size_t  ) ;
+/* END FUNCTION-DECL-EXTERN alloca LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:11 */
 
 /* BEGIN FUNCTION-DECL __builtin_va_start LOC=BUILTIN */
 /* compiler builtin: 
@@ -6300,26 +6263,26 @@ extern void bcopy(void const   * , void * , size_t  ) ;
 int main(int argc , char **args , char **_formal_envp ) ;
 /* END FUNCTION-DECL main LOC=UNKNOWN */
 
+/* BEGIN FUNCTION-DECL-EXTERN trunc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:359 */
+extern double trunc(double  ) ;
+/* END FUNCTION-DECL-EXTERN trunc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:359 */
+
 /* BEGIN FUNCTION-DECL __builtin_sqrt LOC=BUILTIN */
 /* compiler builtin: 
    double __builtin_sqrt(double  ) ;  */
 /* END FUNCTION-DECL __builtin_sqrt LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN trunc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:359 */
-extern double trunc(double  ) ;
-/* END FUNCTION-DECL-EXTERN trunc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:359 */
-
 /* BEGIN FUNCTION-DECL-EXTERN setbuf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:139 */
 extern void setbuf(FILE * __restrict   , char * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN setbuf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:139 */
 
-/* BEGIN FUNCTION-DECL bounds_asteroids LOC=UNKNOWN */
-void bounds_asteroids(struct asteroid *asteroids___0 , int size ) ;
-/* END FUNCTION-DECL bounds_asteroids LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN toascii LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:64 */
 extern int toascii(int  ) ;
 /* END FUNCTION-DECL-EXTERN toascii LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:64 */
+
+/* BEGIN FUNCTION-DECL bounds_asteroids LOC=UNKNOWN */
+void bounds_asteroids(struct asteroid *asteroids___0 , int size ) ;
+/* END FUNCTION-DECL bounds_asteroids LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN wctomb LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:74 */
 extern int wctomb(char * , wchar_t___0  ) ;
@@ -6335,16 +6298,16 @@ extern  __attribute__((__nothrow__)) int emscripten_asm_const_int(char const   *
 extern long lrintl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN lrintl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:281 */
 
-/* BEGIN FUNCTION-DECL-EXTERN dremf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:399 */
-extern float dremf(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN dremf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:399 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_QueryTexture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:235 */
 extern int __attribute__((__visibility__("default")))  SDL_QueryTexture(SDL_Texture *texture ,
                                                                         Uint32 *format ,
                                                                         int *access ,
                                                                         int *w , int *h ) ;
 /* END FUNCTION-DECL-EXTERN SDL_QueryTexture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:235 */
+
+/* BEGIN FUNCTION-DECL-EXTERN dremf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:399 */
+extern float dremf(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN dremf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:399 */
 
 /* BEGIN VARIABLE-DECL-EXTERN stdin LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:72 */
 extern FILE * const  stdin ;
@@ -6410,10 +6373,6 @@ typedef struct __pthread *pthread_t;
 extern int pthread_kill(pthread_t  , int  ) ;
 /* END FUNCTION-DECL-EXTERN pthread_kill LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:231 */
 
-/* BEGIN FUNCTION-DECL-EXTERN logbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:276 */
-extern float logbf(float  ) ;
-/* END FUNCTION-DECL-EXTERN logbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:276 */
-
 /* BEGIN TYPEDEF SDL_ThreadPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:56 */
 typedef enum __anonenum_SDL_ThreadPriority_602432781 SDL_ThreadPriority;
 /* END TYPEDEF SDL_ThreadPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:56 */
@@ -6421,6 +6380,14 @@ typedef enum __anonenum_SDL_ThreadPriority_602432781 SDL_ThreadPriority;
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetThreadPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:161 */
 extern int __attribute__((__visibility__("default")))  SDL_SetThreadPriority(SDL_ThreadPriority priority ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetThreadPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:161 */
+
+/* BEGIN FUNCTION-DECL-EXTERN logbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:276 */
+extern float logbf(float  ) ;
+/* END FUNCTION-DECL-EXTERN logbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:276 */
+
+/* BEGIN FUNCTION-DECL-EXTERN vsscanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:134 */
+extern int vsscanf(char const   * __restrict   , char const   * __restrict   , __isoc_va_list  ) ;
+/* END FUNCTION-DECL-EXTERN vsscanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:134 */
 
 /* BEGIN FUNCTION-DECL __builtin_huge_vall LOC=BUILTIN */
 /* compiler builtin: 
@@ -6440,10 +6407,6 @@ extern int __attribute__((__visibility__("default")))  SDL_SetThreadPriority(SDL
 /* BEGIN FUNCTION-DECL-EXTERN strerror_r LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:66 */
 extern int strerror_r(int  , char * , size_t  ) ;
 /* END FUNCTION-DECL-EXTERN strerror_r LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:66 */
-
-/* BEGIN FUNCTION-DECL-EXTERN vsscanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:134 */
-extern int vsscanf(char const   * __restrict   , char const   * __restrict   , __isoc_va_list  ) ;
-/* END FUNCTION-DECL-EXTERN vsscanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:134 */
 
 /* BEGIN STRUCT __anonstruct_imaxdiv_t_882638284 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:14 */
 struct __anonstruct_imaxdiv_t_882638284 {
@@ -6467,13 +6430,13 @@ extern void emscripten_destroy_worker(worker_handle worker ) ;
 extern int fflush_unlocked(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN fflush_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:185 */
 
-/* BEGIN FUNCTION-DECL-EXTERN srandom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:117 */
-extern void srandom(unsigned int  ) ;
-/* END FUNCTION-DECL-EXTERN srandom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:117 */
-
 /* BEGIN FUNCTION-DECL __islessequalf___2 LOC=UNKNOWN */
 __inline static int __islessequalf___2(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __islessequalf___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL-EXTERN srandom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:117 */
+extern void srandom(unsigned int  ) ;
+/* END FUNCTION-DECL-EXTERN srandom LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:117 */
 
 /* BEGIN TYPEDEF greg_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:38 */
 typedef int greg_t;
@@ -6493,13 +6456,13 @@ extern SDL_DisplayMode __attribute__((__visibility__("default")))  *SDL_GetClose
                                                                                               SDL_DisplayMode *closest ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetClosestDisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:313 */
 
-/* BEGIN VARIABLE-DEF pixels LOC=UNKNOWN */
-uint32_t *pixels  ;
-/* END VARIABLE-DEF pixels LOC=UNKNOWN */
-
 /* BEGIN VARIABLE-DEF _1_main_1_opaque_ptr_1 LOC=UNKNOWN */
 struct _1_main_1_opaque_NodeStruct *_1_main_1_opaque_ptr_1  =    (struct _1_main_1_opaque_NodeStruct *)0;
 /* END VARIABLE-DEF _1_main_1_opaque_ptr_1 LOC=UNKNOWN */
+
+/* BEGIN VARIABLE-DEF pixels LOC=UNKNOWN */
+uint32_t *pixels  ;
+/* END VARIABLE-DEF pixels LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_fdstat_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1853 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_fdstat_get)(__wasi_fd_t fd ,
@@ -6533,14 +6496,14 @@ extern double yn(int  , double  ) ;
 extern double drand48(void) ;
 /* END FUNCTION-DECL-EXTERN drand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:128 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickNumButtons LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:109 */
+extern int __attribute__((__visibility__("default")))  SDL_JoystickNumButtons(SDL_Joystick *joystick ) ;
+/* END FUNCTION-DECL-EXTERN SDL_JoystickNumButtons LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:109 */
+
 /* BEGIN FUNCTION-DECL __builtin_alloca LOC=BUILTIN */
 /* compiler builtin: 
    void *__builtin_alloca(unsigned long  ) ;  */
 /* END FUNCTION-DECL __builtin_alloca LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickNumButtons LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:109 */
-extern int __attribute__((__visibility__("default")))  SDL_JoystickNumButtons(SDL_Joystick *joystick ) ;
-/* END FUNCTION-DECL-EXTERN SDL_JoystickNumButtons LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:109 */
 
 /* BEGIN FUNCTION-DECL __builtin_atan2 LOC=BUILTIN */
 /* compiler builtin: 
@@ -6567,13 +6530,13 @@ extern void *memset(void * , int  , size_t  ) ;
 extern int ferror(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN ferror LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:88 */
 
-/* BEGIN FUNCTION-DECL-EXTERN setbuffer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:182 */
-extern void setbuffer(FILE * , char * , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN setbuffer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:182 */
-
 /* BEGIN FUNCTION-DECL __isgreaterequal___3 LOC=UNKNOWN */
 __inline static int __isgreaterequal___3(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __isgreaterequal___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL-EXTERN setbuffer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:182 */
+extern void setbuffer(FILE * , char * , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN setbuffer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:182 */
 
 /* BEGIN TYPEDEF __wasi_dircookie_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:752 */
 typedef uint64_t __wasi_dircookie_t;
@@ -6587,10 +6550,6 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_readdi
                                                                                    __wasi_size_t *bufused )  __attribute__((__import_name__("fd_readdir"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_readdir LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2098 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_LogSetAllPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:115 */
-extern void __attribute__((__visibility__("default")))  SDL_LogSetAllPriority(SDL_LogPriority priority ) ;
-/* END FUNCTION-DECL-EXTERN SDL_LogSetAllPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:115 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_async_wget2_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:32 */
 extern int emscripten_async_wget2_data(char const   *url , char const   *requesttype ,
@@ -6610,6 +6569,10 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_clock_tim
                                                                                        __wasi_timestamp_t *time )  __attribute__((__import_name__("clock_time_get"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_clock_time_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1755 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_LogSetAllPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:115 */
+extern void __attribute__((__visibility__("default")))  SDL_LogSetAllPriority(SDL_LogPriority priority ) ;
+/* END FUNCTION-DECL-EXTERN SDL_LogSetAllPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:115 */
 
 /* BEGIN STRUCT SDL_ActiveEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:415 */
 struct SDL_ActiveEvent {
@@ -6835,6 +6798,10 @@ extern int __attribute__((__visibility__("default")))  SDL_GetGammaRamp(Uint16 *
 typedef enum __anonenum_SDL_TextureAccess_487062899 SDL_TextureAccess;
 /* END TYPEDEF SDL_TextureAccess LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:88 */
 
+/* BEGIN FUNCTION-DECL-EXTERN strstr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:51 */
+extern char *strstr(char const   * , char const   * ) ;
+/* END FUNCTION-DECL-EXTERN strstr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:51 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_IntersectRectAndLine LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:121 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_IntersectRectAndLine(SDL_Rect const   *rect ,
                                                                                      int *X1 ,
@@ -6842,10 +6809,6 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_IntersectRectAnd
                                                                                      int *X2 ,
                                                                                      int *Y2 ) ;
 /* END FUNCTION-DECL-EXTERN SDL_IntersectRectAndLine LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:121 */
-
-/* BEGIN FUNCTION-DECL-EXTERN strstr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:51 */
-extern char *strstr(char const   * , char const   * ) ;
-/* END FUNCTION-DECL-EXTERN strstr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:51 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RWFromFP LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:146 */
 extern SDL_RWops __attribute__((__visibility__("default")))  *SDL_RWFromFP(FILE *fp ,
@@ -6887,26 +6850,26 @@ struct SDL_Color {
 };
 /* END STRUCT SDL_Color LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:249 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fread_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:186 */
-extern size_t fread_unlocked(void * , size_t  , size_t  , FILE * ) ;
-/* END FUNCTION-DECL-EXTERN fread_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:186 */
-
 /* BEGIN FUNCTION-DECL-EXTERN ldexpf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:244 */
 extern float ldexpf(float  , int  ) ;
 /* END FUNCTION-DECL-EXTERN ldexpf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:244 */
 
-/* BEGIN FUNCTION-DECL-EXTERN lgamma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:247 */
-extern double lgamma(double  ) ;
-/* END FUNCTION-DECL-EXTERN lgamma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:247 */
-
-/* BEGIN FUNCTION-DECL-EXTERN ispunct_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:56 */
-extern int ispunct_l(int  , locale_t  ) ;
-/* END FUNCTION-DECL-EXTERN ispunct_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:56 */
+/* BEGIN FUNCTION-DECL-EXTERN fread_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:186 */
+extern size_t fread_unlocked(void * , size_t  , size_t  , FILE * ) ;
+/* END FUNCTION-DECL-EXTERN fread_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:186 */
 
 /* BEGIN FUNCTION-DECL __builtin_fabsf LOC=BUILTIN */
 /* compiler builtin: 
    float __builtin_fabsf(float  ) ;  */
 /* END FUNCTION-DECL __builtin_fabsf LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN ispunct_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:56 */
+extern int ispunct_l(int  , locale_t  ) ;
+/* END FUNCTION-DECL-EXTERN ispunct_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:56 */
+
+/* BEGIN FUNCTION-DECL-EXTERN lgamma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:247 */
+extern double lgamma(double  ) ;
+/* END FUNCTION-DECL-EXTERN lgamma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:247 */
 
 /* BEGIN TYPEDEF fsfilcnt_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:271 */
 typedef unsigned int fsfilcnt_t;
@@ -6916,23 +6879,23 @@ typedef unsigned int fsfilcnt_t;
 extern char *stpcpy(char * __restrict   , char const   * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN stpcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:67 */
 
-/* BEGIN FUNCTION-DECL-EXTERN atanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:153 */
-extern long double atanl(long double  ) ;
-/* END FUNCTION-DECL-EXTERN atanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:153 */
-
 /* BEGIN FUNCTION-DECL __islessf___3 LOC=UNKNOWN */
 __inline static int __islessf___3(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __islessf___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_ExtensionSupported LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:741 */
-extern SDL_bool __attribute__((__visibility__("default")))  SDL_GL_ExtensionSupported(char const   *extension ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GL_ExtensionSupported LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:741 */
+/* BEGIN FUNCTION-DECL-EXTERN atanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:153 */
+extern long double atanl(long double  ) ;
+/* END FUNCTION-DECL-EXTERN atanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:153 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_VideoModeOK LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:282 */
 extern int __attribute__((__visibility__("default")))  SDL_VideoModeOK(int width ,
                                                                        int height ,
                                                                        int bpp , Uint32 flags ) ;
 /* END FUNCTION-DECL-EXTERN SDL_VideoModeOK LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:282 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_ExtensionSupported LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:741 */
+extern SDL_bool __attribute__((__visibility__("default")))  SDL_GL_ExtensionSupported(char const   *extension ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GL_ExtensionSupported LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:741 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetPalette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:309 */
 extern int __attribute__((__visibility__("default")))  SDL_SetPalette(SDL_Surface *surface ,
@@ -6948,21 +6911,21 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_AtomicCASPtr_(vo
                                                                               void *newval ) ;
 /* END FUNCTION-DECL-EXTERN SDL_AtomicCASPtr_ LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:276 */
 
-/* BEGIN FUNCTION-DECL-EXTERN hypotl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:237 */
-extern long double hypotl(long double  , long double  ) ;
-/* END FUNCTION-DECL-EXTERN hypotl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:237 */
-
 /* BEGIN FUNCTION-DECL-EXTERN sqrtf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:344 */
 extern float sqrtf(float  ) ;
 /* END FUNCTION-DECL-EXTERN sqrtf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:344 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_AudioQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:230 */
-extern void __attribute__((__visibility__("default")))  SDL_AudioQuit(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_AudioQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:230 */
+/* BEGIN FUNCTION-DECL-EXTERN hypotl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:237 */
+extern long double hypotl(long double  , long double  ) ;
+/* END FUNCTION-DECL-EXTERN hypotl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:237 */
 
 /* BEGIN FUNCTION-DECL __islessf___2 LOC=UNKNOWN */
 __inline static int __islessf___2(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __islessf___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_AudioQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:230 */
+extern void __attribute__((__visibility__("default")))  SDL_AudioQuit(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_AudioQuit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:230 */
 
 /* BEGIN TYPEDEF nlink_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:236 */
 typedef unsigned long nlink_t;
@@ -7006,32 +6969,13 @@ typedef Uint32 (*SDL_TimerCallback)(Uint32 interval , void *param );
 extern int tolower_l(int  , locale_t  ) ;
 /* END FUNCTION-DECL-EXTERN tolower_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:60 */
 
-/* BEGIN UNION _3_main_$node LOC=UNKNOWN */
-union _3_main_$node {
-   void *_void_star ;
-   unsigned char _unsigned_char ;
-   long _long ;
-   int _int ;
-   float _float ;
-   double _double ;
-   unsigned short _unsigned_short ;
-   long long _long_long ;
-   unsigned int _unsigned_int ;
-   unsigned long long _unsigned_long_long ;
-   short _short ;
-   char _char ;
-   unsigned long _unsigned_long ;
-   signed char _signed_char ;
-};
-/* END UNION _3_main_$node LOC=UNKNOWN */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetPixelFormatName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:295 */
+extern char const __attribute__((__visibility__("default")))  *SDL_GetPixelFormatName(Uint32 format ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetPixelFormatName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:295 */
 
 /* BEGIN FUNCTION-DECL-EXTERN fread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:99 */
 extern size_t fread(void * __restrict   , size_t  , size_t  , FILE * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN fread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:99 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetPixelFormatName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:295 */
-extern char const __attribute__((__visibility__("default")))  *SDL_GetPixelFormatName(Uint32 format ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetPixelFormatName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:295 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_Init LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL.h:126 */
 extern int __attribute__((__visibility__("default")))  SDL_Init(Uint32 flags ) ;
@@ -7075,13 +7019,13 @@ struct __wasi_subscription_t {
 };
 /* END STRUCT __wasi_subscription_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1312 */
 
-/* BEGIN FUNCTION-DECL-EXTERN abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:46 */
-extern void abort(void) ;
-/* END FUNCTION-DECL-EXTERN abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:46 */
-
 /* BEGIN FUNCTION-DECL-EXTERN log1pf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:268 */
 extern float log1pf(float  ) ;
 /* END FUNCTION-DECL-EXTERN log1pf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:268 */
+
+/* BEGIN FUNCTION-DECL-EXTERN abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:46 */
+extern void abort(void) ;
+/* END FUNCTION-DECL-EXTERN abort LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:46 */
 
 /* BEGIN FUNCTION-DECL-EXTERN scalbn LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:331 */
 extern double scalbn(double  , int  ) ;
@@ -7128,17 +7072,17 @@ struct sigcontext {
 extern intmax_t strtoimax(char const   * __restrict   , char ** __restrict   , int  ) ;
 /* END FUNCTION-DECL-EXTERN strtoimax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:19 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_utf8strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:441 */
-extern size_t __attribute__((__visibility__("default")))  SDL_utf8strlcpy(char *dst ,
-                                                                          char const   *src ,
-                                                                          size_t dst_bytes ) ;
-/* END FUNCTION-DECL-EXTERN SDL_utf8strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:441 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_asm_const_double_sync_on_main_thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_asm.h:29 */
 extern  __attribute__((__nothrow__)) double emscripten_asm_const_double_sync_on_main_thread(char const   *code ,
                                                                                             char const   *arg_sigs 
                                                                                             , ...) ;
 /* END FUNCTION-DECL-EXTERN emscripten_asm_const_double_sync_on_main_thread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_asm.h:29 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_utf8strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:441 */
+extern size_t __attribute__((__visibility__("default")))  SDL_utf8strlcpy(char *dst ,
+                                                                          char const   *src ,
+                                                                          size_t dst_bytes ) ;
+/* END FUNCTION-DECL-EXTERN SDL_utf8strlcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:441 */
 
 /* BEGIN FUNCTION-DECL-EXTERN tempnam LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:175 */
 extern char *tempnam(char const   * , char const   * ) ;
@@ -7148,6 +7092,10 @@ extern char *tempnam(char const   * , char const   * ) ;
 extern Uint32 __attribute__((__visibility__("default")))  SDL_GetWindowID(SDL_Window *window ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetWindowID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:393 */
 
+/* BEGIN FUNCTION-DECL __isgreaterequall___1 LOC=UNKNOWN */
+__inline static int __isgreaterequall___1(long double __x , long double __y ) ;
+/* END FUNCTION-DECL __isgreaterequall___1 LOC=UNKNOWN */
+
 /* BEGIN TYPEDEF ssize_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:154 */
 typedef long ssize_t;
 /* END TYPEDEF ssize_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:154 */
@@ -7156,18 +7104,9 @@ typedef long ssize_t;
 extern ssize_t getline(char ** __restrict   , size_t * __restrict   , FILE * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN getline LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:165 */
 
-/* BEGIN FUNCTION-DECL __isgreaterequall___1 LOC=UNKNOWN */
-__inline static int __isgreaterequall___1(long double __x , long double __y ) ;
-/* END FUNCTION-DECL __isgreaterequall___1 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN truncf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:360 */
 extern float truncf(float  ) ;
 /* END FUNCTION-DECL-EXTERN truncf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:360 */
-
-/* BEGIN FUNCTION-DECL __builtin_stpcpy LOC=BUILTIN */
-/* compiler builtin: 
-   char *__builtin_stpcpy(char * , char const   * ) ;  */
-/* END FUNCTION-DECL __builtin_stpcpy LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN remquof LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:316 */
 extern float remquof(float  , float  , int * ) ;
@@ -7177,13 +7116,18 @@ extern float remquof(float  , float  , int * ) ;
 extern float expf(float  ) ;
 /* END FUNCTION-DECL-EXTERN expf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:192 */
 
-/* BEGIN FUNCTION-DECL-EXTERN scalbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:405 */
-extern float scalbf(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN scalbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:405 */
+/* BEGIN FUNCTION-DECL __builtin_stpcpy LOC=BUILTIN */
+/* compiler builtin: 
+   char *__builtin_stpcpy(char * , char const   * ) ;  */
+/* END FUNCTION-DECL __builtin_stpcpy LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL __DOUBLE_BITS___1 LOC=UNKNOWN */
 __inline static unsigned long long __DOUBLE_BITS___1(double __f ) ;
 /* END FUNCTION-DECL __DOUBLE_BITS___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL-EXTERN scalbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:405 */
+extern float scalbf(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN scalbf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:405 */
 
 /* BEGIN FUNCTION-DECL-EXTERN pthread_sigmask LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:230 */
 extern int pthread_sigmask(int  , sigset_t const   * __restrict   , sigset_t * __restrict   ) ;
@@ -7193,6 +7137,10 @@ extern int pthread_sigmask(int  , sigset_t const   * __restrict   , sigset_t * _
 extern double drem(double  , double  ) ;
 /* END FUNCTION-DECL-EXTERN drem LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:398 */
 
+/* BEGIN FUNCTION-DECL init LOC=UNKNOWN */
+int init(int width , int height ) ;
+/* END FUNCTION-DECL init LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DECL-EXTERN sqrtl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:345 */
 extern long double sqrtl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN sqrtl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:345 */
@@ -7201,10 +7149,6 @@ extern long double sqrtl(long double  ) ;
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasEvents(Uint32 minType ,
                                                                           Uint32 maxType ) ;
 /* END FUNCTION-DECL-EXTERN SDL_HasEvents LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:514 */
-
-/* BEGIN FUNCTION-DECL init LOC=UNKNOWN */
-int init(int width , int height ) ;
-/* END FUNCTION-DECL init LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_sched_yield LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2636 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_sched_yield)(void)  __attribute__((__import_name__("sched_yield"),
@@ -7316,28 +7260,28 @@ extern int __attribute__((__visibility__("default")))  SDL_SetTextureColorMod(SD
                                                                               Uint8 b ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetTextureColorMod LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:252 */
 
-/* BEGIN FUNCTION-DECL rotate_player LOC=UNKNOWN */
-void rotate_player(struct player *p___0 , float degrees ) ;
-/* END FUNCTION-DECL rotate_player LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN fmaxl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:221 */
 extern long double fmaxl(long double  , long double  ) ;
 /* END FUNCTION-DECL-EXTERN fmaxl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:221 */
+
+/* BEGIN FUNCTION-DECL rotate_player LOC=UNKNOWN */
+void rotate_player(struct player *p___0 , float degrees ) ;
+/* END FUNCTION-DECL rotate_player LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL __builtin_tan LOC=BUILTIN */
 /* compiler builtin: 
    double __builtin_tan(double  ) ;  */
 /* END FUNCTION-DECL __builtin_tan LOC=BUILTIN */
 
+/* BEGIN FUNCTION-DECL-EXTERN atoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:25 */
+extern long long atoll(char const   * ) ;
+/* END FUNCTION-DECL-EXTERN atoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:25 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ConvertSurfaceFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:355 */
 extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_ConvertSurfaceFormat(SDL_Surface *src ,
                                                                                          Uint32 pixel_format ,
                                                                                          Uint32 flags ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ConvertSurfaceFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:355 */
-
-/* BEGIN FUNCTION-DECL-EXTERN atoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:25 */
-extern long long atoll(char const   * ) ;
-/* END FUNCTION-DECL-EXTERN atoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:25 */
 
 /* BEGIN FUNCTION-DECL-EXTERN fminl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:225 */
 extern long double fminl(long double  , long double  ) ;
@@ -7394,14 +7338,14 @@ extern void __attribute__((__visibility__("default")))  SDL_DestroyWindow(SDL_Wi
 typedef struct __anonstruct_ldiv_t_721778306 ldiv_t;
 /* END TYPEDEF ldiv_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:65 */
 
-/* BEGIN FUNCTION-DECL apply_force LOC=UNKNOWN */
-void apply_force(struct vector2d *velocity , struct vector2d v ) ;
-/* END FUNCTION-DECL apply_force LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL __builtin___stpcpy_chk LOC=BUILTIN */
 /* compiler builtin: 
    char *__builtin___stpcpy_chk(char * , char const   * , unsigned long  ) ;  */
 /* END FUNCTION-DECL __builtin___stpcpy_chk LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL apply_force LOC=UNKNOWN */
+void apply_force(struct vector2d *velocity , struct vector2d v ) ;
+/* END FUNCTION-DECL apply_force LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL __builtin_next_arg LOC=BUILTIN */
 /* compiler builtin: 
@@ -7439,14 +7383,18 @@ extern Uint8 __attribute__((__visibility__("default")))  *SDL_GetKeyboardState(i
 typedef void (*em_run_preload_plugins_data_onload_func)(void * , char const   * );
 /* END TYPEDEF em_run_preload_plugins_data_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:115 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_GetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:792 */
-extern int __attribute__((__visibility__("default")))  SDL_GL_GetSwapInterval(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GL_GetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:792 */
-
 /* BEGIN FUNCTION-DECL __builtin_bswap32 LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_bswap32(int  ) ;  */
 /* END FUNCTION-DECL __builtin_bswap32 LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_GetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:792 */
+extern int __attribute__((__visibility__("default")))  SDL_GL_GetSwapInterval(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GL_GetSwapInterval LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:792 */
+
+/* BEGIN FUNCTION-DECL __islessequall___1 LOC=UNKNOWN */
+__inline static int __islessequall___1(long double __x , long double __y ) ;
+/* END FUNCTION-DECL __islessequall___1 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_idb_async_delete LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:95 */
 extern void emscripten_idb_async_delete(char const   *db_name , char const   *file_id ,
@@ -7456,10 +7404,6 @@ extern void emscripten_idb_async_delete(char const   *db_name , char const   *fi
 /* BEGIN FUNCTION-DECL-EXTERN nexttowardf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:304 */
 extern float nexttowardf(float  , long double  ) ;
 /* END FUNCTION-DECL-EXTERN nexttowardf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:304 */
-
-/* BEGIN FUNCTION-DECL __islessequall___1 LOC=UNKNOWN */
-__inline static int __islessequall___1(long double __x , long double __y ) ;
-/* END FUNCTION-DECL __islessequall___1 LOC=UNKNOWN */
 
 /* BEGIN ENUM __anonenum_SDL_EventType_410331439 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:59 */
 enum __anonenum_SDL_EventType_410331439 {
@@ -7512,13 +7456,13 @@ typedef struct __anonstruct_max_align_t_835649992 max_align_t;
 extern char *emscripten_get_window_title() ;
 /* END FUNCTION-DECL-EXTERN emscripten_get_window_title LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:80 */
 
-/* BEGIN FUNCTION-DECL-EXTERN getenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:53 */
-extern char *getenv(char const   * ) ;
-/* END FUNCTION-DECL-EXTERN getenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:53 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetError LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:43 */
 extern char const __attribute__((__visibility__("default")))  *SDL_GetError(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetError LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:43 */
+
+/* BEGIN FUNCTION-DECL-EXTERN getenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:53 */
+extern char *getenv(char const   * ) ;
+/* END FUNCTION-DECL-EXTERN getenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:53 */
 
 /* BEGIN FUNCTION-DECL-EXTERN strlen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:54 */
 extern size_t strlen(char const   * ) ;
@@ -7632,13 +7576,13 @@ __import_module__("wasi_snapshot_preview1"))) ;
 extern int isupper_l(int  , locale_t  ) ;
 /* END FUNCTION-DECL-EXTERN isupper_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:58 */
 
-/* BEGIN FUNCTION-DECL __isless___1 LOC=UNKNOWN */
-__inline static int __isless___1(double_t __x , double_t __y ) ;
-/* END FUNCTION-DECL __isless___1 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN strcoll_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:74 */
 extern int strcoll_l(char const   * , char const   * , locale_t  ) ;
 /* END FUNCTION-DECL-EXTERN strcoll_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:74 */
+
+/* BEGIN FUNCTION-DECL __isless___1 LOC=UNKNOWN */
+__inline static int __isless___1(double_t __x , double_t __y ) ;
+/* END FUNCTION-DECL __isless___1 LOC=UNKNOWN */
 
 /* BEGIN TYPEDEF id_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:323 */
 typedef unsigned int id_t;
@@ -7654,18 +7598,18 @@ extern int __attribute__((__visibility__("default")))  SDL_FillRects(SDL_Surface
                                                                      int count , Uint32 color ) ;
 /* END FUNCTION-DECL-EXTERN SDL_FillRects LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:379 */
 
-/* BEGIN FUNCTION-DECL __builtin_expf LOC=BUILTIN */
-/* compiler builtin: 
-   float __builtin_expf(float  ) ;  */
-/* END FUNCTION-DECL __builtin_expf LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_WarpMouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:318 */
+extern void __attribute__((__visibility__("default")))  SDL_WarpMouse(Uint16 x , Uint16 y ) ;
+/* END FUNCTION-DECL-EXTERN SDL_WarpMouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:318 */
 
 /* BEGIN FUNCTION-DECL __isgreater___3 LOC=UNKNOWN */
 __inline static int __isgreater___3(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __isgreater___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_WarpMouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:318 */
-extern void __attribute__((__visibility__("default")))  SDL_WarpMouse(Uint16 x , Uint16 y ) ;
-/* END FUNCTION-DECL-EXTERN SDL_WarpMouse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:318 */
+/* BEGIN FUNCTION-DECL __builtin_expf LOC=BUILTIN */
+/* compiler builtin: 
+   float __builtin_expf(float  ) ;  */
+/* END FUNCTION-DECL __builtin_expf LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL __builtin_ffs LOC=BUILTIN */
 /* compiler builtin: 
@@ -7680,13 +7624,13 @@ extern float expm1f(float  ) ;
 typedef enum __anonenum_SDL_DUMMY_ENUM_229850056 SDL_DUMMY_ENUM;
 /* END TYPEDEF SDL_DUMMY_ENUM LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:187 */
 
-/* BEGIN FUNCTION-DECL-EXTERN mbtowc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:73 */
-extern int mbtowc(wchar_t___0 * __restrict   , char const   * __restrict   , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN mbtowc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:73 */
-
 /* BEGIN FUNCTION-DECL-EXTERN abs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:60 */
 extern int abs(int  ) ;
 /* END FUNCTION-DECL-EXTERN abs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:60 */
+
+/* BEGIN FUNCTION-DECL-EXTERN mbtowc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:73 */
+extern int mbtowc(wchar_t___0 * __restrict   , char const   * __restrict   , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN mbtowc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:73 */
 
 /* BEGIN TYPEDEF __wasi_siflags_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1574 */
 typedef uint16_t __wasi_siflags_t;
@@ -7701,10 +7645,6 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_sock_send
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_sock_send LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2707 */
 
-/* BEGIN FUNCTION-DECL-EXTERN labs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:61 */
-extern long labs(long  ) ;
-/* END FUNCTION-DECL-EXTERN labs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:61 */
-
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_pread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1966 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_pread)(__wasi_fd_t fd ,
                                                                                  __wasi_iovec_t const   *iovs ,
@@ -7713,6 +7653,10 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_pread)
                                                                                  __wasi_size_t *nread )  __attribute__((__import_name__("fd_pread"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_pread LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1966 */
+
+/* BEGIN FUNCTION-DECL-EXTERN labs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:61 */
+extern long labs(long  ) ;
+/* END FUNCTION-DECL-EXTERN labs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:61 */
 
 /* BEGIN FUNCTION-DECL-EXTERN powl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:309 */
 extern long double powl(long double  , long double  ) ;
@@ -7740,27 +7684,27 @@ enum __anonenum_SDL_Keymod_474209642 {
 typedef int64_t int_least64_t;
 /* END TYPEDEF int_least64_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:28 */
 
+/* BEGIN FUNCTION-DECL-EXTERN fmodl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:229 */
+extern long double fmodl(long double  , long double  ) ;
+/* END FUNCTION-DECL-EXTERN fmodl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:229 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SaveBMP_RW LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:187 */
 extern int __attribute__((__visibility__("default")))  SDL_SaveBMP_RW(SDL_Surface *surface ,
                                                                       SDL_RWops *dst ,
                                                                       int freedst ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SaveBMP_RW LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:187 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fmodl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:229 */
-extern long double fmodl(long double  , long double  ) ;
-/* END FUNCTION-DECL-EXTERN fmodl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:229 */
-
 /* BEGIN TYPEDEF SDL_dummy_uint64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:168 */
 typedef int SDL_dummy_uint64[(sizeof(Uint64 ) == 8UL) * 2 - 1];
 /* END TYPEDEF SDL_dummy_uint64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:168 */
 
-/* BEGIN FUNCTION-DECL-EXTERN rindex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:20 */
-extern char *rindex(char const   * , int  ) ;
-/* END FUNCTION-DECL-EXTERN rindex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:20 */
-
 /* BEGIN FUNCTION-DECL-EXTERN frexpl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:233 */
 extern long double frexpl(long double  , int * ) ;
 /* END FUNCTION-DECL-EXTERN frexpl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:233 */
+
+/* BEGIN FUNCTION-DECL-EXTERN rindex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:20 */
+extern char *rindex(char const   * , int  ) ;
+/* END FUNCTION-DECL-EXTERN rindex LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:20 */
 
 /* BEGIN ENUM __anonenum_SDL_GrabMode_279849253 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:203 */
 enum __anonenum_SDL_GrabMode_279849253 {
@@ -7793,47 +7737,47 @@ extern int system(char const   * ) ;
 extern int feof_unlocked(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN feof_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:189 */
 
-/* BEGIN FUNCTION-DECL __isgreaterequal___1 LOC=UNKNOWN */
-__inline static int __isgreaterequal___1(double_t __x , double_t __y ) ;
-/* END FUNCTION-DECL __isgreaterequal___1 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL __islessgreater___1 LOC=UNKNOWN */
 __inline static int __islessgreater___1(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __islessgreater___1 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_MinimizeWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:532 */
-extern void __attribute__((__visibility__("default")))  SDL_MinimizeWindow(SDL_Window *window ) ;
-/* END FUNCTION-DECL-EXTERN SDL_MinimizeWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:532 */
-
-/* BEGIN FUNCTION-DECL __builtin_sinhf LOC=BUILTIN */
-/* compiler builtin: 
-   float __builtin_sinhf(float  ) ;  */
-/* END FUNCTION-DECL __builtin_sinhf LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL __isgreaterequal___1 LOC=UNKNOWN */
+__inline static int __isgreaterequal___1(double_t __x , double_t __y ) ;
+/* END FUNCTION-DECL __isgreaterequal___1 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetTextureAlphaMod LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:283 */
 extern int __attribute__((__visibility__("default")))  SDL_SetTextureAlphaMod(SDL_Texture *texture ,
                                                                               Uint8 alpha ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetTextureAlphaMod LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:283 */
 
+/* BEGIN FUNCTION-DECL __builtin_sinhf LOC=BUILTIN */
+/* compiler builtin: 
+   float __builtin_sinhf(float  ) ;  */
+/* END FUNCTION-DECL __builtin_sinhf LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_MinimizeWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:532 */
+extern void __attribute__((__visibility__("default")))  SDL_MinimizeWindow(SDL_Window *window ) ;
+/* END FUNCTION-DECL-EXTERN SDL_MinimizeWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:532 */
+
 /* BEGIN FUNCTION-DECL __isgreaterequal___0 LOC=UNKNOWN */
 __inline static int __isgreaterequal___0(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __isgreaterequal___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL __islessgreater LOC=UNKNOWN */
-__inline static int __islessgreater(double_t __x , double_t __y ) ;
-/* END FUNCTION-DECL __islessgreater LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN mkostemp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:105 */
 extern int mkostemp(char * , int  ) ;
 /* END FUNCTION-DECL-EXTERN mkostemp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:105 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strtof LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:28 */
-extern float strtof(char const   * __restrict   , char ** __restrict   ) ;
-/* END FUNCTION-DECL-EXTERN strtof LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:28 */
+/* BEGIN FUNCTION-DECL __islessgreater LOC=UNKNOWN */
+__inline static int __islessgreater(double_t __x , double_t __y ) ;
+/* END FUNCTION-DECL __islessgreater LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_HasMMX LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:107 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasMMX(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_HasMMX LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:107 */
+
+/* BEGIN FUNCTION-DECL-EXTERN strtof LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:28 */
+extern float strtof(char const   * __restrict   , char ** __restrict   ) ;
+/* END FUNCTION-DECL-EXTERN strtof LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:28 */
 
 /* BEGIN FUNCTION-DECL __builtin_floorf LOC=BUILTIN */
 /* compiler builtin: 
@@ -7869,10 +7813,6 @@ extern double expm1(double  ) ;
 extern int pclose(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN pclose LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:151 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_get_compiler_setting LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:140 */
-extern long emscripten_get_compiler_setting(char const   *name ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_get_compiler_setting LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:140 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_BuildAudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:431 */
 extern int __attribute__((__visibility__("default")))  SDL_BuildAudioCVT(SDL_AudioCVT *cvt ,
                                                                          SDL_AudioFormat src_format ,
@@ -7883,13 +7823,17 @@ extern int __attribute__((__visibility__("default")))  SDL_BuildAudioCVT(SDL_Aud
                                                                          int dst_rate ) ;
 /* END FUNCTION-DECL-EXTERN SDL_BuildAudioCVT LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:431 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_LogResetPriorities LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:133 */
-extern void __attribute__((__visibility__("default")))  SDL_LogResetPriorities(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_LogResetPriorities LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:133 */
-
 /* BEGIN FUNCTION-DECL __islessequal___1 LOC=UNKNOWN */
 __inline static int __islessequal___1(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __islessequal___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_get_compiler_setting LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:140 */
+extern long emscripten_get_compiler_setting(char const   *name ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_get_compiler_setting LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:140 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_LogResetPriorities LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:133 */
+extern void __attribute__((__visibility__("default")))  SDL_LogResetPriorities(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_LogResetPriorities LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:133 */
 
 /* BEGIN TYPEDEF em_socket_error_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:55 */
 typedef void (*em_socket_error_callback)(int fd , int err , char const   *msg , void *userData );
@@ -7929,6 +7873,10 @@ enum __anonenum_SDL_GLattr_994110948 {
 } ;
 /* END ENUM __anonenum_SDL_GLattr_994110948 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:165 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_EnableScreenSaver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:689 */
+extern void __attribute__((__visibility__("default")))  SDL_EnableScreenSaver(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_EnableScreenSaver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:689 */
+
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_path_filestat_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2255 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_filestat_get)(__wasi_fd_t fd ,
                                                                                           __wasi_lookupflags_t flags ,
@@ -7941,10 +7889,6 @@ __import_module__("wasi_snapshot_preview1"))) ;
 /* BEGIN FUNCTION-DECL-EXTERN erfl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:185 */
 extern long double erfl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN erfl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:185 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_EnableScreenSaver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:689 */
-extern void __attribute__((__visibility__("default")))  SDL_EnableScreenSaver(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_EnableScreenSaver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:689 */
 
 /* BEGIN FUNCTION-DECL-EXTERN sigemptyset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:215 */
 extern int sigemptyset(sigset_t * ) ;
@@ -7995,24 +7939,24 @@ typedef int (*SDL_blit)(struct SDL_Surface *src , SDL_Rect *srcrect , struct SDL
                         SDL_Rect *dstrect );
 /* END TYPEDEF SDL_blit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:100 */
 
+/* BEGIN FUNCTION-DECL-EXTERN __libc_current_sigrtmax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:208 */
+extern int __libc_current_sigrtmax(void) ;
+/* END FUNCTION-DECL-EXTERN __libc_current_sigrtmax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:208 */
+
 /* BEGIN FUNCTION-DECL __builtin_powil LOC=BUILTIN */
 /* compiler builtin: 
    long double __builtin_powil(long double  , int  ) ;  */
 /* END FUNCTION-DECL __builtin_powil LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN __libc_current_sigrtmax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:208 */
-extern int __libc_current_sigrtmax(void) ;
-/* END FUNCTION-DECL-EXTERN __libc_current_sigrtmax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:208 */
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_idb_load_blob LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:106 */
+extern void emscripten_idb_load_blob(char const   *db_name , char const   *file_id ,
+                                     int *pblob , int *perror ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_idb_load_blob LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:106 */
 
 /* BEGIN FUNCTION-DECL __builtin_sqrtl LOC=BUILTIN */
 /* compiler builtin: 
    long double __builtin_sqrtl(long double  ) ;  */
 /* END FUNCTION-DECL __builtin_sqrtl LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_idb_load_blob LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:106 */
-extern void emscripten_idb_load_blob(char const   *db_name , char const   *file_id ,
-                                     int *pblob , int *perror ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_idb_load_blob LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:106 */
 
 /* BEGIN FUNCTION-DECL-EXTERN getdelim LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:164 */
 extern ssize_t getdelim(char ** __restrict   , size_t * __restrict   , int  , FILE * __restrict   ) ;
@@ -8037,40 +7981,40 @@ struct __anonstruct_SDL_atomic_t_1070053764 {
 };
 /* END STRUCT __anonstruct_SDL_atomic_t_1070053764 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:188 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:566 */
-extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_GetWindowSurface(SDL_Window *window ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetWindowSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:566 */
-
 /* BEGIN FUNCTION-DECL-EXTERN fgetpos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:96 */
 extern int fgetpos(FILE * __restrict   , fpos_t * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN fgetpos LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:96 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:566 */
+extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_GetWindowSurface(SDL_Window *window ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetWindowSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:566 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_DisplayFormatAlpha LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:299 */
 extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_DisplayFormatAlpha(SDL_Surface *surface ) ;
 /* END FUNCTION-DECL-EXTERN SDL_DisplayFormatAlpha LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:299 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fgetc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:102 */
+extern int fgetc(FILE * ) ;
+/* END FUNCTION-DECL-EXTERN fgetc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:102 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RWFromConstMem LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:154 */
 extern SDL_RWops __attribute__((__visibility__("default")))  *SDL_RWFromConstMem(void const   *mem ,
                                                                                  int size ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RWFromConstMem LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:154 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fgetc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:102 */
-extern int fgetc(FILE * ) ;
-/* END FUNCTION-DECL-EXTERN fgetc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:102 */
-
 /* BEGIN TYPEDEF __wasi_dirent_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:824 */
 typedef struct __wasi_dirent_t __wasi_dirent_t;
 /* END TYPEDEF __wasi_dirent_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:824 */
-
-/* BEGIN FUNCTION-DECL __builtin_ctzl LOC=BUILTIN */
-/* compiler builtin: 
-   int __builtin_ctzl(unsigned long  ) ;  */
-/* END FUNCTION-DECL __builtin_ctzl LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetClipRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:331 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_SetClipRect(SDL_Surface *surface ,
                                                                             SDL_Rect const   *rect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetClipRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:331 */
+
+/* BEGIN FUNCTION-DECL __builtin_ctzl LOC=BUILTIN */
+/* compiler builtin: 
+   int __builtin_ctzl(unsigned long  ) ;  */
+/* END FUNCTION-DECL __builtin_ctzl LOC=BUILTIN */
 
 /* BEGIN FUNCTION-DECL-EXTERN feof LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:87 */
 extern int feof(FILE * ) ;
@@ -8080,13 +8024,13 @@ extern int feof(FILE * ) ;
 extern int putchar(int  ) ;
 /* END FUNCTION-DECL-EXTERN putchar LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:109 */
 
-/* BEGIN TYPEDEF SDL_dummy_uint16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:164 */
-typedef int SDL_dummy_uint16[(sizeof(Uint16 ) == 2UL) * 2 - 1];
-/* END TYPEDEF SDL_dummy_uint16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:164 */
-
 /* BEGIN TYPEDEF SDL_PowerState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:44 */
 typedef enum __anonenum_SDL_PowerState_675147179 SDL_PowerState;
 /* END TYPEDEF SDL_PowerState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:44 */
+
+/* BEGIN TYPEDEF SDL_dummy_uint16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:164 */
+typedef int SDL_dummy_uint16[(sizeof(Uint16 ) == 2UL) * 2 - 1];
+/* END TYPEDEF SDL_dummy_uint16 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:164 */
 
 /* BEGIN FUNCTION-DECL-EXTERN imaxabs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:16 */
 extern intmax_t imaxabs(intmax_t  ) ;
@@ -8109,10 +8053,6 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasSSE3(void) ;
 void mainloop(void) ;
 /* END FUNCTION-DECL mainloop LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_set_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:41 */
-extern void emscripten_set_main_loop(void (*func)(void) , int fps , int simulate_infinite_loop ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_set_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:41 */
-
 /* BEGIN FUNCTION-DECL __DOUBLE_BITS___3 LOC=UNKNOWN */
 __inline static unsigned long long __DOUBLE_BITS___3(double __f ) ;
 /* END FUNCTION-DECL __DOUBLE_BITS___3 LOC=UNKNOWN */
@@ -8121,6 +8061,10 @@ __inline static unsigned long long __DOUBLE_BITS___3(double __f ) ;
 /* compiler builtin: 
    float __builtin_ldexpf(float  , int  ) ;  */
 /* END FUNCTION-DECL __builtin_ldexpf LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_set_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:41 */
+extern void emscripten_set_main_loop(void (*func)(void) , int fps , int simulate_infinite_loop ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_set_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:41 */
 
 /* BEGIN TYPEDEF em_async_wget2_data_onprogress_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:30 */
 typedef void (*em_async_wget2_data_onprogress_func)(unsigned int  , void * , int  ,
@@ -8131,13 +8075,13 @@ typedef void (*em_async_wget2_data_onprogress_func)(unsigned int  , void * , int
 __inline static int __islessequalf___3(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __islessequalf___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN tanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:349 */
-extern long double tanl(long double  ) ;
-/* END FUNCTION-DECL-EXTERN tanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:349 */
-
 /* BEGIN FUNCTION-DECL init_asteroids LOC=UNKNOWN */
 void init_asteroids(struct asteroid *asteroids___0 , int size ) ;
 /* END FUNCTION-DECL init_asteroids LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DECL-EXTERN tanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:349 */
+extern long double tanl(long double  ) ;
+/* END FUNCTION-DECL-EXTERN tanl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:349 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_IsScreenSaverEnabled LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:681 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_IsScreenSaverEnabled(void) ;
@@ -8147,33 +8091,29 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_IsScreenSaverEna
 extern void emscripten_worker_respond(char *data , int size ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_worker_respond LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:133 */
 
-/* BEGIN FUNCTION-DECL-EXTERN puts LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:117 */
-extern int puts(char const   * ) ;
-/* END FUNCTION-DECL-EXTERN puts LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:117 */
-
 /* BEGIN FUNCTION-DECL-EXTERN fflush LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:89 */
 extern int fflush(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN fflush LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:89 */
 
-/* BEGIN FUNCTION-DECL-EXTERN memcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:27 */
-extern void *memcpy(void * __restrict   , void const   * __restrict   , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN memcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:27 */
+/* BEGIN FUNCTION-DECL-EXTERN puts LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:117 */
+extern int puts(char const   * ) ;
+/* END FUNCTION-DECL-EXTERN puts LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:117 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_UnloadObject LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_loadso.h:73 */
 extern void __attribute__((__visibility__("default")))  SDL_UnloadObject(void *handle ) ;
 /* END FUNCTION-DECL-EXTERN SDL_UnloadObject LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_loadso.h:73 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_set_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:47 */
-extern int emscripten_set_main_loop_timing(int mode , int value ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_set_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:47 */
+/* BEGIN FUNCTION-DECL-EXTERN memcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:27 */
+extern void *memcpy(void * __restrict   , void const   * __restrict   , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN memcpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:27 */
 
 /* BEGIN FUNCTION-DECL-EXTERN sigwaitinfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:226 */
 extern int sigwaitinfo(sigset_t const   * __restrict   , siginfo_t * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN sigwaitinfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:226 */
 
-/* BEGIN FUNCTION-DECL-EXTERN exp2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:196 */
-extern float exp2f(float  ) ;
-/* END FUNCTION-DECL-EXTERN exp2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:196 */
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_set_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:47 */
+extern int emscripten_set_main_loop_timing(int mode , int value ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_set_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:47 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ReportAssertion LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:117 */
 extern SDL_assert_state __attribute__((__visibility__("default")))  SDL_ReportAssertion(SDL_assert_data * ,
@@ -8181,6 +8121,10 @@ extern SDL_assert_state __attribute__((__visibility__("default")))  SDL_ReportAs
                                                                                         char const   * ,
                                                                                         int  ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ReportAssertion LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:117 */
+
+/* BEGIN FUNCTION-DECL-EXTERN exp2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:196 */
+extern float exp2f(float  ) ;
+/* END FUNCTION-DECL-EXTERN exp2f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:196 */
 
 /* BEGIN TYPEDEF intptr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:159 */
 typedef long intptr_t;
@@ -8199,15 +8143,15 @@ extern int __attribute__((__visibility__("default")))  SDL_putenv(char const   *
 extern FILE *fmemopen(void * __restrict   , size_t  , char const   * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN fmemopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:147 */
 
+/* BEGIN FUNCTION-DECL-EXTERN frexp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:231 */
+extern double frexp(double  , int * ) ;
+/* END FUNCTION-DECL-EXTERN frexp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:231 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ConvertSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:353 */
 extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_ConvertSurface(SDL_Surface *src ,
                                                                                    SDL_PixelFormat *fmt ,
                                                                                    Uint32 flags ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ConvertSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:353 */
-
-/* BEGIN FUNCTION-DECL-EXTERN frexp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:231 */
-extern double frexp(double  , int * ) ;
-/* END FUNCTION-DECL-EXTERN frexp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:231 */
 
 /* BEGIN TYPEDEF timer_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:287 */
 typedef void *timer_t;
@@ -8252,13 +8196,13 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_read
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_path_readlink LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2429 */
 
-/* BEGIN FUNCTION-DECL __isgreaterl___1 LOC=UNKNOWN */
-__inline static int __isgreaterl___1(long double __x , long double __y ) ;
-/* END FUNCTION-DECL __isgreaterl___1 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN llabs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:62 */
 extern long long llabs(long long  ) ;
 /* END FUNCTION-DECL-EXTERN llabs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:62 */
+
+/* BEGIN FUNCTION-DECL __isgreaterl___1 LOC=UNKNOWN */
+__inline static int __isgreaterl___1(long double __x , long double __y ) ;
+/* END FUNCTION-DECL __isgreaterl___1 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetSurfaceAlphaMod LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:276 */
 extern int __attribute__((__visibility__("default")))  SDL_SetSurfaceAlphaMod(SDL_Surface *surface ,
@@ -8270,14 +8214,14 @@ extern void __attribute__((__visibility__("default")))  *SDL_GetWindowData(SDL_W
                                                                            char const   *name ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetWindowData LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:455 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_run_script_int LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:36 */
-extern int emscripten_run_script_int(char const   *script ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_run_script_int LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:36 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_VideoDriverName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:280 */
 extern char const __attribute__((__visibility__("default")))  *SDL_VideoDriverName(char *namebuf ,
                                                                                    int maxlen ) ;
 /* END FUNCTION-DECL-EXTERN SDL_VideoDriverName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:280 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_run_script_int LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:36 */
+extern int emscripten_run_script_int(char const   *script ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_run_script_int LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:36 */
 
 /* BEGIN FUNCTION-DECL draw_line LOC=UNKNOWN */
 int draw_line(uint32_t *pixel_buffer , int x1 , int y1___0 , int x2 , int y2 , uint32_t colour ) ;
@@ -8312,27 +8256,27 @@ extern char *strncat(char * __restrict   , char const   * __restrict   , size_t 
 extern void __attribute__((__visibility__("default")))  SDL_RaiseWindow(SDL_Window *window ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RaiseWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:518 */
 
-/* BEGIN FUNCTION-DECL-EXTERN __fpclassifyl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:53 */
-extern int __fpclassifyl(long double  ) ;
-/* END FUNCTION-DECL-EXTERN __fpclassifyl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:53 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetWindowFullscreen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:550 */
 extern int __attribute__((__visibility__("default")))  SDL_SetWindowFullscreen(SDL_Window *window ,
                                                                                SDL_bool fullscreen ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetWindowFullscreen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:550 */
+
+/* BEGIN FUNCTION-DECL-EXTERN __fpclassifyl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:53 */
+extern int __fpclassifyl(long double  ) ;
+/* END FUNCTION-DECL-EXTERN __fpclassifyl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:53 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RenderFillRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:533 */
 extern int __attribute__((__visibility__("default")))  SDL_RenderFillRect(SDL_Renderer *renderer ,
                                                                           SDL_Rect const   *rect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderFillRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:533 */
 
-/* BEGIN FUNCTION-DECL-EXTERN sigpause LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:244 */
-extern int sigpause(int  ) ;
-/* END FUNCTION-DECL-EXTERN sigpause LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:244 */
-
 /* BEGIN FUNCTION-DECL-EXTERN isspace_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:57 */
 extern int isspace_l(int  , locale_t  ) ;
 /* END FUNCTION-DECL-EXTERN isspace_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:57 */
+
+/* BEGIN FUNCTION-DECL-EXTERN sigpause LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:244 */
+extern int sigpause(int  ) ;
+/* END FUNCTION-DECL-EXTERN sigpause LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:244 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_LoadBMP_RW LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:170 */
 extern SDL_Surface __attribute__((__visibility__("default")))  *SDL_LoadBMP_RW(SDL_RWops *src ,
@@ -8344,14 +8288,14 @@ extern size_t strxfrm_l(char * __restrict   , char const   * __restrict   , size
                         locale_t  ) ;
 /* END FUNCTION-DECL-EXTERN strxfrm_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:75 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fdim LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:207 */
-extern double fdim(double  , double  ) ;
-/* END FUNCTION-DECL-EXTERN fdim LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:207 */
-
 /* BEGIN FUNCTION-DECL __builtin_popcount LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_popcount(unsigned int  ) ;  */
 /* END FUNCTION-DECL __builtin_popcount LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN fdim LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:207 */
+extern double fdim(double  , double  ) ;
+/* END FUNCTION-DECL-EXTERN fdim LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:207 */
 
 /* BEGIN FUNCTION-DECL-EXTERN lldiv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:70 */
 extern lldiv_t lldiv(long long  , long long  ) ;
@@ -8361,10 +8305,6 @@ extern lldiv_t lldiv(long long  , long long  ) ;
 /* compiler builtin: 
    void __builtin_varargs_start(__builtin_va_list  ) ;  */
 /* END FUNCTION-DECL __builtin_varargs_start LOC=BUILTIN */
-
-/* BEGIN VARIABLE-DEF _3_main_$strings LOC=UNKNOWN */
-char const   *_3_main_$strings  =    "";
-/* END VARIABLE-DEF _3_main_$strings LOC=UNKNOWN */
 
 /* BEGIN TYPEDEF emscripten_align1_int64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_types.h:16 */
 typedef long long __attribute__((__aligned__(1)))  emscripten_align1_int64;
@@ -8398,10 +8338,6 @@ extern Uint32 __attribute__((__visibility__("default")))  SDL_MapRGB(SDL_PixelFo
                                                                      Uint8 b ) ;
 /* END FUNCTION-DECL-EXTERN SDL_MapRGB LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:379 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fputc_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:184 */
-extern int fputc_unlocked(int  , FILE * ) ;
-/* END FUNCTION-DECL-EXTERN fputc_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:184 */
-
 /* BEGIN FUNCTION-DECL __islessgreater___3 LOC=UNKNOWN */
 __inline static int __islessgreater___3(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __islessgreater___3 LOC=UNKNOWN */
@@ -8409,6 +8345,10 @@ __inline static int __islessgreater___3(double_t __x , double_t __y ) ;
 /* BEGIN FUNCTION-DECL-EXTERN SDL_mutexP LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:74 */
 extern int __attribute__((__visibility__("default")))  SDL_mutexP(SDL_mutex *mutex ) ;
 /* END FUNCTION-DECL-EXTERN SDL_mutexP LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:74 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fputc_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:184 */
+extern int fputc_unlocked(int  , FILE * ) ;
+/* END FUNCTION-DECL-EXTERN fputc_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:184 */
 
 /* BEGIN FUNCTION-DECL __FLOAT_BITS LOC=UNKNOWN */
 __inline static unsigned int __FLOAT_BITS(float __f ) ;
@@ -8428,14 +8368,14 @@ struct _fpstate {
 };
 /* END STRUCT _fpstate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/signal.h:39 */
 
+/* BEGIN FUNCTION-DECL-EXTERN ispunct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:18 */
+extern int ispunct(int  ) ;
+/* END FUNCTION-DECL-EXTERN ispunct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:18 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetWindowDisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:336 */
 extern int __attribute__((__visibility__("default")))  SDL_SetWindowDisplayMode(SDL_Window *window ,
                                                                                 SDL_DisplayMode const   *mode ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetWindowDisplayMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:336 */
-
-/* BEGIN FUNCTION-DECL-EXTERN ispunct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:18 */
-extern int ispunct(int  ) ;
-/* END FUNCTION-DECL-EXTERN ispunct LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:18 */
 
 /* BEGIN FUNCTION-DECL-EXTERN remquol LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:317 */
 extern long double remquol(long double  , long double  , int * ) ;
@@ -8454,22 +8394,22 @@ extern long lroundl(long double  ) ;
 extern void __attribute__((__visibility__("default")))  SDL_FlushEvent(Uint32 type ) ;
 /* END FUNCTION-DECL-EXTERN SDL_FlushEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:519 */
 
+/* BEGIN TYPEDEF caddr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:63 */
+typedef char *caddr_t;
+/* END TYPEDEF caddr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:63 */
+
 /* BEGIN TYPEDEF gid_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:333 */
 typedef unsigned int gid_t;
 /* END TYPEDEF gid_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:333 */
 
-/* BEGIN TYPEDEF caddr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:63 */
-typedef char *caddr_t;
-/* END TYPEDEF caddr_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:63 */
+/* BEGIN FUNCTION-DECL-EXTERN powf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:308 */
+extern float powf(float  , float  ) ;
+/* END FUNCTION-DECL-EXTERN powf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:308 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RWFromFile LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:142 */
 extern SDL_RWops __attribute__((__visibility__("default")))  *SDL_RWFromFile(char const   *file ,
                                                                              char const   *mode ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RWFromFile LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:142 */
-
-/* BEGIN FUNCTION-DECL-EXTERN powf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:308 */
-extern float powf(float  , float  ) ;
-/* END FUNCTION-DECL-EXTERN powf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:308 */
 
 /* BEGIN FUNCTION-DECL __builtin_powif LOC=BUILTIN */
 /* compiler builtin: 
@@ -8521,13 +8461,13 @@ extern int renameat(int  , char const   * , int  , char const   * ) ;
 extern void __attribute__((__visibility__("default")))  SDL_ClearError(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_ClearError LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:44 */
 
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_cancel_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:52 */
-extern void emscripten_cancel_main_loop(void) ;
-/* END FUNCTION-DECL-EXTERN emscripten_cancel_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:52 */
-
 /* BEGIN FUNCTION-DECL-EXTERN nearbyintl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:297 */
 extern long double nearbyintl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN nearbyintl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:297 */
+
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_cancel_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:52 */
+extern void emscripten_cancel_main_loop(void) ;
+/* END FUNCTION-DECL-EXTERN emscripten_cancel_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:52 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_WM_GetCaption LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:303 */
 extern void __attribute__((__visibility__("default")))  SDL_WM_GetCaption(char const   **title ,
@@ -8539,14 +8479,14 @@ extern void __attribute__((__visibility__("default")))  SDL_WM_GetCaption(char c
    double __builtin_frexp(double  , int * ) ;  */
 /* END FUNCTION-DECL __builtin_frexp LOC=BUILTIN */
 
+/* BEGIN FUNCTION-DECL __islessequalf LOC=UNKNOWN */
+__inline static int __islessequalf(float_t __x , float_t __y ) ;
+/* END FUNCTION-DECL __islessequalf LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetWindowIcon LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:425 */
 extern void __attribute__((__visibility__("default")))  SDL_SetWindowIcon(SDL_Window *window ,
                                                                           SDL_Surface *icon ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetWindowIcon LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:425 */
-
-/* BEGIN FUNCTION-DECL __islessequalf LOC=UNKNOWN */
-__inline static int __islessequalf(float_t __x , float_t __y ) ;
-/* END FUNCTION-DECL __islessequalf LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL __islessgreaterl___0 LOC=UNKNOWN */
 __inline static int __islessgreaterl___0(long double __x , long double __y ) ;
@@ -8564,14 +8504,14 @@ struct player lives[3]  ;
 extern double floor(double  ) ;
 /* END FUNCTION-DECL-EXTERN floor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:211 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumVideoDisplays LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:249 */
-extern int __attribute__((__visibility__("default")))  SDL_GetNumVideoDisplays(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetNumVideoDisplays LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:249 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RWFromMem LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:153 */
 extern SDL_RWops __attribute__((__visibility__("default")))  *SDL_RWFromMem(void *mem ,
                                                                             int size ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RWFromMem LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:153 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumVideoDisplays LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:249 */
+extern int __attribute__((__visibility__("default")))  SDL_GetNumVideoDisplays(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetNumVideoDisplays LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:249 */
 
 /* BEGIN TYPEDEF SDL_EventType LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:59 */
 typedef enum __anonenum_SDL_EventType_410331439 SDL_EventType;
@@ -8580,6 +8520,11 @@ typedef enum __anonenum_SDL_EventType_410331439 SDL_EventType;
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetAudioDeviceStatus LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:366 */
 extern SDL_AudioStatus __attribute__((__visibility__("default")))  SDL_GetAudioDeviceStatus(SDL_AudioDeviceID dev ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetAudioDeviceStatus LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:366 */
+
+/* BEGIN FUNCTION-DECL-EXTERN strtoul LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:33 */
+extern unsigned long strtoul(char const   * __restrict   , char ** __restrict   ,
+                             int  ) ;
+/* END FUNCTION-DECL-EXTERN strtoul LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:33 */
 
 /* BEGIN FUNCTION-DECL draw_pixel LOC=UNKNOWN */
 int draw_pixel(uint32_t *pixel_buffer , int x , int y , uint32_t colour ) ;
@@ -8590,22 +8535,17 @@ extern void __attribute__((__visibility__("default")))  SDL_LogSetPriority(int c
                                                                            SDL_LogPriority priority ) ;
 /* END FUNCTION-DECL-EXTERN SDL_LogSetPriority LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:120 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strtoul LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:33 */
-extern unsigned long strtoul(char const   * __restrict   , char ** __restrict   ,
-                             int  ) ;
-/* END FUNCTION-DECL-EXTERN strtoul LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:33 */
-
 /* BEGIN FUNCTION-DECL-EXTERN strcoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:42 */
 extern int strcoll(char const   * , char const   * ) ;
 /* END FUNCTION-DECL-EXTERN strcoll LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:42 */
 
-/* BEGIN FUNCTION-DECL-EXTERN popen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:150 */
-extern FILE *popen(char const   * , char const   * ) ;
-/* END FUNCTION-DECL-EXTERN popen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:150 */
-
 /* BEGIN FUNCTION-DECL-EXTERN strtoumax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:20 */
 extern uintmax_t strtoumax(char const   * __restrict   , char ** __restrict   , int  ) ;
 /* END FUNCTION-DECL-EXTERN strtoumax LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:20 */
+
+/* BEGIN FUNCTION-DECL-EXTERN popen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:150 */
+extern FILE *popen(char const   * , char const   * ) ;
+/* END FUNCTION-DECL-EXTERN popen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:150 */
 
 /* BEGIN FUNCTION-DECL __builtin_exp LOC=BUILTIN */
 /* compiler builtin: 
@@ -8674,6 +8614,10 @@ extern void __attribute__((__visibility__("default")))  SDL_DestroyTexture(SDL_T
 void limit_vector(struct vector2d *v , float limit ) ;
 /* END FUNCTION-DECL limit_vector LOC=UNKNOWN */
 
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_get_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:48 */
+extern void emscripten_get_main_loop_timing(int *mode , int *value ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_get_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:48 */
+
 /* BEGIN FUNCTION-DECL-EXTERN sigdelset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:218 */
 extern int sigdelset(sigset_t * , int  ) ;
 /* END FUNCTION-DECL-EXTERN sigdelset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:218 */
@@ -8684,10 +8628,6 @@ extern int __attribute__((__visibility__("default")))  SDL_UpperBlitScaled(SDL_S
                                                                            SDL_Surface *dst ,
                                                                            SDL_Rect *dstrect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_UpperBlitScaled LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:476 */
-
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_get_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:48 */
-extern void emscripten_get_main_loop_timing(int *mode , int *value ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_get_main_loop_timing LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:48 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_socket_error_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:57 */
 extern void emscripten_set_socket_error_callback(void *userData , void (*callback)(int fd ,
@@ -8752,19 +8692,23 @@ extern void _Exit(int  ) ;
 extern char const __attribute__((__visibility__("default")))  *SDL_GetKeyName(SDL_Keycode key ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetKeyName LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:134 */
 
+/* BEGIN TYPEDEF em_async_wget2_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:23 */
+typedef void (*em_async_wget2_onload_func)(unsigned int  , void * , char const   * );
+/* END TYPEDEF em_async_wget2_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:23 */
+
 /* BEGIN STRUCT __anonstruct_pthread_condattr_t_32904002 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:382 */
 struct __anonstruct_pthread_condattr_t_32904002 {
    unsigned int __attr ;
 };
 /* END STRUCT __anonstruct_pthread_condattr_t_32904002 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:382 */
 
-/* BEGIN TYPEDEF em_async_wget2_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:23 */
-typedef void (*em_async_wget2_onload_func)(unsigned int  , void * , char const   * );
-/* END TYPEDEF em_async_wget2_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:23 */
+/* BEGIN FUNCTION-DECL-EXTERN srand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:134 */
+extern void srand48(long  ) ;
+/* END FUNCTION-DECL-EXTERN srand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:134 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:8 */
-extern char *strlwr(char * ) ;
-/* END FUNCTION-DECL-EXTERN strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:8 */
+/* BEGIN FUNCTION-DECL-EXTERN strsignal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:72 */
+extern char *strsignal(int  ) ;
+/* END FUNCTION-DECL-EXTERN strsignal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:72 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowGammaRamp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:664 */
 extern int __attribute__((__visibility__("default")))  SDL_GetWindowGammaRamp(SDL_Window *window ,
@@ -8773,34 +8717,30 @@ extern int __attribute__((__visibility__("default")))  SDL_GetWindowGammaRamp(SD
                                                                               Uint16 *blue ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetWindowGammaRamp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:664 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strsignal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:72 */
-extern char *strsignal(int  ) ;
-/* END FUNCTION-DECL-EXTERN strsignal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:72 */
-
-/* BEGIN FUNCTION-DECL-EXTERN srand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:134 */
-extern void srand48(long  ) ;
-/* END FUNCTION-DECL-EXTERN srand48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:134 */
-
-/* BEGIN FUNCTION-DECL-EXTERN acosf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:136 */
-extern float acosf(float  ) ;
-/* END FUNCTION-DECL-EXTERN acosf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:136 */
+/* BEGIN FUNCTION-DECL-EXTERN strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:8 */
+extern char *strlwr(char * ) ;
+/* END FUNCTION-DECL-EXTERN strlwr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:8 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_pause_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:50 */
 extern void emscripten_pause_main_loop(void) ;
 /* END FUNCTION-DECL-EXTERN emscripten_pause_main_loop LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:50 */
 
+/* BEGIN FUNCTION-DECL-EXTERN acosf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:136 */
+extern float acosf(float  ) ;
+/* END FUNCTION-DECL-EXTERN acosf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:136 */
+
 /* BEGIN FUNCTION-DECL shoot_bullet LOC=UNKNOWN */
 void shoot_bullet(struct player *p___0 ) ;
 /* END FUNCTION-DECL shoot_bullet LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL add_vector LOC=UNKNOWN */
-void add_vector(struct vector2d *a , struct vector2d *b ) ;
-/* END FUNCTION-DECL add_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL __builtin_powi LOC=BUILTIN */
 /* compiler builtin: 
    double __builtin_powi(double  , int  ) ;  */
 /* END FUNCTION-DECL __builtin_powi LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL add_vector LOC=UNKNOWN */
+void add_vector(struct vector2d *a , struct vector2d *b ) ;
+/* END FUNCTION-DECL add_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_CreateCursor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:143 */
 extern SDL_Cursor __attribute__((__visibility__("default")))  *SDL_CreateCursor(Uint8 const   *data ,
@@ -8833,6 +8773,14 @@ extern SDL_cond __attribute__((__visibility__("default")))  *SDL_CreateCond(void
 typedef double __attribute__((__aligned__(1)))  emscripten_align1_double;
 /* END TYPEDEF emscripten_align1_double LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_types.h:26 */
 
+/* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_filestat_set_times LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1939 */
+extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_filestat_set_times)(__wasi_fd_t fd ,
+                                                                                              __wasi_timestamp_t atim ,
+                                                                                              __wasi_timestamp_t mtim ,
+                                                                                              __wasi_fstflags_t fst_flags )  __attribute__((__import_name__("fd_filestat_set_times"),
+__import_module__("wasi_snapshot_preview1"))) ;
+/* END FUNCTION-DECL-EXTERN __wasi_fd_filestat_set_times LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1939 */
+
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_path_symlink LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2523 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_symlink)(char const   *old_path ,
                                                                                      size_t old_path_len ,
@@ -8842,25 +8790,17 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_path_syml
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_path_symlink LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2523 */
 
-/* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_filestat_set_times LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1939 */
-extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_filestat_set_times)(__wasi_fd_t fd ,
-                                                                                              __wasi_timestamp_t atim ,
-                                                                                              __wasi_timestamp_t mtim ,
-                                                                                              __wasi_fstflags_t fst_flags )  __attribute__((__import_name__("fd_filestat_set_times"),
-__import_module__("wasi_snapshot_preview1"))) ;
-/* END FUNCTION-DECL-EXTERN __wasi_fd_filestat_set_times LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1939 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_get_canvas_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:85 */
 extern void emscripten_get_canvas_size(int *width , int *height , int *isFullscreen )  __attribute__((__deprecated__("This variant does not allow specifying the target canvas","Use emscripten_get_canvas_element_size() and emscripten_get_fullscreen_status() instead"))) ;
 /* END FUNCTION-DECL-EXTERN emscripten_get_canvas_size LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:85 */
 
-/* BEGIN FUNCTION-DECL-EXTERN scalbnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:332 */
-extern float scalbnf(float  , int  ) ;
-/* END FUNCTION-DECL-EXTERN scalbnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:332 */
-
 /* BEGIN FUNCTION-DECL-EXTERN scalblnl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:329 */
 extern long double scalblnl(long double  , long  ) ;
 /* END FUNCTION-DECL-EXTERN scalblnl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:329 */
+
+/* BEGIN FUNCTION-DECL-EXTERN scalbnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:332 */
+extern float scalbnf(float  , int  ) ;
+/* END FUNCTION-DECL-EXTERN scalbnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:332 */
 
 /* BEGIN FUNCTION-DECL __builtin_va_arg_pack_len LOC=BUILTIN */
 /* compiler builtin: 
@@ -8884,13 +8824,13 @@ extern SDL_bool __attribute__((__visibility__("default")))  SDL_SetHint(char con
 extern char *emscripten_get_preloaded_image_data(char const   *path , int *w , int *h ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_get_preloaded_image_data LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:149 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fputc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:107 */
-extern int fputc(int  , FILE * ) ;
-/* END FUNCTION-DECL-EXTERN fputc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:107 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_CreateWindowAndRenderer LOC=../asteroids/main.c:205 */
 extern int SDL_CreateWindowAndRenderer() ;
 /* END FUNCTION-DECL-EXTERN SDL_CreateWindowAndRenderer LOC=../asteroids/main.c:205 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fputc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:107 */
+extern int fputc(int  , FILE * ) ;
+/* END FUNCTION-DECL-EXTERN fputc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:107 */
 
 /* BEGIN TYPEDEF SDL_AudioCallback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:165 */
 typedef void (*SDL_AudioCallback)(void *userdata , Uint8 *stream , int len );
@@ -8900,14 +8840,14 @@ typedef void (*SDL_AudioCallback)(void *userdata , Uint8 *stream , int len );
 extern int sigismember(sigset_t const   * , int  ) ;
 /* END FUNCTION-DECL-EXTERN sigismember LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:219 */
 
+/* BEGIN FUNCTION-DECL-EXTERN llrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:251 */
+extern long long llrint(double  ) ;
+/* END FUNCTION-DECL-EXTERN llrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:251 */
+
 /* BEGIN FUNCTION-DECL __builtin___printf_chk LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin___printf_chk(int  , char const   *  , ...) ;  */
 /* END FUNCTION-DECL __builtin___printf_chk LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN llrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:251 */
-extern long long llrint(double  ) ;
-/* END FUNCTION-DECL-EXTERN llrint LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:251 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_AddEventWatch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:602 */
 extern void __attribute__((__visibility__("default")))  SDL_AddEventWatch(int (*filter)(void *userdata ,
@@ -8919,14 +8859,14 @@ extern void __attribute__((__visibility__("default")))  SDL_AddEventWatch(int (*
 extern SDL_Cursor __attribute__((__visibility__("default")))  *SDL_GetCursor(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetCursor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:165 */
 
-/* BEGIN FUNCTION-DECL-EXTERN llroundf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:256 */
-extern long long llroundf(float  ) ;
-/* END FUNCTION-DECL-EXTERN llroundf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:256 */
-
 /* BEGIN FUNCTION-DECL __builtin_acosl LOC=BUILTIN */
 /* compiler builtin: 
    long double __builtin_acosl(long double  ) ;  */
 /* END FUNCTION-DECL __builtin_acosl LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN llroundf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:256 */
+extern long long llroundf(float  ) ;
+/* END FUNCTION-DECL-EXTERN llroundf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:256 */
 
 /* BEGIN FUNCTION-DECL-EXTERN qsort_r LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:151 */
 extern void qsort_r(void * , size_t  , size_t  , int (*)(void const   * , void const   * ,
@@ -8938,17 +8878,13 @@ extern void qsort_r(void * , size_t  , size_t  , int (*)(void const   * , void c
    int __builtin_types_compatible_p(unsigned long  , unsigned long  ) ;  */
 /* END FUNCTION-DECL __builtin_types_compatible_p LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN isdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:52 */
-extern int isdigit_l(int  , locale_t  ) ;
-/* END FUNCTION-DECL-EXTERN isdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:52 */
-
 /* BEGIN FUNCTION-DECL-EXTERN sinhf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:340 */
 extern float sinhf(float  ) ;
 /* END FUNCTION-DECL-EXTERN sinhf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:340 */
 
-/* BEGIN FUNCTION-DECL-EXTERN floorl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:213 */
-extern long double floorl(long double  ) ;
-/* END FUNCTION-DECL-EXTERN floorl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:213 */
+/* BEGIN FUNCTION-DECL-EXTERN isdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:52 */
+extern int isdigit_l(int  , locale_t  ) ;
+/* END FUNCTION-DECL-EXTERN isdigit_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:52 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ConvertPixels LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:361 */
 extern int __attribute__((__visibility__("default")))  SDL_ConvertPixels(int width ,
@@ -8961,22 +8897,26 @@ extern int __attribute__((__visibility__("default")))  SDL_ConvertPixels(int wid
                                                                          int dst_pitch ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ConvertPixels LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:361 */
 
-/* BEGIN FUNCTION-DECL __isgreaterequall___0 LOC=UNKNOWN */
-__inline static int __isgreaterequall___0(long double __x , long double __y ) ;
-/* END FUNCTION-DECL __isgreaterequall___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL __bswap32 LOC=UNKNOWN */
-__inline static uint32_t __bswap32(uint32_t __x ) ;
-/* END FUNCTION-DECL __bswap32 LOC=UNKNOWN */
+/* BEGIN FUNCTION-DECL-EXTERN floorl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:213 */
+extern long double floorl(long double  ) ;
+/* END FUNCTION-DECL-EXTERN floorl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:213 */
 
 /* BEGIN FUNCTION-DECL-EXTERN dprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:155 */
 extern int dprintf(int  , char const   * __restrict    , ...) ;
 /* END FUNCTION-DECL-EXTERN dprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:155 */
 
+/* BEGIN FUNCTION-DECL __isgreaterequall___0 LOC=UNKNOWN */
+__inline static int __isgreaterequall___0(long double __x , long double __y ) ;
+/* END FUNCTION-DECL __isgreaterequall___0 LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DECL __builtin_va_copy LOC=BUILTIN */
 /* compiler builtin: 
    void __builtin_va_copy(__builtin_va_list  , __builtin_va_list  ) ;  */
 /* END FUNCTION-DECL __builtin_va_copy LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL __bswap32 LOC=UNKNOWN */
+__inline static uint32_t __bswap32(uint32_t __x ) ;
+/* END FUNCTION-DECL __bswap32 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetWindowGrab LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:597 */
 extern void __attribute__((__visibility__("default")))  SDL_SetWindowGrab(SDL_Window *window ,
@@ -9000,10 +8940,6 @@ extern int rename(char const   * , char const   * ) ;
 extern int ferror_unlocked(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN ferror_unlocked LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:190 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickOpened LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:81 */
-extern int __attribute__((__visibility__("default")))  SDL_JoystickOpened(int device_index ) ;
-/* END FUNCTION-DECL-EXTERN SDL_JoystickOpened LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:81 */
-
 /* BEGIN FUNCTION-DECL __builtin_trap LOC=BUILTIN */
 /* compiler builtin: 
    void __builtin_trap(void) ;  */
@@ -9016,6 +8952,10 @@ extern int __attribute__((__visibility__("default")))  SDL_LockTexture(SDL_Textu
                                                                        int *pitch ) ;
 /* END FUNCTION-DECL-EXTERN SDL_LockTexture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:361 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickOpened LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:81 */
+extern int __attribute__((__visibility__("default")))  SDL_JoystickOpened(int device_index ) ;
+/* END FUNCTION-DECL-EXTERN SDL_JoystickOpened LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:81 */
+
 /* BEGIN FUNCTION-DECL __builtin___strcpy_chk LOC=BUILTIN */
 /* compiler builtin: 
    char *__builtin___strcpy_chk(char * , char const   * , unsigned long  ) ;  */
@@ -9025,16 +8965,16 @@ extern int __attribute__((__visibility__("default")))  SDL_LockTexture(SDL_Textu
 typedef uint8_t uint_fast8_t;
 /* END TYPEDEF uint_fast8_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:30 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_DeleteContext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:805 */
-extern void __attribute__((__visibility__("default")))  SDL_GL_DeleteContext(SDL_GLContext context ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GL_DeleteContext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:805 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetRGB LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:396 */
 extern void __attribute__((__visibility__("default")))  SDL_GetRGB(Uint32 pixel ,
                                                                    SDL_PixelFormat const   *format ,
                                                                    Uint8 *r , Uint8 *g ,
                                                                    Uint8 *b ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetRGB LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:396 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_DeleteContext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:805 */
+extern void __attribute__((__visibility__("default")))  SDL_GL_DeleteContext(SDL_GLContext context ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GL_DeleteContext LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:805 */
 
 /* BEGIN FUNCTION-DECL-EXTERN isgraph LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:15 */
 extern int isgraph(int  ) ;
@@ -9056,18 +8996,14 @@ struct __anonstruct_div_t_109580352 {
 };
 /* END STRUCT __anonstruct_div_t_109580352 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:64 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_Error LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:64 */
-extern void __attribute__((__visibility__("default")))  SDL_Error(SDL_errorcode code ) ;
-/* END FUNCTION-DECL-EXTERN SDL_Error LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:64 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RenderGetViewport LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:388 */
 extern void __attribute__((__visibility__("default")))  SDL_RenderGetViewport(SDL_Renderer *renderer ,
                                                                               SDL_Rect *rect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderGetViewport LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:388 */
 
-/* BEGIN FUNCTION-DECL __islessequal___3 LOC=UNKNOWN */
-__inline static int __islessequal___3(double_t __x , double_t __y ) ;
-/* END FUNCTION-DECL __islessequal___3 LOC=UNKNOWN */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_Error LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:64 */
+extern void __attribute__((__visibility__("default")))  SDL_Error(SDL_errorcode code ) ;
+/* END FUNCTION-DECL-EXTERN SDL_Error LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_error.h:64 */
 
 /* BEGIN FUNCTION-DECL __isgreater LOC=UNKNOWN */
 __inline static int __isgreater(double_t __x , double_t __y ) ;
@@ -9076,6 +9012,10 @@ __inline static int __isgreater(double_t __x , double_t __y ) ;
 /* BEGIN FUNCTION-DECL-EXTERN SDL_DestroyCond LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:197 */
 extern void __attribute__((__visibility__("default")))  SDL_DestroyCond(SDL_cond *cond ) ;
 /* END FUNCTION-DECL-EXTERN SDL_DestroyCond LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:197 */
+
+/* BEGIN FUNCTION-DECL __islessequal___3 LOC=UNKNOWN */
+__inline static int __islessequal___3(double_t __x , double_t __y ) ;
+/* END FUNCTION-DECL __islessequal___3 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN mkostemps LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:143 */
 extern int mkostemps(char * , int  , int  ) ;
@@ -9093,33 +9033,29 @@ __inline static int __islessgreater___2(double_t __x , double_t __y ) ;
 __inline static int __islessequalf___0(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __islessequalf___0 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN fprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:120 */
-extern int fprintf(FILE * __restrict   , char const   * __restrict    , ...) ;
-/* END FUNCTION-DECL-EXTERN fprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:120 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_UnlockTexture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:370 */
 extern void __attribute__((__visibility__("default")))  SDL_UnlockTexture(SDL_Texture *texture ) ;
 /* END FUNCTION-DECL-EXTERN SDL_UnlockTexture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:370 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:120 */
+extern int fprintf(FILE * __restrict   , char const   * __restrict    , ...) ;
+/* END FUNCTION-DECL-EXTERN fprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:120 */
 
 /* BEGIN FUNCTION-DECL __islessgreaterl___3 LOC=UNKNOWN */
 __inline static int __islessgreaterl___3(long double __x , long double __y ) ;
 /* END FUNCTION-DECL __islessgreaterl___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_strrev LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:460 */
-extern char __attribute__((__visibility__("default")))  *SDL_strrev(char *string ) ;
-/* END FUNCTION-DECL-EXTERN SDL_strrev LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:460 */
-
 /* BEGIN FUNCTION-DECL SDL_Swap32 LOC=UNKNOWN */
 __inline static Uint32 SDL_Swap32(Uint32 x ) ;
 /* END FUNCTION-DECL SDL_Swap32 LOC=UNKNOWN */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_strrev LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:460 */
+extern char __attribute__((__visibility__("default")))  *SDL_strrev(char *string ) ;
+/* END FUNCTION-DECL-EXTERN SDL_strrev LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:460 */
+
 /* BEGIN FUNCTION-DECL __islessequal LOC=UNKNOWN */
 __inline static int __islessequal(double_t __x , double_t __y ) ;
 /* END FUNCTION-DECL __islessequal LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL-EXTERN erf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:183 */
-extern double erf(double  ) ;
-/* END FUNCTION-DECL-EXTERN erf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:183 */
 
 /* BEGIN FUNCTION-DECL __builtin___snprintf_chk LOC=BUILTIN */
 /* compiler builtin: 
@@ -9127,19 +9063,23 @@ extern double erf(double  ) ;
                                 char const   *  , ...) ;  */
 /* END FUNCTION-DECL __builtin___snprintf_chk LOC=BUILTIN */
 
+/* BEGIN FUNCTION-DECL-EXTERN erf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:183 */
+extern double erf(double  ) ;
+/* END FUNCTION-DECL-EXTERN erf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:183 */
+
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_socket_connection_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:60 */
 extern void emscripten_set_socket_connection_callback(void *userData , void (*callback)(int fd ,
                                                                                         void *userData ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_set_socket_connection_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:60 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_SetTextInputRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:156 */
-extern void __attribute__((__visibility__("default")))  SDL_SetTextInputRect(SDL_Rect *rect ) ;
-/* END FUNCTION-DECL-EXTERN SDL_SetTextInputRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:156 */
-
 /* BEGIN FUNCTION-DECL __builtin_popcountl LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_popcountl(unsigned long  ) ;  */
 /* END FUNCTION-DECL __builtin_popcountl LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_SetTextInputRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:156 */
+extern void __attribute__((__visibility__("default")))  SDL_SetTextInputRect(SDL_Rect *rect ) ;
+/* END FUNCTION-DECL-EXTERN SDL_SetTextInputRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:156 */
 
 /* BEGIN UNION __anonunion___u_302425027___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
 union __anonunion___u_302425027___3 {
@@ -9174,14 +9114,14 @@ extern double strtod(char const   * __restrict   , char ** __restrict   ) ;
 extern long double log2l(long double  ) ;
 /* END FUNCTION-DECL-EXTERN log2l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:273 */
 
-/* BEGIN FUNCTION-DECL-EXTERN log10f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:264 */
-extern float log10f(float  ) ;
-/* END FUNCTION-DECL-EXTERN log10f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:264 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_socket_message_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:61 */
 extern void emscripten_set_socket_message_callback(void *userData , void (*callback)(int fd ,
                                                                                      void *userData ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_set_socket_message_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:61 */
+
+/* BEGIN FUNCTION-DECL-EXTERN log10f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:264 */
+extern float log10f(float  ) ;
+/* END FUNCTION-DECL-EXTERN log10f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:264 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_RegisterEvents LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:652 */
 extern Uint32 __attribute__((__visibility__("default")))  SDL_RegisterEvents(int numevents ) ;
@@ -9195,13 +9135,13 @@ extern float lgammaf_r(float  , int * ) ;
 __inline static int __isgreaterf(float_t __x , float_t __y ) ;
 /* END FUNCTION-DECL __isgreaterf LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_PushEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:560 */
-extern int __attribute__((__visibility__("default")))  SDL_PushEvent(SDL_Event *event ) ;
-/* END FUNCTION-DECL-EXTERN SDL_PushEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:560 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_FreeSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:126 */
 extern void __attribute__((__visibility__("default")))  SDL_FreeSurface(SDL_Surface *surface ) ;
 /* END FUNCTION-DECL-EXTERN SDL_FreeSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:126 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_PushEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:560 */
+extern int __attribute__((__visibility__("default")))  SDL_PushEvent(SDL_Event *event ) ;
+/* END FUNCTION-DECL-EXTERN SDL_PushEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:560 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_main_loop_arg LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:49 */
 extern void emscripten_set_main_loop_arg(void (*func)(void * ) , void *arg , int fps ,
@@ -9229,14 +9169,6 @@ struct SDL_VideoInfo {
 };
 /* END STRUCT SDL_VideoInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:134 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_SaveAllDollarTemplates LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_gesture.h:63 */
-extern int __attribute__((__visibility__("default")))  SDL_SaveAllDollarTemplates(SDL_RWops *src ) ;
-/* END FUNCTION-DECL-EXTERN SDL_SaveAllDollarTemplates LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_gesture.h:63 */
-
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_create_worker LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:128 */
-extern worker_handle emscripten_create_worker(char const   *url ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_create_worker LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:128 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_LogSetOutputFunction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:198 */
 extern void __attribute__((__visibility__("default")))  SDL_LogSetOutputFunction(void (*callback)(void *userdata ,
                                                                                                   int category ,
@@ -9245,30 +9177,34 @@ extern void __attribute__((__visibility__("default")))  SDL_LogSetOutputFunction
                                                                                  void *userdata ) ;
 /* END FUNCTION-DECL-EXTERN SDL_LogSetOutputFunction LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:198 */
 
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_create_worker LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:128 */
+extern worker_handle emscripten_create_worker(char const   *url ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_create_worker LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:128 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_SaveAllDollarTemplates LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_gesture.h:63 */
+extern int __attribute__((__visibility__("default")))  SDL_SaveAllDollarTemplates(SDL_RWops *src ) ;
+/* END FUNCTION-DECL-EXTERN SDL_SaveAllDollarTemplates LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_gesture.h:63 */
+
 /* BEGIN FUNCTION-DECL-EXTERN unsetenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:103 */
 extern int unsetenv(char const   * ) ;
 /* END FUNCTION-DECL-EXTERN unsetenv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:103 */
-
-/* BEGIN FUNCTION-DECL-EXTERN isblank_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:50 */
-extern int isblank_l(int  , locale_t  ) ;
-/* END FUNCTION-DECL-EXTERN isblank_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:50 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_LoadLibrary LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:723 */
-extern int __attribute__((__visibility__("default")))  SDL_GL_LoadLibrary(char const   *path ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GL_LoadLibrary LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:723 */
 
 /* BEGIN FUNCTION-DECL __builtin_inff LOC=BUILTIN */
 /* compiler builtin: 
    float __builtin_inff(void) ;  */
 /* END FUNCTION-DECL __builtin_inff LOC=BUILTIN */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_LoadLibrary LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:723 */
+extern int __attribute__((__visibility__("default")))  SDL_GL_LoadLibrary(char const   *path ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GL_LoadLibrary LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:723 */
+
+/* BEGIN FUNCTION-DECL-EXTERN isblank_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:50 */
+extern int isblank_l(int  , locale_t  ) ;
+/* END FUNCTION-DECL-EXTERN isblank_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:50 */
+
 /* BEGIN FUNCTION-DECL SDL_SwapFloat LOC=UNKNOWN */
 __inline static float SDL_SwapFloat(float x ) ;
 /* END FUNCTION-DECL SDL_SwapFloat LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL-EXTERN y0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:390 */
-extern double y0(double  ) ;
-/* END FUNCTION-DECL-EXTERN y0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:390 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickGetHat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:171 */
 extern Uint8 __attribute__((__visibility__("default")))  SDL_JoystickGetHat(SDL_Joystick *joystick ,
@@ -9282,9 +9218,9 @@ extern int __attribute__((__visibility__("default")))  SDL_LowerBlit(SDL_Surface
                                                                      SDL_Rect *dstrect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_LowerBlit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:455 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_Delay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:62 */
-extern void __attribute__((__visibility__("default")))  SDL_Delay(Uint32 ms ) ;
-/* END FUNCTION-DECL-EXTERN SDL_Delay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:62 */
+/* BEGIN FUNCTION-DECL-EXTERN y0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:390 */
+extern double y0(double  ) ;
+/* END FUNCTION-DECL-EXTERN y0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:390 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_idb_store LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:102 */
 extern void emscripten_idb_store(char const   *db_name , char const   *file_id , void *buffer ,
@@ -9297,6 +9233,10 @@ extern SDL_Overlay __attribute__((__visibility__("default")))  *SDL_CreateYUVOve
                                                                                      Uint32 format ,
                                                                                      SDL_Surface *display ) ;
 /* END FUNCTION-DECL-EXTERN SDL_CreateYUVOverlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:319 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_Delay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:62 */
+extern void __attribute__((__visibility__("default")))  SDL_Delay(Uint32 ms ) ;
+/* END FUNCTION-DECL-EXTERN SDL_Delay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:62 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_HasSSE41 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:132 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasSSE41(void) ;
@@ -9325,6 +9265,10 @@ extern void __attribute__((__visibility__("default")))  SDL_GL_SwapWindow(SDL_Wi
 extern long double log1pl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN log1pl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:269 */
 
+/* BEGIN FUNCTION-DECL-EXTERN sigrelse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:245 */
+extern int sigrelse(int  ) ;
+/* END FUNCTION-DECL-EXTERN sigrelse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:245 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_DisableScreenSaver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:697 */
 extern void __attribute__((__visibility__("default")))  SDL_DisableScreenSaver(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_DisableScreenSaver LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:697 */
@@ -9333,10 +9277,6 @@ extern void __attribute__((__visibility__("default")))  SDL_DisableScreenSaver(v
 extern size_t mbstowcs(wchar_t___0 * __restrict   , char const   * __restrict   ,
                        size_t  ) ;
 /* END FUNCTION-DECL-EXTERN mbstowcs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:75 */
-
-/* BEGIN FUNCTION-DECL-EXTERN sigrelse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:245 */
-extern int sigrelse(int  ) ;
-/* END FUNCTION-DECL-EXTERN sigrelse LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:245 */
 
 /* BEGIN ENUM __anonenum_SDL_TextureModulate_412417660 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:97 */
 enum __anonenum_SDL_TextureModulate_412417660 {
@@ -9391,13 +9331,13 @@ extern int __attribute__((__visibility__("default")))  SDL_RenderCopy(SDL_Render
                                                                       SDL_Rect const   *dstrect ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderCopy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:559 */
 
-/* BEGIN FUNCTION-DECL __islessgreaterf___3 LOC=UNKNOWN */
-__inline static int __islessgreaterf___3(float_t __x , float_t __y ) ;
-/* END FUNCTION-DECL __islessgreaterf___3 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN sigqueue LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:228 */
 extern int sigqueue(pid_t  , int  , union sigval  ) ;
 /* END FUNCTION-DECL-EXTERN sigqueue LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:228 */
+
+/* BEGIN FUNCTION-DECL __islessgreaterf___3 LOC=UNKNOWN */
+__inline static int __islessgreaterf___3(float_t __x , float_t __y ) ;
+/* END FUNCTION-DECL __islessgreaterf___3 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN l64a LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:125 */
 extern char *l64a(long  ) ;
@@ -9482,13 +9422,13 @@ extern int __attribute__((__visibility__("default")))  SDL_SetRenderDrawBlendMod
    void *__builtin_frob_return_address(void * ) ;  */
 /* END FUNCTION-DECL __builtin_frob_return_address LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN isalpha_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:49 */
-extern int isalpha_l(int  , locale_t  ) ;
-/* END FUNCTION-DECL-EXTERN isalpha_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:49 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetCursor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:160 */
 extern void __attribute__((__visibility__("default")))  SDL_SetCursor(SDL_Cursor *cursor ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetCursor LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:160 */
+
+/* BEGIN FUNCTION-DECL-EXTERN isalpha_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:49 */
+extern int isalpha_l(int  , locale_t  ) ;
+/* END FUNCTION-DECL-EXTERN isalpha_l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ctype.h:49 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetPowerInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_power.h:67 */
 extern SDL_PowerState __attribute__((__visibility__("default")))  SDL_GetPowerInfo(int *secs ,
@@ -9525,13 +9465,13 @@ unsigned int _1_main__opaque_array[30]  =
 typedef unsigned int pthread_key_t;
 /* END TYPEDEF pthread_key_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:367 */
 
-/* BEGIN FUNCTION-DECL-EXTERN grantpt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:122 */
-extern int grantpt(int  ) ;
-/* END FUNCTION-DECL-EXTERN grantpt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:122 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_NumJoysticks LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:59 */
 extern int __attribute__((__visibility__("default")))  SDL_NumJoysticks(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_NumJoysticks LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:59 */
+
+/* BEGIN FUNCTION-DECL-EXTERN grantpt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:122 */
+extern int grantpt(int  ) ;
+/* END FUNCTION-DECL-EXTERN grantpt LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:122 */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_poll_oneoff LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2577 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_poll_oneoff)(__wasi_subscription_t const   *in ,
@@ -9583,14 +9523,14 @@ extern int __attribute__((__visibility__("default")))  SDL_CondSignal(SDL_cond *
 extern int __attribute__((__visibility__("default")))  SDL_SetRelativeMouseMode(SDL_bool enabled ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetRelativeMouseMode LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:116 */
 
+/* BEGIN FUNCTION-DECL-EXTERN remainder LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:311 */
+extern double remainder(double  , double  ) ;
+/* END FUNCTION-DECL-EXTERN remainder LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:311 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_EnableKeyRepeat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:336 */
 extern int __attribute__((__visibility__("default")))  SDL_EnableKeyRepeat(int delay ,
                                                                            int interval ) ;
 /* END FUNCTION-DECL-EXTERN SDL_EnableKeyRepeat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:336 */
-
-/* BEGIN FUNCTION-DECL-EXTERN remainder LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:311 */
-extern double remainder(double  , double  ) ;
-/* END FUNCTION-DECL-EXTERN remainder LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:311 */
 
 /* BEGIN FUNCTION-DECL-EXTERN srand LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:38 */
 extern void srand(unsigned int  ) ;
@@ -9600,6 +9540,12 @@ extern void srand(unsigned int  ) ;
 extern double fmod(double  , double  ) ;
 /* END FUNCTION-DECL-EXTERN fmod LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:227 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_DelEventWatch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:608 */
+extern void __attribute__((__visibility__("default")))  SDL_DelEventWatch(int (*filter)(void *userdata ,
+                                                                                        SDL_Event *event ) ,
+                                                                          void *userdata ) ;
+/* END FUNCTION-DECL-EXTERN SDL_DelEventWatch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:608 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_AddTimer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:84 */
 extern SDL_TimerID __attribute__((__visibility__("default")))  SDL_AddTimer(Uint32 interval ,
                                                                             Uint32 (*callback)(Uint32 interval ,
@@ -9607,19 +9553,13 @@ extern SDL_TimerID __attribute__((__visibility__("default")))  SDL_AddTimer(Uint
                                                                             void *param ) ;
 /* END FUNCTION-DECL-EXTERN SDL_AddTimer LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_timer.h:84 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_DelEventWatch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:608 */
-extern void __attribute__((__visibility__("default")))  SDL_DelEventWatch(int (*filter)(void *userdata ,
-                                                                                        SDL_Event *event ) ,
-                                                                          void *userdata ) ;
-/* END FUNCTION-DECL-EXTERN SDL_DelEventWatch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:608 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_UnlockAudioDevice LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:484 */
+extern void __attribute__((__visibility__("default")))  SDL_UnlockAudioDevice(SDL_AudioDeviceID dev ) ;
+/* END FUNCTION-DECL-EXTERN SDL_UnlockAudioDevice LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:484 */
 
 /* BEGIN FUNCTION-DECL-EXTERN fclose LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:82 */
 extern int fclose(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN fclose LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:82 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_UnlockAudioDevice LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:484 */
-extern void __attribute__((__visibility__("default")))  SDL_UnlockAudioDevice(SDL_AudioDeviceID dev ) ;
-/* END FUNCTION-DECL-EXTERN SDL_UnlockAudioDevice LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:484 */
 
 /* BEGIN FUNCTION-DECL-EXTERN strchr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:45 */
 extern char *strchr(char const   * , int  ) ;
@@ -9633,6 +9573,10 @@ __inline static unsigned int __FLOAT_BITS___1(float __f ) ;
 extern int sigfillset(sigset_t * ) ;
 /* END FUNCTION-DECL-EXTERN sigfillset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:216 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_SwapBuffers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:329 */
+extern void __attribute__((__visibility__("default")))  SDL_GL_SwapBuffers(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GL_SwapBuffers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:329 */
+
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_read LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2064 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_read)(__wasi_fd_t fd ,
                                                                                 __wasi_iovec_t const   *iovs ,
@@ -9640,10 +9584,6 @@ extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_read)(
                                                                                 __wasi_size_t *nread )  __attribute__((__import_name__("fd_read"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_read LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2064 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GL_SwapBuffers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:329 */
-extern void __attribute__((__visibility__("default")))  SDL_GL_SwapBuffers(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GL_SwapBuffers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:329 */
 
 /* BEGIN STRUCT __anonstruct_pthread_rwlock_t_656646310 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:128 */
 struct __anonstruct_pthread_rwlock_t_656646310 {
@@ -9659,6 +9599,13 @@ extern double hypot(double  , double  ) ;
 extern long double tanhl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN tanhl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:353 */
 
+/* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_fdstat_set_rights LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1887 */
+extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_fdstat_set_rights)(__wasi_fd_t fd ,
+                                                                                             __wasi_rights_t fs_rights_base ,
+                                                                                             __wasi_rights_t fs_rights_inheriting )  __attribute__((__import_name__("fd_fdstat_set_rights"),
+__import_module__("wasi_snapshot_preview1"))) ;
+/* END FUNCTION-DECL-EXTERN __wasi_fd_fdstat_set_rights LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1887 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ThreadID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:149 */
 extern SDL_threadID __attribute__((__visibility__("default")))  SDL_ThreadID(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_ThreadID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_thread.h:149 */
@@ -9666,13 +9613,6 @@ extern SDL_threadID __attribute__((__visibility__("default")))  SDL_ThreadID(voi
 /* BEGIN FUNCTION-DECL-EXTERN open_memstream LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:148 */
 extern FILE *open_memstream(char ** , size_t * ) ;
 /* END FUNCTION-DECL-EXTERN open_memstream LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:148 */
-
-/* BEGIN FUNCTION-DECL-EXTERN __wasi_fd_fdstat_set_rights LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1887 */
-extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_fdstat_set_rights)(__wasi_fd_t fd ,
-                                                                                             __wasi_rights_t fs_rights_base ,
-                                                                                             __wasi_rights_t fs_rights_inheriting )  __attribute__((__import_name__("fd_fdstat_set_rights"),
-__import_module__("wasi_snapshot_preview1"))) ;
-/* END FUNCTION-DECL-EXTERN __wasi_fd_fdstat_set_rights LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1887 */
 
 /* BEGIN FUNCTION-DECL-EXTERN modf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:287 */
 extern double modf(double  , double * ) ;
@@ -9687,6 +9627,11 @@ extern void qsort(void * , size_t  , size_t  , int (*)(void const   * , void con
    void *__builtin___mempcpy_chk(void * , void const   * , unsigned long  , unsigned long  ) ;  */
 /* END FUNCTION-DECL __builtin___mempcpy_chk LOC=BUILTIN */
 
+/* BEGIN FUNCTION-DECL __builtin___memcpy_chk LOC=BUILTIN */
+/* compiler builtin: 
+   void *__builtin___memcpy_chk(void * , void const   * , unsigned long  , unsigned long  ) ;  */
+/* END FUNCTION-DECL __builtin___memcpy_chk LOC=BUILTIN */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_UnlockSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:159 */
 extern void __attribute__((__visibility__("default")))  SDL_UnlockSurface(SDL_Surface *surface ) ;
 /* END FUNCTION-DECL-EXTERN SDL_UnlockSurface LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_surface.h:159 */
@@ -9694,11 +9639,6 @@ extern void __attribute__((__visibility__("default")))  SDL_UnlockSurface(SDL_Su
 /* BEGIN FUNCTION-DECL draw_asteroids LOC=UNKNOWN */
 void draw_asteroids(uint32_t *pixel_buffer , struct asteroid *asteroids___0 , int size ) ;
 /* END FUNCTION-DECL draw_asteroids LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DECL __builtin___memcpy_chk LOC=BUILTIN */
-/* compiler builtin: 
-   void *__builtin___memcpy_chk(void * , void const   * , unsigned long  , unsigned long  ) ;  */
-/* END FUNCTION-DECL __builtin___memcpy_chk LOC=BUILTIN */
 
 /* BEGIN STRUCT __anonstruct_SDL_Point_1070053765 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rect.h:49 */
 struct __anonstruct_SDL_Point_1070053765 {
@@ -9739,14 +9679,14 @@ extern int __attribute__((__visibility__("default")))  SDL_UpdateWindowSurfaceRe
 extern  __attribute__((__noreturn__)) void emscripten_exit_with_live_runtime(void) ;
 /* END FUNCTION-DECL-EXTERN emscripten_exit_with_live_runtime LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:75 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strerror LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:56 */
-extern char *strerror(int  ) ;
-/* END FUNCTION-DECL-EXTERN strerror LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:56 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetEventFilter LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:596 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_GetEventFilter(SDL_EventFilter *filter ,
                                                                                void **userdata ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetEventFilter LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:596 */
+
+/* BEGIN FUNCTION-DECL-EXTERN strerror LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:56 */
+extern char *strerror(int  ) ;
+/* END FUNCTION-DECL-EXTERN strerror LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:56 */
 
 /* BEGIN TYPEDEF em_socket_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:54 */
 typedef void (*em_socket_callback)(int fd , void *userData );
@@ -9764,12 +9704,6 @@ typedef __builtin_va_list va_list;
 typedef int16_t int_least16_t;
 /* END TYPEDEF int_least16_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:26 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_lltoa LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:540 */
-extern char __attribute__((__visibility__("default")))  *SDL_lltoa(Sint64 value ,
-                                                                   char *string ,
-                                                                   int radix ) ;
-/* END FUNCTION-DECL-EXTERN SDL_lltoa LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:540 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ConvertAudio LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:449 */
 extern int __attribute__((__visibility__("default")))  SDL_ConvertAudio(SDL_AudioCVT *cvt ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ConvertAudio LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:449 */
@@ -9777,6 +9711,12 @@ extern int __attribute__((__visibility__("default")))  SDL_ConvertAudio(SDL_Audi
 /* BEGIN FUNCTION-DECL-EXTERN nearbyintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:296 */
 extern float nearbyintf(float  ) ;
 /* END FUNCTION-DECL-EXTERN nearbyintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:296 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_lltoa LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:540 */
+extern char __attribute__((__visibility__("default")))  *SDL_lltoa(Sint64 value ,
+                                                                   char *string ,
+                                                                   int radix ) ;
+/* END FUNCTION-DECL-EXTERN SDL_lltoa LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:540 */
 
 /* BEGIN STRUCT __anonstruct_ldiv_t_721778306 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:65 */
 struct __anonstruct_ldiv_t_721778306 {
@@ -9795,6 +9735,10 @@ extern void __attribute__((__visibility__("default")))  SDL_LogDebug(int categor
                                                                      , ...) ;
 /* END FUNCTION-DECL-EXTERN SDL_LogDebug LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:148 */
 
+/* BEGIN FUNCTION-DECL-EXTERN scalblnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:328 */
+extern float scalblnf(float  , long  ) ;
+/* END FUNCTION-DECL-EXTERN scalblnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:328 */
+
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_throw_number LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:183 */
 extern void emscripten_throw_number(double number ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_throw_number LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:183 */
@@ -9807,10 +9751,6 @@ extern SDL_Window __attribute__((__visibility__("default")))  *SDL_CreateWindow(
                                                                                 int h ,
                                                                                 Uint32 flags ) ;
 /* END FUNCTION-DECL-EXTERN SDL_CreateWindow LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:375 */
-
-/* BEGIN FUNCTION-DECL-EXTERN scalblnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:328 */
-extern float scalblnf(float  , long  ) ;
-/* END FUNCTION-DECL-EXTERN scalblnf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:328 */
 
 /* BEGIN FUNCTION-DECL-EXTERN erff LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:184 */
 extern float erff(float  ) ;
@@ -9843,13 +9783,13 @@ extern int __attribute__((__visibility__("default")))  SDL_SetTimer(Uint32 inter
 extern long double atan2l(long double  , long double  ) ;
 /* END FUNCTION-DECL-EXTERN atan2l LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:157 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_LockYUVOverlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:324 */
-extern int __attribute__((__visibility__("default")))  SDL_LockYUVOverlay(SDL_Overlay *overlay ) ;
-/* END FUNCTION-DECL-EXTERN SDL_LockYUVOverlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:324 */
-
 /* BEGIN FUNCTION-DECL-EXTERN ftell LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:93 */
 extern long ftell(FILE * ) ;
 /* END FUNCTION-DECL-EXTERN ftell LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:93 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_LockYUVOverlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:324 */
+extern int __attribute__((__visibility__("default")))  SDL_LockYUVOverlay(SDL_Overlay *overlay ) ;
+/* END FUNCTION-DECL-EXTERN SDL_LockYUVOverlay LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:324 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ReadLE32 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:189 */
 extern Uint32 __attribute__((__visibility__("default")))  SDL_ReadLE32(SDL_RWops *src ) ;
@@ -9874,27 +9814,27 @@ struct __anonstruct_pthread_barrier_t_867429677 {
 extern void emscripten_scan_stack(void (*func)(void * , void * ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_scan_stack LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:171 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_WM_ToggleFullScreen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:307 */
-extern int __attribute__((__visibility__("default")))  SDL_WM_ToggleFullScreen(SDL_Surface *surface ) ;
-/* END FUNCTION-DECL-EXTERN SDL_WM_ToggleFullScreen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:307 */
-
 /* BEGIN FUNCTION-DECL __islessequall LOC=UNKNOWN */
 __inline static int __islessequall(long double __x , long double __y ) ;
 /* END FUNCTION-DECL __islessequall LOC=UNKNOWN */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_WM_ToggleFullScreen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:307 */
+extern int __attribute__((__visibility__("default")))  SDL_WM_ToggleFullScreen(SDL_Surface *surface ) ;
+/* END FUNCTION-DECL-EXTERN SDL_WM_ToggleFullScreen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:307 */
+
 /* BEGIN FUNCTION-DECL-EXTERN freopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:81 */
 extern FILE *freopen(char const   * __restrict   , char const   * __restrict   , FILE * __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN freopen LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:81 */
+
+/* BEGIN FUNCTION-DECL-EXTERN ffsl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:25 */
+extern int ffsl(long  ) ;
+/* END FUNCTION-DECL-EXTERN ffsl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:25 */
 
 /* BEGIN FUNCTION-DECL-EXTERN __wasi_environ_sizes_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1714 */
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_environ_sizes_get)(__wasi_size_t *argc ,
                                                                                           __wasi_size_t *argv_buf_size )  __attribute__((__import_name__("environ_sizes_get"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_environ_sizes_get LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1714 */
-
-/* BEGIN FUNCTION-DECL-EXTERN ffsl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:25 */
-extern int ffsl(long  ) ;
-/* END FUNCTION-DECL-EXTERN ffsl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:25 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SetGammaRamp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:331 */
 extern int __attribute__((__visibility__("default")))  SDL_SetGammaRamp(Uint16 const   *red ,
@@ -9910,52 +9850,52 @@ __inline static unsigned long long __DOUBLE_BITS___0(double __f ) ;
 extern long double coshl(long double  ) ;
 /* END FUNCTION-DECL-EXTERN coshl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:181 */
 
-/* BEGIN FUNCTION-DECL __isless___3 LOC=UNKNOWN */
-__inline static int __isless___3(double_t __x , double_t __y ) ;
-/* END FUNCTION-DECL __isless___3 LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DECL-EXTERN lgammal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:249 */
 extern long double lgammal(long double  ) ;
 /* END FUNCTION-DECL-EXTERN lgammal LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:249 */
+
+/* BEGIN FUNCTION-DECL __isless___3 LOC=UNKNOWN */
+__inline static int __isless___3(double_t __x , double_t __y ) ;
+/* END FUNCTION-DECL __isless___3 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_idb_exists LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:104 */
 extern void emscripten_idb_exists(char const   *db_name , char const   *file_id ,
                                   int *pexists , int *perror ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_idb_exists LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:104 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_AllocFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:328 */
+extern SDL_PixelFormat __attribute__((__visibility__("default")))  *SDL_AllocFormat(Uint32 pixel_format ) ;
+/* END FUNCTION-DECL-EXTERN SDL_AllocFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:328 */
+
 /* BEGIN FUNCTION-DECL __builtin_ceil LOC=BUILTIN */
 /* compiler builtin: 
    double __builtin_ceil(double  ) ;  */
 /* END FUNCTION-DECL __builtin_ceil LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_AllocFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:328 */
-extern SDL_PixelFormat __attribute__((__visibility__("default")))  *SDL_AllocFormat(Uint32 pixel_format ) ;
-/* END FUNCTION-DECL-EXTERN SDL_AllocFormat LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:328 */
-
 /* BEGIN FUNCTION-DECL-EXTERN ldexpl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:245 */
 extern long double ldexpl(long double  , int  ) ;
 /* END FUNCTION-DECL-EXTERN ldexpl LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:245 */
+
+/* BEGIN FUNCTION-DECL-EXTERN seed48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:135 */
+extern unsigned short *seed48(unsigned short * ) ;
+/* END FUNCTION-DECL-EXTERN seed48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:135 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ltoa LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:507 */
 extern char __attribute__((__visibility__("default")))  *SDL_ltoa(long value , char *string ,
                                                                   int radix ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ltoa LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:507 */
 
-/* BEGIN FUNCTION-DECL-EXTERN seed48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:135 */
-extern unsigned short *seed48(unsigned short * ) ;
-/* END FUNCTION-DECL-EXTERN seed48 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:135 */
-
 /* BEGIN FUNCTION-DECL-EXTERN vdprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:156 */
 extern int vdprintf(int  , char const   * __restrict   , __isoc_va_list  ) ;
 /* END FUNCTION-DECL-EXTERN vdprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:156 */
 
-/* BEGIN FUNCTION-DECL-EXTERN fgets LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:111 */
-extern char *fgets(char * __restrict   , int  , FILE * __restrict   ) ;
-/* END FUNCTION-DECL-EXTERN fgets LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:111 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_WaitEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:540 */
 extern int __attribute__((__visibility__("default")))  SDL_WaitEvent(SDL_Event *event ) ;
 /* END FUNCTION-DECL-EXTERN SDL_WaitEvent LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_events.h:540 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fgets LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:111 */
+extern char *fgets(char * __restrict   , int  , FILE * __restrict   ) ;
+/* END FUNCTION-DECL-EXTERN fgets LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:111 */
 
 /* BEGIN TYPEDEF pthread_mutex_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:108 */
 typedef struct __anonstruct_pthread_mutex_t_976653634 pthread_mutex_t;
@@ -9995,27 +9935,27 @@ extern int __attribute__((__visibility__("default")))  SDL_RenderReadPixels(SDL_
                                                                             int pitch ) ;
 /* END FUNCTION-DECL-EXTERN SDL_RenderReadPixels LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:578 */
 
-/* BEGIN FUNCTION-DECL-EXTERN strdup LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:70 */
-extern char *strdup(char const   * ) ;
-/* END FUNCTION-DECL-EXTERN strdup LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:70 */
-
-/* BEGIN FUNCTION-DECL-EXTERN SDL_main LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_main.h:67 */
-extern int SDL_main(int argc , char **argv ) ;
-/* END FUNCTION-DECL-EXTERN SDL_main LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_main.h:67 */
-
 /* BEGIN FUNCTION-DECL __builtin_atanl LOC=BUILTIN */
 /* compiler builtin: 
    long double __builtin_atanl(long double  ) ;  */
 /* END FUNCTION-DECL __builtin_atanl LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL __builtin_ldexpl LOC=BUILTIN */
-/* compiler builtin: 
-   long double __builtin_ldexpl(long double  , int  ) ;  */
-/* END FUNCTION-DECL __builtin_ldexpl LOC=BUILTIN */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_main LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_main.h:67 */
+extern int SDL_main(int argc , char **argv ) ;
+/* END FUNCTION-DECL-EXTERN SDL_main LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_main.h:67 */
+
+/* BEGIN FUNCTION-DECL-EXTERN strdup LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:70 */
+extern char *strdup(char const   * ) ;
+/* END FUNCTION-DECL-EXTERN strdup LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:70 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetAppState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:317 */
 extern Uint8 __attribute__((__visibility__("default")))  SDL_GetAppState(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetAppState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:317 */
+
+/* BEGIN FUNCTION-DECL __builtin_ldexpl LOC=BUILTIN */
+/* compiler builtin: 
+   long double __builtin_ldexpl(long double  , int  ) ;  */
+/* END FUNCTION-DECL __builtin_ldexpl LOC=BUILTIN */
 
 /* BEGIN UNION __anonunion___u_302425027___2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:63 */
 union __anonunion___u_302425027___2 {
@@ -10032,18 +9972,18 @@ __inline static int __islessgreaterl(long double __x , long double __y ) ;
 extern double round(double  ) ;
 /* END FUNCTION-DECL-EXTERN round LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:323 */
 
-/* BEGIN FUNCTION-DECL-EXTERN y1f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:418 */
-extern float y1f(float  ) ;
-/* END FUNCTION-DECL-EXTERN y1f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:418 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_SetModState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:89 */
+extern void __attribute__((__visibility__("default")))  SDL_SetModState(SDL_Keymod modstate ) ;
+/* END FUNCTION-DECL-EXTERN SDL_SetModState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:89 */
 
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_set_socket_listen_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:59 */
 extern void emscripten_set_socket_listen_callback(void *userData , void (*callback)(int fd ,
                                                                                     void *userData ) ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_set_socket_listen_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:59 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_SetModState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:89 */
-extern void __attribute__((__visibility__("default")))  SDL_SetModState(SDL_Keymod modstate ) ;
-/* END FUNCTION-DECL-EXTERN SDL_SetModState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_keyboard.h:89 */
+/* BEGIN FUNCTION-DECL-EXTERN y1f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:418 */
+extern float y1f(float  ) ;
+/* END FUNCTION-DECL-EXTERN y1f LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:418 */
 
 /* BEGIN TYPEDEF SDL_AssertionHandler LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:171 */
 typedef SDL_assert_state (*SDL_AssertionHandler)(SDL_assert_data const   *data , void *userdata );
@@ -10070,24 +10010,28 @@ extern Uint32 __attribute__((__visibility__("default")))  SDL_GetWindowFlags(SDL
 extern long double strtold(char const   * __restrict   , char ** __restrict   ) ;
 /* END FUNCTION-DECL-EXTERN strtold LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:30 */
 
-/* BEGIN FUNCTION-DECL-EXTERN div LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:68 */
-extern div_t div(int  , int  ) ;
-/* END FUNCTION-DECL-EXTERN div LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:68 */
-
 /* BEGIN FUNCTION-DECL-EXTERN ldexp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:243 */
 extern double ldexp(double  , int  ) ;
 /* END FUNCTION-DECL-EXTERN ldexp LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:243 */
 
-/* BEGIN FUNCTION-DECL-EXTERN bsearch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:57 */
-extern void *bsearch(void const   * , void const   * , size_t  , size_t  , int (*)(void const   * ,
-                                                                                   void const   * ) ) ;
-/* END FUNCTION-DECL-EXTERN bsearch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:57 */
+/* BEGIN FUNCTION-DECL-EXTERN div LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:68 */
+extern div_t div(int  , int  ) ;
+/* END FUNCTION-DECL-EXTERN div LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:68 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_MapRGBA LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:387 */
 extern Uint32 __attribute__((__visibility__("default")))  SDL_MapRGBA(SDL_PixelFormat const   *format ,
                                                                       Uint8 r , Uint8 g ,
                                                                       Uint8 b , Uint8 a ) ;
 /* END FUNCTION-DECL-EXTERN SDL_MapRGBA LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:387 */
+
+/* BEGIN FUNCTION-DECL-EXTERN bsearch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:57 */
+extern void *bsearch(void const   * , void const   * , size_t  , size_t  , int (*)(void const   * ,
+                                                                                   void const   * ) ) ;
+/* END FUNCTION-DECL-EXTERN bsearch LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:57 */
+
+/* BEGIN FUNCTION-DECL-EXTERN sigset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:246 */
+extern void (*sigset(int  , void (*)(int  ) ))(int  ) ;
+/* END FUNCTION-DECL-EXTERN sigset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:246 */
 
 /* BEGIN TYPEDEF va_list___0 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:13 */
 typedef __builtin_va_list va_list___0;
@@ -10099,184 +10043,6 @@ extern void __attribute__((__visibility__("default")))  SDL_LogMessageV(int cate
                                                                         char const   *fmt ,
                                                                         va_list___0 ap ) ;
 /* END FUNCTION-DECL-EXTERN SDL_LogMessageV LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_log.h:180 */
-
-/* BEGIN FUNCTION-DECL-EXTERN sigset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:246 */
-extern void (*sigset(int  , void (*)(int  ) ))(int  ) ;
-/* END FUNCTION-DECL-EXTERN sigset LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/signal.h:246 */
-
-/* BEGIN VARIABLE-DEF _3_main_$array LOC=UNKNOWN */
-unsigned char _3_main_$array[1][683]  = { {        _3_main__call$func_LIT_0,        (unsigned char)1,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)16,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)12,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__store_int$left_STA_0$right_STA_1,        _3_main__goto$label_LAB_0,        (unsigned char)4,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)12, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)1,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__Eq_int_int2int$right_STA_0$result_STA_0$left_STA_1,        _3_main__branchIfTrue$expr_STA_0$label_LAB_0,        (unsigned char)9, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__goto$label_LAB_0, 
-            (unsigned char)25,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)20,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1,        _3_main__goto$label_LAB_0, 
-            (unsigned char)4,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__goto$label_LAB_0,        (unsigned char)103,        (unsigned char)2,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)24, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)28,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1,        _3_main__constant_int$result_STA_0$value_LIT_0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)32,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1,        _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__constant_int$result_STA_0$value_LIT_0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)36,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__constant_int$result_STA_0$value_LIT_0, 
-            (unsigned char)192,        (unsigned char)254,        (unsigned char)255,        (unsigned char)255, 
-            _3_main__convert_int2float$left_STA_0$result_STA_0,        _3_main__store_float$right_STA_0$left_STA_1,        _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__constant_int$result_STA_0$value_LIT_0, 
-            (unsigned char)4,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)36,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__constant_int$result_STA_0$value_LIT_0, 
-            (unsigned char)16,        (unsigned char)255,        (unsigned char)255,        (unsigned char)255, 
-            _3_main__convert_int2float$left_STA_0$result_STA_0,        _3_main__store_float$right_STA_0$left_STA_1,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)24,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__store_int$left_STA_0$right_STA_1,        _3_main__goto$label_LAB_0,        (unsigned char)4,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)24, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)3,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__Lt_int_int2int$right_STA_0$result_STA_0$left_STA_1,        _3_main__branchIfTrue$expr_STA_0$label_LAB_0,        (unsigned char)14, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__goto$label_LAB_0, 
-            (unsigned char)4,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__goto$label_LAB_0,        (unsigned char)153,        (unsigned char)1,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__constant_unsigned_int$result_STA_0$value_LIT_0,        (unsigned char)132, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)24,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__load_int$left_STA_0$result_STA_0,        _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0,        _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1,        _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1, 
-            _3_main__global$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)44, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__store_void_star$left_STA_0$right_STA_1, 
-            _3_main__call$func_LIT_0,        (unsigned char)2,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)1,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__constant_int$result_STA_0$value_LIT_0, 
-            (unsigned char)4,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__constant_unsigned_int$result_STA_0$value_LIT_0,        (unsigned char)132,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)24, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0, 
-            _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0,        _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1,        _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__global$result_STA_0$value_LIT_0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__store_int$left_STA_0$right_STA_1,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)28,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__store_int$left_STA_0$right_STA_1,        _3_main__goto$label_LAB_0,        (unsigned char)4,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)28, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)3,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__Lt_int_int2int$right_STA_0$result_STA_0$left_STA_1,        _3_main__branchIfTrue$expr_STA_0$label_LAB_0,        (unsigned char)14, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__goto$label_LAB_0, 
-            (unsigned char)4,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__goto$label_LAB_0,        (unsigned char)88,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__constant_unsigned_int$result_STA_0$value_LIT_0,        (unsigned char)8, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)28,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__load_int$left_STA_0$result_STA_0,        _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0,        _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1,        _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)24,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__constant_unsigned_int$result_STA_0$value_LIT_0,        (unsigned char)132, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)24,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__load_int$left_STA_0$result_STA_0,        _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0,        _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1,        _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1, 
-            _3_main__global$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)48, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__store_void_star$left_STA_0$right_STA_1, 
-            _3_main__call$func_LIT_0,        (unsigned char)3,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)28,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0,        _3_main__constant_int$result_STA_0$value_LIT_0, 
-            (unsigned char)1,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusA_int_int2int$right_STA_0$result_STA_0$left_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)28,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1,        _3_main__goto$label_LAB_0, 
-            (unsigned char)154,        (unsigned char)255,        (unsigned char)255,        (unsigned char)255, 
-            _3_main__goto$label_LAB_0,        (unsigned char)149,        (unsigned char)255,        (unsigned char)255, 
-            (unsigned char)255,        _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1, 
-            _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)52,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)20, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)32,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__load_int$left_STA_0$result_STA_0,        _3_main__PlusA_int_int2int$right_STA_0$result_STA_0$left_STA_1,        _3_main__convert_int2float$left_STA_0$result_STA_0,        _3_main__store_float$right_STA_0$left_STA_1, 
-            _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)4,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)52,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)20,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__convert_int2float$left_STA_0$result_STA_0,        _3_main__store_float$right_STA_0$left_STA_1, 
-            _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)52,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)60,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_void_star$left_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)36,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)64,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__store_void_star$left_STA_0$right_STA_1,        _3_main__call$func_LIT_0,        (unsigned char)4, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__constant_void_star$result_STA_0$value_LIT_0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)8,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__constant_unsigned_int$result_STA_0$value_LIT_0,        (unsigned char)132, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)24,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__load_int$left_STA_0$result_STA_0,        _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0,        _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1,        _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1, 
-            _3_main__global$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)52, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__memcpy$right_STA_0$size_LIT_0$left_STA_1, 
-            (unsigned char)8,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__constant_unsigned_int$result_STA_0$value_LIT_0,        (unsigned char)132,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)24, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0, 
-            _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0,        _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1,        _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__global$result_STA_0$value_LIT_0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)68,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_void_star$left_STA_0$right_STA_1,        _3_main__call$func_LIT_0, 
-            (unsigned char)5,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)32,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0,        _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)20, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__PlusA_int_int2int$right_STA_0$result_STA_0$left_STA_1, 
-            _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)32,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)24, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)1,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__PlusA_int_int2int$right_STA_0$result_STA_0$left_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)24, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1, 
-            _3_main__goto$label_LAB_0,        (unsigned char)89,        (unsigned char)254,        (unsigned char)255, 
-            (unsigned char)255,        _3_main__goto$label_LAB_0,        (unsigned char)84,        (unsigned char)254, 
-            (unsigned char)255,        (unsigned char)255,        _3_main__global$result_STA_0$value_LIT_0,        (unsigned char)1, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0, 
-            (unsigned char)72,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__store_void_star$left_STA_0$right_STA_1,        _3_main__call$func_LIT_0,        (unsigned char)6,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__constant_void_star$result_STA_0$value_LIT_0,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        (unsigned char)0,        _3_main__constant_unsigned_int$result_STA_0$value_LIT_0, 
-            (unsigned char)192,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__constant_unsigned_int$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1,        _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__global$result_STA_0$value_LIT_0, 
-            (unsigned char)2,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)76,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_void_star$left_STA_0$right_STA_1,        _3_main__call$func_LIT_0, 
-            (unsigned char)7,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__global$result_STA_0$value_LIT_0,        (unsigned char)3,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)80,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_void_star$left_STA_0$right_STA_1,        _3_main__call$func_LIT_0, 
-            (unsigned char)8,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__constant_int$result_STA_0$value_LIT_0,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)20,        (unsigned char)0, 
-            (unsigned char)0,        (unsigned char)0,        _3_main__store_int$left_STA_0$right_STA_1,        _3_main__goto$label_LAB_0, 
-            (unsigned char)4,        (unsigned char)0,        (unsigned char)0,        (unsigned char)0, 
-            _3_main__local$result_STA_0$value_LIT_0,        (unsigned char)20,        (unsigned char)0,        (unsigned char)0, 
-            (unsigned char)0,        _3_main__load_int$left_STA_0$result_STA_0,        _3_main__return_int$expr_STA_0}};
-/* END VARIABLE-DEF _3_main_$array LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL __builtin_apply_args LOC=BUILTIN */
 /* compiler builtin: 
@@ -10338,14 +10104,14 @@ extern char __attribute__((__visibility__("default")))  *SDL_ultoa(unsigned long
                                                                    int radix ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ultoa LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:519 */
 
+/* BEGIN FUNCTION-DECL-EXTERN atanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:152 */
+extern float atanf(float  ) ;
+/* END FUNCTION-DECL-EXTERN atanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:152 */
+
 /* BEGIN FUNCTION-DECL __builtin_log10l LOC=BUILTIN */
 /* compiler builtin: 
    long double __builtin_log10l(long double  ) ;  */
 /* END FUNCTION-DECL __builtin_log10l LOC=BUILTIN */
-
-/* BEGIN FUNCTION-DECL-EXTERN atanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:152 */
-extern float atanf(float  ) ;
-/* END FUNCTION-DECL-EXTERN atanf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:152 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetAssertionReport LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_assert.h:220 */
 extern SDL_assert_data const __attribute__((__visibility__("default")))  *SDL_GetAssertionReport(void) ;
@@ -10368,10 +10134,6 @@ extern int __attribute__((__visibility__("default")))  SDL_GetCPUCacheLineSize(v
 extern int __fpclassify(double  ) ;
 /* END FUNCTION-DECL-EXTERN __fpclassify LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:51 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_WasInit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL.h:144 */
-extern Uint32 __attribute__((__visibility__("default")))  SDL_WasInit(Uint32 flags ) ;
-/* END FUNCTION-DECL-EXTERN SDL_WasInit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL.h:144 */
-
 /* BEGIN FUNCTION-DECL __builtin_strcpy LOC=BUILTIN */
 /* compiler builtin: 
    char *__builtin_strcpy(char * , char const   * ) ;  */
@@ -10381,27 +10143,31 @@ extern Uint32 __attribute__((__visibility__("default")))  SDL_WasInit(Uint32 fla
 extern char __attribute__((__visibility__("default")))  *SDL_strupr(char *string ) ;
 /* END FUNCTION-DECL-EXTERN SDL_strupr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_stdinc.h:466 */
 
-/* BEGIN FUNCTION-DECL-EXTERN snprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:122 */
-extern int snprintf(char * __restrict   , size_t  , char const   * __restrict    , ...) ;
-/* END FUNCTION-DECL-EXTERN snprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:122 */
+/* BEGIN FUNCTION-DECL-EXTERN SDL_WasInit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL.h:144 */
+extern Uint32 __attribute__((__visibility__("default")))  SDL_WasInit(Uint32 flags ) ;
+/* END FUNCTION-DECL-EXTERN SDL_WasInit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL.h:144 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_SemPost LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:145 */
 extern int __attribute__((__visibility__("default")))  SDL_SemPost(SDL_sem *sem ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SemPost LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:145 */
+
+/* BEGIN FUNCTION-DECL-EXTERN snprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:122 */
+extern int snprintf(char * __restrict   , size_t  , char const   * __restrict    , ...) ;
+/* END FUNCTION-DECL-EXTERN snprintf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:122 */
 
 /* BEGIN FUNCTION-DECL __builtin_clz LOC=BUILTIN */
 /* compiler builtin: 
    int __builtin_clz(unsigned int  ) ;  */
 /* END FUNCTION-DECL __builtin_clz LOC=BUILTIN */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_mutexV LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:85 */
-extern int __attribute__((__visibility__("default")))  SDL_mutexV(SDL_mutex *mutex ) ;
-/* END FUNCTION-DECL-EXTERN SDL_mutexV LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:85 */
-
 /* BEGIN FUNCTION-DECL __builtin_strcspn LOC=BUILTIN */
 /* compiler builtin: 
    unsigned long __builtin_strcspn(char const   * , char const   * ) ;  */
 /* END FUNCTION-DECL __builtin_strcspn LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_mutexV LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:85 */
+extern int __attribute__((__visibility__("default")))  SDL_mutexV(SDL_mutex *mutex ) ;
+/* END FUNCTION-DECL-EXTERN SDL_mutexV LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:85 */
 
 /* BEGIN STRUCT __wasi_dirent_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:824 */
 struct __wasi_dirent_t {
@@ -10449,13 +10215,13 @@ extern SDL_AudioSpec __attribute__((__visibility__("default")))  *SDL_LoadWAV_RW
 typedef enum __anonenum_SDL_TextureModulate_412417660 SDL_TextureModulate;
 /* END TYPEDEF SDL_TextureModulate LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:97 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_SemTryWait LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:127 */
-extern int __attribute__((__visibility__("default")))  SDL_SemTryWait(SDL_sem *sem ) ;
-/* END FUNCTION-DECL-EXTERN SDL_SemTryWait LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:127 */
-
 /* BEGIN FUNCTION-DECL-EXTERN emscripten_idb_free_blob LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:109 */
 extern void emscripten_idb_free_blob(int blob ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_idb_free_blob LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:109 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_SemTryWait LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:127 */
+extern int __attribute__((__visibility__("default")))  SDL_SemTryWait(SDL_sem *sem ) ;
+/* END FUNCTION-DECL-EXTERN SDL_SemTryWait LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mutex.h:127 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_LockAudio LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:481 */
 extern void __attribute__((__visibility__("default")))  SDL_LockAudio(void) ;
@@ -10465,10 +10231,6 @@ extern void __attribute__((__visibility__("default")))  SDL_LockAudio(void) ;
 extern char *tmpnam(char * ) ;
 /* END FUNCTION-DECL-EXTERN tmpnam LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:141 */
 
-/* BEGIN TYPEDEF em_async_wget_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:20 */
-typedef void (*em_async_wget_onload_func)(void * , void * , int  );
-/* END TYPEDEF em_async_wget_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:20 */
-
 /* BEGIN UNION __anonunion___u_477865197___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
 union __anonunion___u_477865197___3 {
    float __f ;
@@ -10476,13 +10238,17 @@ union __anonunion___u_477865197___3 {
 };
 /* END UNION __anonunion___u_477865197___3 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:57 */
 
-/* BEGIN FUNCTION-DECL-EXTERN aligned_alloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:44 */
-extern void *aligned_alloc(size_t  , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN aligned_alloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:44 */
+/* BEGIN TYPEDEF em_async_wget_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:20 */
+typedef void (*em_async_wget_onload_func)(void * , void * , int  );
+/* END TYPEDEF em_async_wget_onload_func LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/wget.h:20 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_JoystickNumAxes LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:91 */
 extern int __attribute__((__visibility__("default")))  SDL_JoystickNumAxes(SDL_Joystick *joystick ) ;
 /* END FUNCTION-DECL-EXTERN SDL_JoystickNumAxes LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_joystick.h:91 */
+
+/* BEGIN FUNCTION-DECL-EXTERN aligned_alloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:44 */
+extern void *aligned_alloc(size_t  , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN aligned_alloc LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:44 */
 
 /* BEGIN FUNCTION-DECL __builtin_return LOC=BUILTIN */
 /* compiler builtin: 
@@ -10493,15 +10259,15 @@ extern int __attribute__((__visibility__("default")))  SDL_JoystickNumAxes(SDL_J
 extern SDL_Palette __attribute__((__visibility__("default")))  *SDL_AllocPalette(int ncolors ) ;
 /* END FUNCTION-DECL-EXTERN SDL_AllocPalette LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:345 */
 
-/* BEGIN FUNCTION-DECL-EXTERN log10 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:263 */
-extern double log10(double  ) ;
-/* END FUNCTION-DECL-EXTERN log10 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:263 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_AtomicCAS_ LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:201 */
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_AtomicCAS_(SDL_atomic_t *a ,
                                                                            int oldval ,
                                                                            int newval ) ;
 /* END FUNCTION-DECL-EXTERN SDL_AtomicCAS_ LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:201 */
+
+/* BEGIN FUNCTION-DECL-EXTERN log10 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:263 */
+extern double log10(double  ) ;
+/* END FUNCTION-DECL-EXTERN log10 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:263 */
 
 /* BEGIN TYPEDEF uint_fast32_t LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:4 */
 typedef uint32_t uint_fast32_t;
@@ -10511,13 +10277,13 @@ typedef uint32_t uint_fast32_t;
 extern int __attribute__((__visibility__("default")))  SDL_Flip(SDL_Surface *screen ) ;
 /* END FUNCTION-DECL-EXTERN SDL_Flip LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:295 */
 
-/* BEGIN FUNCTION-DECL-EXTERN tanh LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:351 */
-extern double tanh(double  ) ;
-/* END FUNCTION-DECL-EXTERN tanh LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:351 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetAudioStatus LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:364 */
 extern SDL_AudioStatus __attribute__((__visibility__("default")))  SDL_GetAudioStatus(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetAudioStatus LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:364 */
+
+/* BEGIN FUNCTION-DECL-EXTERN tanh LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:351 */
+extern double tanh(double  ) ;
+/* END FUNCTION-DECL-EXTERN tanh LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:351 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetRelativeMouseState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:86 */
 extern Uint8 __attribute__((__visibility__("default")))  SDL_GetRelativeMouseState(int *x ,
@@ -10528,6 +10294,10 @@ extern Uint8 __attribute__((__visibility__("default")))  SDL_GetRelativeMouseSta
 extern void __attribute__((__visibility__("default")))  SDL_UnlockAudio(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_UnlockAudio LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_audio.h:483 */
 
+/* BEGIN FUNCTION-DECL-EXTERN fma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:215 */
+extern double fma(double  , double  , double  ) ;
+/* END FUNCTION-DECL-EXTERN fma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:215 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_ReadBE64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:192 */
 extern Uint64 __attribute__((__visibility__("default")))  SDL_ReadBE64(SDL_RWops *src ) ;
 /* END FUNCTION-DECL-EXTERN SDL_ReadBE64 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_rwops.h:192 */
@@ -10535,10 +10305,6 @@ extern Uint64 __attribute__((__visibility__("default")))  SDL_ReadBE64(SDL_RWops
 /* BEGIN FUNCTION-DECL-EXTERN ldiv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:69 */
 extern ldiv_t ldiv(long  , long  ) ;
 /* END FUNCTION-DECL-EXTERN ldiv LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:69 */
-
-/* BEGIN FUNCTION-DECL-EXTERN fma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:215 */
-extern double fma(double  , double  , double  ) ;
-/* END FUNCTION-DECL-EXTERN fma LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:215 */
 
 /* BEGIN FUNCTION-DECL-EXTERN lgammaf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:248 */
 extern float lgammaf(float  ) ;
@@ -10572,13 +10338,13 @@ extern int __attribute__((__visibility__("default")))  SDL_GetRenderDrawColor(SD
 SDL_Texture *screen  ;
 /* END VARIABLE-DEF screen LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DECL-EXTERN fabs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:203 */
-extern double fabs(double  ) ;
-/* END FUNCTION-DECL-EXTERN fabs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:203 */
-
 /* BEGIN FUNCTION-DECL-EXTERN __fpclassifyf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:52 */
 extern int __fpclassifyf(float  ) ;
 /* END FUNCTION-DECL-EXTERN __fpclassifyf LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:52 */
+
+/* BEGIN FUNCTION-DECL-EXTERN fabs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:203 */
+extern double fabs(double  ) ;
+/* END FUNCTION-DECL-EXTERN fabs LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:203 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_AtomicUnlock LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_atomic.h:120 */
 extern void __attribute__((__visibility__("default")))  SDL_AtomicUnlock(SDL_SpinLock *lock ) ;
@@ -10589,11 +10355,6 @@ extern void __attribute__((__visibility__("default")))  SDL_SetWindowTitle(SDL_W
                                                                            char const   *title ) ;
 /* END FUNCTION-DECL-EXTERN SDL_SetWindowTitle LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:410 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetRendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:184 */
-extern int __attribute__((__visibility__("default")))  SDL_GetRendererInfo(SDL_Renderer *renderer ,
-                                                                           SDL_RendererInfo *info ) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetRendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:184 */
-
 /* BEGIN FUNCTION-DECL-EXTERN SDL_UpdateRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:292 */
 extern void __attribute__((__visibility__("default")))  SDL_UpdateRect(SDL_Surface *screen ,
                                                                        Sint32 x ,
@@ -10601,6 +10362,11 @@ extern void __attribute__((__visibility__("default")))  SDL_UpdateRect(SDL_Surfa
                                                                        Uint32 w ,
                                                                        Uint32 h ) ;
 /* END FUNCTION-DECL-EXTERN SDL_UpdateRect LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_compat.h:292 */
+
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetRendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:184 */
+extern int __attribute__((__visibility__("default")))  SDL_GetRendererInfo(SDL_Renderer *renderer ,
+                                                                           SDL_RendererInfo *info ) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetRendererInfo LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:184 */
 
 /* BEGIN FUNCTION-DECL __builtin_bcopy LOC=BUILTIN */
 /* compiler builtin: 
@@ -10635,22 +10401,22 @@ typedef int SDL_dummy_sint16[(sizeof(Sint16 ) == 2UL) * 2 - 1];
 extern  __attribute__((__noreturn__)) void emscripten_force_exit(int status ) ;
 /* END FUNCTION-DECL-EXTERN emscripten_force_exit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:76 */
 
+/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumVideoDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:196 */
+extern int __attribute__((__visibility__("default")))  SDL_GetNumVideoDrivers(void) ;
+/* END FUNCTION-DECL-EXTERN SDL_GetNumVideoDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:196 */
+
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GL_UnloadLibrary LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:735 */
 extern void __attribute__((__visibility__("default")))  SDL_GL_UnloadLibrary(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_GL_UnloadLibrary LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:735 */
 
-/* BEGIN FUNCTION-DECL-EXTERN SDL_GetNumVideoDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:196 */
-extern int __attribute__((__visibility__("default")))  SDL_GetNumVideoDrivers(void) ;
-/* END FUNCTION-DECL-EXTERN SDL_GetNumVideoDrivers LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:196 */
+/* BEGIN FUNCTION-DECL-EXTERN emscripten_print_double LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:167 */
+extern int emscripten_print_double(double x , char *to , int max ) ;
+/* END FUNCTION-DECL-EXTERN emscripten_print_double LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:167 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetMouseState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:77 */
 extern Uint8 __attribute__((__visibility__("default")))  SDL_GetMouseState(int *x ,
                                                                            int *y ) ;
 /* END FUNCTION-DECL-EXTERN SDL_GetMouseState LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_mouse.h:77 */
-
-/* BEGIN FUNCTION-DECL-EXTERN emscripten_print_double LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:167 */
-extern int emscripten_print_double(double x , char *to , int max ) ;
-/* END FUNCTION-DECL-EXTERN emscripten_print_double LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:167 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_GetWindowFromID LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:398 */
 extern SDL_Window __attribute__((__visibility__("default")))  *SDL_GetWindowFromID(Uint32 id ) ;
@@ -10688,25 +10454,25 @@ extern int __attribute__((__visibility__("default")))  SDL_GetWMInfo(struct SDL_
 typedef float __attribute__((__aligned__(2)))  emscripten_align2_float;
 /* END TYPEDEF emscripten_align2_float LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_types.h:21 */
 
-/* BEGIN FUNCTION-DECL-EXTERN memccpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:80 */
-extern void *memccpy(void * __restrict   , void const   * __restrict   , int  , size_t  ) ;
-/* END FUNCTION-DECL-EXTERN memccpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:80 */
-
 /* BEGIN FUNCTION-DECL-EXTERN log1p LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:267 */
 extern double log1p(double  ) ;
 /* END FUNCTION-DECL-EXTERN log1p LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:267 */
+
+/* BEGIN FUNCTION-DECL-EXTERN memccpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:80 */
+extern void *memccpy(void * __restrict   , void const   * __restrict   , int  , size_t  ) ;
+/* END FUNCTION-DECL-EXTERN memccpy LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:80 */
 
 /* BEGIN TYPEDEF em_dlopen_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:175 */
 typedef void (*em_dlopen_callback)(void *handle , void *user_data );
 /* END TYPEDEF em_dlopen_callback LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/emscripten.h:175 */
 
-/* BEGIN FUNCTION-DECL-EXTERN lround LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:283 */
-extern long lround(double  ) ;
-/* END FUNCTION-DECL-EXTERN lround LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:283 */
-
 /* BEGIN FUNCTION-DECL-EXTERN __signbit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:93 */
 extern int __signbit(double  ) ;
 /* END FUNCTION-DECL-EXTERN __signbit LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:93 */
+
+/* BEGIN FUNCTION-DECL-EXTERN lround LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:283 */
+extern long lround(double  ) ;
+/* END FUNCTION-DECL-EXTERN lround LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:283 */
 
 /* BEGIN FUNCTION-DECL-EXTERN memchr LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:31 */
 extern void *memchr(void const   * , int  , size_t  ) ;
@@ -10724,15 +10490,15 @@ typedef __builtin_va_list __gnuc_va_list;
 extern void perror(char const   * ) ;
 /* END FUNCTION-DECL-EXTERN perror LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:136 */
 
-/* BEGIN FUNCTION-DECL __builtin___vfprintf_chk LOC=BUILTIN */
-/* compiler builtin: 
-   int __builtin___vfprintf_chk(void * , int  , char const   * , __builtin_va_list  ) ;  */
-/* END FUNCTION-DECL __builtin___vfprintf_chk LOC=BUILTIN */
-
 /* BEGIN FUNCTION-DECL __builtin_atan2l LOC=BUILTIN */
 /* compiler builtin: 
    long double __builtin_atan2l(long double  , long double  ) ;  */
 /* END FUNCTION-DECL __builtin_atan2l LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL __builtin___vfprintf_chk LOC=BUILTIN */
+/* compiler builtin: 
+   int __builtin___vfprintf_chk(void * , int  , char const   * , __builtin_va_list  ) ;  */
+/* END FUNCTION-DECL __builtin___vfprintf_chk LOC=BUILTIN */
 
 /* BEGIN TYPEDEF emscripten_align1_short LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/emscripten/em_types.h:12 */
 typedef short __attribute__((__aligned__(1)))  emscripten_align1_short;
@@ -10771,6 +10537,10 @@ extern double asinh(double  ) ;
 typedef enum __anonenum_SDL_WindowFlags_1065803870 SDL_WindowFlags;
 /* END TYPEDEF SDL_WindowFlags LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_video.h:97 */
 
+/* BEGIN FUNCTION-DECL get_direction LOC=UNKNOWN */
+struct vector2d get_direction(struct player *p___0 ) ;
+/* END FUNCTION-DECL get_direction LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DECL __isspace LOC=UNKNOWN */
 __inline static int __isspace(int _c ) ;
 /* END FUNCTION-DECL __isspace LOC=UNKNOWN */
@@ -10779,10 +10549,6 @@ __inline static int __isspace(int _c ) ;
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_fd_sync)(__wasi_fd_t fd )  __attribute__((__import_name__("fd_sync"),
 __import_module__("wasi_snapshot_preview1"))) ;
 /* END FUNCTION-DECL-EXTERN __wasi_fd_sync LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2177 */
-
-/* BEGIN FUNCTION-DECL get_direction LOC=UNKNOWN */
-struct vector2d get_direction(struct player *p___0 ) ;
-/* END FUNCTION-DECL get_direction LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DECL-EXTERN rand LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:37 */
 extern int rand(void) ;
@@ -10809,15 +10575,15 @@ enum __anonenum_873948031 {
 } ;
 /* END ENUM __anonenum_873948031 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_pixels.h:78 */
 
-/* BEGIN FUNCTION-DECL-EXTERN scalbln LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:327 */
-extern double scalbln(double  , long  ) ;
-/* END FUNCTION-DECL-EXTERN scalbln LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:327 */
-
 /* BEGIN FUNCTION-DECL __builtin_ia32_unpcklps LOC=BUILTIN */
 /* compiler builtin: 
    float __attribute__((____vector_size____(16)))  __builtin_ia32_unpcklps(float __attribute__((____vector_size____(16)))   ,
                                                                            float __attribute__((____vector_size____(16)))   ) ;  */
 /* END FUNCTION-DECL __builtin_ia32_unpcklps LOC=BUILTIN */
+
+/* BEGIN FUNCTION-DECL-EXTERN scalbln LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:327 */
+extern double scalbln(double  , long  ) ;
+/* END FUNCTION-DECL-EXTERN scalbln LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:327 */
 
 /* BEGIN FUNCTION-DECL-EXTERN SDL_CreateTexture LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_render.h:203 */
 extern SDL_Texture __attribute__((__visibility__("default")))  *SDL_CreateTexture(SDL_Renderer *renderer ,
@@ -10887,645 +10653,33 @@ extern int __attribute__((__visibility__("default")))  SDL_GetTextureBlendMode(S
 extern SDL_bool __attribute__((__visibility__("default")))  SDL_HasSSE2(void) ;
 /* END FUNCTION-DECL-EXTERN SDL_HasSSE2 LOC=/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/SDL/SDL_cpuinfo.h:122 */
 
-/* BEGIN FUNCTION-DEF __isgreaterequal LOC=UNKNOWN */
-__inline static int __isgreaterequal(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequal LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequalf___3 LOC=UNKNOWN */
-__inline static int __islessequalf___3(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequalf___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF init_player LOC=UNKNOWN */
-void init_player(struct player *p___0 ) 
+/* BEGIN FUNCTION-DEF spawn_asteroids LOC=UNKNOWN */
+void spawn_asteroids(struct asteroid *a , int length , int size , struct vector2d v ) 
 { 
   int i ;
-  struct vector2d translation ;
+  int count ;
 
   {
   i = 0;
-  translation.x = (float )320;
-  translation.y = (float )240;
-  p___0->hit_radius = (float )15;
-  p___0->lives = 3;
-  p___0->location.x = (float )0;
-  p___0->location.y = (float )0;
-  p___0->velocity.x = (float )0;
-  p___0->velocity.y = (float )0;
-  p___0->obj_vert[0].x = (float )0;
-  p___0->obj_vert[0].y = (float )1.5;
-  p___0->obj_vert[1].x = (float )-1;
-  p___0->obj_vert[1].y = (float )-1;
-  p___0->obj_vert[2].x = (float )1;
-  p___0->obj_vert[2].y = (float )-1;
+  count = 0;
   i = 0;
-  while (i < 3) {
-    multiply_vector(& p___0->obj_vert[i], (float )-1);
-    multiply_vector(& p___0->obj_vert[i], (float )12);
-    add_vector(& p___0->world_vert[i], & p___0->obj_vert[i]);
-    add_vector(& p___0->world_vert[i], & translation);
-    i ++;
-  }
-  i = 0;
-  while (i < 3) {
-    p___0->bullets[i].alive = (enum boolean )1;
+  while (i < length) {
+    if ((a + i)->alive == 0) {
+      if (count == 3) {
+        break;
+      }
+      (a + i)->location = v;
+      (a + i)->hit_radius /= (float )2;
+      (a + i)->alive = 1;
+      count ++;
+      shrink_asteroid(a + i, size);
+    }
     i ++;
   }
   return;
 }
 }
-/* END FUNCTION-DEF init_player LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF limit_vector LOC=UNKNOWN */
-void limit_vector(struct vector2d *v , float limit ) 
-{ 
-  float mag ;
-  float tmp ;
-  float ratio ;
-
-  {
-  tmp = magnitude_vector(v);
-  mag = tmp;
-  if (mag > limit) {
-    ratio = limit / mag;
-    v->x *= ratio;
-    v->y *= ratio;
-  }
-  return;
-}
-}
-/* END FUNCTION-DEF limit_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreater___0 LOC=UNKNOWN */
-__inline static int __isgreater___0(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreater___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __DOUBLE_BITS LOC=UNKNOWN */
-__inline static unsigned long long __DOUBLE_BITS(double __f ) 
-{ 
-  union __anonunion___u_302425027 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __DOUBLE_BITS LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreaterl___2 LOC=UNKNOWN */
-__inline static int __islessgreaterl___2(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreaterl___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF rotate_vector LOC=UNKNOWN */
-void rotate_vector(struct vector2d *v , float degrees ) 
-{ 
-  float angle ;
-  float sine ;
-  double tmp ;
-  float cosine ;
-  double tmp___0 ;
-  float matrix[2][2] ;
-  float x ;
-  float y ;
-
-  {
-  angle = (float )(((double )degrees * 3.14159265358979323846) / (double )180);
-  tmp = sin((double )angle);
-  sine = (float )tmp;
-  tmp___0 = cos((double )angle);
-  cosine = (float )tmp___0;
-  matrix[0][0] = cosine;
-  matrix[0][1] = - sine;
-  matrix[1][0] = sine;
-  matrix[1][1] = cosine;
-  x = v->x;
-  y = v->y;
-  v->x = matrix[0][0] * x + matrix[0][1] * y;
-  v->y = matrix[1][0] * x + matrix[1][1] * y;
-  return;
-}
-}
-/* END FUNCTION-DEF rotate_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessf___1 LOC=UNKNOWN */
-__inline static int __islessf___1(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessf___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreaterf LOC=UNKNOWN */
-__inline static int __islessgreaterf(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreaterf LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __DOUBLE_BITS___1 LOC=UNKNOWN */
-__inline static unsigned long long __DOUBLE_BITS___1(double __f ) 
-{ 
-  union __anonunion___u_302425027___1 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __DOUBLE_BITS___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreater___3 LOC=UNKNOWN */
-__inline static int __isgreater___3(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreater___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF shrink_asteroid LOC=UNKNOWN */
-int shrink_asteroid(struct asteroid *a , int size ) 
-{ 
-  int i ;
-
-  {
-  a->obj_vert[0].x = (float ).0;
-  a->obj_vert[0].y = (float ).4;
-  a->obj_vert[1].x = (float ).2;
-  a->obj_vert[1].y = (float ).3;
-  a->obj_vert[2].x = (float ).2;
-  a->obj_vert[2].y = (float ).1;
-  a->obj_vert[3].x = (float ).4;
-  a->obj_vert[3].y = (float ).0;
-  a->obj_vert[4].x = (float ).3;
-  a->obj_vert[4].y = (float )(- .2);
-  a->obj_vert[5].x = (float ).1;
-  a->obj_vert[5].y = (float )(- .2);
-  a->obj_vert[6].x = (float ).0;
-  a->obj_vert[6].y = (float )(- .3);
-  a->obj_vert[7].x = (float )(- .2);
-  a->obj_vert[7].y = (float )(- .2);
-  a->obj_vert[8].x = (float )(- .4);
-  a->obj_vert[8].y = (float )0;
-  a->obj_vert[9].x = (float )(- .3);
-  a->obj_vert[9].y = (float ).3;
-  i = 0;
-  i = 0;
-  while (i < 10) {
-    multiply_vector(& a->obj_vert[i], (float )88);
-    i ++;
-  }
-  if (size == 2) {
-    i = 0;
-    while (i < 10) {
-      divide_vector(& a->obj_vert[i], (float )2);
-      i ++;
-    }
-    a->size = (enum sizes )1;
-    return (0);
-  }
-  if (size == 1) {
-    i = 0;
-    while (i < 10) {
-      divide_vector(& a->obj_vert[i], (float )4);
-      i ++;
-    }
-    a->size = (enum sizes )0;
-    return (0);
-  }
-  if (size == 0) {
-    i = 0;
-    while (i < 10) {
-      divide_vector(& a->obj_vert[i], (float )8);
-      i ++;
-    }
-    return (0);
-  }
-  return (1);
-}
-}
-/* END FUNCTION-DEF shrink_asteroid LOC=UNKNOWN */
+/* END FUNCTION-DEF spawn_asteroids LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __isgreaterequall LOC=UNKNOWN */
 __inline static int __isgreaterequall(long double __x , long double __y ) 
@@ -11593,881 +10747,49 @@ __inline static int __isgreaterequall(long double __x , long double __y )
 }
 /* END FUNCTION-DEF __isgreaterequall LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF add_vector LOC=UNKNOWN */
-void add_vector(struct vector2d *a , struct vector2d *b ) 
+/* BEGIN FUNCTION-DEF init LOC=UNKNOWN */
+int init(int width , int height ) 
 { 
-
-
-  {
-  a->x += b->x;
-  a->y += b->y;
-  return;
-}
-}
-/* END FUNCTION-DEF add_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isless___0 LOC=UNKNOWN */
-__inline static int __isless___0(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
+  char const __attribute__((__visibility__("default")))  *tmp ;
+  int __attribute__((__visibility__("default")))  tmp___0 ;
+  SDL_Texture __attribute__((__visibility__("default")))  *tmp___1 ;
+  void *tmp___2 ;
+  char const __attribute__((__visibility__("default")))  *tmp___3 ;
+  char const __attribute__((__visibility__("default")))  *tmp___4 ;
 
   {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
+  tmp___0 = SDL_Init((Uint32 )32);
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+    tmp = SDL_GetError();
+    printf((char const   */* __restrict  */)"SDL could not initialize! SDL_Error: %s\n",
+           tmp);
+    return (1);
   }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
+  SDL_CreateWindowAndRenderer(640, 480, 4, & window, & renderer);
+  tmp___1 = SDL_CreateTexture(renderer, (Uint32 )-2042224636, 1, 640, 480);
+  screen = (SDL_Texture *)tmp___1;
+  tmp___2 = malloc(307200UL * sizeof(Uint32 ));
+  pixels = (Uint32 *)tmp___2;
+  if ((unsigned int )window == (unsigned int )((void *)0)) {
+    tmp___3 = SDL_GetError();
+    printf((char const   */* __restrict  */)"Window could not be created! SDL_Error: %s\n",
+           tmp___3);
+    return (1);
   }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
+  if ((unsigned int )screen == (unsigned int )((void *)0)) {
+    tmp___4 = SDL_GetError();
+    printf((char const   */* __restrict  */)"Texture could not be created! SDL_Error: %s\n",
+           tmp___4);
+    return (1);
   }
-  return (tmp___15);
+  if ((unsigned int )pixels == (unsigned int )((void *)0)) {
+    printf((char const   */* __restrict  */)"Error allocating pixel buffer");
+    return (1);
+  }
+  return (0);
 }
 }
-/* END FUNCTION-DEF __isless___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreater___1 LOC=UNKNOWN */
-__inline static int __isgreater___1(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreater___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __FLOAT_BITS___3 LOC=UNKNOWN */
-__inline static unsigned int __FLOAT_BITS___3(float __f ) 
-{ 
-  union __anonunion___u_477865197___3 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __FLOAT_BITS___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF main LOC=UNKNOWN */
-int main(int argc , char **args , char **_formal_envp ) 
-{ 
-  char _3_main_$locals[84] ;
-  union _3_main_$node _3_main_$stack[1][32] ;
-  union _3_main_$node *_3_main_$sp[1] ;
-  unsigned char *_3_main_$pc[1] ;
-
-  {
-  {
-  {
-  {
-  {
-  goto pixels_i$nit_INLINE_pixels_i$nit;
-  }
-  pixels_i$nit_INLINE_pixels_i$nit: /* CIL Label */ ;
-  }
-  {
-  {
-  goto window_i$nit_INLINE_window_i$nit;
-  }
-  window_i$nit_INLINE_window_i$nit: /* CIL Label */ ;
-  }
-  {
-  {
-  goto _global_envp_i$nit_INLINE__global_envp_i$nit;
-  }
-  _global_envp_i$nit_INLINE__global_envp_i$nit: /* CIL Label */ ;
-  }
-  {
-  {
-  goto _global_argv_i$nit_INLINE__global_argv_i$nit;
-  }
-  _global_argv_i$nit_INLINE__global_argv_i$nit: /* CIL Label */ ;
-  }
-  {
-  {
-  goto _global_argc_i$nit_INLINE__global_argc_i$nit;
-  }
-  _global_argc_i$nit_INLINE__global_argc_i$nit: /* CIL Label */ ;
-  }
-  goto megaInit_INLINE_megaInit;
-  }
-  megaInit_INLINE_megaInit: /* CIL Label */ ;
-  }
-  _global_argc = argc;
-  _global_argv = args;
-  _global_envp = _formal_envp;
-  _BARRIER_0 = 1;
-  {  /* __blockattribute__(__ATOMIC__)*/ 
-  _1_main__BEGIN_1 = 1;
-  p11 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
-  p11->next = p11;
-  p11->prev = p11;
-  _1_main_1_opaque_list_1 = p11;
-  r16 = rand();
-  p17 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
-  p17->data = 0 * r16;
-  p17->next = _1_main_1_opaque_list_1->next;
-  p17->prev = _1_main_1_opaque_list_1;
-  (_1_main_1_opaque_list_1->next)->prev = p17;
-  _1_main_1_opaque_list_1->next = p17;
-  r14 = rand();
-  p15 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
-  p15->data = 1 * r14;
-  p15->next = _1_main_1_opaque_list_1->next;
-  p15->prev = _1_main_1_opaque_list_1;
-  (_1_main_1_opaque_list_1->next)->prev = p15;
-  _1_main_1_opaque_list_1->next = p15;
-  r12 = rand();
-  p13 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
-  p13->data = 2 * r12;
-  p13->next = _1_main_1_opaque_list_1->next;
-  p13->prev = _1_main_1_opaque_list_1;
-  (_1_main_1_opaque_list_1->next)->prev = p13;
-  _1_main_1_opaque_list_1->next = p13;
-  _1_main_1_opaque_ptr_1 = _1_main_1_opaque_list_1->next;
-  _1_main_1_opaque_ptr_2 = _1_main_1_opaque_ptr_1;
-  _1_main__END_1 = 1;
-  }
-  _1_main__BARRIER_2 = 1;
-  _3_main_$sp[0] = _3_main_$stack[0];
-  _3_main_$pc[0] = _3_main_$array[0];
-  while (1) {
-    switch (*(_3_main_$pc[0])) {
-    case _3_main__global$result_STA_0$value_LIT_0: 
-    (_3_main_$pc[0]) ++;
-    switch (*((int *)_3_main_$pc[0])) {
-    case 2: 
-    (_3_main_$sp[0] + 1)->_void_star = (void *)(asteroids);
-    break;
-    case 0: 
-    (_3_main_$sp[0] + 1)->_void_star = (void *)(lives);
-    break;
-    case 3: 
-    (_3_main_$sp[0] + 1)->_void_star = (void *)(& mainloop);
-    break;
-    case 1: 
-    (_3_main_$sp[0] + 1)->_void_star = (void *)(& p);
-    break;
-    }
-    (_3_main_$sp[0]) ++;
-    _3_main_$pc[0] += 4;
-    break;
-    case _3_main__Eq_int_int2int$right_STA_0$result_STA_0$left_STA_1: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + -1)->_int = (_3_main_$sp[0] + -1)->_int == (_3_main_$sp[0] + 0)->_int;
-    (_3_main_$sp[0]) --;
-    break;
-    case _3_main__PlusA_int_int2int$right_STA_0$result_STA_0$left_STA_1: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + -1)->_int = (_3_main_$sp[0] + -1)->_int + (_3_main_$sp[0] + 0)->_int;
-    (_3_main_$sp[0]) --;
-    break;
-    case _3_main__constant_int$result_STA_0$value_LIT_0: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + 1)->_int = *((int *)_3_main_$pc[0]);
-    (_3_main_$sp[0]) ++;
-    _3_main_$pc[0] += 4;
-    break;
-    case _3_main__return_int$expr_STA_0: 
-    (_3_main_$pc[0]) ++;
-    return ((_3_main_$sp[0] + 0)->_int);
-    break;
-    case _3_main__constant_void_star$result_STA_0$value_LIT_0: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + 1)->_void_star = *((void **)_3_main_$pc[0]);
-    (_3_main_$sp[0]) ++;
-    _3_main_$pc[0] += 4;
-    break;
-    case _3_main__convert_int2float$left_STA_0$result_STA_0: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + 0)->_float = (float )(_3_main_$sp[0] + 0)->_int;
-    break;
-    case _3_main__convert_int2unsigned_int$left_STA_0$result_STA_0: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + 0)->_unsigned_int = (unsigned int )(_3_main_$sp[0] + 0)->_int;
-    break;
-    case _3_main__load_int$left_STA_0$result_STA_0: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + 0)->_int = *((int *)(_3_main_$sp[0] + 0)->_void_star);
-    break;
-    case _3_main__Mult_unsigned_int_unsigned_int2unsigned_int$left_STA_0$result_STA_0$right_STA_1: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + -1)->_unsigned_int = (_3_main_$sp[0] + 0)->_unsigned_int * (_3_main_$sp[0] + -1)->_unsigned_int;
-    (_3_main_$sp[0]) --;
-    break;
-    case _3_main__PlusPI_void_star_unsigned_int2void_star$left_STA_0$result_STA_0$right_STA_1: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + -1)->_void_star = (_3_main_$sp[0] + 0)->_void_star + (_3_main_$sp[0] + -1)->_unsigned_int;
-    (_3_main_$sp[0]) --;
-    break;
-    case _3_main__goto$label_LAB_0: 
-    (_3_main_$pc[0]) ++;
-    _3_main_$pc[0] += *((int *)_3_main_$pc[0]);
-    break;
-    case _3_main__branchIfTrue$expr_STA_0$label_LAB_0: 
-    (_3_main_$pc[0]) ++;
-    if ((_3_main_$sp[0] + 0)->_int) {
-      _3_main_$pc[0] += *((int *)_3_main_$pc[0]);
-    } else {
-      _3_main_$pc[0] += 4;
-    }
-    (_3_main_$sp[0]) --;
-    break;
-    case _3_main__constant_unsigned_int$result_STA_0$value_LIT_0: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + 1)->_unsigned_int = *((unsigned int *)_3_main_$pc[0]);
-    (_3_main_$sp[0]) ++;
-    _3_main_$pc[0] += 4;
-    break;
-    case _3_main__PlusPI_void_star_int2void_star$left_STA_0$result_STA_0$right_STA_1: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + -1)->_void_star = (_3_main_$sp[0] + 0)->_void_star + (_3_main_$sp[0] + -1)->_int;
-    (_3_main_$sp[0]) --;
-    break;
-    case _3_main__store_void_star$left_STA_0$right_STA_1: 
-    (_3_main_$pc[0]) ++;
-    *((void **)(_3_main_$sp[0] + 0)->_void_star) = (_3_main_$sp[0] + -1)->_void_star;
-    _3_main_$sp[0] += -2;
-    break;
-    case _3_main__local$result_STA_0$value_LIT_0: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + 1)->_void_star = (void *)(_3_main_$locals + *((int *)_3_main_$pc[0]));
-    (_3_main_$sp[0]) ++;
-    _3_main_$pc[0] += 4;
-    break;
-    case _3_main__Lt_int_int2int$right_STA_0$result_STA_0$left_STA_1: 
-    (_3_main_$pc[0]) ++;
-    (_3_main_$sp[0] + -1)->_int = (_3_main_$sp[0] + -1)->_int < (_3_main_$sp[0] + 0)->_int;
-    (_3_main_$sp[0]) --;
-    break;
-    case _3_main__store_float$right_STA_0$left_STA_1: 
-    (_3_main_$pc[0]) ++;
-    *((float *)(_3_main_$sp[0] + -1)->_void_star) = (_3_main_$sp[0] + 0)->_float;
-    _3_main_$sp[0] += -2;
-    break;
-    case _3_main__memcpy$right_STA_0$size_LIT_0$left_STA_1: 
-    (_3_main_$pc[0]) ++;
-    memcpy((_3_main_$sp[0] + -1)->_void_star, (_3_main_$sp[0] + 0)->_void_star, *((int *)_3_main_$pc[0]));
-    _3_main_$sp[0] += -2;
-    _3_main_$pc[0] += 4;
-    break;
-    case _3_main__store_int$left_STA_0$right_STA_1: 
-    (_3_main_$pc[0]) ++;
-    *((int *)(_3_main_$sp[0] + 0)->_void_star) = (_3_main_$sp[0] + -1)->_int;
-    _3_main_$sp[0] += -2;
-    break;
-    case _3_main__call$func_LIT_0: 
-    (_3_main_$pc[0]) ++;
-    switch (*((int *)_3_main_$pc[0])) {
-    case 8: 
-    emscripten_set_main_loop(*((void (**)(void))(_3_main_$locals + 80)), 0, 1);
-    break;
-    case 7: 
-    init_asteroids(*((struct asteroid **)(_3_main_$locals + 76)), 27);
-    break;
-    case 3: 
-    divide_vector(*((struct vector2d **)(_3_main_$locals + 48)), (float )2);
-    break;
-    case 6: 
-    init_player(*((struct player **)(_3_main_$locals + 72)));
-    break;
-    case 4: 
-    add_vector(*((struct vector2d **)(_3_main_$locals + 60)), *((struct vector2d **)(_3_main_$locals + 64)));
-    break;
-    case 2: 
-    init_player(*((struct player **)(_3_main_$locals + 44)));
-    break;
-    case 1: 
-    *((int *)(_3_main_$locals + 16)) = init(640, 480);
-    break;
-    case 5: 
-    update_player(*((struct player **)(_3_main_$locals + 68)));
-    break;
-    }
-    _3_main_$pc[0] += 4;
-    break;
-    }
-  }
-}
-}
-/* END FUNCTION-DEF main LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreater LOC=UNKNOWN */
-__inline static int __isgreater(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreater LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequal___2 LOC=UNKNOWN */
-__inline static int __isgreaterequal___2(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequal___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessl LOC=UNKNOWN */
-__inline static int __islessl(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessl LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF SDL_SwapFloat LOC=UNKNOWN */
-__inline static float SDL_SwapFloat(float x ) 
-{ 
-  union __anonunion_swapper_599864594 swapper ;
-
-  {
-  swapper.f = x;
-  swapper.ui32 = SDL_Swap32(swapper.ui32);
-  return (swapper.f);
-}
-}
-/* END FUNCTION-DEF SDL_SwapFloat LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterl LOC=UNKNOWN */
-__inline static int __isgreaterl(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterl LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequall___3 LOC=UNKNOWN */
-__inline static int __isgreaterequall___3(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequall___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequalf___2 LOC=UNKNOWN */
-__inline static int __islessequalf___2(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequalf___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequall___1 LOC=UNKNOWN */
-__inline static int __isgreaterequall___1(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequall___1 LOC=UNKNOWN */
+/* END FUNCTION-DEF init LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __islessequal___1 LOC=UNKNOWN */
 __inline static int __islessequal___1(double_t __x , double_t __y ) 
@@ -12535,8 +10857,20 @@ __inline static int __islessequal___1(double_t __x , double_t __y )
 }
 /* END FUNCTION-DEF __islessequal___1 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessgreaterf___2 LOC=UNKNOWN */
-__inline static int __islessgreaterf___2(float_t __x , float_t __y ) 
+/* BEGIN FUNCTION-DEF __DOUBLE_BITS___3 LOC=UNKNOWN */
+__inline static unsigned long long __DOUBLE_BITS___3(double __f ) 
+{ 
+  union __anonunion___u_302425027___3 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __DOUBLE_BITS___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessf___2 LOC=UNKNOWN */
+__inline static int __islessf___2(float_t __x , float_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -12591,7 +10925,7 @@ __inline static int __islessgreaterf___2(float_t __x , float_t __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
-  if (__x != __y) {
+  if (__x < __y) {
     tmp___15 = 1;
   } else {
     tmp___15 = 0;
@@ -12599,10 +10933,40 @@ __inline static int __islessgreaterf___2(float_t __x , float_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessgreaterf___2 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessf___2 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessequall___1 LOC=UNKNOWN */
-__inline static int __islessequall___1(long double __x , long double __y ) 
+/* BEGIN FUNCTION-DEF update_asteroids LOC=UNKNOWN */
+void update_asteroids(struct asteroid *asteroids___0 , int size ) 
+{ 
+  int i ;
+  int j ;
+  struct vector2d translation ;
+
+  {
+  i = 0;
+  j = 0;
+  translation.x = (float )320;
+  translation.y = (float )240;
+  i = 0;
+  while (i < size) {
+    add_vector(& (asteroids___0 + i)->location, & (asteroids___0 + i)->velocity);
+    j = 0;
+    while (j < 10) {
+      (asteroids___0 + i)->world_vert[j] = add_vector_new(& (asteroids___0 + i)->obj_vert[j],
+                                                          & (asteroids___0 + i)->location);
+      add_vector(& (asteroids___0 + i)->world_vert[j], & translation);
+      rotate_vector(& (asteroids___0 + i)->obj_vert[j], (asteroids___0 + i)->rotation);
+      j ++;
+    }
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF update_asteroids LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreater LOC=UNKNOWN */
+__inline static int __islessgreater(double_t __x , double_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -12624,77 +10988,11 @@ __inline static int __islessequall___1(long double __x , long double __y )
 
   {
   if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___10 = __FLOAT_BITS((float )__x);
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequall___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessf___0 LOC=UNKNOWN */
-__inline static int __islessf___0(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___11 = __DOUBLE_BITS(__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
       tmp___12 = __fpclassifyl((long double )__x);
@@ -12706,11 +11004,11 @@ __inline static int __islessf___0(float_t __x , float_t __y )
     tmp___9 = 1;
   } else {
     if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0(__y);
+      tmp___4 = __FLOAT_BITS((float )__y);
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___5 = __DOUBLE_BITS(__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
         tmp___6 = __fpclassifyl((long double )__y);
@@ -12723,7 +11021,7 @@ __inline static int __islessf___0(float_t __x , float_t __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
-  if (__x < __y) {
+  if (__x != __y) {
     tmp___15 = 1;
   } else {
     tmp___15 = 0;
@@ -12731,84 +11029,7 @@ __inline static int __islessf___0(float_t __x , float_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessf___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessl___0 LOC=UNKNOWN */
-__inline static int __islessl___0(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessl___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __bswap16 LOC=UNKNOWN */
-__inline static uint16_t __bswap16(uint16_t __x ) 
-{ 
-
-
-  {
-  return ((uint16_t )(((int )__x << 8) | ((int )__x >> 8)));
-}
-}
-/* END FUNCTION-DEF __bswap16 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessgreater LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __islessl___3 LOC=UNKNOWN */
 __inline static int __islessl___3(long double __x , long double __y ) 
@@ -12876,8 +11097,8 @@ __inline static int __islessl___3(long double __x , long double __y )
 }
 /* END FUNCTION-DEF __islessl___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __isgreaterf LOC=UNKNOWN */
-__inline static int __isgreaterf(float_t __x , float_t __y ) 
+/* BEGIN FUNCTION-DEF __isless LOC=UNKNOWN */
+__inline static int __isless(double_t __x , double_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -12899,11 +11120,11 @@ __inline static int __isgreaterf(float_t __x , float_t __y )
 
   {
   if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS(__x);
+    tmp___10 = __FLOAT_BITS((float )__x);
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___11 = __DOUBLE_BITS(__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
       tmp___12 = __fpclassifyl((long double )__x);
@@ -12915,263 +11136,11 @@ __inline static int __isgreaterf(float_t __x , float_t __y )
     tmp___9 = 1;
   } else {
     if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS(__y);
+      tmp___4 = __FLOAT_BITS((float )__y);
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterf LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequal___3 LOC=UNKNOWN */
-__inline static int __isgreaterequal___3(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequal___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF shoot_bullet LOC=UNKNOWN */
-void shoot_bullet(struct player *p___0 ) 
-{ 
-  int i ;
-
-  {
-  i = 0;
-  i = 0;
-  while (i < 3) {
-    if ((unsigned int )p___0->bullets[i].alive == 1U) {
-      p___0->bullets[i].alive = (enum boolean )0;
-      p___0->bullets[i].location = p___0->world_vert[0];
-      p___0->bullets[i].velocity = get_direction(p___0);
-      multiply_vector(& p___0->bullets[i].velocity, (float )4.1);
-      break;
-    }
-    i ++;
-  }
-  return;
-}
-}
-/* END FUNCTION-DEF shoot_bullet LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF init_asteroids LOC=UNKNOWN */
-void init_asteroids(struct asteroid *asteroids___0 , int size ) 
-{ 
-  int i ;
-  int j ;
-  struct vector2d translation ;
-  int sign_x ;
-  int tmp ;
-  int sign_y ;
-  int tmp___0 ;
-  int lx ;
-  int tmp___1 ;
-  int ly ;
-  int tmp___2 ;
-  float vx ;
-  int tmp___3 ;
-  float vy ;
-  int tmp___4 ;
-  float degrees ;
-  int tmp___5 ;
-
-  {
-  i = 0;
-  j = 0;
-  translation.x = (float )320;
-  translation.y = (float )240;
-  i = 0;
-  while (i < size) {
-    tmp = rand();
-    sign_x = tmp % 100;
-    tmp___0 = rand();
-    sign_y = tmp___0 % 100;
-    tmp___1 = rand();
-    lx = (tmp___1 % 640) / 2;
-    tmp___2 = rand();
-    ly = (tmp___2 % 480) / 2;
-    tmp___3 = rand();
-    vx = (float )(tmp___3 % 500) / (float )1000;
-    tmp___4 = rand();
-    vy = (float )(tmp___4 % 500) / (float )1000;
-    tmp___5 = rand();
-    degrees = (float )(tmp___5 % 100 + 1000) / (float )1000;
-    if (sign_x >= 50) {
-      vx = - vx;
-      lx = - lx;
-      degrees = - degrees;
-    }
-    if (sign_y >= 50) {
-      vy = - vy;
-      ly = - ly;
-    }
-    if (i < 3) {
-      (asteroids___0 + i)->alive = 1;
-    } else {
-      (asteroids___0 + i)->alive = 0;
-    }
-    (asteroids___0 + i)->size = (enum sizes )2;
-    (asteroids___0 + i)->hit_radius = (float )35;
-    (asteroids___0 + i)->rotation = degrees;
-    (asteroids___0 + i)->location.x = (float )lx;
-    (asteroids___0 + i)->location.y = (float )ly;
-    (asteroids___0 + i)->velocity.x = vx;
-    (asteroids___0 + i)->velocity.y = vy;
-    (asteroids___0 + i)->obj_vert[0].x = (float ).0;
-    (asteroids___0 + i)->obj_vert[0].y = (float ).4;
-    (asteroids___0 + i)->obj_vert[1].x = (float ).2;
-    (asteroids___0 + i)->obj_vert[1].y = (float ).3;
-    (asteroids___0 + i)->obj_vert[2].x = (float ).2;
-    (asteroids___0 + i)->obj_vert[2].y = (float ).1;
-    (asteroids___0 + i)->obj_vert[3].x = (float ).4;
-    (asteroids___0 + i)->obj_vert[3].y = (float ).0;
-    (asteroids___0 + i)->obj_vert[4].x = (float ).3;
-    (asteroids___0 + i)->obj_vert[4].y = (float )(- .2);
-    (asteroids___0 + i)->obj_vert[5].x = (float ).1;
-    (asteroids___0 + i)->obj_vert[5].y = (float )(- .2);
-    (asteroids___0 + i)->obj_vert[6].x = (float ).0;
-    (asteroids___0 + i)->obj_vert[6].y = (float )(- .3);
-    (asteroids___0 + i)->obj_vert[7].x = (float )(- .2);
-    (asteroids___0 + i)->obj_vert[7].y = (float )(- .2);
-    (asteroids___0 + i)->obj_vert[8].x = (float )(- .4);
-    (asteroids___0 + i)->obj_vert[8].y = (float )0;
-    (asteroids___0 + i)->obj_vert[9].x = (float )(- .3);
-    (asteroids___0 + i)->obj_vert[9].y = (float ).3;
-    j = 0;
-    while (j < 10) {
-      multiply_vector(& (asteroids___0 + i)->obj_vert[j], (float )88);
-      add_vector(& (asteroids___0 + i)->world_vert[j], & (asteroids___0 + i)->obj_vert[j]);
-      add_vector(& (asteroids___0 + i)->world_vert[j], & translation);
-      j ++;
-    }
-    i ++;
-  }
-  return;
-}
-}
-/* END FUNCTION-DEF init_asteroids LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessf___3 LOC=UNKNOWN */
-__inline static int __islessf___3(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___5 = __DOUBLE_BITS(__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
         tmp___6 = __fpclassifyl((long double )__y);
@@ -13192,10 +11161,35 @@ __inline static int __islessf___3(float_t __x , float_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessf___3 LOC=UNKNOWN */
+/* END FUNCTION-DEF __isless LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __isgreaterl___0 LOC=UNKNOWN */
-__inline static int __isgreaterl___0(long double __x , long double __y ) 
+/* BEGIN FUNCTION-DEF print_vector LOC=UNKNOWN */
+void print_vector(struct vector2d *a ) 
+{ 
+
+
+  {
+  printf((char const   */* __restrict  */)"x = %f\n y = %f\n", (double )a->x, (double )a->y);
+  return;
+}
+}
+/* END FUNCTION-DEF print_vector LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF multiply_vector LOC=UNKNOWN */
+void multiply_vector(struct vector2d *v , float n ) 
+{ 
+
+
+  {
+  v->x *= n;
+  v->y *= n;
+  return;
+}
+}
+/* END FUNCTION-DEF multiply_vector LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequall___1 LOC=UNKNOWN */
+__inline static int __islessequall___1(long double __x , long double __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -13217,11 +11211,11 @@ __inline static int __isgreaterl___0(long double __x , long double __y )
 
   {
   if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___10 = __FLOAT_BITS___1((float )__x);
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
       tmp___12 = __fpclassifyl(__x);
@@ -13233,11 +11227,11 @@ __inline static int __isgreaterl___0(long double __x , long double __y )
     tmp___9 = 1;
   } else {
     if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___4 = __FLOAT_BITS___1((float )__y);
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
         tmp___6 = __fpclassifyl(__y);
@@ -13250,7 +11244,7 @@ __inline static int __isgreaterl___0(long double __x , long double __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
-  if (__x > __y) {
+  if (__x <= __y) {
     tmp___15 = 1;
   } else {
     tmp___15 = 0;
@@ -13258,92 +11252,84 @@ __inline static int __isgreaterl___0(long double __x , long double __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __isgreaterl___0 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessequall___1 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF clear_pixels LOC=UNKNOWN */
-void clear_pixels(uint32_t *pixel_buffer , uint32_t colour ) 
+/* BEGIN FUNCTION-DEF bounds_player LOC=UNKNOWN */
+void bounds_player(struct player *p___0 ) 
 { 
   int i ;
-  int buffer_size ;
 
   {
   i = 0;
-  buffer_size = 307200;
+  if (p___0->location.x < (float )-320) {
+    p___0->location.x = (float )320;
+  }
+  if (p___0->location.x > (float )320) {
+    p___0->location.x = (float )-320;
+  }
+  if (p___0->location.y < (float )-240) {
+    p___0->location.y = (float )240;
+  }
+  if (p___0->location.y > (float )240) {
+    p___0->location.y = (float )-240;
+  }
   i = 0;
-  while (i < buffer_size) {
-    *(pixel_buffer + i) = colour;
+  while (i < 3) {
+    if (p___0->bullets[i].location.x < (float )0) {
+      p___0->bullets[i].alive = (enum boolean )1;
+    } else
+    if (p___0->bullets[i].location.x >= (float )640) {
+      p___0->bullets[i].alive = (enum boolean )1;
+    }
+    if (p___0->bullets[i].location.y < (float )0) {
+      p___0->bullets[i].alive = (enum boolean )1;
+    } else
+    if (p___0->bullets[i].location.y >= (float )480) {
+      p___0->bullets[i].alive = (enum boolean )1;
+    }
     i ++;
   }
   return;
 }
 }
-/* END FUNCTION-DEF clear_pixels LOC=UNKNOWN */
+/* END FUNCTION-DEF bounds_player LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessgreaterl___0 LOC=UNKNOWN */
-__inline static int __islessgreaterl___0(long double __x , long double __y ) 
+/* BEGIN FUNCTION-DEF draw_pixel LOC=UNKNOWN */
+int draw_pixel(uint32_t *pixel_buffer , int x , int y , uint32_t colour ) 
 { 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
+  uint32_t position ;
 
   {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
+  if (x < 0) {
+    return (1);
   } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
+  if (y < 0) {
+    return (1);
   }
-  return (tmp___15);
+  if (x >= 640) {
+    return (1);
+  } else
+  if (y >= 480) {
+    return (1);
+  }
+  position = (uint32_t )(y * 640 + x);
+  *(pixel_buffer + position) = colour;
+  return (0);
 }
 }
-/* END FUNCTION-DEF __islessgreaterl___0 LOC=UNKNOWN */
+/* END FUNCTION-DEF draw_pixel LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __FLOAT_BITS___0 LOC=UNKNOWN */
+__inline static unsigned int __FLOAT_BITS___0(float __f ) 
+{ 
+  union __anonunion___u_477865197___0 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __FLOAT_BITS___0 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __islessgreaterl LOC=UNKNOWN */
 __inline static int __islessgreaterl(long double __x , long double __y ) 
@@ -13411,1371 +11397,6 @@ __inline static int __islessgreaterl(long double __x , long double __y )
 }
 /* END FUNCTION-DEF __islessgreaterl LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __FLOAT_BITS___0 LOC=UNKNOWN */
-__inline static unsigned int __FLOAT_BITS___0(float __f ) 
-{ 
-  union __anonunion___u_477865197___0 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __FLOAT_BITS___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreater___1 LOC=UNKNOWN */
-__inline static int __islessgreater___1(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreater___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF draw_pixel LOC=UNKNOWN */
-int draw_pixel(uint32_t *pixel_buffer , int x , int y , uint32_t colour ) 
-{ 
-  uint32_t position ;
-
-  {
-  if (x < 0) {
-    return (1);
-  } else
-  if (y < 0) {
-    return (1);
-  }
-  if (x >= 640) {
-    return (1);
-  } else
-  if (y >= 480) {
-    return (1);
-  }
-  position = (uint32_t )(y * 640 + x);
-  *(pixel_buffer + position) = colour;
-  return (0);
-}
-}
-/* END FUNCTION-DEF draw_pixel LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterl___1 LOC=UNKNOWN */
-__inline static int __isgreaterl___1(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterl___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterf___0 LOC=UNKNOWN */
-__inline static int __isgreaterf___0(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterf___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF get_direction LOC=UNKNOWN */
-struct vector2d get_direction(struct player *p___0 ) 
-{ 
-  struct vector2d direction ;
-
-  {
-  direction = p___0->obj_vert[0];
-  normalise_vector(& direction);
-  return (direction);
-}
-}
-/* END FUNCTION-DEF get_direction LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF print_vector LOC=UNKNOWN */
-void print_vector(struct vector2d *a ) 
-{ 
-
-
-  {
-  printf((char const   */* __restrict  */)"x = %f\n y = %f\n", (double )a->x, (double )a->y);
-  return;
-}
-}
-/* END FUNCTION-DEF print_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF multiply_vector LOC=UNKNOWN */
-void multiply_vector(struct vector2d *v , float n ) 
-{ 
-
-
-  {
-  v->x *= n;
-  v->y *= n;
-  return;
-}
-}
-/* END FUNCTION-DEF multiply_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessf LOC=UNKNOWN */
-__inline static int __islessf(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessf LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isless LOC=UNKNOWN */
-__inline static int __isless(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isless LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterf___1 LOC=UNKNOWN */
-__inline static int __isgreaterf___1(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterf___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isless___1 LOC=UNKNOWN */
-__inline static int __isless___1(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isless___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF collision_asteroids LOC=UNKNOWN */
-int collision_asteroids(struct asteroid *asteroids___0 , int size , struct vector2d *v ,
-                        float radius ) 
-{ 
-  int i ;
-  float sum ;
-  float a ;
-  double tmp ;
-  float b ;
-  double tmp___0 ;
-  float distance ;
-  double tmp___1 ;
-
-  {
-  i = 0;
-  i = 0;
-  while (i < size) {
-    if ((asteroids___0 + i)->alive == 1) {
-      sum = (asteroids___0 + i)->hit_radius + radius;
-      tmp = pow((double )((asteroids___0 + i)->location.x - v->x), (double )2);
-      a = (float )tmp;
-      tmp___0 = pow((double )((asteroids___0 + i)->location.y - v->y), (double )2);
-      b = (float )tmp___0;
-      tmp___1 = sqrt((double )(a + b));
-      distance = (float )tmp___1;
-      if (distance < sum) {
-        return (i);
-      }
-    }
-    i ++;
-  }
-  return (-1);
-}
-}
-/* END FUNCTION-DEF collision_asteroids LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF SDL_AtomicGet LOC=UNKNOWN */
-__inline static int SDL_AtomicGet(SDL_atomic_t *a ) 
-{ 
-  int value ;
-
-  {
-  value = a->value;
-  __asm__  volatile   ("": : : "memory");
-  return (value);
-}
-}
-/* END FUNCTION-DEF SDL_AtomicGet LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __DOUBLE_BITS___0 LOC=UNKNOWN */
-__inline static unsigned long long __DOUBLE_BITS___0(double __f ) 
-{ 
-  union __anonunion___u_302425027___0 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __DOUBLE_BITS___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF SDL_Swap16 LOC=UNKNOWN */
-__inline static Uint16 SDL_Swap16(Uint16 x ) 
-{ 
-
-
-  {
-  return ((Uint16 )(((int )x << 8) | ((int )x >> 8)));
-}
-}
-/* END FUNCTION-DEF SDL_Swap16 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterl___2 LOC=UNKNOWN */
-__inline static int __isgreaterl___2(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x > __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterl___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequall___3 LOC=UNKNOWN */
-__inline static int __islessequall___3(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequall___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequal___2 LOC=UNKNOWN */
-__inline static int __islessequal___2(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequal___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF update_player LOC=UNKNOWN */
-void update_player(struct player *p___0 ) 
-{ 
-  struct vector2d translation ;
-  int i ;
-
-  {
-  limit_vector(& p___0->velocity, (float )2);
-  add_vector(& p___0->location, & p___0->velocity);
-  translation.x = (float )320;
-  translation.y = (float )240;
-  i = 0;
-  i = 0;
-  while (i < 3) {
-    p___0->world_vert[i] = add_vector_new(& p___0->obj_vert[i], & p___0->location);
-    add_vector(& p___0->world_vert[i], & translation);
-    i ++;
-  }
-  i = 0;
-  while (i < 3) {
-    add_vector(& p___0->bullets[i].location, & p___0->bullets[i].velocity);
-    i ++;
-  }
-  return;
-}
-}
-/* END FUNCTION-DEF update_player LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreater___0 LOC=UNKNOWN */
-__inline static int __islessgreater___0(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreater___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF magnitude_vector LOC=UNKNOWN */
-float magnitude_vector(struct vector2d *v ) 
-{ 
-  float c2 ;
-  double tmp ;
-  double tmp___0 ;
-  double tmp___1 ;
-
-  {
-  tmp = pow((double )v->x, (double )2);
-  tmp___0 = pow((double )v->y, (double )2);
-  c2 = (float )(tmp + tmp___0);
-  tmp___1 = sqrt((double )c2);
-  return ((float )tmp___1);
-}
-}
-/* END FUNCTION-DEF magnitude_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __DOUBLE_BITS___2 LOC=UNKNOWN */
-__inline static unsigned long long __DOUBLE_BITS___2(double __f ) 
-{ 
-  union __anonunion___u_302425027___2 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __DOUBLE_BITS___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreaterf___1 LOC=UNKNOWN */
-__inline static int __islessgreaterf___1(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreaterf___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequall___2 LOC=UNKNOWN */
-__inline static int __islessequall___2(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequall___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __bswap32 LOC=UNKNOWN */
-__inline static uint32_t __bswap32(uint32_t __x ) 
-{ 
-
-
-  {
-  return ((((__x >> 24) | ((__x >> 8) & 65280U)) | ((__x << 8) & 16711680U)) | (__x << 24));
-}
-}
-/* END FUNCTION-DEF __bswap32 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequall___0 LOC=UNKNOWN */
-__inline static int __islessequall___0(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequall___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequal LOC=UNKNOWN */
-__inline static int __islessequal(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequal LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF normalise_vector LOC=UNKNOWN */
-void normalise_vector(struct vector2d *v ) 
-{ 
-  float mag ;
-  float tmp ;
-
-  {
-  tmp = magnitude_vector(v);
-  mag = tmp;
-  divide_vector(v, mag);
-  return;
-}
-}
-/* END FUNCTION-DEF normalise_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreater___3 LOC=UNKNOWN */
-__inline static int __islessgreater___3(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreater___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isless___3 LOC=UNKNOWN */
-__inline static int __isless___3(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isless___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __FLOAT_BITS LOC=UNKNOWN */
-__inline static unsigned int __FLOAT_BITS(float __f ) 
-{ 
-  union __anonunion___u_477865197 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __FLOAT_BITS LOC=UNKNOWN */
-
 /* BEGIN FUNCTION-DEF draw_asteroids LOC=UNKNOWN */
 void draw_asteroids(uint32_t *pixel_buffer , struct asteroid *asteroids___0 , int size ) 
 { 
@@ -14824,353 +11445,17 @@ void draw_asteroids(uint32_t *pixel_buffer , struct asteroid *asteroids___0 , in
 }
 /* END FUNCTION-DEF draw_asteroids LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF init LOC=UNKNOWN */
-int init(int width , int height ) 
+/* BEGIN FUNCTION-DEF __DOUBLE_BITS___2 LOC=UNKNOWN */
+__inline static unsigned long long __DOUBLE_BITS___2(double __f ) 
 { 
-  char const __attribute__((__visibility__("default")))  *tmp ;
-  int __attribute__((__visibility__("default")))  tmp___0 ;
-  SDL_Texture __attribute__((__visibility__("default")))  *tmp___1 ;
-  void *tmp___2 ;
-  char const __attribute__((__visibility__("default")))  *tmp___3 ;
-  char const __attribute__((__visibility__("default")))  *tmp___4 ;
-
-  {
-  tmp___0 = SDL_Init((Uint32 )32);
-  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
-    tmp = SDL_GetError();
-    printf((char const   */* __restrict  */)"SDL could not initialize! SDL_Error: %s\n",
-           tmp);
-    return (1);
-  }
-  SDL_CreateWindowAndRenderer(640, 480, 4, & window, & renderer);
-  tmp___1 = SDL_CreateTexture(renderer, (Uint32 )-2042224636, 1, 640, 480);
-  screen = (SDL_Texture *)tmp___1;
-  tmp___2 = malloc(307200UL * sizeof(Uint32 ));
-  pixels = (Uint32 *)tmp___2;
-  if ((unsigned int )window == (unsigned int )((void *)0)) {
-    tmp___3 = SDL_GetError();
-    printf((char const   */* __restrict  */)"Window could not be created! SDL_Error: %s\n",
-           tmp___3);
-    return (1);
-  }
-  if ((unsigned int )screen == (unsigned int )((void *)0)) {
-    tmp___4 = SDL_GetError();
-    printf((char const   */* __restrict  */)"Texture could not be created! SDL_Error: %s\n",
-           tmp___4);
-    return (1);
-  }
-  if ((unsigned int )pixels == (unsigned int )((void *)0)) {
-    printf((char const   */* __restrict  */)"Error allocating pixel buffer");
-    return (1);
-  }
-  return (0);
-}
-}
-/* END FUNCTION-DEF init LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequalf LOC=UNKNOWN */
-__inline static int __islessequalf(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequalf LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __FLOAT_BITS___1 LOC=UNKNOWN */
-__inline static unsigned int __FLOAT_BITS___1(float __f ) 
-{ 
-  union __anonunion___u_477865197___1 __u ;
+  union __anonunion___u_302425027___2 __u ;
 
   {
   __u.__f = __f;
   return (__u.__i);
 }
 }
-/* END FUNCTION-DEF __FLOAT_BITS___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF spawn_asteroids LOC=UNKNOWN */
-void spawn_asteroids(struct asteroid *a , int length , int size , struct vector2d v ) 
-{ 
-  int i ;
-  int count ;
-
-  {
-  i = 0;
-  count = 0;
-  i = 0;
-  while (i < length) {
-    if ((a + i)->alive == 0) {
-      if (count == 3) {
-        break;
-      }
-      (a + i)->location = v;
-      (a + i)->hit_radius /= (float )2;
-      (a + i)->alive = 1;
-      count ++;
-      shrink_asteroid(a + i, size);
-    }
-    i ++;
-  }
-  return;
-}
-}
-/* END FUNCTION-DEF spawn_asteroids LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequall___2 LOC=UNKNOWN */
-__inline static int __isgreaterequall___2(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequall___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequalf___0 LOC=UNKNOWN */
-__inline static int __islessequalf___0(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequalf___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequal___1 LOC=UNKNOWN */
-__inline static int __isgreaterequal___1(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequal___1 LOC=UNKNOWN */
+/* END FUNCTION-DEF __DOUBLE_BITS___2 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __isgreaterf___2 LOC=UNKNOWN */
 __inline static int __isgreaterf___2(float_t __x , float_t __y ) 
@@ -15238,6 +11523,426 @@ __inline static int __isgreaterf___2(float_t __x , float_t __y )
 }
 /* END FUNCTION-DEF __isgreaterf___2 LOC=UNKNOWN */
 
+/* BEGIN FUNCTION-DEF __isgreaterequalf LOC=UNKNOWN */
+__inline static int __isgreaterequalf(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequalf LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessf LOC=UNKNOWN */
+__inline static int __islessf(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessf LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequall___0 LOC=UNKNOWN */
+__inline static int __isgreaterequall___0(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequall___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessl___1 LOC=UNKNOWN */
+__inline static int __islessl___1(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessl___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF main_6317132 LOC=UNKNOWN */
+int main_6317132(int argc , char **args , char **_formal_envp ) 
+{ 
+  int tmp ;
+  int i ;
+  int j ;
+  int offset ;
+  struct vector2d translation ;
+  struct vector2d top_left ;
+  int _BARRIER_0 ;
+  struct _1_main_1_opaque_NodeStruct *p11 ;
+  int r12 ;
+  struct _1_main_1_opaque_NodeStruct *p13 ;
+  int r14 ;
+  struct _1_main_1_opaque_NodeStruct *p15 ;
+  int r16 ;
+  struct _1_main_1_opaque_NodeStruct *p17 ;
+  int _1_main__BEGIN_1 ;
+  int _1_main__END_1 ;
+  int _1_main__BARRIER_2 ;
+
+  {
+  _global_argc = argc;
+  _global_argv = args;
+  _global_envp = _formal_envp;
+  _BARRIER_0 = 1;
+  _1_main__BEGIN_1 = 1;
+  p11 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p11->next = p11;
+  p11->prev = p11;
+  _1_main_1_opaque_list_1 = p11;
+  r16 = rand();
+  p17 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p17->data = 0 * r16;
+  p17->next = _1_main_1_opaque_list_1->next;
+  p17->prev = _1_main_1_opaque_list_1;
+  (_1_main_1_opaque_list_1->next)->prev = p17;
+  _1_main_1_opaque_list_1->next = p17;
+  r14 = rand();
+  p15 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p15->data = 1 * r14;
+  p15->next = _1_main_1_opaque_list_1->next;
+  p15->prev = _1_main_1_opaque_list_1;
+  (_1_main_1_opaque_list_1->next)->prev = p15;
+  _1_main_1_opaque_list_1->next = p15;
+  r12 = rand();
+  p13 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p13->data = 2 * r12;
+  p13->next = _1_main_1_opaque_list_1->next;
+  p13->prev = _1_main_1_opaque_list_1;
+  (_1_main_1_opaque_list_1->next)->prev = p13;
+  _1_main_1_opaque_list_1->next = p13;
+  _1_main_1_opaque_ptr_1 = _1_main_1_opaque_list_1->next;
+  _1_main_1_opaque_ptr_2 = _1_main_1_opaque_ptr_1;
+  _1_main__END_1 = 1;
+  _1_main__BARRIER_2 = 1;
+  tmp = init(640, 480);
+  if (tmp == 1) {
+    return (0);
+  }
+  i = 0;
+  j = 0;
+  offset = 0;
+  translation.x = (float )-320;
+  translation.y = (float )-240;
+  i = 0;
+  while (i < 3) {
+    init_player(& lives[i]);
+    lives[i].lives = 1;
+    j = 0;
+    while (j < 3) {
+      divide_vector(& lives[i].obj_vert[j], (float )2);
+      j ++;
+    }
+    top_left.x = (float )(20 + offset);
+    top_left.y = (float )20;
+    add_vector(& top_left, & translation);
+    lives[i].location = top_left;
+    update_player(& lives[i]);
+    offset += 20;
+    i ++;
+  }
+  init_player(& p);
+  init_asteroids(asteroids, 27);
+  emscripten_set_main_loop(& mainloop, 0, 1);
+  return (0);
+}
+}
+/* END FUNCTION-DEF main_6317132 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isless___2 LOC=UNKNOWN */
+__inline static int __isless___2(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isless___2 LOC=UNKNOWN */
+
 /* BEGIN FUNCTION-DEF __islessequal___3 LOC=UNKNOWN */
 __inline static int __islessequal___3(double_t __x , double_t __y ) 
 { 
@@ -15304,17 +12009,71 @@ __inline static int __islessequal___3(double_t __x , double_t __y )
 }
 /* END FUNCTION-DEF __islessequal___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __FLOAT_BITS___2 LOC=UNKNOWN */
-__inline static unsigned int __FLOAT_BITS___2(float __f ) 
+/* BEGIN FUNCTION-DEF __islessgreaterl___0 LOC=UNKNOWN */
+__inline static int __islessgreaterl___0(long double __x , long double __y ) 
 { 
-  union __anonunion___u_477865197___2 __u ;
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
 
   {
-  __u.__f = __f;
-  return (__u.__i);
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __FLOAT_BITS___2 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessgreaterl___0 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __isgreaterf___3 LOC=UNKNOWN */
 __inline static int __isgreaterf___3(float_t __x , float_t __y ) 
@@ -15382,31 +12141,8 @@ __inline static int __isgreaterf___3(float_t __x , float_t __y )
 }
 /* END FUNCTION-DEF __isgreaterf___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __DOUBLE_BITS___3 LOC=UNKNOWN */
-__inline static unsigned long long __DOUBLE_BITS___3(double __f ) 
-{ 
-  union __anonunion___u_302425027___3 __u ;
-
-  {
-  __u.__f = __f;
-  return (__u.__i);
-}
-}
-/* END FUNCTION-DEF __DOUBLE_BITS___3 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF SDL_Swap32 LOC=UNKNOWN */
-__inline static Uint32 SDL_Swap32(Uint32 x ) 
-{ 
-
-
-  {
-  return ((((x << 24) | ((x << 8) & 16711680U)) | ((x >> 8) & 65280U)) | (x >> 24));
-}
-}
-/* END FUNCTION-DEF SDL_Swap32 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequalf LOC=UNKNOWN */
-__inline static int __isgreaterequalf(float_t __x , float_t __y ) 
+/* BEGIN FUNCTION-DEF __isgreaterequalf___0 LOC=UNKNOWN */
+__inline static int __isgreaterequalf___0(float_t __x , float_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -15428,11 +12164,11 @@ __inline static int __isgreaterequalf(float_t __x , float_t __y )
 
   {
   if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS(__x);
+    tmp___10 = __FLOAT_BITS___0(__x);
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
       tmp___12 = __fpclassifyl((long double )__x);
@@ -15444,11 +12180,11 @@ __inline static int __isgreaterequalf(float_t __x , float_t __y )
     tmp___9 = 1;
   } else {
     if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS(__y);
+      tmp___4 = __FLOAT_BITS___0(__y);
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
         tmp___6 = __fpclassifyl((long double )__y);
@@ -15469,27 +12205,142 @@ __inline static int __isgreaterequalf(float_t __x , float_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __isgreaterequalf LOC=UNKNOWN */
+/* END FUNCTION-DEF __isgreaterequalf___0 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF rotate_player LOC=UNKNOWN */
-void rotate_player(struct player *p___0 , float degrees ) 
+/* BEGIN FUNCTION-DEF __isgreater___3 LOC=UNKNOWN */
+__inline static int __isgreater___3(double_t __x , double_t __y ) 
 { 
-  int i ;
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
 
   {
-  i = 0;
-  i = 0;
-  while (i < 3) {
-    rotate_vector(& p___0->obj_vert[i], degrees);
-    i ++;
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
   }
-  return;
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
 }
 }
-/* END FUNCTION-DEF rotate_player LOC=UNKNOWN */
+/* END FUNCTION-DEF __isgreater___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessgreaterf___3 LOC=UNKNOWN */
-__inline static int __islessgreaterf___3(float_t __x , float_t __y ) 
+/* BEGIN FUNCTION-DEF __isgreaterf___1 LOC=UNKNOWN */
+__inline static int __isgreaterf___1(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterf___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequalf___3 LOC=UNKNOWN */
+__inline static int __islessequalf___3(float_t __x , float_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -15544,7 +12395,7 @@ __inline static int __islessgreaterf___3(float_t __x , float_t __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
-  if (__x != __y) {
+  if (__x <= __y) {
     tmp___15 = 1;
   } else {
     tmp___15 = 0;
@@ -15552,7 +12403,592 @@ __inline static int __islessgreaterf___3(float_t __x , float_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessgreaterf___3 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessequalf___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __bswap16 LOC=UNKNOWN */
+__inline static uint16_t __bswap16(uint16_t __x ) 
+{ 
+
+
+  {
+  return ((uint16_t )(((int )__x << 8) | ((int )__x >> 8)));
+}
+}
+/* END FUNCTION-DEF __bswap16 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF SDL_AtomicGetPtr LOC=UNKNOWN */
+__inline static void *SDL_AtomicGetPtr(void **a ) 
+{ 
+  void *value ;
+
+  {
+  value = *a;
+  __asm__  volatile   ("": : : "memory");
+  return (value);
+}
+}
+/* END FUNCTION-DEF SDL_AtomicGetPtr LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessf___1 LOC=UNKNOWN */
+__inline static int __islessf___1(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessf___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequalf___1 LOC=UNKNOWN */
+__inline static int __islessequalf___1(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequalf___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreater___1 LOC=UNKNOWN */
+__inline static int __isgreater___1(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreater___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequal___2 LOC=UNKNOWN */
+__inline static int __islessequal___2(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequal___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessl___2 LOC=UNKNOWN */
+__inline static int __islessl___2(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessl___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequal___0 LOC=UNKNOWN */
+__inline static int __islessequal___0(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequal___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isspace LOC=UNKNOWN */
+__inline static int __isspace(int _c ) 
+{ 
+  int tmp ;
+
+  {
+  if (_c == 32) {
+    tmp = 1;
+  } else
+  if ((unsigned int )_c - 9U < 5U) {
+    tmp = 1;
+  } else {
+    tmp = 0;
+  }
+  return (tmp);
+}
+}
+/* END FUNCTION-DEF __isspace LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __bswap64 LOC=UNKNOWN */
+__inline static uint64_t __bswap64(uint64_t __x ) 
+{ 
+  uint32_t tmp ;
+  uint32_t tmp___0 ;
+
+  {
+  tmp = __bswap32((uint32_t )__x);
+  tmp___0 = __bswap32((uint32_t )(__x >> 32));
+  return (((unsigned long long )tmp << 32) | (unsigned long long )tmp___0);
+}
+}
+/* END FUNCTION-DEF __bswap64 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequal LOC=UNKNOWN */
+__inline static int __isgreaterequal(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequal LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequalf___2 LOC=UNKNOWN */
+__inline static int __islessequalf___2(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequalf___2 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF mainloop LOC=UNKNOWN */
 void mainloop(void) 
@@ -15680,27 +13116,8 @@ void mainloop(void)
 }
 /* END FUNCTION-DEF mainloop LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __isspace LOC=UNKNOWN */
-__inline static int __isspace(int _c ) 
-{ 
-  int tmp ;
-
-  {
-  if (_c == 32) {
-    tmp = 1;
-  } else
-  if ((unsigned int )_c - 9U < 5U) {
-    tmp = 1;
-  } else {
-    tmp = 0;
-  }
-  return (tmp);
-}
-}
-/* END FUNCTION-DEF __isspace LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessl___2 LOC=UNKNOWN */
-__inline static int __islessl___2(long double __x , long double __y ) 
+/* BEGIN FUNCTION-DEF __islessgreaterl___2 LOC=UNKNOWN */
+__inline static int __islessgreaterl___2(long double __x , long double __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -15755,6 +13172,72 @@ __inline static int __islessl___2(long double __x , long double __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreaterl___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessf___0 LOC=UNKNOWN */
+__inline static int __islessf___0(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
   if (__x < __y) {
     tmp___15 = 1;
   } else {
@@ -15763,10 +13246,76 @@ __inline static int __islessl___2(long double __x , long double __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessl___2 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessf___0 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessgreater___2 LOC=UNKNOWN */
-__inline static int __islessgreater___2(double_t __x , double_t __y ) 
+/* BEGIN FUNCTION-DEF __isgreaterf LOC=UNKNOWN */
+__inline static int __isgreaterf(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterf LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequall___2 LOC=UNKNOWN */
+__inline static int __isgreaterequall___2(long double __x , long double __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -15792,10 +13341,10 @@ __inline static int __islessgreater___2(double_t __x , double_t __y )
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2(__x);
+      tmp___11 = __DOUBLE_BITS___2((double )__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
-      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___12 = __fpclassifyl(__x);
       tmp___13 = tmp___12 == 0;
     }
     tmp___14 = tmp___13;
@@ -15808,7 +13357,152 @@ __inline static int __islessgreater___2(double_t __x , double_t __y )
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2(__y);
+        tmp___5 = __DOUBLE_BITS___2((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequall___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF get_direction LOC=UNKNOWN */
+struct vector2d get_direction(struct player *p___0 ) 
+{ 
+  struct vector2d direction ;
+
+  {
+  direction = p___0->obj_vert[0];
+  normalise_vector(& direction);
+  return (direction);
+}
+}
+/* END FUNCTION-DEF get_direction LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequall___1 LOC=UNKNOWN */
+__inline static int __isgreaterequall___1(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequall___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreaterf LOC=UNKNOWN */
+__inline static int __islessgreaterf(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS((double )__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
         tmp___6 = __fpclassifyl((long double )__y);
@@ -15829,179 +13523,102 @@ __inline static int __islessgreater___2(double_t __x , double_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessgreater___2 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessgreaterf LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF bounds_player LOC=UNKNOWN */
-void bounds_player(struct player *p___0 ) 
+/* BEGIN FUNCTION-DEF shrink_asteroid LOC=UNKNOWN */
+int shrink_asteroid(struct asteroid *a , int size ) 
 { 
   int i ;
 
   {
+  a->obj_vert[0].x = (float ).0;
+  a->obj_vert[0].y = (float ).4;
+  a->obj_vert[1].x = (float ).2;
+  a->obj_vert[1].y = (float ).3;
+  a->obj_vert[2].x = (float ).2;
+  a->obj_vert[2].y = (float ).1;
+  a->obj_vert[3].x = (float ).4;
+  a->obj_vert[3].y = (float ).0;
+  a->obj_vert[4].x = (float ).3;
+  a->obj_vert[4].y = (float )(- .2);
+  a->obj_vert[5].x = (float ).1;
+  a->obj_vert[5].y = (float )(- .2);
+  a->obj_vert[6].x = (float ).0;
+  a->obj_vert[6].y = (float )(- .3);
+  a->obj_vert[7].x = (float )(- .2);
+  a->obj_vert[7].y = (float )(- .2);
+  a->obj_vert[8].x = (float )(- .4);
+  a->obj_vert[8].y = (float )0;
+  a->obj_vert[9].x = (float )(- .3);
+  a->obj_vert[9].y = (float ).3;
   i = 0;
-  if (p___0->location.x < (float )-320) {
-    p___0->location.x = (float )320;
-  }
-  if (p___0->location.x > (float )320) {
-    p___0->location.x = (float )-320;
-  }
-  if (p___0->location.y < (float )-240) {
-    p___0->location.y = (float )240;
-  }
-  if (p___0->location.y > (float )240) {
-    p___0->location.y = (float )-240;
-  }
   i = 0;
-  while (i < 3) {
-    if (p___0->bullets[i].location.x < (float )0) {
-      p___0->bullets[i].alive = (enum boolean )1;
-    } else
-    if (p___0->bullets[i].location.x >= (float )640) {
-      p___0->bullets[i].alive = (enum boolean )1;
-    }
-    if (p___0->bullets[i].location.y < (float )0) {
-      p___0->bullets[i].alive = (enum boolean )1;
-    } else
-    if (p___0->bullets[i].location.y >= (float )480) {
-      p___0->bullets[i].alive = (enum boolean )1;
-    }
+  while (i < 10) {
+    multiply_vector(& a->obj_vert[i], (float )88);
     i ++;
+  }
+  if (size == 2) {
+    i = 0;
+    while (i < 10) {
+      divide_vector(& a->obj_vert[i], (float )2);
+      i ++;
+    }
+    a->size = (enum sizes )1;
+    return (0);
+  }
+  if (size == 1) {
+    i = 0;
+    while (i < 10) {
+      divide_vector(& a->obj_vert[i], (float )4);
+      i ++;
+    }
+    a->size = (enum sizes )0;
+    return (0);
+  }
+  if (size == 0) {
+    i = 0;
+    while (i < 10) {
+      divide_vector(& a->obj_vert[i], (float )8);
+      i ++;
+    }
+    return (0);
+  }
+  return (1);
+}
+}
+/* END FUNCTION-DEF shrink_asteroid LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __DOUBLE_BITS___1 LOC=UNKNOWN */
+__inline static unsigned long long __DOUBLE_BITS___1(double __f ) 
+{ 
+  union __anonunion___u_302425027___1 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __DOUBLE_BITS___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF limit_vector LOC=UNKNOWN */
+void limit_vector(struct vector2d *v , float limit ) 
+{ 
+  float mag ;
+  float tmp ;
+  float ratio ;
+
+  {
+  tmp = magnitude_vector(v);
+  mag = tmp;
+  if (mag > limit) {
+    ratio = limit / mag;
+    v->x *= ratio;
+    v->y *= ratio;
   }
   return;
 }
 }
-/* END FUNCTION-DEF bounds_player LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessf___2 LOC=UNKNOWN */
-__inline static int __islessf___2(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessf___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreaterl___3 LOC=UNKNOWN */
-__inline static int __islessgreaterl___3(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreaterl___3 LOC=UNKNOWN */
+/* END FUNCTION-DEF limit_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __isgreaterequalf___1 LOC=UNKNOWN */
 __inline static int __isgreaterequalf___1(float_t __x , float_t __y ) 
@@ -16069,272 +13686,8 @@ __inline static int __isgreaterequalf___1(float_t __x , float_t __y )
 }
 /* END FUNCTION-DEF __isgreaterequalf___1 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessgreater LOC=UNKNOWN */
-__inline static int __islessgreater(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreater LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isless___2 LOC=UNKNOWN */
-__inline static int __isless___2(double_t __x , double_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2(__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2(__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isless___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequalf___2 LOC=UNKNOWN */
-__inline static int __isgreaterequalf___2(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___2(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___2((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___2(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___2((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __isgreaterequalf___2 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequall LOC=UNKNOWN */
-__inline static int __islessequall(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequall LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterl___3 LOC=UNKNOWN */
-__inline static int __isgreaterl___3(long double __x , long double __y ) 
+/* BEGIN FUNCTION-DEF __isless___3 LOC=UNKNOWN */
+__inline static int __isless___3(double_t __x , double_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -16360,10 +13713,10 @@ __inline static int __isgreaterl___3(long double __x , long double __y )
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3((double )__x);
+      tmp___11 = __DOUBLE_BITS___3(__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
-      tmp___12 = __fpclassifyl(__x);
+      tmp___12 = __fpclassifyl((long double )__x);
       tmp___13 = tmp___12 == 0;
     }
     tmp___14 = tmp___13;
@@ -16376,10 +13729,10 @@ __inline static int __isgreaterl___3(long double __x , long double __y )
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___5 = __DOUBLE_BITS___3(__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
-        tmp___6 = __fpclassifyl(__y);
+        tmp___6 = __fpclassifyl((long double )__y);
         tmp___7 = tmp___6 == 0;
       }
       tmp___8 = tmp___7;
@@ -16389,7 +13742,7 @@ __inline static int __isgreaterl___3(long double __x , long double __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
-  if (__x > __y) {
+  if (__x < __y) {
     tmp___15 = 1;
   } else {
     tmp___15 = 0;
@@ -16397,60 +13750,10 @@ __inline static int __isgreaterl___3(long double __x , long double __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __isgreaterl___3 LOC=UNKNOWN */
+/* END FUNCTION-DEF __isless___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF SDL_Swap64 LOC=UNKNOWN */
-__inline static Uint64 SDL_Swap64(Uint64 x ) 
-{ 
-  Uint32 hi ;
-  Uint32 lo ;
-  Uint32 tmp ;
-  Uint32 tmp___0 ;
-
-  {
-  lo = (Uint32 )(x & 4294967295ULL);
-  x >>= 32;
-  hi = (Uint32 )(x & 4294967295ULL);
-  tmp = SDL_Swap32(lo);
-  x = (Uint64 )tmp;
-  x <<= 32;
-  tmp___0 = SDL_Swap32(hi);
-  x |= (unsigned long long )tmp___0;
-  return (x);
-}
-}
-/* END FUNCTION-DEF SDL_Swap64 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF bounds_asteroids LOC=UNKNOWN */
-void bounds_asteroids(struct asteroid *asteroids___0 , int size ) 
-{ 
-  int i ;
-
-  {
-  i = 0;
-  i = 0;
-  while (i < size) {
-    if ((asteroids___0 + i)->location.x < (float )-320) {
-      (asteroids___0 + i)->location.x = (float )320;
-    }
-    if ((asteroids___0 + i)->location.x > (float )320) {
-      (asteroids___0 + i)->location.x = (float )-320;
-    }
-    if ((asteroids___0 + i)->location.y < (float )-240) {
-      (asteroids___0 + i)->location.y = (float )240;
-    }
-    if ((asteroids___0 + i)->location.y > (float )240) {
-      (asteroids___0 + i)->location.y = (float )-240;
-    }
-    i ++;
-  }
-  return;
-}
-}
-/* END FUNCTION-DEF bounds_asteroids LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __isgreaterequalf___0 LOC=UNKNOWN */
-__inline static int __isgreaterequalf___0(float_t __x , float_t __y ) 
+/* BEGIN FUNCTION-DEF __isgreaterequalf___3 LOC=UNKNOWN */
+__inline static int __isgreaterequalf___3(float_t __x , float_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -16472,11 +13775,11 @@ __inline static int __isgreaterequalf___0(float_t __x , float_t __y )
 
   {
   if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0(__x);
+    tmp___10 = __FLOAT_BITS___3(__x);
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___11 = __DOUBLE_BITS___3((double )__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
       tmp___12 = __fpclassifyl((long double )__x);
@@ -16488,11 +13791,11 @@ __inline static int __isgreaterequalf___0(float_t __x , float_t __y )
     tmp___9 = 1;
   } else {
     if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0(__y);
+      tmp___4 = __FLOAT_BITS___3(__y);
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___5 = __DOUBLE_BITS___3((double )__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
         tmp___6 = __fpclassifyl((long double )__y);
@@ -16513,10 +13816,10 @@ __inline static int __isgreaterequalf___0(float_t __x , float_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __isgreaterequalf___0 LOC=UNKNOWN */
+/* END FUNCTION-DEF __isgreaterequalf___3 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessequal___0 LOC=UNKNOWN */
-__inline static int __islessequal___0(double_t __x , double_t __y ) 
+/* BEGIN FUNCTION-DEF __islessequalf LOC=UNKNOWN */
+__inline static int __islessequalf(float_t __x , float_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -16538,11 +13841,11 @@ __inline static int __islessequal___0(double_t __x , double_t __y )
 
   {
   if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___10 = __FLOAT_BITS(__x);
     tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
   } else {
     if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___0(__x);
+      tmp___11 = __DOUBLE_BITS((double )__x);
       tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
     } else {
       tmp___12 = __fpclassifyl((long double )__x);
@@ -16554,11 +13857,11 @@ __inline static int __islessequal___0(double_t __x , double_t __y )
     tmp___9 = 1;
   } else {
     if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___4 = __FLOAT_BITS(__y);
       tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
     } else {
       if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___0(__y);
+        tmp___5 = __DOUBLE_BITS((double )__y);
         tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
       } else {
         tmp___6 = __fpclassifyl((long double )__y);
@@ -16579,259 +13882,7 @@ __inline static int __islessequal___0(double_t __x , double_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessequal___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF add_vector_new LOC=UNKNOWN */
-struct vector2d add_vector_new(struct vector2d *a , struct vector2d *b ) 
-{ 
-  struct vector2d new ;
-
-  {
-  new.x = a->x + b->x;
-  new.y = a->y + b->y;
-  return (new);
-}
-}
-/* END FUNCTION-DEF add_vector_new LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF divide_vector LOC=UNKNOWN */
-void divide_vector(struct vector2d *v , float n ) 
-{ 
-
-
-  {
-  v->x /= n;
-  v->y /= n;
-  return;
-}
-}
-/* END FUNCTION-DEF divide_vector LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessl___1 LOC=UNKNOWN */
-__inline static int __islessl___1(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x < __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessl___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF draw_player LOC=UNKNOWN */
-void draw_player(uint32_t *pixel_buffer , struct player *p___0 ) 
-{ 
-  int i ;
-
-  {
-  i = 0;
-  if (p___0->lives > 0) {
-    draw_line(pixel_buffer, (int )p___0->world_vert[0].x, (int )p___0->world_vert[0].y,
-              (int )p___0->world_vert[1].x, (int )p___0->world_vert[1].y, 4294967295U);
-    draw_line(pixel_buffer, (int )p___0->world_vert[1].x, (int )p___0->world_vert[1].y,
-              (int )p___0->world_vert[2].x, (int )p___0->world_vert[2].y, 4294967295U);
-    draw_line(pixel_buffer, (int )p___0->world_vert[2].x, (int )p___0->world_vert[2].y,
-              (int )p___0->world_vert[0].x, (int )p___0->world_vert[0].y, 4294967295U);
-  }
-  i = 0;
-  while (i < 3) {
-    if ((unsigned int )p___0->bullets[i].alive == 0U) {
-      draw_pixel(pixel_buffer, (int )p___0->bullets[i].location.x, (int )p___0->bullets[i].location.y,
-                 4294967295U);
-    }
-    i ++;
-  }
-  return;
-}
-}
-/* END FUNCTION-DEF draw_player LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessequalf___1 LOC=UNKNOWN */
-__inline static int __islessequalf___1(float_t __x , float_t __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x <= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessequalf___1 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __islessgreaterl___1 LOC=UNKNOWN */
-__inline static int __islessgreaterl___1(long double __x , long double __y ) 
-{ 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
-
-  {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___1((float )__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___1((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl(__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___1((float )__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___1((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl(__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x != __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
-}
-}
-/* END FUNCTION-DEF __islessgreaterl___1 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessequalf LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF draw_line LOC=UNKNOWN */
 int draw_line(uint32_t *pixel_buffer , int x1 , int y1___0 , int x2 , int y2 , uint32_t colour ) 
@@ -16971,8 +14022,661 @@ int draw_line(uint32_t *pixel_buffer , int x1 , int y1___0 , int x2 , int y2 , u
 }
 /* END FUNCTION-DEF draw_line LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __islessgreaterf___0 LOC=UNKNOWN */
-__inline static int __islessgreaterf___0(float_t __x , float_t __y ) 
+/* BEGIN FUNCTION-DEF init_asteroids LOC=UNKNOWN */
+void init_asteroids(struct asteroid *asteroids___0 , int size ) 
+{ 
+  int i ;
+  int j ;
+  struct vector2d translation ;
+  int sign_x ;
+  int tmp ;
+  int sign_y ;
+  int tmp___0 ;
+  int lx ;
+  int tmp___1 ;
+  int ly ;
+  int tmp___2 ;
+  float vx ;
+  int tmp___3 ;
+  float vy ;
+  int tmp___4 ;
+  float degrees ;
+  int tmp___5 ;
+
+  {
+  i = 0;
+  j = 0;
+  translation.x = (float )320;
+  translation.y = (float )240;
+  i = 0;
+  while (i < size) {
+    tmp = rand();
+    sign_x = tmp % 100;
+    tmp___0 = rand();
+    sign_y = tmp___0 % 100;
+    tmp___1 = rand();
+    lx = (tmp___1 % 640) / 2;
+    tmp___2 = rand();
+    ly = (tmp___2 % 480) / 2;
+    tmp___3 = rand();
+    vx = (float )(tmp___3 % 500) / (float )1000;
+    tmp___4 = rand();
+    vy = (float )(tmp___4 % 500) / (float )1000;
+    tmp___5 = rand();
+    degrees = (float )(tmp___5 % 100 + 1000) / (float )1000;
+    if (sign_x >= 50) {
+      vx = - vx;
+      lx = - lx;
+      degrees = - degrees;
+    }
+    if (sign_y >= 50) {
+      vy = - vy;
+      ly = - ly;
+    }
+    if (i < 3) {
+      (asteroids___0 + i)->alive = 1;
+    } else {
+      (asteroids___0 + i)->alive = 0;
+    }
+    (asteroids___0 + i)->size = (enum sizes )2;
+    (asteroids___0 + i)->hit_radius = (float )35;
+    (asteroids___0 + i)->rotation = degrees;
+    (asteroids___0 + i)->location.x = (float )lx;
+    (asteroids___0 + i)->location.y = (float )ly;
+    (asteroids___0 + i)->velocity.x = vx;
+    (asteroids___0 + i)->velocity.y = vy;
+    (asteroids___0 + i)->obj_vert[0].x = (float ).0;
+    (asteroids___0 + i)->obj_vert[0].y = (float ).4;
+    (asteroids___0 + i)->obj_vert[1].x = (float ).2;
+    (asteroids___0 + i)->obj_vert[1].y = (float ).3;
+    (asteroids___0 + i)->obj_vert[2].x = (float ).2;
+    (asteroids___0 + i)->obj_vert[2].y = (float ).1;
+    (asteroids___0 + i)->obj_vert[3].x = (float ).4;
+    (asteroids___0 + i)->obj_vert[3].y = (float ).0;
+    (asteroids___0 + i)->obj_vert[4].x = (float ).3;
+    (asteroids___0 + i)->obj_vert[4].y = (float )(- .2);
+    (asteroids___0 + i)->obj_vert[5].x = (float ).1;
+    (asteroids___0 + i)->obj_vert[5].y = (float )(- .2);
+    (asteroids___0 + i)->obj_vert[6].x = (float ).0;
+    (asteroids___0 + i)->obj_vert[6].y = (float )(- .3);
+    (asteroids___0 + i)->obj_vert[7].x = (float )(- .2);
+    (asteroids___0 + i)->obj_vert[7].y = (float )(- .2);
+    (asteroids___0 + i)->obj_vert[8].x = (float )(- .4);
+    (asteroids___0 + i)->obj_vert[8].y = (float )0;
+    (asteroids___0 + i)->obj_vert[9].x = (float )(- .3);
+    (asteroids___0 + i)->obj_vert[9].y = (float ).3;
+    j = 0;
+    while (j < 10) {
+      multiply_vector(& (asteroids___0 + i)->obj_vert[j], (float )88);
+      add_vector(& (asteroids___0 + i)->world_vert[j], & (asteroids___0 + i)->obj_vert[j]);
+      add_vector(& (asteroids___0 + i)->world_vert[j], & translation);
+      j ++;
+    }
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF init_asteroids LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF rotate_vector LOC=UNKNOWN */
+void rotate_vector(struct vector2d *v , float degrees ) 
+{ 
+  float angle ;
+  float sine ;
+  double tmp ;
+  float cosine ;
+  double tmp___0 ;
+  float matrix[2][2] ;
+  float x ;
+  float y ;
+
+  {
+  angle = (float )(((double )degrees * 3.14159265358979323846) / (double )180);
+  tmp = sin((double )angle);
+  sine = (float )tmp;
+  tmp___0 = cos((double )angle);
+  cosine = (float )tmp___0;
+  matrix[0][0] = cosine;
+  matrix[0][1] = - sine;
+  matrix[1][0] = sine;
+  matrix[1][1] = cosine;
+  x = v->x;
+  y = v->y;
+  v->x = matrix[0][0] * x + matrix[0][1] * y;
+  v->y = matrix[1][0] * x + matrix[1][1] * y;
+  return;
+}
+}
+/* END FUNCTION-DEF rotate_vector LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequall___0 LOC=UNKNOWN */
+__inline static int __islessequall___0(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequall___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __FLOAT_BITS___1 LOC=UNKNOWN */
+__inline static unsigned int __FLOAT_BITS___1(float __f ) 
+{ 
+  union __anonunion___u_477865197___1 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __FLOAT_BITS___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF main LOC=UNKNOWN */
+int main(int argc , char **args , char **_formal_envp ) 
+{ 
+  int tmp ;
+  int i ;
+  int j ;
+  int offset ;
+  struct vector2d translation ;
+  struct vector2d top_left ;
+  int _BARRIER_0 ;
+  struct _1_main_1_opaque_NodeStruct *p11 ;
+  int r12 ;
+  struct _1_main_1_opaque_NodeStruct *p13 ;
+  int r14 ;
+  struct _1_main_1_opaque_NodeStruct *p15 ;
+  int r16 ;
+  struct _1_main_1_opaque_NodeStruct *p17 ;
+  int _1_main__BEGIN_1 ;
+  int _1_main__END_1 ;
+  int _1_main__BARRIER_2 ;
+
+  {
+  {
+  {
+  {
+  {
+  goto pixels_i$nit_INLINE_pixels_i$nit;
+  }
+  pixels_i$nit_INLINE_pixels_i$nit: /* CIL Label */ ;
+  }
+  {
+  {
+  goto window_i$nit_INLINE_window_i$nit;
+  }
+  window_i$nit_INLINE_window_i$nit: /* CIL Label */ ;
+  }
+  {
+  {
+  goto _global_envp_i$nit_INLINE__global_envp_i$nit;
+  }
+  _global_envp_i$nit_INLINE__global_envp_i$nit: /* CIL Label */ ;
+  }
+  {
+  {
+  goto _global_argv_i$nit_INLINE__global_argv_i$nit;
+  }
+  _global_argv_i$nit_INLINE__global_argv_i$nit: /* CIL Label */ ;
+  }
+  {
+  {
+  goto _global_argc_i$nit_INLINE__global_argc_i$nit;
+  }
+  _global_argc_i$nit_INLINE__global_argc_i$nit: /* CIL Label */ ;
+  }
+  goto megaInit_INLINE_megaInit;
+  }
+  megaInit_INLINE_megaInit: /* CIL Label */ ;
+  }
+  _global_argc = argc;
+  _global_argv = args;
+  _global_envp = _formal_envp;
+  _BARRIER_0 = 1;
+  _1_main__BEGIN_1 = 1;
+  p11 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p11->next = p11;
+  p11->prev = p11;
+  _1_main_1_opaque_list_1 = p11;
+  r16 = rand();
+  p17 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p17->data = 0 * r16;
+  p17->next = _1_main_1_opaque_list_1->next;
+  p17->prev = _1_main_1_opaque_list_1;
+  (_1_main_1_opaque_list_1->next)->prev = p17;
+  _1_main_1_opaque_list_1->next = p17;
+  r14 = rand();
+  p15 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p15->data = 1 * r14;
+  p15->next = _1_main_1_opaque_list_1->next;
+  p15->prev = _1_main_1_opaque_list_1;
+  (_1_main_1_opaque_list_1->next)->prev = p15;
+  _1_main_1_opaque_list_1->next = p15;
+  r12 = rand();
+  p13 = (struct _1_main_1_opaque_NodeStruct *)malloc(sizeof(struct _1_main_1_opaque_NodeStruct ));
+  p13->data = 2 * r12;
+  p13->next = _1_main_1_opaque_list_1->next;
+  p13->prev = _1_main_1_opaque_list_1;
+  (_1_main_1_opaque_list_1->next)->prev = p13;
+  _1_main_1_opaque_list_1->next = p13;
+  _1_main_1_opaque_ptr_1 = _1_main_1_opaque_list_1->next;
+  _1_main_1_opaque_ptr_2 = _1_main_1_opaque_ptr_1;
+  _1_main__END_1 = 1;
+  _1_main__BARRIER_2 = 1;
+  tmp = init(640, 480);
+  if (tmp == 1) {
+    return (0);
+  }
+  i = 0;
+  j = 0;
+  offset = 0;
+  translation.x = (float )-320;
+  translation.y = (float )-240;
+  i = 0;
+  while (i < 3) {
+    init_player(& lives[i]);
+    lives[i].lives = 1;
+    j = 0;
+    while (j < 3) {
+      divide_vector(& lives[i].obj_vert[j], (float )2);
+      j ++;
+    }
+    top_left.x = (float )(20 + offset);
+    top_left.y = (float )20;
+    add_vector(& top_left, & translation);
+    lives[i].location = top_left;
+    update_player(& lives[i]);
+    offset += 20;
+    i ++;
+  }
+  init_player(& p);
+  init_asteroids(asteroids, 27);
+  emscripten_set_main_loop(& mainloop, 0, 1);
+  return (0);
+}
+}
+/* END FUNCTION-DEF main LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF SDL_AtomicGet LOC=UNKNOWN */
+__inline static int SDL_AtomicGet(SDL_atomic_t *a ) 
+{ 
+  int value ;
+
+  {
+  value = a->value;
+  __asm__  volatile   ("": : : "memory");
+  return (value);
+}
+}
+/* END FUNCTION-DEF SDL_AtomicGet LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreater___0 LOC=UNKNOWN */
+__inline static int __islessgreater___0(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreater___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequall___2 LOC=UNKNOWN */
+__inline static int __islessequall___2(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequall___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequal___1 LOC=UNKNOWN */
+__inline static int __isgreaterequal___1(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequal___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF clear_pixels LOC=UNKNOWN */
+void clear_pixels(uint32_t *pixel_buffer , uint32_t colour ) 
+{ 
+  int i ;
+  int buffer_size ;
+
+  {
+  i = 0;
+  buffer_size = 307200;
+  i = 0;
+  while (i < buffer_size) {
+    *(pixel_buffer + i) = colour;
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF clear_pixels LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __FLOAT_BITS LOC=UNKNOWN */
+__inline static unsigned int __FLOAT_BITS(float __f ) 
+{ 
+  union __anonunion___u_477865197 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __FLOAT_BITS LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF add_vector_new LOC=UNKNOWN */
+struct vector2d add_vector_new(struct vector2d *a , struct vector2d *b ) 
+{ 
+  struct vector2d new ;
+
+  {
+  new.x = a->x + b->x;
+  new.y = a->y + b->y;
+  return (new);
+}
+}
+/* END FUNCTION-DEF add_vector_new LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreaterf___2 LOC=UNKNOWN */
+__inline static int __islessgreaterf___2(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreaterf___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterf___0 LOC=UNKNOWN */
+__inline static int __isgreaterf___0(float_t __x , float_t __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -17027,6 +14731,254 @@ __inline static int __islessgreaterf___0(float_t __x , float_t __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterf___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __FLOAT_BITS___3 LOC=UNKNOWN */
+__inline static unsigned int __FLOAT_BITS___3(float __f ) 
+{ 
+  union __anonunion___u_477865197___3 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __FLOAT_BITS___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF divide_vector LOC=UNKNOWN */
+void divide_vector(struct vector2d *v , float n ) 
+{ 
+
+
+  {
+  v->x /= n;
+  v->y /= n;
+  return;
+}
+}
+/* END FUNCTION-DEF divide_vector LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequall___3 LOC=UNKNOWN */
+__inline static int __isgreaterequall___3(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequall___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __DOUBLE_BITS LOC=UNKNOWN */
+__inline static unsigned long long __DOUBLE_BITS(double __f ) 
+{ 
+  union __anonunion___u_302425027 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __DOUBLE_BITS LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterl___3 LOC=UNKNOWN */
+__inline static int __isgreaterl___3(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterl___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF SDL_SwapFloat LOC=UNKNOWN */
+__inline static float SDL_SwapFloat(float x ) 
+{ 
+  union __anonunion_swapper_599864594 swapper ;
+
+  {
+  swapper.f = x;
+  swapper.ui32 = SDL_Swap32(swapper.ui32);
+  return (swapper.f);
+}
+}
+/* END FUNCTION-DEF SDL_SwapFloat LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreaterl___3 LOC=UNKNOWN */
+__inline static int __islessgreaterl___3(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
   if (__x != __y) {
     tmp___15 = 1;
   } else {
@@ -17035,7 +14987,744 @@ __inline static int __islessgreaterf___0(float_t __x , float_t __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __islessgreaterf___0 LOC=UNKNOWN */
+/* END FUNCTION-DEF __islessgreaterl___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreater___2 LOC=UNKNOWN */
+__inline static int __islessgreater___2(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreater___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF add_vector LOC=UNKNOWN */
+void add_vector(struct vector2d *a , struct vector2d *b ) 
+{ 
+
+
+  {
+  a->x += b->x;
+  a->y += b->y;
+  return;
+}
+}
+/* END FUNCTION-DEF add_vector LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessf___3 LOC=UNKNOWN */
+__inline static int __islessf___3(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessf___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequall LOC=UNKNOWN */
+__inline static int __islessequall(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequall LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF update_player LOC=UNKNOWN */
+void update_player(struct player *p___0 ) 
+{ 
+  struct vector2d translation ;
+  int i ;
+
+  {
+  limit_vector(& p___0->velocity, (float )2);
+  add_vector(& p___0->location, & p___0->velocity);
+  translation.x = (float )320;
+  translation.y = (float )240;
+  i = 0;
+  i = 0;
+  while (i < 3) {
+    p___0->world_vert[i] = add_vector_new(& p___0->obj_vert[i], & p___0->location);
+    add_vector(& p___0->world_vert[i], & translation);
+    i ++;
+  }
+  i = 0;
+  while (i < 3) {
+    add_vector(& p___0->bullets[i].location, & p___0->bullets[i].velocity);
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF update_player LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isless___0 LOC=UNKNOWN */
+__inline static int __isless___0(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isless___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreater LOC=UNKNOWN */
+__inline static int __isgreater(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreater LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterl LOC=UNKNOWN */
+__inline static int __isgreaterl(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterl LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreaterf___1 LOC=UNKNOWN */
+__inline static int __islessgreaterf___1(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreaterf___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterl___2 LOC=UNKNOWN */
+__inline static int __isgreaterl___2(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterl___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF collision_asteroids LOC=UNKNOWN */
+int collision_asteroids(struct asteroid *asteroids___0 , int size , struct vector2d *v ,
+                        float radius ) 
+{ 
+  int i ;
+  float sum ;
+  float a ;
+  double tmp ;
+  float b ;
+  double tmp___0 ;
+  float distance ;
+  double tmp___1 ;
+
+  {
+  i = 0;
+  i = 0;
+  while (i < size) {
+    if ((asteroids___0 + i)->alive == 1) {
+      sum = (asteroids___0 + i)->hit_radius + radius;
+      tmp = pow((double )((asteroids___0 + i)->location.x - v->x), (double )2);
+      a = (float )tmp;
+      tmp___0 = pow((double )((asteroids___0 + i)->location.y - v->y), (double )2);
+      b = (float )tmp___0;
+      tmp___1 = sqrt((double )(a + b));
+      distance = (float )tmp___1;
+      if (distance < sum) {
+        return (i);
+      }
+    }
+    i ++;
+  }
+  return (-1);
+}
+}
+/* END FUNCTION-DEF collision_asteroids LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequalf___0 LOC=UNKNOWN */
+__inline static int __islessequalf___0(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequalf___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isless___1 LOC=UNKNOWN */
+__inline static int __isless___1(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isless___1 LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __isgreater___2 LOC=UNKNOWN */
 __inline static int __isgreater___2(double_t __x , double_t __y ) 
@@ -17103,47 +15792,1012 @@ __inline static int __isgreater___2(double_t __x , double_t __y )
 }
 /* END FUNCTION-DEF __isgreater___2 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF update_asteroids LOC=UNKNOWN */
-void update_asteroids(struct asteroid *asteroids___0 , int size ) 
+/* BEGIN FUNCTION-DEF rotate_player LOC=UNKNOWN */
+void rotate_player(struct player *p___0 , float degrees ) 
 { 
   int i ;
-  int j ;
-  struct vector2d translation ;
 
   {
   i = 0;
-  j = 0;
-  translation.x = (float )320;
-  translation.y = (float )240;
   i = 0;
-  while (i < size) {
-    add_vector(& (asteroids___0 + i)->location, & (asteroids___0 + i)->velocity);
-    j = 0;
-    while (j < 10) {
-      (asteroids___0 + i)->world_vert[j] = add_vector_new(& (asteroids___0 + i)->obj_vert[j],
-                                                          & (asteroids___0 + i)->location);
-      add_vector(& (asteroids___0 + i)->world_vert[j], & translation);
-      rotate_vector(& (asteroids___0 + i)->obj_vert[j], (asteroids___0 + i)->rotation);
-      j ++;
+  while (i < 3) {
+    rotate_vector(& p___0->obj_vert[i], degrees);
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF rotate_player LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreater___3 LOC=UNKNOWN */
+__inline static int __islessgreater___3(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreater___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF SDL_Swap16 LOC=UNKNOWN */
+__inline static Uint16 SDL_Swap16(Uint16 x ) 
+{ 
+
+
+  {
+  return ((Uint16 )(((int )x << 8) | ((int )x >> 8)));
+}
+}
+/* END FUNCTION-DEF SDL_Swap16 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreater___1 LOC=UNKNOWN */
+__inline static int __islessgreater___1(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreater___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterl___1 LOC=UNKNOWN */
+__inline static int __isgreaterl___1(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterl___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF draw_player LOC=UNKNOWN */
+void draw_player(uint32_t *pixel_buffer , struct player *p___0 ) 
+{ 
+  int i ;
+
+  {
+  i = 0;
+  if (p___0->lives > 0) {
+    draw_line(pixel_buffer, (int )p___0->world_vert[0].x, (int )p___0->world_vert[0].y,
+              (int )p___0->world_vert[1].x, (int )p___0->world_vert[1].y, 4294967295U);
+    draw_line(pixel_buffer, (int )p___0->world_vert[1].x, (int )p___0->world_vert[1].y,
+              (int )p___0->world_vert[2].x, (int )p___0->world_vert[2].y, 4294967295U);
+    draw_line(pixel_buffer, (int )p___0->world_vert[2].x, (int )p___0->world_vert[2].y,
+              (int )p___0->world_vert[0].x, (int )p___0->world_vert[0].y, 4294967295U);
+  }
+  i = 0;
+  while (i < 3) {
+    if ((unsigned int )p___0->bullets[i].alive == 0U) {
+      draw_pixel(pixel_buffer, (int )p___0->bullets[i].location.x, (int )p___0->bullets[i].location.y,
+                 4294967295U);
     }
     i ++;
   }
   return;
 }
 }
-/* END FUNCTION-DEF update_asteroids LOC=UNKNOWN */
+/* END FUNCTION-DEF draw_player LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF apply_force LOC=UNKNOWN */
-void apply_force(struct vector2d *velocity , struct vector2d v ) 
+/* BEGIN FUNCTION-DEF __islessgreaterl___1 LOC=UNKNOWN */
+__inline static int __islessgreaterl___1(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___1((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___1((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___1((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___1((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreaterl___1 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequal___3 LOC=UNKNOWN */
+__inline static int __isgreaterequal___3(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequal___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreaterf___3 LOC=UNKNOWN */
+__inline static int __islessgreaterf___3(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreaterf___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequal LOC=UNKNOWN */
+__inline static int __islessequal(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequal LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessgreaterf___0 LOC=UNKNOWN */
+__inline static int __islessgreaterf___0(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x != __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessgreaterf___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF SDL_Swap32 LOC=UNKNOWN */
+__inline static Uint32 SDL_Swap32(Uint32 x ) 
 { 
 
 
   {
-  add_vector(velocity, & v);
+  return ((((x << 24) | ((x << 8) & 16711680U)) | ((x >> 8) & 65280U)) | (x >> 24));
+}
+}
+/* END FUNCTION-DEF SDL_Swap32 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF normalise_vector LOC=UNKNOWN */
+void normalise_vector(struct vector2d *v ) 
+{ 
+  float mag ;
+  float tmp ;
+
+  {
+  tmp = magnitude_vector(v);
+  mag = tmp;
+  divide_vector(v, mag);
   return;
 }
 }
-/* END FUNCTION-DEF apply_force LOC=UNKNOWN */
+/* END FUNCTION-DEF normalise_vector LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __FLOAT_BITS___2 LOC=UNKNOWN */
+__inline static unsigned int __FLOAT_BITS___2(float __f ) 
+{ 
+  union __anonunion___u_477865197___2 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __FLOAT_BITS___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessl___0 LOC=UNKNOWN */
+__inline static int __islessl___0(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessl___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequal___2 LOC=UNKNOWN */
+__inline static int __isgreaterequal___2(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x >= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterequal___2 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessl LOC=UNKNOWN */
+__inline static int __islessl(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x < __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessl LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF init_player LOC=UNKNOWN */
+void init_player(struct player *p___0 ) 
+{ 
+  int i ;
+  struct vector2d translation ;
+
+  {
+  i = 0;
+  translation.x = (float )320;
+  translation.y = (float )240;
+  p___0->hit_radius = (float )15;
+  p___0->lives = 3;
+  p___0->location.x = (float )0;
+  p___0->location.y = (float )0;
+  p___0->velocity.x = (float )0;
+  p___0->velocity.y = (float )0;
+  p___0->obj_vert[0].x = (float )0;
+  p___0->obj_vert[0].y = (float )1.5;
+  p___0->obj_vert[1].x = (float )-1;
+  p___0->obj_vert[1].y = (float )-1;
+  p___0->obj_vert[2].x = (float )1;
+  p___0->obj_vert[2].y = (float )-1;
+  i = 0;
+  while (i < 3) {
+    multiply_vector(& p___0->obj_vert[i], (float )-1);
+    multiply_vector(& p___0->obj_vert[i], (float )12);
+    add_vector(& p___0->world_vert[i], & p___0->obj_vert[i]);
+    add_vector(& p___0->world_vert[i], & translation);
+    i ++;
+  }
+  i = 0;
+  while (i < 3) {
+    p___0->bullets[i].alive = (enum boolean )1;
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF init_player LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __DOUBLE_BITS___0 LOC=UNKNOWN */
+__inline static unsigned long long __DOUBLE_BITS___0(double __f ) 
+{ 
+  union __anonunion___u_302425027___0 __u ;
+
+  {
+  __u.__f = __f;
+  return (__u.__i);
+}
+}
+/* END FUNCTION-DEF __DOUBLE_BITS___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF shoot_bullet LOC=UNKNOWN */
+void shoot_bullet(struct player *p___0 ) 
+{ 
+  int i ;
+
+  {
+  i = 0;
+  i = 0;
+  while (i < 3) {
+    if ((unsigned int )p___0->bullets[i].alive == 1U) {
+      p___0->bullets[i].alive = (enum boolean )0;
+      p___0->bullets[i].location = p___0->world_vert[0];
+      p___0->bullets[i].velocity = get_direction(p___0);
+      multiply_vector(& p___0->bullets[i].velocity, (float )4.1);
+      break;
+    }
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF shoot_bullet LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __islessequall___3 LOC=UNKNOWN */
+__inline static int __islessequall___3(long double __x , long double __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___3((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___3((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl(__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___3((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___3((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl(__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x <= __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __islessequall___3 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF bounds_asteroids LOC=UNKNOWN */
+void bounds_asteroids(struct asteroid *asteroids___0 , int size ) 
+{ 
+  int i ;
+
+  {
+  i = 0;
+  i = 0;
+  while (i < size) {
+    if ((asteroids___0 + i)->location.x < (float )-320) {
+      (asteroids___0 + i)->location.x = (float )320;
+    }
+    if ((asteroids___0 + i)->location.x > (float )320) {
+      (asteroids___0 + i)->location.x = (float )-320;
+    }
+    if ((asteroids___0 + i)->location.y < (float )-240) {
+      (asteroids___0 + i)->location.y = (float )240;
+    }
+    if ((asteroids___0 + i)->location.y > (float )240) {
+      (asteroids___0 + i)->location.y = (float )-240;
+    }
+    i ++;
+  }
+  return;
+}
+}
+/* END FUNCTION-DEF bounds_asteroids LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF magnitude_vector LOC=UNKNOWN */
+float magnitude_vector(struct vector2d *v ) 
+{ 
+  float c2 ;
+  double tmp ;
+  double tmp___0 ;
+  double tmp___1 ;
+
+  {
+  tmp = pow((double )v->x, (double )2);
+  tmp___0 = pow((double )v->y, (double )2);
+  c2 = (float )(tmp + tmp___0);
+  tmp___1 = sqrt((double )c2);
+  return ((float )tmp___1);
+}
+}
+/* END FUNCTION-DEF magnitude_vector LOC=UNKNOWN */
 
 /* BEGIN FUNCTION-DEF __isgreaterequal___0 LOC=UNKNOWN */
 __inline static int __isgreaterequal___0(double_t __x , double_t __y ) 
@@ -17211,74 +16865,41 @@ __inline static int __isgreaterequal___0(double_t __x , double_t __y )
 }
 /* END FUNCTION-DEF __isgreaterequal___0 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __isgreaterequalf___3 LOC=UNKNOWN */
-__inline static int __isgreaterequalf___3(float_t __x , float_t __y ) 
+/* BEGIN FUNCTION-DEF __bswap32 LOC=UNKNOWN */
+__inline static uint32_t __bswap32(uint32_t __x ) 
 { 
-  unsigned int tmp ;
-  unsigned long long tmp___0 ;
-  int tmp___1 ;
-  int tmp___2 ;
-  int tmp___3 ;
-  unsigned int tmp___4 ;
-  unsigned long long tmp___5 ;
-  int tmp___6 ;
-  int tmp___7 ;
-  int tmp___8 ;
-  int tmp___9 ;
-  unsigned int tmp___10 ;
-  unsigned long long tmp___11 ;
-  int tmp___12 ;
-  int tmp___13 ;
-  int tmp___14 ;
-  int tmp___15 ;
+
 
   {
-  if (sizeof(__x) == sizeof(float )) {
-    tmp___10 = __FLOAT_BITS___3(__x);
-    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
-  } else {
-    if (sizeof(__x) == sizeof(double )) {
-      tmp___11 = __DOUBLE_BITS___3((double )__x);
-      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-    } else {
-      tmp___12 = __fpclassifyl((long double )__x);
-      tmp___13 = tmp___12 == 0;
-    }
-    tmp___14 = tmp___13;
-  }
-  if (tmp___14) {
-    tmp___9 = 1;
-  } else {
-    if (sizeof(__y) == sizeof(float )) {
-      tmp___4 = __FLOAT_BITS___3(__y);
-      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
-    } else {
-      if (sizeof(__y) == sizeof(double )) {
-        tmp___5 = __DOUBLE_BITS___3((double )__y);
-        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
-      } else {
-        tmp___6 = __fpclassifyl((long double )__y);
-        tmp___7 = tmp___6 == 0;
-      }
-      tmp___8 = tmp___7;
-    }
-    tmp___9 = tmp___8;
-  }
-  if (tmp___9) {
-    tmp___15 = 0;
-  } else
-  if (__x >= __y) {
-    tmp___15 = 1;
-  } else {
-    tmp___15 = 0;
-  }
-  return (tmp___15);
+  return ((((__x >> 24) | ((__x >> 8) & 65280U)) | ((__x << 8) & 16711680U)) | (__x << 24));
 }
 }
-/* END FUNCTION-DEF __isgreaterequalf___3 LOC=UNKNOWN */
+/* END FUNCTION-DEF __bswap32 LOC=UNKNOWN */
 
-/* BEGIN FUNCTION-DEF __isgreaterequall___0 LOC=UNKNOWN */
-__inline static int __isgreaterequall___0(long double __x , long double __y ) 
+/* BEGIN FUNCTION-DEF SDL_Swap64 LOC=UNKNOWN */
+__inline static Uint64 SDL_Swap64(Uint64 x ) 
+{ 
+  Uint32 hi ;
+  Uint32 lo ;
+  Uint32 tmp ;
+  Uint32 tmp___0 ;
+
+  {
+  lo = (Uint32 )(x & 4294967295ULL);
+  x >>= 32;
+  hi = (Uint32 )(x & 4294967295ULL);
+  tmp = SDL_Swap32(lo);
+  x = (Uint64 )tmp;
+  x <<= 32;
+  tmp___0 = SDL_Swap32(hi);
+  x |= (unsigned long long )tmp___0;
+  return (x);
+}
+}
+/* END FUNCTION-DEF SDL_Swap64 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterl___0 LOC=UNKNOWN */
+__inline static int __isgreaterl___0(long double __x , long double __y ) 
 { 
   unsigned int tmp ;
   unsigned long long tmp___0 ;
@@ -17333,6 +16954,150 @@ __inline static int __isgreaterequall___0(long double __x , long double __y )
   if (tmp___9) {
     tmp___15 = 0;
   } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreaterl___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF apply_force LOC=UNKNOWN */
+void apply_force(struct vector2d *velocity , struct vector2d v ) 
+{ 
+
+
+  {
+  add_vector(velocity, & v);
+  return;
+}
+}
+/* END FUNCTION-DEF apply_force LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreater___0 LOC=UNKNOWN */
+__inline static int __isgreater___0(double_t __x , double_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___0((float )__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___0(__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___0((float )__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___0(__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
+  if (__x > __y) {
+    tmp___15 = 1;
+  } else {
+    tmp___15 = 0;
+  }
+  return (tmp___15);
+}
+}
+/* END FUNCTION-DEF __isgreater___0 LOC=UNKNOWN */
+
+/* BEGIN FUNCTION-DEF __isgreaterequalf___2 LOC=UNKNOWN */
+__inline static int __isgreaterequalf___2(float_t __x , float_t __y ) 
+{ 
+  unsigned int tmp ;
+  unsigned long long tmp___0 ;
+  int tmp___1 ;
+  int tmp___2 ;
+  int tmp___3 ;
+  unsigned int tmp___4 ;
+  unsigned long long tmp___5 ;
+  int tmp___6 ;
+  int tmp___7 ;
+  int tmp___8 ;
+  int tmp___9 ;
+  unsigned int tmp___10 ;
+  unsigned long long tmp___11 ;
+  int tmp___12 ;
+  int tmp___13 ;
+  int tmp___14 ;
+  int tmp___15 ;
+
+  {
+  if (sizeof(__x) == sizeof(float )) {
+    tmp___10 = __FLOAT_BITS___2(__x);
+    tmp___14 = (tmp___10 & 2147483647U) > 2139095040U;
+  } else {
+    if (sizeof(__x) == sizeof(double )) {
+      tmp___11 = __DOUBLE_BITS___2((double )__x);
+      tmp___13 = (tmp___11 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+    } else {
+      tmp___12 = __fpclassifyl((long double )__x);
+      tmp___13 = tmp___12 == 0;
+    }
+    tmp___14 = tmp___13;
+  }
+  if (tmp___14) {
+    tmp___9 = 1;
+  } else {
+    if (sizeof(__y) == sizeof(float )) {
+      tmp___4 = __FLOAT_BITS___2(__y);
+      tmp___8 = (tmp___4 & 2147483647U) > 2139095040U;
+    } else {
+      if (sizeof(__y) == sizeof(double )) {
+        tmp___5 = __DOUBLE_BITS___2((double )__y);
+        tmp___7 = (tmp___5 & (0xffffffffffffffffULL >> 1)) > 2047ULL << 52;
+      } else {
+        tmp___6 = __fpclassifyl((long double )__y);
+        tmp___7 = tmp___6 == 0;
+      }
+      tmp___8 = tmp___7;
+    }
+    tmp___9 = tmp___8;
+  }
+  if (tmp___9) {
+    tmp___15 = 0;
+  } else
   if (__x >= __y) {
     tmp___15 = 1;
   } else {
@@ -17341,31 +17106,4 @@ __inline static int __isgreaterequall___0(long double __x , long double __y )
   return (tmp___15);
 }
 }
-/* END FUNCTION-DEF __isgreaterequall___0 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF __bswap64 LOC=UNKNOWN */
-__inline static uint64_t __bswap64(uint64_t __x ) 
-{ 
-  uint32_t tmp ;
-  uint32_t tmp___0 ;
-
-  {
-  tmp = __bswap32((uint32_t )__x);
-  tmp___0 = __bswap32((uint32_t )(__x >> 32));
-  return (((unsigned long long )tmp << 32) | (unsigned long long )tmp___0);
-}
-}
-/* END FUNCTION-DEF __bswap64 LOC=UNKNOWN */
-
-/* BEGIN FUNCTION-DEF SDL_AtomicGetPtr LOC=UNKNOWN */
-__inline static void *SDL_AtomicGetPtr(void **a ) 
-{ 
-  void *value ;
-
-  {
-  value = *a;
-  __asm__  volatile   ("": : : "memory");
-  return (value);
-}
-}
-/* END FUNCTION-DEF SDL_AtomicGetPtr LOC=UNKNOWN */
+/* END FUNCTION-DEF __isgreaterequalf___2 LOC=UNKNOWN */

@@ -9,6 +9,11 @@ tigress \
 --out=$TIGRESS_OUT $FILE_IN \
 --envmachine \
 --Environment=wasm:Linux:Emcc:4.6 \
+--Transform=InitOpaque \
+--InitOpaqueStructs=list,array,env,input,plugin \
+--Functions=main \
+--Transform=InitEntropy \
+--InitEntropyKinds=vars \
 --Transform=${TRANSFORM} \
 --Functions=main \
 -O2 \

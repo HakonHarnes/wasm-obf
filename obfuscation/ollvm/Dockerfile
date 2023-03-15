@@ -7,23 +7,28 @@ RUN git clone --depth 1 --branch llvmorg-14.0.6 https://github.com/llvm/llvm-pro
 
 WORKDIR /llvm-project/llvm
 
-RUN mkdir -p build 
+RUN mkdir -p build
 
 WORKDIR /llvm-project/llvm/build
 
-RUN cmake -G "Ninja" -DCMAKE_INSTALL_PREFIX=/opt/llvm .. 
+RUN cmake -G "Ninja" -DCMAKE_INSTALL_PREFIX=/opt/llvm -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS='lld;clang' -DLLVM_TARGETS_TO_BUILD="host;WebAssembly" -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DENABLE_LLVM_SHARED=1 ..
 RUN ninja -j$(($(nproc) / 2))
 RUN ninja install
 
-WORKDIR / 
+WORKDIR /
 
-RUN git clone https://github.com/eshard/obfuscator-llvm.git 
+RUN git clone https://github.com/eshard/obfuscator-llvm.git
 
 WORKDIR /obfuscator-llvm
 
+RUN sed -i 's/ LLVMCore//' CMakeLists.txt
 RUN mkdir -p build
 
-WORKDIR /obuscator-llvm/build
+WORKDIR /obfuscator-llvm/build
 
 RUN cmake -G "Ninja" -DLLVM_DIR=/opt/llvm/lib/cmake ..
-RUN ninja -j$(($(nproc) / 2)) 
+RUN ninja -j$(($(nproc) / 2))
+
+ENV PATH="$PATH:/llvm-project/llvm/build/bin"
+
+WORKDIR /
