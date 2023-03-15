@@ -1,5 +1,7 @@
 import os
 
+from termcolor import colored
+
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 binary_path = f'{dir_path}/binaries/tigress'
@@ -17,12 +19,39 @@ def run_tigress(path, transformation):
     tigress_out = os.path.join(path, 'tigress', f'{output_name}.c')
     emscripten_out = os.path.join(binary_path, f'{output_name}.wasm')
 
-    return os.system(
-        f'/bin/sh {path}/obfuscate.sh {file_in} {tigress_out} {emscripten_out} {transformation}')
+    # don't do anything if binary already exists
+    if os.path.exists(emscripten_out):
+        return {'desc': f'Exists: {emscripten_out}', 'code': 0}
+
+    # only build if tigress output exists to allow for manual fixes
+    if os.path.exists(tigress_out):
+        code = os.system(
+            f'/bin/sh {path}/build.sh {tigress_out} {emscripten_out} >/dev/null 2>&1')
+        return {'desc': f'Build: {output_name}', 'code': code}
+
+    # obfuscate and build
+    code = os.system(
+        f'/bin/sh {path}/obfuscate.sh {file_in} {tigress_out} {emscripten_out} {transformation} >/dev/null 2>&1')
+    return {'desc': f'Obfuscate: {output_name}', 'code': code}
+
+
+def print_result(result):
+    print(colored(result, 'red'))
 
 
 if __name__ == '__main__':
+    errors = []
 
-    for transformation in transformations:
-        status = run_tigress(f'{dataset_path}/wasm-asteroids', transformation)
-        print('Success' if status == 0 else 'Failed')
+    for dir in os.listdir(dataset_path):
+        path = os.path.join(dataset_path, dir)
+        for transformation in transformations:
+            result = run_tigress(path, transformation)
+            if result['code'] != 0:
+                print(colored(result,  'red'))
+                errors.append(result)
+            else:
+                print(colored(result,  'green'))
+
+    print(f'\n --- {len(errors)} ERRORS --- \n')
+    for error in errors:
+        print(colored(error, 'red'))
