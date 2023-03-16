@@ -3,32 +3,12 @@ FROM archlinux
 RUN pacman -Syu --needed base-devel --noconfirm
 RUN pacman -S git cmake ninja python3 --noconfirm
 
-RUN git clone --depth 1 --branch llvmorg-14.0.6 https://github.com/llvm/llvm-project.git
+RUN git clone https://github.com/HakonHarnes/pluto-wasm-obfuscator.git
 
-WORKDIR /llvm-project/llvm
+WORKDIR /pluto-wasm-obfuscator
 
-RUN mkdir -p build
+RUN ./build.sh
 
-WORKDIR /llvm-project/llvm/build
-
-RUN cmake -G "Ninja" -DCMAKE_INSTALL_PREFIX=/opt/llvm -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS='lld;clang' -DLLVM_TARGETS_TO_BUILD="host;WebAssembly" -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DENABLE_LLVM_SHARED=1 ..
-RUN ninja -j$(($(nproc) / 2))
-RUN ninja install
-
-WORKDIR /
-
-RUN git clone https://github.com/eshard/obfuscator-llvm.git
-
-WORKDIR /obfuscator-llvm
-
-RUN sed -i 's/ LLVMCore//' CMakeLists.txt
-RUN mkdir -p build
-
-WORKDIR /obfuscator-llvm/build
-
-RUN cmake -G "Ninja" -DLLVM_DIR=/opt/llvm/lib/cmake ..
-RUN ninja -j$(($(nproc) / 2))
-
-ENV PATH="$PATH:/llvm-project/llvm/build/bin"
+ENV PATH="$PATH:/pluto-wasm-obfuscator/build/bin"
 
 WORKDIR /
