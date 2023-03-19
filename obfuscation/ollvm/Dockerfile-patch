@@ -1,0 +1,27 @@
+FROM archlinux
+
+RUN pacman -Syu --needed base-devel --noconfirm
+
+RUN pacman -S vim git wget gcc cmake ninja python3 --noconfirm
+
+RUN wget https://heroims.github.io/obfuscator/NewPass/ollvm14.patch
+
+RUN git clone --depth 1 -b release/14.x https://github.com/llvm/llvm-project.git
+
+WORKDIR /llvm-project
+
+RUN git apply ../ollvm14.patch
+
+RUN mkdir build 
+
+WORKDIR /llvm-project/build
+
+RUN cmake -G "Ninja" -DCMAKE_INSTALL_PREFIX=/opt/llvm -DCMAKE_BUILD_TYPE=Release -DLLVM_ENABLE_PROJECTS='lld;clang' -DLLVM_TARGETS_TO_BUILD="host;WebAssembly" -DLLVM_INCLUDE_EXAMPLES=OFF -DLLVM_INCLUDE_TESTS=OFF -DENABLE_LLVM_SHARED=1 ../llvm
+
+RUN ninja -j$(($(nproc) / 2))
+
+RUN ninja install
+
+ENV PATH="$PATH:/llvm-project/build/bin"
+
+WORKDIR /
