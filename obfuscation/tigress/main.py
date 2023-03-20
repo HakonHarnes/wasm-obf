@@ -62,29 +62,52 @@ transformations = [
 ]
 
 
-def run_tigress(path, transformation):
+def get_emcc_out(path, transformation):
     program_name = path.split('/')[-1]
-    output_name = f'{program_name}-{transformation.lower()}-tigress'
+    binary_name = f'{program_name}-{transformation}-tigress.html'
+    return os.path.join(binary_path, f'{binary_name}')
 
-    file_in = os.path.join(path, f'{program_name}.c')
-    tigress_out = os.path.join(path, 'tigress', f'{output_name}.c')
-    emscripten_out = os.path.join(binary_path, f'{output_name}.html')
 
-    # don't do anything if binary already exists
-    if os.path.exists(emscripten_out):
-        return {'desc': f'Exists: {emscripten_out}', 'code': 0}
+def build_binary(path, transformation):
+    emcc_out = get_emcc_out(path, transformation)
+    if os.path.exists(emcc_out):
+        return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
-    # only build if tigress output exists to allow for manual fixes
-    if os.path.exists(tigress_out):
-        code = os.system(
-            f'/bin/sh {path}/build.sh {tigress_out} {emscripten_out} >/dev/null 2>&1')
-        return {'desc': f'Build: {output_name}', 'code': code}
+    script = os.path.join(path, 'build.sh')
+    if not os.path.exists(script):
+        return {'desc': f'Missing script: {script}', 'code': 1}
 
-    # obfuscate and build
-    print(file_in, tigress_out, emscripten_out, transformation)
-    code = os.system(
-        f'/bin/sh {path}/obfuscate.sh {file_in} {tigress_out} {emscripten_out} {transformation} ')
-    return {'desc': f'Obfuscate: {output_name}', 'code': code}
+    file_in = os.path.join(path, 'tigress', f'{transformation}.c')
+
+    code = os.system(f'/bin/sh {script} {file_in} {emcc_out} >/dev/null 2>&1')
+
+    if os.path.exists(emcc_out):
+        binary_out = emcc_out.replace('.html', '.wasm')
+        binary_size = os.path.getsize(binary_out)
+        if binary_size < 5:
+            return {'desc': f'Build: {binary_out}', 'size': binary_size, 'code': 1}
+
+    return {'desc': f'Build: {path} {transformation}', 'code': code}
+
+
+def run_tigress(path, transformation):
+    emcc_out = get_emcc_out(path, transformation)
+    if os.path.exists(emcc_out):
+        return {'desc': f'Exists: {emcc_out}', 'code': 0}
+
+    script = os.path.join(path, 'tigress', f'{transformation}.sh')
+    if not os.path.exists(script):
+        return {'desc': f'Missing script: {script}', 'code': 1}
+
+    code = os.system(f'/bin/sh {script} >/dev/null 2>&1')
+
+    file_out = script.replace('.sh', '.c')
+    if os.path.exists(file_out):
+        file_size = os.path.getsize(file_out)
+        if file_size < 5:
+            return {'desc': f'Obfuscate: {file_out}', 'size': file_size, 'code': 1}
+
+    return {'desc': f'Obfuscate: {path} {transformation}', 'code': code}
 
 
 def print_result(result):
@@ -97,12 +120,20 @@ if __name__ == '__main__':
     for dir in os.listdir(dataset_path):
         path = os.path.join(dataset_path, dir)
         for transformation in transformations:
-            result = run_tigress(path, transformation)
-            if result['code'] != 0:
-                print(colored(result,  'red'))
-                errors.append(result)
-            else:
-                print(colored(result,  'green'))
+            transformation = transformation.lower()
+            obf_result = run_tigress(path, transformation)
+            if obf_result['code'] != 0:
+                print(colored(obf_result,  'red'))
+                errors.append(obf_result)
+                continue
+
+            build_result = build_binary(path, transformation)
+            if build_result['code'] != 0:
+                print(colored(build_result,  'red'))
+                errors.append(build_result)
+                continue
+
+            print(colored(build_result,  'green'))
 
     print(f'\n --- {len(errors)} ERRORS --- \n')
     for error in errors:
