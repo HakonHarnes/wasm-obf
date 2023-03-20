@@ -29,8 +29,8 @@ services:
       - ./obfuscation/tigress/main.py:/tigress/main.py
       - ./dataset/:/tigress/dataset
       - ./binaries:/tigress/binaries
-  ollvm:
-    build: ./obfuscation/ollvm/
+  llvm:
+    build: ./obfuscation/llvm/
   analysis:
     build: ./analysis
     volumes:
