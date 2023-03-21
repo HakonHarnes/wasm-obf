@@ -11,7 +11,7 @@ tigress \
 --Transform=InitEntropy --UpdateEntropyKinds=vars \
 --InitOpaqueStructs=list,array,env,input,plugin \
 --Transform=AddOpaque --Functions=main \
---out=addopaque.c ../wasm-asteroids.c -sUSE_SDL=2
+--out=addopaque.c ../*.c -sUSE_SDL=2
 
 rm -f a.out 
 rm -f a.wasm

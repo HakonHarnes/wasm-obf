@@ -8,7 +8,7 @@ rm -f copy.c
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
 --Transform=Copy --Functions=* \
---out=copy.c ../wasm-asteroids.c -sUSE_SDL=2
+--out=copy.c ../*.c -sUSE_SDL=2
 
 rm -f a.out 
 rm -f a.wasm

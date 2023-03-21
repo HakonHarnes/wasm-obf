@@ -1,7 +1,6 @@
-FROM archlinux
+FROM archlinux:base-devel-20230312.0.133040
 
-RUN pacman -Syu --needed base-devel --noconfirm
-RUN pacman -S git wget emscripten unzip vim python python-pip --noconfirm
+RUN pacman -Syyu git wget emscripten unzip vim python python-pip --noconfirm
 
 WORKDIR /usr/lib
 

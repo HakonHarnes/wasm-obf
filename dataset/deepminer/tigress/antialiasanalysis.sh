@@ -11,7 +11,7 @@ tigress \
 --Transform=InitEntropy --UpdateEntropyKinds=vars \
 --InitOpaqueStructs=list,array,env,input,plugin \
 --Transform=AntiAliasAnalysis --Functions=* \
---out=antialiasanalysis.c ../*.c -sUSE_SDL=2
+--out=antialiasanalysis.c ../*.c
 
 rm -f a.out 
 rm -f a.wasm

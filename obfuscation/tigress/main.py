@@ -110,11 +110,7 @@ def run_tigress(path, transformation):
     return {'desc': f'Obfuscate: {path} {transformation}', 'code': code}
 
 
-def print_result(result):
-    print(colored(result, 'red'))
-
-
-if __name__ == '__main__':
+def main():
     errors = []
 
     for dir in os.listdir(dataset_path):
@@ -138,3 +134,7 @@ if __name__ == '__main__':
     print(f'\n --- {len(errors)} ERRORS --- \n')
     for error in errors:
         print(colored(error, 'red'))
+
+
+if __name__ == '__main__':
+    main()

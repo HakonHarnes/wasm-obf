@@ -31,6 +31,10 @@ services:
       - ./binaries:/tigress/binaries
   llvm:
     build: ./obfuscation/llvm/
+    volumes:
+      - ./obfuscation/llvm/main.py:/llvm/main.py
+      - ./dataset/:/llvm/dataset
+      - ./binaries:/llvm/binaries
   analysis:
     build: ./analysis
     volumes:
