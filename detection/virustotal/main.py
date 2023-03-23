@@ -125,8 +125,10 @@ def analyze_binaries(api_key, binaries):
         # Check analysis results for uploaded files
         if i % 10 == 0 and len(analysis_ids) > 0 and not api_error:
             time.sleep(10)
+            print(analysis_ids)
             for analysis_id in analysis_ids and i % 10 == 0:
-                file, api_error = check_scan_results(client, file_hash)
+                file, api_error = check_scan_results(
+                    client, analysis_id, file_hash)
                 if file is not None:
                     analysis_ids.remove(analysis_id)
                     write_result_to_file(file, file_hash, binary)
