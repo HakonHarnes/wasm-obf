@@ -1,0 +1,14 @@
+cn/0: 0 0
+cn/1: 0 1
+cn/2: 0 2 (variant is 2 or 3 )
+cn/r: 0 4
+
+cn-lite/0: 1 0
+cn-lite/1: 1 1
+cn-lite/2: 1 2
+
+cn-pico/trtl 2 2
+
+cn/half: 3 2
+
+cn/rwz: 4 2

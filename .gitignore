@@ -1,9 +1,5 @@
 __pycache__
 node_modules 
-*.wasm
-*.wat
-*.html 
-*.js 
 *.png
 *.7z
 .*.json

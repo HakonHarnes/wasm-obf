@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        place-items: center;
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: Arial, sans-serif;
+        font-size: 2rem;
+      }
+
+      #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content">
+      <div id="hashRate"></div>
+      <button id="stopb" onclick="stop()">STOP</button>
+    </div>
+
+    <script src="src/miner.js"></script>
+
+    <script>
+      let miningInterval;
+
+      const start = () => {
+        server = "ws://localhost:8181";
+
+        startMining(
+          "nanopool-cn/r",
+          "484u3tsoQJ3bGQZYaBXdEPSnrmhX3cUQfcjhRffgSBMQbfKwaob5mi3FjK1LXivnXwfP725S5QZm27FXPEchNPLaBVGnKjY"
+        );
+
+        const startTime = new Date();
+
+        console.log("Connecting...");
+
+        miningInterval = setInterval(function () {
+          while (sendStack.length > 0) console.log(sendStack.pop());
+          while (receiveStack.length > 0) console.log(receiveStack.pop());
+
+          const elapsedTime = (new Date() - startTime) / 1000;
+          const hashesPerSecond = totalhashes / elapsedTime;
+          document.getElementById("hashRate").innerHTML =
+            hashesPerSecond.toFixed(2);
+        }, 1000);
+      };
+
+      const stop = () => {
+        clearInterval(miningInterval);
+        stopMining();
+        document.getElementById("stopb").disabled = true;
+      };
+
+      start();
+    </script>
+  </body>
+</html>

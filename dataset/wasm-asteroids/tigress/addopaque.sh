@@ -8,8 +8,8 @@ rm -f addopaque.c
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
 --Transform=InitOpaque --Functions=main \
---Transform=InitEntropy --UpdateEntropyKinds=vars \
 --InitOpaqueStructs=list,array,env,input,plugin \
+--Transform=InitEntropy --UpdateEntropyKinds=vars \
 --Transform=AddOpaque --Functions=main \
 --out=addopaque.c ../*.c -sUSE_SDL=2
 

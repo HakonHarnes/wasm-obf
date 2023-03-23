@@ -68,19 +68,33 @@ def get_emcc_out(path, transformation):
     return os.path.join(binary_path, f'{binary_name}')
 
 
-def build_binary(path, transformation):
+def run_emcc(path, transformation):
+
+    # get emscripten output file
     emcc_out = get_emcc_out(path, transformation)
     if os.path.exists(emcc_out):
         return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
+    # get build script
     script = os.path.join(path, 'build.sh')
     if not os.path.exists(script):
         return {'desc': f'Missing script: {script}', 'code': 1}
 
+    # input file
     file_in = os.path.join(path, 'tigress', f'{transformation}.c')
+    if os.path.exists(file_in):
+        file_size = os.path.getsize(file_in)
+        if file_size < 5:
+            return {'desc': f'Build: {file_in}', 'size': file_size, 'code': 1}
 
-    code = os.system(f'/bin/sh {script} {file_in} {emcc_out} >/dev/null 2>&1')
+    # log file
+    log_file = emcc_out.replace('.html', '.emcc.log')
 
+    # run build script
+    code = os.system(
+        f'/bin/sh {script} {file_in} {emcc_out} > {log_file} 2>&1')
+
+    # check output file size
     if os.path.exists(emcc_out):
         binary_out = emcc_out.replace('.html', '.wasm')
         binary_size = os.path.getsize(binary_out)
@@ -91,21 +105,35 @@ def build_binary(path, transformation):
 
 
 def run_tigress(path, transformation):
+
+    # get emscripten output and check if it already exists
     emcc_out = get_emcc_out(path, transformation)
     if os.path.exists(emcc_out):
         return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
+    # get tigress script
     script = os.path.join(path, 'tigress', f'{transformation}.sh')
     if not os.path.exists(script):
         return {'desc': f'Missing script: {script}', 'code': 1}
 
-    code = os.system(f'/bin/sh {script} >/dev/null 2>&1')
+    # get tigress output and check if it exists
+    tigress_out = script.replace('.sh', '.c')
+    if os.path.exists(tigress_out):
+        file_size = os.path.getsize(tigress_out)
+        if file_size > 5:
+            return {'desc': f'Exists: {tigress_out}', 'code': 0}
 
-    file_out = script.replace('.sh', '.c')
-    if os.path.exists(file_out):
-        file_size = os.path.getsize(file_out)
+    # log file
+    log_file = emcc_out.replace('.html', '.obf.log')
+
+    # run tigress
+    code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
+
+    # check output file size
+    if os.path.exists(tigress_out):
+        file_size = os.path.getsize(tigress_out)
         if file_size < 5:
-            return {'desc': f'Obfuscate: {file_out}', 'size': file_size, 'code': 1}
+            return {'desc': f'Obfuscate: {tigress_out}', 'size': file_size, 'code': 1}
 
     return {'desc': f'Obfuscate: {path} {transformation}', 'code': code}
 
@@ -123,7 +151,7 @@ def main():
                 errors.append(obf_result)
                 continue
 
-            build_result = build_binary(path, transformation)
+            build_result = run_emcc(path, transformation)
             if build_result['code'] != 0:
                 print(colored(build_result,  'red'))
                 errors.append(build_result)

@@ -54,7 +54,7 @@ def run_emcc(path, transformation):
         return {'desc': f'Missing script: {script}', 'code': 1}
 
     # log file name
-    log_file = emcc_out.replace('.html', '.log')
+    log_file = emcc_out.replace('.html', '.emcc.log')
 
     # run build script
     code = os.system(
