@@ -1,0 +1,13 @@
+{
+    "program": "cn-0.wasm",
+    "cn-0-llvm-enable-subobf.wasm": 1412470.0,
+    "cn-0-llvm-enable-bcfobf.wasm": 525920.0,
+    "cn-0-llvm-enable-fco.wasm": 367440.0,
+    "cn-0-llvm-enable-acdobf.wasm": 367440.0,
+    "cn-0-llvm-enable-constenc.wasm": 573483.0,
+    "cn-0-llvm-enable-antihook.wasm": 367440.0,
+    "cn-0-llvm-enable-splitobf.wasm": 367440.0,
+    "cn-0-llvm-enable-strcry.wasm": 1665060.0,
+    "cn-0-llvm-enable-adb.wasm": 367440.0,
+    "cn-0-llvm-enable-funcwra.wasm": 2559145.0
+}

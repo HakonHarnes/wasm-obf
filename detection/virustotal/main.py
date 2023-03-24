@@ -143,7 +143,8 @@ def analyze_binaries(api_key, binaries):
     while(len(analysis_ids) > 0 and not api_error):
         time.sleep(10)
         for analysis_id in analysis_ids:
-            file, api_error = check_scan_results(client, file_hash)
+            file, api_error = check_scan_results(
+                client, analysis_id, file_hash)
             if file is not None:
                 analysis_ids.remove(analysis_id)
                 write_result_to_file(file, file_hash, binary)

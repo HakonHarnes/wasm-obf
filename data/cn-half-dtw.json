@@ -1,0 +1,13 @@
+{
+    "program": "cn-half.wasm",
+    "cn-half-llvm-enable-constenc.wasm": 4255157.0,
+    "cn-half-llvm-enable-fco.wasm": 4243066.0,
+    "cn-half-llvm-enable-funcwra.wasm": 4215771.0,
+    "cn-half-llvm-enable-bcfobf.wasm": 4145681.0,
+    "cn-half-llvm-enable-subobf.wasm": 4354969.0,
+    "cn-half-llvm-enable-strcry.wasm": 5022763.0,
+    "cn-half-llvm-enable-antihook.wasm": 4243066.0,
+    "cn-half-llvm-enable-adb.wasm": 4243066.0,
+    "cn-half-llvm-enable-splitobf.wasm": 4243066.0,
+    "cn-half-llvm-enable-acdobf.wasm": 4243066.0
+}

@@ -1,0 +1,230 @@
+[
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-pico-trtl.wasm"
+        },
+        "file_hash": "a78e2635a4a1bc7a76635cb996bdbac73fba6e98ab3b1741dfda521b318a7759",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 0,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 0
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-0.wasm"
+        },
+        "file_hash": "d922333318d46a5a9980a527b042ed07281cbbaf6cba5fc750a2c1f081bd671c",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 14,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 59
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-lite-0.wasm"
+        },
+        "file_hash": "6a98fdd23c66b21d28acd4532bb3f65fb2fe13c4e3364ee9b692ecc93bd8d891",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 14,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 59
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-rwz.wasm"
+        },
+        "file_hash": "d3d222a91982339c7d793390f7e891558c035bec47d14fed19420f109f48764d",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 14,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 1,
+            "malicious": 0,
+            "undetected": 58
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn.wasm"
+        },
+        "file_hash": "13ff501c0e37e9304c59673476ef6e835fe0ff6b1c32b9f66b4891f690eed67a",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 14,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 59
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-r.wasm"
+        },
+        "file_hash": "131ab7e4ab4c6b1c56d041fa9499e9f810187117d3caf81567fa181f4e9a39b8",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 14,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 59
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-2.wasm"
+        },
+        "file_hash": "a355bf0667a409926c3cfb07f2c80a7de5d3410b5aa6e2baf851a4b5e34a4246",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 0,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 0
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-lite-1.wasm"
+        },
+        "file_hash": "1e798cbae46e863fceb1f14e49e7517ec5ccf62dac12e746cd9b7ce270485c18",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 15,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 58
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-half.wasm"
+        },
+        "file_hash": "0f64fdf94d9d407373c8920160daff9af0df293eb5a472d879bfe269a971ba35",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 0,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 0
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-1.wasm"
+        },
+        "file_hash": "5f51d6a64c1da03bd5885c04e18b408ffa1c2e33ba1c7580879f06122e8432cc",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 0,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 0
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "cn-lite-2.wasm"
+        },
+        "file_hash": "e6e03464765685aa586b7c6e1692c485312104d67bf214c2dacdbb194b0d64e1",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 0,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 0
+        }
+    },
+    {
+        "method": "virustotal",
+        "malicious": false,
+        "input": {
+            "path": "/virustotal/binaries/original",
+            "filename": "wasm-asteroids.wasm"
+        },
+        "file_hash": "2f2271fea4992049b196584c4bbd95ed8637233de6293116ee9c9425dc08d274",
+        "result": {
+            "harmless": 0,
+            "type-unsupported": 0,
+            "suspicious": 0,
+            "confirmed-timeout": 0,
+            "timeout": 0,
+            "failure": 0,
+            "malicious": 0,
+            "undetected": 0
+        }
+    }
+]

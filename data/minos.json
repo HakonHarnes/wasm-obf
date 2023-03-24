@@ -1,0 +1,226 @@
+[
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-rwz.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-splitobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "wasm-asteroids.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-strcry-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-bcfobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-fco-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-acdobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-lite-0.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-lite-2.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "cn-1-enable-bcfobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-funcwra-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-pico-trtl.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-antihook-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-constenc-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "cn-1-enable-strcry-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-lite-1.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "cn-1-enable-cffobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "cn-1-enable-splitobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-0.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-subobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "cn-obf.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-cffobf-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-1.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/llvm",
+            "filename": "wasm-asteroids-enable-adb-llvm.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-r.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-2.wasm"
+        }
+    },
+    {
+        "method": "minos",
+        "malicious": false,
+        "input": {
+            "path": "/minos/binaries/original",
+            "filename": "cn-half.wasm"
+        }
+    }
+]

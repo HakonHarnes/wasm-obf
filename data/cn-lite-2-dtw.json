@@ -1,0 +1,13 @@
+{
+    "program": "cn-lite-2.wasm",
+    "cn-lite-2-llvm-enable-fco.wasm": 349916.0,
+    "cn-lite-2-llvm-enable-strcry.wasm": 1617343.0,
+    "cn-lite-2-llvm-enable-funcwra.wasm": 1121727.0,
+    "cn-lite-2-llvm-enable-acdobf.wasm": 349916.0,
+    "cn-lite-2-llvm-enable-subobf.wasm": 1390315.0,
+    "cn-lite-2-llvm-enable-splitobf.wasm": 349916.0,
+    "cn-lite-2-llvm-enable-adb.wasm": 349916.0,
+    "cn-lite-2-llvm-enable-constenc.wasm": 229974.0,
+    "cn-lite-2-llvm-enable-antihook.wasm": 349916.0,
+    "cn-lite-2-llvm-enable-bcfobf.wasm": 794320.0
+}

@@ -7,10 +7,8 @@ rm -f ident.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
---gcc=emcc \
---envmachine \
 --Transform=Ident \
---out=ident.c ../cn.c
+--out=ident.c ../wasm-asteroids.c
 
 rm -f a.out 
 rm -f a.wasm

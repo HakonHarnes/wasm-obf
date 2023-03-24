@@ -4,7 +4,7 @@ FILE_IN=$1
 FILE_OUT=$2
 OBF_ARGS="${@:3}"
 
-emcc "$FILE_IN" -o "$FILE_OUT" -O3 \
+emcc "$FILE_IN" -o "$FILE_OUT" -O1 \
 -Wall -lm \
 -Wbad-function-cast -Wcast-function-type \
 -sEXPORTED_FUNCTIONS="['_hash_cn']" \
@@ -18,4 +18,3 @@ emcc "$FILE_IN" -o "$FILE_OUT" -O3 \
 -sWASM=1 \
 -fmacro-backtrace-limit=0 \
 $OBF_ARGS
-

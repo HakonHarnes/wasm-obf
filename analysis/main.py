@@ -1,11 +1,20 @@
 import os
 
 from utils.file_utils import merge_json
-from scripts.cosine_similarity import calculate_cosine_similarity
+from scripts.dtw import calculate_dtw_for_binaries
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 metadata_path = f'{dir_path}/data'
+
+
+def calculate_metrics():
+    print('\n-----------------')
+    print('Calculating metrics')
+    print('-----------------\n')
+
+    print('-- Calculating DTW --')
+    # calculate_dtw_for_binaries()
 
 
 def preprocess():
@@ -23,12 +32,6 @@ def analyze():
     print('Analyzing')
     print('---------\n')
 
-    similarity = calculate_cosine_similarity(
-        "./binaries/original/mutated.wasm",
-        "./binaries/original/original-miner.wasm", 8)
-
-    print(similarity)
-
 
 def plot():
     print('\n--------')
@@ -36,7 +39,12 @@ def plot():
     print('--------\n')
 
 
+def main():
+    calculate_metrics()
+    # preprocess()
+    # analyze()
+    # plot()
+
+
 if __name__ == '__main__':
-    preprocess()
-    analyze()
-    plot()
+    main()

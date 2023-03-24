@@ -1,0 +1,13 @@
+{
+    "program": "cn-rwz.wasm",
+    "cn-rwz-llvm-enable-subobf.wasm": 1596083.0,
+    "cn-rwz-llvm-enable-bcfobf.wasm": 821490.0,
+    "cn-rwz-llvm-enable-strcry.wasm": 1702183.0,
+    "cn-rwz-llvm-enable-constenc.wasm": 348082.0,
+    "cn-rwz-llvm-enable-antihook.wasm": 359562.0,
+    "cn-rwz-llvm-enable-splitobf.wasm": 359562.0,
+    "cn-rwz-llvm-enable-funcwra.wasm": 2837835.0,
+    "cn-rwz-llvm-enable-acdobf.wasm": 359562.0,
+    "cn-rwz-llvm-enable-fco.wasm": 359562.0,
+    "cn-rwz-llvm-enable-adb.wasm": 359562.0
+}

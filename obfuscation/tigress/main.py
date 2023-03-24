@@ -64,7 +64,7 @@ transformations = [
 
 def get_emcc_out(path, transformation):
     program_name = path.split('/')[-1]
-    binary_name = f'{program_name}-{transformation}-tigress.html'
+    binary_name = f'{program_name}-tigress-{transformation}.html'
     return os.path.join(binary_path, f'{binary_name}')
 
 

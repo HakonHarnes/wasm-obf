@@ -27,7 +27,7 @@ def get_emcc_out(path, transformation):
     program_name = path.split('/')[-1]
     transformation_name = ''.join(
         [x for x in transformation.split(' ') if x != '-mllvm'])
-    binary_name = f'{program_name}{transformation_name}-llvm.html'
+    binary_name = f'{program_name}-llvm{transformation_name}.html'
     return os.path.join(binary_path, f'{binary_name}')
 
 

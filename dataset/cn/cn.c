@@ -539,12 +539,12 @@ union __anonunion___u_898357595 {
    unsigned long __s[10] ;
 };
 #line 92 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-struct __anonstruct_pthread_attr_t_524239128 {
+struct __anonstruct_pthread_attr_t_569149330 {
    union __anonunion___u_898357595 __u ;
    char const   *_a_transferredcanvases ;
 };
 #line 92 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-typedef struct __anonstruct_pthread_attr_t_524239128 pthread_attr_t;
+typedef struct __anonstruct_pthread_attr_t_569149330 pthread_attr_t;
 #line 108 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
 union __anonunion___u_546072648 {
    int __i[6] ;
@@ -552,11 +552,11 @@ union __anonunion___u_546072648 {
    void volatile   *__p[6] ;
 };
 #line 108 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-struct __anonstruct_pthread_mutex_t_429903450 {
+struct __anonstruct_pthread_mutex_t_858866153 {
    union __anonunion___u_546072648 __u ;
 };
 #line 108 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-typedef struct __anonstruct_pthread_mutex_t_429903450 pthread_mutex_t;
+typedef struct __anonstruct_pthread_mutex_t_858866153 pthread_mutex_t;
 #line 118 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
 union __anonunion___u_357071066 {
    int __i[12] ;
@@ -564,35 +564,35 @@ union __anonunion___u_357071066 {
    void *__p[12] ;
 };
 #line 118 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-struct __anonstruct_pthread_cond_t_959059231 {
+struct __anonstruct_pthread_cond_t_569797212 {
    union __anonunion___u_357071066 __u ;
 };
 #line 118 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-typedef struct __anonstruct_pthread_cond_t_959059231 pthread_cond_t;
+typedef struct __anonstruct_pthread_cond_t_569797212 pthread_cond_t;
 #line 128 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-union __anonunion___u_569929343 {
-   int __i[14] ;
-   int volatile   __vi[14] ;
-   void *__p[7] ;
+union __anonunion___u_638102165 {
+   int __i[8] ;
+   int volatile   __vi[8] ;
+   void *__p[8] ;
 };
 #line 128 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-struct __anonstruct_pthread_rwlock_t_569929342 {
-   union __anonunion___u_569929343 __u ;
+struct __anonstruct_pthread_rwlock_t_638102164 {
+   union __anonunion___u_638102165 __u ;
 };
 #line 128 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-typedef struct __anonstruct_pthread_rwlock_t_569929342 pthread_rwlock_t;
+typedef struct __anonstruct_pthread_rwlock_t_638102164 pthread_rwlock_t;
 #line 133 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-union __anonunion___u_983099363 {
+union __anonunion___u_638102166 {
    int __i[5] ;
    int volatile   __vi[5] ;
    void *__p[5] ;
 };
 #line 133 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-struct __anonstruct_pthread_barrier_t_983099362 {
-   union __anonunion___u_983099363 __u ;
+struct __anonstruct_pthread_barrier_t_632319124 {
+   union __anonunion___u_638102166 __u ;
 };
 #line 133 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
-typedef struct __anonstruct_pthread_barrier_t_983099362 pthread_barrier_t;
+typedef struct __anonstruct_pthread_barrier_t_632319124 pthread_barrier_t;
 #line 169 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
 typedef long register_t;
 #line 220 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
@@ -895,12 +895,12 @@ union __anonunion_u_1050245620 {
    Skein1024_Ctxt_t ctx1024 ;
 };
 #line 1934 "skein.c"
-struct __anonstruct_hashState_740696523 {
+struct __anonstruct_hashState_369367684 {
    uint_t statebits ;
    union __anonunion_u_1050245620 u ;
 };
 #line 1934 "skein.c"
-typedef struct __anonstruct_hashState_740696523 hashState___0;
+typedef struct __anonstruct_hashState_369367684 hashState___0;
 /* compiler builtin: 
    void __builtin_va_copy(__builtin_va_list  , __builtin_va_list  ) ;  */
 /* compiler builtin: 
@@ -1155,7 +1155,7 @@ typedef struct __anonstruct_hashState_740696523 hashState___0;
 /* compiler builtin: 
    void __attribute__((__overloaded__))  __atomic_fetch_add(...) ;  */
 /* compiler builtin: 
-   long __builtin_bswap64(long  ) ;  */
+   long long __builtin_bswap64(long long  ) ;  */
 /* compiler builtin: 
    void __attribute__((__overloaded__))  __atomic_nand_fetch_1(...) ;  */
 /* compiler builtin: 
@@ -1474,8 +1474,8 @@ typedef struct __anonstruct_hashState_740696523 hashState___0;
    void __attribute__((__overloaded__))  __atomic_add_fetch_4(...) ;  */
 /* compiler builtin: 
    void *__builtin_frame_address(unsigned int  ) ;  */
-#line 1 "cil-_3IogbZD.o"
-#pragma merger("0","/tmp/cil-X3CPbP0g.i","")
+#line 1 "cil-7xYVIcG9.o"
+#pragma merger("0","/tmp/cil-WXa0hKKB.i","")
 #line 8 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h"
 extern char *strlwr(char * ) ;
 #line 9
@@ -2486,8 +2486,8 @@ void hmac_blake224_hash(uint8_t *out , uint8_t const   *key , uint64_t keylen , 
   return;
 }
 }
-#line 1 "cil-DPsRn5G_.o"
-#pragma merger("0","/tmp/cil-K16I06KY.i","")
+#line 1 "cil-N3KKLmE8.o"
+#pragma merger("0","/tmp/cil-dsYneYbG.i","")
 #line 8 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h"
 extern int getloadavg(double *loadavg , int nelem ) ;
 #line 23 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h"
@@ -10985,8 +10985,8 @@ void cryptonight(void *output___0 , void const   *input , size_t len , int algo 
   return;
 }
 }
-#line 1 "cil-r4bJ5ybJ.o"
-#pragma merger("0","/tmp/cil-CMe_D4GN.i","")
+#line 1 "cil-NZpT1hwT.o"
+#pragma merger("0","/tmp/cil-rN1NwyQj.i","")
 #line 6 "./groestl_tables.h"
 uint32_t const   T[512]  = 
 #line 6 "./groestl_tables.h"
@@ -13166,8 +13166,8 @@ void groestl(BitSequence const   *data , DataLength databitlen , BitSequence *ha
   return;
 }
 }
-#line 1 "cil-dJ8JxwRL.o"
-#pragma merger("0","/tmp/cil-fudGRzaR.i","")
+#line 1 "cil-KrShJruU.o"
+#pragma merger("0","/tmp/cil-VZeE_BHh.i","")
 #line 19 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/assert.h"
 extern void __assert_fail(char const   * , char const   * , int  , char const   * ) ;
 #line 47 "jh_ansi_opt64.c"
@@ -14555,17 +14555,17 @@ void jh(unsigned int bit_len , uint8_t const   *input , size_t input_bit_length 
   return;
 }
 }
-#line 1 "cil-V1bK7Ece.o"
-#pragma merger("0","/tmp/cil-19VtAd3G.i","")
+#line 1 "cil-vdmaxD4e.o"
+#pragma merger("0","/tmp/cil-Kf5tE_l6.i","")
 #line 17 "keccak.c"
 uint64_t const   keccakf_rndc[24]  = 
 #line 17 "keccak.c"
-  {      (uint64_t const   )1,      (uint64_t const   )32898,      (uint64_t const   )0x800000000000808aUL,      (uint64_t const   )0x8000000080008000UL, 
-        (uint64_t const   )32907,      (uint64_t const   )2147483649U,      (uint64_t const   )0x8000000080008081UL,      (uint64_t const   )0x8000000000008009UL, 
+  {      (uint64_t const   )1,      (uint64_t const   )32898,      (uint64_t const   )0x800000000000808aULL,      (uint64_t const   )0x8000000080008000ULL, 
+        (uint64_t const   )32907,      (uint64_t const   )2147483649U,      (uint64_t const   )0x8000000080008081ULL,      (uint64_t const   )0x8000000000008009ULL, 
         (uint64_t const   )138,      (uint64_t const   )136,      (uint64_t const   )2147516425U,      (uint64_t const   )2147483658U, 
-        (uint64_t const   )2147516555U,      (uint64_t const   )0x800000000000008bUL,      (uint64_t const   )0x8000000000008089UL,      (uint64_t const   )0x8000000000008003UL, 
-        (uint64_t const   )0x8000000000008002UL,      (uint64_t const   )0x8000000000000080UL,      (uint64_t const   )32778,      (uint64_t const   )0x800000008000000aUL, 
-        (uint64_t const   )0x8000000080008081UL,      (uint64_t const   )0x8000000000008080UL,      (uint64_t const   )2147483649U,      (uint64_t const   )0x8000000080008008UL};
+        (uint64_t const   )2147516555U,      (uint64_t const   )0x800000000000008bULL,      (uint64_t const   )0x8000000000008089ULL,      (uint64_t const   )0x8000000000008003ULL, 
+        (uint64_t const   )0x8000000000008002ULL,      (uint64_t const   )0x8000000000000080ULL,      (uint64_t const   )32778,      (uint64_t const   )0x800000008000000aULL, 
+        (uint64_t const   )0x8000000080008081ULL,      (uint64_t const   )0x8000000000008080ULL,      (uint64_t const   )2147483649U,      (uint64_t const   )0x8000000080008008ULL};
 #line 29 "keccak.c"
 int const   keccakf_rotc[24]  = 
 #line 29
@@ -14760,8 +14760,8 @@ void keccak1600(uint8_t const   *in , int inlen , uint8_t *md )
   return;
 }
 }
-#line 1 "cil-cLNaDHQE.o"
-#pragma merger("0","/tmp/cil-uvkoqDI4.i","")
+#line 1 "cil-HGM8GGTh.o"
+#pragma merger("0","/tmp/cil-RcQVGXbD.i","")
 #line 1669 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h"
 extern __wasi_errno_t ( __attribute__((__warn_unused_result__)) __wasi_args_get)(uint8_t **argv ,
                                                                                  uint8_t *argv_buf )  __attribute__((__import_name__("args_get"),
@@ -16671,52 +16671,56 @@ char *hash_cn(char *hex , int lite , int variant , int height )
 #line 17
   inp = (unsigned char *)tmp___0;
 #line 19
+  lite = 4;
+#line 20
+  variant = 2;
+#line 22
   pos = hex;
-#line 20
+#line 23
   i = (size_t )0;
-#line 20
+#line 23
   while (i < (size_t )len) {
-#line 20
+#line 23
     sscanf((char const   * __restrict  )pos, (char const   * __restrict  )"%2hhx",
            inp + i);
-#line 20
+#line 23
     pos += 2;
-#line 20
+#line 23
     i ++;
   }
-#line 24
+#line 27
   if (variant == -1) {
-#line 25
+#line 28
     if ((int const   )*((uint8_t const   *)inp + 0) >= 7) {
-#line 25
+#line 28
       variant = (int )((int const   )*((uint8_t const   *)inp + 0) - 6);
     } else {
-#line 25
+#line 28
       variant = 0;
     }
   }
-#line 27
+#line 30
   cryptonight((void *)(hash), (void const   *)inp, (size_t )len, lite, variant, height);
-#line 29
+#line 32
   ptr = & output[0];
-#line 31
+#line 34
   i___0 = (size_t )0;
-#line 31
+#line 34
   while (i___0 < 32UL) {
-#line 31
+#line 34
     tmp___1 = sprintf((char * __restrict  )ptr, (char const   * __restrict  )"%02x",
                       (int )hash[i___0]);
-#line 31
+#line 34
     ptr += tmp___1;
-#line 31
+#line 34
     i___0 ++;
   }
-#line 33
+#line 36
   return (& output[0]);
 }
 }
-#line 1 "cil-pcaoGgev.o"
-#pragma merger("0","/tmp/cil-8Vt_GWna.i","")
+#line 1 "cil-ycfBj8f5.o"
+#pragma merger("0","/tmp/cil-GHbAIFq4.i","")
 #line 29 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/sys/timeb.h"
 extern int ftime(struct timeb * ) ;
 #line 28 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/malloc.h"
@@ -17552,7 +17556,7 @@ static OAES_RET oaes_sub_byte(uint8_t *byte )
 
   {
 #line 242
-  if ((unsigned long )((void *)0) == (unsigned long )byte) {
+  if ((unsigned int )((void *)0) == (unsigned int )byte) {
 #line 243
     return ((OAES_RET )2);
   }
@@ -17576,7 +17580,7 @@ static OAES_RET oaes_inv_sub_byte(uint8_t *byte )
 
   {
 #line 256
-  if ((unsigned long )((void *)0) == (unsigned long )byte) {
+  if ((unsigned int )((void *)0) == (unsigned int )byte) {
 #line 257
     return ((OAES_RET )2);
   }
@@ -17603,7 +17607,7 @@ static OAES_RET oaes_word_rot_left(uint8_t *word )
 
   {
 #line 287
-  if ((unsigned long )((void *)0) == (unsigned long )word) {
+  if ((unsigned int )((void *)0) == (unsigned int )word) {
 #line 288
     return ((OAES_RET )2);
   }
@@ -17624,7 +17628,7 @@ static OAES_RET oaes_shift_rows(uint8_t *block )
 
   {
 #line 299
-  if ((unsigned long )((void *)0) == (unsigned long )block) {
+  if ((unsigned int )((void *)0) == (unsigned int )block) {
 #line 300
     return ((OAES_RET )2);
   }
@@ -17673,7 +17677,7 @@ static OAES_RET oaes_inv_shift_rows(uint8_t *block )
 
   {
 #line 324
-  if ((unsigned long )((void *)0) == (unsigned long )block) {
+  if ((unsigned int )((void *)0) == (unsigned int )block) {
 #line 325
     return ((OAES_RET )2);
   }
@@ -17785,7 +17789,7 @@ static OAES_RET oaes_mix_cols(uint8_t *word )
 
   {
 #line 385
-  if ((unsigned long )((void *)0) == (unsigned long )word) {
+  if ((unsigned int )((void *)0) == (unsigned int )word) {
 #line 386
     return ((OAES_RET )2);
   }
@@ -17842,7 +17846,7 @@ static OAES_RET oaes_inv_mix_cols(uint8_t *word )
 
   {
 #line 405
-  if ((unsigned long )((void *)0) == (unsigned long )word) {
+  if ((unsigned int )((void *)0) == (unsigned int )word) {
 #line 406
     return ((OAES_RET )2);
   }
@@ -17901,7 +17905,7 @@ OAES_RET oaes_sprintf(char *buf , size_t *buf_len , uint8_t const   *data , size
 
   {
 #line 427
-  if ((unsigned long )((void *)0) == (unsigned long )buf_len) {
+  if ((unsigned int )((void *)0) == (unsigned int )buf_len) {
 #line 428
     return ((OAES_RET )3);
   }
@@ -17910,7 +17914,7 @@ OAES_RET oaes_sprintf(char *buf , size_t *buf_len , uint8_t const   *data , size
 #line 431
   *buf_len = (data_len * 3UL + data_len / 16UL) + 1UL;
 #line 433
-  if ((unsigned long )((void *)0) == (unsigned long )buf) {
+  if ((unsigned int )((void *)0) == (unsigned int )buf) {
 #line 434
     return ((OAES_RET )0);
   }
@@ -17920,7 +17924,7 @@ OAES_RET oaes_sprintf(char *buf , size_t *buf_len , uint8_t const   *data , size
     return ((OAES_RET )9);
   }
 #line 439
-  if ((unsigned long )((void *)0) == (unsigned long )data) {
+  if ((unsigned int )((void *)0) == (unsigned int )data) {
 #line 440
     return ((OAES_RET )4);
   }
@@ -17992,7 +17996,7 @@ static OAES_RET oaes_key_destroy(oaes_key **key )
 
   {
 #line 497
-  if ((unsigned long )((void *)0) == (unsigned long )*key) {
+  if ((unsigned int )((void *)0) == (unsigned int )*key) {
 #line 498
     return ((OAES_RET )0);
   }
@@ -18123,7 +18127,7 @@ static OAES_RET oaes_key_gen(OAES_CTX *ctx , size_t key_size )
 #line 580
   _rc = (OAES_RET )0;
 #line 582
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 583
     return ((OAES_RET )2);
   }
@@ -18132,7 +18136,7 @@ static OAES_RET oaes_key_gen(OAES_CTX *ctx , size_t key_size )
 #line 585
   _key = (oaes_key *)tmp;
 #line 587
-  if ((unsigned long )((void *)0) == (unsigned long )_key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_key) {
 #line 588
     return ((OAES_RET )8);
   }
@@ -18148,7 +18152,7 @@ static OAES_RET oaes_key_gen(OAES_CTX *ctx , size_t key_size )
 #line 594
   _key->data = (uint8_t *)tmp___0;
 #line 596
-  if ((unsigned long )((void *)0) == (unsigned long )_key->data) {
+  if ((unsigned int )((void *)0) == (unsigned int )_key->data) {
 #line 597
     return ((OAES_RET )8);
   }
@@ -18240,17 +18244,17 @@ OAES_RET oaes_key_export(OAES_CTX *ctx , uint8_t *data , size_t *data_len )
 #line 637
   _ctx = (oaes_ctx *)ctx;
 #line 639
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 640
     return ((OAES_RET )2);
   }
 #line 642
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 643
     return ((OAES_RET )7);
   }
 #line 645
-  if ((unsigned long )((void *)0) == (unsigned long )data_len) {
+  if ((unsigned int )((void *)0) == (unsigned int )data_len) {
 #line 646
     return ((OAES_RET )4);
   }
@@ -18259,7 +18263,7 @@ OAES_RET oaes_key_export(OAES_CTX *ctx , uint8_t *data , size_t *data_len )
 #line 650
   *data_len = (_ctx->key)->data_len + 16UL;
 #line 652
-  if ((unsigned long )((void *)0) == (unsigned long )data) {
+  if ((unsigned int )((void *)0) == (unsigned int )data) {
 #line 653
     return ((OAES_RET )0);
   }
@@ -18291,17 +18295,17 @@ OAES_RET oaes_key_export_data(OAES_CTX *ctx , uint8_t *data , size_t *data_len )
 #line 671
   _ctx = (oaes_ctx *)ctx;
 #line 673
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 674
     return ((OAES_RET )2);
   }
 #line 676
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 677
     return ((OAES_RET )7);
   }
 #line 679
-  if ((unsigned long )((void *)0) == (unsigned long )data_len) {
+  if ((unsigned int )((void *)0) == (unsigned int )data_len) {
 #line 680
     return ((OAES_RET )4);
   }
@@ -18310,7 +18314,7 @@ OAES_RET oaes_key_export_data(OAES_CTX *ctx , uint8_t *data , size_t *data_len )
 #line 683
   *data_len = (_ctx->key)->data_len;
 #line 685
-  if ((unsigned long )((void *)0) == (unsigned long )data) {
+  if ((unsigned int )((void *)0) == (unsigned int )data) {
 #line 686
     return ((OAES_RET )0);
   }
@@ -18344,12 +18348,12 @@ OAES_RET oaes_key_import(OAES_CTX *ctx , uint8_t const   *data , size_t data_len
 #line 700
   _rc = (OAES_RET )0;
 #line 703
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 704
     return ((OAES_RET )2);
   }
 #line 706
-  if ((unsigned long )((void *)0) == (unsigned long )data) {
+  if ((unsigned int )((void *)0) == (unsigned int )data) {
 #line 707
     return ((OAES_RET )3);
   }
@@ -18417,7 +18421,7 @@ OAES_RET oaes_key_import(OAES_CTX *ctx , uint8_t const   *data , size_t data_len
 #line 759
   _ctx->key = (oaes_key *)tmp___0;
 #line 761
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 762
     return ((OAES_RET )8);
   }
@@ -18428,7 +18432,7 @@ OAES_RET oaes_key_import(OAES_CTX *ctx , uint8_t const   *data , size_t data_len
 #line 765
   (_ctx->key)->data = (uint8_t *)tmp___1;
 #line 768
-  if ((unsigned long )((void *)0) == (unsigned long )(_ctx->key)->data) {
+  if ((unsigned int )((void *)0) == (unsigned int )(_ctx->key)->data) {
 #line 770
     oaes_key_destroy(& _ctx->key);
 #line 771
@@ -18508,7 +18512,7 @@ OAES_CTX *oaes_alloc(void)
 #line 804
   _ctx = (oaes_ctx *)tmp;
 #line 806
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 807
     return ((void *)0);
   }
@@ -18533,12 +18537,12 @@ OAES_RET oaes_free(OAES_CTX **ctx )
 #line 844
   _ctx = (oaes_ctx **)ctx;
 #line 846
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 847
     return ((OAES_RET )2);
   }
 #line 849
-  if ((unsigned long )((void *)0) == (unsigned long )*_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )*_ctx) {
 #line 850
     return ((OAES_RET )0);
   }
@@ -18566,7 +18570,7 @@ OAES_RET oaes_set_option(OAES_CTX *ctx , OAES_OPTION option , void const   *valu
 #line 873
   _ctx = (oaes_ctx *)ctx;
 #line 875
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 876
     return ((OAES_RET )2);
   }
@@ -18622,12 +18626,12 @@ static OAES_RET oaes_encrypt_block(OAES_CTX *ctx , uint8_t *c , size_t c_len )
 #line 937
   _ctx = (oaes_ctx *)ctx;
 #line 939
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 940
     return ((OAES_RET )2);
   }
 #line 942
-  if ((unsigned long )((void *)0) == (unsigned long )c) {
+  if ((unsigned int )((void *)0) == (unsigned int )c) {
 #line 943
     return ((OAES_RET )3);
   }
@@ -18637,7 +18641,7 @@ static OAES_RET oaes_encrypt_block(OAES_CTX *ctx , uint8_t *c , size_t c_len )
     return ((OAES_RET )4);
   }
 #line 948
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 949
     return ((OAES_RET )7);
   }
@@ -18720,12 +18724,12 @@ static OAES_RET oaes_decrypt_block(OAES_CTX *ctx , uint8_t *c , size_t c_len )
 #line 1054
   _ctx = (oaes_ctx *)ctx;
 #line 1056
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 1057
     return ((OAES_RET )2);
   }
 #line 1059
-  if ((unsigned long )((void *)0) == (unsigned long )c) {
+  if ((unsigned int )((void *)0) == (unsigned int )c) {
 #line 1060
     return ((OAES_RET )3);
   }
@@ -18735,7 +18739,7 @@ static OAES_RET oaes_decrypt_block(OAES_CTX *ctx , uint8_t *c , size_t c_len )
     return ((OAES_RET )4);
   }
 #line 1065
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 1066
     return ((OAES_RET )7);
   }
@@ -18853,17 +18857,17 @@ OAES_RET oaes_encrypt(OAES_CTX *ctx , uint8_t const   *m , size_t m_len , uint8_
 #line 1174
   _flags = (uint8_t )tmp___0;
 #line 1176
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 1177
     return ((OAES_RET )2);
   }
 #line 1179
-  if ((unsigned long )((void *)0) == (unsigned long )m) {
+  if ((unsigned int )((void *)0) == (unsigned int )m) {
 #line 1180
     return ((OAES_RET )3);
   }
 #line 1182
-  if ((unsigned long )((void *)0) == (unsigned long )c_len) {
+  if ((unsigned int )((void *)0) == (unsigned int )c_len) {
 #line 1183
     return ((OAES_RET )6);
   }
@@ -18874,7 +18878,7 @@ OAES_RET oaes_encrypt(OAES_CTX *ctx , uint8_t const   *m , size_t m_len , uint8_
 #line 1189
   *c_len = (32UL + m_len) + _pad_len;
 #line 1191
-  if ((unsigned long )((void *)0) == (unsigned long )c) {
+  if ((unsigned int )((void *)0) == (unsigned int )c) {
 #line 1192
     return ((OAES_RET )0);
   }
@@ -18884,7 +18888,7 @@ OAES_RET oaes_encrypt(OAES_CTX *ctx , uint8_t const   *m , size_t m_len , uint8_
     return ((OAES_RET )9);
   }
 #line 1197
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 1198
     return ((OAES_RET )7);
   }
@@ -18996,12 +19000,12 @@ OAES_RET oaes_decrypt(OAES_CTX *ctx , uint8_t const   *c , size_t c_len , uint8_
 #line 1243
   _rc = (OAES_RET )0;
 #line 1248
-  if ((unsigned long )((void *)0) == (unsigned long )ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )ctx) {
 #line 1249
     return ((OAES_RET )2);
   }
 #line 1251
-  if ((unsigned long )((void *)0) == (unsigned long )c) {
+  if ((unsigned int )((void *)0) == (unsigned int )c) {
 #line 1252
     return ((OAES_RET )3);
   }
@@ -19011,7 +19015,7 @@ OAES_RET oaes_decrypt(OAES_CTX *ctx , uint8_t const   *c , size_t c_len , uint8_
     return ((OAES_RET )4);
   }
 #line 1257
-  if ((unsigned long )((void *)0) == (unsigned long )m_len) {
+  if ((unsigned int )((void *)0) == (unsigned int )m_len) {
 #line 1258
     return ((OAES_RET )6);
   }
@@ -19020,7 +19024,7 @@ OAES_RET oaes_decrypt(OAES_CTX *ctx , uint8_t const   *c , size_t c_len , uint8_
 #line 1261
   *m_len = c_len - 32UL;
 #line 1263
-  if ((unsigned long )((void *)0) == (unsigned long )m) {
+  if ((unsigned int )((void *)0) == (unsigned int )m) {
 #line 1264
     return ((OAES_RET )0);
   }
@@ -19030,7 +19034,7 @@ OAES_RET oaes_decrypt(OAES_CTX *ctx , uint8_t const   *c , size_t c_len , uint8_
     return ((OAES_RET )9);
   }
 #line 1269
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 1270
     return ((OAES_RET )7);
   }
@@ -19195,12 +19199,12 @@ OAES_RET oaes_encryption_round(uint8_t const   *key , uint8_t *c )
 
   {
 #line 1369
-  if ((unsigned long )((void *)0) == (unsigned long )key) {
+  if ((unsigned int )((void *)0) == (unsigned int )key) {
 #line 1370
     return ((OAES_RET )2);
   }
 #line 1372
-  if ((unsigned long )((void *)0) == (unsigned long )c) {
+  if ((unsigned int )((void *)0) == (unsigned int )c) {
 #line 1373
     return ((OAES_RET )3);
   }
@@ -19246,17 +19250,17 @@ OAES_RET oaes_pseudo_encrypt_ecb(OAES_CTX *ctx , uint8_t *c )
 #line 1398
   _ctx = (oaes_ctx *)ctx;
 #line 1400
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx) {
 #line 1401
     return ((OAES_RET )2);
   }
 #line 1403
-  if ((unsigned long )((void *)0) == (unsigned long )c) {
+  if ((unsigned int )((void *)0) == (unsigned int )c) {
 #line 1404
     return ((OAES_RET )3);
   }
 #line 1406
-  if ((unsigned long )((void *)0) == (unsigned long )_ctx->key) {
+  if ((unsigned int )((void *)0) == (unsigned int )_ctx->key) {
 #line 1407
     return ((OAES_RET )7);
   }
@@ -19274,8 +19278,8 @@ OAES_RET oaes_pseudo_encrypt_ecb(OAES_CTX *ctx , uint8_t *c )
   return ((OAES_RET )0);
 }
 }
-#line 1 "cil-b149Pxpk.o"
-#pragma merger("0","/tmp/cil-qQIus3mh.i","")
+#line 1 "cil-t8JhCb2f.o"
+#pragma merger("0","/tmp/cil-4fKSgoBy.i","")
 #line 145 "./skein_port.h"
 void Skein_Put64_LSB_First(u08b_t *dst , u64b_t const   *src , size_t bCnt ) 
 { 
