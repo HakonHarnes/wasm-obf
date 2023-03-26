@@ -35,6 +35,11 @@ services:
       - ./obfuscation/llvm/main.py:/llvm/main.py
       - ./dataset/:/llvm/dataset
       - ./binaries:/llvm/binaries
+  hash-rate:
+    build: ./hash-rate/
+    volumes:
+      - ./hash-rate/*.py:/hash-rate/*.py
+      - ./binaries:/llvm/binaries
   analysis:
     build: ./analysis
     volumes:

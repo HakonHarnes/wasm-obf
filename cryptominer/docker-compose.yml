@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: webminerpool-org
+    environment:
+      - DOMAIN=
+    ports:
+      - "80:80"
+      - "8181:8181"
+    networks:
+      - webminer_network
+
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+      args:
+        - NO_CACHE=1
+    container_name: webminer-client
+    ports:
+      - "8080:8080"
+    networks:
+      - webminer_network
+    volumes:
+      - ./client:/app
+
+networks:
+  webminer_network:
+    driver: bridge
