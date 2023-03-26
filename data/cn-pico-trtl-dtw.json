@@ -1,13 +1,13 @@
 {
     "program": "cn-pico-trtl.wasm",
-    "cn-pico-trtl-llvm-enable-fco.wasm": 360212.0,
-    "cn-pico-trtl-llvm-enable-adb.wasm": 360212.0,
-    "cn-pico-trtl-llvm-enable-acdobf.wasm": 360212.0,
-    "cn-pico-trtl-llvm-enable-subobf.wasm": 1610427.0,
-    "cn-pico-trtl-llvm-enable-splitobf.wasm": 360212.0,
-    "cn-pico-trtl-llvm-enable-antihook.wasm": 360212.0,
-    "cn-pico-trtl-llvm-enable-strcry.wasm": 1589286.0,
-    "cn-pico-trtl-llvm-enable-bcfobf.wasm": 846685.0,
-    "cn-pico-trtl-llvm-enable-funcwra.wasm": 1071248.0,
-    "cn-pico-trtl-llvm-enable-constenc.wasm": 577553.0
+    "cn-pico-trtl-llvm-enable-acdobf.wasm": 0.0,
+    "cn-pico-trtl-llvm-enable-adb.wasm": 0.0,
+    "cn-pico-trtl-llvm-enable-antihook.wasm": 0.0,
+    "cn-pico-trtl-llvm-enable-bcfobf.wasm": 931353.0,
+    "cn-pico-trtl-llvm-enable-constenc.wasm": 552502.0,
+    "cn-pico-trtl-llvm-enable-fco.wasm": 0.0,
+    "cn-pico-trtl-llvm-enable-funcwra.wasm": 860862.0,
+    "cn-pico-trtl-llvm-enable-splitobf.wasm": 0.0,
+    "cn-pico-trtl-llvm-enable-strcry.wasm": 1667247.0,
+    "cn-pico-trtl-llvm-enable-subobf.wasm": 1755160.0
 }

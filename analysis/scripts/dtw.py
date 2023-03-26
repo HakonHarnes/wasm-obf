@@ -30,13 +30,13 @@ def calculate_dtw(f1, f2):
 
 def calculate_dtw_for_binaries(binary_path, data_path):
     original_binaries_path = os.path.join(binary_path, 'original')
-    original_binaries = glob.glob(original_binaries_path + '/*.wasm')
+    original_binaries = sorted(glob.glob(original_binaries_path + '/*.wasm'))
 
     tigress_binaries_path = os.path.join(binary_path, 'tigress')
-    tigress_binaries = glob.glob(tigress_binaries_path + '/*.wasm')
+    tigress_binaries = sorted(glob.glob(tigress_binaries_path + '/*.wasm'))
 
     llvm_binaries_path = os.path.join(binary_path, 'llvm')
-    llvm_binaries = glob.glob(llvm_binaries_path + '/*.wasm')
+    llvm_binaries = sorted(glob.glob(llvm_binaries_path + '/*.wasm'))
 
     program_count = len(original_binaries)
     count = 1

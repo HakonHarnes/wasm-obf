@@ -1,0 +1,789 @@
+/* compiled from: . */
+/* cn.c:1:OF */ extern int main (void); /* () */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:8:NC */ extern char *strlwr (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:9:NC */ extern char *strupr (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:27:NC */ extern void *memcpy (void *, const void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:28:NC */ extern void *memmove (void *, const void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:29:NC */ extern void *memset (void *, int, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:30:NC */ extern int memcmp (const void *, const void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:31:NC */ extern void *memchr (const void *, int, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:33:NC */ extern char *strcpy (char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:34:NC */ extern char *strncpy (char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:36:NC */ extern char *strcat (char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:37:NC */ extern char *strncat (char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:39:NC */ extern int strcmp (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:40:NC */ extern int strncmp (const char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:42:NC */ extern int strcoll (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:43:NC */ extern size_t strxfrm (char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:45:NC */ extern char *strchr (const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:46:NC */ extern char *strrchr (const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:48:NC */ extern size_t strcspn (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:49:NC */ extern size_t strspn (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:50:NC */ extern char *strpbrk (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:51:NC */ extern char *strstr (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:52:NC */ extern char *strtok (char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:54:NC */ extern size_t strlen (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:56:NC */ extern char *strerror (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:16:NC */ extern int bcmp (const void *, const void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:17:NC */ extern void bcopy (const void *, void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:18:NC */ extern void bzero (void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:19:NC */ extern char *index (const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:20:NC */ extern char *rindex (const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:24:NC */ extern int ffs (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:25:NC */ extern int ffsl (long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:26:NC */ extern int ffsll (long long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:29:NC */ extern int strcasecmp (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:30:NC */ extern int strncasecmp (const char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:32:NC */ extern int strcasecmp_l (const char *, const char *, locale_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:33:NC */ extern int strncasecmp_l (const char *, const char *, size_t, locale_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:65:NC */ extern char *strtok_r (char *, const char *, char **);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:66:NC */ extern int strerror_r (int, char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:67:NC */ extern char *stpcpy (char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:68:NC */ extern char *stpncpy (char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:69:NC */ extern size_t strnlen (const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:70:NC */ extern char *strdup (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:71:NC */ extern char *strndup (const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:72:NC */ extern char *strsignal (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:73:NC */ extern char *strerror_l (int, locale_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:74:NC */ extern int strcoll_l (const char *, const char *, locale_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:75:NC */ extern size_t strxfrm_l (char *, const char *, size_t, locale_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:80:NC */ extern void *memccpy (void *, const void *, int, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:84:NC */ extern char *strsep (char **, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:85:NC */ extern size_t strlcat (char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:86:NC */ extern size_t strlcpy (char *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/string.h:87:NC */ extern void explicit_bzero (void *, size_t);
+/* blake.c:64:NF */ extern void blake256_compress (state *S, const uint8_t *block); /* (S, block) state *S; const uint8_t *block; */
+/* blake.c:111:NF */ extern void blake256_init (state *S); /* (S) state *S; */
+/* blake.c:124:NF */ extern void blake224_init (state *S); /* (S) state *S; */
+/* blake.c:138:NF */ extern void blake256_update (state *S, const uint8_t *data, uint64_t datalen); /* (S, data, datalen) state *S; const uint8_t *data; uint64_t datalen; */
+/* blake.c:169:NF */ extern void blake224_update (state *S, const uint8_t *data, uint64_t datalen); /* (S, data, datalen) state *S; const uint8_t *data; uint64_t datalen; */
+/* blake.c:173:NF */ extern void blake256_final_h (state *S, uint8_t *digest, uint8_t pa, uint8_t pb); /* (S, digest, pa, pb) state *S; uint8_t *digest; uint8_t pa; uint8_t pb; */
+/* blake.c:211:NF */ extern void blake256_final (state *S, uint8_t *digest); /* (S, digest) state *S; uint8_t *digest; */
+/* blake.c:215:NF */ extern void blake224_final (state *S, uint8_t *digest); /* (S, digest) state *S; uint8_t *digest; */
+/* blake.c:220:NF */ extern void blake256_hash (uint8_t *out, const uint8_t *in, uint64_t inlen); /* (out, in, inlen) uint8_t *out; const uint8_t *in; uint64_t inlen; */
+/* blake.c:227:NF */ extern void blake (const uint8_t *input, uint64_t len, uint8_t *output___0); /* (input, len, output___0) const uint8_t *input; uint64_t len; uint8_t *output___0; */
+/* blake.c:233:NF */ extern void blake224_hash (uint8_t *out, const uint8_t *in, uint64_t inlen); /* (out, in, inlen) uint8_t *out; const uint8_t *in; uint64_t inlen; */
+/* blake.c:241:NF */ extern void hmac_blake256_init (hmac_state *S, const uint8_t *_key, uint64_t keylen); /* (S, _key, keylen) hmac_state *S; const uint8_t *_key; uint64_t keylen; */
+/* blake.c:271:NF */ extern void hmac_blake224_init (hmac_state *S, const uint8_t *_key, uint64_t keylen); /* (S, _key, keylen) hmac_state *S; const uint8_t *_key; uint64_t keylen; */
+/* blake.c:301:NF */ extern void hmac_blake256_update (hmac_state *S, const uint8_t *data, uint64_t datalen); /* (S, data, datalen) hmac_state *S; const uint8_t *data; uint64_t datalen; */
+/* blake.c:307:NF */ extern void hmac_blake224_update (hmac_state *S, const uint8_t *data, uint64_t datalen); /* (S, data, datalen) hmac_state *S; const uint8_t *data; uint64_t datalen; */
+/* blake.c:312:NF */ extern void hmac_blake256_final (hmac_state *S, uint8_t *digest); /* (S, digest) hmac_state *S; uint8_t *digest; */
+/* blake.c:320:NF */ extern void hmac_blake224_final (hmac_state *S, uint8_t *digest); /* (S, digest) hmac_state *S; uint8_t *digest; */
+/* blake.c:329:NF */ extern void hmac_blake256_hash (uint8_t *out, const uint8_t *key, uint64_t keylen, const uint8_t *in, uint64_t inlen); /* (out, key, keylen, in, inlen) uint8_t *out; const uint8_t *key; uint64_t keylen; const uint8_t *in; uint64_t inlen; */
+/* blake.c:337:NF */ extern void hmac_blake224_hash (uint8_t *out, const uint8_t *key, uint64_t keylen, const uint8_t *in, uint64_t inlen); /* (out, key, keylen, in, inlen) uint8_t *out; const uint8_t *key; uint64_t keylen; const uint8_t *in; uint64_t inlen; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:8:NC */ extern int getloadavg (double *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:23:NC */ extern int atoi (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:24:NC */ extern long int atol (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:25:NC */ extern long long int atoll (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:26:NC */ extern double atof (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:28:NC */ extern float strtof (const char *, char **);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:29:NC */ extern double strtod (const char *, char **);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:30:NC */ extern long double strtold (const char *, char **);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:32:NC */ extern long int strtol (const char *, char **, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:33:NC */ extern long unsigned int strtoul (const char *, char **, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:34:NC */ extern long long int strtoll (const char *, char **, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:35:NC */ extern long long unsigned int strtoull (const char *, char **, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:37:NC */ extern int rand (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:38:NC */ extern void srand (unsigned int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:40:NC */ extern void *malloc (size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:41:NC */ extern void *calloc (size_t, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:42:NC */ extern void *realloc (void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:43:NC */ extern void free (void *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:44:NC */ extern void *aligned_alloc (size_t, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:46:NC */ extern void abort (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:47:NC */ extern int atexit (void (*) (void));
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:48:NC */ extern void exit (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:49:NC */ extern void _Exit (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:50:NC */ extern int at_quick_exit (void (*) (void));
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:51:NC */ extern void quick_exit (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:53:NC */ extern char *getenv (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:55:NC */ extern int system (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:57:NC */ extern void *bsearch (const void *, const void *, size_t, size_t, int (*) (const void *, const void *));
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:58:NC */ extern void qsort (void *, size_t, size_t, int (*) (const void *, const void *));
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:60:NC */ extern int abs (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:61:NC */ extern long int labs (long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:62:NC */ extern long long int llabs (long long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:68:NC */ extern div_t div (int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:69:NC */ extern ldiv_t ldiv (long int, long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:70:NC */ extern lldiv_t lldiv (long long int, long long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:72:NC */ extern int mblen (const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:73:NC */ extern int mbtowc (wchar_t *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:74:NC */ extern int wctomb (char *, wchar_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:75:NC */ extern size_t mbstowcs (wchar_t *, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:76:NC */ extern size_t wcstombs (char *, const wchar_t *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:81:NC */ extern size_t __ctype_get_mb_cur_max (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:101:NC */ extern int posix_memalign (void **, size_t, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:102:NC */ extern int setenv (const char *, const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:103:NC */ extern int unsetenv (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:104:NC */ extern int mkstemp (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:105:NC */ extern int mkostemp (char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:106:NC */ extern char *mkdtemp (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:107:NC */ extern int getsubopt (char **, char *const *, char **);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:108:NC */ extern int rand_r (unsigned int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:115:NC */ extern char *realpath (const char *, char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:116:NC */ extern long int random (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:117:NC */ extern void srandom (unsigned int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:118:NC */ extern char *initstate (unsigned int, char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:119:NC */ extern char *setstate (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:120:NC */ extern int putenv (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:121:NC */ extern int posix_openpt (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:122:NC */ extern int grantpt (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:123:NC */ extern int unlockpt (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:124:NC */ extern char *ptsname (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:125:NC */ extern char *l64a (long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:126:NC */ extern long int a64l (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:127:NC */ extern void setkey (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:128:NC */ extern double drand48 (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:129:NC */ extern double erand48 (short unsigned int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:130:NC */ extern long int lrand48 (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:131:NC */ extern long int nrand48 (short unsigned int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:132:NC */ extern long int mrand48 (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:133:NC */ extern long int jrand48 (short unsigned int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:134:NC */ extern void srand48 (long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:135:NC */ extern short unsigned int *seed48 (short unsigned int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:136:NC */ extern void lcong48 (short unsigned int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:11:NC */ extern void *alloca (size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:141:NC */ extern char *mktemp (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:142:NC */ extern int mkstemps (char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:143:NC */ extern int mkostemps (char *, int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:144:NC */ extern void *valloc (size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:145:NC */ extern void *memalign (size_t, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:147:NC */ extern int clearenv (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:150:NC */ extern void *reallocarray (void *, size_t, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:151:NC */ extern void qsort_r (void *, size_t, size_t, int (*) (const void *, const void *, void *), void *);
+/* ./keccak.h:14:NC */ extern void keccak (const uint8_t *, int, uint8_t *, int);
+/* ./keccak.h:16:NC */ extern void keccakf (uint64_t *, int);
+/* ./keccak.h:18:NC */ extern void keccak1600 (const uint8_t *, int, uint8_t *);
+/* ./skein.h:9:NC */ extern enum __anonenum_SkeinHashReturn_432432649 skein (int, const SkeinBitSequence *, size_t, SkeinBitSequence *);
+/* ./jh.h:10:NC */ extern void jh (unsigned int, const uint8_t *, size_t, uint8_t *);
+/* ./groestl.h:9:NC */ extern void groestl (const BitSequence *, DataLength, BitSequence *);
+/* ./oaes_lib.h:164:NC */ extern OAES_CTX *oaes_alloc (void);
+/* ./oaes_lib.h:166:NC */ extern OAES_RET oaes_free (OAES_CTX **);
+/* ./oaes_lib.h:168:NC */ extern OAES_RET oaes_set_option (OAES_CTX *, OAES_OPTION, const void *);
+/* ./oaes_lib.h:171:NC */ extern OAES_RET oaes_key_gen_128 (OAES_CTX *);
+/* ./oaes_lib.h:173:NC */ extern OAES_RET oaes_key_gen_192 (OAES_CTX *);
+/* ./oaes_lib.h:175:NC */ extern OAES_RET oaes_key_gen_256 (OAES_CTX *);
+/* ./oaes_lib.h:179:NC */ extern OAES_RET oaes_key_export (OAES_CTX *, uint8_t *, size_t *);
+/* ./oaes_lib.h:184:NC */ extern OAES_RET oaes_key_export_data (OAES_CTX *, uint8_t *, size_t *);
+/* ./oaes_lib.h:188:NC */ extern OAES_RET oaes_key_import (OAES_CTX *, const uint8_t *, size_t);
+/* ./oaes_lib.h:192:NC */ extern OAES_RET oaes_key_import_data (OAES_CTX *, const uint8_t *, size_t);
+/* ./oaes_lib.h:196:NC */ extern OAES_RET oaes_encrypt (OAES_CTX *, const uint8_t *, size_t, uint8_t *, size_t *);
+/* ./oaes_lib.h:200:NC */ extern OAES_RET oaes_decrypt (OAES_CTX *, const uint8_t *, size_t, uint8_t *, size_t *);
+/* ./oaes_lib.h:204:NC */ extern OAES_RET oaes_sprintf (char *, size_t *, const uint8_t *, size_t);
+/* ./oaes_lib.h:207:NC */ extern OAES_RET oaes_encryption_round (const uint8_t *, uint8_t *);
+/* ./oaes_lib.h:209:NC */ extern OAES_RET oaes_pseudo_encrypt_ecb (OAES_CTX *, uint8_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:51:NC */ extern int __fpclassify (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:52:NC */ extern int __fpclassifyf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:53:NC */ extern int __fpclassifyl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:55:NF */ static unsigned int __FLOAT_BITS (float __f); /* (__f) float __f; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:61:NF */ static long long unsigned int __DOUBLE_BITS (double __f); /* (__f) double __f; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:93:NC */ extern int __signbit (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:94:NC */ extern int __signbitf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:95:NC */ extern int __signbitl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:NF */ static int __islessf (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:NF */ static int __isless (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:NF */ static int __islessl (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:NF */ static int __islessequalf (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:NF */ static int __islessequal (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:NF */ static int __islessequall (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:NF */ static int __islessgreaterf (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:NF */ static int __islessgreater (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:NF */ static int __islessgreaterl (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:NF */ static int __isgreaterf (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:NF */ static int __isgreater (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:NF */ static int __isgreaterl (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:NF */ static int __isgreaterequalf (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:NF */ static int __isgreaterequal (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:NF */ static int __isgreaterequall (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:135:NC */ extern double acos (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:136:NC */ extern float acosf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:137:NC */ extern long double acosl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:139:NC */ extern double acosh (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:140:NC */ extern float acoshf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:141:NC */ extern long double acoshl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:143:NC */ extern double asin (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:144:NC */ extern float asinf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:145:NC */ extern long double asinl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:147:NC */ extern double asinh (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:148:NC */ extern float asinhf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:149:NC */ extern long double asinhl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:151:NC */ extern double atan (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:152:NC */ extern float atanf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:153:NC */ extern long double atanl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:155:NC */ extern double atan2 (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:156:NC */ extern float atan2f (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:157:NC */ extern long double atan2l (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:159:NC */ extern double atanh (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:160:NC */ extern float atanhf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:161:NC */ extern long double atanhl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:163:NC */ extern double cbrt (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:164:NC */ extern float cbrtf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:165:NC */ extern long double cbrtl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:167:NC */ extern double ceil (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:168:NC */ extern float ceilf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:169:NC */ extern long double ceill (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:171:NC */ extern double copysign (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:172:NC */ extern float copysignf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:173:NC */ extern long double copysignl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:175:NC */ extern double cos (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:176:NC */ extern float cosf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:177:NC */ extern long double cosl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:179:NC */ extern double cosh (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:180:NC */ extern float coshf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:181:NC */ extern long double coshl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:183:NC */ extern double erf (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:184:NC */ extern float erff (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:185:NC */ extern long double erfl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:187:NC */ extern double erfc (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:188:NC */ extern float erfcf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:189:NC */ extern long double erfcl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:191:NC */ extern double exp (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:192:NC */ extern float expf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:193:NC */ extern long double expl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:195:NC */ extern double exp2 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:196:NC */ extern float exp2f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:197:NC */ extern long double exp2l (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:199:NC */ extern double expm1 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:200:NC */ extern float expm1f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:201:NC */ extern long double expm1l (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:203:NC */ extern double fabs (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:204:NC */ extern float fabsf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:205:NC */ extern long double fabsl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:207:NC */ extern double fdim (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:208:NC */ extern float fdimf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:209:NC */ extern long double fdiml (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:211:NC */ extern double floor (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:212:NC */ extern float floorf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:213:NC */ extern long double floorl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:215:NC */ extern double fma (double, double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:216:NC */ extern float fmaf (float, float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:217:NC */ extern long double fmal (long double, long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:219:NC */ extern double fmax (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:220:NC */ extern float fmaxf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:221:NC */ extern long double fmaxl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:223:NC */ extern double fmin (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:224:NC */ extern float fminf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:225:NC */ extern long double fminl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:227:NC */ extern double fmod (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:228:NC */ extern float fmodf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:229:NC */ extern long double fmodl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:231:NC */ extern double frexp (double, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:232:NC */ extern float frexpf (float, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:233:NC */ extern long double frexpl (long double, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:235:NC */ extern double hypot (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:236:NC */ extern float hypotf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:237:NC */ extern long double hypotl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:239:NC */ extern int ilogb (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:240:NC */ extern int ilogbf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:241:NC */ extern int ilogbl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:243:NC */ extern double ldexp (double, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:244:NC */ extern float ldexpf (float, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:245:NC */ extern long double ldexpl (long double, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:247:NC */ extern double lgamma (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:248:NC */ extern float lgammaf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:249:NC */ extern long double lgammal (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:251:NC */ extern long long int llrint (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:252:NC */ extern long long int llrintf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:253:NC */ extern long long int llrintl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:255:NC */ extern long long int llround (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:256:NC */ extern long long int llroundf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:257:NC */ extern long long int llroundl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:259:NC */ extern double log (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:260:NC */ extern float logf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:261:NC */ extern long double logl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:263:NC */ extern double log10 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:264:NC */ extern float log10f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:265:NC */ extern long double log10l (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:267:NC */ extern double log1p (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:268:NC */ extern float log1pf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:269:NC */ extern long double log1pl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:271:NC */ extern double log2 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:272:NC */ extern float log2f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:273:NC */ extern long double log2l (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:275:NC */ extern double logb (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:276:NC */ extern float logbf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:277:NC */ extern long double logbl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:279:NC */ extern long int lrint (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:280:NC */ extern long int lrintf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:281:NC */ extern long int lrintl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:283:NC */ extern long int lround (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:284:NC */ extern long int lroundf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:285:NC */ extern long int lroundl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:287:NC */ extern double modf (double, double *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:288:NC */ extern float modff (float, float *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:289:NC */ extern long double modfl (long double, long double *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:291:NC */ extern double nan (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:292:NC */ extern float nanf (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:293:NC */ extern long double nanl (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:295:NC */ extern double nearbyint (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:296:NC */ extern float nearbyintf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:297:NC */ extern long double nearbyintl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:299:NC */ extern double nextafter (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:300:NC */ extern float nextafterf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:301:NC */ extern long double nextafterl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:303:NC */ extern double nexttoward (double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:304:NC */ extern float nexttowardf (float, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:305:NC */ extern long double nexttowardl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:307:NC */ extern double pow (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:308:NC */ extern float powf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:309:NC */ extern long double powl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:311:NC */ extern double remainder (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:312:NC */ extern float remainderf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:313:NC */ extern long double remainderl (long double, long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:315:NC */ extern double remquo (double, double, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:316:NC */ extern float remquof (float, float, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:317:NC */ extern long double remquol (long double, long double, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:319:NC */ extern double rint (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:320:NC */ extern float rintf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:321:NC */ extern long double rintl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:323:NC */ extern double round (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:324:NC */ extern float roundf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:325:NC */ extern long double roundl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:327:NC */ extern double scalbln (double, long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:328:NC */ extern float scalblnf (float, long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:329:NC */ extern long double scalblnl (long double, long int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:331:NC */ extern double scalbn (double, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:332:NC */ extern float scalbnf (float, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:333:NC */ extern long double scalbnl (long double, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:335:NC */ extern double sin (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:336:NC */ extern float sinf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:337:NC */ extern long double sinl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:339:NC */ extern double sinh (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:340:NC */ extern float sinhf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:341:NC */ extern long double sinhl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:343:NC */ extern double sqrt (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:344:NC */ extern float sqrtf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:345:NC */ extern long double sqrtl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:347:NC */ extern double tan (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:348:NC */ extern float tanf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:349:NC */ extern long double tanl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:351:NC */ extern double tanh (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:352:NC */ extern float tanhf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:353:NC */ extern long double tanhl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:355:NC */ extern double tgamma (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:356:NC */ extern float tgammaf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:357:NC */ extern long double tgammal (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:359:NC */ extern double trunc (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:360:NC */ extern float truncf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:361:NC */ extern long double truncl (long double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:386:NC */ extern double j0 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:387:NC */ extern double j1 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:388:NC */ extern double jn (int, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:390:NC */ extern double y0 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:391:NC */ extern double y1 (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:392:NC */ extern double yn (int, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:398:NC */ extern double drem (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:399:NC */ extern float dremf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:401:NC */ extern int finite (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:402:NC */ extern int finitef (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:404:NC */ extern double scalb (double, double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:405:NC */ extern float scalbf (float, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:407:NC */ extern double significand (double);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:408:NC */ extern float significandf (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:410:NC */ extern double lgamma_r (double, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:411:NC */ extern float lgammaf_r (float, int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:413:NC */ extern float j0f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:414:NC */ extern float j1f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:415:NC */ extern float jnf (int, float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:417:NC */ extern float y0f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:418:NC */ extern float y1f (float);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:419:NC */ extern float ynf (int, float);
+/* ./variant2_int_sqrt.h:49:NF */ static uint32_t integer_square_root_v2 (uint64_t n); /* (n) uint64_t n; */
+/* ./variant4_random_math.h:88:NF */ static void v4_random_math (const struct V4_Instruction *code___0, v4_reg *r___0); /* (code___0, r___0) const struct V4_Instruction *code___0; v4_reg *r___0; */
+/* ./variant4_random_math.h:174:NF */ static void check_data (size_t *data_index, const const size_t bytes_needed, int8_t *data, const const size_t data_size); /* (data_index, bytes_needed, data, data_size) size_t *data_index; const const size_t bytes_needed; int8_t *data; const const size_t data_size; */
+/* ./variant4_random_math.h:186:NF */ static int v4_random_math_init (struct V4_Instruction *code___0, const const uint64_t height); /* (code___0, height) struct V4_Instruction *code___0; const const uint64_t height; */
+/* cryptonight.c:241:NF */ static void xor64 (uint8_t *a, const const uint64_t b); /* (a, b) uint8_t *a; const const uint64_t b; */
+/* cryptonight.c:246:NF */ static void copy_block (uint8_t *dst, const uint8_t *src); /* (dst, src) uint8_t *dst; const uint8_t *src; */
+/* cryptonight.c:252:NF */ extern void do_blake_hash (const void *input, size_t len, char *output___0); /* (input, len, output___0) const void *input; size_t len; char *output___0; */
+/* cryptonight.c:257:NF */ extern void do_groestl_hash (const void *input, size_t len, char *output___0); /* (input, len, output___0) const void *input; size_t len; char *output___0; */
+/* cryptonight.c:262:NF */ extern void do_jh_hash (const void *input, size_t len, char *output___0); /* (input, len, output___0) const void *input; size_t len; char *output___0; */
+/* cryptonight.c:267:NF */ extern void do_skein_hash (const void *input, size_t len, char *output___0); /* (input, len, output___0) const void *input; size_t len; char *output___0; */
+/* cryptonight.c:275:NF */ extern void xor_blocks_dst (const uint8_t *a, const uint8_t *b, uint8_t *dst); /* (a, b, dst) const uint8_t *a; const uint8_t *b; uint8_t *dst; */
+/* cryptonight.c:437:NF */ extern void mul64to128 (uint8_t *op1, uint8_t *op2, uint8_t *dst); /* (op1, op2, dst) uint8_t *op1; uint8_t *op2; uint8_t *dst; */
+/* cryptonight.c:464:NF */ extern void sum_xor_dst (const uint8_t *a, uint8_t *c, uint8_t *dst); /* (a, c, dst) const uint8_t *a; uint8_t *c; uint8_t *dst; */
+/* cryptonight.c:478:NF */ extern void xor_blocks (uint8_t *a, const uint8_t *b); /* (a, b) uint8_t *a; const uint8_t *b; */
+/* cryptonight.c:484:NF */ extern void SubAndShiftAndMixAddRound (uint32_t *out, uint8_t *temp, uint32_t *AesEncKey); /* (out, temp, AesEncKey) uint32_t *out; uint8_t *temp; uint32_t *AesEncKey; */
+/* cryptonight.c:492:NF */ extern void SubAndShiftAndMixAddRoundInPlace (uint32_t *temp, uint32_t *AesEncKey); /* (temp, AesEncKey) uint32_t *temp; uint32_t *AesEncKey; */
+/* cryptonight.c:627:NC */ extern void cryptonight_hash_ctx (void *, const void *, size_t, int, int, int);
+/* cryptonight.c:512:NF */ extern void cryptonight_hash_ctx (void *output___0, const void *input, size_t len, int algo, int variant, int height); /* (output___0, input, len, algo, variant, height) void *output___0; const void *input; size_t len; int algo; int variant; int height; */
+/* cryptonight.c:782:NF */ extern void cryptonight (void *output___0, const void *input, size_t len, int algo, int variant, int height); /* (output___0, input, len, algo, variant, height) void *output___0; const void *input; size_t len; int algo; int variant; int height; */
+/* groestl.c:101:NF */ static void RND512P (uint8_t *x, uint32_t *y, uint32_t r___0); /* (x, y, r___0) uint8_t *x; uint32_t *y; uint32_t r___0; */
+/* groestl.c:123:NF */ static void RND512Q (uint8_t *x, uint32_t *y, uint32_t r___0); /* (x, y, r___0) uint8_t *x; uint32_t *y; uint32_t r___0; */
+/* groestl.c:153:NF */ static void F512 (uint32_t *h, const uint32_t *m); /* (h, m) uint32_t *h; const uint32_t *m; */
+/* groestl.c:197:NF */ static void Transform (groestlHashState *ctx, const uint8_t *input, int msglen); /* (ctx, input, msglen) groestlHashState *ctx; const uint8_t *input; int msglen; */
+/* groestl.c:213:NF */ static void OutputTransformation (groestlHashState *ctx); /* (ctx) groestlHashState *ctx; */
+/* groestl.c:240:NF */ static void Init (groestlHashState *ctx); /* (ctx) groestlHashState *ctx; */
+/* groestl.c:260:NF */ static void Update (groestlHashState *ctx, const BitSequence *input, DataLength databitlen); /* (ctx, input, databitlen) groestlHashState *ctx; const BitSequence *input; DataLength databitlen; */
+/* groestl.c:309:NF */ static void Final (groestlHashState *ctx, BitSequence *output___0); /* (ctx, output___0) groestlHashState *ctx; BitSequence *output___0; */
+/* groestl.c:369:NF */ extern void groestl (const BitSequence *data, DataLength databitlen, BitSequence *hashval); /* (data, databitlen, hashval) const BitSequence *data; DataLength databitlen; BitSequence *hashval; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/assert.h:19:NC */ extern void __assert_fail (const char *, const char *, int, const char *);
+/* jh_ansi_opt64.c:98:NC */ static void E8 (hashState *);
+/* jh_ansi_opt64.c:99:NC */ static void F8 (hashState *);
+/* jh_ansi_opt64.c:102:NC */ static HashReturn Init___0 (hashState *, int);
+/* jh_ansi_opt64.c:103:NC */ static HashReturn Update___0 (hashState *, const BitSequence *, DataLength);
+/* jh_ansi_opt64.c:104:NC */ static HashReturn Final___0 (hashState *, BitSequence *);
+/* jh_ansi_opt64.c:105:NC */ static HashReturn Hash (int, const BitSequence *, DataLength, BitSequence *);
+/* jh_ansi_opt64.c:158:NF */ static void E8 (hashState *state); /* (state) hashState *state; */
+/* jh_ansi_opt64.c:219:NF */ static void F8 (hashState *state); /* (state) hashState *state; */
+/* jh_ansi_opt64.c:234:NF */ static HashReturn Init___0 (hashState *state, int hashbitlen); /* (state, hashbitlen) hashState *state; int hashbitlen; */
+/* jh_ansi_opt64.c:256:NF */ static HashReturn Update___0 (hashState *state, const BitSequence *data, DataLength databitlen); /* (state, data, databitlen) hashState *state; const BitSequence *data; DataLength databitlen; */
+/* jh_ansi_opt64.c:304:NF */ static HashReturn Final___0 (hashState *state, BitSequence *hashval); /* (state, hashval) hashState *state; BitSequence *hashval; */
+/* jh_ansi_opt64.c:360:NF */ static HashReturn Hash (int hashbitlen, const BitSequence *data, DataLength databitlen, BitSequence *hashval); /* (hashbitlen, data, databitlen, hashval) int hashbitlen; const BitSequence *data; DataLength databitlen; BitSequence *hashval; */
+/* jh_ansi_opt64.c:374:NF */ extern void jh (unsigned int bit_len, const uint8_t *input, size_t input_bit_length, uint8_t *output___0); /* (bit_len, input, input_bit_length, output___0) unsigned int bit_len; const uint8_t *input; size_t input_bit_length; uint8_t *output___0; */
+/* keccak.c:43:NF */ extern void keccakf (uint64_t *st, int rounds); /* (st, rounds) uint64_t *st; int rounds; */
+/* keccak.c:96:NF */ extern void keccak (const uint8_t *in, int inlen, uint8_t *md, int mdlen); /* (in, inlen, md, mdlen) const uint8_t *in; int inlen; uint8_t *md; int mdlen; */
+/* keccak.c:127:NF */ extern void keccak1600 (const uint8_t *in, int inlen, uint8_t *md); /* (in, inlen, md) const uint8_t *in; int inlen; uint8_t *md; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1669:NC */ extern __wasi_errno_t __wasi_args_get (uint8_t **, uint8_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1682:NC */ extern __wasi_errno_t __wasi_args_sizes_get (__wasi_size_t *, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1701:NC */ extern __wasi_errno_t __wasi_environ_get (uint8_t **, uint8_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1714:NC */ extern __wasi_errno_t __wasi_environ_sizes_get (__wasi_size_t *, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1735:NC */ extern __wasi_errno_t __wasi_clock_res_get (__wasi_clockid_t, __wasi_timestamp_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1755:NC */ extern __wasi_errno_t __wasi_clock_time_get (__wasi_clockid_t, __wasi_timestamp_t, __wasi_timestamp_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1780:NC */ extern __wasi_errno_t __wasi_fd_advise (__wasi_fd_t, __wasi_filesize_t, __wasi_filesize_t, __wasi_advice_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1807:NC */ extern __wasi_errno_t __wasi_fd_allocate (__wasi_fd_t, __wasi_filesize_t, __wasi_filesize_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1829:NC */ extern __wasi_errno_t __wasi_fd_close (__wasi_fd_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1841:NC */ extern __wasi_errno_t __wasi_fd_datasync (__wasi_fd_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1853:NC */ extern __wasi_errno_t __wasi_fd_fdstat_get (__wasi_fd_t, __wasi_fdstat_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1870:NC */ extern __wasi_errno_t __wasi_fd_fdstat_set_flags (__wasi_fd_t, __wasi_fdflags_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1887:NC */ extern __wasi_errno_t __wasi_fd_fdstat_set_rights (__wasi_fd_t, __wasi_rights_t, __wasi_rights_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1905:NC */ extern __wasi_errno_t __wasi_fd_filestat_get (__wasi_fd_t, __wasi_filestat_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1922:NC */ extern __wasi_errno_t __wasi_fd_filestat_set_size (__wasi_fd_t, __wasi_filesize_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1939:NC */ extern __wasi_errno_t __wasi_fd_filestat_set_times (__wasi_fd_t, __wasi_timestamp_t, __wasi_timestamp_t, __wasi_fstflags_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1966:NC */ extern __wasi_errno_t __wasi_fd_pread (__wasi_fd_t, const __wasi_iovec_t *, size_t, __wasi_filesize_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:1997:NC */ extern __wasi_errno_t __wasi_fd_prestat_get (__wasi_fd_t, __wasi_prestat_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2013:NC */ extern __wasi_errno_t __wasi_fd_prestat_dir_name (__wasi_fd_t, uint8_t *, __wasi_size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2032:NC */ extern __wasi_errno_t __wasi_fd_pwrite (__wasi_fd_t, const __wasi_ciovec_t *, size_t, __wasi_filesize_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2064:NC */ extern __wasi_errno_t __wasi_fd_read (__wasi_fd_t, const __wasi_iovec_t *, size_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2098:NC */ extern __wasi_errno_t __wasi_fd_readdir (__wasi_fd_t, uint8_t *, __wasi_size_t, __wasi_dircookie_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2133:NC */ extern __wasi_errno_t __wasi_fd_renumber (__wasi_fd_t, __wasi_fd_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2150:NC */ extern __wasi_errno_t __wasi_fd_seek (__wasi_fd_t, __wasi_filedelta_t, __wasi_whence_t, __wasi_filesize_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2177:NC */ extern __wasi_errno_t __wasi_fd_sync (__wasi_fd_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2189:NC */ extern __wasi_errno_t __wasi_fd_tell (__wasi_fd_t, __wasi_filesize_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2206:NC */ extern __wasi_errno_t __wasi_fd_write (__wasi_fd_t, const __wasi_ciovec_t *, size_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2233:NC */ extern __wasi_errno_t __wasi_path_create_directory (__wasi_fd_t, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2255:NC */ extern __wasi_errno_t __wasi_path_filestat_get (__wasi_fd_t, __wasi_lookupflags_t, const char *, size_t, __wasi_filestat_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2287:NC */ extern __wasi_errno_t __wasi_path_filestat_set_times (__wasi_fd_t, __wasi_lookupflags_t, const char *, size_t, __wasi_timestamp_t, __wasi_timestamp_t, __wasi_fstflags_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2329:NC */ extern __wasi_errno_t __wasi_path_link (__wasi_fd_t, __wasi_lookupflags_t, const char *, size_t, __wasi_fd_t, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2376:NC */ extern __wasi_errno_t __wasi_path_open (__wasi_fd_t, __wasi_lookupflags_t, const char *, size_t, __wasi_oflags_t, __wasi_rights_t, __wasi_rights_t, __wasi_fdflags_t, __wasi_fd_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2429:NC */ extern __wasi_errno_t __wasi_path_readlink (__wasi_fd_t, const char *, size_t, uint8_t *, __wasi_size_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2464:NC */ extern __wasi_errno_t __wasi_path_remove_directory (__wasi_fd_t, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2486:NC */ extern __wasi_errno_t __wasi_path_rename (__wasi_fd_t, const char *, size_t, __wasi_fd_t, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2523:NC */ extern __wasi_errno_t __wasi_path_symlink (const char *, size_t, __wasi_fd_t, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2556:NC */ extern __wasi_errno_t __wasi_path_unlink_file (__wasi_fd_t, const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2577:NC */ extern __wasi_errno_t __wasi_poll_oneoff (const __wasi_subscription_t *, __wasi_event_t *, __wasi_size_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2608:NC */ extern void __wasi_proc_exit (__wasi_exitcode_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2621:NC */ extern __wasi_errno_t __wasi_proc_raise (__wasi_signal_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2636:NC */ extern __wasi_errno_t __wasi_sched_yield (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2652:NC */ extern __wasi_errno_t __wasi_random_get (uint8_t *, __wasi_size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2670:NC */ extern __wasi_errno_t __wasi_sock_recv (__wasi_fd_t, const __wasi_iovec_t *, size_t, __wasi_riflags_t, __wasi_size_t *, __wasi_roflags_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2707:NC */ extern __wasi_errno_t __wasi_sock_send (__wasi_fd_t, const __wasi_ciovec_t *, size_t, __wasi_siflags_t, __wasi_size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:2739:NC */ extern __wasi_errno_t __wasi_sock_shutdown (__wasi_fd_t, __wasi_sdflags_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:80:NC */ extern FILE *fopen (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:81:NC */ extern FILE *freopen (const char *, const char *, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:82:NC */ extern int fclose (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:84:NC */ extern int remove (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:85:NC */ extern int rename (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:87:NC */ extern int feof (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:88:NC */ extern int ferror (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:89:NC */ extern int fflush (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:90:NC */ extern void clearerr (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:92:NC */ extern int fseek (FILE *, long int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:93:NC */ extern long int ftell (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:94:NC */ extern void rewind (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:96:NC */ extern int fgetpos (FILE *, fpos_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:97:NC */ extern int fsetpos (FILE *, const fpos_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:99:NC */ extern size_t fread (void *, size_t, size_t, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:100:NC */ extern size_t fwrite (const void *, size_t, size_t, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:102:NC */ extern int fgetc (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:103:NC */ extern int getc (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:104:NC */ extern int getchar (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:105:NC */ extern int ungetc (int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:107:NC */ extern int fputc (int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:108:NC */ extern int putc (int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:109:NC */ extern int putchar (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:111:NC */ extern char *fgets (char *, int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:116:NC */ extern int fputs (const char *, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:117:NC */ extern int puts (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:119:NC */ extern int printf (const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:120:NC */ extern int fprintf (FILE *, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:121:NC */ extern int sprintf (char *, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:122:NC */ extern int snprintf (char *, size_t, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:124:NC */ extern int vprintf (const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:125:NC */ extern int vfprintf (FILE *, const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:126:NC */ extern int vsprintf (char *, const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:127:NC */ extern int vsnprintf (char *, size_t, const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:129:NC */ extern int scanf (const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:130:NC */ extern int fscanf (FILE *, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:131:NC */ extern int sscanf (const char *, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:132:NC */ extern int vscanf (const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:133:NC */ extern int vfscanf (FILE *, const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:134:NC */ extern int vsscanf (const char *, const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:136:NC */ extern void perror (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:138:NC */ extern int setvbuf (FILE *, char *, int, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:139:NC */ extern void setbuf (FILE *, char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:141:NC */ extern char *tmpnam (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:142:NC */ extern FILE *tmpfile (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:147:NC */ extern FILE *fmemopen (void *, size_t, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:148:NC */ extern FILE *open_memstream (char **, size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:149:NC */ extern FILE *fdopen (int, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:150:NC */ extern FILE *popen (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:151:NC */ extern int pclose (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:152:NC */ extern int fileno (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:153:NC */ extern int fseeko (FILE *, off_t, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:154:NC */ extern off_t ftello (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:155:NC */ extern int dprintf (int, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:156:NC */ extern int vdprintf (int, const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:157:NC */ extern void flockfile (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:158:NC */ extern int ftrylockfile (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:159:NC */ extern void funlockfile (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:160:NC */ extern int getc_unlocked (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:161:NC */ extern int getchar_unlocked (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:162:NC */ extern int putc_unlocked (int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:163:NC */ extern int putchar_unlocked (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:164:NC */ extern ssize_t getdelim (char **, size_t *, int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:165:NC */ extern ssize_t getline (char **, size_t *, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:166:NC */ extern int renameat (int, const char *, int, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:167:NC */ extern char *ctermid (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:175:NC */ extern char *tempnam (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:180:NC */ extern char *cuserid (char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:181:NC */ extern void setlinebuf (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:182:NC */ extern void setbuffer (FILE *, char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:183:NC */ extern int fgetc_unlocked (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:184:NC */ extern int fputc_unlocked (int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:185:NC */ extern int fflush_unlocked (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:186:NC */ extern size_t fread_unlocked (void *, size_t, size_t, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:187:NC */ extern size_t fwrite_unlocked (const void *, size_t, size_t, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:188:NC */ extern void clearerr_unlocked (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:189:NC */ extern int feof_unlocked (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:190:NC */ extern int ferror_unlocked (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:191:NC */ extern int fileno_unlocked (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:192:NC */ extern int getw (FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:193:NC */ extern int putw (int, FILE *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:194:NC */ extern char *fgetln (FILE *, size_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:195:NC */ extern int asprintf (char **, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:196:NC */ extern int vasprintf (char **, const char *, __va_list_tag *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/time.h:8:NC */ extern int dysize (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:54:NC */ extern clock_t clock (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:55:NC */ extern time_t time (time_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:56:NC */ extern double difftime (time_t, time_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:57:NC */ extern time_t mktime (struct tm *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:58:NC */ extern size_t strftime (char *, size_t, const char *, const struct tm *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:59:NC */ extern struct tm *gmtime (const time_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:60:NC */ extern struct tm *localtime (const time_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:61:NC */ extern char *asctime (const struct tm *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:62:NC */ extern char *ctime (const time_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:63:NC */ extern int timespec_get (struct timespec *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:73:NC */ extern size_t strftime_l (char *, size_t, const char *, const struct tm *, locale_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:75:NC */ extern struct tm *gmtime_r (const time_t *, struct tm *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:76:NC */ extern struct tm *localtime_r (const time_t *, struct tm *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:77:NC */ extern char *asctime_r (const struct tm *, char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:78:NC */ extern char *ctime_r (const time_t *, char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:80:NC */ extern void tzset (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:102:NC */ extern int nanosleep (const struct timespec *, struct timespec *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:103:NC */ extern int clock_getres (clockid_t, struct timespec *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:104:NC */ extern int clock_gettime (clockid_t, struct timespec *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:105:NC */ extern int clock_settime (clockid_t, const struct timespec *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:106:NC */ extern int clock_nanosleep (clockid_t, int, const struct timespec *, struct timespec *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:107:NC */ extern int clock_getcpuclockid (pid_t, clockid_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:110:NC */ extern int timer_create (clockid_t, struct sigevent *, timer_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:111:NC */ extern int timer_delete (timer_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:112:NC */ extern int timer_settime (timer_t, int, const struct itimerspec *, struct itimerspec *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:113:NC */ extern int timer_gettime (timer_t, struct itimerspec *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:114:NC */ extern int timer_getoverrun (timer_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:122:NC */ extern char *strptime (const char *, const char *, struct tm *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:126:NC */ extern struct tm *getdate (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:131:NC */ extern int stime (const time_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/time.h:132:NC */ extern time_t timegm (struct tm *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:55:NF */ static unsigned int __FLOAT_BITS___0 (float __f); /* (__f) float __f; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:61:NF */ static long long unsigned int __DOUBLE_BITS___0 (double __f); /* (__f) double __f; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:NF */ static int __islessf___0 (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:NF */ static int __isless___0 (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:NF */ static int __islessl___0 (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:NF */ static int __islessequalf___0 (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:NF */ static int __islessequal___0 (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:NF */ static int __islessequall___0 (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:NF */ static int __islessgreaterf___0 (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:NF */ static int __islessgreater___0 (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:NF */ static int __islessgreaterl___0 (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:NF */ static int __isgreaterf___0 (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:NF */ static int __isgreater___0 (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:NF */ static int __isgreaterl___0 (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:NF */ static int __isgreaterequalf___0 (float_t __x, float_t __y); /* (__x, __y) float_t __x; float_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:NF */ static int __isgreaterequal___0 (double_t __x, double_t __y); /* (__x, __y) double_t __x; double_t __y; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:NF */ static int __isgreaterequall___0 (long double __x, long double __y); /* (__x, __y) long double __x; long double __y; */
+/* main.c:13:NF */ extern char *hash_cn (char *hex, int lite, int variant, int height); /* (hex, lite, variant, height) char *hex; int lite; int variant; int height; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/sys/timeb.h:29:NC */ extern int ftime (struct timeb *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/malloc.h:28:NC */ extern struct mallinfo mallinfo (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/malloc.h:30:NC */ extern void malloc_stats (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/malloc.h:32:NC */ extern int mallopt (int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/compat/malloc.h:34:NC */ extern size_t malloc_usable_size (void *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:19:NF */ static uint16_t __bswap16 (uint16_t __x); /* (__x) uint16_t __x; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:24:NF */ static uint32_t __bswap32 (uint32_t __x); /* (__x) uint32_t __x; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:29:NF */ static uint64_t __bswap64 (uint64_t __x); /* (__x) uint64_t __x; */
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:31:NC */ extern int select (int, fd_set *, fd_set *, fd_set *, struct timeval *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:32:NC */ extern int pselect (int, fd_set *, fd_set *, fd_set *, const struct timespec *, const sigset_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:49:NC */ extern int pipe (int *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:50:NC */ extern int pipe2 (int *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:51:NC */ extern int close (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:52:NC */ extern int posix_close (int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:53:NC */ extern int dup (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:54:NC */ extern int dup2 (int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:55:NC */ extern int dup3 (int, int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:56:NC */ extern off_t lseek (int, off_t, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:57:NC */ extern int fsync (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:58:NC */ extern int fdatasync (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:60:NC */ extern ssize_t read (int, void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:61:NC */ extern ssize_t write (int, const void *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:62:NC */ extern ssize_t pread (int, void *, size_t, off_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:63:NC */ extern ssize_t pwrite (int, const void *, size_t, off_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:65:NC */ extern int chown (const char *, uid_t, gid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:66:NC */ extern int fchown (int, uid_t, gid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:67:NC */ extern int lchown (const char *, uid_t, gid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:68:NC */ extern int fchownat (int, const char *, uid_t, gid_t, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:70:NC */ extern int link (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:71:NC */ extern int linkat (int, const char *, int, const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:72:NC */ extern int symlink (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:73:NC */ extern int symlinkat (const char *, int, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:74:NC */ extern ssize_t readlink (const char *, char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:75:NC */ extern ssize_t readlinkat (int, const char *, char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:76:NC */ extern int unlink (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:77:NC */ extern int unlinkat (int, const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:78:NC */ extern int rmdir (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:79:NC */ extern int truncate (const char *, off_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:80:NC */ extern int ftruncate (int, off_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:87:NC */ extern int access (const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:88:NC */ extern int faccessat (int, const char *, int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:90:NC */ extern int chdir (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:91:NC */ extern int fchdir (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:92:NC */ extern char *getcwd (char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:94:NC */ extern unsigned int alarm (unsigned int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:95:NC */ extern unsigned int sleep (unsigned int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:96:NC */ extern int pause (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:98:NC */ extern pid_t fork (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:99:NC */ extern pid_t _Fork (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:100:NC */ extern int execve (const char *, char *const *, char *const *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:101:NC */ extern int execv (const char *, char *const *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:102:NC */ extern int execle (const char *, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:103:NC */ extern int execl (const char *, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:104:NC */ extern int execvp (const char *, char *const *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:105:NC */ extern int execlp (const char *, const char *, ...);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:106:NC */ extern int fexecve (int, char *const *, char *const *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:107:NC */ extern void _exit (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:109:NC */ extern pid_t getpid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:110:NC */ extern pid_t getppid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:111:NC */ extern pid_t getpgrp (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:112:NC */ extern pid_t getpgid (pid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:113:NC */ extern int setpgid (pid_t, pid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:114:NC */ extern pid_t setsid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:115:NC */ extern pid_t getsid (pid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:116:NC */ extern char *ttyname (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:117:NC */ extern int ttyname_r (int, char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:118:NC */ extern int isatty (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:119:NC */ extern pid_t tcgetpgrp (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:120:NC */ extern int tcsetpgrp (int, pid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:122:NC */ extern uid_t getuid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:123:NC */ extern uid_t geteuid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:124:NC */ extern gid_t getgid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:125:NC */ extern gid_t getegid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:126:NC */ extern int getgroups (int, gid_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:127:NC */ extern int setuid (uid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:128:NC */ extern int seteuid (uid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:129:NC */ extern int setgid (gid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:130:NC */ extern int setegid (gid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:132:NC */ extern char *getlogin (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:133:NC */ extern int getlogin_r (char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:134:NC */ extern int gethostname (char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:137:NC */ extern int getopt (int, char *const *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:141:NC */ extern long int pathconf (const char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:142:NC */ extern long int fpathconf (int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:143:NC */ extern long int sysconf (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:144:NC */ extern size_t confstr (int, char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:151:NC */ extern int setreuid (uid_t, uid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:152:NC */ extern int setregid (gid_t, gid_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:153:NC */ extern int lockf (int, int, off_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:154:NC */ extern long int gethostid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:155:NC */ extern int nice (int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:156:NC */ extern void sync (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:157:NC */ extern pid_t setpgrp (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:158:NC */ extern char *crypt (const char *, const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:159:NC */ extern void encrypt (char *, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:160:NC */ extern void swab (const void *, void *, ssize_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:165:NC */ extern int usleep (unsigned int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:166:NC */ extern unsigned int ualarm (unsigned int, unsigned int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:173:NC */ extern int brk (void *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:174:NC */ extern void *sbrk (intptr_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:175:NC */ extern pid_t vfork (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:176:NC */ extern int vhangup (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:177:NC */ extern int chroot (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:178:NC */ extern int getpagesize (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:179:NC */ extern int getdtablesize (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:180:NC */ extern int sethostname (const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:181:NC */ extern int getdomainname (char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:182:NC */ extern int setdomainname (const char *, size_t);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:183:NC */ extern int setgroups (size_t, const gid_t *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:184:NC */ extern char *getpass (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:185:NC */ extern int daemon (int, int);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:186:NC */ extern void setusershell (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:187:NC */ extern void endusershell (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:188:NC */ extern char *getusershell (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:189:NC */ extern int acct (const char *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:191:NC */ extern int execvpe (const char *, char *const *, char *const *);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:192:NC */ extern int issetugid (void);
+/* /usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:193:NC */ extern int getentropy (void *, size_t);
+/* oaes_lib.c:238:NF */ static OAES_RET oaes_sub_byte (uint8_t *byte); /* (byte) uint8_t *byte; */
+/* oaes_lib.c:252:NF */ static OAES_RET oaes_inv_sub_byte (uint8_t *byte); /* (byte) uint8_t *byte; */
+/* oaes_lib.c:283:NF */ static OAES_RET oaes_word_rot_left (uint8_t *word); /* (word) uint8_t *word; */
+/* oaes_lib.c:297:NF */ static OAES_RET oaes_shift_rows (uint8_t *block); /* (block) uint8_t *block; */
+/* oaes_lib.c:320:NF */ static OAES_RET oaes_inv_shift_rows (uint8_t *block); /* (block) uint8_t *block; */
+/* oaes_lib.c:348:NF */ static uint8_t oaes_gf_mul (uint8_t left, uint8_t right); /* (left, right) uint8_t left; uint8_t right; */
+/* oaes_lib.c:381:NF */ static OAES_RET oaes_mix_cols (uint8_t *word); /* (word) uint8_t *word; */
+/* oaes_lib.c:401:NF */ static OAES_RET oaes_inv_mix_cols (uint8_t *word); /* (word) uint8_t *word; */
+/* oaes_lib.c:421:NF */ extern OAES_RET oaes_sprintf (char *buf, size_t *buf_len, const uint8_t *data, size_t data_len); /* (buf, buf_len, data, data_len) char *buf; size_t *buf_len; const uint8_t *data; size_t data_len; */
+/* oaes_lib.c:474:NF */ static uint32_t oaes_get_seed (void); /* () */
+/* oaes_lib.c:495:NF */ static OAES_RET oaes_key_destroy (oaes_key **key); /* (key) oaes_key **key; */
+/* oaes_lib.c:522:NF */ static OAES_RET oaes_key_expand (OAES_CTX *ctx); /* (ctx) OAES_CTX *ctx; */
+/* oaes_lib.c:575:NF */ static OAES_RET oaes_key_gen (OAES_CTX *ctx, size_t key_size); /* (ctx, key_size) OAES_CTX *ctx; size_t key_size; */
+/* oaes_lib.c:618:NF */ extern OAES_RET oaes_key_gen_128 (OAES_CTX *ctx); /* (ctx) OAES_CTX *ctx; */
+/* oaes_lib.c:623:NF */ extern OAES_RET oaes_key_gen_192 (OAES_CTX *ctx); /* (ctx) OAES_CTX *ctx; */
+/* oaes_lib.c:628:NF */ extern OAES_RET oaes_key_gen_256 (OAES_CTX *ctx); /* (ctx) OAES_CTX *ctx; */
+/* oaes_lib.c:633:NF */ extern OAES_RET oaes_key_export (OAES_CTX *ctx, uint8_t *data, size_t *data_len); /* (ctx, data, data_len) OAES_CTX *ctx; uint8_t *data; size_t *data_len; */
+/* oaes_lib.c:667:NF */ extern OAES_RET oaes_key_export_data (OAES_CTX *ctx, uint8_t *data, size_t *data_len); /* (ctx, data, data_len) OAES_CTX *ctx; uint8_t *data; size_t *data_len; */
+/* oaes_lib.c:696:NF */ extern OAES_RET oaes_key_import (OAES_CTX *ctx, const uint8_t *data, size_t data_len); /* (ctx, data, data_len) OAES_CTX *ctx; const uint8_t *data; size_t data_len; */
+/* oaes_lib.c:786:NF */ extern OAES_RET oaes_key_import_data (OAES_CTX *ctx, const uint8_t *data, size_t data_len); /* (ctx, data, data_len) OAES_CTX *ctx; const uint8_t *data; size_t data_len; */
+/* oaes_lib.c:802:NF */ extern OAES_CTX *oaes_alloc (void); /* () */
+/* oaes_lib.c:842:NF */ extern OAES_RET oaes_free (OAES_CTX **ctx); /* (ctx) OAES_CTX **ctx; */
+/* oaes_lib.c:869:NF */ extern OAES_RET oaes_set_option (OAES_CTX *ctx, OAES_OPTION option, const void *value); /* (ctx, option, value) OAES_CTX *ctx; OAES_OPTION option; const void *value; */
+/* oaes_lib.c:933:NF */ static OAES_RET oaes_encrypt_block (OAES_CTX *ctx, uint8_t *c, size_t c_len); /* (ctx, c, c_len) OAES_CTX *ctx; uint8_t *c; size_t c_len; */
+/* oaes_lib.c:1050:NF */ static OAES_RET oaes_decrypt_block (OAES_CTX *ctx, uint8_t *c, size_t c_len); /* (ctx, c, c_len) OAES_CTX *ctx; uint8_t *c; size_t c_len; */
+/* oaes_lib.c:1166:NF */ extern OAES_RET oaes_encrypt (OAES_CTX *ctx, const uint8_t *m, size_t m_len, uint8_t *c, size_t *c_len); /* (ctx, m, m_len, c, c_len) OAES_CTX *ctx; const uint8_t *m; size_t m_len; uint8_t *c; size_t *c_len; */
+/* oaes_lib.c:1238:NF */ extern OAES_RET oaes_decrypt (OAES_CTX *ctx, const uint8_t *c, size_t c_len, uint8_t *m, size_t *m_len); /* (ctx, c, c_len, m, m_len) OAES_CTX *ctx; const uint8_t *c; size_t c_len; uint8_t *m; size_t *m_len; */
+/* oaes_lib.c:1365:NF */ extern OAES_RET oaes_encryption_round (const uint8_t *key, uint8_t *c); /* (key, c) const uint8_t *key; uint8_t *c; */
+/* oaes_lib.c:1395:NF */ extern OAES_RET oaes_pseudo_encrypt_ecb (OAES_CTX *ctx, uint8_t *c); /* (ctx, c) OAES_CTX *ctx; uint8_t *c; */
+/* ./skein_port.h:145:NF */ extern void Skein_Put64_LSB_First (u08b_t *dst, const u64b_t *src, size_t bCnt); /* (dst, src, bCnt) u08b_t *dst; const u64b_t *src; size_t bCnt; */
+/* ./skein_port.h:160:NF */ extern void Skein_Get64_LSB_First (u64b_t *dst, const u08b_t *src, size_t wCnt); /* (dst, src, wCnt) u64b_t *dst; const u08b_t *src; size_t wCnt; */
+/* skein.c:95:NC */ static int Skein_512_Init (Skein_512_Ctxt_t *, size_t);
+/* skein.c:96:NC */ static int Skein1024_Init (Skein1024_Ctxt_t *, size_t);
+/* skein.c:98:NC */ static int Skein_256_Update (Skein_256_Ctxt_t *, const u08b_t *, size_t);
+/* skein.c:99:NC */ static int Skein_512_Update (Skein_512_Ctxt_t *, const u08b_t *, size_t);
+/* skein.c:100:NC */ static int Skein1024_Update (Skein1024_Ctxt_t *, const u08b_t *, size_t);
+/* skein.c:102:NC */ static int Skein_256_Final (Skein_256_Ctxt_t *, u08b_t *);
+/* skein.c:103:NC */ static int Skein_512_Final (Skein_512_Ctxt_t *, u08b_t *);
+/* skein.c:104:NC */ static int Skein1024_Final (Skein1024_Ctxt_t *, u08b_t *);
+/* skein.c:544:NF */ static void Skein_256_Process_Block (Skein_256_Ctxt_t *ctx, const u08b_t *blkPtr, size_t blkCnt, size_t byteCntAdd); /* (ctx, blkPtr, blkCnt, byteCntAdd) Skein_256_Ctxt_t *ctx; const u08b_t *blkPtr; size_t blkCnt; size_t byteCntAdd; */
+/* skein.c:729:NF */ static void Skein_512_Process_Block (Skein_512_Ctxt_t *ctx, const u08b_t *blkPtr, size_t blkCnt, size_t byteCntAdd); /* (ctx, blkPtr, blkCnt, byteCntAdd) Skein_512_Ctxt_t *ctx; const u08b_t *blkPtr; size_t blkCnt; size_t byteCntAdd; */
+/* skein.c:937:NF */ static void Skein1024_Process_Block (Skein1024_Ctxt_t *ctx, const u08b_t *blkPtr, size_t blkCnt, size_t byteCntAdd); /* (ctx, blkPtr, blkCnt, byteCntAdd) Skein1024_Ctxt_t *ctx; const u08b_t *blkPtr; size_t blkCnt; size_t byteCntAdd; */
+/* skein.c:1304:NF */ static int Skein_256_Update (Skein_256_Ctxt_t *ctx, const u08b_t *msg, size_t msgByteCnt); /* (ctx, msg, msgByteCnt) Skein_256_Ctxt_t *ctx; const u08b_t *msg; size_t msgByteCnt; */
+/* skein.c:1352:NF */ static int Skein_256_Final (Skein_256_Ctxt_t *ctx, u08b_t *hashVal); /* (ctx, hashVal) Skein_256_Ctxt_t *ctx; u08b_t *hashVal; */
+/* skein.c:1399:NF */ static int Skein_512_Init (Skein_512_Ctxt_t *ctx, size_t hashBitLen); /* (ctx, hashBitLen) Skein_512_Ctxt_t *ctx; size_t hashBitLen; */
+/* skein.c:1504:NF */ static int Skein_512_Update (Skein_512_Ctxt_t *ctx, const u08b_t *msg, size_t msgByteCnt); /* (ctx, msg, msgByteCnt) Skein_512_Ctxt_t *ctx; const u08b_t *msg; size_t msgByteCnt; */
+/* skein.c:1552:NF */ static int Skein_512_Final (Skein_512_Ctxt_t *ctx, u08b_t *hashVal); /* (ctx, hashVal) Skein_512_Ctxt_t *ctx; u08b_t *hashVal; */
+/* skein.c:1598:NF */ static int Skein1024_Init (Skein1024_Ctxt_t *ctx, size_t hashBitLen); /* (ctx, hashBitLen) Skein1024_Ctxt_t *ctx; size_t hashBitLen; */
+/* skein.c:1702:NF */ static int Skein1024_Update (Skein1024_Ctxt_t *ctx, const u08b_t *msg, size_t msgByteCnt); /* (ctx, msg, msgByteCnt) Skein1024_Ctxt_t *ctx; const u08b_t *msg; size_t msgByteCnt; */
+/* skein.c:1750:NF */ static int Skein1024_Final (Skein1024_Ctxt_t *ctx, u08b_t *hashVal); /* (ctx, hashVal) Skein1024_Ctxt_t *ctx; u08b_t *hashVal; */
+/* skein.c:1948:NC */ static SkeinHashReturn Init___1 (hashState___0 *, int);
+/* skein.c:1949:NC */ static SkeinHashReturn Update___1 (hashState___0 *, const SkeinBitSequence *, size_t);
+/* skein.c:1950:NC */ static SkeinHashReturn Final___1 (hashState___0 *, SkeinBitSequence *);
+/* skein.c:1954:NF */ static SkeinHashReturn Init___1 (hashState___0 *state, int hashbitlen); /* (state, hashbitlen) hashState___0 *state; int hashbitlen; */
+/* skein.c:1978:NF */ static SkeinHashReturn Update___1 (hashState___0 *state, const SkeinBitSequence *data, size_t databitlen); /* (state, data, databitlen) hashState___0 *state; const SkeinBitSequence *data; size_t databitlen; */
+/* skein.c:2023:NF */ static SkeinHashReturn Final___1 (hashState___0 *state, SkeinBitSequence *hashval); /* (state, hashval) hashState___0 *state; SkeinBitSequence *hashval; */
+/* skein.c:2037:NF */ extern enum __anonenum_SkeinHashReturn_432432649 skein (int hashbitlen, const SkeinBitSequence *data, size_t databitlen, SkeinBitSequence *hashval); /* (hashbitlen, data, databitlen, hashval) int hashbitlen; const SkeinBitSequence *data; size_t databitlen; SkeinBitSequence *hashval; */

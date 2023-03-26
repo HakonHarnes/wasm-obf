@@ -7,11 +7,10 @@ rm -f ident.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
--I/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/ \
 --gcc=emcc \
 --envmachine \
 --Transform=Ident \
---out=ident.c ../cn.c
+--out=ident.c ../cn-0.c
 
 rm -f a.out 
 rm -f a.wasm

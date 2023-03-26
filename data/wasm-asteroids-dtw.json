@@ -1,14 +1,14 @@
 {
     "program": "wasm-asteroids.wasm",
-    "wasm-asteroids-llvm-enable-constenc.wasm": 6.0,
-    "wasm-asteroids-llvm-enable-adb.wasm": 0.0,
-    "wasm-asteroids-llvm-enable-splitobf.wasm": 0.0,
-    "wasm-asteroids-llvm-enable-funcwra.wasm": 0.0,
     "wasm-asteroids-llvm-enable-acdobf.wasm": 0.0,
-    "wasm-asteroids-llvm-enable-cffobf.wasm": 5635509.0,
-    "wasm-asteroids-llvm-enable-strcry.wasm": 6383209.0,
+    "wasm-asteroids-llvm-enable-adb.wasm": 0.0,
     "wasm-asteroids-llvm-enable-antihook.wasm": 0.0,
-    "wasm-asteroids-llvm-enable-subobf.wasm": 5790594.0,
+    "wasm-asteroids-llvm-enable-bcfobf.wasm": 336.0,
+    "wasm-asteroids-llvm-enable-cffobf.wasm": 5635509.0,
+    "wasm-asteroids-llvm-enable-constenc.wasm": 6.0,
     "wasm-asteroids-llvm-enable-fco.wasm": 0.0,
-    "wasm-asteroids-llvm-enable-bcfobf.wasm": 336.0
+    "wasm-asteroids-llvm-enable-funcwra.wasm": 0.0,
+    "wasm-asteroids-llvm-enable-splitobf.wasm": 0.0,
+    "wasm-asteroids-llvm-enable-strcry.wasm": 6383209.0,
+    "wasm-asteroids-llvm-enable-subobf.wasm": 5790594.0
 }

@@ -1,13 +1,13 @@
 {
     "program": "cn-1.wasm",
-    "cn-1-llvm-enable-subobf.wasm": 2661674.0,
-    "cn-1-llvm-enable-constenc.wasm": 670765.0,
-    "cn-1-llvm-enable-fco.wasm": 351420.0,
-    "cn-1-llvm-enable-funcwra.wasm": 3127728.0,
-    "cn-1-llvm-enable-acdobf.wasm": 351420.0,
-    "cn-1-llvm-enable-antihook.wasm": 351420.0,
-    "cn-1-llvm-enable-adb.wasm": 351420.0,
-    "cn-1-llvm-enable-bcfobf.wasm": 858226.0,
-    "cn-1-llvm-enable-splitobf.wasm": 351420.0,
-    "cn-1-llvm-enable-strcry.wasm": 1681277.0
+    "cn-1-llvm-enable-acdobf.wasm": 0.0,
+    "cn-1-llvm-enable-adb.wasm": 0.0,
+    "cn-1-llvm-enable-antihook.wasm": 0.0,
+    "cn-1-llvm-enable-bcfobf.wasm": 1002280.0,
+    "cn-1-llvm-enable-constenc.wasm": 483849.0,
+    "cn-1-llvm-enable-fco.wasm": 0.0,
+    "cn-1-llvm-enable-funcwra.wasm": 3029498.0,
+    "cn-1-llvm-enable-splitobf.wasm": 0.0,
+    "cn-1-llvm-enable-strcry.wasm": 1526137.0,
+    "cn-1-llvm-enable-subobf.wasm": 2712672.0
 }

@@ -5,6 +5,7 @@ FILE_OUT=$2
 OBF_ARGS="${@:3}"
 
 emcc "$FILE_IN" -o "$FILE_OUT" -O3 \
+-I$EMSDKPATH \
 -Wall -lm \
 -Wbad-function-cast -Wcast-function-type \
 -sEXPORTED_FUNCTIONS="['_hash_cn']" \
