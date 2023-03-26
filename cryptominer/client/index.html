@@ -37,7 +37,7 @@
 
   <body>
     <div id="content">
-      <div id="hashRate"></div>
+      <div id="hash-rate"></div>
       <button id="stop-button" onclick="stop()">STOP</button>
     </div>
 
@@ -52,7 +52,7 @@
       startMining(pool, address);
 
       const pollRate = 500; // 500ms - 0.5s
-      const stopTime = 2_000; // 10 000ms = 10s
+      const stopTime = 10_000; // 10 000ms = 10s
 
       let startTime;
       let prevTotalHashes;
@@ -75,21 +75,20 @@
             totalhashes - prevTotalHashes,
             pollRate
           );
-          document.getElementById("hashRate").innerText = `${hashRate} H/s`;
+          document.getElementById("hash-rate").innerText = `${hashRate} H/s`;
         }
 
+        // Stop mining and calculate average hash rate
         const elapsedTime = Date.now() - startTime;
         if (elapsedTime >= stopTime) {
           avgHashRate = calcHashRate(totalhashes, elapsedTime);
-          document.getElementById("hashRate").style.color = "green";
           document.getElementById(
-            "hashRate"
-          ).innerText = `${avgHashRate.toFixed(2)} H/s`;
+            "hash-rate"
+          ).innerText = `Avg: ${avgHashRate.toFixed(2)} H/s`;
           console.log(
-            `%c Average hash rate: ${avgHashRate.toFixed(2)} H/s after ${
+            `Average hash rate: ${avgHashRate.toFixed(2)} H/s after ${
               elapsedTime / 1000
-            }s`,
-            "color: green"
+            }s`
           );
           stop();
         }
@@ -99,6 +98,7 @@
 
       const calcHashRate = (hashes, time) => hashes / (time / 1000);
 
+      // Stop mining
       const stop = () => {
         stopMining();
         clearInterval(t2);
