@@ -1,0 +1,14 @@
+{
+    "algorithm": "cn-lite-1",
+    "cn-lite-1-llvm-enable-acdobf": 392.77,
+    "cn-lite-1-llvm-enable-adb": 385.0,
+    "cn-lite-1-llvm-enable-antihook": 377.92,
+    "cn-lite-1-llvm-enable-bcfobf": 368.75,
+    "cn-lite-1-llvm-enable-constenc": 350.42,
+    "cn-lite-1-llvm-enable-fco": 378.88,
+    "cn-lite-1-llvm-enable-funcwra": 397.5,
+    "cn-lite-1-llvm-enable-splitobf": 355.83,
+    "cn-lite-1-llvm-enable-strcry": 375.83,
+    "cn-lite-1-llvm-enable-subobf": 318.72,
+    "cn-lite-1": 306.09
+}

@@ -1,0 +1,14 @@
+{
+    "algorithm": "cn-2",
+    "cn-2-llvm-enable-acdobf": 104.89,
+    "cn-2-llvm-enable-adb": 102.22,
+    "cn-2-llvm-enable-antihook": 104.09,
+    "cn-2-llvm-enable-bcfobf": 104.89,
+    "cn-2-llvm-enable-constenc": 106.82,
+    "cn-2-llvm-enable-fco": 95.91,
+    "cn-2-llvm-enable-funcwra": 92.69,
+    "cn-2-llvm-enable-splitobf": 94.22,
+    "cn-2-llvm-enable-strcry": 101.78,
+    "cn-2-llvm-enable-subobf": 100.0,
+    "cn-2": 110.67
+}

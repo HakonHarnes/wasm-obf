@@ -1,0 +1,24 @@
+[
+    {
+        "algorithm": "cn-0",
+        "cn-0-llvm-enable-acdobf": 133.91,
+        "cn-0-llvm-enable-adb": 166.09,
+        "cn-0-llvm-enable-antihook": 153.41,
+        "cn-0-llvm-enable-bcfobf": 162.17,
+        "cn-0-llvm-enable-constenc": 166.96,
+        "cn-0-llvm-enable-fco": 149.07,
+        "cn-0-llvm-enable-funcwra": 164.78,
+        "cn-0-llvm-enable-splitobf": 163.04,
+        "cn-0-llvm-enable-strcry": 168.7,
+        "cn-0-llvm-enable-subobf": 145.65
+    },
+    {
+        "algorithm": "cn-1",
+        "cn-1-llvm-enable-acdobf": 149.57,
+        "cn-1-llvm-enable-adb": 163.56,
+        "cn-1-llvm-enable-antihook": 154.35,
+        "cn-1-llvm-enable-bcfobf": 152.44,
+        "cn-1-llvm-enable-constenc": 161.3,
+        "cn-1-llvm-enable-fco": 167.39
+    }
+]

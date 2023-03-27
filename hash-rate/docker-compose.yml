@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  hash-rate:
+    build: .
+    network_mode: host
+    volumes:
+      - ./main.py:/app/main.py
+      - ../binaries/:/app/binaries
+      - ../cryptominer/client/:/app/cryptominer
+      - ../data/:/app/data

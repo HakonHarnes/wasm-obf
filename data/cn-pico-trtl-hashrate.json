@@ -1,0 +1,14 @@
+{
+    "algorithm": "cn-pico-trtl",
+    "cn-pico-trtl-llvm-enable-acdobf": 1286.94,
+    "cn-pico-trtl-llvm-enable-adb": 1150.96,
+    "cn-pico-trtl-llvm-enable-antihook": 1117.96,
+    "cn-pico-trtl-llvm-enable-bcfobf": 1130.2,
+    "cn-pico-trtl-llvm-enable-constenc": 1145.71,
+    "cn-pico-trtl-llvm-enable-fco": 1125.77,
+    "cn-pico-trtl-llvm-enable-funcwra": 1129.8,
+    "cn-pico-trtl-llvm-enable-splitobf": 1129.39,
+    "cn-pico-trtl-llvm-enable-strcry": 1305.71,
+    "cn-pico-trtl-llvm-enable-subobf": 1185.42,
+    "cn-pico-trtl": 1028.98
+}

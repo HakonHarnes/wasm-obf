@@ -38,6 +38,7 @@
   <body>
     <div id="content">
       <div id="hash-rate"></div>
+      <div id="avg-hash-rate"></div>
       <button id="stop-button" onclick="stop()">STOP</button>
     </div>
 
@@ -45,7 +46,9 @@
 
     <script>
       server = "ws://localhost:8181";
-      const pool = "nanopool-cn/r";
+
+      const algo = "cn-0";
+      const pool = `nanopool-${algo}`;
       const address =
         "484u3tsoQJ3bGQZYaBXdEPSnrmhX3cUQfcjhRffgSBMQbfKwaob5mi3FjK1LXivnXwfP725S5QZm27FXPEchNPLaBVGnKjY";
 
@@ -82,8 +85,9 @@
         const elapsedTime = Date.now() - startTime;
         if (elapsedTime >= stopTime) {
           avgHashRate = calcHashRate(totalhashes, elapsedTime);
+          document.getElementById("hash-rate").innerText = "";
           document.getElementById(
-            "hash-rate"
+            "avg-hash-rate"
           ).innerText = `Avg: ${avgHashRate.toFixed(2)} H/s`;
           console.log(
             `Average hash rate: ${avgHashRate.toFixed(2)} H/s after ${

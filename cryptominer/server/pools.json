@@ -11,61 +11,61 @@
     "emptypassword": "x",
     "algorithm": "cn"
   },
-  "nanopool-cn/0": {
+  "nanopool-cn-0": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn/0"
   },
-  "nanopool-cn/1": {
+  "nanopool-cn-1": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn/1"
   },
-  "nanopool-cn/2": {
+  "nanopool-cn-2": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn/2"
   },
-  "nanopool-cn/r": {
+  "nanopool-cn-r": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn/r"
   },
-  "nanopool-cn-lite/0": {
+  "nanopool-cn-lite-0": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn-lite/0"
   },
-  "nanopool-cn-lite/1": {
+  "nanopool-cn-lite-1": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn-lite/1"
   },
-  "nanopool-cn-lite/2": {
+  "nanopool-cn-lite-2": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn-lite/2"
   },
-  "nanopool-cn-pico/trtl": {
+  "nanopool-cn-pico-trtl": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn-pico/trtl"
   },
-  "nanopool-cn/half": {
+  "nanopool-cn-half": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",
     "algorithm": "cn/half"
   },
-  "nanopool-cn/rwz": {
+  "nanopool-cn-rwz": {
     "url": "xmr-eu1.nanopool.org",
     "port": 14444,
     "emptypassword": "x",

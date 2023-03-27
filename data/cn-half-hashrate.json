@@ -1,0 +1,14 @@
+{
+    "algorithm": "cn-half",
+    "cn-half-llvm-enable-acdobf": 144.78,
+    "cn-half-llvm-enable-adb": 142.61,
+    "cn-half-llvm-enable-antihook": 141.3,
+    "cn-half-llvm-enable-bcfobf": 152.61,
+    "cn-half-llvm-enable-constenc": 148.26,
+    "cn-half-llvm-enable-fco": 151.74,
+    "cn-half-llvm-enable-funcwra": 150.0,
+    "cn-half-llvm-enable-splitobf": 150.87,
+    "cn-half-llvm-enable-strcry": 150.0,
+    "cn-half-llvm-enable-subobf": 135.65,
+    "cn-half": 174.78
+}
