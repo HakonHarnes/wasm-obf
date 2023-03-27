@@ -1,0 +1,73 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+../asteroids/main.c:196:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+std::mt19937_64 seeded with current timestamp: 1679666809516
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/wasm-asteroids/wasm-asteroids.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running AntiDebugging On init_asteroids
+Failed To Link PreCompiled AntiDebugging IR From:/root/Hikari/PrecompiledAntiDebugging-wasm32-emscripten.bc
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On multiply_vector
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On add_vector
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On update_asteroids
+Running AntiDebugging On add_vector_new
+Running AntiDebugging On rotate_vector
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On draw_asteroids
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On draw_line
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On shrink_asteroid
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On divide_vector
+Running AntiDebugging On spawn_asteroids
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On bounds_asteroids
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On collision_asteroids
+Running AntiDebugging On mainloop
+Running AntiDebugging On get_direction
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On apply_force
+Running AntiDebugging On rotate_player
+Running AntiDebugging On shoot_bullet
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On clear_pixels
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On update_player
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On bounds_player
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On draw_player
+Running AntiDebugging On __main_argc_argv
+Running AntiDebugging On init
+Running AntiDebugging On init_player
+Running AntiDebugging On normalise_vector
+Running AntiDebugging On draw_pixel
+Running AntiDebugging On limit_vector
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On print_vector
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On magnitude_vector
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0008957s
+1 warning generated.

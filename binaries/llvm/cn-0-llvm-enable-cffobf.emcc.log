@@ -1,0 +1,341 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-oQEAZB2_.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-yOOfHGtI.i","")
+        ^
+cil-YxBO9k2N.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-Wu2N4aKT.i","")
+        ^
+cil-Z0hKgSwg.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-qa_JyPrG.i","")
+        ^
+cil-pfGrxPBr.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-xLDESkyg.i","")
+        ^
+cil-WHF2U_Di.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-kq6M7pVT.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-LyAsnuSN.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-6cnDW411.i","")
+        ^
+cil-ehi18zt6.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-4j4AXb1p.i","")
+        ^
+cil-efD_u5m5.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-j5cCj4jU.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679667245499
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-0/cn-0.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running ControlFlowFlattening On main
+Running ControlFlowFlattening On blake256_compress
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On blake256_init
+Running ControlFlowFlattening On blake224_init
+Running ControlFlowFlattening On blake256_update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On blake224_update
+Running ControlFlowFlattening On blake256_final_h
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On blake256_final
+Running ControlFlowFlattening On blake224_final
+Running ControlFlowFlattening On blake256_hash
+Running ControlFlowFlattening On blake
+Running ControlFlowFlattening On blake224_hash
+Running ControlFlowFlattening On hmac_blake256_init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On hmac_blake224_init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On hmac_blake256_update
+Running ControlFlowFlattening On hmac_blake224_update
+Running ControlFlowFlattening On hmac_blake256_final
+Running ControlFlowFlattening On hmac_blake224_final
+Running ControlFlowFlattening On hmac_blake256_hash
+Running ControlFlowFlattening On hmac_blake224_hash
+Running ControlFlowFlattening On do_blake_hash
+Running ControlFlowFlattening On do_groestl_hash
+Running ControlFlowFlattening On groestl
+Running ControlFlowFlattening On do_jh_hash
+Running ControlFlowFlattening On jh
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On do_skein_hash
+Running ControlFlowFlattening On skein
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On xor_blocks_dst
+Running ControlFlowFlattening On mul64to128
+Running ControlFlowFlattening On sum_xor_dst
+Running ControlFlowFlattening On xor_blocks
+Running ControlFlowFlattening On SubAndShiftAndMixAddRound
+Running ControlFlowFlattening On SubAndShiftAndMixAddRoundInPlace
+Running ControlFlowFlattening On cryptonight_hash_ctx
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_alloc
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On keccak
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On v4_random_math_init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_import_data
+Running ControlFlowFlattening On xor64
+Running ControlFlowFlattening On copy_block
+Running ControlFlowFlattening On v4_random_math
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_free
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On keccakf
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On cryptonight
+Running ControlFlowFlattening On Init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Final
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Hash
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On keccak1600
+Running ControlFlowFlattening On hash_cn
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_sprintf
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_gen_128
+Running ControlFlowFlattening On oaes_key_gen
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_gen_192
+Running ControlFlowFlattening On oaes_key_gen_256
+Running ControlFlowFlattening On oaes_key_export
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_export_data
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_import
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_destroy
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_expand
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_get_seed
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_set_option
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_encrypt
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_encrypt_block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_decrypt
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_decrypt_block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_encryption_round
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_sub_byte
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_shift_rows
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_mix_cols
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_pseudo_encrypt_ecb
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_Put64_LSB_First
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_Get64_LSB_First
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Init___1
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Update___1
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Final___1
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On check_data
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Transform
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On F512
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On RND512Q
+Running ControlFlowFlattening On RND512P
+Running ControlFlowFlattening On OutputTransformation
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Init___0
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Update___0
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Final___0
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On F8
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On E8
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_word_rot_left
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_inv_shift_rows
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_inv_sub_byte
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_inv_mix_cols
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_gf_mul
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Process_Block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Process_Block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_256_Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_256_Process_Block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Final
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_256_Final
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Final
+Fixing Stack
+Fixed Stack
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0105722s
+PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace, preprocessed source, and associated run script.
+Stack dump:
+0.	Program arguments: /usr/local/bin/clang -target wasm32-unknown-emscripten -fignore-exceptions -fvisibility=default -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -DEMSCRIPTEN -Werror=implicit-function-declaration --sysroot=/src/emscripten/cache/sysroot -Xclang -iwithsysroot/include/fakesdl -Xclang -iwithsysroot/include/compat -O3 -Wall -Wbad-function-cast -Wcast-function-type -fmacro-backtrace-limit=0 -mllvm -enable-cffobf /llvm/dataset/cn-0/cn-0.c -c -o /tmp/emscripten_temp__4kfg84s/cn-0_0.o
+1.	<eof> parser at end of file
+2.	Optimizer
+ #0 0x00005574a8aa76f3 llvm::sys::PrintStackTrace(llvm::raw_ostream&, int) (/usr/local/bin/clang+0x18986f3)
+ #1 0x00005574a8aa6354 llvm::sys::RunSignalHandlers() (/usr/local/bin/clang+0x1897354)
+ #2 0x00005574a8a5f2cd (anonymous namespace)::CrashRecoveryContextImpl::HandleCrash(int, unsigned long) CrashRecoveryContext.cpp:0:0
+ #3 0x00005574a8a5f622 CrashRecoverySignalHandler(int) CrashRecoveryContext.cpp:0:0
+ #4 0x00007fe0a3747f50 (/usr/lib/libc.so.6+0x38f50)
+ #5 0x00005574a86fc0fd llvm::SymbolTableListTraits<llvm::BasicBlock>::transferNodesFromList(llvm::SymbolTableListTraits<llvm::BasicBlock>&, llvm::ilist_iterator<llvm::ilist_detail::node_options<llvm::BasicBlock, false, false, void>, false, false>, llvm::ilist_iterator<llvm::ilist_detail::node_options<llvm::BasicBlock, false, false, void>, false, false>) (/usr/local/bin/clang+0x14ed0fd)
+ #6 0x00005574a86fc718 llvm::Function::splice(llvm::ilist_iterator<llvm::ilist_detail::node_options<llvm::BasicBlock, false, false, void>, false, false>, llvm::Function*, llvm::ilist_iterator<llvm::ilist_detail::node_options<llvm::BasicBlock, false, false, void>, false, false>, llvm::ilist_iterator<llvm::ilist_detail::node_options<llvm::BasicBlock, false, false, void>, false, false>) (/usr/local/bin/clang+0x14ed718)
+ #7 0x00005574a8b0e946 llvm::InsertPreheaderForLoop(llvm::Loop*, llvm::DominatorTree*, llvm::LoopInfo*, llvm::MemorySSAUpdater*, bool) (/usr/local/bin/clang+0x18ff946)
+ #8 0x00005574a8b0ec6b simplifyOneLoop(llvm::Loop*, llvm::SmallVectorImpl<llvm::Loop*>&, llvm::DominatorTree*, llvm::LoopInfo*, llvm::ScalarEvolution*, llvm::AssumptionCache*, llvm::MemorySSAUpdater*, bool) LoopSimplify.cpp:0:0
+ #9 0x00005574a8b10007 llvm::simplifyLoop(llvm::Loop*, llvm::DominatorTree*, llvm::LoopInfo*, llvm::ScalarEvolution*, llvm::AssumptionCache*, llvm::MemorySSAUpdater*, bool) (/usr/local/bin/clang+0x1901007)
+#10 0x00005574a8b10174 llvm::LoopSimplifyPass::run(llvm::Function&, llvm::AnalysisManager<llvm::Function>&) (/usr/local/bin/clang+0x1901174)
+#11 0x00005574a93afe35 llvm::detail::PassModel<llvm::Function, llvm::LoopSimplifyPass, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::Function>>::run(llvm::Function&, llvm::AnalysisManager<llvm::Function>&) (/usr/local/bin/clang+0x21a0e35)
+#12 0x00005574a874fb46 llvm::PassManager<llvm::Function, llvm::AnalysisManager<llvm::Function>>::run(llvm::Function&, llvm::AnalysisManager<llvm::Function>&) (/usr/local/bin/clang+0x1540b46)
+#13 0x00005574aa274c0b llvm::FunctionToLoopPassAdaptor::run(llvm::Function&, llvm::AnalysisManager<llvm::Function>&) (/usr/local/bin/clang+0x3065c0b)
+#14 0x00005574a93add75 llvm::detail::PassModel<llvm::Function, llvm::FunctionToLoopPassAdaptor, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::Function>>::run(llvm::Function&, llvm::AnalysisManager<llvm::Function>&) (/usr/local/bin/clang+0x219ed75)
+#15 0x00005574a874fb46 llvm::PassManager<llvm::Function, llvm::AnalysisManager<llvm::Function>>::run(llvm::Function&, llvm::AnalysisManager<llvm::Function>&) (/usr/local/bin/clang+0x1540b46)
+#16 0x00005574a8c2e143 llvm::detail::PassModel<llvm::Function, llvm::PassManager<llvm::Function, llvm::AnalysisManager<llvm::Function>>, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::Function>>::run(llvm::Function&, llvm::AnalysisManager<llvm::Function>&) (/usr/local/bin/clang+0x1a1f143)
+#17 0x00005574aa2b5242 llvm::CGSCCToFunctionPassAdaptor::run(llvm::LazyCallGraph::SCC&, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>&, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&) (/usr/local/bin/clang+0x30a6242)
+#18 0x00005574a93add35 llvm::detail::PassModel<llvm::LazyCallGraph::SCC, llvm::CGSCCToFunctionPassAdaptor, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&>::run(llvm::LazyCallGraph::SCC&, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>&, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&) (/usr/local/bin/clang+0x219ed35)
+#19 0x00005574aa2b2524 llvm::PassManager<llvm::LazyCallGraph::SCC, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&>::run(llvm::LazyCallGraph::SCC&, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>&, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&) (/usr/local/bin/clang+0x30a3524)
+#20 0x00005574a87dcf61 llvm::detail::PassModel<llvm::LazyCallGraph::SCC, llvm::PassManager<llvm::LazyCallGraph::SCC, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&>, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&>::run(llvm::LazyCallGraph::SCC&, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>&, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&) (/usr/local/bin/clang+0x15cdf61)
+#21 0x00005574aa2b3b7c llvm::DevirtSCCRepeatedPass::run(llvm::LazyCallGraph::SCC&, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>&, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&) (/usr/local/bin/clang+0x30a4b7c)
+#22 0x00005574a87dcf21 llvm::detail::PassModel<llvm::LazyCallGraph::SCC, llvm::DevirtSCCRepeatedPass, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&>::run(llvm::LazyCallGraph::SCC&, llvm::AnalysisManager<llvm::LazyCallGraph::SCC, llvm::LazyCallGraph&>&, llvm::LazyCallGraph&, llvm::CGSCCUpdateResult&) (/usr/local/bin/clang+0x15cdf21)
+#23 0x00005574aa2b3118 llvm::ModuleToPostOrderCGSCCPassAdaptor::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/usr/local/bin/clang+0x30a4118)
+#24 0x00005574a87dcfe1 llvm::detail::PassModel<llvm::Module, llvm::ModuleToPostOrderCGSCCPassAdaptor, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::Module>>::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/usr/local/bin/clang+0x15cdfe1)
+#25 0x00005574a874f3e0 llvm::PassManager<llvm::Module, llvm::AnalysisManager<llvm::Module>>::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/usr/local/bin/clang+0x15403e0)
+#26 0x00005574a87df5c8 llvm::ModuleInlinerWrapperPass::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/usr/local/bin/clang+0x15d05c8)
+#27 0x00005574a93ad6a5 llvm::detail::PassModel<llvm::Module, llvm::ModuleInlinerWrapperPass, llvm::PreservedAnalyses, llvm::AnalysisManager<llvm::Module>>::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/usr/local/bin/clang+0x219e6a5)
+#28 0x00005574a874f3e0 llvm::PassManager<llvm::Module, llvm::AnalysisManager<llvm::Module>>::run(llvm::Module&, llvm::AnalysisManager<llvm::Module>&) (/usr/local/bin/clang+0x15403e0)
+#29 0x00005574a8c3913a (anonymous namespace)::EmitAssemblyHelper::RunOptimizationPipeline(clang::BackendAction, std::unique_ptr<llvm::raw_pwrite_stream, std::default_delete<llvm::raw_pwrite_stream>>&, std::unique_ptr<llvm::ToolOutputFile, std::default_delete<llvm::ToolOutputFile>>&) BackendUtil.cpp:0:0
+#30 0x00005574a8c3acd9 clang::EmitBackendOutput(clang::DiagnosticsEngine&, clang::HeaderSearchOptions const&, clang::CodeGenOptions const&, clang::TargetOptions const&, clang::LangOptions const&, llvm::StringRef, llvm::Module*, clang::BackendAction, std::unique_ptr<llvm::raw_pwrite_stream, std::default_delete<llvm::raw_pwrite_stream>>) (/usr/local/bin/clang+0x1a2bcd9)
+#31 0x00005574a937e544 clang::BackendConsumer::HandleTranslationUnit(clang::ASTContext&) (/usr/local/bin/clang+0x216f544)
+#32 0x00005574a996965f clang::ParseAST(clang::Sema&, bool, bool) (/usr/local/bin/clang+0x275a65f)
+#33 0x00005574a9027d5e clang::FrontendAction::Execute() (/usr/local/bin/clang+0x1e18d5e)
+#34 0x00005574a8fecbf1 clang::CompilerInstance::ExecuteAction(clang::FrontendAction&) (/usr/local/bin/clang+0x1dddbf1)
+#35 0x00005574a90846a7 clang::ExecuteCompilerInvocation(clang::CompilerInstance*) (/usr/local/bin/clang+0x1e756a7)
+#36 0x00005574a80d22f9 cc1_main(llvm::ArrayRef<char const*>, char const*, void*) (/usr/local/bin/clang+0xec32f9)
+#37 0x00005574a80cee3e ExecuteCC1Tool(llvm::SmallVectorImpl<char const*>&) driver.cpp:0:0
+#38 0x00005574a8f33e49 void llvm::function_ref<void ()>::callback_fn<clang::driver::CC1Command::Execute(llvm::ArrayRef<std::optional<llvm::StringRef>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>*, bool*) const::'lambda'()>(long) Job.cpp:0:0
+#39 0x00005574a8a5f72a llvm::CrashRecoveryContext::RunSafely(llvm::function_ref<void ()>) (/usr/local/bin/clang+0x185072a)
+#40 0x00005574a8f345c3 clang::driver::CC1Command::Execute(llvm::ArrayRef<std::optional<llvm::StringRef>>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>*, bool*) const (.part.0) Job.cpp:0:0
+#41 0x00005574a8f18107 clang::driver::Compilation::ExecuteCommand(clang::driver::Command const&, clang::driver::Command const*&, bool) const (/usr/local/bin/clang+0x1d09107)
+#42 0x00005574a8f18222 clang::driver::Compilation::ExecuteJobs(clang::driver::JobList const&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*>>&, bool) const (/usr/local/bin/clang+0x1d09222)
+#43 0x00005574a8f1cf84 clang::driver::Driver::ExecuteCompilation(clang::driver::Compilation&, llvm::SmallVectorImpl<std::pair<int, clang::driver::Command const*>>&) (/usr/local/bin/clang+0x1d0df84)
+#44 0x00005574a80d0dd2 clang_main(int, char**) (/usr/local/bin/clang+0xec1dd2)
+#45 0x00007fe0a3732790 (/usr/lib/libc.so.6+0x23790)
+#46 0x00007fe0a373284a __libc_start_main (/usr/lib/libc.so.6+0x2384a)
+#47 0x00005574a80cd145 _start (/usr/local/bin/clang+0xebe145)
+clang-16: error: clang frontend command failed with exit code 139 (use -v to see invocation)
+clang version 16.0.0 (https://github.com/61bcdefg/Hikari-LLVM15.git e1b34265d7f8a681dd1ad0c3a96d3658b4fcc1b7)
+Target: wasm32-unknown-emscripten
+Thread model: posix
+InstalledDir: /usr/local/bin
+clang-16: note: diagnostic msg: 
+********************
+
+PLEASE ATTACH THE FOLLOWING FILES TO THE BUG REPORT:
+Preprocessed source(s) and associated run script(s) are located at:
+clang-16: note: diagnostic msg: /tmp/cn-0-621c7f.c
+clang-16: note: diagnostic msg: /tmp/cn-0-621c7f.sh
+clang-16: note: diagnostic msg: 
+
+********************
+emcc: error: '/usr/local/bin/clang -target wasm32-unknown-emscripten -fignore-exceptions -fvisibility=default -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -DEMSCRIPTEN -Werror=implicit-function-declaration --sysroot=/src/emscripten/cache/sysroot -Xclang -iwithsysroot/include/fakesdl -Xclang -iwithsysroot/include/compat -O3 -Wall -Wbad-function-cast -Wcast-function-type -fmacro-backtrace-limit=0 -mllvm -enable-cffobf /llvm/dataset/cn-0/cn-0.c -c -o /tmp/emscripten_temp__4kfg84s/cn-0_0.o' failed (returned 1)

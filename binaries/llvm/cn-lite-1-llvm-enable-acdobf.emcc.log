@@ -1,0 +1,40 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-k_Yf2WI_.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-33YdHUOD.i","")
+        ^
+cil-Mh1tnEWR.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-v490wXeC.i","")
+        ^
+cil-5DKOJnXr.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-s1ivcpu1.i","")
+        ^
+cil-yU5t_pBo.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-SkaoMOVe.i","")
+        ^
+cil-O95QRYt1.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-eVQohrKF.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-VHpRQEz3.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-RNGz1KUB.i","")
+        ^
+cil-eyrkQmXG.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-A6L0uYrr.i","")
+        ^
+cil-skP7cMD4.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-XcXDtY2s.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679667132044
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-lite-1/cn-lite-1.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+wasm32-unknown-emscripten is Not Supported For LLVM AntiClassDump
+Probably GNU Step?
+Running AntiClassDump On /llvm/dataset/cn-lite-1/cn-lite-1.c
+No ObjC Class Found in :/llvm/dataset/cn-lite-1/cn-lite-1.c
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0079305s
+9 warnings generated.

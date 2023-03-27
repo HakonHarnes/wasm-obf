@@ -1,0 +1,41 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-oQEAZB2_.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-yOOfHGtI.i","")
+        ^
+cil-YxBO9k2N.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-Wu2N4aKT.i","")
+        ^
+cil-Z0hKgSwg.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-qa_JyPrG.i","")
+        ^
+cil-pfGrxPBr.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-xLDESkyg.i","")
+        ^
+cil-WHF2U_Di.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-kq6M7pVT.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-LyAsnuSN.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-6cnDW411.i","")
+        ^
+cil-ehi18zt6.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-4j4AXb1p.i","")
+        ^
+cil-efD_u5m5.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-j5cCj4jU.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679667279721
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-0/cn-0.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+wasm32-unknown-emscripten is Not Supported For LLVM AntiClassDump
+Probably GNU Step?
+Running AntiClassDump On /llvm/dataset/cn-0/cn-0.c
+No ObjC Class Found in :/llvm/dataset/cn-0/cn-0.c
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0075195s
+9 warnings generated.
+system_libs:WARNING: main() is in the input files, but "_main" is not in EXPORTED_FUNCTIONS, which means it may be eliminated as dead code. Export it if you want main() to run.

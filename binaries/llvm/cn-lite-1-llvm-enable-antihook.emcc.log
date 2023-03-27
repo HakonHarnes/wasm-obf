@@ -1,0 +1,138 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-k_Yf2WI_.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-33YdHUOD.i","")
+        ^
+cil-Mh1tnEWR.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-v490wXeC.i","")
+        ^
+cil-5DKOJnXr.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-s1ivcpu1.i","")
+        ^
+cil-yU5t_pBo.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-SkaoMOVe.i","")
+        ^
+cil-O95QRYt1.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-eVQohrKF.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-VHpRQEz3.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-RNGz1KUB.i","")
+        ^
+cil-eyrkQmXG.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-A6L0uYrr.i","")
+        ^
+cil-skP7cMD4.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-XcXDtY2s.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679667137305
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-lite-1/cn-lite-1.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running AntiHooking On blake256_compress
+Running AntiHooking On blake256_init
+Running AntiHooking On blake224_init
+Running AntiHooking On blake256_update
+Running AntiHooking On blake224_update
+Running AntiHooking On blake256_final_h
+Running AntiHooking On blake256_final
+Running AntiHooking On blake224_final
+Running AntiHooking On blake256_hash
+Running AntiHooking On blake
+Running AntiHooking On blake224_hash
+Running AntiHooking On hmac_blake256_init
+Running AntiHooking On hmac_blake224_init
+Running AntiHooking On hmac_blake256_update
+Running AntiHooking On hmac_blake224_update
+Running AntiHooking On hmac_blake256_final
+Running AntiHooking On hmac_blake224_final
+Running AntiHooking On hmac_blake256_hash
+Running AntiHooking On hmac_blake224_hash
+Running AntiHooking On do_blake_hash
+Running AntiHooking On do_groestl_hash
+Running AntiHooking On groestl
+Running AntiHooking On do_jh_hash
+Running AntiHooking On jh
+Running AntiHooking On do_skein_hash
+Running AntiHooking On skein
+Running AntiHooking On xor_blocks_dst
+Running AntiHooking On mul64to128
+Running AntiHooking On sum_xor_dst
+Running AntiHooking On xor_blocks
+Running AntiHooking On SubAndShiftAndMixAddRound
+Running AntiHooking On SubAndShiftAndMixAddRoundInPlace
+Running AntiHooking On cryptonight_hash_ctx
+Running AntiHooking On oaes_alloc
+Running AntiHooking On keccak
+Running AntiHooking On v4_random_math_init
+Running AntiHooking On oaes_key_import_data
+Running AntiHooking On xor64
+Running AntiHooking On copy_block
+Running AntiHooking On v4_random_math
+Running AntiHooking On oaes_free
+Running AntiHooking On keccakf
+Running AntiHooking On cryptonight
+Running AntiHooking On Init
+Running AntiHooking On Update
+Running AntiHooking On Final
+Running AntiHooking On Hash
+Running AntiHooking On keccak1600
+Running AntiHooking On hash_cn
+Running AntiHooking On oaes_sprintf
+Running AntiHooking On oaes_key_gen_128
+Running AntiHooking On oaes_key_gen
+Running AntiHooking On oaes_key_gen_192
+Running AntiHooking On oaes_key_gen_256
+Running AntiHooking On oaes_key_export
+Running AntiHooking On oaes_key_export_data
+Running AntiHooking On oaes_key_import
+Running AntiHooking On oaes_key_destroy
+Running AntiHooking On oaes_key_expand
+Running AntiHooking On oaes_get_seed
+Running AntiHooking On oaes_set_option
+Running AntiHooking On oaes_encrypt
+Running AntiHooking On oaes_encrypt_block
+Running AntiHooking On oaes_decrypt
+Running AntiHooking On oaes_decrypt_block
+Running AntiHooking On oaes_encryption_round
+Running AntiHooking On oaes_sub_byte
+Running AntiHooking On oaes_shift_rows
+Running AntiHooking On oaes_mix_cols
+Running AntiHooking On oaes_pseudo_encrypt_ecb
+Running AntiHooking On Skein_Put64_LSB_First
+Running AntiHooking On Skein_Get64_LSB_First
+Running AntiHooking On Init___1
+Running AntiHooking On Update___1
+Running AntiHooking On Final___1
+Running AntiHooking On check_data
+Running AntiHooking On Transform
+Running AntiHooking On F512
+Running AntiHooking On RND512Q
+Running AntiHooking On RND512P
+Running AntiHooking On OutputTransformation
+Running AntiHooking On Init___0
+Running AntiHooking On Update___0
+Running AntiHooking On Final___0
+Running AntiHooking On F8
+Running AntiHooking On E8
+Running AntiHooking On oaes_word_rot_left
+Running AntiHooking On oaes_inv_shift_rows
+Running AntiHooking On oaes_inv_sub_byte
+Running AntiHooking On oaes_inv_mix_cols
+Running AntiHooking On oaes_gf_mul
+Running AntiHooking On Skein_512_Init
+Running AntiHooking On Skein1024_Init
+Running AntiHooking On Skein_512_Process_Block
+Running AntiHooking On Skein1024_Process_Block
+Running AntiHooking On Skein_512_Update
+Running AntiHooking On Skein_256_Update
+Running AntiHooking On Skein1024_Update
+Running AntiHooking On Skein_256_Process_Block
+Running AntiHooking On Skein_512_Final
+Running AntiHooking On Skein_256_Final
+Running AntiHooking On Skein1024_Final
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0102746s
+9 warnings generated.

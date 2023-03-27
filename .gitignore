@@ -5,6 +5,3 @@ node_modules
 .*.json
 *.env
 obfuscation/tigress/tigress
-binaries/llvm
-binaries/original 
-binaries/tigress 

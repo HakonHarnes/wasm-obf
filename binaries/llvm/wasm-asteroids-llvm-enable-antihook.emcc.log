@@ -1,0 +1,42 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+../asteroids/main.c:196:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+std::mt19937_64 seeded with current timestamp: 1679666807200
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/wasm-asteroids/wasm-asteroids.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running AntiHooking On init_asteroids
+Running AntiHooking On multiply_vector
+Running AntiHooking On add_vector
+Running AntiHooking On update_asteroids
+Running AntiHooking On add_vector_new
+Running AntiHooking On rotate_vector
+Running AntiHooking On draw_asteroids
+Running AntiHooking On draw_line
+Running AntiHooking On shrink_asteroid
+Running AntiHooking On divide_vector
+Running AntiHooking On spawn_asteroids
+Running AntiHooking On bounds_asteroids
+Running AntiHooking On collision_asteroids
+Running AntiHooking On mainloop
+Running AntiHooking On get_direction
+Running AntiHooking On apply_force
+Running AntiHooking On rotate_player
+Running AntiHooking On shoot_bullet
+Running AntiHooking On clear_pixels
+Running AntiHooking On update_player
+Running AntiHooking On bounds_player
+Running AntiHooking On draw_player
+Running AntiHooking On __main_argc_argv
+Running AntiHooking On init
+Running AntiHooking On init_player
+Running AntiHooking On normalise_vector
+Running AntiHooking On draw_pixel
+Running AntiHooking On limit_vector
+Running AntiHooking On print_vector
+Running AntiHooking On magnitude_vector
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0008552s
+1 warning generated.

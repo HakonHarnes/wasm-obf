@@ -1,0 +1,138 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-A9Fdr__Z.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-eCVj8_CF.i","")
+        ^
+cil-XjUDu1pj.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-XnbTGzzg.i","")
+        ^
+cil-DpB3v3Es.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-2XNLp6Jw.i","")
+        ^
+cil-M1Vf6snl.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-pl1D8SPp.i","")
+        ^
+cil-mgSwdDE3.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-iOtzfM3_.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-q9tZprUJ.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-Uo9930jL.i","")
+        ^
+cil-SVJbRoxa.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-tDx2ioke.i","")
+        ^
+cil-5p7Z5Kv0.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-8mbRGwau.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679667064290
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-r/cn-r.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Running FunctionWrapper On blake256_compress
+Running FunctionWrapper On blake256_init
+Running FunctionWrapper On blake224_init
+Running FunctionWrapper On blake256_update
+Running FunctionWrapper On blake224_update
+Running FunctionWrapper On blake256_final_h
+Running FunctionWrapper On blake256_final
+Running FunctionWrapper On blake224_final
+Running FunctionWrapper On blake256_hash
+Running FunctionWrapper On blake
+Running FunctionWrapper On blake224_hash
+Running FunctionWrapper On hmac_blake256_init
+Running FunctionWrapper On hmac_blake224_init
+Running FunctionWrapper On hmac_blake256_update
+Running FunctionWrapper On hmac_blake224_update
+Running FunctionWrapper On hmac_blake256_final
+Running FunctionWrapper On hmac_blake224_final
+Running FunctionWrapper On hmac_blake256_hash
+Running FunctionWrapper On hmac_blake224_hash
+Running FunctionWrapper On do_blake_hash
+Running FunctionWrapper On do_groestl_hash
+Running FunctionWrapper On groestl
+Running FunctionWrapper On do_jh_hash
+Running FunctionWrapper On jh
+Running FunctionWrapper On do_skein_hash
+Running FunctionWrapper On skein
+Running FunctionWrapper On xor_blocks_dst
+Running FunctionWrapper On mul64to128
+Running FunctionWrapper On sum_xor_dst
+Running FunctionWrapper On xor_blocks
+Running FunctionWrapper On SubAndShiftAndMixAddRound
+Running FunctionWrapper On SubAndShiftAndMixAddRoundInPlace
+Running FunctionWrapper On cryptonight_hash_ctx
+Running FunctionWrapper On oaes_alloc
+Running FunctionWrapper On keccak
+Running FunctionWrapper On v4_random_math_init
+Running FunctionWrapper On oaes_key_import_data
+Running FunctionWrapper On xor64
+Running FunctionWrapper On copy_block
+Running FunctionWrapper On v4_random_math
+Running FunctionWrapper On oaes_free
+Running FunctionWrapper On keccakf
+Running FunctionWrapper On cryptonight
+Running FunctionWrapper On Init
+Running FunctionWrapper On Update
+Running FunctionWrapper On Final
+Running FunctionWrapper On Hash
+Running FunctionWrapper On keccak1600
+Running FunctionWrapper On hash_cn
+Running FunctionWrapper On oaes_sprintf
+Running FunctionWrapper On oaes_key_gen_128
+Running FunctionWrapper On oaes_key_gen
+Running FunctionWrapper On oaes_key_gen_192
+Running FunctionWrapper On oaes_key_gen_256
+Running FunctionWrapper On oaes_key_export
+Running FunctionWrapper On oaes_key_export_data
+Running FunctionWrapper On oaes_key_import
+Running FunctionWrapper On oaes_key_destroy
+Running FunctionWrapper On oaes_key_expand
+Running FunctionWrapper On oaes_get_seed
+Running FunctionWrapper On oaes_set_option
+Running FunctionWrapper On oaes_encrypt
+Running FunctionWrapper On oaes_encrypt_block
+Running FunctionWrapper On oaes_decrypt
+Running FunctionWrapper On oaes_decrypt_block
+Running FunctionWrapper On oaes_encryption_round
+Running FunctionWrapper On oaes_sub_byte
+Running FunctionWrapper On oaes_shift_rows
+Running FunctionWrapper On oaes_mix_cols
+Running FunctionWrapper On oaes_pseudo_encrypt_ecb
+Running FunctionWrapper On Skein_Put64_LSB_First
+Running FunctionWrapper On Skein_Get64_LSB_First
+Running FunctionWrapper On Init___1
+Running FunctionWrapper On Update___1
+Running FunctionWrapper On Final___1
+Running FunctionWrapper On check_data
+Running FunctionWrapper On Transform
+Running FunctionWrapper On F512
+Running FunctionWrapper On RND512Q
+Running FunctionWrapper On RND512P
+Running FunctionWrapper On OutputTransformation
+Running FunctionWrapper On Init___0
+Running FunctionWrapper On Update___0
+Running FunctionWrapper On Final___0
+Running FunctionWrapper On F8
+Running FunctionWrapper On E8
+Running FunctionWrapper On oaes_word_rot_left
+Running FunctionWrapper On oaes_inv_shift_rows
+Running FunctionWrapper On oaes_inv_sub_byte
+Running FunctionWrapper On oaes_inv_mix_cols
+Running FunctionWrapper On oaes_gf_mul
+Running FunctionWrapper On Skein_512_Init
+Running FunctionWrapper On Skein1024_Init
+Running FunctionWrapper On Skein_512_Process_Block
+Running FunctionWrapper On Skein1024_Process_Block
+Running FunctionWrapper On Skein_512_Update
+Running FunctionWrapper On Skein_256_Update
+Running FunctionWrapper On Skein1024_Update
+Running FunctionWrapper On Skein_256_Process_Block
+Running FunctionWrapper On Skein_512_Final
+Running FunctionWrapper On Skein_256_Final
+Running FunctionWrapper On Skein1024_Final
+Hikari Out
+Spend Time: 0.0111978s
+9 warnings generated.

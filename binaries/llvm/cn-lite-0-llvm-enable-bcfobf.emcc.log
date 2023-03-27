@@ -1,0 +1,138 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-Yl4PjTNz.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-wsURgQd4.i","")
+        ^
+cil-DYYaM8PR.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-VswPpZdx.i","")
+        ^
+cil-9HG0tgzK.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-t63o8HzS.i","")
+        ^
+cil-TSpJSHed.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-x5KBnxFF.i","")
+        ^
+cil-r77il7PY.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-e1AT2VxR.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-tWjnUryw.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-e8t5GO1o.i","")
+        ^
+cil-YfOfNMVK.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-bYVfXdXR.i","")
+        ^
+cil-giZWtEfA.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-EtHBHYW3.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679666976823
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-lite-0/cn-lite-0.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running BogusControlFlow On blake256_compress
+Running BogusControlFlow On blake256_init
+Running BogusControlFlow On blake224_init
+Running BogusControlFlow On blake256_update
+Running BogusControlFlow On blake224_update
+Running BogusControlFlow On blake256_final_h
+Running BogusControlFlow On blake256_final
+Running BogusControlFlow On blake224_final
+Running BogusControlFlow On blake256_hash
+Running BogusControlFlow On blake
+Running BogusControlFlow On blake224_hash
+Running BogusControlFlow On hmac_blake256_init
+Running BogusControlFlow On hmac_blake224_init
+Running BogusControlFlow On hmac_blake256_update
+Running BogusControlFlow On hmac_blake224_update
+Running BogusControlFlow On hmac_blake256_final
+Running BogusControlFlow On hmac_blake224_final
+Running BogusControlFlow On hmac_blake256_hash
+Running BogusControlFlow On hmac_blake224_hash
+Running BogusControlFlow On do_blake_hash
+Running BogusControlFlow On do_groestl_hash
+Running BogusControlFlow On groestl
+Running BogusControlFlow On do_jh_hash
+Running BogusControlFlow On jh
+Running BogusControlFlow On do_skein_hash
+Running BogusControlFlow On skein
+Running BogusControlFlow On xor_blocks_dst
+Running BogusControlFlow On mul64to128
+Running BogusControlFlow On sum_xor_dst
+Running BogusControlFlow On xor_blocks
+Running BogusControlFlow On SubAndShiftAndMixAddRound
+Running BogusControlFlow On SubAndShiftAndMixAddRoundInPlace
+Running BogusControlFlow On cryptonight_hash_ctx
+Running BogusControlFlow On oaes_alloc
+Running BogusControlFlow On keccak
+Running BogusControlFlow On v4_random_math_init
+Running BogusControlFlow On oaes_key_import_data
+Running BogusControlFlow On xor64
+Running BogusControlFlow On copy_block
+Running BogusControlFlow On v4_random_math
+Running BogusControlFlow On oaes_free
+Running BogusControlFlow On keccakf
+Running BogusControlFlow On cryptonight
+Running BogusControlFlow On Init
+Running BogusControlFlow On Update
+Running BogusControlFlow On Final
+Running BogusControlFlow On Hash
+Running BogusControlFlow On keccak1600
+Running BogusControlFlow On hash_cn
+Running BogusControlFlow On oaes_sprintf
+Running BogusControlFlow On oaes_key_gen_128
+Running BogusControlFlow On oaes_key_gen
+Running BogusControlFlow On oaes_key_gen_192
+Running BogusControlFlow On oaes_key_gen_256
+Running BogusControlFlow On oaes_key_export
+Running BogusControlFlow On oaes_key_export_data
+Running BogusControlFlow On oaes_key_import
+Running BogusControlFlow On oaes_key_destroy
+Running BogusControlFlow On oaes_key_expand
+Running BogusControlFlow On oaes_get_seed
+Running BogusControlFlow On oaes_set_option
+Running BogusControlFlow On oaes_encrypt
+Running BogusControlFlow On oaes_encrypt_block
+Running BogusControlFlow On oaes_decrypt
+Running BogusControlFlow On oaes_decrypt_block
+Running BogusControlFlow On oaes_encryption_round
+Running BogusControlFlow On oaes_sub_byte
+Running BogusControlFlow On oaes_shift_rows
+Running BogusControlFlow On oaes_mix_cols
+Running BogusControlFlow On oaes_pseudo_encrypt_ecb
+Running BogusControlFlow On Skein_Put64_LSB_First
+Running BogusControlFlow On Skein_Get64_LSB_First
+Running BogusControlFlow On Init___1
+Running BogusControlFlow On Update___1
+Running BogusControlFlow On Final___1
+Running BogusControlFlow On check_data
+Running BogusControlFlow On Transform
+Running BogusControlFlow On F512
+Running BogusControlFlow On RND512Q
+Running BogusControlFlow On RND512P
+Running BogusControlFlow On OutputTransformation
+Running BogusControlFlow On Init___0
+Running BogusControlFlow On Update___0
+Running BogusControlFlow On Final___0
+Running BogusControlFlow On F8
+Running BogusControlFlow On E8
+Running BogusControlFlow On oaes_word_rot_left
+Running BogusControlFlow On oaes_inv_shift_rows
+Running BogusControlFlow On oaes_inv_sub_byte
+Running BogusControlFlow On oaes_inv_mix_cols
+Running BogusControlFlow On oaes_gf_mul
+Running BogusControlFlow On Skein_512_Init
+Running BogusControlFlow On Skein1024_Init
+Running BogusControlFlow On Skein_512_Process_Block
+Running BogusControlFlow On Skein1024_Process_Block
+Running BogusControlFlow On Skein_512_Update
+Running BogusControlFlow On Skein_256_Update
+Running BogusControlFlow On Skein1024_Update
+Running BogusControlFlow On Skein_256_Process_Block
+Running BogusControlFlow On Skein_512_Final
+Running BogusControlFlow On Skein_256_Final
+Running BogusControlFlow On Skein1024_Final
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0597820s
+9 warnings generated.

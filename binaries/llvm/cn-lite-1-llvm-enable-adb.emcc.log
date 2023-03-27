@@ -1,0 +1,209 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-k_Yf2WI_.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-33YdHUOD.i","")
+        ^
+cil-Mh1tnEWR.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-v490wXeC.i","")
+        ^
+cil-5DKOJnXr.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-s1ivcpu1.i","")
+        ^
+cil-yU5t_pBo.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-SkaoMOVe.i","")
+        ^
+cil-O95QRYt1.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-eVQohrKF.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-VHpRQEz3.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-RNGz1KUB.i","")
+        ^
+cil-eyrkQmXG.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-A6L0uYrr.i","")
+        ^
+cil-skP7cMD4.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-XcXDtY2s.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679667142552
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-lite-1/cn-lite-1.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running AntiDebugging On blake256_compress
+Failed To Link PreCompiled AntiDebugging IR From:/root/Hikari/PrecompiledAntiDebugging-wasm32-emscripten.bc
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On blake256_init
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On blake224_init
+Running AntiDebugging On blake256_update
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On blake224_update
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On blake256_final_h
+Running AntiDebugging On blake256_final
+Running AntiDebugging On blake224_final
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On blake256_hash
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On blake
+Running AntiDebugging On blake224_hash
+Running AntiDebugging On hmac_blake256_init
+Running AntiDebugging On hmac_blake224_init
+Running AntiDebugging On hmac_blake256_update
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On hmac_blake224_update
+Running AntiDebugging On hmac_blake256_final
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On hmac_blake224_final
+Running AntiDebugging On hmac_blake256_hash
+Running AntiDebugging On hmac_blake224_hash
+Running AntiDebugging On do_blake_hash
+Running AntiDebugging On do_groestl_hash
+Running AntiDebugging On groestl
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On do_jh_hash
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On jh
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On do_skein_hash
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On skein
+Running AntiDebugging On xor_blocks_dst
+Running AntiDebugging On mul64to128
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On sum_xor_dst
+Running AntiDebugging On xor_blocks
+Running AntiDebugging On SubAndShiftAndMixAddRound
+Running AntiDebugging On SubAndShiftAndMixAddRoundInPlace
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On cryptonight_hash_ctx
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On oaes_alloc
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On keccak
+Running AntiDebugging On v4_random_math_init
+Running AntiDebugging On oaes_key_import_data
+Running AntiDebugging On xor64
+Running AntiDebugging On copy_block
+Running AntiDebugging On v4_random_math
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On oaes_free
+Running AntiDebugging On keccakf
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On cryptonight
+Running AntiDebugging On Init
+Running AntiDebugging On Update
+Running AntiDebugging On Final
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On Hash
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On keccak1600
+Running AntiDebugging On hash_cn
+Running AntiDebugging On oaes_sprintf
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_key_gen_128
+Running AntiDebugging On oaes_key_gen
+Running AntiDebugging On oaes_key_gen_192
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_key_gen_256
+Running AntiDebugging On oaes_key_export
+Running AntiDebugging On oaes_key_export_data
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_key_import
+Running AntiDebugging On oaes_key_destroy
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_key_expand
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_get_seed
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_set_option
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_encrypt
+Running AntiDebugging On oaes_encrypt_block
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_decrypt
+Running AntiDebugging On oaes_decrypt_block
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_encryption_round
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_sub_byte
+Running AntiDebugging On oaes_shift_rows
+Running AntiDebugging On oaes_mix_cols
+Running AntiDebugging On oaes_pseudo_encrypt_ecb
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Skein_Put64_LSB_First
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On Skein_Get64_LSB_First
+Running AntiDebugging On Init___1
+Running AntiDebugging On Update___1
+Running AntiDebugging On Final___1
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On check_data
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On Transform
+Running AntiDebugging On F512
+Running AntiDebugging On RND512Q
+Running AntiDebugging On RND512P
+Running AntiDebugging On OutputTransformation
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On Init___0
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Update___0
+Running AntiDebugging On Final___0
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On F8
+Running AntiDebugging On E8
+Running AntiDebugging On oaes_word_rot_left
+Running AntiDebugging On oaes_inv_shift_rows
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_inv_sub_byte
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On oaes_inv_mix_cols
+Running AntiDebugging On oaes_gf_mul
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Skein_512_Init
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Skein1024_Init
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Skein_512_Process_Block
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On Skein1024_Process_Block
+Running AntiDebugging On Skein_512_Update
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Skein_256_Update
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Skein1024_Update
+The ADBCallBack and ADBInit functions were not found
+Running AntiDebugging On Skein_256_Process_Block
+The ADBCallBack and ADBInit functions were not found
+Unsupported Inline Assembly AntiDebugging Target: wasm32-unknown-emscripten
+Running AntiDebugging On Skein_512_Final
+Running AntiDebugging On Skein_256_Final
+Running AntiDebugging On Skein1024_Final
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0085759s
+9 warnings generated.

@@ -1,0 +1,138 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-rdjr4QBV.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-6dcU290U.i","")
+        ^
+cil-aSIa5Wmk.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-iFp80B32.i","")
+        ^
+cil-ZNHET_32.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-gQgvDuDf.i","")
+        ^
+cil-Kq0MnaHp.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-Y2GxJHMC.i","")
+        ^
+cil-uq5UMIXS.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-Zx_eWT4C.i","")
+        ^
+jh_ansi_opt64.c:378:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-BPyBfNum.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-yYP18nD_.i","")
+        ^
+cil-NDIyUGH0.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-YSLEcmd7.i","")
+        ^
+cil-Y1VxUFL4.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-cABsfsw1.i","")
+        ^
+std::mt19937_64 seeded with current timestamp: 1679666828904
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-1/cn-1.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running ConstantEncryption On blake256_compress
+Running ConstantEncryption On blake256_init
+Running ConstantEncryption On blake224_init
+Running ConstantEncryption On blake256_update
+Running ConstantEncryption On blake224_update
+Running ConstantEncryption On blake256_final_h
+Running ConstantEncryption On blake256_final
+Running ConstantEncryption On blake224_final
+Running ConstantEncryption On blake256_hash
+Running ConstantEncryption On blake
+Running ConstantEncryption On blake224_hash
+Running ConstantEncryption On hmac_blake256_init
+Running ConstantEncryption On hmac_blake224_init
+Running ConstantEncryption On hmac_blake256_update
+Running ConstantEncryption On hmac_blake224_update
+Running ConstantEncryption On hmac_blake256_final
+Running ConstantEncryption On hmac_blake224_final
+Running ConstantEncryption On hmac_blake256_hash
+Running ConstantEncryption On hmac_blake224_hash
+Running ConstantEncryption On do_blake_hash
+Running ConstantEncryption On do_groestl_hash
+Running ConstantEncryption On groestl
+Running ConstantEncryption On do_jh_hash
+Running ConstantEncryption On jh
+Running ConstantEncryption On do_skein_hash
+Running ConstantEncryption On skein
+Running ConstantEncryption On xor_blocks_dst
+Running ConstantEncryption On mul64to128
+Running ConstantEncryption On sum_xor_dst
+Running ConstantEncryption On xor_blocks
+Running ConstantEncryption On SubAndShiftAndMixAddRound
+Running ConstantEncryption On SubAndShiftAndMixAddRoundInPlace
+Running ConstantEncryption On cryptonight_hash_ctx
+Running ConstantEncryption On oaes_alloc
+Running ConstantEncryption On keccak
+Running ConstantEncryption On v4_random_math_init
+Running ConstantEncryption On oaes_key_import_data
+Running ConstantEncryption On xor64
+Running ConstantEncryption On copy_block
+Running ConstantEncryption On v4_random_math
+Running ConstantEncryption On oaes_free
+Running ConstantEncryption On keccakf
+Running ConstantEncryption On cryptonight
+Running ConstantEncryption On Init
+Running ConstantEncryption On Update
+Running ConstantEncryption On Final
+Running ConstantEncryption On Hash
+Running ConstantEncryption On keccak1600
+Running ConstantEncryption On hash_cn
+Running ConstantEncryption On oaes_sprintf
+Running ConstantEncryption On oaes_key_gen_128
+Running ConstantEncryption On oaes_key_gen
+Running ConstantEncryption On oaes_key_gen_192
+Running ConstantEncryption On oaes_key_gen_256
+Running ConstantEncryption On oaes_key_export
+Running ConstantEncryption On oaes_key_export_data
+Running ConstantEncryption On oaes_key_import
+Running ConstantEncryption On oaes_key_destroy
+Running ConstantEncryption On oaes_key_expand
+Running ConstantEncryption On oaes_get_seed
+Running ConstantEncryption On oaes_set_option
+Running ConstantEncryption On oaes_encrypt
+Running ConstantEncryption On oaes_encrypt_block
+Running ConstantEncryption On oaes_decrypt
+Running ConstantEncryption On oaes_decrypt_block
+Running ConstantEncryption On oaes_encryption_round
+Running ConstantEncryption On oaes_sub_byte
+Running ConstantEncryption On oaes_shift_rows
+Running ConstantEncryption On oaes_mix_cols
+Running ConstantEncryption On oaes_pseudo_encrypt_ecb
+Running ConstantEncryption On Skein_Put64_LSB_First
+Running ConstantEncryption On Skein_Get64_LSB_First
+Running ConstantEncryption On Init___1
+Running ConstantEncryption On Update___1
+Running ConstantEncryption On Final___1
+Running ConstantEncryption On check_data
+Running ConstantEncryption On Transform
+Running ConstantEncryption On F512
+Running ConstantEncryption On RND512Q
+Running ConstantEncryption On RND512P
+Running ConstantEncryption On OutputTransformation
+Running ConstantEncryption On Init___0
+Running ConstantEncryption On Update___0
+Running ConstantEncryption On Final___0
+Running ConstantEncryption On F8
+Running ConstantEncryption On E8
+Running ConstantEncryption On oaes_word_rot_left
+Running ConstantEncryption On oaes_inv_shift_rows
+Running ConstantEncryption On oaes_inv_sub_byte
+Running ConstantEncryption On oaes_inv_mix_cols
+Running ConstantEncryption On oaes_gf_mul
+Running ConstantEncryption On Skein_512_Init
+Running ConstantEncryption On Skein1024_Init
+Running ConstantEncryption On Skein_512_Process_Block
+Running ConstantEncryption On Skein1024_Process_Block
+Running ConstantEncryption On Skein_512_Update
+Running ConstantEncryption On Skein_256_Update
+Running ConstantEncryption On Skein1024_Update
+Running ConstantEncryption On Skein_256_Process_Block
+Running ConstantEncryption On Skein_512_Final
+Running ConstantEncryption On Skein_256_Final
+Running ConstantEncryption On Skein1024_Final
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0100741s
+9 warnings generated.
