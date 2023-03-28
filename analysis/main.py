@@ -41,9 +41,9 @@ def plot():
 
 def main():
     calculate_metrics()
-    # preprocess()
-    # analyze()
-    # plot()
+    preprocess()
+    analyze()
+    plot()
 
 
 if __name__ == '__main__':

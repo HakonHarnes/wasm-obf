@@ -8,8 +8,8 @@ RUN git clone https://github.com/emscripten-core/emsdk.git
 
 WORKDIR /usr/lib/emsdk
 
-RUN ./emsdk install latest
-RUN ./emsdk activate latest
+RUN ./emsdk install 3.0.0
+RUN ./emsdk activate 3.0.0
 
 WORKDIR /
 
