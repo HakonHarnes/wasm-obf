@@ -1,3 +1,0 @@
-matplotlib
-scikit-learn
-fastdtw
