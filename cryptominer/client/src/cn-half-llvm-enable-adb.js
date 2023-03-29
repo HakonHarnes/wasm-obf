@@ -1268,6 +1268,10 @@ function dbg(text) {
       }
     }
 
+  function ___assert_fail(condition, filename, line, func) {
+      abort('Assertion failed: ' + UTF8ToString(condition) + ', at: ' + [filename ? UTF8ToString(filename) : 'unknown filename', line, func ? UTF8ToString(func) : 'unknown function']);
+    }
+
   var nowIsMonotonic = true;;
   function __emscripten_get_now_is_monotonic() {
       return nowIsMonotonic;
@@ -1514,6 +1518,7 @@ function checkIncomingModuleAPI() {
   ignoredModuleProp('fetchSettings');
 }
 var wasmImports = {
+  "__assert_fail": ___assert_fail,
   "_emscripten_get_now_is_monotonic": __emscripten_get_now_is_monotonic,
   "_gmtime_js": __gmtime_js,
   "_tzset_js": __tzset_js,

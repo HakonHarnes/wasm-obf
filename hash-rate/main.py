@@ -40,7 +40,7 @@ def measure_hash_rate(domain, hashrate_file):
 
     hash_rate = ''
     poll_interval = 5  # poll every 5 seconds
-    timeout = 1100  # timeout after 1100 seconds
+    timeout = 510  # timeout after 510 seconds
     time_elapsed = 0
 
     while len(hash_rate) == 0 and time_elapsed < timeout:
@@ -52,7 +52,7 @@ def measure_hash_rate(domain, hashrate_file):
     driver.quit()
 
     if hash_rate == '':
-        raise Exception('Hash rate not found')
+        return -1
 
     return hash_rate.split(' ')[1]
 
@@ -120,6 +120,8 @@ def main():
         basename = os.path.basename(file['wasm']).replace('.wasm', '')
         hashrate_file = os.path.join(data_path, f'{basename}-hashrate.txt')
         hash_rate = measure_hash_rate('http://localhost:8080', hashrate_file)
+
+        print(f'Hash rate: {hash_rate}', flush=True)
 
         if algo not in hash_rates_dict:
             hash_rates_dict[algo] = {"algorithm": algo}
