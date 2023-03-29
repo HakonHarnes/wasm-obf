@@ -121,6 +121,8 @@ def main():
         hashrate_file = os.path.join(data_path, f'{basename}-hashrate.txt')
         hash_rate = measure_hash_rate('http://localhost:8080', hashrate_file)
 
+        print(f'Hash rate: {hash_rate}')
+
         if algo not in hash_rates_dict:
             hash_rates_dict[algo] = {"algorithm": algo}
         hash_rates_dict[algo][basename] = float(hash_rate)

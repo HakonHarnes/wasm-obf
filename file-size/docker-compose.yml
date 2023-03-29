@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  hash-rate:
+    build: .
+    network_mode: host
+    volumes:
+      - ./main.py:/app/main.py
+      - ../binaries/:/app/binaries
+      - ../data/:/app/data
