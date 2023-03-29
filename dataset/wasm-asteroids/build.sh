@@ -4,7 +4,7 @@ FILE_IN=$1
 FILE_OUT=$2
 OBF_ARGS="${@:3}"
 
-emcc "$FILE_IN" -o "$FILE_OUT" -O2 \
+emcc "$FILE_IN" -o "$FILE_OUT" \
 -I "$EMSDKPATH" \
 -sWASM=1 \
 -sASSERTIONS=1 \

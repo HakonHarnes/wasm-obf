@@ -62,6 +62,8 @@ onmessage = function (e) {
         job.blob.substring(86, job.blob.length);
 
       try {
+        // hash = cn(blob, job.height);
+
         if (job.algo === "cn") hash = cn(blob, 0, job.variant, job.height);
         else if (job.algo === "cn-lite")
           hash = cn(blob, 1, job.variant, job.height);

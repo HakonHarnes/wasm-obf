@@ -2,7 +2,7 @@ import os
 import sys
 import glob
 import json
-import numpy as np
+from typing import List
 
 from fastdtw import fastdtw
 
@@ -14,15 +14,15 @@ def write_json(filepath, data):
         json.dump(data, file, indent=4)
 
 
-def read_binary_file(file_path):
-    with open(file_path, 'rb') as file:
+def read_file(file_path: str) -> List[str]:
+    with open(file_path, "r") as file:
         content = file.read()
-    return np.frombuffer(content, dtype=np.uint8)
+        return content.splitlines()
 
 
 def calculate_dtw(f1, f2):
-    c1 = read_binary_file(f1)
-    c2 = read_binary_file(f2)
+    c1 = read_file(f1)
+    c2 = read_file(f2)
 
     distance, _ = fastdtw(c1, c2)
     return distance
@@ -51,16 +51,24 @@ def calculate_dtw_for_binaries(binary_path, data_path):
         for llvm_binary in llvm_binaries:
             llvm_program_name = os.path.basename(llvm_binary).split('-llvm')[0]
             if original_program_name == llvm_program_name:
-                distance = calculate_dtw(original_binary, llvm_binary)
+                original_binary_wat = original_binary.replace('.wasm', '.wat')
+                if not os.path.isfile(original_binary_wat):
+                    os.system(
+                        f'wasm2wat {original_binary} -o {original_binary_wat}')
+                llvm_binary_wat = llvm_binary.replace('.wasm', '.wat')
+                if not os.path.isfile(llvm_binary_wat):
+                    os.system(
+                        f'wasm2wat {llvm_binary} -o {llvm_binary_wat}')
+                distance = calculate_dtw(original_binary_wat, llvm_binary_wat)
                 dtw_data.update({
                     f'{os.path.basename(llvm_binary)}': distance,
                 })
 
-        for tigress_binary in tigress_binaries:
-            tigress_program_name = os.path.basename(
-                tigress_binary).split('-llvm')[0]
-            if original_program_name == tigress_program_name:
-                distance = calculate_dtw(original_binary, tigress_binary)
+        # for tigress_binary in tigress_binaries:
+        #     tigress_program_name = os.path.basename(
+        #         tigress_binary).split('-tigress')[0]
+        #     if original_program_name == tigress_program_name:
+        #         distance = calculate_dtw(original_binary, tigress_binary)
 
         write_json(os.path.join(
             data_path, f'{original_program_name}-dtw.json'), dtw_data)
