@@ -1,0 +1,43 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+../asteroids/main.c:196:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+std::mt19937_64 seeded with current timestamp: 1680100468067
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/wasm-asteroids/wasm-asteroids.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Running IndirectBranch On init_asteroids
+Running IndirectBranch On multiply_vector
+Running IndirectBranch On add_vector
+Running IndirectBranch On update_asteroids
+Running IndirectBranch On add_vector_new
+Running IndirectBranch On rotate_vector
+Running IndirectBranch On draw_asteroids
+Running IndirectBranch On draw_line
+Running IndirectBranch On shrink_asteroid
+Running IndirectBranch On divide_vector
+Running IndirectBranch On spawn_asteroids
+Running IndirectBranch On bounds_asteroids
+Running IndirectBranch On collision_asteroids
+Running IndirectBranch On mainloop
+Running IndirectBranch On get_direction
+Running IndirectBranch On apply_force
+Running IndirectBranch On rotate_player
+Running IndirectBranch On shoot_bullet
+Running IndirectBranch On clear_pixels
+Running IndirectBranch On update_player
+Running IndirectBranch On bounds_player
+Running IndirectBranch On draw_player
+Running IndirectBranch On __main_argc_argv
+Running IndirectBranch On init
+Running IndirectBranch On init_player
+Running IndirectBranch On normalise_vector
+Running IndirectBranch On draw_pixel
+Running IndirectBranch On limit_vector
+Running IndirectBranch On print_vector
+Running IndirectBranch On magnitude_vector
+Running IndirectBranch On HikariIndirectBranchTargetWrapper
+Hikari Out
+Spend Time: 0.0012650s
+1 warning generated.

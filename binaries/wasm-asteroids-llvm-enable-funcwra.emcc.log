@@ -1,0 +1,41 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+../asteroids/main.c:196:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+std::mt19937_64 seeded with current timestamp: 1680100468634
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/wasm-asteroids/wasm-asteroids.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Running FunctionWrapper On init_asteroids
+Running FunctionWrapper On multiply_vector
+Running FunctionWrapper On add_vector
+Running FunctionWrapper On update_asteroids
+Running FunctionWrapper On add_vector_new
+Running FunctionWrapper On rotate_vector
+Running FunctionWrapper On draw_asteroids
+Running FunctionWrapper On draw_line
+Running FunctionWrapper On shrink_asteroid
+Running FunctionWrapper On divide_vector
+Running FunctionWrapper On spawn_asteroids
+Running FunctionWrapper On bounds_asteroids
+Running FunctionWrapper On collision_asteroids
+Running FunctionWrapper On mainloop
+Running FunctionWrapper On get_direction
+Running FunctionWrapper On apply_force
+Running FunctionWrapper On rotate_player
+Running FunctionWrapper On shoot_bullet
+Running FunctionWrapper On clear_pixels
+Running FunctionWrapper On update_player
+Running FunctionWrapper On bounds_player
+Running FunctionWrapper On draw_player
+Running FunctionWrapper On __main_argc_argv
+Running FunctionWrapper On init
+Running FunctionWrapper On init_player
+Running FunctionWrapper On normalise_vector
+Running FunctionWrapper On draw_pixel
+Running FunctionWrapper On limit_vector
+Running FunctionWrapper On print_vector
+Running FunctionWrapper On magnitude_vector
+Hikari Out
+Spend Time: 0.0013025s

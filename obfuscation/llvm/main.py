@@ -2,10 +2,8 @@ import os
 
 from termcolor import colored
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-binary_path = f'{dir_path}/binaries/llvm'
-dataset_path = f'{dir_path}/dataset'
+binary_path = os.environ['BINARY_PATH']
+dataset_path = os.environ['DATASET_PATH']
 
 transformations = [
     '-mllvm -enable-bcfobf',
