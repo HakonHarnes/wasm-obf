@@ -26,7 +26,8 @@ def print_result(result):
     color = 'green' if result['code'] == 0 else 'red'
     for key, value in result.items():
         if not key == 'code':
-            print(colored(value, color))
+            print(colored(value, color), end='\t')
+    print()
 
 
 def print_file(count, length, file, color='blue'):
@@ -105,9 +106,10 @@ def main():
             result = run_emcc(path, transformation)
             print_result(result)
             if result['code'] != 0:
+                errors.append(result)
                 continue
 
-    print(f'\n --- {len(errors)} ERRORS --- \n')
+    print(colored(f'\n{len(errors)} ERRORS', 'blue'))
     for error in errors:
         print_result(error)
 

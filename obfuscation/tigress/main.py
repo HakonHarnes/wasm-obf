@@ -62,6 +62,18 @@ transformations = [
 ]
 
 
+def print_result(result):
+    color = 'green' if result['code'] == 0 else 'red'
+    for key, value in result.items():
+        if not key == 'code':
+            print(colored(value, color), end='\t')
+    print()
+
+
+def print_file(count, length, file, color='blue'):
+    print(colored(f'\n[{count}/{length}] Processing {file}', color))
+
+
 def get_emcc_out(path, transformation):
     program_name = path.split('/')[-1]
     binary_name = f'{program_name}-tigress-{transformation}.html'
@@ -85,7 +97,7 @@ def run_emcc(path, transformation):
     if os.path.exists(file_in):
         file_size = os.path.getsize(file_in)
         if file_size < 5:
-            return {'desc': f'Build: {file_in}', 'size': file_size, 'code': 1}
+            return {'desc': f'Build: {file_in}', 'size': f'Size: {file_size}', 'code': 1}
 
     # log file
     log_file = emcc_out.replace('.html', '.emcc.log')
@@ -99,7 +111,7 @@ def run_emcc(path, transformation):
         binary_out = emcc_out.replace('.html', '.wasm')
         binary_size = os.path.getsize(binary_out)
         if binary_size < 5:
-            return {'desc': f'Build: {binary_out}', 'size': binary_size, 'code': 1}
+            return {'desc': f'Build: {binary_out}', 'size': f'Size: {binary_size}', 'code': 1}
 
     return {'desc': f'Build: {path} {transformation}', 'code': code}
 
@@ -133,7 +145,7 @@ def run_tigress(path, transformation):
     if os.path.exists(tigress_out):
         file_size = os.path.getsize(tigress_out)
         if file_size < 5:
-            return {'desc': f'Obfuscate: {tigress_out}', 'size': file_size, 'code': 1}
+            return {'desc': f'Obfuscate: {tigress_out}', 'size': f'Size: {file_size}', 'code': 1}
 
     return {'desc': f'Obfuscate: {path} {transformation}', 'code': code}
 
@@ -141,27 +153,29 @@ def run_tigress(path, transformation):
 def main():
     errors = []
 
+    count = 0
     for dir in os.listdir(dataset_path):
         path = os.path.join(dataset_path, dir)
+        count += 1
+        print_file(count, len(os.listdir(dataset_path)),
+                   os.path.basename(path))
         for transformation in transformations:
             transformation = transformation.lower()
             obf_result = run_tigress(path, transformation)
+            print_result(obf_result)
             if obf_result['code'] != 0:
-                print(colored(obf_result,  'red'))
                 errors.append(obf_result)
                 continue
 
             build_result = run_emcc(path, transformation)
+            print_result(build_result)
             if build_result['code'] != 0:
-                print(colored(build_result,  'red'))
                 errors.append(build_result)
                 continue
 
-            print(colored(build_result,  'green'))
-
-    print(f'\n --- {len(errors)} ERRORS --- \n')
+    print(colored(f'\n{len(errors)} ERRORS', 'blue'))
     for error in errors:
-        print(colored(error, 'red'))
+        print_result(error)
 
 
 if __name__ == '__main__':
