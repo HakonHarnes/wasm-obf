@@ -1,0 +1,11 @@
+/tigress/dataset/wasm-asteroids/tigress/encodeliterals.c:3965:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/wasm-asteroids/tigress/encodeliterals.c:3993:12: warning: format string is not a string literal (potentially insecure) [-Wformat-security]
+    printf((char const   *)((char const   */* __restrict  */)(encodeStrings_litStr3)));
+           ^                                                  ~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/wasm-asteroids/tigress/encodeliterals.c:3993:12: note: treat the string as an argument to avoid this
+    printf((char const   *)((char const   */* __restrict  */)(encodeStrings_litStr3)));
+           ^
+           "%s", 
+2 warnings generated.

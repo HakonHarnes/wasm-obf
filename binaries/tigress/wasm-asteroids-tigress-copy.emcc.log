@@ -1,0 +1,7 @@
+/tigress/dataset/wasm-asteroids/tigress/copy.c:3598:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/wasm-asteroids/tigress/copy.c:5106:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.

@@ -1,0 +1,14 @@
+version: "3"
+services:
+  tigress:
+    build: ./tigress
+    volumes:
+      - ./tigress/main.py:/tigress/main.py
+      - ../dataset/:/tigress/dataset
+      - ../binaries:/tigress/binaries
+  llvm:
+    build: ./llvm
+    volumes:
+      - ./llvm/main.py:/llvm/main.py
+      - ../dataset/:/llvm/dataset
+      - ../binaries:/llvm/binaries

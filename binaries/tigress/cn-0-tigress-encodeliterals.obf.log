@@ -1,0 +1,3 @@
+Warning: Unknown argument -sUSE_SDL=2
+
+<<Tigress.InitOpaque:ERR-BAD-REQUEST,OPAQUE-INIT>> Opaque not properly initialized. Opaque kinds [list,array,env,input,plugin] requested but only [] opaque kinds initialized. Please add/update the transformation '--Transform=InitOpaque --InitOpaqueStructs=list,array,env,input,plugin

@@ -1,0 +1,9 @@
+shared:INFO: (Emscripten: Running sanity checks)
+ports:INFO: retrieving port: sdl2 from https://github.com/emscripten-ports/SDL2/archive/version_24.zip
+ports:INFO: unpacking port: sdl2
+cache:INFO: generating port: sysroot/lib/wasm32-emscripten/libSDL2.a... (this will be cached in "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libSDL2.a" for subsequent builds)
+cache:INFO:  - ok
+/tigress/dataset/wasm-asteroids/tigress/flatten.c:3869:39: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+    if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.

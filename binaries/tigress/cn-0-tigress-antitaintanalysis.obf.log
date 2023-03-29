@@ -1,0 +1,3 @@
+Warning: Unknown argument -sUSE_SDL=2
+
+<<Tigress,ERR-BAD-REQUEST,MISSING-MAIN>> 'main()' function not found.

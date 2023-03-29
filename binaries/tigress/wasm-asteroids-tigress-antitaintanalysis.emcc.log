@@ -1,0 +1,4 @@
+/tigress/dataset/wasm-asteroids/tigress/antitaintanalysis.c:3308:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.

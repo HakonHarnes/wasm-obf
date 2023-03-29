@@ -1,0 +1,23 @@
+/tigress/dataset/cn-0/tigress/virtualize.c:81452:91: warning: comparison between pointer and integer ('void *' and 'unsigned int') [-Wpointer-integer-compare]
+    (_1_oaes_key_import_$sp[0] + -1)->_int = (_1_oaes_key_import_$sp[0] + -1)->_void_star != (_1_oaes_key_import_$sp[0] + 0)->_unsigned_int;
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/cn-0/tigress/virtualize.c:87922:7: warning: unused variable '_BARRIER_0' [-Wunused-variable]
+  int _BARRIER_0 = 1;
+      ^
+/tigress/dataset/cn-0/tigress/virtualize.c:92431:90: warning: comparison between pointer and integer ('void *' and 'unsigned int') [-Wpointer-integer-compare]
+    (_1_oaes_set_option_$sp[0] + -1)->_int = (_1_oaes_set_option_$sp[0] + 0)->_void_star != (_1_oaes_set_option_$sp[0] + -1)->_unsigned_int;
+                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/cn-0/tigress/virtualize.c:95744:78: warning: comparison between pointer and integer ('void *' and 'unsigned int') [-Wpointer-integer-compare]
+    (_1_oaes_free_$sp[0] + -1)->_int = (_1_oaes_free_$sp[0] + 0)->_void_star != (_1_oaes_free_$sp[0] + -1)->_unsigned_int;
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/cn-0/tigress/virtualize.c:96892:92: warning: comparison between pointer and integer ('void *' and 'unsigned int') [-Wpointer-integer-compare]
+    (_1_oaes_key_destroy_$sp[0] + -1)->_int = (_1_oaes_key_destroy_$sp[0] + 0)->_void_star != (_1_oaes_key_destroy_$sp[0] + -1)->_unsigned_int;
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/cn-0/tigress/virtualize.c:97897:87: warning: comparison between pointer and integer ('void *' and 'unsigned int') [-Wpointer-integer-compare]
+    (_1_oaes_get_seed_$sp[0] + -1)->_int = (_1_oaes_get_seed_$sp[0] + -1)->_void_star != (_1_oaes_get_seed_$sp[0] + 0)->_unsigned_int;
+                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tigress/dataset/cn-0/tigress/virtualize.c:98975:84: warning: comparison between pointer and integer ('void *' and 'unsigned int') [-Wpointer-integer-compare]
+    (_1_oaes_key_gen_$sp[0] + -1)->_int = (_1_oaes_key_gen_$sp[0] + 0)->_void_star != (_1_oaes_key_gen_$sp[0] + -1)->_unsigned_int;
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7 warnings generated.
+system_libs:WARNING: main() is in the input files, but "_main" is not in EXPORTED_FUNCTIONS, which means it may be eliminated as dead code. Export it if you want main() to run.
