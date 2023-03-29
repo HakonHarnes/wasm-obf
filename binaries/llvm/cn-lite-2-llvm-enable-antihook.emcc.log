@@ -1,0 +1,869 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+cil-OjiX13gS.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-EI7wuW2n.i","")
+        ^
+cil-MRWst_up.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-NUrYUz1W.i","")
+        ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:127:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:127:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:128:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+./variant2_int_sqrt.h:64:9: warning: explicitly assigning value of variable of type 'uint64_t' (aka 'unsigned long long') to itself [-Wself-assign]
+      n = n;
+      ~ ^ ~
+./variant2_int_sqrt.h:65:9: warning: explicitly assigning value of variable of type 'uint64_t' (aka 'unsigned long long') to itself [-Wself-assign]
+      r = r;
+      ~ ^ ~
+cil-wxw3n0il.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-b2t5kY6e.i","")
+        ^
+cil-Me4A80n7.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-ozejUMol.i","")
+        ^
+cil-8Px3J_gs.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-NMepa7WQ.i","")
+        ^
+jh_ansi_opt64.c:601:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-VB3DNh4j.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-cfUwAA0K.i","")
+        ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:127:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:127:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:128:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+cil-sUYsuWUz.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-8Zea4Y3y.i","")
+        ^
+cil-Ks7bmwRp.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-xf4KTlKv.i","")
+        ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:21: warning: unused function '__islessf' [-Wunused-function]
+__inline static int __islessf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:21: warning: unused function '__isless' [-Wunused-function]
+__inline static int __isless(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:21: warning: unused function '__islessl' [-Wunused-function]
+__inline static int __islessl(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:21: warning: unused function '__islessequalf' [-Wunused-function]
+__inline static int __islessequalf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:21: warning: unused function '__islessequal' [-Wunused-function]
+__inline static int __islessequal(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:21: warning: unused function '__islessequall' [-Wunused-function]
+__inline static int __islessequall(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:21: warning: unused function '__islessgreaterf' [-Wunused-function]
+__inline static int __islessgreaterf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:21: warning: unused function '__islessgreater' [-Wunused-function]
+__inline static int __islessgreater(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:21: warning: unused function '__islessgreaterl' [-Wunused-function]
+__inline static int __islessgreaterl(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:21: warning: unused function '__isgreaterf' [-Wunused-function]
+__inline static int __isgreaterf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:21: warning: unused function '__isgreater' [-Wunused-function]
+__inline static int __isgreater(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:21: warning: unused function '__isgreaterl' [-Wunused-function]
+__inline static int __isgreaterl(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:21: warning: unused function '__isgreaterequalf' [-Wunused-function]
+__inline static int __isgreaterequalf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:21: warning: unused function '__isgreaterequal' [-Wunused-function]
+__inline static int __isgreaterequal(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:21: warning: unused function '__isgreaterequall' [-Wunused-function]
+__inline static int __isgreaterequall(long double __x , long double __y ) 
+                    ^
+./variant2_int_sqrt.h:57:26: warning: unused function 'integer_square_root_v2' [-Wunused-function]
+__inline static uint32_t integer_square_root_v2(uint64_t n ) 
+                         ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:21: warning: unused function '__islessf___0' [-Wunused-function]
+__inline static int __islessf___0(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:21: warning: unused function '__isless___0' [-Wunused-function]
+__inline static int __isless___0(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:21: warning: unused function '__islessl___0' [-Wunused-function]
+__inline static int __islessl___0(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:21: warning: unused function '__islessequalf___0' [-Wunused-function]
+__inline static int __islessequalf___0(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:21: warning: unused function '__islessequal___0' [-Wunused-function]
+__inline static int __islessequal___0(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:21: warning: unused function '__islessequall___0' [-Wunused-function]
+__inline static int __islessequall___0(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:21: warning: unused function '__islessgreaterf___0' [-Wunused-function]
+__inline static int __islessgreaterf___0(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:21: warning: unused function '__islessgreater___0' [-Wunused-function]
+__inline static int __islessgreater___0(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:21: warning: unused function '__islessgreaterl___0' [-Wunused-function]
+__inline static int __islessgreaterl___0(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:21: warning: unused function '__isgreaterf___0' [-Wunused-function]
+__inline static int __isgreaterf___0(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:21: warning: unused function '__isgreater___0' [-Wunused-function]
+__inline static int __isgreater___0(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:21: warning: unused function '__isgreaterl___0' [-Wunused-function]
+__inline static int __isgreaterl___0(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:21: warning: unused function '__isgreaterequalf___0' [-Wunused-function]
+__inline static int __isgreaterequalf___0(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:21: warning: unused function '__isgreaterequal___0' [-Wunused-function]
+__inline static int __isgreaterequal___0(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:21: warning: unused function '__isgreaterequall___0' [-Wunused-function]
+__inline static int __isgreaterequall___0(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:19:26: warning: unused function '__bswap16' [-Wunused-function]
+__inline static uint16_t __bswap16(uint16_t __x ) 
+                         ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:29:26: warning: unused function '__bswap64' [-Wunused-function]
+__inline static uint64_t __bswap64(uint64_t __x ) 
+                         ^
+std::mt19937_64 seeded with current timestamp: 1680079886030
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-lite-2/cn-lite-2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running AntiHooking On blake256_compress
+Running AntiHooking On blake256_init
+Running AntiHooking On blake224_init
+Running AntiHooking On blake256_update
+Running AntiHooking On blake224_update
+Running AntiHooking On blake256_final_h
+Running AntiHooking On blake256_final
+Running AntiHooking On blake224_final
+Running AntiHooking On blake256_hash
+Running AntiHooking On blake
+Running AntiHooking On blake224_hash
+Running AntiHooking On hmac_blake256_init
+Running AntiHooking On hmac_blake224_init
+Running AntiHooking On hmac_blake256_update
+Running AntiHooking On hmac_blake224_update
+Running AntiHooking On hmac_blake256_final
+Running AntiHooking On hmac_blake224_final
+Running AntiHooking On hmac_blake256_hash
+Running AntiHooking On hmac_blake224_hash
+Running AntiHooking On do_blake_hash
+Running AntiHooking On do_groestl_hash
+Running AntiHooking On groestl
+Running AntiHooking On do_jh_hash
+Running AntiHooking On jh
+Running AntiHooking On do_skein_hash
+Running AntiHooking On skein
+Running AntiHooking On xor_blocks_dst
+Running AntiHooking On mul64to128
+Running AntiHooking On sum_xor_dst
+Running AntiHooking On xor_blocks
+Running AntiHooking On SubAndShiftAndMixAddRound
+Running AntiHooking On SubAndShiftAndMixAddRoundInPlace
+Running AntiHooking On cryptonight_hash_ctx
+Running AntiHooking On oaes_alloc
+Running AntiHooking On keccak
+Running AntiHooking On oaes_key_import_data
+Running AntiHooking On copy_block
+Running AntiHooking On oaes_free
+Running AntiHooking On keccakf
+Running AntiHooking On cryptonight
+Running AntiHooking On Init
+Running AntiHooking On Update
+Running AntiHooking On Final
+Running AntiHooking On Hash
+Running AntiHooking On keccak1600
+Running AntiHooking On hash_cn
+Running AntiHooking On oaes_sprintf
+Running AntiHooking On oaes_key_gen_128
+Running AntiHooking On oaes_key_gen
+Running AntiHooking On oaes_key_gen_192
+Running AntiHooking On oaes_key_gen_256
+Running AntiHooking On oaes_key_export
+Running AntiHooking On oaes_key_export_data
+Running AntiHooking On oaes_key_import
+Running AntiHooking On oaes_key_destroy
+Running AntiHooking On oaes_key_expand
+Running AntiHooking On oaes_get_seed
+Running AntiHooking On oaes_set_option
+Running AntiHooking On oaes_encrypt
+Running AntiHooking On oaes_encrypt_block
+Running AntiHooking On oaes_decrypt
+Running AntiHooking On oaes_decrypt_block
+Running AntiHooking On oaes_encryption_round
+Running AntiHooking On oaes_sub_byte
+Running AntiHooking On oaes_shift_rows
+Running AntiHooking On oaes_mix_cols
+Running AntiHooking On oaes_pseudo_encrypt_ecb
+Running AntiHooking On Skein_Put64_LSB_First
+Running AntiHooking On Skein_Get64_LSB_First
+Running AntiHooking On Init___1
+Running AntiHooking On Update___1
+Running AntiHooking On Final___1
+Running AntiHooking On Transform
+Running AntiHooking On F512
+Running AntiHooking On RND512Q
+Running AntiHooking On RND512P
+Running AntiHooking On OutputTransformation
+Running AntiHooking On Init___0
+Running AntiHooking On Update___0
+Running AntiHooking On Final___0
+Running AntiHooking On F8
+Running AntiHooking On E8
+Running AntiHooking On oaes_word_rot_left
+Running AntiHooking On oaes_inv_shift_rows
+Running AntiHooking On oaes_inv_sub_byte
+Running AntiHooking On oaes_inv_mix_cols
+Running AntiHooking On oaes_gf_mul
+Running AntiHooking On Skein_512_Init
+Running AntiHooking On Skein1024_Init
+Running AntiHooking On Skein_512_Process_Block
+Running AntiHooking On Skein1024_Process_Block
+Running AntiHooking On Skein_512_Update
+Running AntiHooking On Skein_256_Update
+Running AntiHooking On Skein1024_Update
+Running AntiHooking On Skein_256_Process_Block
+Running AntiHooking On Skein_512_Final
+Running AntiHooking On Skein_256_Final
+Running AntiHooking On Skein1024_Final
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0043561s
+254 warnings generated.

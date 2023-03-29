@@ -68,6 +68,7 @@ def main():
 
     for dir in os.listdir(dataset_path):
         path = os.path.join(dataset_path, dir)
+        print(path, flush=True)
         for transformation in transformations:
             result = run_emcc(path, transformation)
             if result['code'] != 0:

@@ -1,0 +1,42 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+../asteroids/main.c:196:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
+  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+std::mt19937_64 seeded with current timestamp: 1680079031305
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/wasm-asteroids/wasm-asteroids.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running Instruction Substitution On init_asteroids
+Running Instruction Substitution On multiply_vector
+Running Instruction Substitution On add_vector
+Running Instruction Substitution On update_asteroids
+Running Instruction Substitution On add_vector_new
+Running Instruction Substitution On rotate_vector
+Running Instruction Substitution On draw_asteroids
+Running Instruction Substitution On draw_line
+Running Instruction Substitution On shrink_asteroid
+Running Instruction Substitution On divide_vector
+Running Instruction Substitution On spawn_asteroids
+Running Instruction Substitution On bounds_asteroids
+Running Instruction Substitution On collision_asteroids
+Running Instruction Substitution On mainloop
+Running Instruction Substitution On get_direction
+Running Instruction Substitution On apply_force
+Running Instruction Substitution On rotate_player
+Running Instruction Substitution On shoot_bullet
+Running Instruction Substitution On clear_pixels
+Running Instruction Substitution On update_player
+Running Instruction Substitution On bounds_player
+Running Instruction Substitution On draw_player
+Running Instruction Substitution On __main_argc_argv
+Running Instruction Substitution On init
+Running Instruction Substitution On init_player
+Running Instruction Substitution On normalise_vector
+Running Instruction Substitution On draw_pixel
+Running Instruction Substitution On limit_vector
+Running Instruction Substitution On print_vector
+Running Instruction Substitution On magnitude_vector
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0006092s
+1 warning generated.
