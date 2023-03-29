@@ -1,6 +1,7 @@
-from enum import Enum
+import json
 import os
 
+from enum import Enum
 from termcolor import colored
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -80,6 +81,18 @@ def get_emcc_out(path, transformation):
     return os.path.join(binary_path, f'{binary_name}')
 
 
+def write_metadata_file(emcc_out, metadata_in, transformation):
+    with open(metadata_in, 'r') as f:
+        metadata = json.load(f)
+
+    metadata['obfuscation_method'] = 'tigress'
+    metadata['transformation'] = transformation
+
+    metadata_out = emcc_out.replace('.html', '.metadata.json')
+    with open(metadata_out, 'w') as f:
+        json.dump(metadata, f, indent=4)
+
+
 def run_emcc(path, transformation):
 
     # get emscripten output file
@@ -99,12 +112,19 @@ def run_emcc(path, transformation):
         if file_size < 5:
             return {'desc': f'Build: {file_in}', 'size': f'Size: {file_size}', 'code': 1}
 
+    # get metadata file
+    metadata_in = os.path.join(path, 'metadata.json')
+    if not os.path.exists(metadata_in):
+        return {'desc': f'Missing metadata: {metadata_in}', 'code': 1}
+
     # log file
     log_file = emcc_out.replace('.html', '.emcc.log')
 
     # run build script
     code = os.system(
         f'/bin/sh {script} {file_in} {emcc_out} > {log_file} 2>&1')
+
+    write_metadata_file(emcc_out, metadata_in, transformation)
 
     # check output file size
     if os.path.exists(emcc_out):

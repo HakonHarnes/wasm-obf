@@ -1,8 +1,0 @@
-{
-    "name": "cn-r",
-    "algo": "cn-r",
-    "category": "miner",
-    "obfuscation_method": "llvm",
-    "transformation": "strcry",
-    "flags": "-mllvm -enable-strcry"
-}

@@ -1,7 +1,0 @@
-{
-    "name": "wasm-asteroids",
-    "category": "game",
-    "method": "llvm",
-    "transformation": "subobf",
-    "flags": "-mllvm -enable-subobf"
-}

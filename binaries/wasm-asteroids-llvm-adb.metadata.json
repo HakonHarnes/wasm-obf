@@ -1,7 +1,0 @@
-{
-    "name": "wasm-asteroids",
-    "category": "game",
-    "method": "llvm",
-    "transformation": "adb",
-    "flags": "-mllvm -enable-adb"
-}

@@ -1,8 +1,0 @@
-{
-    "name": "cn-pico-trtl",
-    "algo": "cn-pico-trtl",
-    "category": "miner",
-    "method": "llvm",
-    "transformation": "subobf",
-    "flags": "-mllvm -enable-subobf"
-}
