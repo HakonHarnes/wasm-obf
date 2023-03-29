@@ -16,6 +16,9 @@ services:
       - ../binaries:/minos/binaries
       - ../data/:/minos/data
       - ../utils/:/minos/utils
+    environment:
+      - BINARY_PATH=/minos/binaries
+      - DATA_PATH=/minos/data
   virustotal:
     build: ./virustotal
     volumes:

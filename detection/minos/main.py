@@ -1,12 +1,22 @@
+import os
+import json
+
 from utils.file_utils import get_unanalyzed_binaries, get_metadata_filename, write_json
 from src.imaginator import encode
+from termcolor import colored
 
-import os
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
+binary_path = os.environ['BINARY_PATH']
+data_path = os.environ['DATA_PATH']
 
-binary_path = f'{dir_path}/binaries'
-metadata_path = f'{dir_path}/data'
+
+def print_result(malicious):
+    color = 'red' if malicious else 'green'
+    print("Malicious:", colored(malicious, color))
+
+
+def print_file(count, length, file, color='blue'):
+    print(colored(f'\n[{count}/{length}] Processing {file}', color))
 
 
 def run_minos(file):
@@ -22,20 +32,20 @@ def run_minos(file):
 
 if __name__ == "__main__":
 
-    binaries = get_unanalyzed_binaries(binary_path, metadata_path, "minos")
+    binaries = get_unanalyzed_binaries(binary_path, data_path, "minos")
     if not binaries:
-        print("No binaries to analyze!")
+        print(colored("No binaries to analyze!", "blue"))
         exit(0)
 
     for i, binary in enumerate(binaries):
         input_path = os.path.join(binary["path"], binary["filename"])
-        print(f'Processing [{i}/{len(binaries)}] {input_path}')
+        print_file(i + 1, len(binaries), input_path)
 
         malicious = run_minos(input_path)
-        print(f'Malicious: {malicious}\n')
+        print_result(malicious)
 
         metadata_filename = get_metadata_filename(binary["filename"], "minos")
-        output_path = os.path.join(metadata_path, metadata_filename)
+        output_path = os.path.join(data_path, metadata_filename)
 
         data = {
             "method": "minos",

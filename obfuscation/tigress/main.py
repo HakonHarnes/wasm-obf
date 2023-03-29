@@ -4,8 +4,6 @@ import os
 from enum import Enum
 from termcolor import colored
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
 
