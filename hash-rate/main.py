@@ -100,8 +100,12 @@ def save_hash_rates_to_json_file(hash_rates_list):
 def main():
     files = get_cryptomining_files()
 
+    count = 0
+
     hash_rates_dict = {}
     for file in files:
+        count += 1
+        print(f'[{count}/{len(files)}] {file["wasm"]}', flush=True)
         move_files_to_miner(file['wasm'], file['js'])
 
         worker_file = os.path.join(cryptominer_path, 'src', 'worker.js')
