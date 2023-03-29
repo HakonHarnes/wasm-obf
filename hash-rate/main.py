@@ -67,8 +67,11 @@ def get_cryptomining_files():
 
     files = []
     for wasm_file in wasm_files:
-        files.append(
-            {'wasm': wasm_file, 'js': wasm_file.replace('.wasm', '.js')})
+        js_file = wasm_file.replace('.wasm', '.js')
+        if not os.path.isfile(js_file):
+            print(f'JavaScript file missing for {wasm_file}')
+            continue
+        files.append({'wasm': wasm_file, 'js': js_file})
     return files
 
 
