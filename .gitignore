@@ -2,7 +2,6 @@ __pycache__
 node_modules 
 binaries
 cryptominer/client/src/cn-*
-obfuscation/tigress/tigress
 
 *.png
 *.7z

@@ -1,0 +1,358 @@
+#!/bin/bash
+
+##############################################################################################
+# Check that environment vars have been set properly and we're running on a supported machine
+##############################################################################################
+
+if [ -z "$TIGRESS_HOME" ]
+then
+   echo "<<Tigress>> Please set the TIGRESS_HOME environment variable to the directory of the version of Tigress that you want to run."
+   echo "<<Tigress>>   For example:"
+   echo "<<Tigress>>      $ export TIGRESS_HOME=/home/alice/bin/tigress/3.3.2"
+   echo "<<Tigress>>   Also make sure that this directory is on your PATH:"
+   echo '<<Tigress>>      $ echo $PATH'
+   echo "<<Tigress>>      /usr/bin:/usr/local/bin:.../home/alice/bin/tigress/3.3.2:..."
+   exit -1
+fi
+
+##############################################################################################
+# Check architecture and operating system
+##############################################################################################
+if ! command -v uname &> /dev/null
+then
+   echo "<<Tigress> Can't find 'uname'. Make sure '/usr/bin' (Darwin) or '/bin' (Linux) is on your path."
+   exit -1
+fi
+
+uname_s=`uname -s`
+uname_m=`uname -m`
+
+bytecode=
+OPTIONS="-D_Float128=double -D __uint128_t=__uint64_t"
+
+case $uname_s in
+     Darwin)
+        OPTIONS="$OPTIONS -fgnu89-inline -Wno-builtin-requires-header"
+        ;;
+     Linux)
+        ;;
+     *)
+        echo "<<Tigress>> 'uname -s' returned $uname_s. Tigress has been tested only on Darwin and Linux."
+        exit -1
+        ;;
+esac
+
+# See https://en.wikipedia.org/wiki/Uname
+case $uname_m in
+     i386|i686|x86)
+        echo "<<Tigress>> Tigress only runs on 64-bit machines. 'uname -m' returned $uname_m which indicates you are running on a 32-bit machine."
+        echo "<<Tigress>>    You can, however, cross-compile, running Tigress on a 64-bit machine and generate code for a 32-bit architecture."
+        exit -1
+        ;;
+     x86_64|amd64|i686-64)
+        ARCH=x86_64
+        ;;
+     armv6l)
+        # We're hoping v6 code will run on v7.
+        ARCH=armv7
+        ;;
+     armv7l|armv7|armel|armv7l|arm)
+        ARCH=armv7
+        ;;
+     armv8l|armv8|arm64|aarch64_be|aarch64|armv8b|armv8l)
+        ARCH=armv8
+        ;;
+     *)
+        echo "<<Tigress>> 'uname -m' returned $uname_m. This is an architecture I don't recognize."
+        echo "<<Tigress>>    Tigress only runs on x86_64 and armv7/armv8 architectures. If you're running on"
+        echo "<<Tigress>>    one of these architectures but your 'uname -m' returns some exotic string,"
+        echo "<<Tigress>>    you can edit this Tigress script which should be installed at '$TIGRESS_HOME/tigress'." 
+        exit -1
+        ;;
+esac
+
+bin_dir=$TIGRESS_HOME/$uname_s"-"$ARCH
+
+########################################################################################
+# Generate random operators for the jitter.
+########################################################################################
+opcodes=(JIT_ADD JIT_ADDC JIT_ADDX JIT_ALLOCA JIT_AND JIT_BEQ JIT_BGE JIT_BGT JIT_BLE JIT_BLT JIT_BMC JIT_BMS JIT_BNE JIT_BOADD JIT_BOSUB JIT_BNOADD JIT_BNOSUB JIT_CALL JIT_CEIL JIT_CODESTART JIT_DECL_ARG JIT_DIV JIT_EQ JIT_EXT JIT_FADD JIT_FBEQ JIT_FBGE JIT_FBGT JIT_FBLE JIT_FBLT JIT_FBNE JIT_FDIV JIT_FLD JIT_FLDX JIT_FLOOR JIT_FMOV JIT_FMUL JIT_FNEG JIT_FPUTARG JIT_FRET JIT_FRETVAL JIT_FRSB JIT_FST JIT_FSTX JIT_FSUB JIT_GE JIT_GETARG JIT_GT JIT_HMUL JIT_JMP JIT_LABEL JIT_LD JIT_LDX JIT_LE JIT_LREG JIT_LSH JIT_LT JIT_MOD JIT_MOV JIT_MSG JIT_MUL JIT_NE JIT_NEG JIT_NOP JIT_NOT JIT_OR JIT_PATCH JIT_PREPARE JIT_PROLOG JIT_PUTARG JIT_RENAMEREG JIT_RET JIT_RETVAL JIT_ROUND JIT_RSB JIT_RSH JIT_ST JIT_STX JIT_SUB JIT_SUBC JIT_SUBX JIT_SYNCREG JIT_TRUNC JIT_UREG JIT_XOR JIT_X86_STI JIT_X86_STXI JIT_X86_ADDMUL JIT_X86_ADDIMM JIT_DATA_BYTE JIT_DATA_BYTES JIT_DATA_REF_CODE JIT_DATA_REF_DATA JIT_CODE_ALIGN JIT_REF_CODE JIT_REF_DATA JIT_FULL_SPILL JIT_COMMENT JIT_FORCE_SPILL JIT_FORCE_ASSOC JIT_TRACE JIT_MEMCPY JIT_MEMSET JIT_MARK JIT_TOUCH JIT_TRANSFER JIT_TRANSFER_CPY JIT_TRANSFER_XOR JIT_TRANSFER_AND JIT_TRANSFER_OR JIT_TRANSFER_ADD JIT_TRANSFER_ADDS JIT_TRANSFER_SUB JIT_TRANSFER_SUBS)
+
+size=${#opcodes[*]}
+max=$(( 32768 / size * size ))
+
+for ((i=size-1; i>0; i--)); do
+   while (( (rand=$RANDOM) >= max )); do :; done
+   rand=$(( rand % (i+1) ))
+   tmp=${opcodes[i]} opcodes[i]=${opcodes[rand]} opcodes[rand]=$tmp
+done
+
+echo "typedef enum JIT_OPCODE {" > "$TIGRESS_HOME/opcodes.c"
+for ((i=0; i<size; i++)); do
+   echo "   ${opcodes[i]} = $i << 3," >> "$TIGRESS_HOME/opcodes.c"
+done
+echo "} jit_opcode;" >> "$TIGRESS_HOME/opcodes.c"
+echo "jit_opcode dummy_opcode;" >> "$TIGRESS_HOME/opcodes.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-i386.c" > "$TIGRESS_HOME/jitter-i386.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-amd64.c" > "$TIGRESS_HOME/jitter-amd64.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-sparc.c" > "$TIGRESS_HOME/jitter-sparc.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-arm32.c" > "$TIGRESS_HOME/jitter-arm32.c"
+
+if [ "$1" == "--initjit" ]
+then
+   exit 0
+fi
+
+########################################################################################
+# Help
+########################################################################################
+if [ "$1" == "--help" ] || [ "$1" == "--h" ] || [ "$1" == "-h" ] || [ "$1" == "-help" ] || [ -z "$1" ]
+then
+cat <<"End-of-message"
+Tigress is invoked like this:
+
+tigress    --Environment=ENV \
+           --Transform=TRANSFORM --Functions=IDENTSPEC [EXTRA_OPTS...] \ # First transformation
+           --Transform=TRANSFORM --Functions=IDENTSPEC [EXTRA_OPTS...] \ # Second transformation
+                      ....
+           --Transform=TRANSFORM --Functions=IDENTSPEC [EXTRA_OPTS...] \ # Last transformation
+           --out=OUTFILE.c FILE.c                                      \ # Output and input files
+        
+Here are some examples of valid ENV strings:
+             x86_64:Linux:Gcc:4.6
+             x86_64:Darwin:Clang:5.1
+             armv7:Linux:Gcc:4.6
+             armv8:Linux:Gcc:4.6
+             arm64:Darwin:Clang:5.1
+             wasm:Linux:Emcc:5.1
+
+This is a typical, simple, invocation:
+
+tigress  --Environment=ENV \
+        --Transform=InitOpaque   --Functions=main \                   # First transformation
+        --Transform=UpdateOpaque --Functions=f \                      # Second transformation
+        --Transform=AddOpaque    --Functions=f --AddOpaqueCount=2 \   # Third transformation
+        --out=x.c simple1.c                                           # Output and input file
+
+Note that Tigress accepts exactly one C file as input. If your project has
+multiple files you must first merge them together into one: 
+
+$TIGRESS_HOME/cilly --merge -c x1.c -o x1.o
+$TIGRESS_HOME/cilly --merge -c x2.c -o x2.o
+$TIGRESS_HOME/cilly --merge -c x3.c -o x4.o
+$TIGRESS_HOME/cilly --merge  --keepmerged x1.o x2.o x3.o -o merged --mergedout=merged.c 
+
+The first three commands are replacements, essentially, for 
+compiling each of the source file. If, for example, 
+you need  to pass different options when compiling the
+different files, you'd do it here. The merged source file merged.c
+can subsequently be passed to Tigress for transformation. See 
+http://kerneis.github.io/cil/doc/html/cil/merger.html#sec-merger
+to learn more about the merging process. 
+
+Useful commands:
+   *) tigress --help     : Show this message
+   *) tigress --install  : Show how to install Tigress 
+   *) tigress --license  : Display the tigress license
+   *) tigress --bugs     : How to get past some known issues
+   *) tigress --bytecode : Run ocaml bytecode instead of native code; useful for debugging
+   *) tigress --version  : Show the current Tigress version
+   *) tigress --initjit  : Initialize the jitter without actually transforming anything.
+End-of-message
+
+   exit 0
+fi
+
+
+########################################################################################
+# License
+########################################################################################
+if [ "$1" == "--license" ] || [ "$1" == "--License" ] || [ "$1" == "-license" ] || [ "$1" == "-License" ]
+then
+   cat $TIGRESS_HOME/tigress_license.txt
+   exit 0
+fi
+
+########################################################################################
+# Version
+########################################################################################
+if [ "$1" == "--version" ] || [ "$1" == "--Version" ] || [ "$1" == "-version" ] || [ "$1" == "-Version" ]
+then
+   cat $TIGRESS_HOME/Darwin-x86_64/version.txt
+   echo ""
+   cat $TIGRESS_HOME/Linux-x86_64/version.txt
+   echo ""
+   cat $TIGRESS_HOME/Linux-armv7/version.txt 
+   exit 0
+fi
+
+########################################################################################
+# Apple weirdness
+########################################################################################
+if [ "$1" == "--bugs" ] || [ "$1" == "--Bugs" ] || [ "$1" == "-bugs" ] || [ "$1" == "-Bugs" ]
+then
+cat <<End-of-message
+1) Do
+   #include "tigress-3.3.2/tigress.h"
+to get passed some clang-related issues (blocks).
+
+2) Compile with 
+   -fgnu89-inline -Wno-builtin-requires-header 
+to get past other bugs.
+
+3) Newer versions of glib has support for 128 bit floats. If this gives you problems,
+   add 
+        -D _Float128=double 
+   to the command line and/or set
+       #undef __HAVE_DISTINCT_FLOAT128 
+    before including math.h 
+End-of-message
+   exit 0
+fi
+
+########################################################################################
+# Install
+########################################################################################
+if [ "$1" == "--install" ] || [ "$1" == "--Install" ] || [ "$1" == "-install" ] || [ "$1" == "-Install" ]
+then
+cat <<"End-of-message"
+Set the TIGRESS_HOME environment variable to the directory in which the tigress binary resides.
+Also put this directory on your PATH, where "VERSION" is the version of tigress you want to run,
+such as 3.3.2.
+In the C-shell, you can do
+   > setenv TIGRESS_HOME /PATH_TO/tigress/VERSION
+   > setenv PATH /PATH_TO/tigress/VERSION:$PATH
+You can put these in your .cshrc file.
+
+In the Bourne shell, you can do the following, or put these in your .bashrc file.
+   > export TIGRESS_HOME=/PATH_TO/tigress/VERSION  
+   > export PATH=$PATH:/PATH_TO/tigress/VERSION
+End-of-message
+
+   exit 0
+fi
+
+##############################################################################################
+# Check that the --out=<file> option has been given; if not, we get weird error messages.
+#############################################################################################
+
+hasout=0
+for x; do
+  if [[ $x == "--out="* ]]; then hasout=1; break; fi
+done
+
+if [ "$hasout" = 0 ]
+then
+   echo "<<Tigress>> Tigress requires that you provide the --out=<file>.c argument."
+   exit -1
+fi
+
+##############################################################################################
+# Check that the --Environment= option has been given.
+#############################################################################################
+
+hasenv=0
+wasm=0
+emcc=0
+armv7=0
+mode=""
+compiler=""
+for x; do
+  if [[ $x == "--Environment="* ]] 
+  then 
+     if [[ $x =~ "wasm:" ]]; then
+        wasm=1
+     fi
+     if [[ $x =~ "armv7:" ]]; then
+        armv7=1
+     fi
+     if [[ $x =~ "Msvc:" ]]; then
+        mode="--mode=MSVC"
+     fi
+     if [[ $x =~ "Emcc:" ]]; then
+        emcc=1
+        compiler="--gcc=emcc"
+     fi
+     hasenv=1;
+     break; 
+   fi
+done
+
+if [ "$hasenv" = 0 ]
+then
+   echo "<<Tigress>> Tigress requires that you provide the --Environment=ENV argument, where examples of ENV include"
+   echo "<<Tigress>>    * x86_64:Linux:Gcc:4.6"
+   echo "<<Tigress>>    * x86_64:Darwin:Clang:5.1"
+   echo "<<Tigress>>    * armv7:Linux:Gcc:4.6"
+   echo "<<Tigress>>    * armv8:Linux:Gcc:4.6."
+   echo "<<Tigress>>    * arm64:Darwin:Clang:5.1"
+   echo "<<Tigress>>    * wasm:Darwin:Emcc:5.1"
+   echo "<<Tigress>>    * x86_64:Windows:Msvc:5.1"
+   exit -1
+fi
+
+if [ "$emcc" = 1 ]
+then
+   if ! command -v emcc &> /dev/null
+   then
+      echo "<<Tigress> You have specified your compiler as 'emcc' but I can't find it. Make sure 'emcc' is on your path."
+      exit -1
+   fi
+fi
+
+########################################################################################
+# Deal with cross compilation.
+########################################################################################
+
+envmachine=""
+
+if [ "$wasm" = 1 ]
+then 
+   export CIL_MACHINE="short=2,2 int=4,4 long=4,4 long_long=8,8 pointer=4,4 alignof_enum=4 float=4,4 \
+             double=8,8 long_double=8,8 void=1 bool=1,1 fun=1,4 alignof_string=1 max_alignment=16 \
+             size_t=unsigned_long wchar_t=int char_signed=true const_string_literals=true \
+             big_endian=false __thread_is_keyword=true __builtin_va_list=true underscore_name=true"
+   envmachine="--envmachine"
+fi
+
+if [ "$armv7" = 1 ]
+then 
+   export CIL_MACHINE="short=2,2 int=4,4 long=4,4 long_long=8,8 pointer=4,4 alignof_enum=4 float=4,4 \
+             double=8,8 long_double=8,8 void=1 bool=1,1 fun=1,4 alignof_string=1 max_alignment=16 \
+             size_t=unsigned_long wchar_t=int char_signed=true const_string_literals=true \
+             big_endian=false __thread_is_keyword=true __builtin_va_list=true underscore_name=true"
+   envmachine="--envmachine"
+fi
+
+########################################################################################
+# Call cilly with the appropriate options.
+########################################################################################
+
+for x; do
+  if [ "$x" = "--bytecode" ]; then bytecode=1; break; fi
+  if [ "$x" = "--ocamldebug" ]; then bytecode=1; break; fi
+done
+
+export OCAMLFIND_CONF=$bin_dir/findlib.conf
+
+if [ -n "$bytecode" ]
+then
+   export CIL_FEATURES="$bin_dir/simplify.cma,$bin_dir/pta.cma,$bin_dir/oneret.cma,$bin_dir/liveness.cma,$bin_dir/zrapp.cma,$bin_dir/tigress.cma"
+else
+   export CIL_FEATURES="$bin_dir/simplify.cmxs,$bin_dir/pta.cmxs,$bin_dir/oneret.cmxs,$bin_dir/liveness.cmxs,$bin_dir/zrapp.cmxs,$bin_dir/tigress.cmxs"
+fi
+
+if [[ -x "$bin_dir/cilly" ]]
+then
+   if [ -n "$bytecode" ]
+   then
+      echo "<<Tigress> Executing: '" $bin_dir/cilly $compiler $mode $envmachine --doTigress $OPTIONS "$@'"
+   fi
+   $bin_dir/cilly $compiler $mode $envmachine --doTigress $OPTIONS "$@"
+else
+   echo "<<Tigress> File '$bin_dir/cilly' does not exist or is not executable. Try 'chmod a+rx $bin_dir/cilly'."
+   exit -1
+fi
+
+
+

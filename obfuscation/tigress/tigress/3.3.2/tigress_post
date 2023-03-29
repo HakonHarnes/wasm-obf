@@ -1,0 +1,47 @@
+#!/bin/bash
+
+uname_s=`uname -s`
+uname_m=`uname -m`
+
+case $uname_s in
+     Darwin)
+        ;;
+     Linux)
+        ;;
+     *)
+        echo "[[tigress-patch]] 'uname -s' returned $uname_s. Tigress has been tested only on Darwin and Linux."
+        exit 1
+        ;;
+esac
+
+# See https://en.wikipedia.org/wiki/Uname
+case $uname_m in
+     i386|i686|x86)
+        echo "[[tigress-patch]] Tigress only runs on 64-bit machines. 'uname -m' returned $uname_m which indicates you are running on a 32-bit machine."
+        exit 1
+        ;;
+     x86_64|amd64|i686-64)
+        ARCH=x86_64
+        ;;
+     armv6l)
+        # We're hoping v6 code will run on v7.
+        ARCH=armv7
+        ;;
+     armv7l|armv7|armel|armv7l|arm)
+        ARCH=armv7
+        ;;
+     armv8l|armv8|arm64|aarch64_be|aarch64|armv8b|armv8l)
+        ARCH=armv8
+        # We're hoping v8 code will run on v7.
+        ARCH=armv7
+        ;;
+     *)
+        echo "[[tigress-patch]] 'uname -m' returned $uname_m. This is an architecture I don't recognize."
+        exit 1
+        ;;
+esac
+
+POST=$TIGRESS_HOME/$uname_s"-"$ARCH/tigress_post.exe
+$POST  "$@"
+
+exit 0
