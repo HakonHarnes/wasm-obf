@@ -1,5 +1,6 @@
 __pycache__
 node_modules 
+binaries/
 *.png
 *.7z
 .*.json
