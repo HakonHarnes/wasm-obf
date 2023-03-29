@@ -1,0 +1,2647 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+shared:INFO: (Emscripten: Running sanity checks)
+cache:INFO: generating system headers: sysroot_install.stamp... (this will be cached in "/src/emscripten/cache/sysroot_install.stamp" for subsequent builds)
+cache:INFO:  - ok
+cil-c8JXv6FT.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-UO8lznZY.i","")
+        ^
+cil-HtG1VxFt.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-ZVlC4Znc.i","")
+        ^
+cryptonight.c:360:11: warning: unused variable 'd' [-Wunused-variable]
+  uint8_t d[16] ;
+          ^
+cryptonight.c:362:11: warning: unused variable 'f' [-Wunused-variable]
+  uint8_t f[16] ;
+          ^
+cryptonight.c:365:10: warning: variable 'rvs' set but not used [-Wunused-but-set-variable]
+  size_t rvs ;
+         ^
+cil-553Og0Le.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-TB9Ckp2l.i","")
+        ^
+cil-9xC4tP0P.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-oWGPwf2r.i","")
+        ^
+cil-GCjQO3fv.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-fjE4nyDo.i","")
+        ^
+jh_ansi_opt64.c:601:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
+  int tmp___0 ;
+      ^
+cil-gsfJxBUs.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-LrYRSmXz.i","")
+        ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:123:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:127:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+      tmp___13 = (tmp___11 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:31: warning: integer literal is too large to be represented in a signed integer type, interpreting as unsigned [-Wimplicitly-unsigned-literal]
+        tmp___7 = (tmp___5 & (18446744073709551615 >> 1)) > 2047ULL << 52;
+                              ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:124:16: warning: unused variable 'tmp' [-Wunused-variable]
+  unsigned int tmp ;
+               ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:125:22: warning: unused variable 'tmp___0' [-Wunused-variable]
+  unsigned long long tmp___0 ;
+                     ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:126:7: warning: unused variable 'tmp___1' [-Wunused-variable]
+  int tmp___1 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:127:7: warning: unused variable 'tmp___2' [-Wunused-variable]
+  int tmp___2 ;
+      ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:128:7: warning: unused variable 'tmp___3' [-Wunused-variable]
+  int tmp___3 ;
+      ^
+cil-b4h_7VE3.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-zn_pUQID.i","")
+        ^
+cil-9hBs7lYp.o:1:9: warning: unknown pragma ignored [-Wunknown-pragmas]
+#pragma merger("0","/tmp/cil-t_Cp0cKE.i","")
+        ^
+cryptonight.c:44:13: warning: unused function 'copy_block' [-Wunused-function]
+static void copy_block(uint8_t *dst , uint8_t const   *src ) 
+            ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:108:21: warning: unused function '__islessf' [-Wunused-function]
+__inline static int __islessf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:109:21: warning: unused function '__isless' [-Wunused-function]
+__inline static int __isless(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:110:21: warning: unused function '__islessl' [-Wunused-function]
+__inline static int __islessl(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:111:21: warning: unused function '__islessequalf' [-Wunused-function]
+__inline static int __islessequalf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:112:21: warning: unused function '__islessequal' [-Wunused-function]
+__inline static int __islessequal(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:113:21: warning: unused function '__islessequall' [-Wunused-function]
+__inline static int __islessequall(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:114:21: warning: unused function '__islessgreaterf' [-Wunused-function]
+__inline static int __islessgreaterf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:115:21: warning: unused function '__islessgreater' [-Wunused-function]
+__inline static int __islessgreater(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:116:21: warning: unused function '__islessgreaterl' [-Wunused-function]
+__inline static int __islessgreaterl(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:117:21: warning: unused function '__isgreaterf' [-Wunused-function]
+__inline static int __isgreaterf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:118:21: warning: unused function '__isgreater' [-Wunused-function]
+__inline static int __isgreater(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:119:21: warning: unused function '__isgreaterl' [-Wunused-function]
+__inline static int __isgreaterl(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:120:21: warning: unused function '__isgreaterequalf' [-Wunused-function]
+__inline static int __isgreaterequalf(float_t __x , float_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:121:21: warning: unused function '__isgreaterequal' [-Wunused-function]
+__inline static int __isgreaterequal(double_t __x , double_t __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/math.h:122:21: warning: unused function '__isgreaterequall' [-Wunused-function]
+__inline static int __isgreaterequall(long double __x , long double __y ) 
+                    ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:19:26: warning: unused function '__bswap16' [-Wunused-function]
+__inline static uint16_t __bswap16(uint16_t __x ) 
+                         ^
+/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:29:26: warning: unused function '__bswap64' [-Wunused-function]
+__inline static uint64_t __bswap64(uint64_t __x ) 
+                         ^
+std::mt19937_64 seeded with current timestamp: 1680105617774
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /llvm/dataset/cn-1/cn-1.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running ControlFlowFlattening On blake256_compress
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On blake256_init
+Running ControlFlowFlattening On blake224_init
+Running ControlFlowFlattening On blake256_update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On blake224_update
+Running ControlFlowFlattening On blake256_final_h
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On blake256_final
+Running ControlFlowFlattening On blake224_final
+Running ControlFlowFlattening On blake256_hash
+Running ControlFlowFlattening On blake
+Running ControlFlowFlattening On blake224_hash
+Running ControlFlowFlattening On hmac_blake256_init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On hmac_blake224_init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On hmac_blake256_update
+Running ControlFlowFlattening On hmac_blake224_update
+Running ControlFlowFlattening On hmac_blake256_final
+Running ControlFlowFlattening On hmac_blake224_final
+Running ControlFlowFlattening On hmac_blake256_hash
+Running ControlFlowFlattening On hmac_blake224_hash
+Running ControlFlowFlattening On do_blake_hash
+Running ControlFlowFlattening On do_groestl_hash
+Running ControlFlowFlattening On groestl
+Running ControlFlowFlattening On do_jh_hash
+Running ControlFlowFlattening On jh
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On do_skein_hash
+Running ControlFlowFlattening On skein
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On xor_blocks_dst
+Running ControlFlowFlattening On mul64to128
+Running ControlFlowFlattening On sum_xor_dst
+Running ControlFlowFlattening On xor_blocks
+Running ControlFlowFlattening On SubAndShiftAndMixAddRound
+Running ControlFlowFlattening On SubAndShiftAndMixAddRoundInPlace
+Running ControlFlowFlattening On cryptonight_hash_ctx
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_alloc
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On keccak
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_import_data
+Running ControlFlowFlattening On xor64
+Running ControlFlowFlattening On oaes_free
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On keccakf
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On cryptonight
+Running ControlFlowFlattening On Init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Final
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Hash
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On keccak1600
+Running ControlFlowFlattening On hash_cn
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_sprintf
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_gen_128
+Running ControlFlowFlattening On oaes_key_gen
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_gen_192
+Running ControlFlowFlattening On oaes_key_gen_256
+Running ControlFlowFlattening On oaes_key_export
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_export_data
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_import
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_destroy
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_key_expand
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_get_seed
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_set_option
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_encrypt
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_encrypt_block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_decrypt
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_decrypt_block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_encryption_round
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_sub_byte
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_shift_rows
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_mix_cols
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_pseudo_encrypt_ecb
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_Put64_LSB_First
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_Get64_LSB_First
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Init___1
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Update___1
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Final___1
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Transform
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On F512
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On RND512Q
+Running ControlFlowFlattening On RND512P
+Running ControlFlowFlattening On OutputTransformation
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Init___0
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Update___0
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Final___0
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On F8
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On E8
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_word_rot_left
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_inv_shift_rows
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_inv_sub_byte
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_inv_mix_cols
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On oaes_gf_mul
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Init
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Process_Block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Process_Block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_256_Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Update
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_256_Process_Block
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_512_Final
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein_256_Final
+Fixing Stack
+Fixed Stack
+Running ControlFlowFlattening On Skein1024_Final
+Fixing Stack
+Fixed Stack
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0050690s
+135 warnings generated.
+cache:INFO: generating system asset: symbol_lists/ba56ab8e228a5e672360e8e04b49a9d10e72d067.txt... (this will be cached in "/src/emscripten/cache/symbol_lists/ba56ab8e228a5e672360e8e04b49a9d10e72d067.txt" for subsequent builds)
+cache:INFO: generating system asset: sysroot/lib/wasm32-emscripten/struct_info.json... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/struct_info.json" for subsequent builds)
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libcompiler_rt.a... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/libcompiler_rt.a" for subsequent builds)
+std::mt19937_64 seeded with current timestamp: 1680105618275
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/apple_versioning.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000823s
+std::mt19937_64 seeded with current timestamp: 1680105618276
+std::mt19937_64 seeded with current timestamp: 1680105618276
+std::mt19937_64 seeded with current timestamp: 1680105618276Initializing Hikari Core with Revision ID:
+std::mt19937_64 seeded with current timestamp: 1680105618276dc9664d3ffbd6539efca6fbc18506fb7f8883093Initializing Hikari Core with Revision ID:
+
+dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/absvsi2.cRunning Hikari On 
+/src/emscripten/system/lib/compiler-rt/lib/builtins/absvdi2.c
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ashldi3.c
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:
+/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+std::mt19937_64 seeded with current timestamp: 1680105618276
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: Hikari Out
+Doing Post-Run Cleanup
+Running Hikari On Spend Time: 0.0001619/src/emscripten/system/lib/compiler-rt/lib/builtins/addvsi3.cstd::mt19937_64 seeded with current timestamp: 16801056182770.0001752sHikari Out
+
+
+s
+Spend Time: 
+Initializing Hikari Core with Revision ID:0.0001802dc9664d3ffbd6539efca6fbc18506fb7f8883093s
+
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ashlti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:Doing Post-Run Cleanup
+/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Hikari Out
+Spend Time: 0.0002058s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001674s
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+std::mt19937_64 seeded with current timestamp: 1680105618277
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/absvti2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000989s
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/addvdi3.c
+std::mt19937_64 seeded with current timestamp: 1680105618278
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/addvti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001657s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0018070s
+std::mt19937_64 seeded with current timestamp: 1680105618286
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/addsf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002759s
+std::mt19937_64 seeded with current timestamp: 1680105618291
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/addtf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0013332s
+std::mt19937_64 seeded with current timestamp: 1680105618302
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/adddf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0004194s
+std::mt19937_64 seeded with current timestamp: 1680105618475
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/atomic_flag_test_and_set.c
+std::mt19937_64 seeded with current timestamp: 1680105618475
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/atomic_flag_test_and_set_explicit.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:Doing Post-Run Cleanup
+/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Hikari Out
+Spend Time: 0.0001433s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001175s
+std::mt19937_64 seeded with current timestamp: 1680105618477
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/atomic_flag_clear.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000989s
+std::mt19937_64 seeded with current timestamp: 1680105618479
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ashrti3.c
+std::mt19937_64 seeded with current timestamp: 1680105618479
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ashrdi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001431sFailed To Link PreCompiled AntiHooking IR From:
+/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0003664s
+std::mt19937_64 seeded with current timestamp: 1680105618480
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/atomic_flag_clear_explicit.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001040s
+std::mt19937_64 seeded with current timestamp: 1680105618484
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/atomic_signal_fence.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001214s
+std::mt19937_64 seeded with current timestamp: 1680105618488
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/atomic_thread_fence.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001211s
+std::mt19937_64 seeded with current timestamp: 1680105618534
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/bswapsi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000699s
+std::mt19937_64 seeded with current timestamp: 1680105618540
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/clear_cache.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000834s
+std::mt19937_64 seeded with current timestamp: 1680105618542
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/bswapdi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000868s
+std::mt19937_64 seeded with current timestamp: 1680105618545
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/atomic.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0009677s
+std::mt19937_64 seeded with current timestamp: 1680105618663
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/clzsi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001018s
+std::mt19937_64 seeded with current timestamp: 1680105618708
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/cpu_model.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000603s
+std::mt19937_64 seeded with current timestamp: 1680105618710
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/clzti2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001433s
+std::mt19937_64 seeded with current timestamp: 1680105618712
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/cmpdi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001819s
+std::mt19937_64 seeded with current timestamp: 1680105618713
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/clzdi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001650s
+std::mt19937_64 seeded with current timestamp: 1680105618715
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ctzdi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+std::mt19937_64 seeded with current timestamp: 1680105618715
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Doing Post-Run Cleanup
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/cmpti2.c
+Hikari Out
+Spend Time: 0.0001519s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001421s
+std::mt19937_64 seeded with current timestamp: 1680105618724
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/comparesf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002005s
+std::mt19937_64 seeded with current timestamp: 1680105618724
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/comparetf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001910s
+std::mt19937_64 seeded with current timestamp: 1680105618730
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/comparedf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0003018s
+std::mt19937_64 seeded with current timestamp: 1680105618924
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ctzsi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001454s
+std::mt19937_64 seeded with current timestamp: 1680105618925
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ctzti2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001218s
+std::mt19937_64 seeded with current timestamp: 1680105618928std::mt19937_64 seeded with current timestamp: 1680105618928
+
+Initializing Hikari Core with Revision ID:Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093dc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+Running Hikari On Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divmoddi4.c/src/emscripten/system/lib/compiler-rt/lib/builtins/divmodsi4.c
+
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Hikari Out
+Spend Time: Spend Time: 0.0001490s
+0.0001469s
+std::mt19937_64 seeded with current timestamp: 1680105618930
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divdi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001507s
+std::mt19937_64 seeded with current timestamp: 1680105618931
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divsi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+std::mt19937_64 seeded with current timestamp: 1680105618931
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Doing Post-Run Cleanup
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divmodti4.c
+Hikari Out
+Spend Time: 0.0001504s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001440s
+std::mt19937_64 seeded with current timestamp: 1680105618933
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divsc3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0004601s
+std::mt19937_64 seeded with current timestamp: 1680105618935
+std::mt19937_64 seeded with current timestamp: 1680105618935
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divdc3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0004740s
+std::mt19937_64 seeded with current timestamp: 1680105618942Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divsf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0004942s
+
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divdf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0018737s
+std::mt19937_64 seeded with current timestamp: 1680105618987
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divtc3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002937s
+std::mt19937_64 seeded with current timestamp: 1680105619163
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/extendhftf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001121s
+std::mt19937_64 seeded with current timestamp: 1680105619164
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divxc3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0015016s
+std::mt19937_64 seeded with current timestamp: 1680105619169
+std::mt19937_64 seeded with current timestamp: 1680105619170Initializing Hikari Core with Revision ID:
+std::mt19937_64 seeded with current timestamp: 1680105619170dc9664d3ffbd6539efca6fbc18506fb7f8883093Initializing Hikari Core with Revision ID:
+
+dc9664d3ffbd6539efca6fbc18506fb7f8883093Initializing Hikari Core with Revision ID:
+dc9664d3ffbd6539efca6fbc18506fb7f8883093Running Hikari On 
+/src/emscripten/system/lib/compiler-rt/lib/builtins/extendhfsf2.c
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/enable_execute_stack.c
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001659sHikari Out
+
+Spend Time: 0.0001712s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0003314s
+std::mt19937_64 seeded with current timestamp: 1680105619170
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/eprintf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: std::mt19937_64 seeded with current timestamp: 1680105619173
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/extenddftf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+0.0013289sDoing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0005302s
+
+std::mt19937_64 seeded with current timestamp: 1680105619179
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/emutls.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: std::mt19937_64 seeded with current timestamp: 1680105619181
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/divtf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+0.0013959s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0011849s
+std::mt19937_64 seeded with current timestamp: 1680105619197
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/extendsfdf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0003135s
+std::mt19937_64 seeded with current timestamp: 1680105619200
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/extendsftf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002203s
+std::mt19937_64 seeded with current timestamp: 1680105619241
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ffsdi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000682s
+std::mt19937_64 seeded with current timestamp: 1680105619513
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ffssi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001211s
+std::mt19937_64 seeded with current timestamp: 1680105619517
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ffsti2.c
+std::mt19937_64 seeded with current timestamp: 1680105619518
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixdfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001209s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0016329sstd::mt19937_64 seeded with current timestamp: 1680105619520
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixsfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000989s
+std::mt19937_64 seeded with current timestamp: 1680105619520
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixdfsi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001705s
+
+std::mt19937_64 seeded with current timestamp: 1680105619522
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixtfsi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002499s
+std::mt19937_64 seeded with current timestamp: 1680105619524
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixdfti.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002224s
+std::mt19937_64 seeded with current timestamp: 1680105619525
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunsdfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001361s
+std::mt19937_64 seeded with current timestamp: 1680105619528
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixtfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002024s
+std::mt19937_64 seeded with current timestamp: 1680105619528
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixsfti.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001979s
+std::mt19937_64 seeded with current timestamp: 1680105619540
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixsfsi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0011182s
+std::mt19937_64 seeded with current timestamp: 1680105619556
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixtfti.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001755s
+std::mt19937_64 seeded with current timestamp: 1680105619740
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunsxfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001321s
+std::mt19937_64 seeded with current timestamp: 1680105619741
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+std::mt19937_64 seeded with current timestamp: 1680105619741Running Hikari On 
+/src/emscripten/system/lib/compiler-rt/lib/builtins/fixunsxfti.c
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixxfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001190sDoing Post-Run Cleanup
+
+Hikari Out
+Spend Time: 0.0001092s
+std::mt19937_64 seeded with current timestamp: 1680105619742
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunsxfsi.c
+std::mt19937_64 seeded with current timestamp: 1680105619742
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunssfti.c
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001211s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002108s
+std::mt19937_64 seeded with current timestamp: 1680105619743std::mt19937_64 seeded with current timestamp: 1680105619743
+
+Initializing Hikari Core with Revision ID:Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093dc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+Running Hikari On Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunsdfsi.c/src/emscripten/system/lib/compiler-rt/lib/builtins/fixunsdfti.c
+
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: Hikari Out
+0.0001714Spend Time: s
+0.0001740s
+std::mt19937_64 seeded with current timestamp: 1680105619746
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunssfsi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001776s
+std::mt19937_64 seeded with current timestamp: 1680105619747
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunstfti.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001831s
+std::mt19937_64 seeded with current timestamp: 1680105619747
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunssfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0013580s
+std::mt19937_64 seeded with current timestamp: 1680105619751
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunstfsi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002019s
+std::mt19937_64 seeded with current timestamp: 1680105619754
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixunstfdi.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002050s
+std::mt19937_64 seeded with current timestamp: 1680105619939
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatdidf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001631s
+std::mt19937_64 seeded with current timestamp: 1680105619941
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fixxfti.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001864s
+std::mt19937_64 seeded with current timestamp: 1680105619951std::mt19937_64 seeded with current timestamp: 1680105619951
+
+Initializing Hikari Core with Revision ID:Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093dc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+Running Hikari On Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floattidf.c/src/emscripten/system/lib/compiler-rt/lib/builtins/floatdisf.c
+
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Hikari Out
+Spend Time: Spend Time: 0.0001764s0.0001774
+s
+std::mt19937_64 seeded with current timestamp: 1680105619954
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatsidf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001671s
+std::mt19937_64 seeded with current timestamp: 1680105619956
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatsisf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001729s
+std::mt19937_64 seeded with current timestamp: 1680105619957
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatsitf.c
+std::mt19937_64 seeded with current timestamp: 1680105619958
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0009646s
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+std::mt19937_64 seeded with current timestamp: 1680105619959
+Running Hikari On Initializing Hikari Core with Revision ID:/src/emscripten/system/lib/compiler-rt/lib/builtins/floatditf.cdc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floattisf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001411s
+Hikari Out
+Spend Time: 0.0002038s
+std::mt19937_64 seeded with current timestamp: 1680105619960
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatdixf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001411s
+std::mt19937_64 seeded with current timestamp: 1680105619967
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floattitf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002136s
+std::mt19937_64 seeded with current timestamp: 1680105619983
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floattixf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001688s
+std::mt19937_64 seeded with current timestamp: 1680105620160
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatundisf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001674s
+std::mt19937_64 seeded with current timestamp: 1680105620161
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatundixf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001414s
+std::mt19937_64 seeded with current timestamp: 1680105620162
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatuntisf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001459s
+std::mt19937_64 seeded with current timestamp: 1680105620165
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatunditf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001583s
+std::mt19937_64 seeded with current timestamp: 1680105620171
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatundidf.c
+std::mt19937_64 seeded with current timestamp: 1680105620171
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/fp_mode.c
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: Failed To Link PreCompiled AntiHooking IR From:0.0001338/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bcs
+
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001018s
+std::mt19937_64 seeded with current timestamp: 1680105620171
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatuntixf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001383s
+std::mt19937_64 seeded with current timestamp: 1680105620172
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatuntidf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0012801s
+std::mt19937_64 seeded with current timestamp: 1680105620179
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatuntitf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001781s
+std::mt19937_64 seeded with current timestamp: 1680105620181
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatunsitf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001595s
+std::mt19937_64 seeded with current timestamp: 1680105620188
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatunsidf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001626s
+std::mt19937_64 seeded with current timestamp: 1680105620223
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/floatunsisf.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0019970s
+std::mt19937_64 seeded with current timestamp: 1680105620370
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/muldi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002069s
+std::mt19937_64 seeded with current timestamp: 1680105620379
+std::mt19937_64 seeded with current timestamp: 1680105620379
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/int_util.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001278s
+std::mt19937_64 seeded with current timestamp: 1680105620379
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/lshrdi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001314s
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/modsi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+std::mt19937_64 seeded with current timestamp: 1680105620381
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/modti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001781s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0017319std::mt19937_64 seeded with current timestamp: 1680105620382
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/mulodi4.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002248s
+s
+std::mt19937_64 seeded with current timestamp: 1680105620383
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/moddi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001795s
+std::mt19937_64 seeded with current timestamp: 1680105620384
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/mulosi4.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001605s
+std::mt19937_64 seeded with current timestamp: 1680105620388
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/muldc3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002737s
+std::mt19937_64 seeded with current timestamp: 1680105620389
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/lshrti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001178s
+std::mt19937_64 seeded with current timestamp: 1680105620395
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/muldf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0005248s
+std::mt19937_64 seeded with current timestamp: 1680105620455
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/muloti4.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002115s
+std::mt19937_64 seeded with current timestamp: 1680105620563
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/mulsc3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002422s
+std::mt19937_64 seeded with current timestamp: 1680105620579
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/multc3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002532s
+std::mt19937_64 seeded with current timestamp: 1680105620582
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/mulsf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0004668s
+std::mt19937_64 seeded with current timestamp: 1680105620594
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/multi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0003881s
+std::mt19937_64 seeded with current timestamp: 1680105620598
+std::mt19937_64 seeded with current timestamp: 1680105620599Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+std::mt19937_64 seeded with current timestamp: 1680105620599
+Initializing Hikari Core with Revision ID:
+dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/mulvsi3.c
+Running Hikari On Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/mulvti3.c/src/emscripten/system/lib/compiler-rt/lib/builtins/mulxc3.c
+
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001876s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001867s
+Hikari Out
+Spend Time: 0.0002089s
+std::mt19937_64 seeded with current timestamp: 1680105620603
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/negdf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001426s
+std::mt19937_64 seeded with current timestamp: 1680105620605
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/mulvdi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0013361s
+std::mt19937_64 seeded with current timestamp: 1680105620619
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/multf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0006301s
+std::mt19937_64 seeded with current timestamp: 1680105620650
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/negdi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000684s
+std::mt19937_64 seeded with current timestamp: 1680105620650
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/negsf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000875s
+std::mt19937_64 seeded with current timestamp: 1680105620764
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/negti2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000925s
+std::mt19937_64 seeded with current timestamp: 1680105620768
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/paritysi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+std::mt19937_64 seeded with current timestamp: 1680105620769
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Doing Post-Run Cleanup
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/popcountdi2.c
+Hikari Out
+Spend Time: 0.0001280s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001044s
+std::mt19937_64 seeded with current timestamp: 1680105620798
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/os_version_check.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0009768s
+std::mt19937_64 seeded with current timestamp: 1680105620803
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/paritydi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001380s
+std::mt19937_64 seeded with current timestamp: 1680105620810
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/parityti2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001142s
+std::mt19937_64 seeded with current timestamp: 1680105620811
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/negvsi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001242s
+std::mt19937_64 seeded with current timestamp: 1680105620812std::mt19937_64 seeded with current timestamp: 1680105620812
+
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093Initializing Hikari Core with Revision ID:
+dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/negvti2.c/src/emscripten/system/lib/compiler-rt/lib/builtins/negvdi2.c
+
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Hikari Out
+Spend Time: Spend Time: 0.0001085s
+0.0001087s
+std::mt19937_64 seeded with current timestamp: 1680105620915
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/popcountti2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001421s
+std::mt19937_64 seeded with current timestamp: 1680105620922
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/popcountsi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001383s
+std::mt19937_64 seeded with current timestamp: 1680105620929
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/powidf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001385s
+std::mt19937_64 seeded with current timestamp: 1680105620961
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/powisf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0014019s
+std::mt19937_64 seeded with current timestamp: 1680105621007
+std::mt19937_64 seeded with current timestamp: 1680105621007
+std::mt19937_64 seeded with current timestamp: 1680105621008Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/powixf2.c/src/emscripten/system/lib/compiler-rt/lib/builtins/subvsi3.c
+
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: Hikari Out
+Spend Time: 0.0001762s
+0.0001807s
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/subvdi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0013132s
+std::mt19937_64 seeded with current timestamp: 1680105621012
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/subsf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0008259s
+std::mt19937_64 seeded with current timestamp: 1680105621017
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/subvti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001335s
+std::mt19937_64 seeded with current timestamp: 1680105621028std::mt19937_64 seeded with current timestamp: 1680105621028
+
+Initializing Hikari Core with Revision ID:Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093dc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+Running Hikari On Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/subtf3.c/src/emscripten/system/lib/compiler-rt/lib/builtins/powitf2.c
+
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: Hikari Out
+Spend Time: 0.0001442s0.0001500
+s
+std::mt19937_64 seeded with current timestamp: 1680105621030
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/subdf3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001543s
+std::mt19937_64 seeded with current timestamp: 1680105621122
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/trampoline_setup.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001061s
+std::mt19937_64 seeded with current timestamp: 1680105621134
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/truncdfsf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+std::mt19937_64 seeded with current timestamp: 1680105621136
+Initializing Hikari Core with Revision ID:Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0018387s
+dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/truncdfhf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0020564s
+std::mt19937_64 seeded with current timestamp: 1680105621155
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/truncsfhf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0015037s
+std::mt19937_64 seeded with current timestamp: 1680105621223
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ucmpdi2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001655s
+std::mt19937_64 seeded with current timestamp: 1680105621226
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/ucmpti2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+std::mt19937_64 seeded with current timestamp: 1680105621228
+Hikari Out
+Spend Time: 0.0011888s
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/udivdi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0012295s
+std::mt19937_64 seeded with current timestamp: 1680105621233
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/udivmodsi4.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001419s
+std::mt19937_64 seeded with current timestamp: 1680105621235
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/trunctfhf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000958s
+std::mt19937_64 seeded with current timestamp: 1680105621236
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/udivmoddi4.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002835s
+std::mt19937_64 seeded with current timestamp: 1680105621239
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/trunctfdf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0003934s
+std::mt19937_64 seeded with current timestamp: 1680105621240
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/trunctfsf2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0005770s
+std::mt19937_64 seeded with current timestamp: 1680105621314
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/udivsi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001047s
+std::mt19937_64 seeded with current timestamp: 1680105621316
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/udivti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001009s
+std::mt19937_64 seeded with current timestamp: 1680105621327
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093std::mt19937_64 seeded with current timestamp: 1680105621327
+
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/udivmodti4.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093Doing Post-Run Cleanup
+
+Running Hikari On Hikari Out
+Spend Time: 0.0009022s
+/src/emscripten/system/lib/compiler-rt/lib/builtins/umoddi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0016232s
+std::mt19937_64 seeded with current timestamp: 1680105621439
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/emscripten_exception_builtins.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001538s
+std::mt19937_64 seeded with current timestamp: 1680105621468
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/__trap.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000725s
+std::mt19937_64 seeded with current timestamp: 1680105621470
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/umodti3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000784s
+std::mt19937_64 seeded with current timestamp: 1680105621472
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/lib/builtins/umodsi3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001073s
+std::mt19937_64 seeded with current timestamp: 1680105621474
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/compiler-rt/emscripten_setjmp.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001631s
+system_libs:INFO: compiled 175 inputs
+cache:INFO:  - ok
+std::mt19937_64 seeded with current timestamp: 1680105621741
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /tmp/tmp2m9xs75z.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0015085s
+std::mt19937_64 seeded with current timestamp: 1680105622668
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /tmp/tmpqar_0zg3.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000958s
+std::mt19937_64 seeded with current timestamp: 1680105623846
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /tmp/tmp07t0ae3j.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000906s
+cache:INFO:  - ok
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libGL.a... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/libGL.a" for subsequent builds)
+std::mt19937_64 seeded with current timestamp: 1680105624401
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/gl/libprocaddr.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000732s
+std::mt19937_64 seeded with current timestamp: 1680105624438
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/gl/webgl1.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0003281s
+std::mt19937_64 seeded with current timestamp: 1680105624534
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/gl/gl.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000987s
+system_libs:INFO: compiled 3 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libal.a... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/libal.a" for subsequent builds)
+std::mt19937_64 seeded with current timestamp: 1680105624680
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/al.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002041s
+system_libs:INFO: compiled 1 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libhtml5.a... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/libhtml5.a" for subsequent builds)
+std::mt19937_64 seeded with current timestamp: 1680105624882
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/html5/key_codes.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001237s
+std::mt19937_64 seeded with current timestamp: 1680105624883
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/html5/dom_pk_codes.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001225s
+system_libs:INFO: compiled 2 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libstubs-debug.a... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/libstubs-debug.a" for subsequent builds)
+std::mt19937_64 seeded with current timestamp: 1680105625125
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/emscripten_libc_stubs.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001929s
+std::mt19937_64 seeded with current timestamp: 1680105625127
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/emscripten_syscall_stubs.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002851s
+system_libs:INFO: compiled 2 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libnoexit.a... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/libnoexit.a" for subsequent builds)
+std::mt19937_64 seeded with current timestamp: 1680105625354
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/atexit_dummy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000689s
+system_libs:INFO: compiled 1 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/libc-debug.a... (this will be cached in "/src/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a" for subsequent builds)
+std::mt19937_64 seeded with current timestamp: 1680105625651
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_destroy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+std::mt19937_64 seeded with current timestamp: 1680105625653
+Hikari Out
+Spend Time: std::mt19937_64 seeded with current timestamp: 16801056256540.0012052s
+
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setschedparam.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000842s
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+std::mt19937_64 seeded with current timestamp: 1680105625654
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_cleanup_push.cstd::mt19937_64 seeded with current timestamp: 1680105625655
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setscope.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000913s
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_self.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001316s
+
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0029233s
+std::mt19937_64 seeded with current timestamp: 1680105625658
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+std::mt19937_64 seeded with current timestamp: 1680105625659
+Running Hikari On Initializing Hikari Core with Revision ID:/src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setinheritsched.cdc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setdetachstate.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bcDoing Post-Run Cleanup
+
+Hikari Out
+Spend Time: 0.0001330s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001283s
+std::mt19937_64 seeded with current timestamp: 1680105625660
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setstack.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000699s
+std::mt19937_64 seeded with current timestamp: 1680105625663
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_get.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001569s
+std::mt19937_64 seeded with current timestamp: 1680105625665
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setguardsize.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000894s
+std::mt19937_64 seeded with current timestamp: 1680105625676
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setstacksize.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001304s
+std::mt19937_64 seeded with current timestamp: 1680105625686
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_attr_setschedpolicy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001187s
+std::mt19937_64 seeded with current timestamp: 1680105625878
+std::mt19937_64 seeded with current timestamp: 1680105625878Initializing Hikari Core with Revision ID:
+dc9664d3ffbd6539efca6fbc18506fb7f8883093Initializing Hikari Core with Revision ID:
+dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/cnd_broadcast.c/src/emscripten/system/lib/libc/musl/src/thread/pthread_getconcurrency.c
+
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: Hikari Out
+Spend Time: 0.00012830.0001361ss
+
+std::mt19937_64 seeded with current timestamp: 1680105625881
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/cnd_init.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001116s
+std::mt19937_64 seeded with current timestamp: 1680105625885
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/tss_delete.c
+std::mt19937_64 seeded with current timestamp: 1680105625885Failed To Link PreCompiled AntiHooking IR From:
+/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bcInitializing Hikari Core with Revision ID:
+dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/tss_create.cDoing Post-Run Cleanup
+
+Hikari Out
+Spend Time: 0.0001256s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001070s
+std::mt19937_64 seeded with current timestamp: 1680105625886
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/call_once.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001154s
+std::mt19937_64 seeded with current timestamp: 1680105625889
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_setconcurrency.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0012035s
+std::mt19937_64 seeded with current timestamp: 1680105625897
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/cnd_destroy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001233s
+std::mt19937_64 seeded with current timestamp: 1680105625909
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_getschedparam.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000937s
+std::mt19937_64 seeded with current timestamp: 1680105625915
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_setschedprio.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001087s
+std::mt19937_64 seeded with current timestamp: 1680105625916
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/tss_set.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001080s
+std::mt19937_64 seeded with current timestamp: 1680105625919
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/pthread_getcpuclockid.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000963s
+std::mt19937_64 seeded with current timestamp: 1680105626079
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/mtx_destroy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0011840s
+std::mt19937_64 seeded with current timestamp: 1680105626082
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/cnd_wait.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: std::mt19937_64 seeded with current timestamp: 1680105626084
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/cnd_signal.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000870s
+0.0014327s
+std::mt19937_64 seeded with current timestamp: 1680105626089
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/cnd_timedwait.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0014606s
+std::mt19937_64 seeded with current timestamp: 1680105626093
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/mtx_timedlock.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001719s
+std::mt19937_64 seeded with current timestamp: 1680105626117
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/mtx_init.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001199s
+std::mt19937_64 seeded with current timestamp: 1680105626118
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/mtx_lock.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001063s
+std::mt19937_64 seeded with current timestamp: 1680105626119
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/thrd_exit.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000832s
+std::mt19937_64 seeded with current timestamp: 1680105626120
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/mtx_unlock.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000799s
+std::mt19937_64 seeded with current timestamp: 1680105626139
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/thrd_join.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0012963s
+std::mt19937_64 seeded with current timestamp: 1680105626157
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/mtx_trylock.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+std::mt19937_64 seeded with current timestamp: 1680105626157
+Hikari Out
+Initializing Hikari Core with Revision ID:Spend Time: dc9664d3ffbd6539efca6fbc18506fb7f8883093
+0.0001559s
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/thrd_create.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001068s
+std::mt19937_64 seeded with current timestamp: 1680105626290
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/thrd_yield.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001152s
+std::mt19937_64 seeded with current timestamp: 1680105626293
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/thread/thrd_sleep.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001543s
+std::mt19937_64 seeded with current timestamp: 1680105626295
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/pthread/proxying_stub.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0013242s
+std::mt19937_64 seeded with current timestamp: 1680105626315
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/pthread/pthread_self_stub.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001044s
+std::mt19937_64 seeded with current timestamp: 1680105626319
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_setsigmask.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001175s
+std::mt19937_64 seeded with current timestamp: 1680105626327
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawn_file_actions_addchdir.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001431s
+std::mt19937_64 seeded with current timestamp: 1680105626331
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/pthread/library_pthread_stub.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0007453s
+std::mt19937_64 seeded with current timestamp: 1680105626335
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_getflags.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001247s
+std::mt19937_64 seeded with current timestamp: 1680105626346
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/fexecve.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001297s
+std::mt19937_64 seeded with current timestamp: 1680105626350std::mt19937_64 seeded with current timestamp: 1680105626350std::mt19937_64 seeded with current timestamp: 1680105626350
+
+
+Initializing Hikari Core with Revision ID:Initializing Hikari Core with Revision ID:Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093dc9664d3ffbd6539efca6fbc18506fb7f8883093dc9664d3ffbd6539efca6fbc18506fb7f8883093
+
+
+Running Hikari On Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_init.c/src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_getpgroup.cRunning Hikari On 
+
+/src/emscripten/system/lib/libc/musl/src/process/posix_spawn_file_actions_destroy.c
+Failed To Link PreCompiled AntiHooking IR From:Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Doing Post-Run Cleanup
+Hikari Out
+Hikari Out
+Spend Time: Spend Time: 0.00009820.0001001ss
+
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001247s
+std::mt19937_64 seeded with current timestamp: 1680105626497
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_getsigmask.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0012887s
+std::mt19937_64 seeded with current timestamp: 1680105626505
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/waitpid.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0012250s
+std::mt19937_64 seeded with current timestamp: 1680105626513
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_sched.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0014291s
+std::mt19937_64 seeded with current timestamp: 1680105626521
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawn_file_actions_addfchdir.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001531s
+std::mt19937_64 seeded with current timestamp: 1680105626525
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_setflags.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001311s
+std::mt19937_64 seeded with current timestamp: 1680105626528
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/execvp.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002344s
+std::mt19937_64 seeded with current timestamp: 1680105626537
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawn_file_actions_addclose.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001490s
+std::mt19937_64 seeded with current timestamp: 1680105626571
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_destroy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000904s
+std::mt19937_64 seeded with current timestamp: 1680105626575
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/execl.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001092s
+std::mt19937_64 seeded with current timestamp: 1680105626575
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawn_file_actions_adddup2.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000744s
+std::mt19937_64 seeded with current timestamp: 1680105626581
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawn_file_actions_init.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000935s
+std::mt19937_64 seeded with current timestamp: 1680105626581
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_getsigdefault.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001042s
+std::mt19937_64 seeded with current timestamp: 1680105626760
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_setsigdefault.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001469s
+std::mt19937_64 seeded with current timestamp: 1680105626768
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawnattr_setpgroup.c
+std::mt19937_64 seeded with current timestamp: 1680105626768
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/fcntl/creat.c
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001304s
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001285s
+std::mt19937_64 seeded with current timestamp: 1680105626769
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/execlp.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001771s
+std::mt19937_64 seeded with current timestamp: 1680105626772
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/fcntl/posix_fadvise.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001478s
+std::mt19937_64 seeded with current timestamp: 1680105626773
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/posix_spawn_file_actions_addopen.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001633s
+std::mt19937_64 seeded with current timestamp: 1680105626773
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/fcntl/open.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001695s
+std::mt19937_64 seeded with current timestamp: 1680105626775
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/fcntl/fcntl.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002344s
+std::mt19937_64 seeded with current timestamp: 1680105626776
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/fcntl/openat.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0020750s
+std::mt19937_64 seeded with current timestamp: 1680105626788
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/execle.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001853s
+std::mt19937_64 seeded with current timestamp: 1680105626822
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/execv.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001180s
+std::mt19937_64 seeded with current timestamp: 1680105626847
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/process/wait.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001302s
+std::mt19937_64 seeded with current timestamp: 1680105626971
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/fcntl/posix_fallocate.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001285s
+std::mt19937_64 seeded with current timestamp: 1680105626978
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/env/setenv.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0014026s
+std::mt19937_64 seeded with current timestamp: 1680105626982
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/env/clearenv.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000868s
+std::mt19937_64 seeded with current timestamp: 1680105626983
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wcsdup.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001111s
+std::mt19937_64 seeded with current timestamp: 1680105626983
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/env/__environ.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001507s
+std::mt19937_64 seeded with current timestamp: 1680105626984
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/env/getenv.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001218s
+std::mt19937_64 seeded with current timestamp: 1680105626993
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/env/putenv.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0002079s
+std::mt19937_64 seeded with current timestamp: 1680105626999
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/env/unsetenv.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001264s
+std::mt19937_64 seeded with current timestamp: 1680105627013
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/env/secure_getenv.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0010021s
+std::mt19937_64 seeded with current timestamp: 1680105627042
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/strncasecmp.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001647s
+std::mt19937_64 seeded with current timestamp: 1680105627043
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/memrchr.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000734s
+std::mt19937_64 seeded with current timestamp: 1680105627045
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wcsncasecmp.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001287s
+std::mt19937_64 seeded with current timestamp: 1680105627159
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wcpcpy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001402s
+std::mt19937_64 seeded with current timestamp: 1680105627162
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/strpbrk.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001307s
+std::mt19937_64 seeded with current timestamp: 1680105627180
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/strerror_r.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001683s
+std::mt19937_64 seeded with current timestamp: 1680105627201
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wmemcmp.c
+std::mt19937_64 seeded with current timestamp: 1680105627201
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/strverscmp.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Failed To Link PreCompiled AntiHooking IR From:Hikari Out
+/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bcSpend Time: 
+0.0001287s
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001879s
+std::mt19937_64 seeded with current timestamp: 1680105627206
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/index.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001075s
+std::mt19937_64 seeded with current timestamp: 1680105627207
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wmemmove.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001397s
+std::mt19937_64 seeded with current timestamp: 1680105627210
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wcsstr.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0015106s
+std::mt19937_64 seeded with current timestamp: 1680105627246
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/strspn.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001502s
+std::mt19937_64 seeded with current timestamp: 1680105627250
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wcpncpy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001302s
+std::mt19937_64 seeded with current timestamp: 1680105627251
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/memccpy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001395s
+std::mt19937_64 seeded with current timestamp: 1680105627255
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/strsignal.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001397s
+std::mt19937_64 seeded with current timestamp: 1680105627318
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/wcslen.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0000770s
+std::mt19937_64 seeded with current timestamp: 1680105627383
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/strcspn.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001564s
+std::mt19937_64 seeded with current timestamp: 1680105627395
+Initializing Hikari Core with Revision ID:dc9664d3ffbd6539efca6fbc18506fb7f8883093
+Running Hikari On /src/emscripten/system/lib/libc/musl/src/string/stpcpy.c
+Failed To Link PreCompiled AntiHooking IR From:/root/Hikari/PrecompiledAntiHooking-unknown-unknown.bc
+Doing Post-Run Cleanup
+Hikari Out
+Spend Time: 0.0001886s

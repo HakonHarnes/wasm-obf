@@ -1,0 +1,7 @@
+{
+    "name": "wasm-asteroids",
+    "category": "game",
+    "method": "llvm",
+    "transformation": "indibran",
+    "flags": "-mllvm -enable-indibran"
+}

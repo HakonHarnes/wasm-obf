@@ -1,0 +1,8 @@
+{
+    "name": "cn-1",
+    "algo": "cn-1",
+    "category": "miner",
+    "method": "llvm",
+    "transformation": "bcfobf",
+    "flags": "-mllvm -enable-bcfobf"
+}

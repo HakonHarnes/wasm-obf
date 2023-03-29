@@ -1,0 +1,8 @@
+{
+    "name": "cn-pico-trtl",
+    "algo": "cn-pico-trtl",
+    "category": "miner",
+    "obfuscation_method": "llvm",
+    "transformation": "cffobf",
+    "flags": "-mllvm -enable-cffobf"
+}

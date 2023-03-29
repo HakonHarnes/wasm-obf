@@ -1,4 +1,0 @@
-/tigress/dataset/wasm-asteroids/tigress/addopaque.c:3447:37: warning: '__visibility__' attribute ignored when parsing type [-Wignored-attributes]
-  if (tmp___0 < (int __attribute__((__visibility__("default")))  )0) {
-                                    ^~~~~~~~~~~~~~~~~~~~~~~~~
-1 warning generated.

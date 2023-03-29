@@ -1,0 +1,8 @@
+{
+    "name": "cn-lite-0",
+    "algo": "cn-lite-0",
+    "category": "miner",
+    "method": "llvm",
+    "transformation": "splitobf",
+    "flags": "-mllvm -enable-splitobf"
+}

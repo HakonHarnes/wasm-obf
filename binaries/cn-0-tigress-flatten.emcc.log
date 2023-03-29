@@ -1,8 +1,0 @@
-/tigress/dataset/cn-0/tigress/flatten.c:8664:7: warning: variable 'tmp___0' set but not used [-Wunused-but-set-variable]
-  int tmp___0 ;
-      ^
-/tigress/dataset/cn-0/tigress/flatten.c:11359:7: warning: variable '_BARRIER_0' set but not used [-Wunused-but-set-variable]
-  int _BARRIER_0 ;
-      ^
-2 warnings generated.
-system_libs:WARNING: main() is in the input files, but "_main" is not in EXPORTED_FUNCTIONS, which means it may be eliminated as dead code. Export it if you want main() to run.

@@ -1,0 +1,8 @@
+{
+    "name": "cn-pico-trtl",
+    "algo": "cn-pico-trtl",
+    "category": "miner",
+    "method": "llvm",
+    "transformation": "constenc",
+    "flags": "-mllvm -enable-constenc"
+}

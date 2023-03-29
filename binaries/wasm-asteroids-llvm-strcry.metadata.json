@@ -1,0 +1,7 @@
+{
+    "name": "wasm-asteroids",
+    "category": "game",
+    "method": "llvm",
+    "transformation": "strcry",
+    "flags": "-mllvm -enable-strcry"
+}
