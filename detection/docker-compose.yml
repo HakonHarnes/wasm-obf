@@ -1,0 +1,25 @@
+version: "3"
+services:
+  miner-ray:
+    build: ./miner-ray
+    volumes:
+      - ./miner-ray/main.py:/miner-ray/main.py
+      - ./miner-ray/src:/miner-ray/src
+      - ../binaries:/miner-ray/binaries
+      - ../data/:/miner-ray/data
+      - ../utils/:/miner-ray/utils
+  minos:
+    build: ./minos
+    volumes:
+      - ./minos/main.py:/minos/main.py
+      - ../binaries:/minos/binaries
+      - ../data/:/minos/data
+      - ../utils/:/minos/utils
+  virustotal:
+    build: ./virustotal
+    volumes:
+      - ./virustotal/main.py:/virustotal/main.py
+      - ./virustotal/.env:/virustotal/.env
+      - ../binaries:/virustotal/binaries
+      - ../data/:/virustotal/data
+      - ../utils/:/virustotal/utils
