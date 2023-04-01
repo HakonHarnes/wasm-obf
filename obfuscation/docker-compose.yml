@@ -7,6 +7,7 @@ services:
       - ./tigress/main.py:/app/main.py
       - ../dataset/:/app/dataset
       - ../binaries:/app/binaries
+      - ../mongodb/utils.py:/app/mongodb/utils.py
     environment:
       - BINARY_PATH=/app/binaries
       - DATASET_PATH=/app/dataset

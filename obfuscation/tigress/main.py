@@ -3,6 +3,7 @@ import os
 
 from enum import Enum
 from termcolor import colored
+from mongodb.utils import upsert_metadata, upsert_entry, get_data_in_collection, get_unobfuscated_files
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -79,24 +80,11 @@ def get_emcc_out(path, transformation):
     return os.path.join(binary_path, f'{binary_name}')
 
 
-def write_metadata_file(emcc_out, metadata_in, transformation):
-    with open(metadata_in, 'r') as f:
-        metadata = json.load(f)
-
-    metadata['obfuscation_method'] = 'tigress'
-    metadata['transformation'] = transformation
-
-    metadata_out = emcc_out.replace('.html', '.metadata.json')
-    with open(metadata_out, 'w') as f:
-        json.dump(metadata, f, indent=4)
-
-
-def run_emcc(path, transformation):
+def run_emcc(file, transformation):
+    path = os.path.join(dataset_path, file.replace('.wasm', ''))
 
     # get emscripten output file
     emcc_out = get_emcc_out(path, transformation)
-    if os.path.exists(emcc_out):
-        return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
     # get build script
     script = os.path.join(path, 'build.sh')
@@ -110,11 +98,6 @@ def run_emcc(path, transformation):
         if file_size < 5:
             return {'desc': f'Build: {file_in}', 'size': f'Size: {file_size}', 'code': 1}
 
-    # get metadata file
-    metadata_in = os.path.join(path, 'metadata.json')
-    if not os.path.exists(metadata_in):
-        return {'desc': f'Missing metadata: {metadata_in}', 'code': 1}
-
     # log file
     log_file = emcc_out.replace('.html', '.emcc.log')
 
@@ -122,19 +105,28 @@ def run_emcc(path, transformation):
     code = os.system(
         f'/bin/sh {script} {file_in} {emcc_out} > {log_file} 2>&1')
 
-    write_metadata_file(emcc_out, metadata_in, transformation)
-
     # check output file size
+    binary_out = emcc_out.replace('.html', '.wasm')
     if os.path.exists(emcc_out):
-        binary_out = emcc_out.replace('.html', '.wasm')
         binary_size = os.path.getsize(binary_out)
         if binary_size < 5:
             return {'desc': f'Build: {binary_out}', 'size': f'Size: {binary_size}', 'code': 1}
 
+    # write data to db
+    if code == 0:
+        data = {
+            'file': os.path.basename(emcc_out.replace('html', 'wasm')),
+            'unobfuscated_file': file,
+            'transformation': transformation,
+        }
+        upsert_entry('tigress', {'file': os.path.basename(
+            emcc_out), 'transformation': transformation}, data)
+
     return {'desc': f'Build: {path} {transformation}', 'code': code}
 
 
-def run_tigress(path, transformation):
+def run_tigress(file, transformation):
+    path = os.path.join(dataset_path, file.replace('.wasm', ''))
 
     # get emscripten output and check if it already exists
     emcc_out = get_emcc_out(path, transformation)
@@ -171,27 +163,29 @@ def run_tigress(path, transformation):
 def main():
     errors = []
 
+    files = get_unobfuscated_files('tigress')
+    if len(files) == 0:
+        print('No files to obfuscate.')
+        return
+
     count = 0
-    for dir in os.listdir(dataset_path):
-        path = os.path.join(dataset_path, dir)
+    for file in files:
         count += 1
-        print_file(count, len(os.listdir(dataset_path)),
-                   os.path.basename(path))
+        print_file(count, len(files), file)
         for transformation in transformations:
             transformation = transformation.lower()
-            obf_result = run_tigress(path, transformation)
+            obf_result = run_tigress(file, transformation)
             print_result(obf_result)
             if obf_result['code'] != 0:
                 errors.append(obf_result)
                 continue
 
-            build_result = run_emcc(path, transformation)
+            build_result = run_emcc(file, transformation)
             print_result(build_result)
             if build_result['code'] != 0:
                 errors.append(build_result)
-                continue
 
-    print(colored(f'\n{len(errors)} ERRORS', 'blue'))
+    print(colored(f'\n{len(errors)} errors', 'red'))
     for error in errors:
         print_result(error)
 

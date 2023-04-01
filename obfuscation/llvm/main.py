@@ -71,17 +71,15 @@ def run_emcc(file, transformation):
         f'/bin/sh {script} {file_in} {emcc_out} {transformation["flags"]} > {log_file} 2>&1')
 
     # write data to db
-    data = {
-        'file': os.path.basename(emcc_out.replace('html', 'wasm')),
-        'unobfuscated_file': file,
-        'transformation': transformation['name'],
-        'flags': transformation['flags'],
-        'code': code,
-        'log_file': log_file
-    }
-
-    upsert_entry('llvm', {'file': os.path.basename(
-        emcc_out), 'transformation': transformation['name']}, data)
+    if code == 0:
+        data = {
+            'file': os.path.basename(emcc_out.replace('html', 'wasm')),
+            'unobfuscated_file': file,
+            'transformation': transformation['name'],
+            'flags': transformation['flags'],
+        }
+        upsert_entry('llvm', {'file': os.path.basename(
+            emcc_out), 'transformation': transformation['name']}, data)
 
     return {'desc': f'Build: {emcc_out}', 'code': code}
 
