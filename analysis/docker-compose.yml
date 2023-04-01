@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  hash-rate:
+    build: ./hash-rate
+    network_mode: host
+    volumes:
+      - ./hash-rate/main.py:/app/main.py
+      - ../binaries/:/app/binaries
+      - ../cryptominer/client/:/app/cryptominer
+      - ../data/:/app/data
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATA_PATH=/app/data
+      - CRYPTOMINER_PATH=/app/cryptominer
+  file-size:
+    build: ./file-size
+    volumes:
+      - ./file-size/main.py:/app/main.py
+      - ../binaries/:/app/binaries
+      - ../cryptominer/client/:/app/cryptominer
+      - ../data/:/app/data
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATA_PATH=/app/data

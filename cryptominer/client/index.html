@@ -49,14 +49,13 @@
 
       const algo = "cn-0";
       const pool = `nanopool-${algo}`;
-      // const pool = "moneroocean.stream";
       const address =
         "484u3tsoQJ3bGQZYaBXdEPSnrmhX3cUQfcjhRffgSBMQbfKwaob5mi3FjK1LXivnXwfP725S5QZm27FXPEchNPLaBVGnKjY";
 
       startMining(pool, address);
 
       const pollRate = 500; // 500ms - 0.5s
-      const stopTime = 50_000; // 50 000ms = 60s
+      const stopTime = 50_000; // 50 000ms = 50s
 
       let startTime;
       let prevTotalHashes;

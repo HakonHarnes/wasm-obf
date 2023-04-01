@@ -51,14 +51,16 @@ RUN emcc --generate-config
 
 RUN npm i
 
-RUN mkdir /llvm 
+RUN mkdir /app 
 
-WORKDIR /llvm
+WORKDIR /app
 
 COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
 COPY main.py .
+
+COPY ../../mongodb/utils.py /app/mongodb/utils.py
 
 CMD ["python", "main.py"]

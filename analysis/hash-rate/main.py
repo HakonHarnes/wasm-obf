@@ -9,10 +9,9 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-binaries_path = os.path.join(dir_path, 'binaries')
-cryptominer_path = os.path.join(dir_path, 'cryptominer')
-data_path = os.path.join(dir_path, 'data')
+cryptominer_path = os.environ['CRYPTOMINER_PATH']
+binary_path = os.environ['BINARY_PATH']
+data_path = os.environ['DATA_PATH']
 
 
 class Algorithm(Enum):

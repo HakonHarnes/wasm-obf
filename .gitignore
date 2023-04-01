@@ -1,6 +1,6 @@
 __pycache__
 node_modules 
-binaries
+binaries/*
 cryptominer/client/src/cn-*
 
 *.png

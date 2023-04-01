@@ -1,5 +1,5 @@
 {
-  "name": "cn-rwz",
+  "file": "cn-rwz.wasm.wasm",
   "algo": "cn-rwz",
   "category": "miner"
 }

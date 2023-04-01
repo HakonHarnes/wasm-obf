@@ -2,9 +2,11 @@ import os
 import json
 
 from termcolor import colored
+from mongodb.utils import upsert_metadata, upsert_entry, get_data_in_collection, get_unobfuscated_files
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
+
 
 transformations = [
     {'name': 'bcfobf', 'flags': '-mllvm -enable-bcfobf'},
@@ -45,25 +47,11 @@ def get_file_in(path):
     return os.path.join(path, f'{program_name}.c')
 
 
-def write_metadata_file(emcc_out, metadata_in, transformation):
-    with open(metadata_in, 'r') as f:
-        metadata = json.load(f)
-
-    metadata['obfuscation_method'] = 'llvm'
-    metadata['transformation'] = transformation['name']
-    metadata['flags'] = transformation['flags']
-
-    metadata_out = emcc_out.replace('.html', '.metadata.json')
-    with open(metadata_out, 'w') as f:
-        json.dump(metadata, f, indent=4)
-
-
-def run_emcc(path, transformation):
+def run_emcc(file, transformation):
+    path = os.path.join(dataset_path, file.replace('.wasm', ''))
 
     # get emscripten output file
     emcc_out = get_emcc_out(path, transformation)
-    if os.path.exists(emcc_out):
-        return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
     # get input file
     file_in = get_file_in(path)
@@ -75,11 +63,6 @@ def run_emcc(path, transformation):
     if not os.path.exists(script):
         return {'desc': f'Missing script: {script}', 'code': 1}
 
-    # get metadata file
-    metadata_in = os.path.join(path, 'metadata.json')
-    if not os.path.exists(metadata_in):
-        return {'desc': f'Missing metadata: {metadata_in}', 'code': 1}
-
     # log file name
     log_file = emcc_out.replace('.html', '.emcc.log')
 
@@ -87,8 +70,18 @@ def run_emcc(path, transformation):
     code = os.system(
         f'/bin/sh {script} {file_in} {emcc_out} {transformation["flags"]} > {log_file} 2>&1')
 
-    # write metadata file
-    write_metadata_file(emcc_out, metadata_in, transformation)
+    # write data to db
+    data = {
+        'file': os.path.basename(emcc_out.replace('html', 'wasm')),
+        'unobfuscated_file': file,
+        'transformation': transformation['name'],
+        'flags': transformation['flags'],
+        'code': code,
+        'log_file': log_file
+    }
+
+    upsert_entry('llvm', {'file': os.path.basename(
+        emcc_out), 'transformation': transformation['name']}, data)
 
     return {'desc': f'Build: {emcc_out}', 'code': code}
 
@@ -96,20 +89,23 @@ def run_emcc(path, transformation):
 def main():
     errors = []
 
+    files = get_unobfuscated_files('llvm')
+    if len(files) == 0:
+        print('No files to obfuscate.')
+        return
+
     count = 0
-    for dir in os.listdir(dataset_path):
-        path = os.path.join(dataset_path, dir)
+    for file in files:
         count += 1
-        print_file(count, len(os.listdir(dataset_path)),
-                   os.path.basename(path))
+        print_file(count, len(files), file)
         for transformation in transformations:
-            result = run_emcc(path, transformation)
+            result = run_emcc(file, transformation)
             print_result(result)
             if result['code'] != 0:
                 errors.append(result)
                 continue
 
-    print(colored(f'\n{len(errors)} ERRORS', 'blue'))
+    print(colored(f'\n{len(errors)} ERRORS', 'red'))
     for error in errors:
         print_result(error)
 

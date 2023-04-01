@@ -6,9 +6,8 @@ import json
 from enum import Enum
 
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-binaries_path = os.path.join(dir_path, 'binaries')
-data_path = os.path.join(dir_path, 'data')
+binary_path = os.environ['BINARY_PATH']
+data_path = os.environ['DATA_PATH']
 
 
 class Algorithm(Enum):
@@ -25,7 +24,7 @@ class Algorithm(Enum):
 
 
 def get_files():
-    return sorted(glob.glob(f'{binaries_path}/*/cn*.wasm'))
+    return sorted(glob.glob(f'{binary_path}/*/cn*.wasm'))
 
 
 def measure_file_size(file):

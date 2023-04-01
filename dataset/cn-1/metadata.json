@@ -1,5 +1,5 @@
 {
-  "name": "cn-1",
+  "file": "cn-1.wasm",
   "algo": "cn-1",
   "category": "miner"
 }

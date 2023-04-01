@@ -4,18 +4,26 @@ services:
   tigress:
     build: ./tigress
     volumes:
-      - ./tigress/main.py:/tigress/main.py
-      - ../dataset/:/tigress/dataset
-      - ../binaries:/tigress/binaries
+      - ./tigress/main.py:/app/main.py
+      - ../dataset/:/app/dataset
+      - ../binaries:/app/binaries
     environment:
-      - BINARY_PATH=/tigress/binaries
-      - DATASET_PATH=/tigress/dataset
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
   llvm:
     build: ./llvm
     volumes:
-      - ./llvm/main.py:/llvm/main.py
-      - ../dataset/:/llvm/dataset
-      - ../binaries:/llvm/binaries
+      - ./llvm/main.py:/app/main.py
+      - ../dataset/:/app/dataset
+      - ../binaries:/app/binaries
+      - ../mongodb/utils.py:/app/mongodb/utils.py
     environment:
-      - BINARY_PATH=/llvm/binaries
-      - DATASET_PATH=/llvm/dataset
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+networks:
+  db_network:
+    external: true

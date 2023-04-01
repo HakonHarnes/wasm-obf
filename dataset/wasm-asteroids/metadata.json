@@ -1,4 +1,4 @@
 {
-  "name": "wasm-asteroids",
+  "file": "wasm-asteroids.wasm",
   "category": "game"
 }

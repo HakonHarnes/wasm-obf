@@ -5,14 +5,14 @@ RUN pacman -Syu --noconfirm && \
   pacman -S --noconfirm python nodejs npm redis wabt && \
   rm -rf /var/cache/pacman/pkg/*
 
-WORKDIR /miner-ray
+WORKDIR /app
 
 COPY . .
 
-WORKDIR /miner-ray/src
+WORKDIR /app/src
 
-RUN npm install 
+RUN npm i 
 
-WORKDIR /miner-ray
+WORKDIR /app
 
 CMD ["sh", "-c", "redis-server --daemonize yes && python main.py"]

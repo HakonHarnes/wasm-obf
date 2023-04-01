@@ -4,26 +4,26 @@ services:
   miner-ray:
     build: ./miner-ray
     volumes:
-      - ./miner-ray/main.py:/miner-ray/main.py
-      - ./miner-ray/src:/miner-ray/src
-      - ../binaries:/miner-ray/binaries
-      - ../data/:/miner-ray/data
-      - ../utils/:/miner-ray/utils
+      - ./miner-ray/main.py:/app/main.py
+      - ./miner-ray/src:/app/src
+      - ../binaries:/app/binaries
+      - ../data/:/app/data
+      - ../utils/:/app/utils
   minos:
     build: ./minos
     volumes:
-      - ./minos/main.py:/minos/main.py
-      - ../binaries:/minos/binaries
-      - ../data/:/minos/data
-      - ../utils/:/minos/utils
+      - ./minos/main.py:/app/main.py
+      - ../binaries:/app/binaries
+      - ../data/:/app/data
+      - ../utils/:/app/utils
     environment:
-      - BINARY_PATH=/minos/binaries
-      - DATA_PATH=/minos/data
+      - BINARY_PATH=/app/binaries
+      - DATA_PATH=/app/data
   virustotal:
     build: ./virustotal
     volumes:
-      - ./virustotal/main.py:/virustotal/main.py
-      - ./virustotal/.env:/virustotal/.env
-      - ../binaries:/virustotal/binaries
-      - ../data/:/virustotal/data
-      - ../utils/:/virustotal/utils
+      - ./virustotal/main.py:/app/main.py
+      - ./virustotal/.env:/app/.env
+      - ../binaries:/app/binaries
+      - ../data/:/app/data
+      - ../utils/:/app/utils
