@@ -1,14 +1,27 @@
-from utils.file_utils import get_unanalyzed_binaries, get_metadata_filename, write_json
 import subprocess
 import json
 import os
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-binary_path = f'{dir_path}/binaries'
-metadata_path = f'{dir_path}/data'
+from termcolor import colored
+from mongodb.utils import get_unanalyzed_files, upsert_metadata, update_entry
 
+binary_path = os.environ['BINARY_PATH']
+dataset_path = os.environ['DATASET_PATH']
 
 WAT_FILE = "module.wat"
+
+
+def print_result(malicious):
+    color = 'red' if malicious else 'green'
+    print("Malicious:", colored(malicious, color))
+
+
+def print_file(count, length, file, color='blue'):
+    print(colored(f'\n[{count}/{length}] Processing {file}', color))
+
+
+def print_error(error):
+    print(colored(f"Error: {error}", 'red'))
 
 
 def run_miner_ray(file):
@@ -16,7 +29,7 @@ def run_miner_ray(file):
         print('Converting to wat file')
         subprocess.check_output(f"wasm2wat {file} -o {WAT_FILE}", shell=True)
     except subprocess.CalledProcessError as e:
-        print(f"Error: {e.output.decode('utf-8')}")
+        print_error(e.output.decode('utf-8'))
         return {'malicous': False, 'error': 'wasm2wat failed'}
 
     print('Running miner-ray')
@@ -25,45 +38,43 @@ def run_miner_ray(file):
         output = subprocess.check_output(
             command, shell=True, stderr=subprocess.STDOUT, timeout=120).decode('utf-8')
 
+        print(output)
+
         if 'error' in output.lower():
+            print_error('MinerRay failed')
             return {'malicous': False, 'error': 'MinerRay failed'}
 
         output = json.loads(output)
         return {'malicous': len(output['certain']) > 0, 'error': None, 'output': output}
     except subprocess.CalledProcessError:
+        print_error('MinerRay failed')
         return {'malicous': False, 'error': 'MinerRay failed'}
     except subprocess.TimeoutExpired:
-        print("Error: Command timed out")
+        print_error('Command timed out')
         return {'malicous': False, 'error': 'Timeout'}
 
 
-if __name__ == "__main__":
-    binaries = get_unanalyzed_binaries(binary_path, metadata_path, "miner-ray")
-    if not binaries:
-        print("No binaries to analyze!")
-        exit(0)
+def main():
+    upsert_metadata(dataset_path)
+    files = get_unanalyzed_files('miner_ray')
+    if len(files) == 0:
+        print("No binaries to analyze.")
+        return
 
-    for i, binary in enumerate(binaries):
-        input_path = os.path.join(binary["path"], binary["filename"])
-        print(f'\nProcessing [{i}/{len(binaries)}] {input_path}')
-
-        result = run_miner_ray(input_path)
-        print(result)
-
-        metadata_filename = get_metadata_filename(
-            binary["filename"], "miner-ray")
-        output_path = os.path.join(metadata_path, metadata_filename)
+    for i, file in enumerate(files):
+        print_file(i + 1, len(files), file)
+        result = run_miner_ray(os.path.join(binary_path, file))
+        malicious = result['malicous']
+        print_result(malicious)
 
         data = {
-            "method": "miner-ray",
-            "malicious": result['malicous'],
-
-            "input": {
-                "path": binary["path"],
-                "filename": binary["filename"]
-            },
+            'miner_ray': {
+                'result': malicious,
+                'error': result['error'],
+            }
         }
+        update_entry({'file': file}, data)
 
-        data.update(result)
 
-        write_json(output_path, data)
+if __name__ == '__main__':
+    main()

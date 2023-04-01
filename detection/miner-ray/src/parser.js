@@ -232,6 +232,7 @@ class Operation extends StackValue {
     const right = this.rValue;
 
     if (
+      this.lValue &&
       this.lValue.isIMM() &&
       (this.rValue == null || (this.rValue != null && this.rValue.isIMM()))
     ) {
@@ -415,7 +416,7 @@ class Operation extends StackValue {
         default:
           return this;
       }
-    } else if (left.isOP() && right != null) {
+    } else if (left && left.isOP() && right != null) {
       if (this.operator == "sub") {
         if (left.operator == "add") {
           if (lodash.isEqual(left.lValue, right)) {
@@ -3888,7 +3889,6 @@ function onLineReadForAbstraction(line) {
           break;
         case TOKENS.END_TOKEN:
           if (lineNumber == 45251) {
-            console.log("HEre");
           }
           Simulator.handleEnd();
           break;
@@ -3903,7 +3903,6 @@ function onLineReadForAbstraction(line) {
           break;
         case TOKENS.br_if:
           if (lineNumber == 45250) {
-            console.log("HEre");
           }
           Simulator.handleBrIf();
           break;

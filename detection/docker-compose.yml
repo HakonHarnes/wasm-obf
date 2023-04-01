@@ -7,9 +7,11 @@ services:
       - ./miner-ray/main.py:/app/main.py
       - ./miner-ray/src:/app/src
       - ../binaries:/app/binaries
+      - ../dataset:/app/dataset
       - ../mongodb/utils.py:/app/mongodb/utils.py
     environment:
       - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
     networks:
       - db_network
   minos:

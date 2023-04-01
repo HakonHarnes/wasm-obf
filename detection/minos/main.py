@@ -20,7 +20,8 @@ def print_file(count, length, file, color='blue'):
 
 def run_minos(file):
     path = os.path.join(binary_path, file)
-    status = os.system(f"python src/minio.py {path}")
+    status = os.system(f"python src/minio.py {path} >/dev/null 2>&1")
+    malicious = status != 0
 
     if status > 1:
         print("Error while running minos.")
@@ -28,11 +29,11 @@ def run_minos(file):
 
     # encode(file, "./data/img")
     data = {
-        'minos': status
+        'minos': malicious
     }
     update_entry({'file': file}, data)
 
-    return status != 0
+    return malicious
 
 
 def main():
@@ -49,4 +50,6 @@ def main():
 
 
 if __name__ == "__main__":
+    clear_field('minos')
+    clear_field('miner_ray')
     main()
