@@ -2,4 +2,4 @@ vt-py
 requests
 termcolor
 python-dotenv
-
+pymongo

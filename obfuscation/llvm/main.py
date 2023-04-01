@@ -92,10 +92,8 @@ def main():
         print('No files to obfuscate.')
         return
 
-    count = 0
-    for file in files:
-        count += 1
-        print_file(count, len(files), file)
+    for i, file in enumerate(files):
+        print_file(i + 1, len(files), file)
         for transformation in transformations:
             result = run_emcc(file, transformation)
             print_result(result)

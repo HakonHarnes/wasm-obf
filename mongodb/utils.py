@@ -38,10 +38,30 @@ def get_data_in_collection(collection_name):
     return data
 
 
+def clear_field(field, collections=None):
+    if collections is None:
+        collections = ['unobfuscated', 'llvm', 'tigress']
+
+    for collection_name in collections:
+        collection = db[collection_name]
+        result = collection.update_many({}, {"$unset": {field: ""}})
+        print(colored(
+            f"Removed field '{field}' from {result.modified_count} documents in the '{collection_name}' collection", "yellow"))
+
+
 def upsert_entry(collection_name, filter_, data):
     collection = db[collection_name]
     update_ = {"$set": data}
     result = collection.update_one(filter_, update_, upsert=True)
+    return result
+
+
+def update_entry(filter_, data):
+    result = None
+    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+        collection = db[collection_name]
+        update_ = {"$set": data}
+        result = collection.update_one(filter_, update_)
     return result
 
 
@@ -62,3 +82,20 @@ def get_unobfuscated_files(obfuscation_method):
     # Extract the file names from the documents
     unobfuscated_files = [doc['file'] for doc in unobfuscated_documents]
     return unobfuscated_files
+
+
+def get_unanalyzed_files(analysis_method):
+    unanalyzed_files = []
+
+    # Iterate over the collections to be checked
+    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+        collection = db[collection_name]
+
+        # Find documents that don't have the analysis_method field
+        unanalyzed_documents = list(collection.find(
+            {analysis_method: {'$exists': False}}, projection={'_id': 0}))
+
+        # Extract the file names from the documents
+        unanalyzed_files.extend([doc['file'] for doc in unanalyzed_documents])
+
+    return unanalyzed_files

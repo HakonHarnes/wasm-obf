@@ -7,3 +7,4 @@ Pillow
 scikit_learn
 tensorflow
 termcolor
+pymongo
