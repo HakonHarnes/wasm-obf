@@ -1,8 +1,7 @@
 import os
-import json
 
 from termcolor import colored
-from mongodb.utils import upsert_metadata, upsert_entry, get_data_in_collection, get_unobfuscated_files
+from mongodb.utils import upsert_metadata, upsert_entry, get_unobfuscated_files
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -87,6 +86,7 @@ def run_emcc(file, transformation):
 def main():
     errors = []
 
+    upsert_metadata(dataset_path)
     files = get_unobfuscated_files('llvm')
     if len(files) == 0:
         print('No files to obfuscate.')

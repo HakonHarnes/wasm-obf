@@ -1,4 +1,3 @@
-import json
 import os
 
 from enum import Enum
@@ -163,6 +162,7 @@ def run_tigress(file, transformation):
 def main():
     errors = []
 
+    upsert_metadata(dataset_path)
     files = get_unobfuscated_files('tigress')
     if len(files) == 0:
         print('No files to obfuscate.')
