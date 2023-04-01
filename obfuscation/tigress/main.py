@@ -129,8 +129,6 @@ def run_tigress(file, transformation):
 
     # get emscripten output and check if it already exists
     emcc_out = get_emcc_out(path, transformation)
-    if os.path.exists(emcc_out):
-        return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
     # get tigress script
     script = os.path.join(path, 'tigress', f'{transformation}.sh')

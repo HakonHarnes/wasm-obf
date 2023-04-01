@@ -32,9 +32,11 @@ services:
       - ./virustotal/main.py:/app/main.py
       - ./virustotal/.env:/app/.env
       - ../binaries:/app/binaries
+      - ../dataset/:/app/dataset
       - ../mongodb/utils.py:/app/mongodb/utils.py
     environment:
       - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
     networks:
       - db_network
 networks:
