@@ -13,7 +13,7 @@ WAT_FILE = "module.wat"
 
 def print_result(malicious):
     color = 'red' if malicious else 'green'
-    print("Malicious:", colored(malicious, color))
+    print("Result:", colored(malicious, color))
 
 
 def print_file(count, length, file, color='blue'):
@@ -30,7 +30,7 @@ def run_miner_ray(file):
         subprocess.check_output(f"wasm2wat {file} -o {WAT_FILE}", shell=True)
     except subprocess.CalledProcessError as e:
         print_error(e.output.decode('utf-8'))
-        return {'malicous': False, 'error': 'wasm2wat failed'}
+        return {'malicous': 0, 'error': 'wasm2wat failed'}
 
     print('Running miner-ray')
     command = f'node --expose-gc --max-old-space-size=8192 src/parser.js --file {WAT_FILE}'
@@ -42,16 +42,16 @@ def run_miner_ray(file):
 
         if 'error' in output.lower():
             print_error('MinerRay failed')
-            return {'malicous': False, 'error': 'MinerRay failed'}
+            return {'malicous': 0, 'error': 'MinerRay failed'}
 
         output = json.loads(output)
         return {'malicous': len(output['certain']) > 0, 'error': None, 'output': output}
     except subprocess.CalledProcessError:
         print_error('MinerRay failed')
-        return {'malicous': False, 'error': 'MinerRay failed'}
+        return {'malicous': 0, 'error': 'MinerRay failed'}
     except subprocess.TimeoutExpired:
         print_error('Command timed out')
-        return {'malicous': False, 'error': 'Timeout'}
+        return {'malicous': 0, 'error': 'Timeout'}
 
 
 def main():

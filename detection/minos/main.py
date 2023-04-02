@@ -11,7 +11,7 @@ dataset_path = os.environ['DATASET_PATH']
 
 def print_result(malicious):
     color = 'red' if malicious else 'green'
-    print("Malicious:", colored(malicious, color))
+    print("Result:", colored(malicious, color))
 
 
 def print_file(count, length, file, color='blue'):
@@ -21,7 +21,6 @@ def print_file(count, length, file, color='blue'):
 def run_minos(file):
     path = os.path.join(binary_path, file)
     status = os.system(f"python src/minio.py {path} >/dev/null 2>&1")
-    malicious = status != 0
 
     if status > 1:
         print("Error while running minos.")
@@ -29,11 +28,13 @@ def run_minos(file):
 
     # encode(file, "./data/img")
     data = {
-        'minos': malicious
+        'minos': {
+            'result': status
+        }
     }
     update_entry({'file': file}, data)
 
-    return malicious
+    return status
 
 
 def main():
@@ -45,11 +46,9 @@ def main():
 
     for i, file in enumerate(files):
         print_file(i + 1, len(files), file)
-        malicious = run_minos(file)
-        print_result(malicious)
+        status = run_minos(file)
+        print_result(status)
 
 
 if __name__ == "__main__":
-    clear_field('minos')
-    clear_field('miner_ray')
     main()
