@@ -19,7 +19,13 @@ services:
       - ./file-size/main.py:/app/main.py
       - ../binaries/:/app/binaries
       - ../cryptominer/client/:/app/cryptominer
-      - ../data/:/app/data
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+      - ../dataset/:/app/dataset
     environment:
       - BINARY_PATH=/app/binaries
-      - DATA_PATH=/app/data
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+networks:
+  db_network:
+    external: true

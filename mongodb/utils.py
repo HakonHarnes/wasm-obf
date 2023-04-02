@@ -99,3 +99,19 @@ def get_unanalyzed_files(analysis_method):
         unanalyzed_files.extend([doc['file'] for doc in unanalyzed_documents])
 
     return unanalyzed_files
+
+
+def get_all_files():
+    files = []
+    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+        collection = db[collection_name]
+        files.extend(list(collection.distinct('file')))
+    return files
+
+
+def get_all_entries():
+    entries = []
+    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+        collection = db[collection_name]
+        entries.extend(list(collection.find({}, projection={'_id': 0})))
+    return entries
