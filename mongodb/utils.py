@@ -34,7 +34,7 @@ def get_documents():
     documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress']:
         collection = db[collection_name]
-        documents = list(collection.find())
+        documents.extend(list(collection.find()))
     return documents
 
 
