@@ -102,7 +102,8 @@ def analyze_files(api_key, documents):
     # Check remaining analysis results
     while analysis_ids and len(analysis_ids) > 0 and not api_error:
         time.sleep(10)
-        for analysis_id in analysis_ids:
+        for i, analysis_id in enumerate(analysis_ids):
+            print(f'[{i+1}/{len(analysis_ids)}]', end=' ')
             file, api_error = check_scan_results(
                 client, analysis_id, file_hash)
             if file is not None:
