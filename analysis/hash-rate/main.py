@@ -62,7 +62,7 @@ def move_files_to_miner(wasm_file, js_file):
 
 
 def get_cryptomining_files():
-    wasm_files = sorted(glob.glob(f'{binaries_path}/*/cn*.wasm'))
+    wasm_files = sorted(glob.glob(f'{binary_path}/*/cn*.wasm'))
 
     files = []
     for wasm_file in wasm_files:

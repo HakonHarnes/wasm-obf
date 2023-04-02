@@ -2,7 +2,7 @@ import os
 
 from enum import Enum
 from termcolor import colored
-from mongodb.utils import upsert_metadata, upsert_entry, get_data_in_collection, get_unobfuscated_files
+from mongodb.utils import update_metadata, add_document, get_unobfuscated_documents
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -79,7 +79,8 @@ def get_emcc_out(path, transformation):
     return os.path.join(binary_path, f'{binary_name}')
 
 
-def run_emcc(file, transformation):
+def run_emcc(document, transformation):
+    file = document['file']
     path = os.path.join(dataset_path, file.replace('.wasm', ''))
 
     # get emscripten output file
@@ -116,10 +117,10 @@ def run_emcc(file, transformation):
         data = {
             'file': os.path.basename(emcc_out.replace('html', 'wasm')),
             'unobfuscated_file': file,
+            'category': document['category'],
             'transformation': transformation,
         }
-        upsert_entry('tigress', {'file': os.path.basename(
-            emcc_out), 'transformation': transformation}, data)
+        add_document('tigress', data)
 
     return {'desc': f'Build: {path} {transformation}', 'code': code}
 
@@ -160,23 +161,23 @@ def run_tigress(file, transformation):
 def main():
     errors = []
 
-    upsert_metadata(dataset_path)
-    files = get_unobfuscated_files('tigress')
-    if len(files) == 0:
+    update_metadata(dataset_path)
+    documents = get_unobfuscated_documents('tigress')
+    if len(documents) == 0:
         print('No files to obfuscate.')
         return
 
-    for i, file in enumerate(files):
-        print_file(i + 1, len(files), file)
+    for i, document in enumerate(documents):
+        print_file(i + 1, len(documents), document['file'])
         for transformation in transformations:
             transformation = transformation.lower()
-            obf_result = run_tigress(file, transformation)
+            obf_result = run_tigress(document['file'], transformation)
             print_result(obf_result)
             if obf_result['code'] != 0:
                 errors.append(obf_result)
                 continue
 
-            build_result = run_emcc(file, transformation)
+            build_result = run_emcc(document, transformation)
             print_result(build_result)
             if build_result['code'] != 0:
                 errors.append(build_result)

@@ -1,6 +1,6 @@
 import os
 
-from mongodb.utils import get_unanalyzed_files, upsert_metadata, update_entry, clear_field
+from mongodb.utils import update_metadata, get_unanalyzed_documents, update_document
 from src.imaginator import encode
 from termcolor import colored
 
@@ -18,7 +18,8 @@ def print_file(count, length, file, color='blue'):
     print(colored(f'\n[{count}/{length}] Processing {file}', color))
 
 
-def run_minos(file):
+def run_minos(document):
+    file = document['file']
     path = os.path.join(binary_path, file)
     status = os.system(f"python src/minio.py {path} >/dev/null 2>&1")
 
@@ -27,26 +28,25 @@ def run_minos(file):
         exit(1)
 
     # encode(file, "./data/img")
-    data = {
+    document.update({
         'minos': {
             'result': status
-        }
-    }
-    update_entry({'file': file}, data)
+        }})
+    update_document(document)
 
     return status
 
 
 def main():
-    upsert_metadata(dataset_path)
-    files = get_unanalyzed_files('minos')
-    if len(files) == 0:
+    update_metadata(dataset_path)
+    documents = get_unanalyzed_documents('minos')
+    if len(documents) == 0:
         print("No binaries to analyze.")
         return
 
-    for i, file in enumerate(files):
-        print_file(i + 1, len(files), file)
-        status = run_minos(file)
+    for i, document in enumerate(documents):
+        print_file(i + 1, len(documents), document['file'])
+        status = run_minos(document)
         print_result(status)
 
 

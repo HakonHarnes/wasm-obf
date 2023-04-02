@@ -4,10 +4,10 @@ import hashlib
 import json
 import os
 
-from mongodb.utils import get_unanalyzed_files, upsert_metadata, update_entry, clear_field
 from vt.error import APIError
 from termcolor import colored
 from dotenv import load_dotenv
+from mongodb.utils import update_metadata, get_unanalyzed_documents, update_document
 
 load_dotenv()
 
@@ -15,6 +15,10 @@ binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
 
 analysis_ids = []
+
+
+def print_file(count, length, file, color='blue'):
+    print(colored(f'\n[{count}/{length}] Processing {file}', color))
 
 
 def calculate_file_hash(file_path):
@@ -60,33 +64,30 @@ def check_scan_results(client, analysis_id, file_hash):
         return None, None
 
 
-def print_file(count, length, file, color='blue'):
-    print(colored(f'\n[{count}/{length}] Processing {file}', color))
-
-
-def analyze_files(api_key, files):
-
+def analyze_files(api_key, documents):
     client = vt.Client(api_key)
 
-    for i, file in enumerate(files):
+    for i, document in enumerate(documents):
+        file = document['file']
         input_path = os.path.join(binary_path, file)
-        print_file(i, len(files), file)
+        print_file(i+1, len(documents), file)
 
         # Existing file
         file_hash = calculate_file_hash(input_path)
         vt_file, api_error = check_existing_file(client, file_hash)
         if vt_file is not None:
-            malicious_count = vt_file.last_analysis_stats["malicious"]
+            malicious_count = vt_file.last_analysis_stats['malicious']
             print(colored(f'Result: {malicious_count}\n',
                   'red' if malicious_count > 0 else 'green'))
 
-            data = {
+            document.update({
                 'virustotal': {
                     'result': malicious_count,
                     'last_analysis_stats': vt_file.last_analysis_stats
                 }
-            }
-            update_entry({'file': file}, data)
+
+            })
+            update_document(document)
 
         # Upload file
         if vt_file is None and not api_error:
@@ -110,13 +111,14 @@ def analyze_files(api_key, files):
                 print(colored(f'Result: {malicious_count}\n',
                               'red' if malicious_count > 0 else 'green'))
 
-                data = {
+                document.update({
                     'virustotal': {
                         'result': malicious_count,
-                        'last_analysis_stats': file.last_analysis_stats
+                        'last_analysis_stats': vt_file.last_analysis_stats
                     }
-                }
-                update_entry({'file': file}, data)
+
+                })
+                update_document(document)
 
             # Try next API key if quota exceeded
             if api_error:
@@ -128,15 +130,15 @@ def analyze_files(api_key, files):
 
 
 def main():
-    upsert_metadata(dataset_path)
+    update_metadata(dataset_path)
     api_keys = json.loads(os.environ['API_KEYS'])
     for api_key in api_keys:
-        files = get_unanalyzed_files('virustotal')
-        if not files:
+        documents = get_unanalyzed_documents('virustotal')
+        if not documents:
             print('No binaries to analyze.')
             exit(0)
 
-        analyze_files(api_key, files)
+        analyze_files(api_key, documents)
 
 
 if __name__ == '__main__':

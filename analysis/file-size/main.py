@@ -1,7 +1,7 @@
 import os
 
 from termcolor import colored
-from mongodb.utils import get_unanalyzed_files, upsert_metadata, update_entry, get_all_files
+from mongodb.utils import get_unanalyzed_files, update, update_entry, get_all_files
 
 
 binary_path = os.environ['BINARY_PATH']
@@ -13,11 +13,11 @@ def print_file(count, length, file, color='blue'):
 
 
 def print_file_size(file_size):
-    print(colored(f'File size: {file_size}', 'white'))
+    print(f'File size: {file_size}')
 
 
 def main():
-    upsert_metadata(dataset_path)
+    update(dataset_path)
 
     files = get_all_files()
     for i, file in enumerate(files):

@@ -3,7 +3,7 @@ import json
 import os
 
 from termcolor import colored
-from mongodb.utils import get_unanalyzed_files, upsert_metadata, update_entry
+from mongodb.utils import update_metadata, get_unanalyzed_documents, update_document
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -55,25 +55,25 @@ def run_miner_ray(file):
 
 
 def main():
-    upsert_metadata(dataset_path)
-    files = get_unanalyzed_files('miner_ray')
-    if len(files) == 0:
+    update_metadata(dataset_path)
+    documents = get_unanalyzed_documents('miner_ray')
+    if len(documents) == 0:
         print("No binaries to analyze.")
         return
 
-    for i, file in enumerate(files):
-        print_file(i + 1, len(files), file)
-        result = run_miner_ray(os.path.join(binary_path, file))
+    for i, document in enumerate(documents):
+        print_file(i + 1, len(documents), document['file'])
+        result = run_miner_ray(os.path.join(binary_path, document['file']))
         malicious = result['malicous']
         print_result(malicious)
 
-        data = {
+        document.update({
             'miner_ray': {
                 'result': malicious,
                 'error': result['error'],
             }
-        }
-        update_entry({'file': file}, data)
+        })
+        update_document(document)
 
 
 if __name__ == '__main__':

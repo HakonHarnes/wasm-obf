@@ -12,10 +12,9 @@ client = MongoClient(f"mongodb://{mongodb_host}:{mongodb_port}")
 db = client['wasm-obf']
 
 
-def upsert_metadata(dataset_path):
+def update_metadata(dataset_path):
     collection = db['unobfuscated']
 
-    # Use globbing to find all metadata.json files
     metadata_files = glob.glob(os.path.join(
         dataset_path, '**', 'metadata.json'), recursive=True)
 
@@ -23,19 +22,52 @@ def upsert_metadata(dataset_path):
         with open(metadata_path, 'r') as file:
             metadata = json.load(file)
 
-        # Insert or update metadata in MongoDB
         filter_ = {"file": metadata["file"]}
         update_ = {"$set": metadata}
         collection.update_one(filter_, update_, upsert=True)
 
     print(
-        colored(f"Upserted metadata for {len(metadata_files)} files", "yellow"))
+        colored(f"Updated metadata for {len(metadata_files)} files", "yellow"))
 
 
-def get_data_in_collection(collection_name):
+def get_documents():
+    documents = []
+    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+        collection = db[collection_name]
+        documents = list(collection.find())
+    return documents
+
+
+def get_documents_in_collection(collection_name):
     collection = db[collection_name]
-    data = list(collection.find({}, projection={'_id': 0}))
-    return data
+    documents = list(collection.find())
+    return documents
+
+
+def get_unobfuscated_documents(obfuscation_method):
+    unobfuscated_collection = db['unobfuscated']
+    obfuscation_collection = db[obfuscation_method]
+
+    # Get the list of unobfuscated_file values from the obfuscation_method collection
+    obfuscated_files = list(obfuscation_collection.find(
+        {}, projection={'_id': 0, 'unobfuscated_file': 1}))
+    obfuscated_files_list = [file.get('unobfuscated_file') for file in obfuscated_files if file.get(
+        'unobfuscated_file') is not None]
+
+    # Find files in the 'unobfuscated' collection that are not in the obfuscated_files_list
+    unobfuscated_documents = list(unobfuscated_collection.find(
+        {'file': {'$nin': obfuscated_files_list}}))
+
+    return unobfuscated_documents
+
+
+def get_unanalyzed_documents(analysis_method):
+    unanalyzed_documents = []
+    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+        collection = db[collection_name]
+        unanalyzed_documents.extend(
+            list(collection.find({analysis_method: {'$exists': False}})))
+    return unanalyzed_documents
 
 
 def clear_field(field, collections=None):
@@ -49,69 +81,18 @@ def clear_field(field, collections=None):
             f"Removed field '{field}' from {result.modified_count} documents in the '{collection_name}' collection", "yellow"))
 
 
-def upsert_entry(collection_name, filter_, data):
+def add_document(collection_name, document):
     collection = db[collection_name]
-    update_ = {"$set": data}
-    result = collection.update_one(filter_, update_, upsert=True)
+    filter_ = {"file": document["file"]}
+    result = collection.replace_one(filter_, document, upsert=True)
     return result
 
 
-def update_entry(filter_, data):
+def update_document(data):
     result = None
     for collection_name in ['unobfuscated', 'llvm', 'tigress']:
         collection = db[collection_name]
+        filter_ = {"_id": data["_id"]}
         update_ = {"$set": data}
         result = collection.update_one(filter_, update_)
     return result
-
-
-def get_unobfuscated_files(obfuscation_method):
-    unobfuscated_collection = db['unobfuscated']
-    obfuscation_collection = db[obfuscation_method]
-
-    # Get the list of unobfuscated_file values from the obfuscation_method collection
-    obfuscated_files = list(obfuscation_collection.find(
-        {}, projection={'_id': 0, 'unobfuscated_file': 1}))
-    obfuscated_files_list = [file.get('unobfuscated_file') for file in obfuscated_files if file.get(
-        'unobfuscated_file') is not None]
-
-    # Find files in the 'unobfuscated' collection that are not in the obfuscated_files_list
-    unobfuscated_documents = list(unobfuscated_collection.find(
-        {'file': {'$nin': obfuscated_files_list}}, projection={'_id': 0}))
-
-    # Extract the file names from the documents
-    unobfuscated_files = [doc['file'] for doc in unobfuscated_documents]
-    return unobfuscated_files
-
-
-def get_unanalyzed_files(analysis_method):
-    unanalyzed_files = []
-
-    # Iterate over the collections to be checked
-    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
-        collection = db[collection_name]
-
-        # Find documents that don't have the analysis_method field
-        unanalyzed_documents = list(collection.find(
-            {analysis_method: {'$exists': False}}, projection={'_id': 0}))
-
-        # Extract the file names from the documents
-        unanalyzed_files.extend([doc['file'] for doc in unanalyzed_documents])
-
-    return unanalyzed_files
-
-
-def get_all_files():
-    files = []
-    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
-        collection = db[collection_name]
-        files.extend(list(collection.distinct('file')))
-    return files
-
-
-def get_all_entries():
-    entries = []
-    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
-        collection = db[collection_name]
-        entries.extend(list(collection.find({}, projection={'_id': 0})))
-    return entries

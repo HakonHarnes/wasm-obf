@@ -1,7 +1,7 @@
 import os
 
 from termcolor import colored
-from mongodb.utils import upsert_metadata, upsert_entry, get_unobfuscated_files
+from mongodb.utils import update_metadata, add_document, get_unobfuscated_documents
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -46,7 +46,8 @@ def get_file_in(path):
     return os.path.join(path, f'{program_name}.c')
 
 
-def run_emcc(file, transformation):
+def run_emcc(document, transformation):
+    file = document['file']
     path = os.path.join(dataset_path, file.replace('.wasm', ''))
 
     # get emscripten output file
@@ -74,11 +75,11 @@ def run_emcc(file, transformation):
         data = {
             'file': os.path.basename(emcc_out.replace('html', 'wasm')),
             'unobfuscated_file': file,
+            'category': document['category'],
             'transformation': transformation['name'],
             'flags': transformation['flags'],
         }
-        upsert_entry('llvm', {'file': os.path.basename(
-            emcc_out), 'transformation': transformation['name']}, data)
+        add_document('llvm', data)
 
     return {'desc': f'Build: {emcc_out}', 'code': code}
 
@@ -86,16 +87,16 @@ def run_emcc(file, transformation):
 def main():
     errors = []
 
-    upsert_metadata(dataset_path)
-    files = get_unobfuscated_files('llvm')
-    if len(files) == 0:
+    update_metadata(dataset_path)
+    documents = get_unobfuscated_documents('llvm')
+    if len(documents) == 0:
         print('No files to obfuscate.')
         return
 
-    for i, file in enumerate(files):
-        print_file(i + 1, len(files), file)
+    for i, document in enumerate(documents):
+        print_file(i + 1, len(documents), document['file'])
         for transformation in transformations:
-            result = run_emcc(file, transformation)
+            result = run_emcc(document, transformation)
             print_result(result)
             if result['code'] != 0:
                 errors.append(result)
