@@ -2,60 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <style>
-      body {
-        margin: 0;
-        display: grid;
-        height: 100vh;
-        width: 100vw;
-        place-items: center;
-        font-family: Arial, sans-serif;
-        font-size: 2rem;
-      }
-
-      #content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5em;
-      }
-
-      button {
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1.1rem;
-        padding: 10px 20px;
-      }
-
-      button:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
-      }
-    </style>
   </head>
 
   <body>
     <div id="content">
       <div id="hash-rate"></div>
       <div id="avg-hash-rate"></div>
-      <button id="stop-button" onclick="stop()">STOP</button>
     </div>
 
     <script src="src/miner.js"></script>
 
     <script>
-      server = "ws://localhost:8181";
+      server = "ws://miner-server:8181";
 
-      const algo = "cn-0";
+      const algo = "cn-r";
       const pool = `nanopool-${algo}`;
       const address =
         "484u3tsoQJ3bGQZYaBXdEPSnrmhX3cUQfcjhRffgSBMQbfKwaob5mi3FjK1LXivnXwfP725S5QZm27FXPEchNPLaBVGnKjY";
 
       startMining(pool, address);
 
-      const pollRate = 500; // 500ms - 0.5s
-      const stopTime = 50_000; // 50 000ms = 50s
+      const pollRate = 500;
+      const stopTime = 50000;
 
       let startTime;
       let prevTotalHashes;
@@ -78,7 +46,8 @@
             totalhashes - prevTotalHashes,
             pollRate
           );
-          document.getElementById("hash-rate").innerText = `${hashRate} H/s`;
+
+          document.getElementById("hash-rate").innerText = hashRate;
         }
 
         // Stop mining and calculate average hash rate
@@ -86,14 +55,8 @@
         if (elapsedTime >= stopTime) {
           avgHashRate = calcHashRate(totalhashes, elapsedTime);
           document.getElementById("hash-rate").innerText = "";
-          document.getElementById(
-            "avg-hash-rate"
-          ).innerText = `Avg: ${avgHashRate.toFixed(2)} H/s`;
-          console.log(
-            `Average hash rate: ${avgHashRate.toFixed(2)} H/s after ${
-              elapsedTime / 1000
-            }s`
-          );
+          document.getElementById("avg-hash-rate").innerText =
+            avgHashRate.toFixed(2);
           stop();
         }
 
@@ -106,7 +69,6 @@
       const stop = () => {
         stopMining();
         clearInterval(t2);
-        document.getElementById("stop-button").disabled = true;
       };
     </script>
   </body>

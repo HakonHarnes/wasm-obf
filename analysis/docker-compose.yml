@@ -3,22 +3,25 @@ version: "3"
 services:
   hash-rate:
     build: ./hash-rate
-    network_mode: host
     volumes:
       - ./hash-rate/main.py:/app/main.py
       - ../binaries/:/app/binaries
-      - ../cryptominer/client/:/app/cryptominer
-      - ../data/:/app/data
+      - ../miner/client/:/app/miner
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+      - ../dataset/:/app/dataset
     environment:
       - BINARY_PATH=/app/binaries
-      - DATA_PATH=/app/data
-      - CRYPTOMINER_PATH=/app/cryptominer
+      - DATASET_PATH=/app/dataset
+      - MINER_PATH=/app/miner/analysis
+    networks:
+      - mn_network
+      - db_network
   file-size:
     build: ./file-size
     volumes:
       - ./file-size/main.py:/app/main.py
       - ../binaries/:/app/binaries
-      - ../cryptominer/client/:/app/cryptominer
+      - ../miner/client/:/app/miner
       - ../mongodb/utils.py:/app/mongodb/utils.py
       - ../dataset/:/app/dataset
     environment:
@@ -26,6 +29,9 @@ services:
       - DATASET_PATH=/app/dataset
     networks:
       - db_network
+
 networks:
   db_network:
+    external: true
+  mn_network:
     external: true

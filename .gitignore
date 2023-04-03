@@ -1,7 +1,7 @@
 __pycache__
 node_modules 
 binaries/*
-cryptominer/client/src/cn-*
+cryptominer/client/src/binaries/*
 
 *.png
 *.7z

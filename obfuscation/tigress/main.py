@@ -120,6 +120,8 @@ def run_emcc(document, transformation):
             'category': document['category'],
             'transformation': transformation,
         }
+        if 'algo' in document:
+            data['algo'] = document['algo']
         add_document('tigress', data)
 
     return {'desc': f'Build: {path} {transformation}', 'code': code}

@@ -70,6 +70,22 @@ def get_unanalyzed_documents(analysis_method):
     return unanalyzed_documents
 
 
+# TODO: Doesn't work
+def get_unmeasured_miner_documents():
+    miner_documents = []
+    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+        collection = db[collection_name]
+        miner_documents.extend(list(collection.find(
+            {
+                "$and": [
+                    {"category": "miner"},
+                    {"hashrate": {"$exists": False}}
+                ]
+            }
+        )))
+    return miner_documents
+
+
 def clear_field(field, collections=None):
     if collections is None:
         collections = ['unobfuscated', 'llvm', 'tigress']

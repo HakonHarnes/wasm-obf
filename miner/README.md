@@ -1,14 +1,13 @@
-# webminerpool 
+# webminerpool
 
 **Complete sources** for a Cryptonight (diverse variants, without randomX) webminer.
 
-
 ###
-_The server_ is written in **C#**, **optionally calling C**-routines to check hashes calculated by the clients. 
+
+_The server_ is written in **C#**, **optionally calling C**-routines to check hashes calculated by the clients.
 It acts as a proxy server for common pools.
 
-
-_The client_ runs in the browser using javascript and webassembly. 
+_The client_ runs in the browser using javascript and webassembly.
 **websockets** are used for the connection between the client and the server, **webassembly** to perform hash calculations, **web workers** for threads.
 
 There is a **docker** file available. See below.
@@ -21,20 +20,19 @@ The strategy is to rely on coins which are more easily mined in the browser. Poo
 
 # Supported algorithms
 
-| #  |  xmrig short notation | webminerpool internal | description |
-| -- | --------------| --------------------------------- | ------------------------------------------------ |
-| 1  | cn            | algo="cn", variant=-1             | autodetect cryptonight variant (block.major - 6) |
-| 2  | cn/0          | algo="cn", variant=0              | original cryptonight                             |
-| 3  | cn/1          | algo="cn", variant=1              | also known as monero7 and cryptonight v7         |
-| 4  | cn/2          | algo="cn", variant=2 or 3         | cryptonight variant 2                            |
-| 5  | cn/r          | algo="cn", variant=4              | cryptonight variant 4 also known as cryptonightR |
-| 6  | cn-lite       | algo="cn-lite", variant=-1        | same as #1 with memory/2, iterations/2           |
-| 7  | cn-lite/0     | algo="cn-lite", variant=0         | same as #2 with memory/2, iterations/2           |
-| 8  | cn-lite/1     | algo="cn-lite", variant=1         | same as #3 with memory/2, iterations/2           |
-| 9  | cn-pico/trtl  | algo="cn-pico", variant=2 or 3    | same as #4 with memory/8, iterations/8           |
-| 10 | cn-half       | algo="cn-half", variant=2 or 3    | same as #4 with memory/1, iterations/2           |
-| 11 | cn/rwz       | algo="cn-rwz", variant=2 or 3    | same as #4 with memory/1, iterations*3/4           |
-
+| #   | xmrig short notation | webminerpool internal          | description                                      |
+| --- | -------------------- | ------------------------------ | ------------------------------------------------ |
+| 1   | cn                   | algo="cn", variant=-1          | autodetect cryptonight variant (block.major - 6) |
+| 2   | cn/0                 | algo="cn", variant=0           | original cryptonight                             |
+| 3   | cn/1                 | algo="cn", variant=1           | also known as monero7 and cryptonight v7         |
+| 4   | cn/2                 | algo="cn", variant=2 or 3      | cryptonight variant 2                            |
+| 5   | cn/r                 | algo="cn", variant=4           | cryptonight variant 4 also known as cryptonightR |
+| 6   | cn-lite              | algo="cn-lite", variant=-1     | same as #1 with memory/2, iterations/2           |
+| 7   | cn-lite/0            | algo="cn-lite", variant=0      | same as #2 with memory/2, iterations/2           |
+| 8   | cn-lite/1            | algo="cn-lite", variant=1      | same as #3 with memory/2, iterations/2           |
+| 9   | cn-pico/trtl         | algo="cn-pico", variant=2 or 3 | same as #4 with memory/8, iterations/8           |
+| 10  | cn-half              | algo="cn-half", variant=2 or 3 | same as #4 with memory/1, iterations/2           |
+| 11  | cn/rwz               | algo="cn-rwz", variant=2 or 3  | same as #4 with memory/1, iterations\*3/4        |
 
 # Repository Content
 
@@ -48,10 +46,14 @@ The SDK directory contains all client side mining scripts which allow mining in 
 <script src="webmr.js"></script>
 
 <script>
-	server = "ws://localhost:8181"
-	startMining("moneroocean.stream","49kkH7rdoKyFsb1kYPKjCYiR2xy1XdnJNAY1e7XerwQFb57XQaRP7Npfk5xm1MezGn2yRBz6FWtGCFVKnzNTwSGJ3ZrLtHU"); 
+  server = "ws://localhost:8181";
+  startMining(
+    "moneroocean.stream",
+    "49kkH7rdoKyFsb1kYPKjCYiR2xy1XdnJNAY1e7XerwQFb57XQaRP7Npfk5xm1MezGn2yRBz6FWtGCFVKnzNTwSGJ3ZrLtHU"
+  );
 </script>
 ```
+
 webmr.js can be found under SDK/miner_compressed.
 
 The startMining function can take additional arguments
@@ -66,7 +68,7 @@ startMining(pool, address, password, numThreads, userid);
 - numThreads, the number of threads the miner uses. Use "-1" for auto-config.
 - userid - not used anymore but still available at the server side.
 
-To **throttle** the miner just use the global variable "throttleMiner", e.g. 
+To **throttle** the miner just use the global variable "throttleMiner", e.g.
 
 ```javascript
 startMining(..);
@@ -74,43 +76,43 @@ throttleMiner = 20;
 ```
 
 If you set this value to 20, the cpu workload will be approx. 80% (for 1 thread / CPU). Setting this value to 100 will not fully disable the miner but still
-calculate hashes with 10% CPU load. 
+calculate hashes with 10% CPU load.
 
-If you do not want to show the user your address or even the password you have to create  a *loginid* (see logins.json). With the *loginid* you can start mining with
+If you do not want to show the user your address or even the password you have to create a _loginid_ (see logins.json). With the _loginid_ you can start mining with
 
 ```javascript
-startMiningWithId(loginid)
+startMiningWithId(loginid);
 ```
 
 or with optional input parameters:
 
 ```javascript
-startMiningWithId(loginid, numThreads, userid)
+startMiningWithId(loginid, numThreads, userid);
 ```
 
 If you still need to provide a password (e.g. when using a pool where you need to set the miner ID in the password field) but do not want to show the user your address, you can use this function:
 
 ```javascript
-startMiningWithIdAndPassword(loginid, password)
+startMiningWithIdAndPassword(loginid, password);
 ```
 
 or with optional input parameters:
 
 ```javascript
-startMiningWithIdAndPassword(loginid, password, numThreads, userid)
+startMiningWithIdAndPassword(loginid, password, numThreads, userid);
 ```
 
-The username and the pool will be looked up via the *loginid*.
+The username and the pool will be looked up via the _loginid_.
 
-#### What are all the *.js files?
+#### What are all the \*.js files?
 
-SDK/miner_compressed/webmr.js simply combines 
+SDK/miner_compressed/webmr.js simply combines
 
- 1. SDK/miner_raw/miner.js
- 2. SDK/miner_raw/worker.js
- 3. SDK/miner_raw/cn.js
+1.  SDK/miner_raw/miner.js
+2.  SDK/miner_raw/worker.js
+3.  SDK/miner_raw/cn.js
 
-Where *miner.js* handles the server-client connection, *worker.js* are web workers calculating cryptonight hashes using *cn.js* - a emscripten generated wrapped webassembly file. The webassembly file can also be compiled by you, see section hash_cn below.
+Where _miner.js_ handles the server-client connection, _worker.js_ are web workers calculating cryptonight hashes using _cn.js_ - a emscripten generated wrapped webassembly file. The webassembly file can also be compiled by you, see section hash_cn below.
 
 ### Server
 
@@ -121,19 +123,21 @@ The server uses asynchronous websockets provided by the
 
 Install .NET 5.0 (https://dotnet.microsoft.com/download/dotnet/5.0) on your system and follow these instructions:
 
- To compile change to the server directory and execute
- ```bash
+To compile change to the server directory and execute
+
+```bash
 dotnet build -c Release
 ```
+
 Run the server with
 
 ```bash
 dotnet run -c Release
 ```
 
- Optionally you can compile the C-library **libhash**.so found in *hash_cn*. Place this library in the same folder as the server executable. If this library is present the server will make use of it and check hashes which gets submitted by the clients. If clients submit bad hashes ("low diff shares"), they get disconnected. The server occasionally writes ip-addresses to *ip_list*. These addresses should get (temporarily) banned on your server for example by adding them to [*iptables*](http://ipset.netfilter.org/iptables.man.html). The file can be deleted after the ban. See *Firewall.cs* for rules when a client is seen as malicious - submitting wrong hashes is one possibility.
+Optionally you can compile the C-library **libhash**.so found in _hash_cn_. Place this library in the same folder as the server executable. If this library is present the server will make use of it and check hashes which gets submitted by the clients. If clients submit bad hashes ("low diff shares"), they get disconnected. The server occasionally writes ip-addresses to _ip_list_. These addresses should get (temporarily) banned on your server for example by adding them to [_iptables_](http://ipset.netfilter.org/iptables.man.html). The file can be deleted after the ban. See _Firewall.cs_ for rules when a client is seen as malicious - submitting wrong hashes is one possibility.
 
- Without a **SSL certificate** the server will open a regular websocket (ws://0.0.0.0:8181). To use websocket secure (ws**s**://0.0.0.0:8181) you should place *certificate.pfx* (a  pkcs12 file) into the server directory. The default password which the server uses to load the certificate is "miner". To create a pkcs12 file from regular certificates, e.g. from [*Let's Encrypt*](https://letsencrypt.org/), use the command
+Without a **SSL certificate** the server will open a regular websocket (ws://0.0.0.0:8181). To use websocket secure (ws**s**://0.0.0.0:8181) you should place _certificate.pfx_ (a pkcs12 file) into the server directory. The default password which the server uses to load the certificate is "miner". To create a pkcs12 file from regular certificates, e.g. from [_Let's Encrypt_](https://letsencrypt.org/), use the command
 
 ```bash
 openssl pkcs12 -export -out certificate.pfx -inkey privkey.pem -in cert.pem -certfile chain.pem
@@ -148,7 +152,7 @@ should change this limit if you want to have more connections.
 
 ### hash_cn
 
-The cryptonight hashing functions in C-code. With simple Makefiles (use the "make" command to compile) for use with gcc and emcc - the [emscripten](https://github.com/kripken/emscripten) webassembly compiler. *libhash* should be compiled so that the server can check hashes calculated by the user.
+The cryptonight hashing functions in C-code. With simple Makefiles (use the "make" command to compile) for use with gcc and emcc - the [emscripten](https://github.com/kripken/emscripten) webassembly compiler. _libhash_ should be compiled so that the server can check hashes calculated by the user.
 
 # Dockerization
 
@@ -162,7 +166,7 @@ cd webminerpool
 docker build -t webminerpool .
 ```
 
-To run it: 
+To run it:
 
 ```bash
 docker run -d -p 80:80 -p 8181:8181 -e DOMAIN="" webminerpool

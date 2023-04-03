@@ -79,6 +79,8 @@ def run_emcc(document, transformation):
             'transformation': transformation['name'],
             'flags': transformation['flags'],
         }
+        if 'algo' in document:
+            data['algo'] = document['algo']
         add_document('llvm', data)
 
     return {'desc': f'Build: {emcc_out}', 'code': code}

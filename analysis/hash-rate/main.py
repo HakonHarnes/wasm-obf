@@ -1,33 +1,26 @@
 import os
 import time
-import glob
-import json
 
-from enum import Enum
+from termcolor import colored
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
+from mongodb.utils import update_metadata, update_document, get_unmeasured_miner_documents
 
 
-cryptominer_path = os.environ['CRYPTOMINER_PATH']
-binary_path = os.environ['BINARY_PATH']
-data_path = os.environ['DATA_PATH']
+miner_path = os.environ['MINER_PATH']
+dataset_path = os.environ['DATASET_PATH']
+
+# hashing duration in seconds
+hashing_duration = 50
 
 
-class Algorithm(Enum):
-    CN_RWZ = "cn-rwz"
-    CN_R = "cn-r"
-    CN_LITE_0 = "cn-lite-0"
-    CN_LITE_1 = "cn-lite-1"
-    CN_LITE_2 = "cn-lite-2"
-    CN_PICO_TRTL = "cn-pico-trtl"
-    CN_HALF = "cn-half"
-    CN_0 = "cn-0"
-    CN_1 = "cn-1"
-    CN_2 = "cn-2"
+def print_file(count, length, file, color='blue'):
+    print(
+        colored(f'\n[{count}/{length}] Processing {file}', color), flush=True)
 
 
-def measure_hash_rate(domain, hashrate_file):
+def init_driver(domain):
     chrome_options = Options()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
@@ -37,10 +30,16 @@ def measure_hash_rate(domain, hashrate_file):
 
     driver.get(domain)
 
-    hash_rate = ''
+    return driver
+
+
+def measure_hash_rate(domain):
+    driver = init_driver(domain)
+
+    timeout = hashing_duration + 60  # timeout after hashing duration + 60 seconds
     poll_interval = 5  # poll every 5 seconds
-    timeout = 510  # timeout after 510 seconds
     time_elapsed = 0
+    hash_rate = ''
 
     while len(hash_rate) == 0 and time_elapsed < timeout:
         hash_rate_element = driver.find_element(By.ID, "avg-hash-rate")
@@ -48,90 +47,53 @@ def measure_hash_rate(domain, hashrate_file):
         time.sleep(poll_interval)
         time_elapsed += poll_interval
 
+        for entry in driver.get_log('browser'):
+            print(colored(entry['message'], 'red'))
+            if 'error' in entry['message'].lower():
+                driver.quit()
+                return 0
+
     driver.quit()
 
-    if hash_rate == '':
-        return -1
+    if len(hash_rate) == 0:
+        return 0
 
     return hash_rate.split(' ')[1]
 
 
-def move_files_to_miner(wasm_file, js_file):
-    os.system(f'cp {wasm_file} {cryptominer_path}/src')
-    os.system(f'cp {js_file} {cryptominer_path}/src')
-
-
-def get_cryptomining_files():
-    wasm_files = sorted(glob.glob(f'{binary_path}/*/cn*.wasm'))
-
-    files = []
-    for wasm_file in wasm_files:
-        js_file = wasm_file.replace('.wasm', '.js')
-        if not os.path.isfile(js_file):
-            print(f'JavaScript file missing for {wasm_file}')
-            continue
-        files.append({'wasm': wasm_file, 'js': js_file})
-    return files
-
-
-def modify_worker_file(worker_file, import_file):
+def modify_worker_file(wasm_file):
+    import_file = f'binaries/{wasm_file.replace(".wasm", ".js")}'
+    worker_file = os.path.join(miner_path, 'src', 'worker.js')
     os.system(
-        f"sed -i 's/importScripts([^)]*)/importScripts(\"{import_file}\")/g' {worker_file}")
+        f"sed -i 's|importScripts([^)]*)|importScripts(\"{import_file}\")|g' \"{worker_file}\"")
 
 
-def modify_index_file(index_file, algo):
+def modify_index_file(algo):
+    index_file = os.path.join(miner_path, 'index.html')
     os.system(
-        f"sed -i 's/const algo = \"[^)]*\"/const algo = \"{algo}\"/g' {index_file}")
-
-
-def get_mining_algorithm(wasm_file):
-    for algo in Algorithm:
-        if algo.value in wasm_file:
-            return algo.value
-    raise Exception(f'Algorithm not found for {wasm_file}')
-
-
-def save_hash_rates_to_json_file(hash_rates_list):
-    output_filename = "hashrates.json"
-    output_filepath = os.path.join(data_path, output_filename)
-
-    with open(output_filepath, "w") as output_file:
-        json.dump(hash_rates_list, output_file, indent=4)
+        f"sed -i 's|const algo = .*;|const algo = \"{algo}\";|g' {index_file}")
+    os.system(
+        f"sed -i 's|const stopTime = .*;|const stopTime = {hashing_duration * 1000};|g' {index_file}")
 
 
 def main():
-    files = get_cryptomining_files()
+    update_metadata(dataset_path)
 
-    count = 0
+    documents = get_unmeasured_miner_documents()
+    for i, document in enumerate(documents):
+        file = document['file']
+        algo = document['algo']
 
-    hash_rates_dict = {}
-    for file in files:
-        count += 1
-        print(f'[{count}/{len(files)}] {file["wasm"]}', flush=True)
-        move_files_to_miner(file['wasm'], file['js'])
+        print_file(i + 1, len(documents), file)
 
-        worker_file = os.path.join(cryptominer_path, 'src', 'worker.js')
-        import_file = os.path.basename(file['js'])
-        modify_worker_file(worker_file, import_file)
+        modify_worker_file(file)
+        modify_index_file(algo)
 
-        index_file = os.path.join(cryptominer_path, 'index.html')
-        algo = get_mining_algorithm(file['wasm'])
-        print(os.path.basename(file['wasm']), algo)
-        modify_index_file(index_file, algo)
-
-        basename = os.path.basename(file['wasm']).replace('.wasm', '')
-        hashrate_file = os.path.join(data_path, f'{basename}-hashrate.txt')
-        hash_rate = measure_hash_rate(
-            'http://localhost:8080', hashrate_file)
-
+        hash_rate = measure_hash_rate('http://miner-client:8080/analysis')
         print(f'Hash rate: {hash_rate}', flush=True)
 
-        if algo not in hash_rates_dict:
-            hash_rates_dict[algo] = {"algorithm": algo}
-        hash_rates_dict[algo][basename] = float(hash_rate)
-
-    hash_rates_list = list(hash_rates_dict.values())
-    save_hash_rates_to_json_file(hash_rates_list)
+        document.update({'hash_rate': hash_rate})
+        update_document(document)
 
 
 if __name__ == '__main__':
