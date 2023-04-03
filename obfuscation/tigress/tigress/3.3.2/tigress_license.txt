@@ -1,0 +1,174 @@
+End-User License Agreement
+
+PROGRAM: Tigress University of Arizona Tech Transfer File: UA14-135
+
+IMPORTANT – READ CAREFULLY: This Agreement is a legal agreement
+between ("LICENSEE") (defined below in Paragraph 2) and The Arizona
+Board of Regents on behalf of the University of Arizona,
+("ARIZONA"). By installing, copying, downloading, accessing or
+otherwise using the PROGRAM, LICENSEE agrees to be bound by the terms
+of this Agreement. If LICENSEE does not agree with the terms of this
+Agreement, do not install, access or use the PROGRAM.
+
+BACKGROUND
+
+1. The University of Arizona through its Computer Science Department
+has developed a proprietary software application and related
+documentation, known as Tigress, a virtualizer for the C computer
+language that provides computer defenses against de-virtualization
+attacks, and further defined in ARIZONA Tech Transfer Arizona file
+UA14-135, (hereinafter referred to as "PROGRAM").
+
+2. LICENSEE is either: (i) yourself if you accept the Agreement; or
+(ii) the legal entity you are authorized to represent in accepting
+this Agreement.  You represent you have the authority to bind LICENSEE
+to this Agreement.
+
+3. LICENSEE desires to obtain and ARIZONA, consistent with its mission
+of education and research, desires to grant a license to access and
+use PROGRAM subject to the terms and conditions set forth below.
+
+The parties therefore agree as follows:
+
+I.  LICENSE ARIZONA hereby grants to LICENSEE a non-exclusive,
+	non-transferable right to access and use the PROGRAM
+	internally for the sole purpose of assessing Tigress
+	virtualization software and subject to the terms and
+	conditions of this Agreement.
+
+II. LIMITATION OF LICENSE AND RESTRICTIONS A. Except as expressly
+permitted by this agreement, no other use of PROGRAM is permitted,
+including, but not limited to: (i) use or access for the benefit of,
+on behalf of, or upon the request of any other party; (ii)
+reproduction, adaptations, and/or preparation of derivative works;
+(iii) sale, renting or loaning access to PROGRAM, passwords, or
+usernames: or (iv) the reverse engineering, decompiling,
+disassembling, or attempting to otherwise access any source code for
+any software program. LICENSEE covenants that the contents of PROGRAM
+are for LICENSEE'S use, and may not be resold, republished, or
+otherwise distributed to third parties in any form including, but not
+limited to, via an internet, intranet, or extranet site.
+
+B. LICENSEE shall not assign this Agreement, and any attempt by
+LICENSEE to assign it shall be void from the beginning.  LICENSEE
+agrees to secure and protect access to PROGRAM in a manner consistent
+with the maintenance of ARIZONA'S rights in PROGRAM and to take
+appropriate action by instruction or agreement with its and LICENSEE’S
+employees who are permitted access to PROGRAM in order to satisfy
+LICENSEE'S obligations under this Agreement.
+
+III. TITLE AND OWNERSHIP No ownership rights of ARIZONA in the PROGRAM
+	are conferred upon LICENSEE by this Agreement.
+
+IV. DISCLAIMER OF WARRANTY AND LIMITATION OF LIABILITY A. PROGRAM IS
+PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR
+IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE OR ANY WARRANTY
+THAT THE PROGRAM DOES NOT INFRINGE ANY THIRD PARTY RIGHTS.  ARIZONA
+DOES NOT WARRANT THAT THE DATA AND FUNCTIONS CONTAINED IN PROGRAM ARE
+COMPLETE, ACCURATE OR ERROR-FREE; THAT THEY WILL MEET LICENSEE'S
+REQUIREMENTS; OR THAT OPERATION WILL BE UNINTERRUPTED OR ERROR FREE.
+ARIZONA shall not be liable for special, indirect, incidental, or
+consequential damages with respect to any claim on account of or
+arising from this Agreement or use of PROGRAM, even if ARIZONA has
+been or is hereafter advised of the possibility of such damages.
+Because some states do not allow certain exclusions or limitations on
+implied warranties or of liability for consequential or incidental
+damages, the above exclusions may not apply to LICENSEE.  In no event,
+however, will ARIZONA be liable to LICENSEE, under any theory of
+recovery, in an amount in excess of the license fee paid by LICENSEE
+under this Agreement.
+
+B. LICENSEE agrees that ARIZONA has no obligation to provide to
+LICENSEE any maintenance, support, or update services. Should ARIZONA
+provide access to and use of any revised versions of PROGRAM, LICENSEE
+agrees that this Agreement shall apply to such revised versions.
+
+C. Without limiting in anyway any of ARIZONA'S disclaimers of warranty
+and limitations of liability, LICENSEE covenants that it will
+carefully review any documentation or instructional material provided
+by ARIZONA and acknowledges that it is aware that PROGRAM is intended
+to be an educational tool.
+
+D. For clarity, LICENSEE acknowledges THAT ARIZONA SHALL NOT BE LIABLE
+FOR ANY LOSS OF DATA CONTAINED OR ENTERED IN THE PROGRAM OR ANY
+DAMAGES OR COSTS ASSOCIATED WITH THAT LOSS.
+
+V. TERM AND TERMINATION A. If LICENSEE at any time fails to abide by
+the terms of this Agreement, ARIZONA shall have the right to
+immediately terminate the license granted herein, require the return
+or destruction of all copies of the PROGRAM from LICENSEE and
+certification in writing as to such return or destruction, and pursue
+any other legal or equitable remedies available.
+
+B. This Agreement is renewable upon the written agreement of both
+parties, which may be accomplished by LICENSEE's renewal request to
+ARIZONA.
+
+VI.  MISCELLANEOUS A. This Agreement shall be interpreted pursuant to
+the laws of the State of ARIZONA. Any arbitration or litigation
+between the Parties shall be conducted in Pima County, ARIZONA, and
+Company hereby submits to venue and jurisdiction in Pima County,
+ARIZONA.
+
+B. The parties agree that should a dispute arise between them
+concerning this Agreement and no party seeks affirmative relief other
+than money damages in the amount of Fifty Thousand Dollars ($50,000)
+or less, exclusive of interest, costs and attorneys' fees, the parties
+may be required submit the matter to arbitration pursuant to the
+Revised Uniform Arbitration Act, A.R.S §12-3001 et seq. (the “Act”),
+whose rules shall govern the interpretation, enforcement, and
+proceedings pursuant to this section. Except as otherwise provided in
+the Act, the decision of the arbitrator(s) shall be final and binding
+upon the parties.  C. The Parties agree to be bound by state and
+federal laws and regulations governing equal opportunity and
+non-discrimination and immigration.  D. THIS AGREEMENT REPRESENTS THE
+COMPLETE AND EXCLUSIVE STATEMENT OF THE AGREEMENT BETWEEN ARIZONA AND
+LICENSEE AND SUPERSEDES ALL PRIOR AGREEMENTS, PROPOSALS,
+REPRESENTATIONS AND OTHER COMMUNICATIONS, VERBAL OR WRITTEN, BETWEEN
+THEM WITH RESPECT TO USE OF THE PROGRAM.  THIS AGREEMENT MAY BE
+MODIFIED ONLY WITH THE MUTUAL WRITTEN APPROVAL OF AUTHORIZED
+REPRESENTATIVES OF THE PARTIES.
+
+E. The terms and conditions of this Agreement shall prevail
+notwithstanding any different, conflicting, or additional terms or
+conditions which may appear in any purchase order or other document
+submitted by LICENSEE.  LICENSEE agrees that such additional or
+inconsistent terms are deemed rejected by ARIZONA.
+
+F. Unless otherwise exempt therefrom, LICENSEE agrees that it will be
+responsible for any sales, use or excise taxes imposed by any
+governmental unit in this transaction except income taxes.
+
+G. LICENSEE acknowledges that the PROGRAM is of United States
+origin. Licensee agrees to comply with all applicable international
+and national laws that apply to the PROGRAM, including the United
+States Export Administration Regulations, as well as end-user,
+end-use, and destination restrictions issued by the United States.
+
+VII. - STATE OF ARIZONA REQUIRED CLAUSES
+
+The PARTIES will comply with their applicable state and federal
+statutes and regulations governing equal employment opportunity,
+nondiscrimination, and immigration.  Pursuant to the provisions of
+A.R.S. §38-511, the Arizona Board of Regents may cancel this Agreement
+by written notice if any person substantially involved in obtaining,
+drafting, or procuring this Agreement for or on behalf of the Arizona
+Board of Regents becomes an employee or consultant in any capacity of
+UNIVERSITY.  The PARTIES recognize that performance by ARIZONA may be
+dependent upon the appropriation of funds by the State Legislature of
+Arizona. Should the Legislature fail to appropriate the necessary
+funds, the Arizona Board of Regents may cancel its future obligations
+under this Agreement without further duty or obligation. ARIZONA
+agrees to notify UNIVERSITY as soon as reasonably possible after the
+unavailability of such funds comes to its attention.  In the event of
+a dispute hereunder that involves the sum of Fifty Thousand Dollars
+($50,000) or less, in money damages only, exclusive of interest, costs
+and attorneys' fees, the PARTIES will submit the matter to binding
+arbitration pursuant to the Arizona Arbitration Act, ARS 12-1501 et
+seq. (the "Act") whose rules shall govern the interpretation,
+enforcement and proceedings pursuant to this paragraph. Except as
+otherwise provided in the Arizona Arbitration Act, the decision of the
+arbitrator(s) shall be final and binding upon the PARTIES.
+
+

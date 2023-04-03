@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  hash-rate:
+    build: ./hash-rate
+    volumes:
+      - ./hash-rate/main.py:/app/main.py
+      - ../binaries/:/app/binaries
+      - ../miner/client/:/app/miner
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+      - ../dataset/:/app/dataset
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+      - MINER_PATH=/app/miner/analysis
+    networks:
+      - mn_network
+      - db_network
+  file-size:
+    build: ./file-size
+    volumes:
+      - ./file-size/main.py:/app/main.py
+      - ../binaries/:/app/binaries
+      - ../miner/client/:/app/miner
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+      - ../dataset/:/app/dataset
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+
+networks:
+  db_network:
+    external: true
+  mn_network:
+    external: true

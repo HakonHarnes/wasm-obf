@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  miner-ray:
+    build: ./miner-ray
+    volumes:
+      - ./miner-ray/main.py:/app/main.py
+      - ./miner-ray/src:/app/src
+      - ../binaries:/app/binaries
+      - ../dataset:/app/dataset
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+  minos:
+    build: ./minos
+    volumes:
+      - ./minos/main.py:/app/main.py
+      - ../binaries:/app/binaries
+      - ../dataset/:/app/dataset
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+  virustotal:
+    build: ./virustotal
+    volumes:
+      - ./virustotal/main.py:/app/main.py
+      - ./virustotal/.env:/app/.env
+      - ../binaries:/app/binaries
+      - ../dataset/:/app/dataset
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+networks:
+  db_network:
+    external: true

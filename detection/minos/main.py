@@ -1,50 +1,54 @@
-from utils.file_utils import get_unanalyzed_binaries, get_metadata_filename, write_json
-from src.imaginator import encode
-
 import os
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
+from mongodb.utils import update_metadata, get_unanalyzed_documents, update_document
+from src.imaginator import encode
+from termcolor import colored
 
-binary_path = f'{dir_path}/binaries'
-metadata_path = f'{dir_path}/data'
+
+binary_path = os.environ['BINARY_PATH']
+dataset_path = os.environ['DATASET_PATH']
 
 
-def run_minos(file):
-    status = os.system(f"python src/minio.py {file} >/dev/null 2>&1")
-    malicious = status != 0
+def print_result(malicious):
+    color = 'red' if malicious else 'green'
+    print("Result:", colored(malicious, color))
 
-    if not os.path.exists("./data/img"):
-        os.makedirs("./data/img")
-    encode(file, "./data/img")
 
-    return malicious
+def print_file(count, length, file, color='blue'):
+    print(colored(f'\n[{count}/{length}] Processing {file}', color))
+
+
+def run_minos(document):
+    file = document['file']
+    path = os.path.join(binary_path, file)
+    status = os.system(f"python src/minio.py {path} >/dev/null 2>&1")
+
+    if status > 1:
+        print("Error while running minos.")
+        exit(1)
+
+    # encode(file, "./data/img")
+    document.update({
+        'minos': {
+            'result': status
+        }})
+    update_document(document)
+
+    return status
+
+
+def main():
+    update_metadata(dataset_path)
+    documents = get_unanalyzed_documents('minos')
+    if len(documents) == 0:
+        print("No binaries to analyze.")
+        return
+
+    for i, document in enumerate(documents):
+        print_file(i + 1, len(documents), document['file'])
+        status = run_minos(document)
+        print_result(status)
 
 
 if __name__ == "__main__":
-
-    binaries = get_unanalyzed_binaries(binary_path, metadata_path, "minos")
-    if not binaries:
-        print("No binaries to analyze!")
-        exit(0)
-
-    for i, binary in enumerate(binaries):
-        input_path = os.path.join(binary["path"], binary["filename"])
-        print(f'Processing [{i}/{len(binaries)}] {input_path}')
-
-        malicious = run_minos(input_path)
-        print(f'Malicious: {malicious}\n')
-
-        metadata_filename = get_metadata_filename(binary["filename"], "minos")
-        output_path = os.path.join(metadata_path, metadata_filename)
-
-        data = {
-            "method": "minos",
-            "malicious": malicious,
-
-            "input": {
-                "path": binary["path"],
-                "filename": binary["filename"]
-            },
-        }
-
-        write_json(output_path, data)
+    main()

@@ -1,12 +1,11 @@
-from enum import Enum
 import os
 
+from enum import Enum
 from termcolor import colored
+from mongodb.utils import update_metadata, add_document, get_unobfuscated_documents
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-
-binary_path = f'{dir_path}/binaries/tigress'
-dataset_path = f'{dir_path}/dataset'
+binary_path = os.environ['BINARY_PATH']
+dataset_path = os.environ['DATASET_PATH']
 
 
 class Transformations(Enum):
@@ -62,18 +61,30 @@ transformations = [
 ]
 
 
+def print_result(result):
+    color = 'green' if result['code'] == 0 else 'red'
+    for key, value in result.items():
+        if not key == 'code':
+            print(colored(value, color), end='\t')
+    print()
+
+
+def print_file(count, length, file, color='blue'):
+    print(colored(f'\n[{count}/{length}] Processing {file}', color))
+
+
 def get_emcc_out(path, transformation):
     program_name = path.split('/')[-1]
     binary_name = f'{program_name}-tigress-{transformation}.html'
     return os.path.join(binary_path, f'{binary_name}')
 
 
-def run_emcc(path, transformation):
+def run_emcc(document, transformation):
+    file = document['file']
+    path = os.path.join(dataset_path, file.replace('.wasm', ''))
 
     # get emscripten output file
     emcc_out = get_emcc_out(path, transformation)
-    if os.path.exists(emcc_out):
-        return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
     # get build script
     script = os.path.join(path, 'build.sh')
@@ -85,7 +96,7 @@ def run_emcc(path, transformation):
     if os.path.exists(file_in):
         file_size = os.path.getsize(file_in)
         if file_size < 5:
-            return {'desc': f'Build: {file_in}', 'size': file_size, 'code': 1}
+            return {'desc': f'Build: {file_in}', 'size': f'Size: {file_size}', 'code': 1}
 
     # log file
     log_file = emcc_out.replace('.html', '.emcc.log')
@@ -95,21 +106,32 @@ def run_emcc(path, transformation):
         f'/bin/sh {script} {file_in} {emcc_out} > {log_file} 2>&1')
 
     # check output file size
+    binary_out = emcc_out.replace('.html', '.wasm')
     if os.path.exists(emcc_out):
-        binary_out = emcc_out.replace('.html', '.wasm')
         binary_size = os.path.getsize(binary_out)
         if binary_size < 5:
-            return {'desc': f'Build: {binary_out}', 'size': binary_size, 'code': 1}
+            return {'desc': f'Build: {binary_out}', 'size': f'Size: {binary_size}', 'code': 1}
+
+    # write data to db
+    if code == 0:
+        data = {
+            'file': os.path.basename(emcc_out.replace('html', 'wasm')),
+            'unobfuscated_file': file,
+            'category': document['category'],
+            'transformation': transformation,
+        }
+        if 'algo' in document:
+            data['algo'] = document['algo']
+        add_document('tigress', data)
 
     return {'desc': f'Build: {path} {transformation}', 'code': code}
 
 
-def run_tigress(path, transformation):
+def run_tigress(file, transformation):
+    path = os.path.join(dataset_path, file.replace('.wasm', ''))
 
     # get emscripten output and check if it already exists
     emcc_out = get_emcc_out(path, transformation)
-    if os.path.exists(emcc_out):
-        return {'desc': f'Exists: {emcc_out}', 'code': 0}
 
     # get tigress script
     script = os.path.join(path, 'tigress', f'{transformation}.sh')
@@ -133,7 +155,7 @@ def run_tigress(path, transformation):
     if os.path.exists(tigress_out):
         file_size = os.path.getsize(tigress_out)
         if file_size < 5:
-            return {'desc': f'Obfuscate: {tigress_out}', 'size': file_size, 'code': 1}
+            return {'desc': f'Obfuscate: {tigress_out}', 'size': f'Size: {file_size}', 'code': 1}
 
     return {'desc': f'Obfuscate: {path} {transformation}', 'code': code}
 
@@ -141,27 +163,30 @@ def run_tigress(path, transformation):
 def main():
     errors = []
 
-    for dir in os.listdir(dataset_path):
-        path = os.path.join(dataset_path, dir)
+    update_metadata(dataset_path)
+    documents = get_unobfuscated_documents('tigress')
+    if len(documents) == 0:
+        print('No files to obfuscate.')
+        return
+
+    for i, document in enumerate(documents):
+        print_file(i + 1, len(documents), document['file'])
         for transformation in transformations:
             transformation = transformation.lower()
-            obf_result = run_tigress(path, transformation)
+            obf_result = run_tigress(document['file'], transformation)
+            print_result(obf_result)
             if obf_result['code'] != 0:
-                print(colored(obf_result,  'red'))
                 errors.append(obf_result)
                 continue
 
-            build_result = run_emcc(path, transformation)
+            build_result = run_emcc(document, transformation)
+            print_result(build_result)
             if build_result['code'] != 0:
-                print(colored(build_result,  'red'))
                 errors.append(build_result)
-                continue
 
-            print(colored(build_result,  'green'))
-
-    print(f'\n --- {len(errors)} ERRORS --- \n')
+    print(colored(f'\n{len(errors)} errors', 'red'))
     for error in errors:
-        print(colored(error, 'red'))
+        print_result(error)
 
 
 if __name__ == '__main__':

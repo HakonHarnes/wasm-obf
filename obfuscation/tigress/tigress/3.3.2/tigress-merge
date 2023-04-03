@@ -1,0 +1,156 @@
+#!/bin/bash
+
+##############################################################################################
+# Check that environment vars have been set properly and we're running on a supported machine
+#############################################################################################
+
+if [ -z "$TIGRESS_HOME" ]
+then
+   echo "Please set the TIGRESS_HOME environment variable to the directory of the version of Tigress that you want to run."
+   echo "For example:"
+   echo "   $ export TIGRESS_HOME=/home/alice/bin/tigress/3.0"
+   echo "Also make sure that this directory is on your PATH:"
+   echo '   $ echo $PATH'
+   echo "   /usr/bin:/usr/local/bin:.../home/alice/bin/tigress/3.0:..."
+   exit -1
+fi
+
+##############################################################################################
+# Check architecture and operating system
+#############################################################################################
+uname_s=`uname -s`
+uname_m=`uname -m`
+
+OPTIONS="-D_Float128=double -D __uint128_t=__uint64_t"
+
+case $uname_s in
+     Darwin)
+        OPTIONS="$OPTIONS -fgnu89-inline -Wno-builtin-requires-header"
+        ;;
+     Linux)
+        ;;
+     *)
+        echo "'uname -s' returned $uname_s. Tigress has been tested only on Darwin and Linux."
+        exit -1
+        ;;
+esac
+
+# See https://en.wikipedia.org/wiki/Uname
+case $uname_m in
+     i386|i686|x86)
+        echo "Tigress only runs on 64-bit machines. 'uname -m' returned $uname_m which indicates you are running on a 32-bit machine."
+        echo "You can, however, cross-compile, running Tigress on a 64-bit machine and generate code for a 32-bit architecture."
+        exit -1
+        ;;
+     x86_64|amd64|i686-64)
+        ARCH=x86_64
+        ;;
+     armv6l)
+        # We're hoping v6 code will run on v7.
+        ARCH=armv7
+        ;;
+     armv7l|armv7|armel|armv7l|arm)
+        ARCH=armv7
+        ;;
+     armv8l|armv8|arm64|aarch64_be|aarch64|armv8b|armv8l)
+        ARCH=armv8
+        ;;
+     *)
+        echo "'uname -m' returned $uname_m. This is an architecture I don't recognize."
+        echo "Tigress only runs on x86_64 and armv7 architectures. If you're running on"
+        echo "one of these architectures but your 'uname -m' returns some exotic string,"
+        echo "you can edit the tigress script at $TIGRESS_HOME/tigress." 
+        exit -1
+        ;;
+esac
+
+bin_dir=$TIGRESS_HOME/$uname_s"-"$ARCH
+
+########################################################################################
+# Help
+########################################################################################
+if [ "$1" == "--help" ] || [ "$1" == "--h" ] || [ "$1" == "-h" ] || [ "$1" == "-help" ] || [ -z "$1" ]
+then
+cat <<"End-of-message"
+Tigress is a whole-program obfuscator, i.e. it takes exactly one C file as input and produces one C file as output. 
+If your program consists of multiple files, you must first tigress-merge to merge them together.
+
+As an example, assume you have two files file1.c and file2.c:
+
+      //------------- file1.c -------------
+      struct foo; // Forward declaration
+      extern struct foo *global;
+      //-----------------------------------
+
+      //------------- file2.c -------------
+      struct bar {
+        int x;
+        struct bar *next;
+      };
+      extern struct bar *global;
+      struct foo {
+         int y;
+      };
+      extern struct foo another;
+      int main() {
+      }
+      //-----------------------------------
+
+To merge file1.c and file2.c into full.c, do
+   $ tigress-merge file1.c file2.c --out=full.c
+
+For more complex scenarios, see the CIL information page about merging:
+   http://cil-project.github.io/cil/doc/html/cil/merger.html#sec-merger
+
+End-of-message
+
+   exit 0
+fi
+
+##############################################################################################
+# Check that the --out=<file> option has been given; if not, we get weird error messages.
+#############################################################################################
+
+hasout=0
+for x; do
+  if [[ $x == "--out="* ]]; then hasout=1; break; fi
+done
+
+if [ "$hasout" = 0 ]
+then
+   echo "tigress-merge requires that you provide the --out=<file>.c argument."
+
+   exit -1
+fi
+
+########################################################################################
+# Call cilly with the appropriate options.
+########################################################################################
+
+for x; do
+  if [ "$x" = "--bytecode" ]; then bytecode=1; break; fi
+  if [ "$x" = "--ocamldebug" ]; then bytecode=1; break; fi
+done
+
+export OCAMLFIND_CONF=$bin_dir/findlib.conf
+
+if [ -n "$bytecode" ]
+then
+   export CIL_FEATURES="$bin_dir/simplify.cma,$bin_dir/pta.cma,$bin_dir/oneret.cma,$bin_dir/liveness.cma,$bin_dir/zrapp.cma,$bin_dir/tigress.cma"
+else
+   export CIL_FEATURES="$bin_dir/simplify.cmxs,$bin_dir/pta.cmxs,$bin_dir/oneret.cmxs,$bin_dir/liveness.cmxs,$bin_dir/zrapp.cmxs,$bin_dir/tigress.cmxs"
+fi
+
+if [[ -x "$bin_dir/cilly" ]]
+then
+   if [ -n "$bytecode" ]
+   then
+      echo "<<Tigress> Executing: '" $bin_dir/cilly --verbose --merge $OPTIONS "$@'"
+   fi
+   $bin_dir/cilly --verbose --merge $OPTIONS "$@"
+else
+   echo "<<Tigress> File '$bin_dir/cilly' does not exist or is not executable. Try 'chmod a+rx $bin_dir/cilly'."
+   exit -1
+fi
+
+

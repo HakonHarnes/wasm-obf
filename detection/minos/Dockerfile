@@ -1,12 +1,12 @@
 FROM python:latest
 
-WORKDIR /minos/src
+WORKDIR /app/src
 
 COPY src/requirements.txt ./ 
 
 RUN pip install -r requirements.txt
 
-WORKDIR /minos 
+WORKDIR /app 
 
 COPY . .
 

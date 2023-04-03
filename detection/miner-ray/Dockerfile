@@ -2,17 +2,21 @@ FROM archlinux
 
 # Update and install dependencies
 RUN pacman -Syu --noconfirm && \
-  pacman -S --noconfirm python nodejs npm redis wabt && \
+  pacman -S --noconfirm python nodejs npm redis wabt python-pip && \
   rm -rf /var/cache/pacman/pkg/*
 
-WORKDIR /miner-ray
+WORKDIR /app
 
 COPY . .
 
-WORKDIR /miner-ray/src
+# Install Python packages from requirements.txt
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-RUN npm install 
+WORKDIR /app/src
 
-WORKDIR /miner-ray
+RUN npm i
+
+WORKDIR /app
 
 CMD ["sh", "-c", "redis-server --daemonize yes && python main.py"]

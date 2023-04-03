@@ -1,6 +1,6 @@
 FROM python:latest
 
-WORKDIR /virustotal
+WORKDIR /app
 
 COPY requirements.txt ./ 
 

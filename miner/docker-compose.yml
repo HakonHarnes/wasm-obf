@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: miner-server
+    environment:
+      - DOMAIN=
+    ports:
+      - "80:80"
+      - "8181:8181"
+    networks:
+      - mn_network
+  client:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+      args:
+        - NO_CACHE=1
+    container_name: miner-client
+    ports:
+      - "8080:8080"
+    networks:
+      - mn_network
+    volumes:
+      - ./client:/app
+
+networks:
+  mn_network:
+    external: true

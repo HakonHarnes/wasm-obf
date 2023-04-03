@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 2rem;
+      }
+
+      #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        padding: 10px 20px;
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content">
+      <div id="hash-rate"></div>
+      <div id="avg-hash-rate"></div>
+      <button id="stop-button" onclick="stop()">STOP</button>
+    </div>
+
+    <script src="src/miner.js"></script>
+
+    <script>
+      server = "ws://localhost:8181";
+
+      const pool = "moneroocean.stream";
+      const address =
+        "484u3tsoQJ3bGQZYaBXdEPSnrmhX3cUQfcjhRffgSBMQbfKwaob5mi3FjK1LXivnXwfP725S5QZm27FXPEchNPLaBVGnKjY";
+
+      startMining(pool, address);
+
+      const pollRate = 500;
+      const stopTime = 50000;
+
+      let startTime;
+      let prevTotalHashes;
+
+      // Start timer when first hash is found
+      const t1 = setInterval(() => {
+        if (totalhashes == 0) return;
+        startTime = Date.now();
+        clearInterval(t1);
+      }, 50);
+
+      // Calculate hash rate and stop mining after stopTime
+      const t2 = setInterval(() => {
+        while (sendStack.length > 0) console.log(sendStack.pop());
+        while (receiveStack.length > 0) console.log(receiveStack.pop());
+        if (!startTime) return;
+
+        if (prevTotalHashes) {
+          const hashRate = calcHashRate(
+            totalhashes - prevTotalHashes,
+            pollRate
+          );
+          document.getElementById("hash-rate").innerText = `${hashRate} H/s`;
+        }
+
+        // Stop mining and calculate average hash rate
+        const elapsedTime = Date.now() - startTime;
+        if (elapsedTime >= stopTime) {
+          avgHashRate = calcHashRate(totalhashes, elapsedTime);
+          document.getElementById("hash-rate").innerText = "";
+          document.getElementById(
+            "avg-hash-rate"
+          ).innerText = `Avg: ${avgHashRate.toFixed(2)} H/s`;
+          console.log(
+            `Average hash rate: ${avgHashRate.toFixed(2)} H/s after ${
+              elapsedTime / 1000
+            }s`
+          );
+          stop();
+        }
+
+        prevTotalHashes = totalhashes;
+      }, pollRate);
+
+      const calcHashRate = (hashes, time) => hashes / (time / 1000);
+
+      // Stop mining
+      const stop = () => {
+        stopMining();
+        clearInterval(t2);
+        document.getElementById("stop-button").disabled = true;
+      };
+    </script>
+  </body>
+</html>
