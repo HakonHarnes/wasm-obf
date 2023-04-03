@@ -70,7 +70,6 @@ def get_unanalyzed_documents(analysis_method):
     return unanalyzed_documents
 
 
-# TODO: Doesn't work
 def get_unmeasured_miner_documents():
     miner_documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress']:
@@ -79,7 +78,7 @@ def get_unmeasured_miner_documents():
             {
                 "$and": [
                     {"category": "miner"},
-                    {"hashrate": {"$exists": False}}
+                    {"hash_rate": {"$exists": False}}
                 ]
             }
         )))

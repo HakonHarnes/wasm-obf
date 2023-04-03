@@ -9,10 +9,11 @@ from mongodb.utils import update_metadata, update_document, get_unmeasured_miner
 
 
 miner_path = os.environ['MINER_PATH']
+binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
 
 # hashing duration in seconds
-hashing_duration = 50
+hashing_duration = 10
 
 
 def print_file(count, length, file, color='blue'):
@@ -57,12 +58,19 @@ def measure_hash_rate(domain):
 
     if len(hash_rate) == 0:
         return 0
+    else:
+        return float(hash_rate)
 
-    return hash_rate.split(' ')[1]
+
+def move_files_to_miner(wasm_file):
+    wasm_file = os.path.join(binary_path, wasm_file)
+    js_file = wasm_file.replace(".wasm", ".js")
+    os.system(f'cp {wasm_file} {miner_path}/src')
+    os.system(f'cp {js_file} {miner_path}/src')
 
 
 def modify_worker_file(wasm_file):
-    import_file = f'binaries/{wasm_file.replace(".wasm", ".js")}'
+    import_file = wasm_file.replace(".wasm", ".js")
     worker_file = os.path.join(miner_path, 'src', 'worker.js')
     os.system(
         f"sed -i 's|importScripts([^)]*)|importScripts(\"{import_file}\")|g' \"{worker_file}\"")
@@ -86,6 +94,7 @@ def main():
 
         print_file(i + 1, len(documents), file)
 
+        move_files_to_miner(file)
         modify_worker_file(file)
         modify_index_file(algo)
 

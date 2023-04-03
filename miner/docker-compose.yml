@@ -26,7 +26,6 @@ services:
       - mn_network
     volumes:
       - ./client:/app
-      - ../binaries:/app/analysis/src/binaries
 
 networks:
   mn_network:
