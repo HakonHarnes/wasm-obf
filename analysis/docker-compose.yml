@@ -21,7 +21,18 @@ services:
     volumes:
       - ./file-size/main.py:/app/main.py
       - ../binaries/:/app/binaries
-      - ../miner/client/:/app/miner
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+      - ../dataset/:/app/dataset
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+  dtw:
+    build: ./dtw
+    volumes:
+      - ./dtw/main.py:/app/main.py
+      - ../binaries/:/app/binaries
       - ../mongodb/utils.py:/app/mongodb/utils.py
       - ../dataset/:/app/dataset
     environment:
