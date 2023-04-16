@@ -1,5 +1,4 @@
 version: "3"
-
 services:
   tigress:
     build: ./tigress
@@ -17,6 +16,18 @@ services:
     build: ./llvm
     volumes:
       - ./llvm/main.py:/app/main.py
+      - ../dataset/:/app/dataset
+      - ../binaries:/app/binaries
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+    environment:
+      - BINARY_PATH=/app/binaries
+      - DATASET_PATH=/app/dataset
+    networks:
+      - db_network
+  wasm-mutate:
+    build: ./wasm-mutate
+    volumes:
+      - ./wasm-mutate/main.py:/app/main.py
       - ../dataset/:/app/dataset
       - ../binaries:/app/binaries
       - ../mongodb/utils.py:/app/mongodb/utils.py

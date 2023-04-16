@@ -32,7 +32,7 @@ def update_metadata(dataset_path):
 
 def get_documents():
     documents = []
-    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
         documents.extend(list(collection.find()))
     return documents
@@ -63,7 +63,7 @@ def get_unobfuscated_documents(obfuscation_method):
 
 def get_unanalyzed_documents(analysis_method):
     unanalyzed_documents = []
-    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
         unanalyzed_documents.extend(
             list(collection.find({analysis_method: {'$exists': False}})))
@@ -72,7 +72,7 @@ def get_unanalyzed_documents(analysis_method):
 
 def get_unmeasured_miner_documents():
     miner_documents = []
-    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
         miner_documents.extend(list(collection.find(
             {
@@ -87,7 +87,7 @@ def get_unmeasured_miner_documents():
 
 def clear_field(field, collections=None):
     if collections is None:
-        collections = ['unobfuscated', 'llvm', 'tigress']
+        collections = ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']
 
     for collection_name in collections:
         collection = db[collection_name]
@@ -105,7 +105,7 @@ def add_document(collection_name, document):
 
 def update_document(data):
     result = None
-    for collection_name in ['unobfuscated', 'llvm', 'tigress']:
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
         filter_ = {"_id": data["_id"]}
         update_ = {"$set": data}
