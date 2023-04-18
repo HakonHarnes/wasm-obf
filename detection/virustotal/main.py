@@ -7,7 +7,7 @@ import os
 from vt.error import APIError
 from termcolor import colored
 from dotenv import load_dotenv
-from mongodb.utils import update_metadata, get_unanalyzed_documents, update_document
+from mongodb.utils import get_unanalyzed_documents, update_document
 
 load_dotenv()
 
@@ -131,7 +131,6 @@ def analyze_files(api_key, documents):
 
 
 def main():
-    update_metadata(dataset_path)
     api_keys = json.loads(os.environ['API_KEYS'])
     for api_key in api_keys:
         documents = get_unanalyzed_documents('virustotal')

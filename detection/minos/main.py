@@ -1,6 +1,6 @@
 import os
 
-from mongodb.utils import update_metadata, get_unanalyzed_documents, update_document
+from mongodb.utils import get_unanalyzed_documents, update_document
 from src.imaginator import encode
 from termcolor import colored
 
@@ -24,8 +24,7 @@ def run_minos(document):
     status = os.system(f"python src/minio.py {path} >/dev/null 2>&1")
 
     if status > 1:
-        print("Error while running minos.")
-        exit(1)
+        status = 1
 
     # encode(file, "./data/img")
     document.update({
@@ -38,7 +37,6 @@ def run_minos(document):
 
 
 def main():
-    update_metadata(dataset_path)
     documents = get_unanalyzed_documents('minos')
     if len(documents) == 0:
         print("No binaries to analyze.")

@@ -3,7 +3,7 @@ import json
 import os
 
 from termcolor import colored
-from mongodb.utils import update_metadata, get_unanalyzed_documents, update_document
+from mongodb.utils import get_unanalyzed_documents, update_document
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -55,7 +55,6 @@ def run_miner_ray(file):
 
 
 def main():
-    update_metadata(dataset_path)
     documents = get_unanalyzed_documents('miner_ray')
     if len(documents) == 0:
         print("No binaries to analyze.")
