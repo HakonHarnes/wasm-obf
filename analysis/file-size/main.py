@@ -1,7 +1,7 @@
 import os
 
 from termcolor import colored
-from mongodb.utils import update_metadata, get_documents, update_document
+from mongodb.utils import get_documents, update_document
 
 
 binary_path = os.environ['BINARY_PATH']
@@ -17,8 +17,6 @@ def print_file_size(file_size):
 
 
 def main():
-    update_metadata(dataset_path)
-
     documents = get_documents()
     for i, document in enumerate(documents):
         file = document['file']

@@ -2,7 +2,7 @@
 
 FILE_IN=$1
 FILE_OUT=$2
-OBF_ARGS="${@:3}"
+ARGS="${@:3}"
 
 emcc "$FILE_IN" -o "$FILE_OUT" \
 -Wall -lm \
@@ -17,4 +17,4 @@ emcc "$FILE_IN" -o "$FILE_OUT" \
 -sNO_FILESYSTEM=1 \
 -sWASM=1 \
 -fmacro-backtrace-limit=0 \
-$OBF_ARGS
+$ARGS

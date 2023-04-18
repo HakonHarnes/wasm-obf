@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  build-dataset:
+    build: .
+    volumes:
+      - ./miners:/app/miners
+      - ./games:/app/games
+      - ./apps:/app/apps
+      - ./main.py:/app/main.py
+      - ../binaries:/app/binaries
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+    environment:
+      - BINARY_PATH=/app/binaries
+    networks:
+      - db_network
+
+networks:
+  db_network:
+    external: true
