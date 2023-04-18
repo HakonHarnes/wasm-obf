@@ -4,7 +4,7 @@ import subprocess
 
 
 from termcolor import colored
-from mongodb.utils import update_metadata, add_document, get_unobfuscated_documents
+from mongodb.utils import add_document, get_file_out, get_unobfuscated_documents
 
 
 binary_path = os.environ['BINARY_PATH']
@@ -47,8 +47,11 @@ def mutate(document, max_iterations):
     while iteration <= max_iterations and errors_in_a_row < 20:
         seed = random.randint(0, 2**32 - 1)
 
-        file_out = f'{document["file"].replace(".wasm", "")}-mutate-{iteration}.wasm'
+        file_out = get_file_out(
+            'wasm-mutate', document["name"], iteration=iteration)
         file_out_path = os.path.join(binary_path, file_out)
+
+        os.makedirs(os.path.dirname(file_out_path), exist_ok=True)
 
         exit_code, mutator = run_wasm_mutate(file_in_path, file_out_path, seed)
         print_mutation(iteration, max_iterations, exit_code, seed, mutator)
@@ -90,7 +93,6 @@ def run_wasm_mutate(file_in, file_out, seed, timeout=10):
 
 
 def main():
-    update_metadata(dataset_path)
     documents = get_unobfuscated_documents('wasm-mutate')
     if len(documents) == 0:
         print('No files to obfuscate.')

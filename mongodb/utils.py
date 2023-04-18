@@ -12,11 +12,12 @@ client = MongoClient(f"mongodb://{mongodb_host}:{mongodb_port}")
 db = client['wasm-obf']
 
 
-def get_file_out(collection_name, name, transformation=None):
-    if transformation:
-        return os.path.join(name, collection_name, transformation, f'{name}.html')
-    else:
-        return os.path.join(name, collection_name, f'{name}.html')
+def get_file_out(collection_name, name, transformation=None, iteration=None):
+    return os.path.join(name,
+                        collection_name,
+                        transformation if transformation else '',
+                        f'iteration-{iteration}' if iteration else '',
+                        f'{name}.html')
 
 
 def get_documents():
