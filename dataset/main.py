@@ -40,7 +40,7 @@ def build_wasm(dir_path, folder):
     file_out = get_file_out('unobfuscated', name)
     file_out_path = os.path.join(binary_path, file_out)
 
-    os.makedirs(os.path.dirname(file_out), exist_ok=True)
+    os.makedirs(os.path.dirname(file_out_path), exist_ok=True)
     exit_code = os.system(
         f'/bin/sh {build_script} {source_file} {file_out_path} > /dev/null 2>&1')
 

@@ -48,6 +48,11 @@ def get_unobfuscated_documents(obfuscation_method):
     unobfuscated_documents = list(unobfuscated_collection.find(
         {'file': {'$nin': obfuscated_files_list}}))
 
+    # If obfuscation method is tigress, remove miners due to compatibility issues
+    if obfuscation_method == 'tigress':
+        unobfuscated_documents = [doc for doc in unobfuscated_documents if doc.get(
+            'category') != 'miners']
+
     return unobfuscated_documents
 
 

@@ -16,10 +16,6 @@ transformations = [
     {'name': 'subobf', 'flags': '-mllvm -enable-subobf'},
     {'name': 'indibran', 'flags': '-mllvm -enable-indibran'},
     {'name': 'funcwra', 'flags': '-mllvm -enable-funcwra'},
-    {'name': 'fco', 'flags': '-mllvm -enable-fco'},
-    {'name': 'acdobf', 'flags': '-mllvm -enable-acdobf'},
-    {'name': 'antihook', 'flags': '-mllvm -enable-antihook'},
-    {'name': 'adb', 'flags': '-mllvm -enable-adb'},
 ]
 
 
