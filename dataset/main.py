@@ -47,7 +47,7 @@ def build_wasm(dir_path, folder):
     if exit_code == 0:
         data = {
             'name': name,
-            'file': file_out,
+            'file': file_out.replace('html', 'wasm'),
             'category': folder
         }
         add_document('unobfuscated', data)
