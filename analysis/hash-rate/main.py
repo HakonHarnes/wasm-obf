@@ -5,7 +5,7 @@ from termcolor import colored
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from mongodb.utils import update_metadata, update_document, get_unmeasured_miner_documents
+from mongodb.utils import update_document, get_unmeasured_miner_documents
 
 
 miner_path = os.environ['MINER_PATH']
@@ -85,8 +85,6 @@ def modify_index_file(algo):
 
 
 def main():
-    update_metadata(dataset_path)
-
     documents = get_unmeasured_miner_documents()
     for i, document in enumerate(documents):
         file = document['file']
