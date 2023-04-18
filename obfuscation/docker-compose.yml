@@ -1,4 +1,5 @@
 version: "3"
+
 services:
   tigress:
     build: ./tigress
@@ -36,6 +37,7 @@ services:
       - DATASET_PATH=/app/dataset
     networks:
       - db_network
+
 networks:
   db_network:
     external: true

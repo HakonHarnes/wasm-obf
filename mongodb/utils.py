@@ -12,22 +12,11 @@ client = MongoClient(f"mongodb://{mongodb_host}:{mongodb_port}")
 db = client['wasm-obf']
 
 
-def update_metadata(dataset_path):
-    collection = db['unobfuscated']
-
-    metadata_files = glob.glob(os.path.join(
-        dataset_path, '**', 'metadata.json'), recursive=True)
-
-    for metadata_path in metadata_files:
-        with open(metadata_path, 'r') as file:
-            metadata = json.load(file)
-
-        filter_ = {"file": metadata["file"]}
-        update_ = {"$set": metadata}
-        collection.update_one(filter_, update_, upsert=True)
-
-    print(
-        colored(f"Updated metadata for {len(metadata_files)} files", "yellow"))
+def get_file_out(collection_name, name, transformation=None):
+    if transformation:
+        return os.path.join(name, collection_name, transformation, f'{name}.html')
+    else:
+        return os.path.join(name, collection_name, f'{name}.html')
 
 
 def get_documents():
