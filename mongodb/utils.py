@@ -13,11 +13,12 @@ db = client['wasm-obf']
 
 
 def get_file_out(collection_name, name, transformation=None, iteration=None):
+    ext = 'html' if collection_name != 'wasm-mutate' else 'wasm'
     return os.path.join(name,
                         collection_name,
                         transformation if transformation else '',
                         f'iteration-{iteration}' if iteration else '',
-                        f'{name}.html')
+                        f'{name}.{ext}')
 
 
 def get_documents():

@@ -1,4 +1,5 @@
 import os
+import shutil
 import random
 import subprocess
 
@@ -40,6 +41,16 @@ def update_db(document, file, iteration, mutator):
     add_document('wasm-mutate', data)
 
 
+def copy_files_to_output(file_in_path, file_out_path):
+    file_in_dir = os.path.dirname(file_in_path)
+    file_out_dir = os.path.dirname(file_out_path)
+
+    for file in os.listdir(file_in_dir):
+        file_in = os.path.join(file_in_dir, file)
+        file_out = os.path.join(file_out_dir, file)
+        shutil.copy(file_in, file_out)
+
+
 def mutate(document, max_iterations):
     file_in_path = os.path.join(binary_path, document['file'])
 
@@ -59,6 +70,7 @@ def mutate(document, max_iterations):
 
         # mutate next file
         if exit_code == 0 and mutator:
+            copy_files_to_output(file_in_path, file_out_path)
             update_db(document, file_out, iteration, mutator)
             iteration += 1
             errors_in_a_row = 0
@@ -70,7 +82,7 @@ def mutate(document, max_iterations):
 
 
 def run_wasm_mutate(file_in, file_out, seed, timeout=10):
-    cmd = f'wasm-tools mutate {file_in} --seed {seed} -o {file_out} -vv'
+    cmd = f'wasm-tools mutate {file_in} --seed {seed} -o {file_out} -vv --preserve-semantics'
     process = subprocess.Popen(
         cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 

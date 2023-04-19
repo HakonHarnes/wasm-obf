@@ -87,8 +87,8 @@ def modify_index_file(algo):
 def main():
     documents = get_unmeasured_miner_documents()
     for i, document in enumerate(documents):
+        algo = document['name']
         file = document['file']
-        algo = document['algo']
 
         print_file(i + 1, len(documents), file)
 

@@ -11,7 +11,7 @@
       const CLI = await new Aioli([
         {
           tool: "tree",
-          urlPrefix: "http://127.0.0.1:8080",
+          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
         },
       ]);
 

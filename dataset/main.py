@@ -43,10 +43,8 @@ def build_wasm(dir_path, folder):
     log_file = file_out_path.replace('.wasm', '.emcc.log')
 
     os.makedirs(os.path.dirname(file_out_path), exist_ok=True)
-    # exit_code = os.system(
-    #     f'/bin/sh {build_script} {source_file} {file_out_path} > {log_file} 2>&1')
     exit_code = os.system(
-        f'/bin/sh {build_script} {source_file} {file_out_path}')
+        f'/bin/sh {build_script} {source_file} {file_out_path} > {log_file} 2>&1')
 
     if exit_code == 0:
         data = {
@@ -63,7 +61,6 @@ def main():
     errors = []
 
     folders = ['apps', 'games', 'miners']
-    folders = ['apps']
     for folder in folders:
         print_folder(folder, len(os.listdir(folder)))
         for dir_name in os.listdir(folder):
