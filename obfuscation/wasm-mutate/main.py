@@ -30,6 +30,7 @@ def print_mutation(iteration, max_iterations, exit_code, seed, mutator):
 
 def update_db(document, file, iteration, mutator):
     data = {
+        'name': document['name'],
         'file': file,
         'unobfuscated_file': document['file'],
         'category': document['category'],

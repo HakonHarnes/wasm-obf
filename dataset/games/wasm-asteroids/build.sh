@@ -2,7 +2,7 @@
 
 FILE_IN=$1
 FILE_OUT=$2
-OBF_ARGS="${@:3}"
+ARGS="${@:3}"
 
 emcc "$FILE_IN" -o "$FILE_OUT" \
 -I "$EMSDKPATH" \
@@ -13,4 +13,4 @@ emcc "$FILE_IN" -o "$FILE_OUT" \
 -sERROR_ON_UNDEFINED_SYMBOLS=0 \
 -sUSE_SDL=2 \
 -fmacro-backtrace-limit=0 \
-$OBF_ARGS
+$ARGS

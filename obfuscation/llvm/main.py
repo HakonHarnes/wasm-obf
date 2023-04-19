@@ -65,6 +65,7 @@ def run_emcc(document, transformation):
     # write data to db
     if code == 0:
         data = {
+            'name': document['name'],
             'file': file_out.replace('html', 'wasm'),
             'unobfuscated_file': document['file'],
             'category': document['category'],
