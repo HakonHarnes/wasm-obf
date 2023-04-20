@@ -71,6 +71,7 @@ def move_files_to_miner(wasm_file):
 
 def modify_worker_file(wasm_file):
     import_file = wasm_file.replace(".wasm", ".js")
+    import_file = os.path.basename(import_file)
     worker_file = os.path.join(miner_path, 'src', 'worker.js')
     os.system(
         f"sed -i 's|importScripts([^)]*)|importScripts(\"{import_file}\")|g' \"{worker_file}\"")
@@ -86,6 +87,10 @@ def modify_index_file(algo):
 
 def main():
     documents = get_unmeasured_miner_documents()
+    if len(documents) == 0:
+        print("No binaries to measure hash rate for!")
+        exit(1)
+
     for i, document in enumerate(documents):
         algo = document['name']
         file = document['file']

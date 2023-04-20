@@ -70,14 +70,20 @@ def get_unmeasured_miner_documents():
     miner_documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
-        miner_documents.extend(list(collection.find(
-            {
-                "$and": [
-                    {"category": "miner"},
-                    {"hash_rate": {"$exists": False}}
-                ]
-            }
-        )))
+
+        query = {
+            "$and": [
+                {"category": "miners"},
+                {"hash_rate": {"$exists": False}}
+            ]
+        }
+
+        if collection_name == 'wasm-mutate':
+            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+
+        documents = list(collection.find(query))
+        miner_documents.extend(documents)
+
     return miner_documents
 
 
