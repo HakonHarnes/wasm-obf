@@ -1,0 +1,16 @@
+#!/bin/sh
+
+FILE_IN=$1
+FILE_OUT=$2
+ARGS="${@:3}"
+
+emcc "$FILE_IN" -o "$FILE_OUT" \
+-I "$EMSDKPATH" \
+-sWASM=1 \
+-sASSERTIONS=1 \
+-sALLOW_MEMORY_GROWTH=1 \
+-sAGGRESSIVE_VARIABLE_ELIMINATION=1 \
+-sERROR_ON_UNDEFINED_SYMBOLS=0 \
+-sUSE_SDL=2 \
+-fmacro-backtrace-limit=0 \
+$ARGS
