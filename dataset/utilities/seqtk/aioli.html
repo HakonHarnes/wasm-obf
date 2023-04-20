@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emscripten Module</title>
+    <script src="https://biowasm.com/cdn/v3/aioli.js"></script>
+  </head>
+  <body>
+    {{{ SCRIPT }}}
+    <script type="module">
+      const CLI = await new Aioli([
+        {
+          tool: "seqtk",
+          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+        },
+      ]);
+
+      // Create mock fasta file
+      await CLI.mount({
+        name: "test.fa",
+        data: ">chr1\nACGTACGACTAGCAG\n>chr2\nACGATCATACCAGCA",
+      });
+
+      // Run "seqtk comp" command to calculate nucleotide composition
+      const output = await CLI.exec("seqtk comp test.fa");
+      document.getElementById("output").innerHTML = output;
+    </script>
+
+    <h4>Output of <code>seqtk comp</code>:</h4>
+    <pre id="output">Loading...</pre>
+  </body>
+</html>

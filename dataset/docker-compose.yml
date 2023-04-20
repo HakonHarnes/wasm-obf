@@ -6,7 +6,7 @@ services:
     volumes:
       - ./miners:/app/miners
       - ./games:/app/games
-      - ./apps:/app/apps
+      - ./utilities:/app/utilities
       - ./main.py:/app/main.py
       - ../binaries:/app/binaries
       - ../mongodb/utils.py:/app/mongodb/utils.py

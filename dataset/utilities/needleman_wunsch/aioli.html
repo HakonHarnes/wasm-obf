@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emscripten Module</title>
+    <script src="https://biowasm.com/cdn/v3/aioli.js"></script>
+  </head>
+  <body>
+    {{{ SCRIPT }}}
+    <script type="module">
+      const CLI = await new Aioli([
+        {
+          tool: "needleman_wunsch",
+          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+        },
+      ]);
+
+      // Align same sequences with the Needleman-Wunsch algorithm
+      const output = await CLI.exec("needleman_wunsch ACGT ACCCCGT");
+      document.getElementById("output").innerHTML = output;
+    </script>
+
+    <h4>Output of <code>needleman_wunsch</code>:</h4>
+    <pre id="output">Loading...</pre>
+  </body>
+</html>

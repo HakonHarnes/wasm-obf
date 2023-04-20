@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emscripten Module</title>
+    <script src="https://biowasm.com/cdn/v3/aioli.js"></script>
+  </head>
+  <body>
+    {{{ SCRIPT }}}
+    <script type="module">
+      const CLI = await new Aioli([
+        {
+          tool: "smith_waterman",
+          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+        },
+      ]);
+
+      // Align two sequences with the Smith-Waterman algorithm
+      const output = await CLI.exec("smith_waterman ACGT ACCCCGT");
+      document.getElementById("output").innerHTML = output;
+    </script>
+
+    <h4>Output of <code>smith_waterman</code>:</h4>
+    <pre id="output">Loading...</pre>
+  </body>
+</html>

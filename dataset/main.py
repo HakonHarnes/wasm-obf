@@ -60,7 +60,7 @@ def build_wasm(dir_path, folder):
 def main():
     errors = []
 
-    folders = ['apps', 'games', 'miners']
+    folders = ['utilities', 'games', 'miners']
     for folder in folders:
         print_folder(folder, len(os.listdir(folder)))
         for dir_name in os.listdir(folder):

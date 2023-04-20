@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emscripten Module</title>
+    <script src="https://biowasm.com/cdn/v3/aioli.js"></script>
+  </head>
+  <body>
+    {{{ SCRIPT }}}
+    <script type="module">
+      const CLI = await new Aioli([
+        {
+          tool: "lcs",
+          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+        },
+      ]);
+
+      // Find longest common substring in DNA sequence
+      const output = await CLI.exec("lcs ACGTACGATCGACTACGAC");
+      document.getElementById("output").innerHTML = output;
+    </script>
+
+    <h4>Output of <code>lcs</code>:</h4>
+    <pre id="output">Loading...</pre>
+  </body>
+</html>
