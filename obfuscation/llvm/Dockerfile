@@ -30,7 +30,7 @@ RUN cmake -G "Ninja" /src/binaryen
 RUN ninja 
 RUN ninja install 
 
-# Configure emscripten 
+# Configure Emscripten 
 WORKDIR /src/emscripten 
 RUN git checkout fab93a2bff6273c882b0c7fb7b54eccc37276e03
 ENV PATH="$PATH:/src/emscripten"

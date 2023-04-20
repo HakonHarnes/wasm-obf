@@ -10,8 +10,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Construct the path to the assets folder
 ASSETS_DIR="$SCRIPT_DIR/assets"
 
-echo $ASSETS_DIR
-
 emcc "$FILE_IN" -o "$FILE_OUT" \
 -I "$EMSDKPATH" \
 --use-preload-plugins --preload-file "$ASSETS_DIR@assets" \

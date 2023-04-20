@@ -51,7 +51,6 @@ class Transformations(Enum):
 
 
 transformations = [
-    Transformations.Ident.name,
     Transformations.Flatten.name,
     Transformations.Virtualize.name,
     Transformations.AddOpaque.name,
@@ -64,6 +63,8 @@ transformations = [
 
 def print_result(result):
     color = 'green' if result['code'] == 0 else 'red'
+    if 'Exists' in result['desc']:
+        color = 'white'
     for key, value in result.items():
         if not key == 'code':
             print(colored(value, color), end='\t')
@@ -104,10 +105,10 @@ def run_emcc(document, transformation):
     os.makedirs(os.path.dirname(emcc_out_path), exist_ok=True)
 
     # run build script
-    # code = os.system(
-    #     f'/bin/sh {script} {file_in} {emcc_out_path} > {log_file} 2>&1')
     code = os.system(
-        f'/bin/sh {script} {file_in} {emcc_out_path}')
+        f'/bin/sh {script} {file_in} {emcc_out_path} > {log_file} 2>&1')
+    # code = os.system(
+    #     f'/bin/sh {script} {file_in} {emcc_out_path}')
 
     # check output file size
     binary_out = emcc_out_path.replace('.html', '.wasm')
@@ -178,8 +179,8 @@ def main():
             continue
         print_file(i + 1, len(documents), document['file'])
         for transformation in transformations:
-            if transformation != Transformations.Flatten.name:
-                continue
+            # if transformation != Transformations.Flatten.name:
+            #     continue
             transformation = transformation.lower()
             obf_result = run_tigress(document, transformation)
             print_result(obf_result)
@@ -192,7 +193,8 @@ def main():
             if build_result['code'] != 0:
                 errors.append(build_result)
 
-    print(colored(f'\n{len(errors)} errors', 'red'))
+    color = 'green' if len(errors) == 0 else 'red'
+    print(colored(f'\n{len(errors)} errors', color))
     for error in errors:
         print_result(error)
 
