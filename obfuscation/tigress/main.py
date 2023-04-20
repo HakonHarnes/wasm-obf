@@ -51,6 +51,7 @@ class Transformations(Enum):
 
 
 transformations = [
+    Transformations.Ident.name,
     Transformations.Flatten.name,
     Transformations.Virtualize.name,
     Transformations.AddOpaque.name,
@@ -103,8 +104,10 @@ def run_emcc(document, transformation):
     os.makedirs(os.path.dirname(emcc_out_path), exist_ok=True)
 
     # run build script
+    # code = os.system(
+    #     f'/bin/sh {script} {file_in} {emcc_out_path} > {log_file} 2>&1')
     code = os.system(
-        f'/bin/sh {script} {file_in} {emcc_out_path} > {log_file} 2>&1')
+        f'/bin/sh {script} {file_in} {emcc_out_path}')
 
     # check output file size
     binary_out = emcc_out_path.replace('.html', '.wasm')
@@ -122,7 +125,7 @@ def run_emcc(document, transformation):
             'category': document['category'],
             'transformation': transformation,
         }
-        add_document('tigress', data)
+        # add_document('tigress', data)
 
     return {'desc': f'Build: {path} {transformation}', 'code': code}
 
@@ -148,6 +151,7 @@ def run_tigress(document, transformation):
 
     # log file
     log_file = emcc_out.replace('.html', '.obf.log')
+    os.makedirs(os.path.dirname(emcc_out), exist_ok=True)
 
     # run tigress
     code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
@@ -170,8 +174,12 @@ def main():
         return
 
     for i, document in enumerate(documents):
+        if document['name'] != 'f1-race':
+            continue
         print_file(i + 1, len(documents), document['file'])
         for transformation in transformations:
+            if transformation != Transformations.Flatten.name:
+                continue
             transformation = transformation.lower()
             obf_result = run_tigress(document, transformation)
             print_result(obf_result)

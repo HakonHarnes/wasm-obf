@@ -22,11 +22,9 @@ RUN apt-get remove -y git cmake build-essential && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
+# Configure app
 WORKDIR /app
-
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
-
 COPY . .
-
 CMD ["python", "main.py"]
