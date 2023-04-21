@@ -2,7 +2,7 @@ import os
 
 from enum import Enum
 from termcolor import colored
-from mongodb.utils import add_document, get_file_out, get_unobfuscated_documents
+from mongodb.utils import add_document, get_file_out, get_unobfuscated_documents, get_failed_obfuscation_attempts
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -52,7 +52,7 @@ class Transformations(Enum):
 
 transformations = [
     Transformations.Flatten.name,
-    # Transformations.Virtualize.name,
+    Transformations.Virtualize.name,
     # Transformations.AddOpaque.name,
     # Transformations.Copy.name,
     # Transformations.AntiTaintAnalysis.name,
@@ -66,7 +66,7 @@ def print_result(result):
     if 'Exists' in result['desc']:
         color = 'white'
     for key, value in result.items():
-        if not key == 'code':
+        if not key == 'code' and not key == 'file_out':
             print(colored(value, color), end='\t')
     print()
 
@@ -75,10 +75,18 @@ def print_file(count, length, file, color='blue'):
     print(colored(f'\n[{count}/{length}] Processing {file}', color))
 
 
-def get_emcc_out(path, transformation):
-    program_name = path.split('/')[-1]
-    binary_name = f'{program_name}-tigress-{transformation}.html'
-    return os.path.join(binary_path, f'{binary_name}')
+def handle_result(result, document, transformation):
+    print_result(result)
+
+    data = {
+        'name': document['name'],
+        'file': result.get('file_out'),  # empty if obfuscation failed
+        'unobfuscated_file': document['file'],
+        'category': document['category'],
+        'transformation': transformation,
+        'code': result['code'],
+    }
+    add_document('tigress', data)
 
 
 def run_emcc(document, transformation):
@@ -115,18 +123,7 @@ def run_emcc(document, transformation):
         if binary_size < 5:
             return {'desc': f'Build: {binary_out}', 'size': f'Size: {binary_size}', 'code': 1}
 
-    # write data to db
-    if code == 0:
-        data = {
-            'name': document['name'],
-            'file': emcc_out.replace('.html', '.wasm'),
-            'unobfuscated_file': document['file'],
-            'category': document['category'],
-            'transformation': transformation,
-        }
-        add_document('tigress', data)
-
-    return {'desc': f'Build: {path} {transformation}', 'code': code}
+    return {'desc': f'Build: {binary_out}', 'file_out': binary_out, 'code': code}
 
 
 def run_tigress(document, transformation):
@@ -164,33 +161,62 @@ def run_tigress(document, transformation):
     return {'desc': f'Obfuscate: {path} {transformation}', 'code': code}
 
 
-def main():
-    errors = []
+def obfuscate_document(document, transformation):
+    transformation = transformation.lower()
 
-    documents = get_unobfuscated_documents('tigress')
-    if len(documents) == 0:
-        print('No files to obfuscate.')
-        exit(1)
+    # run tigress (obfuscate)
+    obf_result = run_tigress(document, transformation)
+    if obf_result['code'] != 0:
+        handle_result(obf_result, document, transformation)
+        return
+    else:
+        print_result(obf_result)
+
+    # run emcc (build)
+    build_result = run_emcc(document, transformation)
+    handle_result(build_result, document, transformation)
+    return build_result['code']
+
+
+def obfuscate_documents(documents):
+    error_count = 0
 
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
+
+        # apply a single transformation
+        if 'transformation' in document:
+            code = obfuscate_document(document, document['transformation'])
+            if code != 0:
+                error_count += 1
+            continue
+
+        # apply all transformations
         for transformation in transformations:
-            transformation = transformation.lower()
-            obf_result = run_tigress(document, transformation)
-            print_result(obf_result)
-            if obf_result['code'] != 0:
-                errors.append(obf_result)
-                continue
+            code = obfuscate_document(document, transformation)
+            if code != 0:
+                error_count += 1
 
-            build_result = run_emcc(document, transformation)
-            print_result(build_result)
-            if build_result['code'] != 0:
-                errors.append(build_result)
+    color = 'red' if error_count > 0 else 'green'
+    print(colored(f'\nErrors: {error_count}', color))
 
-    color = 'green' if len(errors) == 0 else 'red'
-    print(colored(f'\nErrors: {len(errors)}', color))
-    for error in errors:
-        print_result(error)
+
+def main():
+
+    # obfuscate unobfuscated binaries
+    unobfuscated_documents = get_unobfuscated_documents('tigress')
+    if len(unobfuscated_documents) > 0:
+        obfuscate_documents(unobfuscated_documents)
+
+    # obfuscate failed obfuscation attempts
+    failed_documents = get_failed_obfuscation_attempts('tigress')
+    if len(failed_documents) > 0 and len(unobfuscated_documents) == 0:
+        print('\nRetrying failed obfuscation attempts...')
+        obfuscate_documents(failed_documents)
+
+    # no binaires to obfuscate
+    if len(unobfuscated_documents) == 0 and len(failed_documents) == 0:
+        print('No binaries to obfuscate!')
 
 
 if __name__ == '__main__':

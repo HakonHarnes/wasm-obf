@@ -7,6 +7,8 @@ binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
 
 
+# If you changed this, you need to also change therequired_entries_count
+# in mongodb/utils.py/get_unobfuscated_documents
 transformations = [
     {'name': 'bcfobf', 'flags': '-mllvm -enable-bcfobf'},
     {'name': 'cffobf', 'flags': '-mllvm -enable-cffobf'},
@@ -118,18 +120,18 @@ def obfuscate_documents(documents):
 def main():
 
     # obfuscate unobfuscated binaries
-    documents = get_unobfuscated_documents('llvm')
-    if len(documents) > 0:
-        obfuscate_documents(documents)
+    unobfuscated_documents = get_unobfuscated_documents('tigress')
+    if len(unobfuscated_documents) > 0:
+        obfuscate_documents(unobfuscated_documents)
 
     # obfuscate failed obfuscation attempts
-    documents = get_failed_obfuscation_attempts('llvm')
-    if len(documents) > 0:
+    failed_documents = get_failed_obfuscation_attempts('tigress')
+    if len(failed_documents) > 0:
         print('\nRetrying failed obfuscation attempts...')
-        obfuscate_documents(documents)
+        obfuscate_documents(failed_documents)
 
     # no binaires to obfuscate
-    if len(documents) == 0:
+    if len(unobfuscated_documents) == 0 and len(failed_documents) == 0:
         print('No binaries to obfuscate!')
 
 

@@ -63,11 +63,24 @@ def get_unobfuscated_documents(obfuscation_method):
 
 def get_failed_obfuscation_attempts(obfuscation_method):
     obfuscation_collection = db[obfuscation_method]
+    unobfuscated_collection = db['unobfuscated']
 
     # Find documents in the obfuscation_method collection with a non-zero code
     failed_attempts = list(obfuscation_collection.find({'code': {'$ne': 0}}))
 
-    return failed_attempts
+    # Get the corresponding documents from the 'unobfuscated' collection and add the 'transformation' field
+    result = []
+    for attempt in failed_attempts:
+        unobfuscated_file = attempt.get('unobfuscated_file')
+        transformation = attempt.get('transformation')
+        if unobfuscated_file:
+            document = unobfuscated_collection.find_one(
+                {'file': unobfuscated_file})
+            if document:
+                document['transformation'] = transformation
+                result.append(document)
+
+    return result
 
 
 def get_unanalyzed_documents(analysis_method):
@@ -113,7 +126,11 @@ def clear_field(field, collections=None):
 
 def add_document(collection_name, document):
     collection = db[collection_name]
-    filter_ = {"file": document["file"]}
+    filter_ = {"file": document["file"], "name": document["name"]}
+
+    if "code" in document:
+        filter_["code"] = document["code"]
+
     result = collection.replace_one(filter_, document, upsert=True)
     return result
 
