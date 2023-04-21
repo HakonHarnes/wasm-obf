@@ -50,6 +50,8 @@ class Transformations(Enum):
     Virtualize = 38
 
 
+# If you changed this, you need to also change therequired_entries_count
+# in mongodb/utils.py/get_unobfuscated_documents
 transformations = [
     Transformations.Flatten.name,
     Transformations.Virtualize.name,

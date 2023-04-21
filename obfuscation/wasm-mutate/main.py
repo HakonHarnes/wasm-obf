@@ -11,25 +11,29 @@ from mongodb.utils import add_document, get_file_out, get_unobfuscated_documents
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
 
+# If you changed this, you need to also change therequired_entries_count
+# in mongodb/utils.py/get_unobfuscated_documents
+iterations = 100
+
 
 def print_file(count, length, file, color='blue'):
     print(colored(f'\n[{count}/{length}] Processing {file}', color))
 
 
-def print_mutation(iteration, max_iterations, exit_code, seed, mutator):
-    template = "{:<20} {:<10} {:<10} {}"
+def print_mutation(iteration, max_iterations, code, seed, mutator):
+    template = "{:<10} {:<4} {:<15} {}"
     output = template.format(
         f'[{iteration}/{max_iterations}]',
-        exit_code,
+        code,
         seed,
         mutator
     )
 
-    color = 'green' if exit_code == 0 else 'red'
+    color = 'green' if code == 0 else 'red'
     print(colored(output, color))
 
 
-def update_db(document, file, iteration, mutator):
+def update_db(document, file, iteration, mutator, code):
     data = {
         'name': document['name'],
         'file': file,
@@ -37,6 +41,7 @@ def update_db(document, file, iteration, mutator):
         'category': document['category'],
         'iteration': iteration,
         'mutator': mutator,
+        'code': code
     }
     add_document('wasm-mutate', data)
 
@@ -65,13 +70,13 @@ def mutate(document, max_iterations):
 
         os.makedirs(os.path.dirname(file_out_path), exist_ok=True)
 
-        exit_code, mutator = run_wasm_mutate(file_in_path, file_out_path, seed)
-        print_mutation(iteration, max_iterations, exit_code, seed, mutator)
+        code, mutator = run_wasm_mutate(file_in_path, file_out_path, seed)
+        print_mutation(iteration, max_iterations, code, seed, mutator)
 
         # mutate next file
-        if exit_code == 0 and mutator:
+        if code == 0 and mutator:
             copy_files_to_output(file_in_path, file_out_path)
-            update_db(document, file_out, iteration, mutator)
+            update_db(document, file_out, iteration, mutator, code)
             iteration += 1
             errors_in_a_row = 0
             file_in_path = file_out_path
@@ -86,7 +91,7 @@ def run_wasm_mutate(file_in, file_out, seed, timeout=10):
     process = subprocess.Popen(
         cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
-    exit_code = None
+    code = None
     mutator = None
 
     try:
@@ -97,12 +102,12 @@ def run_wasm_mutate(file_in, file_out, seed, timeout=10):
             mutator = output.split('`')[1]
 
         process.wait()
-        exit_code = process.returncode
+        code = process.returncode
     except subprocess.TimeoutExpired:
         process.terminate()
         print("Timeout expired. Process terminated.")
 
-    return exit_code, mutator
+    return code, mutator
 
 
 def main():
@@ -113,7 +118,7 @@ def main():
 
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
-        mutate(document, 100)
+        mutate(document, iterations)
 
 
 if __name__ == '__main__':
