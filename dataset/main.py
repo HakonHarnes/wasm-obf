@@ -19,9 +19,9 @@ def print_error(error):
     print(colored(error, 'red'))
 
 
-def print_result(exit_code, name):
-    color = 'green' if exit_code == 0 else 'red'
-    print(f'Exit code: {colored(exit_code, color)}\n')
+def print_result(code, name):
+    color = 'green' if code == 0 else 'red'
+    print(f'Exit code: {colored(code, color)}\n')
 
 
 def build_wasm(dir_path, folder):
@@ -43,18 +43,19 @@ def build_wasm(dir_path, folder):
     log_file = file_out_path.replace('.wasm', '.emcc.log')
 
     os.makedirs(os.path.dirname(file_out_path), exist_ok=True)
-    exit_code = os.system(
+    code = os.system(
         f'/bin/sh {build_script} {source_file} {file_out_path} > {log_file} 2>&1')
 
-    if exit_code == 0:
+    if code == 0:
         data = {
             'name': name,
             'file': file_out.replace('html', 'wasm'),
-            'category': folder
+            'category': folder,
+            'code': code
         }
         add_document('unobfuscated', data)
 
-    return exit_code
+    return code
 
 
 def main():
@@ -66,9 +67,9 @@ def main():
         for dir_name in os.listdir(folder):
             print_build(dir_name)
             dir_path = os.path.join(folder, dir_name)
-            exit_code = build_wasm(dir_path, folder)
-            print_result(exit_code, dir_name)
-            if exit_code != 0:
+            code = build_wasm(dir_path, folder)
+            print_result(code, dir_name)
+            if code != 0:
                 errors.append(dir_name)
 
     color = 'green' if len(errors) == 0 else 'red'

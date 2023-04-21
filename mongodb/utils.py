@@ -1,6 +1,4 @@
 import os
-import json
-import glob
 
 from pymongo import MongoClient
 from termcolor import colored
@@ -100,7 +98,8 @@ def get_unmeasured_miner_documents():
         query = {
             "$and": [
                 {"category": "miners"},
-                {"hash_rate": {"$exists": False}}
+                {"hash_rate": {"$exists": False}},
+                {"code": 0}
             ]
         }
 

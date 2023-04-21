@@ -120,12 +120,12 @@ def obfuscate_documents(documents):
 def main():
 
     # obfuscate unobfuscated binaries
-    unobfuscated_documents = get_unobfuscated_documents('tigress')
+    unobfuscated_documents = get_unobfuscated_documents('llvm')
     if len(unobfuscated_documents) > 0:
         obfuscate_documents(unobfuscated_documents)
 
     # obfuscate failed obfuscation attempts
-    failed_documents = get_failed_obfuscation_attempts('tigress')
+    failed_documents = get_failed_obfuscation_attempts('llvm')
     if len(failed_documents) > 0:
         print('\nRetrying failed obfuscation attempts...')
         obfuscate_documents(failed_documents)
