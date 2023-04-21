@@ -1,7 +1,7 @@
 import os
 
 from termcolor import colored
-from mongodb.utils import add_document, get_file_out, get_unobfuscated_documents
+from mongodb.utils import add_document, get_file_out, get_unobfuscated_documents, get_failed_obfuscation_attempts
 
 binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
@@ -19,16 +19,35 @@ transformations = [
 ]
 
 
+def get_number_of_transformations():
+    return len(transformations)
+
+
 def print_result(result):
     color = 'green' if result['code'] == 0 else 'red'
     for key, value in result.items():
-        if not key == 'code':
+        if not key == 'code' and not key == 'file_out':
             print(colored(value, color), end='\t')
     print()
 
 
 def print_file(count, length, file, color='blue'):
     print(colored(f'\n[{count}/{length}] Processing {file}', color))
+
+
+def handle_result(result, document, transformation):
+    print_result(result)
+
+    data = {
+        'name': document['name'],
+        'file': result['file_out'],
+        'unobfuscated_file': document['file'],
+        'category': document['category'],
+        'transformation': transformation['name'],
+        'flags': transformation['flags'],
+        'code': result['code'],
+    }
+    add_document('llvm', data)
 
 
 def get_emcc_out(path, transformation):
@@ -62,41 +81,56 @@ def run_emcc(document, transformation):
     code = os.system(
         f'/bin/sh {script} {file_in} {file_out_path} {transformation["flags"]} > {log_file} 2>&1')
 
-    # write data to db
-    if code == 0:
-        data = {
-            'name': document['name'],
-            'file': file_out.replace('html', 'wasm'),
-            'unobfuscated_file': document['file'],
-            'category': document['category'],
-            'transformation': transformation['name'],
-            'flags': transformation['flags'],
-        }
-        add_document('llvm', data)
+    file_out = file_out.replace('html', 'wasm')
 
-    return {'desc': f'Build: {file_out}', 'code': code}
+    return {'desc': f'Build: {file_out}', 'file_out': file_out, 'code': code}
 
 
-def main():
-    errors = []
+def obfuscate_document(document, transformation):
+    result = run_emcc(document, transformation)
+    handle_result(result, document, transformation)
+    return result['code']
 
-    documents = get_unobfuscated_documents('llvm')
-    if len(documents) == 0:
-        print('No files to obfuscate.')
-        return
+
+def obfuscate_documents(documents):
+    error_count = 0
 
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
-        for transformation in transformations:
-            result = run_emcc(document, transformation)
-            print_result(result)
-            if result['code'] != 0:
-                errors.append(result)
-                continue
 
-    print(colored(f'\n{len(errors)} ERRORS', 'red'))
-    for error in errors:
-        print_result(error)
+        # apply a single transformation
+        if 'transformation' in document:
+            code = obfuscate_document(document, document['transformation'])
+            if code != 0:
+                error_count += 1
+            continue
+
+        # apply all transformations
+        for transformation in transformations:
+            code = obfuscate_document(document, transformation)
+            if code != 0:
+                error_count += 1
+
+    color = 'red' if error_count > 0 else 'green'
+    print(colored(f'\nErrors: {error_count}', color))
+
+
+def main():
+
+    # obfuscate unobfuscated binaries
+    documents = get_unobfuscated_documents('llvm')
+    if len(documents) > 0:
+        obfuscate_documents(documents)
+
+    # obfuscate failed obfuscation attempts
+    documents = get_failed_obfuscation_attempts('llvm')
+    if len(documents) > 0:
+        print('\nRetrying failed obfuscation attempts...')
+        obfuscate_documents(documents)
+
+    # no binaires to obfuscate
+    if len(documents) == 0:
+        print('No binaries to obfuscate!')
 
 
 if __name__ == '__main__':

@@ -39,17 +39,35 @@ def get_unobfuscated_documents(obfuscation_method):
     unobfuscated_collection = db['unobfuscated']
     obfuscation_collection = db[obfuscation_method]
 
-    # Get the list of unobfuscated_file values from the obfuscation_method collection
-    obfuscated_files = list(obfuscation_collection.find(
-        {}, projection={'_id': 0, 'unobfuscated_file': 1}))
-    obfuscated_files_list = [file.get('unobfuscated_file') for file in obfuscated_files if file.get(
-        'unobfuscated_file') is not None]
+    required_entries_count = {'llvm': 8, 'tigress': 2}
 
-    # Find files in the 'unobfuscated' collection that are not in the obfuscated_files_list
-    unobfuscated_documents = list(unobfuscated_collection.find(
-        {'file': {'$nin': obfuscated_files_list}}))
+    # Get the count of unobfuscated_file values for each file in the obfuscation_method collection
+    obfuscated_files_counts = obfuscation_collection.aggregate([
+        {'$group': {'_id': '$unobfuscated_file', 'count': {'$sum': 1}}},
+    ])
+
+    # Create a dictionary with unobfuscated_file names and their counts
+    obfuscated_files_dict = {
+        item['_id']: item['count'] for item in obfuscated_files_counts if item['_id'] is not None
+    }
+
+    # Find files in the 'unobfuscated' collection that don't have the required number of entries
+    unobfuscated_documents = []
+    for unobfuscated_document in unobfuscated_collection.find():
+        file = unobfuscated_document['file']
+        if obfuscated_files_dict.get(file, 0) < required_entries_count[obfuscation_method]:
+            unobfuscated_documents.append(unobfuscated_document)
 
     return unobfuscated_documents
+
+
+def get_failed_obfuscation_attempts(obfuscation_method):
+    obfuscation_collection = db[obfuscation_method]
+
+    # Find documents in the obfuscation_method collection with a non-zero code
+    failed_attempts = list(obfuscation_collection.find({'code': {'$ne': 0}}))
+
+    return failed_attempts
 
 
 def get_unanalyzed_documents(analysis_method):
@@ -63,8 +81,7 @@ def get_unanalyzed_documents(analysis_method):
 
 def get_unmeasured_miner_documents():
     miner_documents = []
-    # for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
-    for collection_name in ['tigress']:
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
 
         query = {
