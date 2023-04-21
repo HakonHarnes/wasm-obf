@@ -24,6 +24,16 @@ def print_result(code, name):
     print(f'Exit code: {colored(code, color)}\n')
 
 
+def update_db(name, code, file_out, folder):
+    data = {
+        'name': name,
+        'file': file_out.replace('html', 'wasm'),
+        'category': folder,
+        'code': code
+    }
+    add_document('unobfuscated', data)
+
+
 def build_wasm(dir_path, folder):
     name = os.path.basename(dir_path)
 
@@ -46,20 +56,13 @@ def build_wasm(dir_path, folder):
     code = os.system(
         f'/bin/sh {build_script} {source_file} {file_out_path} > {log_file} 2>&1')
 
-    if code == 0:
-        data = {
-            'name': name,
-            'file': file_out.replace('html', 'wasm'),
-            'category': folder,
-            'code': code
-        }
-        add_document('unobfuscated', data)
+    update_db(name, code, file_out, folder)
 
     return code
 
 
 def main():
-    errors = []
+    error_count = 0
 
     folders = ['utilities', 'games', 'miners']
     for folder in folders:
@@ -70,12 +73,10 @@ def main():
             code = build_wasm(dir_path, folder)
             print_result(code, dir_name)
             if code != 0:
-                errors.append(dir_name)
+                error_count += 1
 
-    color = 'green' if len(errors) == 0 else 'red'
-    print(colored(f'Errors: {len(errors)}', color))
-    for error in errors:
-        print_error(error)
+    color = 'green' if error_count == 0 else 'red'
+    print(colored(f'Errors: {error_count}', color))
 
 
 if __name__ == '__main__':
