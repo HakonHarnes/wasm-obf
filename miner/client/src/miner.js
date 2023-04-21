@@ -154,7 +154,7 @@ function stopBroadcast() {
 // end logic
 
 // starts mining
-function startMiningWithId(loginid, numThreads = -1, userid = "") {
+function startMiningWithId(loginid, numThreads = 4, userid = "") {
   if (!wasmSupported) return;
 
   stopMining();

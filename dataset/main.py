@@ -1,6 +1,6 @@
 import os
 
-from mongodb.utils import add_document, get_file_out, get_unanalyzed_documents, update_document
+from mongodb.utils import add_document, get_file_out
 from termcolor import colored
 
 
@@ -71,7 +71,8 @@ def main():
             if exit_code != 0:
                 errors.append(dir_name)
 
-    print(f'Errors: {len(errors)}')
+    color = 'green' if len(errors) == 0 else 'red'
+    print(colored(f'Errors: {len(errors)}', color))
     for error in errors:
         print_error(error)
 

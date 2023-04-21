@@ -49,11 +49,6 @@ def get_unobfuscated_documents(obfuscation_method):
     unobfuscated_documents = list(unobfuscated_collection.find(
         {'file': {'$nin': obfuscated_files_list}}))
 
-    # If obfuscation method is tigress, remove miners due to compatibility issues
-    if obfuscation_method == 'tigress':
-        unobfuscated_documents = [doc for doc in unobfuscated_documents if doc.get(
-            'category') != 'miners']
-
     return unobfuscated_documents
 
 
@@ -68,7 +63,8 @@ def get_unanalyzed_documents(analysis_method):
 
 def get_unmeasured_miner_documents():
     miner_documents = []
-    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
+    # for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
+    for collection_name in ['tigress']:
         collection = db[collection_name]
 
         query = {

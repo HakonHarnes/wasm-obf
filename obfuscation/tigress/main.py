@@ -52,12 +52,12 @@ class Transformations(Enum):
 
 transformations = [
     Transformations.Flatten.name,
-    Transformations.Virtualize.name,
-    Transformations.AddOpaque.name,
-    Transformations.Copy.name,
-    Transformations.AntiTaintAnalysis.name,
-    Transformations.AntiAliasAnalysis.name,
-    Transformations.EncodeLiterals.name,
+    # Transformations.Virtualize.name,
+    # Transformations.AddOpaque.name,
+    # Transformations.Copy.name,
+    # Transformations.AntiTaintAnalysis.name,
+    # Transformations.AntiAliasAnalysis.name,
+    # Transformations.EncodeLiterals.name,
 ]
 
 
@@ -107,8 +107,6 @@ def run_emcc(document, transformation):
     # run build script
     code = os.system(
         f'/bin/sh {script} {file_in} {emcc_out_path} > {log_file} 2>&1')
-    # code = os.system(
-    #     f'/bin/sh {script} {file_in} {emcc_out_path}')
 
     # check output file size
     binary_out = emcc_out_path.replace('.html', '.wasm')
@@ -126,7 +124,7 @@ def run_emcc(document, transformation):
             'category': document['category'],
             'transformation': transformation,
         }
-        # add_document('tigress', data)
+        add_document('tigress', data)
 
     return {'desc': f'Build: {path} {transformation}', 'code': code}
 
@@ -172,15 +170,11 @@ def main():
     documents = get_unobfuscated_documents('tigress')
     if len(documents) == 0:
         print('No files to obfuscate.')
-        return
+        exit(1)
 
     for i, document in enumerate(documents):
-        if document['name'] != 'f1-race':
-            continue
         print_file(i + 1, len(documents), document['file'])
         for transformation in transformations:
-            # if transformation != Transformations.Flatten.name:
-            #     continue
             transformation = transformation.lower()
             obf_result = run_tigress(document, transformation)
             print_result(obf_result)
@@ -194,7 +188,7 @@ def main():
                 errors.append(build_result)
 
     color = 'green' if len(errors) == 0 else 'red'
-    print(colored(f'\n{len(errors)} errors', color))
+    print(colored(f'\nErrors: {len(errors)}', color))
     for error in errors:
         print_result(error)
 

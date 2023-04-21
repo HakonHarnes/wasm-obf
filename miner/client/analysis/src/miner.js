@@ -200,7 +200,7 @@ function startMiningWithIdAndPassword(
 }
 
 // starts mining
-function startMining(pool, login, password = "", numThreads = -1, userid = "") {
+function startMining(pool, login, password = "", numThreads = 4, userid = "") {
   if (!wasmSupported) return;
 
   stopMining();

@@ -7,7 +7,7 @@ OBF_ARGS="${@:3}"
 emcc "$FILE_IN" -o "$FILE_OUT" \
 -Wall -lm \
 -Wbad-function-cast -Wcast-function-type \
--sEXPORTED_FUNCTIONS="['_hash_cn']" \
+-sEXPORTED_FUNCTIONS="['_hash_cn', '_main']" \
 -sEXPORTED_RUNTIME_METHODS="['ccall', 'cwrap']" \
 -sASSERTIONS=1 \
 -sALLOW_MEMORY_GROWTH=1 \
