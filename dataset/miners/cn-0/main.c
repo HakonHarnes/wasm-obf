@@ -1,4 +1,4 @@
-int main(){}
+int main(){return 0;}
 #line 144 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"
 typedef unsigned long uintptr_t;
 #line 159 "/usr/lib/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h"

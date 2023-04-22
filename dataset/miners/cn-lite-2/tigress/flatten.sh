@@ -7,8 +7,8 @@ rm -f flatten.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
---Transform=Flatten --Functions=\* \
---out=flatten.c ../main.c -v
+--Transform=Flatten --Functions=* \
+--out=flatten.c ../main.c
 
 rm -f a.out
 rm -f a.wasm

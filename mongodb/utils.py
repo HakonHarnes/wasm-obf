@@ -37,7 +37,7 @@ def get_unobfuscated_documents(obfuscation_method):
     unobfuscated_collection = db['unobfuscated']
     obfuscation_collection = db[obfuscation_method]
 
-    required_entries_count = {'llvm': 8, 'tigress': 2, 'wasm-mutate': 100}
+    required_entries_count = {'llvm': 8, 'tigress': 8, 'wasm-mutate': 100}
 
     # Get the count of unobfuscated_file values for each file in the obfuscation_method collection
     obfuscated_files_counts = obfuscation_collection.aggregate([

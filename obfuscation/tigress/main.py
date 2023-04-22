@@ -53,13 +53,14 @@ class Transformations(Enum):
 # If you changed this, you need to also change therequired_entries_count
 # in mongodb/utils.py/get_unobfuscated_documents
 transformations = [
-    Transformations.Flatten.name,
+    Transformations.RandomFuns.name,  # Random Functions / Bogus control flow
+    Transformations.Flatten.name,  # Control Flow Flattening
+    Transformations.Split.name,  # Split functions into smaller parts
+    Transformations.EncodeLiterals.name,  # String and const encryption
+    Transformations.EncodeArithmetic.name,
+    Transformations.AntiTaintAnalysis.name,
+    Transformations.AntiAliasAnalysis.name,
     Transformations.Virtualize.name,
-    # Transformations.AddOpaque.name,
-    # Transformations.Copy.name,
-    # Transformations.AntiTaintAnalysis.name,
-    # Transformations.AntiAliasAnalysis.name,
-    # Transformations.EncodeLiterals.name,
 ]
 
 
@@ -153,6 +154,7 @@ def run_tigress(document, transformation):
 
     # run tigress
     code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
+    # code = os.system(f'/bin/sh {script}')
 
     # check output file size
     if os.path.exists(tigress_out):
@@ -184,6 +186,11 @@ def obfuscate_documents(documents):
     error_count = 0
 
     for i, document in enumerate(documents):
+
+        # TODO: Remove
+        if document['category'] != 'miners':
+            continue
+
         print_file(i + 1, len(documents), document['file'])
 
         # apply a single transformation

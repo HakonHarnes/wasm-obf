@@ -1602,9 +1602,9 @@ var ___wasm_call_ctors = createExportWrapper("__wasm_call_ctors");
 /** @type {function(...*):?} */
 var _hash_cn = Module["_hash_cn"] = createExportWrapper("hash_cn");
 /** @type {function(...*):?} */
-var _malloc = createExportWrapper("malloc");
-/** @type {function(...*):?} */
 var _main = Module["_main"] = createExportWrapper("main");
+/** @type {function(...*):?} */
+var _malloc = createExportWrapper("malloc");
 /** @type {function(...*):?} */
 var ___errno_location = createExportWrapper("__errno_location");
 /** @type {function(...*):?} */
