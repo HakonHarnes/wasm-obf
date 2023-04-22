@@ -153,8 +153,8 @@ def run_tigress(document, transformation):
     os.makedirs(os.path.dirname(emcc_out), exist_ok=True)
 
     # run tigress
-    # code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
-    code = os.system(f'/bin/sh {script}')
+    code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
+    # code = os.system(f'/bin/sh {script}')
 
     # check output file size
     if os.path.exists(tigress_out):
@@ -189,7 +189,7 @@ def obfuscate_documents(documents):
 
         # TODO: Remove
         # if document['category'] != 'games':
-        if document['name'] != 'snake':
+        if document['name'] != 'pong':
             continue
 
         print_file(i + 1, len(documents), document['file'])
