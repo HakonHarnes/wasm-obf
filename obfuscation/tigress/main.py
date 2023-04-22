@@ -89,7 +89,7 @@ def handle_result(result, document, transformation):
         'transformation': transformation,
         'code': result['code'],
     }
-    add_document('tigress', data)
+    # add_document('tigress', data)
 
 
 def run_emcc(document, transformation):
@@ -153,8 +153,8 @@ def run_tigress(document, transformation):
     os.makedirs(os.path.dirname(emcc_out), exist_ok=True)
 
     # run tigress
-    code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
-    # code = os.system(f'/bin/sh {script}')
+    # code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
+    code = os.system(f'/bin/sh {script}')
 
     # check output file size
     if os.path.exists(tigress_out):
@@ -188,7 +188,8 @@ def obfuscate_documents(documents):
     for i, document in enumerate(documents):
 
         # TODO: Remove
-        if document['category'] != 'miners':
+        # if document['category'] != 'games':
+        if document['name'] != 'wasm-asteroids':
             continue
 
         print_file(i + 1, len(documents), document['file'])
@@ -202,6 +203,9 @@ def obfuscate_documents(documents):
 
         # apply all transformations
         for transformation in transformations:
+            # if transformation != Transformations.RandomFuns.name:
+            #     continue
+
             code = obfuscate_document(document, transformation)
             if code != 0:
                 error_count += 1

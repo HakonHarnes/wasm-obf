@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(dirname "$0")
 cd "$SCRIPT_DIR" || exit 
 
-rm -f copy.c
+rm -f split.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
---Transform=Copy --Functions=* \
---out=copy.c ../*.c -sUSE_SDL=2
+--Transform=Split --Functions=* \
+--out=split.c ../main.c
 
 rm -f a.out 
 rm -f a.wasm

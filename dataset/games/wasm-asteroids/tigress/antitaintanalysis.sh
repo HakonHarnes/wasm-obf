@@ -8,7 +8,7 @@ rm -f antitaintanalysis.c
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
 --Transform=AntiTaintAnalysis --Functions=* \
---out=antitaintanalysis.c ../*.c -sUSE_SDL=2
+--out=antitaintanalysis.c ../main.c -sUSE_SDL=2
 
 rm -f a.out 
 rm -f a.wasm

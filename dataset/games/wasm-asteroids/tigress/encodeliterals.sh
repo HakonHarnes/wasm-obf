@@ -8,7 +8,7 @@ rm -f encodeliterals.c
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
 --Transform=EncodeLiterals --Functions=* \
---out=encodeliterals.c ../*.c -sUSE_SDL=2
+--out=encodeliterals.c ../main.c
 
 rm -f a.out 
 rm -f a.wasm

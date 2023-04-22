@@ -3,12 +3,13 @@
 SCRIPT_DIR=$(dirname "$0")
 cd "$SCRIPT_DIR" || exit 
 
-rm -f ident.c
+rm -f encodearithmetic.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
---Transform=Ident \
---out=ident.c ../wasm-asteroids.c
+--Transform=EncodeArithmetic \
+--Functions=* \
+--out=encodearithmetic.c ../main.c
 
 rm -f a.out 
 rm -f a.wasm

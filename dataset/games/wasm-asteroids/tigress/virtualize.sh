@@ -8,7 +8,7 @@ rm -f virtualize.c
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
 --Transform=Virtualize --Functions=* \
---out=virtualize.c ../*.c -sUSE_SDL=2
+--out=virtualize.c ../main.c
 
 rm -f a.out 
 rm -f a.wasm
