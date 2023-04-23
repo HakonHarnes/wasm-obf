@@ -91,6 +91,7 @@ services:
       - "MYSQL_HOST=mysql"
     volumes:
       - ./wasim/binaries:/usr/src/app/binaries
+      - ./wasim/server/MQConnector.js:/usr/src/app/WebAssemblyAnalysis_Modules/MQConnector.js
 
   wasim_model:
     image: "wasmclassifier/wasmclassifier:model"

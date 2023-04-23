@@ -85,9 +85,6 @@ def main():
 
         update_db(document, data)
 
-        # sleep so we don't overload the server
-        time.sleep(0.5)
-
 
 if __name__ == '__main__':
     main()
