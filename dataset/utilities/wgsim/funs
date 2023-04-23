@@ -1,1 +1,0 @@
-ks_destroy,ks_getc,ks_getuntil,ks_init,kseq_destroy,kseq_init,kseq_read,main,ran_normal,simu_usage,wgsim_core,wgsim_mut_diref,wgsim_print_mutref

@@ -154,7 +154,6 @@ def run_tigress(document, transformation):
 
     # run tigress
     code = os.system(f'/bin/sh {script} > {log_file} 2>&1')
-    # code = os.system(f'/bin/sh {script}')
 
     # check output file size
     if os.path.exists(tigress_out):
@@ -186,12 +185,6 @@ def obfuscate_documents(documents):
     error_count = 0
 
     for i, document in enumerate(documents):
-
-        # TODO: Remove
-        # if document['category'] != 'games':
-        if document['name'] != 'wgsim':
-            continue
-
         print_file(i + 1, len(documents), document['file'])
 
         # apply a single transformation
@@ -203,10 +196,6 @@ def obfuscate_documents(documents):
 
         # apply all transformations
         for transformation in transformations:
-            # TODO: Remove
-            # if transformation != Transformations.EncodeLiterals.name:
-            #     continue
-
             code = obfuscate_document(document, transformation)
             if code != 0:
                 error_count += 1
