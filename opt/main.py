@@ -1,5 +1,4 @@
 import os
-import glob
 
 from termcolor import colored
 from mongodb.utils import get_unoptimized_documents, update_document
