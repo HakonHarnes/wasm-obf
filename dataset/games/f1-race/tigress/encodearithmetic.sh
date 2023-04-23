@@ -3,12 +3,13 @@
 SCRIPT_DIR=$(dirname "$0")
 cd "$SCRIPT_DIR" || exit 
 
-rm -f copy.c
+rm -f encodearithmetic.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
---Transform=Copy --Functions=* \
---out=copy.c ../*.c -sUSE_SDL=2
+--Transform=EncodeArithmetic \
+--Functions=* \
+--out=encodearithmetic.c ../main.c
 
 rm -f a.out 
 rm -f a.wasm

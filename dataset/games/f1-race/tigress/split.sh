@@ -3,12 +3,12 @@
 SCRIPT_DIR=$(dirname "$0")
 cd "$SCRIPT_DIR" || exit 
 
-rm -f antitaintanalysis.c
+rm -f split.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
---Transform=AntiTaintAnalysis --Functions=* \
---out=antitaintanalysis.c ../main.c
+--Transform=Split --Functions=* \
+--out=split.c ../main.c
 
 rm -f a.out 
 rm -f a.wasm

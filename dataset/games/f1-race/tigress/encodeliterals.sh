@@ -7,8 +7,12 @@ rm -f encodeliterals.c
 
 tigress \
 --Environment=wasm:Linux:Emcc:4.6 \
---Transform=EncodeLiterals --Functions=* \
---out=encodeliterals.c ../*.c -sUSE_SDL=2
+--Transform=InitOpaque --InitOpaqueStructs=list,array,env,input,plugin \
+--Functions=* \
+--Transform=InitEntropy --UpdateEntropyKinds=vars \
+--Transform=EncodeLiterals \
+--Functions=main \
+--out=encodeliterals.c ../main.c
 
 rm -f a.out 
 rm -f a.wasm
