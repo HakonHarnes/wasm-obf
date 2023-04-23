@@ -51,6 +51,7 @@ RUN echo 'int main() { return 0; }' | \
 # Configure app
 WORKDIR /app
 COPY requirements.txt ./ 
+COPY tigress.h /usr/local/bin/tigress/3.3.2/tigress.h
 RUN pip install -r requirements.txt
 COPY . .
 CMD ["python", "main.py"]

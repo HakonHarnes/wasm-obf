@@ -936,7 +936,6 @@ extern void srand(unsigned int);
 extern void emscripten_set_main_loop_arg(void (*func)(void *), void *arg,
                                          int fps, int simulate_infinite_loop);
 #line 74 "/usr/local/bin/emcc-non-obf/emscripten/cache/sysroot/include/stdio.h"
-extern FILE___0 *stderr;
 #line 120
 extern int fprintf(FILE___0 *__restrict, char const *__restrict, ...);
 #line 103 "/usr/local/bin/emcc-non-obf/emscripten/cache/sysroot/include/SDL2/SDL_error.h"

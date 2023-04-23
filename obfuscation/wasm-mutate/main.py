@@ -13,7 +13,7 @@ dataset_path = os.environ['DATASET_PATH']
 
 # If you changed this, you need to also change therequired_entries_count
 # in mongodb/utils.py/get_unobfuscated_documents
-iterations = 100
+iterations = 1000
 
 
 def print_file(count, length, file, color='blue'):

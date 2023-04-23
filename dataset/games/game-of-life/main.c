@@ -787,7 +787,6 @@ void engine_destroy(struct Engine *e ) ;
 #line 15
 int engine_step(struct Engine *e ) ;
 #line 74 "/usr/local/bin/emcc-non-obf/emscripten/cache/sysroot/include/stdio.h"
-extern FILE *stderr ;
 #line 120
 extern int fprintf(FILE * , char const   *  , ...) ;
 #line 40 "/usr/local/bin/emcc-non-obf/emscripten/cache/sysroot/include/stdlib.h"
