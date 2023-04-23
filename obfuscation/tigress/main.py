@@ -189,7 +189,7 @@ def obfuscate_documents(documents):
 
         # TODO: Remove
         # if document['category'] != 'games':
-        if document['name'] != 'pong':
+        if document['name'] != 'game-of-life':
             continue
 
         print_file(i + 1, len(documents), document['file'])

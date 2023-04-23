@@ -1,0 +1,3 @@
+emcc: warning: LLVM version for clang executable "/usr/local/bin/emcc-non-obf/llvm/build/bin/clang" appears incorrect (seeing "16.0", expected "17") [-Wversion-check]
+
+<<Tigress>> None: sortGlobalDeclarations: GCompTag:SDL_Renderer
