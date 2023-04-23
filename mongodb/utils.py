@@ -90,6 +90,15 @@ def get_unanalyzed_documents(analysis_method):
     return unanalyzed_documents
 
 
+def get_unoptimized_documents():
+    unoptimized_documents = []
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
+        collection = db[collection_name]
+        unoptimized_documents.extend(
+            list(collection.find({'opt': {'$exists': False}})))
+    return unoptimized_documents
+
+
 def get_unmeasured_miner_documents():
     miner_documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:

@@ -1,5 +1,5 @@
 import os
-import sys
+import time
 import requests
 
 
@@ -54,7 +54,8 @@ def run_wasim(wasm_binary_path, classifierType='neural'):
     if response.status_code != 200:
         return {'code': response.status_code, 'text': response.text}
 
-    labels_list = response.json()['fileResults'][0]['labels']
+    response_json = response.json()
+    labels_list = response_json['fileResults'][0]['labels']
     labels_dict = {label: score for label, score in labels_list}
     labels_dict['code'] = response.status_code
 
@@ -83,6 +84,9 @@ def main():
             data[classifier] = result
 
         update_db(document, data)
+
+        # sleep so we don't overload the server
+        time.sleep(0.5)
 
 
 if __name__ == '__main__':

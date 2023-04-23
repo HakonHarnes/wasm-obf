@@ -1,7 +1,7 @@
 #!/bin/bash
 
 database="wasm-obf"
-collections=("unobfuscated" "llvm" "tigress" "wasm-obf")
+collections=("unobfuscated" "llvm" "tigress" "wasm-mutate")
 
 # Create dump dir
 docker exec "mongodb" sh -c "mkdir -p /tmp/dump"
