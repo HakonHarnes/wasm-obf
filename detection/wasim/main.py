@@ -68,6 +68,11 @@ def main():
         print("No binaries to analyze.")
         return
 
+    delay = 5
+    print(
+        f"Sleeping for {delay} seconds to allow wasim containers to start...")
+    time.sleep(delay)
+
     classifiers = ['neural', 'random', 'svm', 'naive']
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
