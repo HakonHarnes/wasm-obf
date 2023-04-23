@@ -89,7 +89,7 @@ def handle_result(result, document, transformation):
         'transformation': transformation,
         'code': result['code'],
     }
-    # add_document('tigress', data)
+    add_document('tigress', data)
 
 
 def run_emcc(document, transformation):
