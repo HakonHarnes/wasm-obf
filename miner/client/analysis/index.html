@@ -11,7 +11,7 @@
     <script>
       server = "ws://miner-server:8181";
 
-      const algo = "cn-lite-0";
+      const algo = "cn-2";
       const pool = `nanopool-${algo}`;
       const address =
         "484u3tsoQJ3bGQZYaBXdEPSnrmhX3cUQfcjhRffgSBMQbfKwaob5mi3FjK1LXivnXwfP725S5QZm27FXPEchNPLaBVGnKjY";
@@ -19,7 +19,7 @@
       startMining(pool, address);
 
       const pollRate = 500;
-      const stopTime = 10000;
+      const stopTime = 60000;
 
       let startTime;
 

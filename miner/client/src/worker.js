@@ -76,7 +76,6 @@ onmessage = function (e) {
         else throw "algorithm not supported!";
 
         var hashval = hex2int(hash.substring(56, 64));
-        console.log(hashval);
         bsuccess = hashval < target;
       } catch (err) {
         throw err;
