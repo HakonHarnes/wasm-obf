@@ -11,7 +11,7 @@ tigress \
 --Functions=* \
 --Transform=InitEntropy --UpdateEntropyKinds=vars \
 --Transform=EncodeLiterals \
---Functions=main \
+--Functions=F1Race_Crashing,F1Race_Cyclic_Timer,F1Race_Framemove \
 --out=encodeliterals.c ../main.c
 
 rm -f a.out 

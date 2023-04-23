@@ -11,7 +11,7 @@ tigress \
 --Functions=* \
 --Transform=InitEntropy --UpdateEntropyKinds=vars \
 --Transform=EncodeLiterals \
---Functions=main \
+--Functions=engine_destroy,engine_new,engine_step,field_adjust_size \
 --out=encodeliterals.c ../main.c
 
 rm -f a.out 

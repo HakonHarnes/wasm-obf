@@ -188,8 +188,8 @@ def obfuscate_documents(documents):
     for i, document in enumerate(documents):
 
         # TODO: Remove
-        # if document['category'] != 'games':
-        if document['name'] != 'breakout':
+        if document['category'] != 'games':
+            # if document['name'] != 'game-of-life':
             continue
 
         print_file(i + 1, len(documents), document['file'])
@@ -203,7 +203,8 @@ def obfuscate_documents(documents):
 
         # apply all transformations
         for transformation in transformations:
-            # if transformation != Transformations.RandomFuns.name:
+            # TODO: Remove
+            # if transformation != Transformations.EncodeLiterals.name:
             #     continue
 
             code = obfuscate_document(document, transformation)
