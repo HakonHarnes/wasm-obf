@@ -10,7 +10,7 @@ dataset_path = os.environ['DATASET_PATH']
 # If you changed this, you need to also change therequired_entries_count
 # in mongodb/utils.py/get_unobfuscated_documents
 transformations = [
-    {'name': 'bcfobf', 'flags': '-mllvm -enable-bcfobf'},
+    {'name': 'bcfobf', 'flags': '-mllvm -enable-bcfobf -mllvm -bcf_prob=30'},
     {'name': 'cffobf', 'flags': '-mllvm -enable-cffobf'},
     {'name': 'splitobf', 'flags': '-mllvm -enable-splitobf'},
     {'name': 'strcry', 'flags': '-mllvm -enable-strcry'},
