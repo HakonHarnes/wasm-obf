@@ -89,14 +89,14 @@ def modify_index_file(algo):
 
 
 def calculate_actual_hash_rate(data):
-    measuring_time = len(data['hashes'])
-    return round(data['hashes'][-1] / measuring_time, 1)
+    measuring_time = len(data['hash_count'])
+    return round(data['hash_count'][-1] / measuring_time, 1)
 
 
 def calculate_raw_hash_rate(data):
-    measuring_time = len(data['hashes'])
+    measuring_time = len(data['hash_count'])
     hashing_time = measuring_time - (data['tth'] / 1000)
-    return round(data['hashes'][-1] / hashing_time, 1)
+    return round(data['hash_count'][-1] / hashing_time, 1)
 
 
 def print_error(data):
@@ -104,10 +104,16 @@ def print_error(data):
 
 
 def print_data(data):
-    print(
-        f"{colored('Actual hash rate:', 'green')} {data['actual_hash_rate']}")
-    print(f"{colored('Raw hash rate:', 'green')} {data['raw_hash_rate']}")
-    print(f"{colored('TTH:', 'green')} {data['tth']}")
+
+    if 'error' in data:
+        print(colored(data['error'], 'red'))
+    else:
+        print(f"{colored('TTH:', 'green')} {data['tth']}\n")
+        print(colored('Hash count:', 'green'))
+        for i, hash in enumerate(data['hash_count']):
+            if i % 15 == 0 and i != 0:
+                print()
+            print(f"{hash:<10}", end='')
 
 
 def main():
@@ -127,16 +133,7 @@ def main():
         modify_index_file(algo)
 
         data = measure_hash_rate('http://miner-client:8080/analysis')
-
-        # Print error
-        if data.get('error'):
-            print(colored(data['error'], 'red'))
-
-        # Calculate hash rates
-        else:
-            data['actual_hash_rate'] = calculate_actual_hash_rate(data)
-            data['raw_hash_rate'] = calculate_raw_hash_rate(data)
-            print_data(data)
+        print_data(data)
 
         # Update db
         document.update({'hash_rate': data})
