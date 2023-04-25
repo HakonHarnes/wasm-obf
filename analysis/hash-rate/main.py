@@ -1,5 +1,6 @@
 import os
 import time
+import json
 
 from termcolor import colored
 from selenium import webdriver
@@ -13,7 +14,7 @@ binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
 
 # hashing duration in seconds
-hashing_duration = 60
+hashing_duration = 10
 
 
 def print_file(count, length, file, color='blue'):
@@ -37,29 +38,31 @@ def init_driver(domain):
 def measure_hash_rate(domain):
     driver = init_driver(domain)
 
-    timeout = hashing_duration + 60  # timeout after hashing duration + 60 seconds
-    poll_interval = 5  # poll every 5 seconds
+    timeout = hashing_duration + 60  # Timeout after hashing duration + 10 seconds
+    poll_interval = 2  # Poll every 2 seconds
     time_elapsed = 0
-    hash_rate = ''
+    data = ""
 
-    while len(hash_rate) == 0 and time_elapsed < timeout:
-        hash_rate_element = driver.find_element(By.ID, "avg-hash-rate")
-        hash_rate = hash_rate_element.text
-        time.sleep(poll_interval)
-        time_elapsed += poll_interval
+    while len(data) == 0 and time_elapsed < timeout:
 
+        # Check for errors
         for entry in driver.get_log('browser'):
             print(colored(entry['message'], 'red'))
             if 'error' in entry['message'].lower():
                 driver.quit()
-                return 0
+                return {'error': entry['message']}
+
+        # Check for data
+        data = driver.find_element(By.ID, "data").text
+        time.sleep(poll_interval)
+        time_elapsed += poll_interval
 
     driver.quit()
 
-    if len(hash_rate) == 0:
-        return 0
-    else:
-        return float(hash_rate)
+    if len(data) == 0:
+        return {'error': 'No data received'}
+
+    return json.loads(data)
 
 
 def move_files_to_miner(wasm_file):
@@ -85,6 +88,28 @@ def modify_index_file(algo):
         f"sed -i 's|const stopTime = .*;|const stopTime = {hashing_duration * 1000};|g' {index_file}")
 
 
+def calculate_actual_hash_rate(data):
+    measuring_time = len(data['hashes'])
+    return round(data['hashes'][-1] / measuring_time, 1)
+
+
+def calculate_raw_hash_rate(data):
+    measuring_time = len(data['hashes'])
+    hashing_time = measuring_time - (data['tth'] / 1000)
+    return round(data['hashes'][-1] / hashing_time, 1)
+
+
+def print_error(data):
+    print(colored(data['error'], 'red'))
+
+
+def print_data(data):
+    print(
+        f"{colored('Actual hash rate:', 'green')} {data['actual_hash_rate']}")
+    print(f"{colored('Raw hash rate:', 'green')} {data['raw_hash_rate']}")
+    print(f"{colored('TTH:', 'green')} {data['tth']}")
+
+
 def main():
     documents = get_unmeasured_miner_documents()
     if len(documents) == 0:
@@ -101,10 +126,20 @@ def main():
         modify_worker_file(file)
         modify_index_file(algo)
 
-        hash_rate = measure_hash_rate('http://miner-client:8080/analysis')
-        print(f'Hash rate: {hash_rate}', flush=True)
+        data = measure_hash_rate('http://miner-client:8080/analysis')
 
-        document.update({'hash_rate': hash_rate})
+        # Print error
+        if data.get('error'):
+            print(colored(data['error'], 'red'))
+
+        # Calculate hash rates
+        else:
+            data['actual_hash_rate'] = calculate_actual_hash_rate(data)
+            data['raw_hash_rate'] = calculate_raw_hash_rate(data)
+            print_data(data)
+
+        # Update db
+        document.update({'hash_rate': data})
         update_document(document)
 
 
