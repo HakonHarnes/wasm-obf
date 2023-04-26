@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  extract-bytecode:
+    build: .
+    volumes:
+      - ./main.py:/app/main.py
+      - ../binaries:/app/binaries
+      - ../miner/client/:/app/miner
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+    environment:
+      - BINARY_PATH=/app/binaries
+      - MINER_PATH=/app/miner/analysis
+    networks:
+      - db_network
+      - mn_network
+
+networks:
+  db_network:
+    external: true
+  mn_network:
+    external: true
