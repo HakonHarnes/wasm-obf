@@ -99,6 +99,26 @@ def get_unoptimized_documents():
     return unoptimized_documents
 
 
+def get_unverified_miners():
+    unverified_documents = []
+    for collection_name in ['llvm', 'tigress', 'wasm-mutate']:
+        collection = db[collection_name]
+
+        query = {
+            "$and": [
+                {"category": "miners"},
+                {'verified_hashes': {'$exists': False}},
+                {"code": 0}
+            ]
+        }
+        if collection_name == 'wasm-mutate':
+            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+
+        unverified_documents.extend(
+            list(collection.find(query)))
+    return unverified_documents
+
+
 def get_unmeasured_miner_documents():
     miner_documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
@@ -111,7 +131,6 @@ def get_unmeasured_miner_documents():
                 {"code": 0}
             ]
         }
-
         if collection_name == 'wasm-mutate':
             query["$and"].append({"iteration": {"$mod": [100, 0]}})
 
