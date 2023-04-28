@@ -8,29 +8,40 @@
   <body>
     {{{ SCRIPT }}}
     <script type="module">
-      const CLI = await new Aioli([
-        {
-          tool: "wgsim",
-          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
-        },
-      ]);
+      (async function () {
+        while (true) {
+          const CLI = await new Aioli([
+            {
+              tool: "wgsim",
+              urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+            },
+          ]);
 
-      // Create mock reference fasta file
-      await CLI.mount({
-        name: "ref.fa",
-        data: ">chr1\nACGTACGACTAGCAG\n>chr2\nACGATCATACCAGCA",
-      });
+          async function sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
+          }
 
-      // Run "wgsim" command (overridding default options since reference is very small)
-      // and output result to read1.fastq and read2.fastq
-      // Try changing the seed (-S) to get random results each time
-      await CLI.exec(
-        "wgsim -N 5 -S 123 -d 2 -s 1 -1 5 -2 5 ref.fa read1.fastq read2.fastq"
-      );
+          // Create mock reference fasta file
+          await CLI.mount({
+            name: "ref.fa",
+            data: ">chr1\nACGTACGACTAGCAG\n>chr2\nACGATCATACCAGCA",
+          });
 
-      // Get the file contents of one of the two FASTQ files generated
-      const output = await CLI.cat("read2.fastq");
-      document.getElementById("output").innerHTML = output;
+          // Run "wgsim" command (overridding default options since reference is very small)
+          // and output result to read1.fastq and read2.fastq
+          // Try changing the seed (-S) to get random results each time
+          await CLI.exec(
+            "wgsim -N 5 -S 123 -d 2 -s 1 -1 5 -2 5 ref.fa read1.fastq read2.fastq"
+          );
+
+          // Get the file contents of one of the two FASTQ files generated
+          const output = await CLI.cat("read2.fastq");
+          document.getElementById("output").innerHTML = output;
+          await sleep(250);
+          document.getElementById("output").innerHTML = "Loading...";
+          await sleep(250);
+        }
+      })();
     </script>
 
     <h4>Output of <code>wgsim -N 5</code>:</h4>

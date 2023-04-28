@@ -8,22 +8,33 @@
   <body>
     {{{ SCRIPT }}}
     <script type="module">
-      const CLI = await new Aioli([
-        {
-          tool: "seqtk",
-          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
-        },
-      ]);
+      (async function () {
+        const CLI = await new Aioli([
+          {
+            tool: "seqtk",
+            urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+          },
+        ]);
 
-      // Create mock fasta file
-      await CLI.mount({
-        name: "test.fa",
-        data: ">chr1\nACGTACGACTAGCAG\n>chr2\nACGATCATACCAGCA",
-      });
+        async function sleep(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
 
-      // Run "seqtk comp" command to calculate nucleotide composition
-      const output = await CLI.exec("seqtk comp test.fa");
-      document.getElementById("output").innerHTML = output;
+        // Create mock fasta file
+        await CLI.mount({
+          name: "test.fa",
+          data: ">chr1\nACGTACGACTAGCAG\n>chr2\nACGATCATACCAGCA",
+        });
+
+        while (true) {
+          // Run "seqtk comp" command to calculate nucleotide composition
+          const output = await CLI.exec("seqtk comp test.fa");
+          document.getElementById("output").innerHTML = output;
+          await sleep(250);
+          document.getElementById("output").innerHTML = "Loading...";
+          await sleep(250);
+        }
+      })();
     </script>
 
     <h4>Output of <code>seqtk comp</code>:</h4>

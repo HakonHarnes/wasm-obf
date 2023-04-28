@@ -8,16 +8,27 @@
   <body>
     {{{ SCRIPT }}}
     <script type="module">
-      const CLI = await new Aioli([
-        {
-          tool: "smith_waterman",
-          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
-        },
-      ]);
+      (async function () {
+        const CLI = await new Aioli([
+          {
+            tool: "smith_waterman",
+            urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+          },
+        ]);
 
-      // Align two sequences with the Smith-Waterman algorithm
-      const output = await CLI.exec("smith_waterman ACGT ACCCCGT");
-      document.getElementById("output").innerHTML = output;
+        async function sleep(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        while (true) {
+          // Align two sequences with the Smith-Waterman algorithm
+          const output = await CLI.exec("smith_waterman ACGT ACCCCGT");
+          document.getElementById("output").innerHTML = output;
+          await sleep(250);
+          document.getElementById("output").innerHTML = "Loading...";
+          await sleep(250);
+        }
+      })();
     </script>
 
     <h4>Output of <code>smith_waterman</code>:</h4>

@@ -8,16 +8,27 @@
   <body>
     {{{ SCRIPT }}}
     <script type="module">
-      const CLI = await new Aioli([
-        {
-          tool: "tree",
-          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
-        },
-      ]);
+      (async function () {
+        const CLI = await new Aioli([
+          {
+            tool: "tree",
+            urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+          },
+        ]);
 
-      // Show folder structure of root directory
-      const output = await CLI.exec("tree /");
-      document.getElementById("output").innerHTML = output;
+        async function sleep(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        while (true) {
+          // Show folder structure of root directory
+          const output = await CLI.exec("tree /");
+          document.getElementById("output").innerHTML = output;
+          await sleep(250);
+          document.getElementById("output").innerHTML = "Loading...";
+          await sleep(250);
+        }
+      })();
     </script>
 
     <h4>Output of <code>tree /</code>:</h4>

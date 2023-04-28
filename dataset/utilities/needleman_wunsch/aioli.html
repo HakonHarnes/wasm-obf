@@ -8,16 +8,26 @@
   <body>
     {{{ SCRIPT }}}
     <script type="module">
-      const CLI = await new Aioli([
-        {
-          tool: "needleman_wunsch",
-          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
-        },
-      ]);
+      (async function () {
+        const CLI = await new Aioli([
+          {
+            tool: "needleman_wunsch",
+            urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+          },
+        ]);
 
-      // Align same sequences with the Needleman-Wunsch algorithm
-      const output = await CLI.exec("needleman_wunsch ACGT ACCCCGT");
-      document.getElementById("output").innerHTML = output;
+        async function sleep(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        while (true) {
+          const output = await CLI.exec("needleman_wunsch ACGT ACCCCGT");
+          document.getElementById("output").innerHTML = output;
+          await sleep(250);
+          document.getElementById("output").innerHTML = "Loading...";
+          await sleep(250);
+        }
+      })();
     </script>
 
     <h4>Output of <code>needleman_wunsch</code>:</h4>

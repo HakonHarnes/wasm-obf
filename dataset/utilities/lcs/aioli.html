@@ -8,16 +8,26 @@
   <body>
     {{{ SCRIPT }}}
     <script type="module">
-      const CLI = await new Aioli([
-        {
-          tool: "lcs",
-          urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
-        },
-      ]);
+      (async function () {
+        const CLI = await new Aioli([
+          {
+            tool: "lcs",
+            urlPrefix: document.location.href.replace(/\/[^/]*\.html$/, ""),
+          },
+        ]);
 
-      // Find longest common substring in DNA sequence
-      const output = await CLI.exec("lcs ACGTACGATCGACTACGAC");
-      document.getElementById("output").innerHTML = output;
+        async function sleep(ms) {
+          return new Promise((resolve) => setTimeout(resolve, ms));
+        }
+
+        while (true) {
+          const output = await CLI.exec("lcs ACGTACGATCGACTACGAC");
+          document.getElementById("output").innerHTML = output;
+          await sleep(250);
+          document.getElementById("output").innerHTML = "Loading...";
+          await sleep(250);
+        }
+      })();
     </script>
 
     <h4>Output of <code>lcs</code>:</h4>
