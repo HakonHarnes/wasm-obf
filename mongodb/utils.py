@@ -106,7 +106,7 @@ def get_documents_without_v8_stats():
 
         query = {
             "$and": [
-                {'v8_file': {'$exists': False}},
+                {'v8': {'$exists': False}},
                 {"code": 0}
             ]
         }

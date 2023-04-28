@@ -6,7 +6,7 @@ from termcolor import colored
 miner_path = os.environ['MINER_PATH']
 binary_path = os.environ['BINARY_PATH']
 
-# How long to capture bytecode for
+# How long to capture v8 data for
 website_timeout = 60
 
 
@@ -15,10 +15,16 @@ def print_file(count, length, file, color='blue'):
         colored(f'\n[{count}/{length}] Processing {file}', color), flush=True)
 
 
-def handle_result(document, v8_file):
-    print(colored('Extracted v8 stats', 'green'), flush=True)
+def handle_result(document, data):
+    if 'error' in data:
+        print(colored(data['error'], 'red'), flush=True)
+    else:
+        print(
+            f"{colored('Liftoff:', 'green')} {data['liftoff_size']}", flush=True)
+        print(
+            f"{colored('TurboFan:', 'green')} {data['turbofan_size']}", flush=True)
 
-    document.update({'v8_file': v8_file})
+    document.update({'v8': data})
     update_document(document)
 
 
@@ -51,6 +57,73 @@ def get_url(document):
 
     html_file = document['file'].replace('.wasm', '.html')
     return f'http://localhost:8080/binaries/{html_file}'
+
+
+def get_liftoff_size(data):
+
+    function_sizes = {}
+    for entry in data:
+        if 'Liftoff' not in entry:
+            continue
+
+        index = int(entry.split('index: ')[1].split('\n')[0].strip())
+        size = int(entry.split('size = ')[2].split(',')[0].strip())
+        if index in function_sizes:
+            if function_sizes[index] > size:
+                function_sizes[index] = size
+        else:
+            function_sizes[index] = size
+
+    liftoff_size = 0
+    for size in function_sizes.values():
+        liftoff_size += size
+
+    return liftoff_size
+
+
+def get_turbofan_size(data):
+    function_sizes = {}
+    for entry in data:
+        if 'Liftoff' not in entry and 'TurboFan' not in entry:
+            continue
+
+        index = int(entry.split('index: ')[1].split('\n')[0].strip())
+        size = int(entry.split('size = ')[2].split(',')[0].strip())
+        if index in function_sizes:
+            if function_sizes[index] > size:
+                function_sizes[index] = size
+        else:
+            function_sizes[index] = size
+
+    turbofan_size = 0
+    for size in function_sizes.values():
+        turbofan_size += size
+
+    return turbofan_size
+
+
+def extract_data(v8_file):
+    file_data = None
+    with open(v8_file, 'r') as f:
+        file_data = f.read()
+        f.close()
+
+    if file_data is None:
+        return {
+            'file': v8_file,
+            'error': 'Could not read v8 file'
+        }
+
+    # Calculate liftoff and turbofan sizes (before and after optimization)
+    file_data = file_data.split('--- WebAssembly code ---')[1:-1]
+    liftoff_size = get_liftoff_size(file_data)
+    turbofan_size = get_turbofan_size(file_data)
+
+    return {
+        'file': v8_file,
+        'liftoff_size': liftoff_size,
+        'turbofan_size': turbofan_size
+    }
 
 
 def get_v8_stats(document):
@@ -95,8 +168,8 @@ def main():
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
         v8_file = get_v8_stats(document)
-        break
-        handle_result(document, v8_file)
+        data = extract_data(v8_file)
+        handle_result(document, data)
 
 
 if __name__ == '__main__':
