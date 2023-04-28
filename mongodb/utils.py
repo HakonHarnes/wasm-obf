@@ -33,6 +33,38 @@ def get_documents_in_collection(collection_name):
     return documents
 
 
+def clear_field(field, collections=None):
+    if collections is None:
+        collections = ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']
+
+    for collection_name in collections:
+        collection = db[collection_name]
+        result = collection.update_many({}, {"$unset": {field: ""}})
+        print(colored(
+            f"Removed field '{field}' from {result.modified_count} documents in the '{collection_name}' collection", "yellow"))
+
+
+def add_document(collection_name, document):
+    collection = db[collection_name]
+    filter_ = {"file": document["file"], "name": document["name"]}
+
+    if "code" in document:
+        filter_["code"] = document["code"]
+
+    result = collection.replace_one(filter_, document, upsert=True)
+    return result
+
+
+def update_document(data):
+    result = None
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
+        collection = db[collection_name]
+        filter_ = {"_id": data["_id"]}
+        update_ = {"$set": data}
+        result = collection.update_one(filter_, update_)
+    return result
+
+
 def get_unobfuscated_documents(obfuscation_method):
     unobfuscated_collection = db['unobfuscated']
     obfuscation_collection = db[obfuscation_method]
@@ -82,21 +114,39 @@ def get_failed_obfuscation_attempts(obfuscation_method):
 
 
 def get_unanalyzed_documents(analysis_method):
-    unanalyzed_documents = []
+    documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
-        unanalyzed_documents.extend(
-            list(collection.find({analysis_method: {'$exists': False}})))
-    return unanalyzed_documents
+
+        query = {
+            "$and": [
+                {analysis_method: {'$exists': False}},
+            ]
+        }
+        if collection_name == 'wasm-mutate':
+            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+
+        documents.extend(
+            list(collection.find(query)))
+    return documents
 
 
 def get_unoptimized_documents():
-    unoptimized_documents = []
+    documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
-        unoptimized_documents.extend(
-            list(collection.find({'opt': {'$exists': False}})))
-    return unoptimized_documents
+
+        query = {
+            "$and": [
+                {'opt': {'$exists': False}},
+            ]
+        }
+        if collection_name == 'wasm-mutate':
+            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+
+        documents.extend(
+            list(collection.find(query)))
+    return documents
 
 
 def get_documents_without_v8_stats():
@@ -106,8 +156,7 @@ def get_documents_without_v8_stats():
 
         query = {
             "$and": [
-                {'v8': {'$exists': False}},
-                {"code": 0}
+                {'v8': {'$exists': False}}
             ]
         }
         if collection_name == 'wasm-mutate':
@@ -125,8 +174,7 @@ def get_documents_without_distance():
 
         query = {
             "$and": [
-                {'distance': {'$exists': False}},
-                {"code": 0}
+                {'distance': {'$exists': False}}
             ]
         }
         if collection_name == 'wasm-mutate':
@@ -145,8 +193,7 @@ def get_unverified_miners():
         query = {
             "$and": [
                 {"category": "miners"},
-                {'verified_hashes': {'$exists': False}},
-                {"code": 0}
+                {'verified_hashes': {'$exists': False}}
             ]
         }
         if collection_name == 'wasm-mutate':
@@ -165,8 +212,7 @@ def get_unmeasured_miner_documents():
         query = {
             "$and": [
                 {"category": "miners"},
-                {"hash_rate": {"$exists": False}},
-                {"code": 0}
+                {"hash_rate": {"$exists": False}}
             ]
         }
         if collection_name == 'wasm-mutate':
@@ -176,35 +222,3 @@ def get_unmeasured_miner_documents():
         miner_documents.extend(documents)
 
     return miner_documents
-
-
-def clear_field(field, collections=None):
-    if collections is None:
-        collections = ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']
-
-    for collection_name in collections:
-        collection = db[collection_name]
-        result = collection.update_many({}, {"$unset": {field: ""}})
-        print(colored(
-            f"Removed field '{field}' from {result.modified_count} documents in the '{collection_name}' collection", "yellow"))
-
-
-def add_document(collection_name, document):
-    collection = db[collection_name]
-    filter_ = {"file": document["file"], "name": document["name"]}
-
-    if "code" in document:
-        filter_["code"] = document["code"]
-
-    result = collection.replace_one(filter_, document, upsert=True)
-    return result
-
-
-def update_document(data):
-    result = None
-    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
-        collection = db[collection_name]
-        filter_ = {"_id": data["_id"]}
-        update_ = {"$set": data}
-        result = collection.update_one(filter_, update_)
-    return result
