@@ -14,7 +14,7 @@ binary_path = os.environ['BINARY_PATH']
 dataset_path = os.environ['DATASET_PATH']
 
 # hashing duration in seconds
-hashing_duration = 10
+hashing_duration = 100
 
 
 def print_file(count, length, file, color='blue'):
