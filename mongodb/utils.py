@@ -99,7 +99,7 @@ def get_unoptimized_documents():
     return unoptimized_documents
 
 
-def get_documents_without_bytecode():
+def get_documents_without_v8_stats():
     documents = []
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]

@@ -1,17 +1,13 @@
-import signal
 import os
-import time
-import signal
-import subprocess
 
+from mongodb.utils import update_document, get_documents_without_v8_stats
 from termcolor import colored
-from mongodb.utils import update_document, get_documents_without_bytecode
 
 miner_path = os.environ['MINER_PATH']
 binary_path = os.environ['BINARY_PATH']
 
 # How long to capture bytecode for
-website_timeout = 50
+website_timeout = 60
 
 
 def print_file(count, length, file, color='blue'):
@@ -19,39 +15,11 @@ def print_file(count, length, file, color='blue'):
         colored(f'\n[{count}/{length}] Processing {file}', color), flush=True)
 
 
-def launch_chrome(domain, bytecode_file, screenshot_file):
+def handle_result(document, v8_file):
+    print(colored('Extracted v8 stats', 'green'), flush=True)
 
-    # Take screenshot
-    os.system(
-        (
-            "google-chrome-stable "
-            "--no-sandbox "
-            "--headless "
-            "--disable-gpu "
-            "--window-size=1920x1080 "
-            f"--screenshot={screenshot_file} "
-            f"{domain} "
-            "& sleep 5 "
-            "&& pkill chrome"
-        )
-    )
-
-    print(colored('Captured screenshot', 'green'), flush=True)
-
-    # Extract bytecode
-    os.system(
-        (
-            "google-chrome-stable "
-            "--no-sandbox "
-            '--js-flags="--print-bytecode" '
-            f"--app={domain} "
-            f"&>>{bytecode_file} "
-            f"& sleep {website_timeout} "
-            "&& pkill chrome"
-        )
-    )
-
-    print(colored('Extracted bytecode', 'green'), flush=True)
+    document.update({'v8_file': v8_file})
+    update_document(document)
 
 
 def move_files_to_miner(wasm_file):
@@ -77,12 +45,17 @@ def modify_index_file(algo):
         f"sed -i 's|const stopTime = .*;|const stopTime = {website_timeout * 1000};|g' {index_file}")
 
 
-def extract_bytecode(document):
-    domain = 'http://google.com'
-    output_file = os.path.join(
+def get_url(document):
+    if document['category'] == 'miners':
+        return f'http://miner-client:8080/analysis'
+
+    html_file = document['file'].replace('.wasm', '.html')
+    return f'http://localhost:8080/binaries/{html_file}'
+
+
+def get_v8_stats(document):
+    v8_file = os.path.join(
         binary_path, document['file'].replace('.wasm', '.v8'))
-    screenshot_file = os.path.join(
-        binary_path, document['file'].replace('.wasm', '.png'))
 
     if document['category'] == 'miners':
         algo = document['name']
@@ -92,22 +65,38 @@ def extract_bytecode(document):
         modify_worker_file(file)
         modify_index_file(algo)
 
-        domain = 'http://miner-client:8080/analysis'
+    url = get_url(document)
 
-    launch_chrome(domain, output_file, screenshot_file)
+    os.system(
+        (
+            "chromium-browser "
+            "--no-sandbox "
+            "--disable-gpu "
+            '--js-flags="--print-wasm-code" '
+            f"--app={url} "
+            f">{v8_file} 2>&1 "
+            f"& sleep {website_timeout} "
+            "&& pkill chromium"
+        )
+    )
+
+    return v8_file
 
 
 def main():
-    documents = get_documents_without_bytecode()
+    documents = get_documents_without_v8_stats()
+    if len(documents) == 0:
+        print('No documents to get v8 stats for.')
+        exit(0)
+
     print(
         colored(f'Extracting bytecode for {len(documents)} binaries', 'yellow'))
 
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
-        if document['category'] != 'miners':
-            continue
-        extract_bytecode(document)
+        v8_file = get_v8_stats(document)
         break
+        handle_result(document, v8_file)
 
 
 if __name__ == '__main__':

@@ -2,16 +2,32 @@ version: "3"
 
 services:
   opt:
-    build: .
+    build: ./opt
     volumes:
-      - ./main.py:/app/main.py
+      - ./opt/main.py:/app/main.py
       - ../binaries:/app/binaries
       - ../mongodb/utils.py:/app/mongodb/utils.py
     environment:
       - BINARY_PATH=/app/binaries
     networks:
       - db_network
+  v8-stats:
+    build: ./v8-stats
+    volumes:
+      - ./v8-stats/main.py:/app/main.py
+      - ../binaries:/app/binaries
+      - ../miner/client/:/app/miner
+      - ../mongodb/utils.py:/app/mongodb/utils.py
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
+    environment:
+      - BINARY_PATH=/app/binaries
+      - MINER_PATH=/app/miner/analysis
+    networks:
+      - db_network
+      - mn_network
 
 networks:
   db_network:
+    external: true
+  mn_network:
     external: true
