@@ -104,10 +104,28 @@ def get_documents_without_bytecode():
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
 
-
         query = {
             "$and": [
                 {'v8_file': {'$exists': False}},
+                {"code": 0}
+            ]
+        }
+        if collection_name == 'wasm-mutate':
+            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+
+        documents.extend(
+            list(collection.find(query)))
+    return documents
+
+
+def get_documents_without_distance():
+    documents = []
+    for collection_name in ['llvm', 'tigress', 'wasm-mutate']:
+        collection = db[collection_name]
+
+        query = {
+            "$and": [
+                {'distance': {'$exists': False}},
                 {"code": 0}
             ]
         }
