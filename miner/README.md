@@ -1,24 +1,12 @@
-# webminerpool
+# Miner
 
-**Complete sources** for a Cryptonight (diverse variants, without randomX) webminer.
+This folder contains source code for a CryptoNight web miner that supports various CryptoNight variants, excluding RandomX.
 
-###
+The server is developed using C# and can optionally call C-routines to verify hashes computed by clients. It functions as a proxy server for popular mining pools.
 
-_The server_ is written in **C#**, **optionally calling C**-routines to check hashes calculated by the clients.
-It acts as a proxy server for common pools.
+The client operates within a browser, utilizing JavaScript and WebAssembly. WebSockets facilitate the connection between the client and the server, while WebAssembly handles hash computations and web workers manage threads.
 
-_The client_ runs in the browser using javascript and webassembly.
-**websockets** are used for the connection between the client and the server, **webassembly** to perform hash calculations, **web workers** for threads.
-
-There is a **docker** file available. See below.
-
-# Is RandomX supported?
-
-No. At the moment there is no efficient way to implement this in the browser.
-
-The strategy is to rely on coins which are more easily mined in the browser. Pools like moneroocean.stream let you mine them in direct exchange for Monero.
-
-# Supported algorithms
+## Supported Algorithms
 
 | #   | xmrig short notation | webminerpool internal          | description                                      |
 | --- | -------------------- | ------------------------------ | ------------------------------------------------ |
@@ -32,171 +20,12 @@ The strategy is to rely on coins which are more easily mined in the browser. Poo
 | 8   | cn-lite/1            | algo="cn-lite", variant=1      | same as #3 with memory/2, iterations/2           |
 | 9   | cn-pico/trtl         | algo="cn-pico", variant=2 or 3 | same as #4 with memory/8, iterations/8           |
 | 10  | cn-half              | algo="cn-half", variant=2 or 3 | same as #4 with memory/1, iterations/2           |
-| 11  | cn/rwz               | algo="cn-rwz", variant=2 or 3  | same as #4 with memory/1, iterations\*3/4        |
+| 11  | cn/rwz               | algo="cn-rwz", variant=2 or 3  | same as #4 with memory/1, iterations\3/4         |
 
-# Repository Content
-
-### SDK
-
-The SDK directory contains all client side mining scripts which allow mining in the browser.
-
-#### Minimal working example
-
-```html
-<script src="webmr.js"></script>
-
-<script>
-  server = "ws://localhost:8181";
-  startMining(
-    "moneroocean.stream",
-    "49kkH7rdoKyFsb1kYPKjCYiR2xy1XdnJNAY1e7XerwQFb57XQaRP7Npfk5xm1MezGn2yRBz6FWtGCFVKnzNTwSGJ3ZrLtHU"
-  );
-</script>
-```
-
-webmr.js can be found under SDK/miner_compressed.
-
-The startMining function can take additional arguments
-
-```javascript
-startMining(pool, address, password, numThreads, userid);
-```
-
-- pool, this has to be a pool registered at the server.
-- address, a valid XMR address you want to mine to.
-- password, password for your pool. Often not needed, but is sometimes used instead of the userid.
-- numThreads, the number of threads the miner uses. Use "-1" for auto-config.
-- userid - not used anymore but still available at the server side.
-
-To **throttle** the miner just use the global variable "throttleMiner", e.g.
-
-```javascript
-startMining(..);
-throttleMiner = 20;
-```
-
-If you set this value to 20, the cpu workload will be approx. 80% (for 1 thread / CPU). Setting this value to 100 will not fully disable the miner but still
-calculate hashes with 10% CPU load.
-
-If you do not want to show the user your address or even the password you have to create a _loginid_ (see logins.json). With the _loginid_ you can start mining with
-
-```javascript
-startMiningWithId(loginid);
-```
-
-or with optional input parameters:
-
-```javascript
-startMiningWithId(loginid, numThreads, userid);
-```
-
-If you still need to provide a password (e.g. when using a pool where you need to set the miner ID in the password field) but do not want to show the user your address, you can use this function:
-
-```javascript
-startMiningWithIdAndPassword(loginid, password);
-```
-
-or with optional input parameters:
-
-```javascript
-startMiningWithIdAndPassword(loginid, password, numThreads, userid);
-```
-
-The username and the pool will be looked up via the _loginid_.
-
-#### What are all the \*.js files?
-
-SDK/miner_compressed/webmr.js simply combines
-
-1.  SDK/miner_raw/miner.js
-2.  SDK/miner_raw/worker.js
-3.  SDK/miner_raw/cn.js
-
-Where _miner.js_ handles the server-client connection, _worker.js_ are web workers calculating cryptonight hashes using _cn.js_ - a emscripten generated wrapped webassembly file. The webassembly file can also be compiled by you, see section hash_cn below.
-
-### Server
-
-The C# server. It acts as proxy between the clients (the browser miners) and the pool server. Whenever several clients use the same credentials (pool, address and password) they get "bundled" into a single pool connection, i.e. only a single connection is seen by the pool server. This measure helps to prevent overloading regular pool servers with many low-hash web miners.
-
-The server uses asynchronous websockets provided by the
-[FLECK](https://github.com/statianzo/Fleck) library. Smaller fixes were applied to keep memory usage low. The server code should be able to handle several thousand connections with modest resource usage.
-
-Install .NET 5.0 (https://dotnet.microsoft.com/download/dotnet/5.0) on your system and follow these instructions:
-
-To compile change to the server directory and execute
-
-```bash
-dotnet build -c Release
-```
-
-Run the server with
-
-```bash
-dotnet run -c Release
-```
-
-Optionally you can compile the C-library **libhash**.so found in _hash_cn_. Place this library in the same folder as the server executable. If this library is present the server will make use of it and check hashes which gets submitted by the clients. If clients submit bad hashes ("low diff shares"), they get disconnected. The server occasionally writes ip-addresses to _ip_list_. These addresses should get (temporarily) banned on your server for example by adding them to [_iptables_](http://ipset.netfilter.org/iptables.man.html). The file can be deleted after the ban. See _Firewall.cs_ for rules when a client is seen as malicious - submitting wrong hashes is one possibility.
-
-Without a **SSL certificate** the server will open a regular websocket (ws://0.0.0.0:8181). To use websocket secure (ws**s**://0.0.0.0:8181) you should place _certificate.pfx_ (a pkcs12 file) into the server directory. The default password which the server uses to load the certificate is "miner". To create a pkcs12 file from regular certificates, e.g. from [_Let's Encrypt_](https://letsencrypt.org/), use the command
-
-```bash
-openssl pkcs12 -export -out certificate.pfx -inkey privkey.pem -in cert.pem -certfile chain.pem
-```
-
-The server should autodetect the certificate on startup and create a secure websocket.
-
-**Attention:** Most linux based systems have a (low) fixed limit of
-available file-descriptors configured ("ulimit"). This can cause an
-unwanted upper limit for the users who can connect (typical 1000). You
-should change this limit if you want to have more connections.
-
-### hash_cn
-
-The cryptonight hashing functions in C-code. With simple Makefiles (use the "make" command to compile) for use with gcc and emcc - the [emscripten](https://github.com/kripken/emscripten) webassembly compiler. _libhash_ should be compiled so that the server can check hashes calculated by the user.
-
-# Dockerization
-
-Find the original pull request with instructions by nierdz [here](https://github.com/notgiven688/webminerpool/pull/62).
-
-Added Dockerfile and entrypoint.sh.
-Inside entrypoint.sh, if `$DOMAIN` is provided, a certificate is registered and packed in pkcs12 format to be used with server.exe.
-
-```bash
-cd webminerpool
-docker build -t webminerpool .
-```
-
-To run it:
-
-```bash
-docker run -d -p 80:80 -p 8181:8181 -e DOMAIN="" webminerpool
-```
-
-The 80:80 bind is used to obtain a certificate.
-The 8181:8181 bind is used for server itself.
-
-If you want to bind these ports to a specific IP, you can do this:
-
-```bash
-docker run -d -p xx.xx.xx.xx:80:80 -p xx.xx.xx.xx:8181:8181 -e DOMAIN=mydomain.com webminerpool
-```
-
-You can even use docker-compose, here is a sample snippet:
+## Usage
 
 ```
-webminer:
-  container_name: webminer
-  image: webminer:1.0
-  build:
-    context: ./webminerpool
-  restart: always
-  ports:
-    - ${WEBMINER_IP}:80:80
-    - ${WEBMINER_IP}:8181:8181
-  environment:
-    DOMAIN: ${WEBMINER_DOMAIN}
-  networks:
-    - my-network
+docker compose up
 ```
 
-To use this snippet, you need to define `$WEBMINER_DOMAIN` and `$WEBMINER_IP` in a `.env` file.
+Will start up the client and server. Visit [http://localhost:8080](http://localhost:8080) to start mining in your browser. There is also an endpoint, [http://localhost:8080/analysis](http://localhost:8080/analysis) for measuring the hash rate. See metrics/hash-rate.
