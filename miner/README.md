@@ -28,4 +28,4 @@ The client operates within a browser, utilizing JavaScript and WebAssembly. WebS
 docker compose up
 ```
 
-Will start up the client and server. Visit [http://localhost:8080](http://localhost:8080) to start mining in your browser. There is also an endpoint, [http://localhost:8080/analysis](http://localhost:8080/analysis) for measuring the hash rate. See metrics/hash-rate.
+Will start up the client and server. Visit [http://localhost:8080](http://localhost:8080) to start mining in your browser. There is also an endpoint, [http://localhost:8080/analysis](http://localhost:8080/analysis) for measuring the hash rate used by [metrics/hash-rate](https://github.com/HakonHarnes/wasm-obf/tree/main/metrics/hash-rate).
