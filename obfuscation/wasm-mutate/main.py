@@ -46,14 +46,16 @@ def update_db(document, file, iteration, mutator, code):
     add_document('wasm-mutate', data)
 
 
-def copy_files_to_output(file_in_path, file_out_path):
-    file_in_dir = os.path.dirname(file_in_path)
-    file_out_dir = os.path.dirname(file_out_path)
+def copy_html_and_js_files_to_output(file_in_path, file_out_path):
+    js_file_in = file_in_path.replace('.wasm', '.js')
+    js_file_out = file_out_path.replace('.wasm', '.js')
 
-    for file in os.listdir(file_in_dir):
-        file_in = os.path.join(file_in_dir, file)
-        file_out = os.path.join(file_out_dir, file)
-        shutil.copy(file_in, file_out)
+    shutil.copyfile(js_file_in, js_file_out)
+
+    html_file_in = file_in_path.replace('.wasm', '.html')
+    html_file_out = file_out_path.replace('.wasm', '.html')
+
+    shutil.copyfile(html_file_in, html_file_out)
 
 
 def mutate(document, max_iterations):
@@ -75,7 +77,7 @@ def mutate(document, max_iterations):
 
         # mutate next file
         if code == 0 and mutator:
-            copy_files_to_output(file_in_path, file_out_path)
+            copy_html_and_js_files_to_output(file_in_path, file_out_path)
             update_db(document, file_out, iteration, mutator, code)
             iteration += 1
             errors_in_a_row = 0
