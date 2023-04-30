@@ -124,7 +124,12 @@ def get_unanalyzed_documents(analysis_method):
             ]
         }
         if collection_name == 'wasm-mutate':
-            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+            query["$and"].append({
+                "$or": [
+                    {"iteration": {"$mod": [100, 0]}},
+                    {"iteration": -1}
+                ]
+            })
 
         documents.extend(
             list(collection.find(query)))
@@ -133,7 +138,7 @@ def get_unanalyzed_documents(analysis_method):
 
 def get_unoptimized_documents():
     documents = []
-    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
+    for collection_name in ['wasm-mutate', 'unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
 
         query = {
@@ -142,7 +147,12 @@ def get_unoptimized_documents():
             ]
         }
         if collection_name == 'wasm-mutate':
-            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+            query["$and"].append({
+                "$or": [
+                    {"iteration": {"$mod": [100, 0]}},
+                    {"iteration": -1}
+                ]
+            })
 
         documents.extend(
             list(collection.find(query)))
@@ -160,7 +170,12 @@ def get_documents_without_v8_stats():
             ]
         }
         if collection_name == 'wasm-mutate':
-            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+            query["$and"].append({
+                "$or": [
+                    {"iteration": {"$mod": [100, 0]}},
+                    {"iteration": -1}
+                ]
+            })
 
         documents.extend(
             list(collection.find(query)))
@@ -178,7 +193,12 @@ def get_documents_without_distance():
             ]
         }
         if collection_name == 'wasm-mutate':
-            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+            query["$and"].append({
+                "$or": [
+                    {"iteration": {"$mod": [100, 0]}},
+                    {"iteration": -1}
+                ]
+            })
 
         documents.extend(
             list(collection.find(query)))
@@ -197,7 +217,12 @@ def get_unverified_miners():
             ]
         }
         if collection_name == 'wasm-mutate':
-            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+            query["$and"].append({
+                "$or": [
+                    {"iteration": {"$mod": [100, 0]}},
+                    {"iteration": -1}
+                ]
+            })
 
         unverified_documents.extend(
             list(collection.find(query)))
@@ -216,7 +241,12 @@ def get_unmeasured_miner_documents():
             ]
         }
         if collection_name == 'wasm-mutate':
-            query["$and"].append({"iteration": {"$mod": [100, 0]}})
+            query["$and"].append({
+                "$or": [
+                    {"iteration": {"$mod": [100, 0]}},
+                    {"iteration": -1}
+                ]
+            })
 
         documents = list(collection.find(query))
         miner_documents.extend(documents)

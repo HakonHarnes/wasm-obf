@@ -20,14 +20,22 @@ def print_file(count, length, file, color='blue'):
     print(colored(f'\n[{count}/{length}] Processing {file}', color))
 
 
-def print_mutation(iteration, max_iterations, code, seed, mutator):
-    template = "{:<10} {:<4} {:<15} {}"
-    output = template.format(
-        f'[{iteration}/{max_iterations}]',
-        code,
-        seed,
-        mutator
-    )
+def print_mutation(code, seed, mutator, iteration=None, max_iterations=None):
+    if iteration and max_iterations:
+        template = "{:<10} {:<4} {:<15} {}"
+        output = template.format(
+            f'[{iteration}/{max_iterations}]',
+            code,
+            seed,
+            mutator
+        )
+    else:
+        template = "{:<4} {:<15} {}"
+        output = template.format(
+            code,
+            seed,
+            mutator
+        )
 
     color = 'green' if code == 0 else 'red'
     print(colored(output, color))
@@ -58,7 +66,41 @@ def copy_html_and_js_files_to_output(file_in_path, file_out_path):
     shutil.copyfile(html_file_in, html_file_out)
 
 
-def mutate(document, max_iterations):
+def mutate(document, max_errors_in_a_row=100):
+    file_in_path = os.path.join(binary_path, document['file'])
+
+    mutators = []
+    iteration = -1
+    errors_in_a_row = 0
+    while errors_in_a_row < max_errors_in_a_row:
+        seed = random.randint(0, 2**32 - 1)
+
+        tmp_file_out = get_file_out(
+            'wasm-mutate', document["name"], iteration=iteration)
+        tmp_file_out_path = os.path.join(binary_path, tmp_file_out)
+
+        os.makedirs(os.path.dirname(tmp_file_out_path), exist_ok=True)
+
+        code, mutator = run_wasm_mutate(file_in_path, tmp_file_out_path, seed)
+
+        if code == 0 and mutator and mutator not in mutators:
+            print_mutation(code, seed, mutator)
+            file_out = get_file_out(
+                'wasm-mutate', document["name"], transformation=mutator)
+            file_out_path = os.path.join(binary_path, file_out)
+            os.makedirs(os.path.dirname(file_out_path), exist_ok=True)
+            shutil.move(tmp_file_out_path, file_out_path)
+            copy_html_and_js_files_to_output(file_in_path, file_out_path)
+            update_db(document, file_out, iteration, mutator, code)
+            mutators.append(mutator)
+            errors_in_a_row = 0
+
+        # retry with different seed
+        else:
+            errors_in_a_row += 1
+
+
+def mutate_with_iterations(document, max_iterations):
     file_in_path = os.path.join(binary_path, document['file'])
 
     iteration = 1
@@ -73,7 +115,8 @@ def mutate(document, max_iterations):
         os.makedirs(os.path.dirname(file_out_path), exist_ok=True)
 
         code, mutator = run_wasm_mutate(file_in_path, file_out_path, seed)
-        print_mutation(iteration, max_iterations, code, seed, mutator)
+        print_mutation(code, seed, mutator, iteration=iteration,
+                       max_iterations=max_iterations)
 
         # mutate next file
         if code == 0 and mutator:
@@ -101,7 +144,7 @@ def run_wasm_mutate(file_in, file_out, seed, timeout=10):
         output = output.decode('utf-8')
 
         if 'DEBUG' in output:
-            mutator = output.split('`')[1]
+            mutator = output.split('`')[1].split('::')[-1]
 
         process.wait()
         code = process.returncode
@@ -120,7 +163,8 @@ def main():
 
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
-        mutate(document, iterations)
+        mutate(document)
+        mutate_with_iterations(document, iterations)
 
 
 if __name__ == '__main__':

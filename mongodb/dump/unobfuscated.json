@@ -1,0 +1,436 @@
+[{
+	"_id": {
+		"$oid": "644c24c452d9f4ced59a4170"
+	},
+	"name": "needleman_wunsch",
+	"file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/needleman_wunsch/unobfuscated/needleman_wunsch.v8",
+		"liftoff_size": 99844,
+		"turbofan_size": 70528
+	},
+	"file_size": 136726,
+	"opt": 0,
+	"miner_ray": {
+		"result": false,
+		"error": null
+	}
+},
+{
+	"_id": {
+		"$oid": "644c24c452d9f4ced59a4172"
+	},
+	"name": "smith_waterman",
+	"file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/smith_waterman/unobfuscated/smith_waterman.v8",
+		"liftoff_size": 174544,
+		"turbofan_size": 105412
+	},
+	"file_size": 144339,
+	"opt": 0,
+	"miner_ray": {
+		"result": false,
+		"error": null
+	}
+},
+{
+	"_id": {
+		"$oid": "644c24c552d9f4ced59a4174"
+	},
+	"name": "wgsim",
+	"file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/wgsim/unobfuscated/wgsim.v8",
+		"liftoff_size": 149344,
+		"turbofan_size": 114236
+	},
+	"file_size": 114775,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24c652d9f4ced59a4176"
+	},
+	"name": "lcs",
+	"file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/lcs/unobfuscated/lcs.v8",
+		"liftoff_size": 122724,
+		"turbofan_size": 75700
+	},
+	"file_size": 35404,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24c652d9f4ced59a4178"
+	},
+	"name": "tree",
+	"file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/tree/unobfuscated/tree.v8",
+		"liftoff_size": 191024,
+		"turbofan_size": 115124
+	},
+	"file_size": 87066,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24c752d9f4ced59a417a"
+	},
+	"name": "seqtk",
+	"file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/seqtk/unobfuscated/seqtk.v8",
+		"liftoff_size": 105028,
+		"turbofan_size": 78104
+	},
+	"file_size": 161157,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24c852d9f4ced59a417c"
+	},
+	"name": "wasm-asteroids",
+	"file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/wasm-asteroids/unobfuscated/wasm-asteroids.v8",
+		"liftoff_size": 378256,
+		"turbofan_size": 319036
+	},
+	"file_size": 663609,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24c952d9f4ced59a417e"
+	},
+	"name": "f1-race",
+	"file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/f1-race/unobfuscated/f1-race.v8",
+		"liftoff_size": 578240,
+		"turbofan_size": 529384
+	},
+	"file_size": 884752,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24ca52d9f4ced59a4180"
+	},
+	"name": "pong",
+	"file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/pong/unobfuscated/pong.v8",
+		"liftoff_size": 530608,
+		"turbofan_size": 466988
+	},
+	"file_size": 781353,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24ca52d9f4ced59a4182"
+	},
+	"name": "breakout",
+	"file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/breakout/unobfuscated/breakout.v8",
+		"liftoff_size": 261916,
+		"turbofan_size": 231132
+	},
+	"file_size": 641877,
+	"opt": 2
+},
+{
+	"_id": {
+		"$oid": "644c24cb52d9f4ced59a4184"
+	},
+	"name": "snake",
+	"file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/snake/unobfuscated/snake.v8",
+		"liftoff_size": 249224,
+		"turbofan_size": 238328
+	},
+	"file_size": 674611,
+	"opt": 2
+},
+{
+	"_id": {
+		"$oid": "644c24cc52d9f4ced59a4188"
+	},
+	"name": "game-of-life",
+	"file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"code": 0,
+	"v8": {
+		"file": "/app/binaries/game-of-life/unobfuscated/game-of-life.v8",
+		"liftoff_size": 0,
+		"turbofan_size": 0
+	},
+	"file_size": 651041,
+	"opt": 0
+},
+{
+	"_id": {
+		"$oid": "644c24cd52d9f4ced59a418c"
+	},
+	"name": "cn-1",
+	"file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 311420,
+	"hash_rate": {
+		"hash_count": [
+			0,
+			0,
+			0,
+			0,
+			40,
+			84,
+			128,
+			172,
+			216,
+			261
+		],
+		"tth": 4170
+	}
+},
+{
+	"_id": {
+		"$oid": "644c24ce52d9f4ced59a4190"
+	},
+	"name": "cn-pico-trtl",
+	"file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 320988,
+	"hash_rate": {
+		"hash_count": [
+			0,
+			0,
+			0,
+			0,
+			251,
+			512,
+			774,
+			1037,
+			1298,
+			1560
+		],
+		"tth": 4040
+	}
+},
+{
+	"_id": {
+		"$oid": "644c24ce52d9f4ced59a4192"
+	},
+	"name": "cn-lite-0",
+	"file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 310476,
+	"hash_rate": {
+		"hash_count": [
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			86,
+			180,
+			275,
+			368,
+			463,
+			557,
+			651,
+			745,
+			839,
+			932,
+			1026,
+			1119,
+			1214,
+			1307,
+			1402,
+			1495,
+			1588,
+			1684,
+			1777,
+			1872,
+			1965,
+			2059,
+			2154,
+			2246,
+			2341,
+			2434,
+			2527,
+			2622,
+			2715,
+			2809,
+			2903,
+			2997,
+			3090,
+			3185,
+			3278,
+			3372,
+			3465,
+			3559,
+			3652,
+			3746,
+			3839,
+			3934,
+			4026,
+			4122,
+			4214,
+			4310,
+			4402,
+			4497,
+			4590,
+			4684,
+			4777,
+			4871,
+			4965,
+			5058,
+			5153,
+			5245,
+			5338,
+			5433,
+			5526,
+			5620,
+			5714,
+			5806,
+			5900,
+			5994,
+			6087,
+			6182,
+			6266,
+			6355,
+			6449,
+			6542,
+			6635,
+			6728,
+			6821,
+			6914,
+			7007,
+			7100,
+			7193,
+			7286,
+			7380,
+			7473,
+			7565,
+			7659,
+			7752,
+			7844,
+			7938,
+			8031,
+			8123,
+			8218,
+			8310,
+			8403,
+			8497,
+			8589
+		],
+		"tth": 8080
+	}
+},
+{
+	"_id": {
+		"$oid": "644c24d052d9f4ced59a4194"
+	},
+	"name": "cn-r",
+	"file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 434719
+},
+{
+	"_id": {
+		"$oid": "644c24d052d9f4ced59a4196"
+	},
+	"name": "cn-lite-1",
+	"file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 311415
+},
+{
+	"_id": {
+		"$oid": "644c24d152d9f4ced59a4198"
+	},
+	"name": "cn-2",
+	"file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 320994
+},
+{
+	"_id": {
+		"$oid": "644c24d252d9f4ced59a419a"
+	},
+	"name": "cn-half",
+	"file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 320994
+},
+{
+	"_id": {
+		"$oid": "644c24d352d9f4ced59a419c"
+	},
+	"name": "cn-0",
+	"file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 310503
+},
+{
+	"_id": {
+		"$oid": "644c24d452d9f4ced59a419e"
+	},
+	"name": "cn-rwz",
+	"file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 434719
+},
+{
+	"_id": {
+		"$oid": "644c24d552d9f4ced59a41a0"
+	},
+	"name": "cn-lite-2",
+	"file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"code": 0,
+	"file_size": 320989
+}]
+

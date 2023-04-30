@@ -1,0 +1,2143 @@
+[{
+	"_id": {
+		"$oid": "644c285552d9f4ced59a43fa"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/randomfuns/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "randomfuns",
+	"code": 0,
+	"distance": 90064,
+	"file_size": 228241
+},
+{
+	"_id": {
+		"$oid": "644c285652d9f4ced59a43fc"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/flatten/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "flatten",
+	"code": 0,
+	"distance": 103291,
+	"file_size": 258645
+},
+{
+	"_id": {
+		"$oid": "644c285652d9f4ced59a43fe"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/split/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "split",
+	"code": 0,
+	"distance": 106607,
+	"file_size": 265286
+},
+{
+	"_id": {
+		"$oid": "644c285752d9f4ced59a4400"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/encodeliterals/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"distance": 119941,
+	"file_size": 306511
+},
+{
+	"_id": {
+		"$oid": "644c285752d9f4ced59a4402"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/encodearithmetic/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"distance": 110417,
+	"file_size": 278334
+},
+{
+	"_id": {
+		"$oid": "644c285852d9f4ced59a4404"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/antitaintanalysis/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"distance": 89856,
+	"file_size": 228241
+},
+{
+	"_id": {
+		"$oid": "644c285852d9f4ced59a4406"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/antialiasanalysis/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"distance": 109833,
+	"file_size": 283334
+},
+{
+	"_id": {
+		"$oid": "644c285952d9f4ced59a4408"
+	},
+	"name": "needleman_wunsch",
+	"file": "/app/binaries/needleman_wunsch/tigress/virtualize/needleman_wunsch.wasm",
+	"unobfuscated_file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+	"category": "utilities",
+	"transformation": "virtualize",
+	"code": 0,
+	"distance": 174666,
+	"file_size": 514840
+},
+{
+	"_id": {
+		"$oid": "644c285952d9f4ced59a440a"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/randomfuns/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "randomfuns",
+	"code": 0,
+	"distance": 99726,
+	"file_size": 253529
+},
+{
+	"_id": {
+		"$oid": "644c285a52d9f4ced59a440c"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/flatten/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "flatten",
+	"code": 0,
+	"distance": 117707,
+	"file_size": 294351
+},
+{
+	"_id": {
+		"$oid": "644c285a52d9f4ced59a440e"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/split/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "split",
+	"code": 0,
+	"distance": 124370,
+	"file_size": 309312
+},
+{
+	"_id": {
+		"$oid": "644c285b52d9f4ced59a4412"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/encodeliterals/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"distance": 135663,
+	"file_size": 346048
+},
+{
+	"_id": {
+		"$oid": "644c285b52d9f4ced59a4416"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/encodearithmetic/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"distance": 134643,
+	"file_size": 339882
+},
+{
+	"_id": {
+		"$oid": "644c285c52d9f4ced59a4418"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/antitaintanalysis/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"distance": 99976,
+	"file_size": 253529
+},
+{
+	"_id": {
+		"$oid": "644c285c52d9f4ced59a441a"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/antialiasanalysis/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"distance": 120893,
+	"file_size": 311558
+},
+{
+	"_id": {
+		"$oid": "644c285d52d9f4ced59a441c"
+	},
+	"name": "smith_waterman",
+	"file": "/app/binaries/smith_waterman/tigress/virtualize/smith_waterman.wasm",
+	"unobfuscated_file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+	"category": "utilities",
+	"transformation": "virtualize",
+	"code": 0,
+	"distance": 210094,
+	"file_size": 626609
+},
+{
+	"_id": {
+		"$oid": "644c285d52d9f4ced59a441e"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/randomfuns/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "randomfuns",
+	"code": 0,
+	"distance": 55731,
+	"file_size": 141134
+},
+{
+	"_id": {
+		"$oid": "644c285e52d9f4ced59a4420"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/flatten/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "flatten",
+	"code": 0,
+	"distance": 59643,
+	"file_size": 150064
+},
+{
+	"_id": {
+		"$oid": "644c285e52d9f4ced59a4422"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/split/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "split",
+	"code": 0,
+	"distance": 60447,
+	"file_size": 151850
+},
+{
+	"_id": {
+		"$oid": "644c285e52d9f4ced59a4426"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/encodeliterals/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"distance": 96304,
+	"file_size": 245957
+},
+{
+	"_id": {
+		"$oid": "644c285f52d9f4ced59a4428"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/encodearithmetic/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"distance": 64745,
+	"file_size": 163701
+},
+{
+	"_id": {
+		"$oid": "644c285f52d9f4ced59a442a"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/antitaintanalysis/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"distance": 55973,
+	"file_size": 141134
+},
+{
+	"_id": {
+		"$oid": "644c285f52d9f4ced59a442c"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/antialiasanalysis/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"distance": 62542,
+	"file_size": 159005
+},
+{
+	"_id": {
+		"$oid": "644c286052d9f4ced59a442e"
+	},
+	"name": "wgsim",
+	"file": "/app/binaries/wgsim/tigress/virtualize/wgsim.wasm",
+	"unobfuscated_file": "wgsim/unobfuscated/wgsim.wasm",
+	"category": "utilities",
+	"transformation": "virtualize",
+	"code": 0,
+	"distance": 68111,
+	"file_size": 184249
+},
+{
+	"_id": {
+		"$oid": "644c286052d9f4ced59a4430"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/randomfuns/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "randomfuns",
+	"code": 0,
+	"distance": 41089,
+	"file_size": 106374
+},
+{
+	"_id": {
+		"$oid": "644c286152d9f4ced59a4432"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/flatten/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "flatten",
+	"code": 0,
+	"distance": 45151,
+	"file_size": 115844
+},
+{
+	"_id": {
+		"$oid": "644c286152d9f4ced59a4434"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/split/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "split",
+	"code": 0,
+	"distance": 50148,
+	"file_size": 127136
+},
+{
+	"_id": {
+		"$oid": "644c286252d9f4ced59a4436"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/encodeliterals/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"distance": 49255,
+	"file_size": 127430
+},
+{
+	"_id": {
+		"$oid": "644c286252d9f4ced59a4438"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/encodearithmetic/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"distance": 56132,
+	"file_size": 144493
+},
+{
+	"_id": {
+		"$oid": "644c286352d9f4ced59a443a"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/antitaintanalysis/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"distance": 41087,
+	"file_size": 106374
+},
+{
+	"_id": {
+		"$oid": "644c286352d9f4ced59a443c"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/antialiasanalysis/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 209093
+},
+{
+	"_id": {
+		"$oid": "644c286452d9f4ced59a443e"
+	},
+	"name": "lcs",
+	"file": "/app/binaries/lcs/tigress/virtualize/lcs.wasm",
+	"unobfuscated_file": "lcs/unobfuscated/lcs.wasm",
+	"category": "utilities",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 202476
+},
+{
+	"_id": {
+		"$oid": "644c286452d9f4ced59a4440"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/randomfuns/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 157162
+},
+{
+	"_id": {
+		"$oid": "644c286552d9f4ced59a4444"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/flatten/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 207233
+},
+{
+	"_id": {
+		"$oid": "644c286552d9f4ced59a4448"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/split/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 201193
+},
+{
+	"_id": {
+		"$oid": "644c286652d9f4ced59a444a"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/encodeliterals/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 622834
+},
+{
+	"_id": {
+		"$oid": "644c286652d9f4ced59a444c"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/encodearithmetic/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 210764
+},
+{
+	"_id": {
+		"$oid": "644c286752d9f4ced59a444e"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/antitaintanalysis/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 157162
+},
+{
+	"_id": {
+		"$oid": "644c286752d9f4ced59a4450"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/antialiasanalysis/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 229582
+},
+{
+	"_id": {
+		"$oid": "644c286852d9f4ced59a4454"
+	},
+	"name": "tree",
+	"file": "/app/binaries/tree/tigress/virtualize/tree.wasm",
+	"unobfuscated_file": "tree/unobfuscated/tree.wasm",
+	"category": "utilities",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 703318
+},
+{
+	"_id": {
+		"$oid": "644c286952d9f4ced59a4456"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/randomfuns/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 246370
+},
+{
+	"_id": {
+		"$oid": "644c286952d9f4ced59a4458"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/flatten/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 291847
+},
+{
+	"_id": {
+		"$oid": "644c286a52d9f4ced59a445a"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/split/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 276372
+},
+{
+	"_id": {
+		"$oid": "644c286a52d9f4ced59a445c"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/encodeliterals/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 459412
+},
+{
+	"_id": {
+		"$oid": "644c286b52d9f4ced59a445e"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/encodearithmetic/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 360848
+},
+{
+	"_id": {
+		"$oid": "644c286b52d9f4ced59a4460"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/antitaintanalysis/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 246370
+},
+{
+	"_id": {
+		"$oid": "644c286b52d9f4ced59a4462"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/antialiasanalysis/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 267490
+},
+{
+	"_id": {
+		"$oid": "644c286c52d9f4ced59a4464"
+	},
+	"name": "seqtk",
+	"file": "/app/binaries/seqtk/tigress/virtualize/seqtk.wasm",
+	"unobfuscated_file": "seqtk/unobfuscated/seqtk.wasm",
+	"category": "utilities",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 520795
+},
+{
+	"_id": {
+		"$oid": "644c286d52d9f4ced59a4466"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/randomfuns/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 711232
+},
+{
+	"_id": {
+		"$oid": "644c286d52d9f4ced59a4468"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/flatten/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 718175
+},
+{
+	"_id": {
+		"$oid": "644c286e52d9f4ced59a446a"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/split/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 724322
+},
+{
+	"_id": {
+		"$oid": "644c286e52d9f4ced59a446c"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/encodeliterals/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 723626
+},
+{
+	"_id": {
+		"$oid": "644c286e52d9f4ced59a4470"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/encodearithmetic/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 720494
+},
+{
+	"_id": {
+		"$oid": "644c286f52d9f4ced59a4472"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/antitaintanalysis/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 711232
+},
+{
+	"_id": {
+		"$oid": "644c286f52d9f4ced59a4476"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/antialiasanalysis/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 729316
+},
+{
+	"_id": {
+		"$oid": "644c287052d9f4ced59a4478"
+	},
+	"name": "wasm-asteroids",
+	"file": "/app/binaries/wasm-asteroids/tigress/virtualize/wasm-asteroids.wasm",
+	"unobfuscated_file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+	"category": "games",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 793038
+},
+{
+	"_id": {
+		"$oid": "644c287052d9f4ced59a447a"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/randomfuns/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 947199
+},
+{
+	"_id": {
+		"$oid": "644c287152d9f4ced59a447c"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/flatten/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 957552
+},
+{
+	"_id": {
+		"$oid": "644c287152d9f4ced59a447e"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/split/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 953655
+},
+{
+	"_id": {
+		"$oid": "644c287352d9f4ced59a4482"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/encodeliterals/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 1216771
+},
+{
+	"_id": {
+		"$oid": "644c287452d9f4ced59a4484"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/encodearithmetic/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 977910
+},
+{
+	"_id": {
+		"$oid": "644c287452d9f4ced59a4486"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/antitaintanalysis/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 947199
+},
+{
+	"_id": {
+		"$oid": "644c287552d9f4ced59a4488"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/antialiasanalysis/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 963102
+},
+{
+	"_id": {
+		"$oid": "644c287552d9f4ced59a448a"
+	},
+	"name": "f1-race",
+	"file": "/app/binaries/f1-race/tigress/virtualize/f1-race.wasm",
+	"unobfuscated_file": "f1-race/unobfuscated/f1-race.wasm",
+	"category": "games",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 1029787
+},
+{
+	"_id": {
+		"$oid": "644c287652d9f4ced59a448c"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/randomfuns/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 895025
+},
+{
+	"_id": {
+		"$oid": "644c287752d9f4ced59a448e"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/flatten/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 905214
+},
+{
+	"_id": {
+		"$oid": "644c287852d9f4ced59a4490"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/split/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 1077861
+},
+{
+	"_id": {
+		"$oid": "644c287952d9f4ced59a4494"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/encodeliterals/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 957759
+},
+{
+	"_id": {
+		"$oid": "644c287a52d9f4ced59a4498"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/encodearithmetic/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 903353
+},
+{
+	"_id": {
+		"$oid": "644c287b52d9f4ced59a449a"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/antitaintanalysis/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 895025
+},
+{
+	"_id": {
+		"$oid": "644c287c52d9f4ced59a449c"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/antialiasanalysis/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 903021
+},
+{
+	"_id": {
+		"$oid": "644c287d52d9f4ced59a44a0"
+	},
+	"name": "pong",
+	"file": "/app/binaries/pong/tigress/virtualize/pong.wasm",
+	"unobfuscated_file": "pong/unobfuscated/pong.wasm",
+	"category": "games",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 940932
+},
+{
+	"_id": {
+		"$oid": "644c287d52d9f4ced59a44a2"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/randomfuns/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 678481
+},
+{
+	"_id": {
+		"$oid": "644c287e52d9f4ced59a44a4"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/flatten/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 681617
+},
+{
+	"_id": {
+		"$oid": "644c287e52d9f4ced59a44a6"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/split/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 681119
+},
+{
+	"_id": {
+		"$oid": "644c287e52d9f4ced59a44a8"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/encodeliterals/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 766305
+},
+{
+	"_id": {
+		"$oid": "644c287f52d9f4ced59a44aa"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/encodearithmetic/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 693446
+},
+{
+	"_id": {
+		"$oid": "644c287f52d9f4ced59a44ac"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/antitaintanalysis/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 678481
+},
+{
+	"_id": {
+		"$oid": "644c288052d9f4ced59a44ae"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/antialiasanalysis/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 683973
+},
+{
+	"_id": {
+		"$oid": "644c288052d9f4ced59a44b0"
+	},
+	"name": "breakout",
+	"file": "/app/binaries/breakout/tigress/virtualize/breakout.wasm",
+	"unobfuscated_file": "breakout/unobfuscated/breakout.wasm",
+	"category": "games",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 707871
+},
+{
+	"_id": {
+		"$oid": "644c288152d9f4ced59a44b2"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/randomfuns/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 674616
+},
+{
+	"_id": {
+		"$oid": "644c288152d9f4ced59a44b4"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/flatten/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 677131
+},
+{
+	"_id": {
+		"$oid": "644c288152d9f4ced59a44b6"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/split/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 676777
+},
+{
+	"_id": {
+		"$oid": "644c288252d9f4ced59a44b8"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/encodeliterals/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 724869
+},
+{
+	"_id": {
+		"$oid": "644c288252d9f4ced59a44ba"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/encodearithmetic/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 680380
+},
+{
+	"_id": {
+		"$oid": "644c288352d9f4ced59a44be"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/antitaintanalysis/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 674616
+},
+{
+	"_id": {
+		"$oid": "644c288352d9f4ced59a44c1"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/antialiasanalysis/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 679416
+},
+{
+	"_id": {
+		"$oid": "644c288352d9f4ced59a44c4"
+	},
+	"name": "snake",
+	"file": "/app/binaries/snake/tigress/virtualize/snake.wasm",
+	"unobfuscated_file": "snake/unobfuscated/snake.wasm",
+	"category": "games",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 706868
+},
+{
+	"_id": {
+		"$oid": "644c288452d9f4ced59a44c6"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/randomfuns/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 688971
+},
+{
+	"_id": {
+		"$oid": "644c288452d9f4ced59a44c8"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/flatten/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 696341
+},
+{
+	"_id": {
+		"$oid": "644c288552d9f4ced59a44ca"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/split/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 698309
+},
+{
+	"_id": {
+		"$oid": "644c288652d9f4ced59a44ce"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/encodeliterals/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 1091317
+},
+{
+	"_id": {
+		"$oid": "644c288752d9f4ced59a44d0"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/encodearithmetic/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 703875
+},
+{
+	"_id": {
+		"$oid": "644c288752d9f4ced59a44d2"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/antitaintanalysis/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 688971
+},
+{
+	"_id": {
+		"$oid": "644c288852d9f4ced59a44d4"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/antialiasanalysis/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 701528
+},
+{
+	"_id": {
+		"$oid": "644c288852d9f4ced59a44d6"
+	},
+	"name": "game-of-life",
+	"file": "/app/binaries/game-of-life/tigress/virtualize/game-of-life.wasm",
+	"unobfuscated_file": "game-of-life/unobfuscated/game-of-life.wasm",
+	"category": "games",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 781249
+},
+{
+	"_id": {
+		"$oid": "644c288952d9f4ced59a44d8"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/randomfuns/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 437601
+},
+{
+	"_id": {
+		"$oid": "644c288a52d9f4ced59a44da"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/flatten/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 452878
+},
+{
+	"_id": {
+		"$oid": "644c288b52d9f4ced59a44dc"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/split/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 499493
+},
+{
+	"_id": {
+		"$oid": "644c288c52d9f4ced59a44de"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/encodeliterals/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 568593
+},
+{
+	"_id": {
+		"$oid": "644c288f52d9f4ced59a44e4"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/encodearithmetic/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 822927
+},
+{
+	"_id": {
+		"$oid": "644c289052d9f4ced59a44e6"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/antitaintanalysis/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 437601
+},
+{
+	"_id": {
+		"$oid": "644c289152d9f4ced59a44ea"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/antialiasanalysis/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 526442
+},
+{
+	"_id": {
+		"$oid": "644c289252d9f4ced59a44ec"
+	},
+	"name": "cn-1",
+	"file": "/app/binaries/cn-1/tigress/virtualize/cn-1.wasm",
+	"unobfuscated_file": "cn-1/unobfuscated/cn-1.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 576066
+},
+{
+	"_id": {
+		"$oid": "644c289352d9f4ced59a44ee"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/randomfuns/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 447105
+},
+{
+	"_id": {
+		"$oid": "644c289452d9f4ced59a44f0"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/flatten/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 463779
+},
+{
+	"_id": {
+		"$oid": "644c289552d9f4ced59a44f2"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/split/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 515460
+},
+{
+	"_id": {
+		"$oid": "644c289652d9f4ced59a44f4"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/encodeliterals/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 578113
+},
+{
+	"_id": {
+		"$oid": "644c289952d9f4ced59a44fa"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/encodearithmetic/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 862338
+},
+{
+	"_id": {
+		"$oid": "644c289a52d9f4ced59a44fc"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/antitaintanalysis/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 447105
+},
+{
+	"_id": {
+		"$oid": "644c289b52d9f4ced59a4500"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/antialiasanalysis/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 541586
+},
+{
+	"_id": {
+		"$oid": "644c289c52d9f4ced59a4502"
+	},
+	"name": "cn-pico-trtl",
+	"file": "/app/binaries/cn-pico-trtl/tigress/virtualize/cn-pico-trtl.wasm",
+	"unobfuscated_file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 588574
+},
+{
+	"_id": {
+		"$oid": "644c289d52d9f4ced59a4504"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/randomfuns/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 436594
+},
+{
+	"_id": {
+		"$oid": "644c289d52d9f4ced59a4506"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/flatten/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 451590
+},
+{
+	"_id": {
+		"$oid": "644c289f52d9f4ced59a4508"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/split/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 497973
+},
+{
+	"_id": {
+		"$oid": "644c28a052d9f4ced59a450a"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/encodeliterals/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 567591
+},
+{
+	"_id": {
+		"$oid": "644c28a352d9f4ced59a4510"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/encodearithmetic/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 803205
+},
+{
+	"_id": {
+		"$oid": "644c28a452d9f4ced59a4512"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/antitaintanalysis/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 436594
+},
+{
+	"_id": {
+		"$oid": "644c28a552d9f4ced59a4516"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/antialiasanalysis/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 525051
+},
+{
+	"_id": {
+		"$oid": "644c28a652d9f4ced59a4518"
+	},
+	"name": "cn-lite-0",
+	"file": "/app/binaries/cn-lite-0/tigress/virtualize/cn-lite-0.wasm",
+	"unobfuscated_file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 573941
+},
+{
+	"_id": {
+		"$oid": "644c28a752d9f4ced59a451a"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/randomfuns/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 560857
+},
+{
+	"_id": {
+		"$oid": "644c28a852d9f4ced59a451c"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/flatten/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 633256
+},
+{
+	"_id": {
+		"$oid": "644c28a952d9f4ced59a451e"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/split/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 625512
+},
+{
+	"_id": {
+		"$oid": "644c28ab52d9f4ced59a4522"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/encodeliterals/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 691862
+},
+{
+	"_id": {
+		"$oid": "644c28af52d9f4ced59a4528"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/encodearithmetic/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 1047630
+},
+{
+	"_id": {
+		"$oid": "644c28b052d9f4ced59a452a"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/antitaintanalysis/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 560857
+},
+{
+	"_id": {
+		"$oid": "644c28b152d9f4ced59a452c"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/antialiasanalysis/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 658718
+},
+{
+	"_id": {
+		"$oid": "644c28b252d9f4ced59a452e"
+	},
+	"name": "cn-r",
+	"file": "/app/binaries/cn-r/tigress/virtualize/cn-r.wasm",
+	"unobfuscated_file": "cn-r/unobfuscated/cn-r.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 703237
+},
+{
+	"_id": {
+		"$oid": "644c28b352d9f4ced59a4530"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/randomfuns/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 437596
+},
+{
+	"_id": {
+		"$oid": "644c28b452d9f4ced59a4532"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/flatten/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 452873
+},
+{
+	"_id": {
+		"$oid": "644c28b552d9f4ced59a4536"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/split/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 499488
+},
+{
+	"_id": {
+		"$oid": "644c28b652d9f4ced59a453a"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/encodeliterals/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 568592
+},
+{
+	"_id": {
+		"$oid": "644c28b952d9f4ced59a453e"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/encodearithmetic/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 814537
+},
+{
+	"_id": {
+		"$oid": "644c28ba52d9f4ced59a4540"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/antitaintanalysis/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 437596
+},
+{
+	"_id": {
+		"$oid": "644c28bb52d9f4ced59a4542"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/antialiasanalysis/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 526441
+},
+{
+	"_id": {
+		"$oid": "644c28bc52d9f4ced59a4544"
+	},
+	"name": "cn-lite-1",
+	"file": "/app/binaries/cn-lite-1/tigress/virtualize/cn-lite-1.wasm",
+	"unobfuscated_file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 576150
+},
+{
+	"_id": {
+		"$oid": "644c28bd52d9f4ced59a4546"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/randomfuns/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 447111
+},
+{
+	"_id": {
+		"$oid": "644c28bd52d9f4ced59a4548"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/flatten/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 463785
+},
+{
+	"_id": {
+		"$oid": "644c28bf52d9f4ced59a454c"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/split/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 515466
+},
+{
+	"_id": {
+		"$oid": "644c28c052d9f4ced59a4550"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/encodeliterals/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 578115
+},
+{
+	"_id": {
+		"$oid": "644c28c352d9f4ced59a4554"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/encodearithmetic/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 806074
+},
+{
+	"_id": {
+		"$oid": "644c28c352d9f4ced59a4556"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/antitaintanalysis/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 447111
+},
+{
+	"_id": {
+		"$oid": "644c28c452d9f4ced59a4558"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/antialiasanalysis/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 541588
+},
+{
+	"_id": {
+		"$oid": "644c28c552d9f4ced59a455a"
+	},
+	"name": "cn-2",
+	"file": "/app/binaries/cn-2/tigress/virtualize/cn-2.wasm",
+	"unobfuscated_file": "cn-2/unobfuscated/cn-2.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 588794
+},
+{
+	"_id": {
+		"$oid": "644c28c652d9f4ced59a455c"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/randomfuns/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 447111
+},
+{
+	"_id": {
+		"$oid": "644c28c752d9f4ced59a455e"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/flatten/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 463785
+},
+{
+	"_id": {
+		"$oid": "644c28c852d9f4ced59a4560"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/split/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 515466
+},
+{
+	"_id": {
+		"$oid": "644c28ca52d9f4ced59a4566"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/encodeliterals/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 578121
+},
+{
+	"_id": {
+		"$oid": "644c28cc52d9f4ced59a456a"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/encodearithmetic/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 806074
+},
+{
+	"_id": {
+		"$oid": "644c28cd52d9f4ced59a456c"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/antitaintanalysis/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 447111
+},
+{
+	"_id": {
+		"$oid": "644c28ce52d9f4ced59a456e"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/antialiasanalysis/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 541594
+},
+{
+	"_id": {
+		"$oid": "644c28cf52d9f4ced59a4570"
+	},
+	"name": "cn-half",
+	"file": "/app/binaries/cn-half/tigress/virtualize/cn-half.wasm",
+	"unobfuscated_file": "cn-half/unobfuscated/cn-half.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 588794
+},
+{
+	"_id": {
+		"$oid": "644c28d052d9f4ced59a4572"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/randomfuns/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 436595
+},
+{
+	"_id": {
+		"$oid": "644c28d152d9f4ced59a4574"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/flatten/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 451591
+},
+{
+	"_id": {
+		"$oid": "644c28d252d9f4ced59a4576"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/split/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 497974
+},
+{
+	"_id": {
+		"$oid": "644c28d352d9f4ced59a457c"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/encodeliterals/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 567592
+},
+{
+	"_id": {
+		"$oid": "644c28d752d9f4ced59a4580"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/encodearithmetic/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 892338
+},
+{
+	"_id": {
+		"$oid": "644c28d852d9f4ced59a4582"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/antitaintanalysis/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 436595
+},
+{
+	"_id": {
+		"$oid": "644c28d952d9f4ced59a4584"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/antialiasanalysis/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 525052
+},
+{
+	"_id": {
+		"$oid": "644c28da52d9f4ced59a4586"
+	},
+	"name": "cn-0",
+	"file": "/app/binaries/cn-0/tigress/virtualize/cn-0.wasm",
+	"unobfuscated_file": "cn-0/unobfuscated/cn-0.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 573954
+},
+{
+	"_id": {
+		"$oid": "644c28db52d9f4ced59a4588"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/randomfuns/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 560857
+},
+{
+	"_id": {
+		"$oid": "644c28dc52d9f4ced59a458a"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/flatten/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 633256
+},
+{
+	"_id": {
+		"$oid": "644c28de52d9f4ced59a4590"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/split/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 625512
+},
+{
+	"_id": {
+		"$oid": "644c28df52d9f4ced59a4592"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/encodeliterals/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 691868
+},
+{
+	"_id": {
+		"$oid": "644c28e252d9f4ced59a4596"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/encodearithmetic/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 975961
+},
+{
+	"_id": {
+		"$oid": "644c28e352d9f4ced59a4598"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/antitaintanalysis/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 560857
+},
+{
+	"_id": {
+		"$oid": "644c28e452d9f4ced59a459a"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/antialiasanalysis/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 658718
+},
+{
+	"_id": {
+		"$oid": "644c28e552d9f4ced59a459c"
+	},
+	"name": "cn-rwz",
+	"file": "/app/binaries/cn-rwz/tigress/virtualize/cn-rwz.wasm",
+	"unobfuscated_file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 703256
+},
+{
+	"_id": {
+		"$oid": "644c28e652d9f4ced59a459e"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/randomfuns/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "randomfuns",
+	"code": 0,
+	"file_size": 447106
+},
+{
+	"_id": {
+		"$oid": "644c28e752d9f4ced59a45a4"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/flatten/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "flatten",
+	"code": 0,
+	"file_size": 463780
+},
+{
+	"_id": {
+		"$oid": "644c28e852d9f4ced59a45a6"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/split/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "split",
+	"code": 0,
+	"file_size": 515461
+},
+{
+	"_id": {
+		"$oid": "644c28e952d9f4ced59a45a8"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/encodeliterals/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "encodeliterals",
+	"code": 0,
+	"file_size": 578114
+},
+{
+	"_id": {
+		"$oid": "644c28ed52d9f4ced59a45ac"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/encodearithmetic/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "encodearithmetic",
+	"code": 0,
+	"file_size": 862339
+},
+{
+	"_id": {
+		"$oid": "644c28ee52d9f4ced59a45ae"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/antitaintanalysis/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "antitaintanalysis",
+	"code": 0,
+	"file_size": 447106
+},
+{
+	"_id": {
+		"$oid": "644c28ee52d9f4ced59a45b0"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/antialiasanalysis/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "antialiasanalysis",
+	"code": 0,
+	"file_size": 541587
+},
+{
+	"_id": {
+		"$oid": "644c28ef52d9f4ced59a45b2"
+	},
+	"name": "cn-lite-2",
+	"file": "/app/binaries/cn-lite-2/tigress/virtualize/cn-lite-2.wasm",
+	"unobfuscated_file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+	"category": "miners",
+	"transformation": "virtualize",
+	"code": 0,
+	"file_size": 588574
+}]
+
