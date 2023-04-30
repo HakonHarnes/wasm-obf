@@ -23,7 +23,8 @@ def handle_result(code, document):
 
 
 def optimize_wasm_file(file):
-    code = os.system(f'wasm-opt {file} -O3 -o {file}')
+    code = os.system(
+        f'wasm-opt {file} -O3 -o {file} --enable-reference-types --enable-multivalue --enable-simd')
     return code
 
 
