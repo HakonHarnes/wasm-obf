@@ -211,21 +211,23 @@ def get_unverified_miners():
         collection = db[collection_name]
 
         query = {
-            "$and": [
-                {"category": "miners"},
-                {'verified_hashes': {'$exists': False}}
-            ]
+            "category": "miners",
+            "$or": [
+                {"verified_hashes": {"$exists": False}},
+                {"verified_hashes": 0},
+            ],
         }
         if collection_name == 'wasm-mutate':
-            query["$and"].append({
-                "$or": [
-                    {"iteration": {"$mod": [100, 0]}},
-                    {"iteration": -1}
-                ]
-            })
+            query["$and"] = [
+                {
+                    "$or": [
+                        {"iteration": {"$mod": [100, 0]}},
+                        {"iteration": -1},
+                    ]
+                }
+            ]
 
-        unverified_documents.extend(
-            list(collection.find(query)))
+        unverified_documents.extend(list(collection.find(query)))
     return unverified_documents
 
 
