@@ -56,6 +56,7 @@ def get_url(document):
         return f'http://miner-client:8080/analysis'
 
     html_file = document['file'].replace('.wasm', '.html')
+    html_file = html_file.replace('/app/binaries/', '')
     return f'http://localhost:8080/binaries/{html_file}'
 
 
