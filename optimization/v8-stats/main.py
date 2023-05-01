@@ -59,6 +59,20 @@ def get_url(document):
     return f'http://localhost:8080/binaries/{html_file}'
 
 
+def get_index(entry):
+    index = None
+    try:
+        index = int(entry.split('index: ')[1].split('\n')[0].strip())
+    except:
+        pass
+    try:
+        index = int(entry.split('index: ')[1].split('\n')[1].strip())
+    except:
+        pass
+
+    return index
+
+
 def get_liftoff_size(data):
 
     function_sizes = {}
@@ -66,7 +80,9 @@ def get_liftoff_size(data):
         if 'Liftoff' not in entry:
             continue
 
-        index = int(entry.split('index: ')[1].split('\n')[0].strip())
+        index = get_index(entry)
+        if index is None:
+            continue
         size = int(entry.split('size = ')[2].split(',')[0].strip())
         if index in function_sizes:
             if function_sizes[index] > size:
@@ -87,7 +103,9 @@ def get_turbofan_size(data):
         if 'Liftoff' not in entry and 'TurboFan' not in entry:
             continue
 
-        index = int(entry.split('index: ')[1].split('\n')[0].strip())
+        index = get_index(entry)
+        if index is None:
+            continue
         size = int(entry.split('size = ')[2].split(',')[0].strip())
         if index in function_sizes:
             if function_sizes[index] > size:
@@ -130,6 +148,11 @@ def get_v8_stats(document):
     v8_file = os.path.join(
         binary_path, document['file'].replace('.wasm', '.v8'))
 
+    # Create the v8 file if it doesn't exist
+    if not os.path.exists(v8_file):
+        with open(v8_file, "w"):
+            pass  # Do nothing, just create the file
+
     if document['category'] == 'miners':
         algo = document['name']
         file = document['file']
@@ -140,18 +163,24 @@ def get_v8_stats(document):
 
     url = get_url(document)
 
-    os.system(
-        (
-            "chromium-browser "
-            "--no-sandbox "
-            "--disable-gpu "
-            '--js-flags="--print-wasm-code" '
-            f"--app={url} "
-            f">{v8_file} 2>&1 "
-            f"& sleep {website_timeout} "
-            "&& pkill chromium"
+    try:
+        os.system(
+            (
+                "chromium-browser "
+                "--no-sandbox "
+                "--disable-gpu "
+                "--disable-software-rasterizer "
+                "--disable-logging "
+                "--log-level=3 "
+                '--js-flags="--print-wasm-code" '
+                f"--app={url} "
+                f">{v8_file} 2>&1 "
+                f"& sleep {website_timeout} "
+                "&& pkill chromium"
+            )
         )
-    )
+    except Exception as error:
+        print(error)
 
     return v8_file
 
