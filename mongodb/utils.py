@@ -138,7 +138,7 @@ def get_unanalyzed_documents(analysis_method):
 
 def get_unoptimized_documents():
     documents = []
-    for collection_name in ['wasm-mutate', 'unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
+    for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
 
         query = {
