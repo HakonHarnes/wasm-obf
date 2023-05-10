@@ -1,3141 +1,2224 @@
-[{
-	"_id": {
-		"$oid": "64499d9c1ba64107c5103d79"
-	},
-	"name": "wgsim",
-	"file": "wgsim/unobfuscated/wgsim.wasm",
-	"category": "utilities",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.5612173080444336,
-				"Auxiliary Utility": 0.39933034777641296,
-				"Compression Utility": 0.02722584828734398,
-				"Cryptographic Utility": 0.00986421201378107,
-				"Numeric Utility": 0.0017228290671482682,
-				"Grammar Utility": 0.0003344010910950601,
-				"Image Processing Utility": 0.00021115539129823446,
-				"Other Applications": 3.98596930608619E-05,
-				"JavaScript Carrier": 3.271073364885524E-05,
-				"WebAssembly Support Tester": 2.0489109374466352E-05,
-				"Cryptominer": 8.121123755699955E-07,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.28,
-				"Cryptominer": 0.22,
-				"Other Applications": 0.18,
-				"Game": 0.09,
-				"Image Processing Utility": 0.09,
-				"Cryptographic Utility": 0.08,
-				"Compression Utility": 0.05,
-				"Numeric Utility": 0.01,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.23241634750606965,
-				"Other Applications": 0.19181386971655473,
-				"Numeric Utility": 0.1331348362464479,
-				"Cryptominer": 0.0928568299123972,
-				"Game": 0.0890800709770527,
-				"Auxiliary Utility": 0.07872488183348282,
-				"Image Processing Utility": 0.07678566459747904,
-				"WebAssembly Support Tester": 0.041569270978929804,
-				"JavaScript Carrier": 0.03043873357482895,
-				"Grammar Utility": 0.01905099796045974,
-				"Compression Utility": 0.014128496696297553,
-				"code": 200
-			},
-			"naive": {
-				"Other Applications": 0.3175816587824969,
-				"Compression Utility": 0.2937298993511732,
-				"Auxiliary Utility": 0.216644952689434,
-				"Image Processing Utility": 0.09880513286195265,
-				"Cryptominer": 0.0458107989417007,
-				"Numeric Utility": 0.013745837455096485,
-				"WebAssembly Support Tester": 0.011048597426192366,
-				"Grammar Utility": 0.002284092596044654,
-				"JavaScript Carrier": 0.00025178519885979764,
-				"Cryptographic Utility": 7.481393452432223E-05,
-				"Game": 2.2430762524943812E-05,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 135850,
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 1,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 58
-		}
-	},
-	"v8": {
-		"file": "/app/binaries/wgsim/unobfuscated/wgsim.v8",
-		"liftoff_size": 149344,
-		"turbofan_size": 149344
-	}
-},
-{
-	"_id": {
-		"$oid": "64499d9b1ba64107c5103d77"
-	},
-	"name": "tree",
-	"file": "tree/unobfuscated/tree.wasm",
-	"category": "utilities",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.884261965751648,
-				"Auxiliary Utility": 0.11209750175476074,
-				"Compression Utility": 0.0020922934636473656,
-				"Numeric Utility": 0.0013634803472086787,
-				"Other Applications": 0.0001074285974027589,
-				"Grammar Utility": 3.690780795295723E-05,
-				"Cryptographic Utility": 3.405766619835049E-05,
-				"JavaScript Carrier": 3.648740403150441E-06,
-				"Image Processing Utility": 1.8851553704735124E-06,
-				"WebAssembly Support Tester": 7.53499648453726E-07,
-				"Cryptominer": 9.616198504147633E-09,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.29,
-				"Auxiliary Utility": 0.27,
-				"Cryptominer": 0.13,
-				"Image Processing Utility": 0.12,
-				"Cryptographic Utility": 0.09,
-				"Game": 0.06,
-				"Compression Utility": 0.02,
-				"Numeric Utility": 0.02,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.23279647661496677,
-				"Other Applications": 0.19038008488853841,
-				"Numeric Utility": 0.12975018031537797,
-				"Cryptominer": 0.09532024467718667,
-				"Game": 0.08767767516128243,
-				"Auxiliary Utility": 0.08402035362343355,
-				"Image Processing Utility": 0.07604233214107357,
-				"WebAssembly Support Tester": 0.04098376043875672,
-				"JavaScript Carrier": 0.029995303865638073,
-				"Grammar Utility": 0.018853985632202468,
-				"Compression Utility": 0.014179602641543262,
-				"code": 200
-			},
-			"naive": {
-				"Other Applications": 0.3968173414195851,
-				"Auxiliary Utility": 0.2628201296018791,
-				"Cryptominer": 0.20198286719672381,
-				"Image Processing Utility": 0.06859526249972654,
-				"Compression Utility": 0.06835182539879621,
-				"Cryptographic Utility": 0.0005054612925638437,
-				"Numeric Utility": 0.00042302637227151663,
-				"Grammar Utility": 0.000324010659189094,
-				"WebAssembly Support Tester": 0.000166416849857722,
-				"JavaScript Carrier": 1.2446044438791842E-05,
-				"Game": 1.212664968275268E-06,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 148024,
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"v8": {
-		"file": "/app/binaries/tree/unobfuscated/tree.v8",
-		"liftoff_size": 190824,
-		"turbofan_size": 190824
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da21ba64107c5103d87"
-	},
-	"name": "f1-race",
-	"file": "f1-race/unobfuscated/f1-race.wasm",
-	"category": "games",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Other Applications": 0.47021281719207764,
-				"Game": 0.4569263458251953,
-				"Image Processing Utility": 0.060048434883356094,
-				"Auxiliary Utility": 0.009796333499252796,
-				"Compression Utility": 0.001185873756185174,
-				"Cryptominer": 0.0010396247962489724,
-				"Grammar Utility": 0.0002498771355021745,
-				"JavaScript Carrier": 0.0002184804034186527,
-				"Numeric Utility": 0.0001742763997754082,
-				"WebAssembly Support Tester": 0.00012114583660149947,
-				"Cryptographic Utility": 2.6846289983950555E-05,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.33,
-				"Game": 0.2,
-				"Image Processing Utility": 0.2,
-				"Auxiliary Utility": 0.12,
-				"Cryptographic Utility": 0.08,
-				"Grammar Utility": 0.03,
-				"Compression Utility": 0.02,
-				"Cryptominer": 0.02,
-				"JavaScript Carrier": 0,
-				"Numeric Utility": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.2970414550912125,
-				"Cryptographic Utility": 0.16132340794160374,
-				"Cryptominer": 0.1448237835071224,
-				"Other Applications": 0.144570072613625,
-				"Numeric Utility": 0.09532523737662714,
-				"Image Processing Utility": 0.04964214534351551,
-				"Game": 0.042608722627968165,
-				"Compression Utility": 0.020500854103582263,
-				"WebAssembly Support Tester": 0.020428727287113306,
-				"JavaScript Carrier": 0.014502805790480763,
-				"Grammar Utility": 0.009232788317149267,
-				"code": 200
-			},
-			"naive": {
-				"Image Processing Utility": 0.39402368506270796,
-				"Auxiliary Utility": 0.2071785076041469,
-				"Numeric Utility": 0.17381438700209662,
-				"Other Applications": 0.12266788200933235,
-				"Cryptographic Utility": 0.03410171836427162,
-				"Compression Utility": 0.022847940843368074,
-				"Grammar Utility": 0.0215757626279046,
-				"WebAssembly Support Tester": 0.016897948620248956,
-				"JavaScript Carrier": 0.005151107893054456,
-				"Cryptominer": 0.0017381346507856082,
-				"Game": 2.9253220828338404E-06,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 946939,
-	"minos": {
-		"result": 0
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 15,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"v8": {
-		"file": "/app/binaries/f1-race/unobfuscated/f1-race.v8",
-		"liftoff_size": 578236,
-		"turbofan_size": 529312
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da41ba64107c5103d8b"
-	},
-	"name": "game-of-life",
-	"file": "game-of-life/unobfuscated/game-of-life.wasm",
-	"category": "games",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Other Applications": 0.48726725578308105,
-				"Game": 0.4338236451148987,
-				"Image Processing Utility": 0.0674595907330513,
-				"Auxiliary Utility": 0.008330687880516052,
-				"Cryptominer": 0.0011372743174433708,
-				"Compression Utility": 0.0011265992652624846,
-				"Grammar Utility": 0.0002866850409191102,
-				"JavaScript Carrier": 0.00023673486430197954,
-				"Numeric Utility": 0.00015223637456074357,
-				"WebAssembly Support Tester": 0.00012256404443178326,
-				"Cryptographic Utility": 5.667328150593676E-05,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.3,
-				"Image Processing Utility": 0.2,
-				"Game": 0.19,
-				"Auxiliary Utility": 0.17,
-				"Cryptographic Utility": 0.07,
-				"Compression Utility": 0.03,
-				"Grammar Utility": 0.02,
-				"Cryptominer": 0.02,
-				"Numeric Utility": 0,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.2757880999705222,
-				"Cryptographic Utility": 0.1714613545331734,
-				"Cryptominer": 0.14467845306279853,
-				"Other Applications": 0.13351788930369535,
-				"Numeric Utility": 0.12329199216905058,
-				"Image Processing Utility": 0.04744735972156548,
-				"Game": 0.041780790528905085,
-				"WebAssembly Support Tester": 0.020760105141140284,
-				"Compression Utility": 0.016928320127231465,
-				"JavaScript Carrier": 0.014842668821837057,
-				"Grammar Utility": 0.009502966620080664,
-				"code": 200
-			},
-			"naive": {
-				"Image Processing Utility": 0.33779551478521624,
-				"Auxiliary Utility": 0.2938154042431771,
-				"Numeric Utility": 0.1419875283904083,
-				"Compression Utility": 0.0737387045937971,
-				"Other Applications": 0.06966893497177698,
-				"WebAssembly Support Tester": 0.023030955342538358,
-				"JavaScript Carrier": 0.022898648721318138,
-				"Cryptographic Utility": 0.02045868526167272,
-				"Grammar Utility": 0.01067580242707557,
-				"Cryptominer": 0.0059293128633675545,
-				"Game": 5.083996520387356E-07,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 689354,
-	"minos": {
-		"result": 0
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 6,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 53
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"v8": {
-		"file": "/app/binaries/game-of-life/unobfuscated/game-of-life.v8",
-		"liftoff_size": 289452,
-		"turbofan_size": 254548
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da11ba64107c5103d85"
-	},
-	"name": "wasm-asteroids",
-	"file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
-	"category": "games",
-	"code": 0,
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 14,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 5,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 54
-		}
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Cryptographic Utility": 0.7266821265220642,
-				"Cryptominer": 0.15346966683864594,
-				"Auxiliary Utility": 0.07252128422260284,
-				"Image Processing Utility": 0.02737748622894287,
-				"Game": 0.016515659168362617,
-				"JavaScript Carrier": 0.001002861768938601,
-				"Compression Utility": 0.0009422192233614624,
-				"Grammar Utility": 0.000706255785189569,
-				"Other Applications": 0.0005999582936055958,
-				"WebAssembly Support Tester": 0.0001484583190176636,
-				"Numeric Utility": 3.3888059988385066E-05,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.27,
-				"Image Processing Utility": 0.24,
-				"Game": 0.21,
-				"Auxiliary Utility": 0.16,
-				"Cryptographic Utility": 0.06,
-				"Compression Utility": 0.03,
-				"Grammar Utility": 0.01,
-				"Cryptominer": 0.01,
-				"Numeric Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.2867406452308319,
-				"Cryptographic Utility": 0.17308794673046812,
-				"Cryptominer": 0.14696635439125436,
-				"Other Applications": 0.13618032972910846,
-				"Numeric Utility": 0.10357011340186939,
-				"Image Processing Utility": 0.04819190559452804,
-				"Game": 0.042212129595782494,
-				"WebAssembly Support Tester": 0.020992415610397254,
-				"Compression Utility": 0.017327627470433017,
-				"JavaScript Carrier": 0.014998560559920122,
-				"Grammar Utility": 0.009731971685406892,
-				"code": 200
-			},
-			"naive": {
-				"Image Processing Utility": 0.3918793702966448,
-				"Auxiliary Utility": 0.21630922817561016,
-				"Other Applications": 0.1449624944289861,
-				"Numeric Utility": 0.1366543884239144,
-				"Compression Utility": 0.045915254634727204,
-				"WebAssembly Support Tester": 0.03159801268936331,
-				"Grammar Utility": 0.0220736120385086,
-				"Cryptographic Utility": 0.005720027550074502,
-				"JavaScript Carrier": 0.003745644661232051,
-				"Cryptominer": 0.001138508888424678,
-				"Game": 3.4582125141344695E-06,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 711585,
-	"minos": {
-		"result": 0
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"v8": {
-		"file": "/app/binaries/wasm-asteroids/unobfuscated/wasm-asteroids.v8",
-		"liftoff_size": 378256,
-		"turbofan_size": 319036
-	}
-},
-{
-	"_id": {
-		"$oid": "64499dae1ba64107c5103d9b"
-	},
-	"name": "cn-lite-1",
-	"file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			63,
-			134,
-			206,
-			278,
-			350,
-			423,
-			497,
-			567,
-			641,
-			711,
-			785,
-			859,
-			931,
-			1005,
-			1075,
-			1148,
-			1221,
-			1294,
-			1367,
-			1439,
-			1513,
-			1586,
-			1658,
-			1732,
-			1805,
-			1878,
-			1951,
-			2023,
-			2095,
-			2169,
-			2243,
-			2315,
-			2388,
-			2460,
-			2530,
-			2603,
-			2675,
-			2747,
-			2819,
-			2888,
-			2961,
-			3034,
-			3109,
-			3181,
-			3253,
-			3326,
-			3398,
-			3471,
-			3542,
-			3614,
-			3686,
-			3756,
-			3827,
-			3900,
-			3971,
-			4042,
-			4113,
-			4182,
-			4253,
-			4325,
-			4399,
-			4470,
-			4542,
-			4615,
-			4688,
-			4761,
-			4834,
-			4906,
-			4978,
-			5050,
-			5121,
-			5194,
-			5265,
-			5338,
-			5408,
-			5480,
-			5552,
-			5624,
-			5697,
-			5767,
-			5841,
-			5911,
-			5984,
-			6057,
-			6129,
-			6203,
-			6275,
-			6346,
-			6422,
-			6494,
-			6568,
-			6640,
-			6715,
-			6787,
-			6861,
-			6933
-		],
-		"tth": 4150
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Cryptographic Utility": 0.9179083108901978,
-				"Game": 0.06992201507091522,
-				"Cryptominer": 0.01087422389537096,
-				"Other Applications": 0.0011914942879229784,
-				"Image Processing Utility": 3.876218033838086E-05,
-				"JavaScript Carrier": 3.2948435546131805E-05,
-				"WebAssembly Support Tester": 1.8158581951865926E-05,
-				"Grammar Utility": 1.2740277270495426E-05,
-				"Compression Utility": 9.192457923745678E-07,
-				"Numeric Utility": 2.1864819643724331E-07,
-				"Auxiliary Utility": 2.1389897142398695E-07,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.27,
-				"Other Applications": 0.24,
-				"Cryptographic Utility": 0.17,
-				"Cryptominer": 0.14,
-				"Image Processing Utility": 0.11,
-				"Game": 0.03,
-				"Compression Utility": 0.02,
-				"Grammar Utility": 0.01,
-				"Numeric Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.22217574327203754,
-				"Other Applications": 0.16610643906796213,
-				"Auxiliary Utility": 0.14851635984668904,
-				"Numeric Utility": 0.1223965746967093,
-				"Cryptominer": 0.1206537464663622,
-				"Game": 0.06852849075539584,
-				"Image Processing Utility": 0.06530102075790784,
-				"WebAssembly Support Tester": 0.03271261088860367,
-				"JavaScript Carrier": 0.0237894299908537,
-				"Grammar Utility": 0.015340186154312391,
-				"Compression Utility": 0.01447939810316629,
-				"code": 200
-			},
-			"naive": {
-				"Auxiliary Utility": 0.4304229866668589,
-				"Other Applications": 0.23992199800707384,
-				"Cryptominer": 0.2189777057872405,
-				"Compression Utility": 0.05330925443939977,
-				"Image Processing Utility": 0.046151748257922495,
-				"Numeric Utility": 0.0058451962191920035,
-				"Cryptographic Utility": 0.0038124854191346038,
-				"WebAssembly Support Tester": 0.0011380558793425133,
-				"Grammar Utility": 0.0003398825673061076,
-				"JavaScript Carrier": 8.022710870656647E-05,
-				"Game": 4.5964782287779586E-07,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 311415,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-lite-1/unobfuscated/cn-lite-1.v8",
-		"liftoff_size": 537876,
-		"turbofan_size": 218576
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da01ba64107c5103d83"
-	},
-	"name": "pong",
-	"file": "pong/unobfuscated/pong.wasm",
-	"category": "games",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Other Applications": 0.5898034572601318,
-				"Game": 0.20737117528915405,
-				"Image Processing Utility": 0.13218234479427338,
-				"Grammar Utility": 0.0581880621612072,
-				"Compression Utility": 0.005312502849847078,
-				"Cryptographic Utility": 0.0035868030972778797,
-				"Auxiliary Utility": 0.003350165206938982,
-				"JavaScript Carrier": 0.00013660435797646642,
-				"Numeric Utility": 5.609328582067974E-05,
-				"WebAssembly Support Tester": 1.27080993479467E-05,
-				"Cryptominer": 2.5430063388398594E-08,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.4,
-				"Image Processing Utility": 0.2,
-				"Game": 0.16,
-				"Auxiliary Utility": 0.09,
-				"Cryptographic Utility": 0.08,
-				"Compression Utility": 0.03,
-				"Grammar Utility": 0.03,
-				"Cryptominer": 0.01,
-				"JavaScript Carrier": 0,
-				"Numeric Utility": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.32855700099542356,
-				"Cryptographic Utility": 0.16867380983719832,
-				"Other Applications": 0.14973837567111906,
-				"Cryptominer": 0.14945201220332124,
-				"Image Processing Utility": 0.0511683040623227,
-				"Game": 0.044554923088356596,
-				"Numeric Utility": 0.04076802586985733,
-				"WebAssembly Support Tester": 0.021337401155947976,
-				"Compression Utility": 0.020238460947876406,
-				"JavaScript Carrier": 0.015153687390190835,
-				"Grammar Utility": 0.0103579987783858,
-				"code": 200
-			},
-			"naive": {
-				"Auxiliary Utility": 0.2939969517896877,
-				"Numeric Utility": 0.23541269158623765,
-				"Image Processing Utility": 0.22178926244417332,
-				"Cryptographic Utility": 0.09023310377265792,
-				"Other Applications": 0.053787289340954614,
-				"Grammar Utility": 0.04348293999946217,
-				"WebAssembly Support Tester": 0.030693975715103322,
-				"JavaScript Carrier": 0.014770595594323114,
-				"Compression Utility": 0.012757846390922771,
-				"Cryptominer": 0.003073931027840541,
-				"Game": 1.4123386368034571E-06,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 891462,
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"v8": {
-		"file": "/app/binaries/pong/unobfuscated/pong.v8",
-		"liftoff_size": 530608,
-		"turbofan_size": 466988
-	}
-},
-{
-	"_id": {
-		"$oid": "64499d9f1ba64107c5103d81"
-	},
-	"name": "breakout",
-	"file": "breakout/unobfuscated/breakout.wasm",
-	"category": "games",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Auxiliary Utility": 0.9447428584098816,
-				"Image Processing Utility": 0.04863838106393814,
-				"Other Applications": 0.003245084546506405,
-				"Game": 0.002571986522525549,
-				"Compression Utility": 0.00044703116873279214,
-				"Cryptominer": 0.0002044218563241884,
-				"Grammar Utility": 5.5942880862858146E-05,
-				"Cryptographic Utility": 4.1773804696276784E-05,
-				"JavaScript Carrier": 1.964804505405482E-05,
-				"WebAssembly Support Tester": 1.7474616470281035E-05,
-				"Numeric Utility": 1.5424942830577493E-05,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.34,
-				"Image Processing Utility": 0.22,
-				"Auxiliary Utility": 0.16,
-				"Game": 0.14,
-				"Cryptographic Utility": 0.07,
-				"Cryptominer": 0.03,
-				"Grammar Utility": 0.02,
-				"Compression Utility": 0.02,
-				"Numeric Utility": 0,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.27917403283658315,
-				"Cryptographic Utility": 0.1738657893294795,
-				"Cryptominer": 0.1457314731594582,
-				"Other Applications": 0.13471777757345035,
-				"Numeric Utility": 0.11345138866573928,
-				"Image Processing Utility": 0.047922623138760556,
-				"Game": 0.04240724451409341,
-				"WebAssembly Support Tester": 0.021057535804920438,
-				"Compression Utility": 0.016887363963960414,
-				"JavaScript Carrier": 0.015060734559856275,
-				"Grammar Utility": 0.009724036453698633,
-				"code": 200
-			},
-			"naive": {
-				"Image Processing Utility": 0.39402368506270796,
-				"Auxiliary Utility": 0.2071785076041469,
-				"Numeric Utility": 0.17381438700209662,
-				"Other Applications": 0.12266788200933235,
-				"Cryptographic Utility": 0.03410171836427162,
-				"Compression Utility": 0.022847940843368074,
-				"Grammar Utility": 0.0215757626279046,
-				"WebAssembly Support Tester": 0.016897948620248956,
-				"JavaScript Carrier": 0.005151107893054456,
-				"Cryptominer": 0.0017381346507856082,
-				"Game": 2.9253220828338404E-06,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 678507,
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 15,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 8,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 51
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"v8": {
-		"file": "/app/binaries/breakout/unobfuscated/breakout.v8",
-		"liftoff_size": 261916,
-		"turbofan_size": 231372
-	}
-},
-{
-	"_id": {
-		"$oid": "64499d9e1ba64107c5103d7d"
-	},
-	"name": "needleman_wunsch",
-	"file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
-	"category": "utilities",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.9081031084060669,
-				"Auxiliary Utility": 0.07406655699014664,
-				"Compression Utility": 0.015799203887581825,
-				"Numeric Utility": 0.001831071451306343,
-				"Cryptographic Utility": 8.541657734895125E-05,
-				"Grammar Utility": 7.876301242504269E-05,
-				"Other Applications": 1.7566460883244872E-05,
-				"JavaScript Carrier": 1.3575408956967294E-05,
-				"Image Processing Utility": 2.828741571647697E-06,
-				"WebAssembly Support Tester": 1.97652275346627E-06,
-				"Cryptominer": 2.2265025378942482E-08,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.28,
-				"Other Applications": 0.22,
-				"Cryptominer": 0.15,
-				"Image Processing Utility": 0.15,
-				"Cryptographic Utility": 0.09,
-				"Game": 0.06,
-				"Compression Utility": 0.03,
-				"Numeric Utility": 0.02,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.2325224079939634,
-				"Other Applications": 0.1853284610340686,
-				"Numeric Utility": 0.1281921034799967,
-				"Cryptominer": 0.10191636009328732,
-				"Auxiliary Utility": 0.09487717047831795,
-				"Game": 0.08320168076611452,
-				"Image Processing Utility": 0.07389448472388514,
-				"WebAssembly Support Tester": 0.039089701954888194,
-				"JavaScript Carrier": 0.028567483182169503,
-				"Grammar Utility": 0.01808734889495842,
-				"Compression Utility": 0.014322797398350231,
-				"code": 200
-			},
-			"naive": {
-				"Other Applications": 0.4205829747718908,
-				"Auxiliary Utility": 0.29578283682364825,
-				"Cryptominer": 0.13319095771077058,
-				"Image Processing Utility": 0.1178285259186871,
-				"Compression Utility": 0.026218190859947837,
-				"Cryptographic Utility": 0.002682892962122641,
-				"Numeric Utility": 0.0025869258825928195,
-				"Grammar Utility": 0.0005486566568273927,
-				"WebAssembly Support Tester": 0.0004410834755351378,
-				"JavaScript Carrier": 0.00012878364803528918,
-				"Game": 8.171289942175504E-06,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 187347,
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"v8": {
-		"file": "/app/binaries/needleman_wunsch/unobfuscated/needleman_wunsch.v8",
-		"liftoff_size": 99468,
-		"turbofan_size": 99468
-	}
-},
-{
-	"_id": {
-		"$oid": "64499daf1ba64107c5103d9d"
-	},
-	"name": "cn-lite-2",
-	"file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			50,
-			107,
-			164,
-			223,
-			280,
-			338,
-			395,
-			452,
-			508,
-			564,
-			621,
-			678,
-			736,
-			792,
-			849,
-			906,
-			963,
-			1021,
-			1078,
-			1135,
-			1192,
-			1249,
-			1305,
-			1362,
-			1419,
-			1475,
-			1532,
-			1589,
-			1647,
-			1702,
-			1758,
-			1815,
-			1872,
-			1929,
-			1986,
-			2043,
-			2099,
-			2156,
-			2213,
-			2267,
-			2324,
-			2380,
-			2438,
-			2495,
-			2552,
-			2608,
-			2664,
-			2719,
-			2776,
-			2834,
-			2891,
-			2947,
-			3004,
-			3061,
-			3118,
-			3174,
-			3230,
-			3285,
-			3342,
-			3399,
-			3455,
-			3512,
-			3568,
-			3625,
-			3682,
-			3740,
-			3796,
-			3853,
-			3910,
-			3967,
-			4023,
-			4081,
-			4138,
-			4195,
-			4251,
-			4307,
-			4364,
-			4421,
-			4478,
-			4534,
-			4591,
-			4648,
-			4705,
-			4761,
-			4818,
-			4875,
-			4932,
-			4987,
-			5044,
-			5101,
-			5157,
-			5214,
-			5271,
-			5329,
-			5385,
-			5442
-		],
-		"tth": 4120
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.9930391907691956,
-				"Cryptographic Utility": 0.0064150867983698845,
-				"Cryptominer": 0.00046979228500276804,
-				"JavaScript Carrier": 5.0156402721768245E-05,
-				"Compression Utility": 1.1054284186684527E-05,
-				"Grammar Utility": 7.56078725316911E-06,
-				"WebAssembly Support Tester": 2.9947741495561786E-06,
-				"Image Processing Utility": 1.8530449779063929E-06,
-				"Other Applications": 1.423595904270769E-06,
-				"Auxiliary Utility": 5.007204890716821E-07,
-				"Numeric Utility": 4.4568736257133423E-07,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.26,
-				"Other Applications": 0.21,
-				"Cryptographic Utility": 0.16,
-				"Cryptominer": 0.16,
-				"Image Processing Utility": 0.12,
-				"Compression Utility": 0.04,
-				"Game": 0.03,
-				"Grammar Utility": 0.01,
-				"Numeric Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.22209111214011293,
-				"Other Applications": 0.16551474601058275,
-				"Auxiliary Utility": 0.1537760764454544,
-				"Cryptominer": 0.12219818368130426,
-				"Numeric Utility": 0.11773167224180826,
-				"Game": 0.06788265880102529,
-				"Image Processing Utility": 0.06499402518789126,
-				"WebAssembly Support Tester": 0.032438342933466535,
-				"JavaScript Carrier": 0.023581528936627037,
-				"Grammar Utility": 0.01526582377689945,
-				"Compression Utility": 0.014525829844827757,
-				"code": 200
-			},
-			"naive": {
-				"Auxiliary Utility": 0.2912815475960812,
-				"Other Applications": 0.2658320921075613,
-				"Cryptominer": 0.21843503002670603,
-				"Compression Utility": 0.12486389647373285,
-				"Image Processing Utility": 0.09703196273451771,
-				"Numeric Utility": 0.0010683547640171456,
-				"Cryptographic Utility": 0.0010090072272298427,
-				"WebAssembly Support Tester": 0.0003352642950653,
-				"Grammar Utility": 0.00012841437787925784,
-				"JavaScript Carrier": 1.2230481208059533E-05,
-				"Game": 2.1999160012278627E-06,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 320989,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-lite-2/unobfuscated/cn-lite-2.v8",
-		"liftoff_size": 537864,
-		"turbofan_size": 205072
-	}
-},
-{
-	"_id": {
-		"$oid": "64499dac1ba64107c5103d99"
-	},
-	"name": "cn-0",
-	"file": "cn-0/unobfuscated/cn-0.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			28,
-			63,
-			99,
-			134,
-			169,
-			204,
-			239,
-			275,
-			310,
-			345,
-			381,
-			416,
-			451,
-			486,
-			522,
-			558,
-			594,
-			629,
-			664,
-			699,
-			734,
-			771,
-			807,
-			842,
-			877,
-			912,
-			947,
-			982,
-			1018,
-			1053,
-			1090,
-			1125,
-			1160,
-			1194,
-			1229,
-			1264,
-			1301,
-			1336,
-			1372,
-			1407,
-			1442,
-			1477,
-			1512,
-			1549,
-			1583,
-			1619,
-			1654,
-			1689,
-			1725,
-			1760,
-			1796,
-			1832,
-			1867,
-			1902,
-			1937,
-			1973,
-			2009,
-			2044,
-			2079,
-			2114,
-			2149,
-			2186,
-			2221,
-			2256,
-			2291,
-			2326,
-			2361,
-			2397,
-			2432,
-			2467,
-			2502,
-			2537,
-			2573,
-			2609,
-			2644,
-			2680,
-			2715,
-			2750,
-			2785,
-			2821,
-			2855,
-			2889,
-			2924,
-			2959,
-			2994,
-			3029,
-			3064,
-			3100,
-			3136,
-			3171,
-			3206,
-			3241,
-			3276,
-			3311,
-			3346,
-			3382
-		],
-		"tth": 4210
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Cryptographic Utility": 0.9481756687164307,
-				"Game": 0.044508274644613266,
-				"Cryptominer": 0.006956309080123901,
-				"Other Applications": 0.0002575737307779491,
-				"Image Processing Utility": 4.644605360226706E-05,
-				"JavaScript Carrier": 3.0115730623947456E-05,
-				"WebAssembly Support Tester": 1.519523448223481E-05,
-				"Grammar Utility": 9.55785799305886E-06,
-				"Compression Utility": 7.121099088180927E-07,
-				"Numeric Utility": 1.163547764804207E-07,
-				"Auxiliary Utility": 6.698306265207066E-08,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.24,
-				"Other Applications": 0.23,
-				"Cryptographic Utility": 0.15,
-				"Cryptominer": 0.15,
-				"Image Processing Utility": 0.12,
-				"Game": 0.04,
-				"Compression Utility": 0.04,
-				"Numeric Utility": 0.02,
-				"Grammar Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.22251886187775868,
-				"Other Applications": 0.16641208944034544,
-				"Auxiliary Utility": 0.14855305346668102,
-				"Numeric Utility": 0.12121297903394912,
-				"Cryptominer": 0.12068514278172292,
-				"Game": 0.0686901076388289,
-				"Image Processing Utility": 0.0654214291983159,
-				"WebAssembly Support Tester": 0.032786637555572526,
-				"JavaScript Carrier": 0.02384391425059645,
-				"Grammar Utility": 0.015386664301105296,
-				"Compression Utility": 0.014489120455123725,
-				"code": 200
-			},
-			"naive": {
-				"Image Processing Utility": 0.23352307328873975,
-				"Other Applications": 0.22649413162814752,
-				"Auxiliary Utility": 0.18289822289533295,
-				"Cryptominer": 0.17718467610704194,
-				"Compression Utility": 0.17517067427592428,
-				"Numeric Utility": 0.002695779621808123,
-				"WebAssembly Support Tester": 0.001122807187492236,
-				"Grammar Utility": 0.000387502490878038,
-				"JavaScript Carrier": 0.00034070838159751704,
-				"Cryptographic Utility": 0.0001660996452487978,
-				"Game": 1.6324477788722653E-05,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 310503,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 15,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 2,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 57
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-0/unobfuscated/cn-0.v8",
-		"liftoff_size": 537876,
-		"turbofan_size": 211016
-	}
-},
-{
-	"_id": {
-		"$oid": "64499d9a1ba64107c5103d75"
-	},
-	"name": "smith_waterman",
-	"file": "smith_waterman/unobfuscated/smith_waterman.wasm",
-	"category": "utilities",
-	"code": 0,
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.7157078385353088,
-				"Auxiliary Utility": 0.18072178959846497,
-				"Compression Utility": 0.09060518443584442,
-				"Numeric Utility": 0.011818339116871357,
-				"Other Applications": 0.0008369694696739316,
-				"Grammar Utility": 0.00023666844936087728,
-				"JavaScript Carrier": 3.8308782677631825E-05,
-				"Image Processing Utility": 1.783740663086064E-05,
-				"WebAssembly Support Tester": 1.4821304830547888E-05,
-				"Cryptographic Utility": 2.1023045064794132E-06,
-				"Cryptominer": 9.033188774765222E-08,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.28,
-				"Other Applications": 0.21,
-				"Image Processing Utility": 0.15,
-				"Cryptominer": 0.14,
-				"Cryptographic Utility": 0.1,
-				"Game": 0.06,
-				"Compression Utility": 0.05,
-				"Numeric Utility": 0.01,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.23217799286648916,
-				"Other Applications": 0.1821425572804626,
-				"Numeric Utility": 0.12255585647609209,
-				"Cryptominer": 0.106502087474037,
-				"Auxiliary Utility": 0.10621096520794872,
-				"Game": 0.08036218609827263,
-				"Image Processing Utility": 0.07245443632481721,
-				"WebAssembly Support Tester": 0.03788369187091077,
-				"JavaScript Carrier": 0.02765809919596183,
-				"Grammar Utility": 0.01764083399458929,
-				"Compression Utility": 0.01441129321041878,
-				"code": 200
-			},
-			"naive": {
-				"Image Processing Utility": 0.31571586633658255,
-				"Cryptominer": 0.22359628186209402,
-				"Auxiliary Utility": 0.19343245983550503,
-				"Other Applications": 0.17000071018453747,
-				"Compression Utility": 0.09330804387672141,
-				"Numeric Utility": 0.002361927658573918,
-				"WebAssembly Support Tester": 0.0005241938022320275,
-				"Cryptographic Utility": 0.00046614868538120735,
-				"Grammar Utility": 0.00025468445609926765,
-				"JavaScript Carrier": 0.00022391793940149156,
-				"Game": 0.00011576536287170987,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 212140,
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"v8": {
-		"file": "/app/binaries/smith_waterman/unobfuscated/smith_waterman.v8",
-		"liftoff_size": 173844,
-		"turbofan_size": 173844
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da91ba64107c5103d93"
-	},
-	"name": "cn-1",
-	"file": "cn-1/unobfuscated/cn-1.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			28,
-			64,
-			100,
-			133,
-			167,
-			199,
-			236,
-			271,
-			307,
-			343,
-			377,
-			413,
-			449,
-			485,
-			521,
-			556,
-			592,
-			628,
-			662,
-			698,
-			734,
-			770,
-			805,
-			841,
-			876,
-			910,
-			947,
-			983,
-			1018,
-			1052,
-			1088,
-			1122,
-			1159,
-			1195,
-			1230,
-			1266,
-			1300,
-			1336,
-			1371,
-			1407,
-			1441,
-			1477,
-			1514,
-			1549,
-			1584,
-			1619,
-			1654,
-			1690,
-			1725,
-			1760,
-			1796,
-			1832,
-			1869,
-			1907,
-			1942,
-			1978,
-			2013,
-			2049,
-			2084,
-			2121,
-			2156,
-			2192,
-			2229,
-			2264,
-			2300,
-			2335,
-			2371,
-			2407,
-			2442,
-			2478,
-			2514,
-			2551,
-			2586,
-			2623,
-			2659,
-			2695,
-			2731,
-			2767,
-			2803,
-			2840,
-			2876,
-			2912,
-			2949,
-			2985,
-			3021,
-			3057,
-			3094,
-			3130,
-			3166,
-			3202,
-			3238,
-			3274,
-			3312,
-			3348,
-			3384,
-			3420
-		],
-		"tth": 4230
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Cryptographic Utility": 0.9179083108901978,
-				"Game": 0.06992201507091522,
-				"Cryptominer": 0.01087422389537096,
-				"Other Applications": 0.0011914942879229784,
-				"Image Processing Utility": 3.876218033838086E-05,
-				"JavaScript Carrier": 3.2948435546131805E-05,
-				"WebAssembly Support Tester": 1.8158581951865926E-05,
-				"Grammar Utility": 1.2740277270495426E-05,
-				"Compression Utility": 9.192457923745678E-07,
-				"Numeric Utility": 2.1864819643724331E-07,
-				"Auxiliary Utility": 2.1389897142398695E-07,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.25,
-				"Other Applications": 0.25,
-				"Cryptographic Utility": 0.17,
-				"Cryptominer": 0.12,
-				"Image Processing Utility": 0.11,
-				"Compression Utility": 0.05,
-				"Game": 0.04,
-				"Grammar Utility": 0.01,
-				"Numeric Utility": 0,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.22217552646694777,
-				"Other Applications": 0.16610596129647606,
-				"Auxiliary Utility": 0.1485191283691347,
-				"Numeric Utility": 0.12239471251805101,
-				"Cryptominer": 0.12065456791581962,
-				"Game": 0.0685280595787083,
-				"Image Processing Utility": 0.0653007894377598,
-				"WebAssembly Support Tester": 0.03271242503477299,
-				"JavaScript Carrier": 0.023789289948611,
-				"Grammar Utility": 0.015340121697248734,
-				"Compression Utility": 0.014479417736469906,
-				"code": 200
-			},
-			"naive": {
-				"Other Applications": 0.6373536089460401,
-				"Auxiliary Utility": 0.22101812883914987,
-				"Cryptominer": 0.12723226587500713,
-				"Image Processing Utility": 0.007327688313609761,
-				"Compression Utility": 0.004837138454560624,
-				"Cryptographic Utility": 0.0010856752396782262,
-				"Game": 0.0008208714897043721,
-				"Numeric Utility": 0.00015253567853942325,
-				"Grammar Utility": 0.00012176521360397626,
-				"WebAssembly Support Tester": 4.907067247276081E-05,
-				"JavaScript Carrier": 1.2512776337094355E-06,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 311420,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-1/unobfuscated/cn-1.v8",
-		"liftoff_size": 513992,
-		"turbofan_size": 200504
-	}
-},
-{
-	"_id": {
-		"$oid": "64499d9d1ba64107c5103d7b"
-	},
-	"name": "lcs",
-	"file": "lcs/unobfuscated/lcs.wasm",
-	"category": "utilities",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.9987719655036926,
-				"Cryptographic Utility": 0.000996735179796815,
-				"Auxiliary Utility": 0.00013820694584865123,
-				"Compression Utility": 6.981480692047626E-05,
-				"Grammar Utility": 9.238464372174349E-06,
-				"Image Processing Utility": 4.4050148062524386E-06,
-				"Other Applications": 3.56857231054164E-06,
-				"Numeric Utility": 3.547064125086763E-06,
-				"JavaScript Carrier": 2.2673145849694265E-06,
-				"WebAssembly Support Tester": 2.3696928508343262E-07,
-				"Cryptominer": 4.020377275537612E-08,
-				"code": 200
-			},
-			"random": {
-				"Cryptographic Utility": 0.26,
-				"Other Applications": 0.2,
-				"Cryptominer": 0.19,
-				"Auxiliary Utility": 0.15,
-				"Numeric Utility": 0.07,
-				"Game": 0.06,
-				"Compression Utility": 0.05,
-				"Image Processing Utility": 0.02,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.2311912946893595,
-				"Other Applications": 0.2040696984885597,
-				"Numeric Utility": 0.13323439671106116,
-				"Game": 0.1001080343315875,
-				"Image Processing Utility": 0.08203728847926967,
-				"Cryptominer": 0.08197650049926683,
-				"Auxiliary Utility": 0.05252031078840509,
-				"WebAssembly Support Tester": 0.04618655993597609,
-				"JavaScript Carrier": 0.03392444438229579,
-				"Grammar Utility": 0.020893391744132662,
-				"Compression Utility": 0.01385807995008598,
-				"code": 200
-			},
-			"naive": {
-				"Compression Utility": 0.26907451830063983,
-				"Other Applications": 0.2474723750452033,
-				"Auxiliary Utility": 0.1985563504258863,
-				"Image Processing Utility": 0.19181286282857538,
-				"Cryptominer": 0.09065594208808296,
-				"Numeric Utility": 0.0010365279367507564,
-				"WebAssembly Support Tester": 0.00043187676850360617,
-				"Game": 0.00042165602113339935,
-				"Cryptographic Utility": 0.0002992895774051096,
-				"Grammar Utility": 0.0001760018719442136,
-				"JavaScript Carrier": 6.259913587518848E-05,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 55407,
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 7,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 52
-		}
-	},
-	"v8": {
-		"file": "/app/binaries/lcs/unobfuscated/lcs.v8",
-		"liftoff_size": 122540,
-		"turbofan_size": 122540
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da61ba64107c5103d8d"
-	},
-	"name": "cn-rwz",
-	"file": "cn-rwz/unobfuscated/cn-rwz.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			13,
-			49,
-			86,
-			122,
-			158,
-			194,
-			230,
-			266,
-			301,
-			337,
-			373,
-			408,
-			444,
-			480,
-			516,
-			552,
-			588,
-			624,
-			659,
-			695,
-			731,
-			767,
-			803,
-			839,
-			875,
-			910,
-			946,
-			983,
-			1018,
-			1054,
-			1090,
-			1126,
-			1162,
-			1199,
-			1235,
-			1271,
-			1306,
-			1342,
-			1378,
-			1414,
-			1451,
-			1486,
-			1523,
-			1560,
-			1596,
-			1632,
-			1668,
-			1704,
-			1741,
-			1776,
-			1812,
-			1848,
-			1884,
-			1922,
-			1958,
-			1994,
-			2029,
-			2065,
-			2101,
-			2138,
-			2174,
-			2210,
-			2246,
-			2282,
-			2318,
-			2354,
-			2390,
-			2428,
-			2463,
-			2499,
-			2535,
-			2571,
-			2607,
-			2644,
-			2680,
-			2716,
-			2753,
-			2788,
-			2824,
-			2860,
-			2896,
-			2932,
-			2968,
-			3004,
-			3040,
-			3077,
-			3113,
-			3149,
-			3185,
-			3221,
-			3257,
-			3293,
-			3329,
-			3365,
-			3400,
-			3437
-		],
-		"tth": 4550
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Cryptominer": 0.706261157989502,
-				"Cryptographic Utility": 0.22180870175361633,
-				"Game": 0.05539273843169212,
-				"Auxiliary Utility": 0.011591748334467411,
-				"Numeric Utility": 0.00386119750328362,
-				"Other Applications": 0.00037539235199801624,
-				"WebAssembly Support Tester": 0.0003472491807769984,
-				"JavaScript Carrier": 0.0002937882672995329,
-				"Compression Utility": 3.993055361206643E-05,
-				"Grammar Utility": 2.8128082703915425E-05,
-				"Image Processing Utility": 6.382256145798237E-08,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.28,
-				"Auxiliary Utility": 0.2,
-				"Cryptographic Utility": 0.15,
-				"Cryptominer": 0.14,
-				"Image Processing Utility": 0.13,
-				"Game": 0.05,
-				"Compression Utility": 0.03,
-				"Numeric Utility": 0.02,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.21881678623983908,
-				"Cryptographic Utility": 0.21708554443236366,
-				"Other Applications": 0.1578878851837091,
-				"Cryptominer": 0.13760519584827668,
-				"Numeric Utility": 0.07014749870147745,
-				"Game": 0.06033807392810552,
-				"Image Processing Utility": 0.05851036952151407,
-				"WebAssembly Support Tester": 0.029178683604392314,
-				"JavaScript Carrier": 0.021120011362053055,
-				"Compression Utility": 0.014986478189382034,
-				"Grammar Utility": 0.01432347298888696,
-				"code": 200
-			},
-			"naive": {
-				"Game": 0.7390558496083641,
-				"Other Applications": 0.09167915551207531,
-				"Cryptominer": 0.09075582839540987,
-				"Auxiliary Utility": 0.036970855370923816,
-				"Compression Utility": 0.024145620603858328,
-				"Image Processing Utility": 0.01738391640258328,
-				"Numeric Utility": 2.9888635637152663E-06,
-				"Cryptographic Utility": 2.9776991191699086E-06,
-				"WebAssembly Support Tester": 1.421426581561585E-06,
-				"Grammar Utility": 1.3348332946734335E-06,
-				"JavaScript Carrier": 5.1284226353992086E-08,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 434719,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-rwz/unobfuscated/cn-rwz.v8",
-		"liftoff_size": 513992,
-		"turbofan_size": 200148
-	}
-},
-{
-	"_id": {
-		"$oid": "64499dab1ba64107c5103d97"
-	},
-	"name": "cn-2",
-	"file": "cn-2/unobfuscated/cn-2.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			20,
-			49,
-			79,
-			108,
-			138,
-			167,
-			198,
-			226,
-			256,
-			284,
-			314,
-			343,
-			372,
-			401,
-			429,
-			458,
-			487,
-			517,
-			546,
-			575,
-			606,
-			635,
-			666,
-			695,
-			726,
-			755,
-			785,
-			815,
-			844,
-			874,
-			904,
-			933,
-			964,
-			993,
-			1024,
-			1053,
-			1084,
-			1113,
-			1144,
-			1173,
-			1204,
-			1232,
-			1263,
-			1291,
-			1322,
-			1351,
-			1382,
-			1411,
-			1442,
-			1471,
-			1502,
-			1531,
-			1561,
-			1590,
-			1620,
-			1649,
-			1679,
-			1708,
-			1737,
-			1766,
-			1796,
-			1826,
-			1856,
-			1886,
-			1915,
-			1944,
-			1975,
-			2004,
-			2034,
-			2064,
-			2094,
-			2123,
-			2154,
-			2183,
-			2214,
-			2243,
-			2274,
-			2303,
-			2334,
-			2363,
-			2394,
-			2423,
-			2454,
-			2483,
-			2514,
-			2543,
-			2574,
-			2603,
-			2634,
-			2663,
-			2694,
-			2723,
-			2753,
-			2782,
-			2813,
-			2841
-		],
-		"tth": 4350
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.9931343793869019,
-				"Cryptographic Utility": 0.006326604634523392,
-				"Cryptominer": 0.00046343094436451793,
-				"JavaScript Carrier": 4.9805563321569934E-05,
-				"Compression Utility": 1.1069217180192936E-05,
-				"Grammar Utility": 7.506804195145378E-06,
-				"WebAssembly Support Tester": 2.965327212223201E-06,
-				"Image Processing Utility": 1.8282480596099049E-06,
-				"Other Applications": 1.4000081591802882E-06,
-				"Auxiliary Utility": 5.049622586739133E-07,
-				"Numeric Utility": 4.4638858298640116E-07,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.29,
-				"Other Applications": 0.22,
-				"Cryptominer": 0.15,
-				"Cryptographic Utility": 0.14,
-				"Image Processing Utility": 0.1,
-				"Game": 0.04,
-				"Compression Utility": 0.04,
-				"Grammar Utility": 0.01,
-				"Numeric Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.222090866566259,
-				"Other Applications": 0.16551426581063947,
-				"Auxiliary Utility": 0.15377886693244694,
-				"Cryptominer": 0.12219898415160253,
-				"Numeric Utility": 0.11772983736038944,
-				"Game": 0.06788223075586437,
-				"Image Processing Utility": 0.06499379284301242,
-				"WebAssembly Support Tester": 0.03243815797340764,
-				"JavaScript Carrier": 0.023581389664875448,
-				"Grammar Utility": 0.015265759296631778,
-				"Compression Utility": 0.014525848644871152,
-				"code": 200
-			},
-			"naive": {
-				"Other Applications": 0.6093261521693252,
-				"Auxiliary Utility": 0.26527769868500045,
-				"Cryptominer": 0.08673322428511947,
-				"Image Processing Utility": 0.027269364727123022,
-				"Compression Utility": 0.009051237915261313,
-				"Cryptographic Utility": 0.0014051556164306487,
-				"Numeric Utility": 0.000426570542548631,
-				"Grammar Utility": 0.00028948570985433587,
-				"WebAssembly Support Tester": 0.0001251763517119539,
-				"Game": 8.481901842962277E-05,
-				"JavaScript Carrier": 1.1114979195365568E-05,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 320994,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 15,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 2,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 57
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-2/unobfuscated/cn-2.v8",
-		"liftoff_size": 875336,
-		"turbofan_size": 349728
-	}
-},
-{
-	"_id": {
-		"$oid": "64499db11ba64107c5103da1"
-	},
-	"name": "cn-lite-0",
-	"file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			62,
-			134,
-			206,
-			279,
-			350,
-			421,
-			492,
-			562,
-			634,
-			706,
-			777,
-			849,
-			921,
-			993,
-			1064,
-			1136,
-			1207,
-			1278,
-			1348,
-			1420,
-			1492,
-			1563,
-			1634,
-			1707,
-			1780,
-			1851,
-			1923,
-			1992,
-			2062,
-			2133,
-			2205,
-			2275,
-			2347,
-			2418,
-			2488,
-			2560,
-			2633,
-			2703,
-			2775,
-			2848,
-			2919,
-			2991,
-			3063,
-			3133,
-			3206,
-			3277,
-			3349,
-			3420,
-			3493,
-			3564,
-			3636,
-			3707,
-			3779,
-			3850,
-			3922,
-			3993,
-			4065,
-			4137,
-			4208,
-			4281,
-			4352,
-			4423,
-			4495,
-			4565,
-			4638,
-			4710,
-			4782,
-			4853,
-			4924,
-			4995,
-			5068,
-			5139,
-			5211,
-			5283,
-			5355,
-			5427,
-			5498,
-			5569,
-			5641,
-			5712,
-			5784,
-			5854,
-			5926,
-			5998,
-			6070,
-			6141,
-			6214,
-			6285,
-			6357,
-			6430,
-			6500,
-			6571,
-			6644,
-			6715,
-			6788,
-			6860
-		],
-		"tth": 4090
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Cryptographic Utility": 0.945207417011261,
-				"Game": 0.04702041298151016,
-				"Cryptominer": 0.0073588574305176735,
-				"Other Applications": 0.0003113547863904387,
-				"Image Processing Utility": 4.526590055320412E-05,
-				"JavaScript Carrier": 3.0301387596409768E-05,
-				"WebAssembly Support Tester": 1.546144630992785E-05,
-				"Grammar Utility": 9.852357834461145E-06,
-				"Compression Utility": 7.295703881027293E-07,
-				"Numeric Utility": 1.2476574795527995E-07,
-				"Auxiliary Utility": 7.67273746760111E-08,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.26,
-				"Other Applications": 0.24,
-				"Cryptographic Utility": 0.15,
-				"Cryptominer": 0.13,
-				"Image Processing Utility": 0.12,
-				"Game": 0.04,
-				"Compression Utility": 0.04,
-				"Grammar Utility": 0.01,
-				"Numeric Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.2225171667927249,
-				"Other Applications": 0.16641294582699498,
-				"Auxiliary Utility": 0.14852975607151148,
-				"Numeric Utility": 0.12124040518097629,
-				"Cryptominer": 0.12067803179326216,
-				"Game": 0.06869203754292376,
-				"Image Processing Utility": 0.06542212573152699,
-				"WebAssembly Support Tester": 0.03278742495274751,
-				"JavaScript Carrier": 0.023844520663269784,
-				"Grammar Utility": 0.015386724067473604,
-				"Compression Utility": 0.014488861376588544,
-				"code": 200
-			},
-			"naive": {
-				"Other Applications": 0.35141807413863047,
-				"Auxiliary Utility": 0.2875380996177639,
-				"Cryptominer": 0.26475350527246677,
-				"Compression Utility": 0.06527789156286239,
-				"Image Processing Utility": 0.022909810142441145,
-				"Game": 0.007445082716082503,
-				"Numeric Utility": 0.00031101892297021044,
-				"WebAssembly Support Tester": 0.0001330180926152615,
-				"Cryptographic Utility": 0.00012029973146614576,
-				"Grammar Utility": 8.509705106364206E-05,
-				"JavaScript Carrier": 8.102751637577875E-06,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 310476,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 15,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 2,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 57
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-lite-0/unobfuscated/cn-lite-0.v8",
-		"liftoff_size": 513992,
-		"turbofan_size": 200720
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da31ba64107c5103d89"
-	},
-	"name": "snake",
-	"file": "snake/unobfuscated/snake.wasm",
-	"category": "games",
-	"code": 0,
-	"wasim": {
-		"result": {
-			"neural": {
-				"Other Applications": 0.5677695274353027,
-				"Game": 0.2902299761772156,
-				"Image Processing Utility": 0.12801407277584076,
-				"Cryptographic Utility": 0.0064205205999314785,
-				"Auxiliary Utility": 0.0031800998840481043,
-				"Cryptominer": 0.002133224857971072,
-				"Compression Utility": 0.0008665661443956196,
-				"Grammar Utility": 0.0007258593686856329,
-				"JavaScript Carrier": 0.000430561340181157,
-				"WebAssembly Support Tester": 0.00015204923693090677,
-				"Numeric Utility": 7.757602725178003E-05,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.3,
-				"Image Processing Utility": 0.25,
-				"Game": 0.16,
-				"Auxiliary Utility": 0.15,
-				"Cryptographic Utility": 0.06,
-				"Cryptominer": 0.03,
-				"Grammar Utility": 0.03,
-				"Compression Utility": 0.02,
-				"JavaScript Carrier": 0,
-				"Numeric Utility": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.27345941164442117,
-				"Cryptographic Utility": 0.17264935140127557,
-				"Cryptominer": 0.1444257704005246,
-				"Other Applications": 0.13330908473265893,
-				"Numeric Utility": 0.12440544795626297,
-				"Image Processing Utility": 0.04749977356911784,
-				"Game": 0.0421031590856349,
-				"WebAssembly Support Tester": 0.020900265910740467,
-				"Compression Utility": 0.016714584381261006,
-				"JavaScript Carrier": 0.014951946859280951,
-				"Grammar Utility": 0.009581204058821546,
-				"code": 200
-			},
-			"naive": {
-				"Auxiliary Utility": 0.3682964706497515,
-				"Image Processing Utility": 0.25115987660125,
-				"Numeric Utility": 0.1728939812468776,
-				"Other Applications": 0.12778320323194092,
-				"Cryptographic Utility": 0.045038156598095506,
-				"Grammar Utility": 0.014871045530607536,
-				"WebAssembly Support Tester": 0.008258617624502704,
-				"Compression Utility": 0.005571247756976661,
-				"JavaScript Carrier": 0.0035149159108235598,
-				"Cryptominer": 0.0025909257186649015,
-				"Game": 2.155913050917419E-05,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 674611,
-	"minos": {
-		"result": 0
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"v8": {
-		"file": "/app/binaries/snake/unobfuscated/snake.v8",
-		"liftoff_size": 249224,
-		"turbofan_size": 238328
-	}
-},
-{
-	"_id": {
-		"$oid": "64499daa1ba64107c5103d95"
-	},
-	"name": "cn-half",
-	"file": "cn-half/unobfuscated/cn-half.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			32,
-			72,
-			110,
-			147,
-			187,
-			224,
-			264,
-			303,
-			342,
-			381,
-			421,
-			459,
-			498,
-			536,
-			577,
-			615,
-			655,
-			693,
-			733,
-			771,
-			810,
-			850,
-			888,
-			928,
-			966,
-			1006,
-			1046,
-			1085,
-			1124,
-			1163,
-			1203,
-			1242,
-			1280,
-			1320,
-			1359,
-			1398,
-			1438,
-			1477,
-			1515,
-			1555,
-			1593,
-			1633,
-			1672,
-			1711,
-			1750,
-			1789,
-			1828,
-			1867,
-			1905,
-			1945,
-			1983,
-			2021,
-			2060,
-			2098,
-			2137,
-			2175,
-			2214,
-			2252,
-			2290,
-			2329,
-			2367,
-			2406,
-			2444,
-			2483,
-			2522,
-			2562,
-			2601,
-			2640,
-			2679,
-			2719,
-			2758,
-			2797,
-			2837,
-			2876,
-			2916,
-			2956,
-			2996,
-			3036,
-			3074,
-			3114,
-			3152,
-			3192,
-			3231,
-			3271,
-			3310,
-			3350,
-			3389,
-			3429,
-			3468,
-			3508,
-			3548,
-			3588,
-			3628,
-			3668,
-			3708,
-			3747
-		],
-		"tth": 4220
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.9930328130722046,
-				"Cryptographic Utility": 0.006420985795557499,
-				"Cryptominer": 0.0004702177830040455,
-				"JavaScript Carrier": 5.0179907702840865E-05,
-				"Compression Utility": 1.1053379239456262E-05,
-				"Grammar Utility": 7.564409770566272E-06,
-				"WebAssembly Support Tester": 2.996743205585517E-06,
-				"Image Processing Utility": 1.8547002582636196E-06,
-				"Other Applications": 1.4251733091441565E-06,
-				"Auxiliary Utility": 5.004441732125997E-07,
-				"Numeric Utility": 4.456445310552226E-07,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.25,
-				"Auxiliary Utility": 0.24,
-				"Cryptographic Utility": 0.18,
-				"Cryptominer": 0.12,
-				"Image Processing Utility": 0.11,
-				"Game": 0.04,
-				"Compression Utility": 0.03,
-				"Numeric Utility": 0.02,
-				"Grammar Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.22209086656155616,
-				"Other Applications": 0.16551426581613748,
-				"Auxiliary Utility": 0.15377886706006663,
-				"Cryptominer": 0.12219898416369343,
-				"Numeric Utility": 0.11772983713507655,
-				"Game": 0.06788223075811098,
-				"Image Processing Utility": 0.06499379284946699,
-				"WebAssembly Support Tester": 0.03243815805314353,
-				"JavaScript Carrier": 0.02358138966019021,
-				"Grammar Utility": 0.015265759297350544,
-				"Compression Utility": 0.014525848645207354,
-				"code": 200
-			},
-			"naive": {
-				"Auxiliary Utility": 0.42501027157822163,
-				"Other Applications": 0.29978045498978184,
-				"Image Processing Utility": 0.2212711659841213,
-				"Compression Utility": 0.017114410203283862,
-				"Cryptominer": 0.015514530198576997,
-				"Numeric Utility": 0.012106160257702878,
-				"Cryptographic Utility": 0.00635110206640869,
-				"Grammar Utility": 0.0014457826061358527,
-				"WebAssembly Support Tester": 0.0012600999207240374,
-				"JavaScript Carrier": 0.00013743445275747943,
-				"Game": 8.587742285304865E-06,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 320994,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-half/unobfuscated/cn-half.v8",
-		"liftoff_size": 537876,
-		"turbofan_size": 218328
-	}
-},
-{
-	"_id": {
-		"$oid": "64499d991ba64107c5103d73"
-	},
-	"name": "seqtk",
-	"file": "seqtk/unobfuscated/seqtk.wasm",
-	"category": "utilities",
-	"code": 0,
-	"miner_ray": {
-		"result": 0,
-		"error": "MinerRay failed"
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Auxiliary Utility": 0.7801352143287659,
-				"Game": 0.20594577491283417,
-				"Other Applications": 0.009302208200097084,
-				"Numeric Utility": 0.004488248378038406,
-				"Compression Utility": 9.062162280315533E-05,
-				"Grammar Utility": 1.435647027392406E-05,
-				"Cryptographic Utility": 7.460756933141965E-06,
-				"JavaScript Carrier": 6.9978459578123875E-06,
-				"WebAssembly Support Tester": 5.551760750677204E-06,
-				"Cryptominer": 3.547688947946881E-06,
-				"Image Processing Utility": 8.047675947864263E-08,
-				"code": 200
-			},
-			"random": {
-				"Auxiliary Utility": 0.3,
-				"Other Applications": 0.24,
-				"Cryptominer": 0.12,
-				"Cryptographic Utility": 0.11,
-				"Image Processing Utility": 0.11,
-				"Game": 0.06,
-				"Compression Utility": 0.05,
-				"Numeric Utility": 0.01,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.2345206862948792,
-				"Other Applications": 0.18207523568859285,
-				"Auxiliary Utility": 0.11799808973320026,
-				"Cryptominer": 0.11094314989029971,
-				"Numeric Utility": 0.10576662117581945,
-				"Game": 0.07935190904064081,
-				"Image Processing Utility": 0.07222461128702994,
-				"WebAssembly Support Tester": 0.037494945200296344,
-				"JavaScript Carrier": 0.027353600769603838,
-				"Grammar Utility": 0.017696469621895142,
-				"Compression Utility": 0.014574681297742458,
-				"code": 200
-			},
-			"naive": {
-				"Auxiliary Utility": 0.36467374419515897,
-				"Other Applications": 0.2782508727622382,
-				"Cryptominer": 0.27276982340061917,
-				"Image Processing Utility": 0.04057881782887207,
-				"Compression Utility": 0.04009653570810861,
-				"Numeric Utility": 0.0018146734901025394,
-				"Cryptographic Utility": 0.0005979454793888764,
-				"WebAssembly Support Tester": 0.000506052545972245,
-				"JavaScript Carrier": 0.00048647783159210054,
-				"Grammar Utility": 0.00022387505552697417,
-				"Game": 1.1817024202092065E-06,
-				"code": 200
-			}
-		}
-	},
-	"minos": {
-		"result": 0
-	},
-	"file_size": 232396,
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"v8": {
-		"file": "/app/binaries/seqtk/unobfuscated/seqtk.v8",
-		"liftoff_size": 104564,
-		"turbofan_size": 104564
-	}
-},
-{
-	"_id": {
-		"$oid": "64499db01ba64107c5103d9f"
-	},
-	"name": "cn-pico-trtl",
-	"file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			215,
-			451,
-			676,
-			902,
-			1133,
-			1366,
-			1603,
-			1839,
-			2075,
-			2308,
-			2545,
-			2781,
-			3014,
-			3250,
-			3486,
-			3720,
-			3956,
-			4192,
-			4429,
-			4663,
-			4894,
-			5130,
-			5364,
-			5600,
-			5835,
-			6070,
-			6306,
-			6539,
-			6769,
-			6998,
-			7229,
-			7465,
-			7697,
-			7931,
-			8164,
-			8401,
-			8638,
-			8872,
-			9109,
-			9344,
-			9579,
-			9816,
-			10052,
-			10287,
-			10523,
-			10756,
-			10993,
-			11228,
-			11465,
-			11701,
-			11936,
-			12174,
-			12409,
-			12645,
-			12880,
-			13117,
-			13352,
-			13585,
-			13819,
-			14056,
-			14292,
-			14526,
-			14761,
-			14995,
-			15226,
-			15461,
-			15697,
-			15934,
-			16168,
-			16403,
-			16640,
-			16875,
-			17112,
-			17347,
-			17584,
-			17818,
-			18054,
-			18292,
-			18529,
-			18766,
-			19004,
-			19239,
-			19476,
-			19712,
-			19948,
-			20184,
-			20420,
-			20659,
-			20894,
-			21130,
-			21367,
-			21604,
-			21842,
-			22078,
-			22312,
-			22549
-		],
-		"tth": 4050
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Game": 0.992976188659668,
-				"Cryptographic Utility": 0.0064736343920230865,
-				"Cryptominer": 0.00047399805043824017,
-				"JavaScript Carrier": 5.0387319788569584E-05,
-				"Compression Utility": 1.1044646271329839E-05,
-				"Grammar Utility": 7.596349860250484E-06,
-				"WebAssembly Support Tester": 3.014202320628101E-06,
-				"Image Processing Utility": 1.8694469190450036E-06,
-				"Other Applications": 1.439233642486215E-06,
-				"Auxiliary Utility": 4.979743835065165E-07,
-				"Numeric Utility": 4.4523511633087764E-07,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.27,
-				"Auxiliary Utility": 0.22,
-				"Cryptographic Utility": 0.16,
-				"Cryptominer": 0.12,
-				"Image Processing Utility": 0.11,
-				"Game": 0.04,
-				"Compression Utility": 0.04,
-				"Numeric Utility": 0.03,
-				"Grammar Utility": 0.01,
-				"JavaScript Carrier": 0,
-				"WebAssembly Support Tester": 0,
-				"code": 200
-			},
-			"svm": {
-				"Cryptographic Utility": 0.22209111162957895,
-				"Other Applications": 0.16551474596598587,
-				"Auxiliary Utility": 0.15377607833801896,
-				"Cryptominer": 0.12219818554454161,
-				"Numeric Utility": 0.11773166984363756,
-				"Game": 0.06788265879013933,
-				"Image Processing Utility": 0.06499402438320862,
-				"WebAssembly Support Tester": 0.03243834295766673,
-				"JavaScript Carrier": 0.023581528947475623,
-				"Grammar Utility": 0.015265823786738969,
-				"Compression Utility": 0.014525829813007702,
-				"code": 200
-			},
-			"naive": {
-				"Cryptominer": 0.3017280142940637,
-				"Other Applications": 0.2700986374294964,
-				"Auxiliary Utility": 0.1874635080388325,
-				"Compression Utility": 0.13378525045291922,
-				"Image Processing Utility": 0.10460811222469586,
-				"Numeric Utility": 0.0011815483033106415,
-				"WebAssembly Support Tester": 0.0005386684132172194,
-				"Grammar Utility": 0.00019929868159451568,
-				"Game": 0.00019322393633487426,
-				"Cryptographic Utility": 0.00015682669343906557,
-				"JavaScript Carrier": 4.691153209583798E-05,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 320988,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 15,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-pico-trtl/unobfuscated/cn-pico-trtl.v8",
-		"liftoff_size": 537864,
-		"turbofan_size": 205768
-	}
-},
-{
-	"_id": {
-		"$oid": "64499da71ba64107c5103d8f"
-	},
-	"name": "cn-r",
-	"file": "cn-r/unobfuscated/cn-r.wasm",
-	"category": "miners",
-	"code": 0,
-	"hash_rate": {
-		"hash_count": [
-			0,
-			0,
-			0,
-			0,
-			0,
-			12,
-			25,
-			37,
-			51,
-			63,
-			75,
-			90,
-			102,
-			115,
-			129,
-			142,
-			155,
-			169,
-			181,
-			194,
-			208,
-			220,
-			233,
-			247,
-			259,
-			273,
-			287,
-			299,
-			312,
-			325,
-			338,
-			352,
-			364,
-			378,
-			391,
-			404,
-			418,
-			431,
-			443,
-			458,
-			470,
-			483,
-			497,
-			509,
-			523,
-			537,
-			549,
-			563,
-			576,
-			588,
-			603,
-			615,
-			628,
-			642,
-			655,
-			668,
-			682,
-			694,
-			707,
-			721,
-			733,
-			747,
-			760,
-			773,
-			788,
-			800,
-			813,
-			827,
-			839,
-			853,
-			866,
-			878,
-			893,
-			906,
-			919,
-			932,
-			945,
-			958,
-			971,
-			984,
-			998,
-			1011,
-			1025,
-			1038,
-			1050,
-			1064,
-			1077,
-			1089,
-			1103,
-			1116,
-			1129,
-			1143,
-			1155,
-			1169,
-			1183,
-			1195,
-			1209,
-			1222,
-			1234,
-			1247
-		],
-		"tth": 5201
-	},
-	"wasim": {
-		"result": {
-			"neural": {
-				"Cryptominer": 0.7064048051834106,
-				"Cryptographic Utility": 0.22174108028411865,
-				"Game": 0.05533847585320473,
-				"Auxiliary Utility": 0.011574992910027504,
-				"Numeric Utility": 0.003856849856674671,
-				"Other Applications": 0.0003750662144739181,
-				"WebAssembly Support Tester": 0.0003470529627520591,
-				"JavaScript Carrier": 0.00029362039640545845,
-				"Compression Utility": 3.988519529229961E-05,
-				"Grammar Utility": 2.810352816595696E-05,
-				"Image Processing Utility": 6.377614880648252E-08,
-				"code": 200
-			},
-			"random": {
-				"Other Applications": 0.28,
-				"Auxiliary Utility": 0.24,
-				"Cryptominer": 0.15,
-				"Image Processing Utility": 0.11,
-				"Cryptographic Utility": 0.1,
-				"Game": 0.05,
-				"Compression Utility": 0.05,
-				"Numeric Utility": 0.02,
-				"WebAssembly Support Tester": 0,
-				"JavaScript Carrier": 0,
-				"Grammar Utility": 0,
-				"code": 200
-			},
-			"svm": {
-				"Auxiliary Utility": 0.21881678622076767,
-				"Cryptographic Utility": 0.2170855445122779,
-				"Other Applications": 0.15788788512446772,
-				"Cryptominer": 0.13760519581531633,
-				"Numeric Utility": 0.0701474988344648,
-				"Game": 0.06033807390553325,
-				"Image Processing Utility": 0.058510369502045016,
-				"WebAssembly Support Tester": 0.029178683558942632,
-				"JavaScript Carrier": 0.021120011359050037,
-				"Compression Utility": 0.014986478183518687,
-				"Grammar Utility": 0.01432347298361598,
-				"code": 200
-			},
-			"naive": {
-				"Other Applications": 0.6423913374049782,
-				"Auxiliary Utility": 0.17724628028636255,
-				"Cryptominer": 0.08998584737972523,
-				"Game": 0.044748556648223484,
-				"Image Processing Utility": 0.024556759158453043,
-				"Compression Utility": 0.02018497909571355,
-				"Numeric Utility": 0.0003880811790398539,
-				"Cryptographic Utility": 0.00021241156056153496,
-				"Grammar Utility": 0.00018244220025759477,
-				"WebAssembly Support Tester": 0.00010143037987480011,
-				"JavaScript Carrier": 1.8747068101975045E-06,
-				"code": 200
-			}
-		}
-	},
-	"file_size": 434719,
-	"minos": {
-		"result": 1
-	},
-	"virustotal": {
-		"result": 0,
-		"last_analysis_stats": {
-			"harmless": 0,
-			"type-unsupported": 16,
-			"suspicious": 0,
-			"confirmed-timeout": 0,
-			"timeout": 0,
-			"failure": 0,
-			"malicious": 0,
-			"undetected": 59
-		}
-	},
-	"miner_ray": {
-		"result": 0,
-		"error": "Timeout"
-	},
-	"v8": {
-		"file": "/app/binaries/cn-r/unobfuscated/cn-r.v8",
-		"liftoff_size": 875336,
-		"turbofan_size": 344220
-	}
-}]
-
+[
+  {
+    "_id": {
+      "$oid": "64499d9c1ba64107c5103d79"
+    },
+    "name": "wgsim",
+    "file": "wgsim/unobfuscated/wgsim.wasm",
+    "category": "utilities",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.5612173080444336,
+          "Auxiliary Utility": 0.39933034777641296,
+          "Compression Utility": 0.02722584828734398,
+          "Cryptographic Utility": 0.00986421201378107,
+          "Numeric Utility": 0.0017228290671482682,
+          "Grammar Utility": 0.0003344010910950601,
+          "Image Processing Utility": 0.00021115539129823446,
+          "Other Applications": 3.98596930608619e-5,
+          "JavaScript Carrier": 3.271073364885524e-5,
+          "WebAssembly Support Tester": 2.0489109374466352e-5,
+          "Cryptominer": 8.121123755699955e-7,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.28,
+          "Cryptominer": 0.22,
+          "Other Applications": 0.18,
+          "Game": 0.09,
+          "Image Processing Utility": 0.09,
+          "Cryptographic Utility": 0.08,
+          "Compression Utility": 0.05,
+          "Numeric Utility": 0.01,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.23241634750606965,
+          "Other Applications": 0.19181386971655473,
+          "Numeric Utility": 0.1331348362464479,
+          "Cryptominer": 0.0928568299123972,
+          "Game": 0.0890800709770527,
+          "Auxiliary Utility": 0.07872488183348282,
+          "Image Processing Utility": 0.07678566459747904,
+          "WebAssembly Support Tester": 0.041569270978929804,
+          "JavaScript Carrier": 0.03043873357482895,
+          "Grammar Utility": 0.01905099796045974,
+          "Compression Utility": 0.014128496696297553,
+          "code": 200
+        },
+        "naive": {
+          "Other Applications": 0.3175816587824969,
+          "Compression Utility": 0.2937298993511732,
+          "Auxiliary Utility": 0.216644952689434,
+          "Image Processing Utility": 0.09880513286195265,
+          "Cryptominer": 0.0458107989417007,
+          "Numeric Utility": 0.013745837455096485,
+          "WebAssembly Support Tester": 0.011048597426192366,
+          "Grammar Utility": 0.002284092596044654,
+          "JavaScript Carrier": 0.00025178519885979764,
+          "Cryptographic Utility": 7.481393452432223e-5,
+          "Game": 2.2430762524943812e-5,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 135850,
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 1,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 58
+      }
+    },
+    "v8": {
+      "file": "/app/binaries/wgsim/unobfuscated/wgsim.v8",
+      "liftoff_size": 149344,
+      "turbofan_size": 149344
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499d9b1ba64107c5103d77"
+    },
+    "name": "tree",
+    "file": "tree/unobfuscated/tree.wasm",
+    "category": "utilities",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.884261965751648,
+          "Auxiliary Utility": 0.11209750175476074,
+          "Compression Utility": 0.0020922934636473656,
+          "Numeric Utility": 0.0013634803472086787,
+          "Other Applications": 0.0001074285974027589,
+          "Grammar Utility": 3.690780795295723e-5,
+          "Cryptographic Utility": 3.405766619835049e-5,
+          "JavaScript Carrier": 3.648740403150441e-6,
+          "Image Processing Utility": 1.8851553704735124e-6,
+          "WebAssembly Support Tester": 7.53499648453726e-7,
+          "Cryptominer": 9.616198504147633e-9,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.29,
+          "Auxiliary Utility": 0.27,
+          "Cryptominer": 0.13,
+          "Image Processing Utility": 0.12,
+          "Cryptographic Utility": 0.09,
+          "Game": 0.06,
+          "Compression Utility": 0.02,
+          "Numeric Utility": 0.02,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.23279647661496677,
+          "Other Applications": 0.19038008488853841,
+          "Numeric Utility": 0.12975018031537797,
+          "Cryptominer": 0.09532024467718667,
+          "Game": 0.08767767516128243,
+          "Auxiliary Utility": 0.08402035362343355,
+          "Image Processing Utility": 0.07604233214107357,
+          "WebAssembly Support Tester": 0.04098376043875672,
+          "JavaScript Carrier": 0.029995303865638073,
+          "Grammar Utility": 0.018853985632202468,
+          "Compression Utility": 0.014179602641543262,
+          "code": 200
+        },
+        "naive": {
+          "Other Applications": 0.3968173414195851,
+          "Auxiliary Utility": 0.2628201296018791,
+          "Cryptominer": 0.20198286719672381,
+          "Image Processing Utility": 0.06859526249972654,
+          "Compression Utility": 0.06835182539879621,
+          "Cryptographic Utility": 0.0005054612925638437,
+          "Numeric Utility": 0.00042302637227151663,
+          "Grammar Utility": 0.000324010659189094,
+          "WebAssembly Support Tester": 0.000166416849857722,
+          "JavaScript Carrier": 1.2446044438791842e-5,
+          "Game": 1.212664968275268e-6,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 148024,
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "v8": {
+      "file": "/app/binaries/tree/unobfuscated/tree.v8",
+      "liftoff_size": 190824,
+      "turbofan_size": 190824
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da21ba64107c5103d87"
+    },
+    "name": "f1-race",
+    "file": "f1-race/unobfuscated/f1-race.wasm",
+    "category": "games",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Other Applications": 0.47021281719207764,
+          "Game": 0.4569263458251953,
+          "Image Processing Utility": 0.060048434883356094,
+          "Auxiliary Utility": 0.009796333499252796,
+          "Compression Utility": 0.001185873756185174,
+          "Cryptominer": 0.0010396247962489724,
+          "Grammar Utility": 0.0002498771355021745,
+          "JavaScript Carrier": 0.0002184804034186527,
+          "Numeric Utility": 0.0001742763997754082,
+          "WebAssembly Support Tester": 0.00012114583660149947,
+          "Cryptographic Utility": 2.6846289983950555e-5,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.33,
+          "Game": 0.2,
+          "Image Processing Utility": 0.2,
+          "Auxiliary Utility": 0.12,
+          "Cryptographic Utility": 0.08,
+          "Grammar Utility": 0.03,
+          "Compression Utility": 0.02,
+          "Cryptominer": 0.02,
+          "JavaScript Carrier": 0,
+          "Numeric Utility": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.2970414550912125,
+          "Cryptographic Utility": 0.16132340794160374,
+          "Cryptominer": 0.1448237835071224,
+          "Other Applications": 0.144570072613625,
+          "Numeric Utility": 0.09532523737662714,
+          "Image Processing Utility": 0.04964214534351551,
+          "Game": 0.042608722627968165,
+          "Compression Utility": 0.020500854103582263,
+          "WebAssembly Support Tester": 0.020428727287113306,
+          "JavaScript Carrier": 0.014502805790480763,
+          "Grammar Utility": 0.009232788317149267,
+          "code": 200
+        },
+        "naive": {
+          "Image Processing Utility": 0.39402368506270796,
+          "Auxiliary Utility": 0.2071785076041469,
+          "Numeric Utility": 0.17381438700209662,
+          "Other Applications": 0.12266788200933235,
+          "Cryptographic Utility": 0.03410171836427162,
+          "Compression Utility": 0.022847940843368074,
+          "Grammar Utility": 0.0215757626279046,
+          "WebAssembly Support Tester": 0.016897948620248956,
+          "JavaScript Carrier": 0.005151107893054456,
+          "Cryptominer": 0.0017381346507856082,
+          "Game": 2.9253220828338404e-6,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 946939,
+    "minos": {
+      "result": 0
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 15,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "v8": {
+      "file": "/app/binaries/f1-race/unobfuscated/f1-race.v8",
+      "liftoff_size": 251480,
+      "turbofan_size": 251480
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da41ba64107c5103d8b"
+    },
+    "name": "game-of-life",
+    "file": "game-of-life/unobfuscated/game-of-life.wasm",
+    "category": "games",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Other Applications": 0.48726725578308105,
+          "Game": 0.4338236451148987,
+          "Image Processing Utility": 0.0674595907330513,
+          "Auxiliary Utility": 0.008330687880516052,
+          "Cryptominer": 0.0011372743174433708,
+          "Compression Utility": 0.0011265992652624846,
+          "Grammar Utility": 0.0002866850409191102,
+          "JavaScript Carrier": 0.00023673486430197954,
+          "Numeric Utility": 0.00015223637456074357,
+          "WebAssembly Support Tester": 0.00012256404443178326,
+          "Cryptographic Utility": 5.667328150593676e-5,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.3,
+          "Image Processing Utility": 0.2,
+          "Game": 0.19,
+          "Auxiliary Utility": 0.17,
+          "Cryptographic Utility": 0.07,
+          "Compression Utility": 0.03,
+          "Grammar Utility": 0.02,
+          "Cryptominer": 0.02,
+          "Numeric Utility": 0,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.2757880999705222,
+          "Cryptographic Utility": 0.1714613545331734,
+          "Cryptominer": 0.14467845306279853,
+          "Other Applications": 0.13351788930369535,
+          "Numeric Utility": 0.12329199216905058,
+          "Image Processing Utility": 0.04744735972156548,
+          "Game": 0.041780790528905085,
+          "WebAssembly Support Tester": 0.020760105141140284,
+          "Compression Utility": 0.016928320127231465,
+          "JavaScript Carrier": 0.014842668821837057,
+          "Grammar Utility": 0.009502966620080664,
+          "code": 200
+        },
+        "naive": {
+          "Image Processing Utility": 0.33779551478521624,
+          "Auxiliary Utility": 0.2938154042431771,
+          "Numeric Utility": 0.1419875283904083,
+          "Compression Utility": 0.0737387045937971,
+          "Other Applications": 0.06966893497177698,
+          "WebAssembly Support Tester": 0.023030955342538358,
+          "JavaScript Carrier": 0.022898648721318138,
+          "Cryptographic Utility": 0.02045868526167272,
+          "Grammar Utility": 0.01067580242707557,
+          "Cryptominer": 0.0059293128633675545,
+          "Game": 5.083996520387356e-7,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 689354,
+    "minos": {
+      "result": 0
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 6,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 53
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "v8": {
+      "file": "/app/binaries/game-of-life/unobfuscated/game-of-life.v8",
+      "liftoff_size": 334740,
+      "turbofan_size": 287324
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da11ba64107c5103d85"
+    },
+    "name": "wasm-asteroids",
+    "file": "wasm-asteroids/unobfuscated/wasm-asteroids.wasm",
+    "category": "games",
+    "code": 0,
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 14,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 5,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 54
+      }
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Cryptographic Utility": 0.7266821265220642,
+          "Cryptominer": 0.15346966683864594,
+          "Auxiliary Utility": 0.07252128422260284,
+          "Image Processing Utility": 0.02737748622894287,
+          "Game": 0.016515659168362617,
+          "JavaScript Carrier": 0.001002861768938601,
+          "Compression Utility": 0.0009422192233614624,
+          "Grammar Utility": 0.000706255785189569,
+          "Other Applications": 0.0005999582936055958,
+          "WebAssembly Support Tester": 0.0001484583190176636,
+          "Numeric Utility": 3.3888059988385066e-5,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.27,
+          "Image Processing Utility": 0.24,
+          "Game": 0.21,
+          "Auxiliary Utility": 0.16,
+          "Cryptographic Utility": 0.06,
+          "Compression Utility": 0.03,
+          "Grammar Utility": 0.01,
+          "Cryptominer": 0.01,
+          "Numeric Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.2867406452308319,
+          "Cryptographic Utility": 0.17308794673046812,
+          "Cryptominer": 0.14696635439125436,
+          "Other Applications": 0.13618032972910846,
+          "Numeric Utility": 0.10357011340186939,
+          "Image Processing Utility": 0.04819190559452804,
+          "Game": 0.042212129595782494,
+          "WebAssembly Support Tester": 0.020992415610397254,
+          "Compression Utility": 0.017327627470433017,
+          "JavaScript Carrier": 0.014998560559920122,
+          "Grammar Utility": 0.009731971685406892,
+          "code": 200
+        },
+        "naive": {
+          "Image Processing Utility": 0.3918793702966448,
+          "Auxiliary Utility": 0.21630922817561016,
+          "Other Applications": 0.1449624944289861,
+          "Numeric Utility": 0.1366543884239144,
+          "Compression Utility": 0.045915254634727204,
+          "WebAssembly Support Tester": 0.03159801268936331,
+          "Grammar Utility": 0.0220736120385086,
+          "Cryptographic Utility": 0.005720027550074502,
+          "JavaScript Carrier": 0.003745644661232051,
+          "Cryptominer": 0.001138508888424678,
+          "Game": 3.4582125141344695e-6,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 711585,
+    "minos": {
+      "result": 0
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "v8": {
+      "file": "/app/binaries/wasm-asteroids/unobfuscated/wasm-asteroids.v8",
+      "liftoff_size": 378256,
+      "turbofan_size": 319036
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499dae1ba64107c5103d9b"
+    },
+    "name": "cn-lite-1",
+    "file": "cn-lite-1/unobfuscated/cn-lite-1.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 63, 134, 206, 278, 350, 423, 497, 567, 641, 711, 785, 859,
+        931, 1005, 1075, 1148, 1221, 1294, 1367, 1439, 1513, 1586, 1658, 1732,
+        1805, 1878, 1951, 2023, 2095, 2169, 2243, 2315, 2388, 2460, 2530, 2603,
+        2675, 2747, 2819, 2888, 2961, 3034, 3109, 3181, 3253, 3326, 3398, 3471,
+        3542, 3614, 3686, 3756, 3827, 3900, 3971, 4042, 4113, 4182, 4253, 4325,
+        4399, 4470, 4542, 4615, 4688, 4761, 4834, 4906, 4978, 5050, 5121, 5194,
+        5265, 5338, 5408, 5480, 5552, 5624, 5697, 5767, 5841, 5911, 5984, 6057,
+        6129, 6203, 6275, 6346, 6422, 6494, 6568, 6640, 6715, 6787, 6861, 6933
+      ],
+      "tth": 4150
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Cryptographic Utility": 0.9179083108901978,
+          "Game": 0.06992201507091522,
+          "Cryptominer": 0.01087422389537096,
+          "Other Applications": 0.0011914942879229784,
+          "Image Processing Utility": 3.876218033838086e-5,
+          "JavaScript Carrier": 3.2948435546131805e-5,
+          "WebAssembly Support Tester": 1.8158581951865926e-5,
+          "Grammar Utility": 1.2740277270495426e-5,
+          "Compression Utility": 9.192457923745678e-7,
+          "Numeric Utility": 2.1864819643724331e-7,
+          "Auxiliary Utility": 2.1389897142398695e-7,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.27,
+          "Other Applications": 0.24,
+          "Cryptographic Utility": 0.17,
+          "Cryptominer": 0.14,
+          "Image Processing Utility": 0.11,
+          "Game": 0.03,
+          "Compression Utility": 0.02,
+          "Grammar Utility": 0.01,
+          "Numeric Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.22217574327203754,
+          "Other Applications": 0.16610643906796213,
+          "Auxiliary Utility": 0.14851635984668904,
+          "Numeric Utility": 0.1223965746967093,
+          "Cryptominer": 0.1206537464663622,
+          "Game": 0.06852849075539584,
+          "Image Processing Utility": 0.06530102075790784,
+          "WebAssembly Support Tester": 0.03271261088860367,
+          "JavaScript Carrier": 0.0237894299908537,
+          "Grammar Utility": 0.015340186154312391,
+          "Compression Utility": 0.01447939810316629,
+          "code": 200
+        },
+        "naive": {
+          "Auxiliary Utility": 0.4304229866668589,
+          "Other Applications": 0.23992199800707384,
+          "Cryptominer": 0.2189777057872405,
+          "Compression Utility": 0.05330925443939977,
+          "Image Processing Utility": 0.046151748257922495,
+          "Numeric Utility": 0.0058451962191920035,
+          "Cryptographic Utility": 0.0038124854191346038,
+          "WebAssembly Support Tester": 0.0011380558793425133,
+          "Grammar Utility": 0.0003398825673061076,
+          "JavaScript Carrier": 8.022710870656647e-5,
+          "Game": 4.5964782287779586e-7,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 311415,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-lite-1/unobfuscated/cn-lite-1.v8",
+      "liftoff_size": 537876,
+      "turbofan_size": 218576
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da01ba64107c5103d83"
+    },
+    "name": "pong",
+    "file": "pong/unobfuscated/pong.wasm",
+    "category": "games",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Other Applications": 0.5898034572601318,
+          "Game": 0.20737117528915405,
+          "Image Processing Utility": 0.13218234479427338,
+          "Grammar Utility": 0.0581880621612072,
+          "Compression Utility": 0.005312502849847078,
+          "Cryptographic Utility": 0.0035868030972778797,
+          "Auxiliary Utility": 0.003350165206938982,
+          "JavaScript Carrier": 0.00013660435797646642,
+          "Numeric Utility": 5.609328582067974e-5,
+          "WebAssembly Support Tester": 1.27080993479467e-5,
+          "Cryptominer": 2.5430063388398594e-8,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.4,
+          "Image Processing Utility": 0.2,
+          "Game": 0.16,
+          "Auxiliary Utility": 0.09,
+          "Cryptographic Utility": 0.08,
+          "Compression Utility": 0.03,
+          "Grammar Utility": 0.03,
+          "Cryptominer": 0.01,
+          "JavaScript Carrier": 0,
+          "Numeric Utility": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.32855700099542356,
+          "Cryptographic Utility": 0.16867380983719832,
+          "Other Applications": 0.14973837567111906,
+          "Cryptominer": 0.14945201220332124,
+          "Image Processing Utility": 0.0511683040623227,
+          "Game": 0.044554923088356596,
+          "Numeric Utility": 0.04076802586985733,
+          "WebAssembly Support Tester": 0.021337401155947976,
+          "Compression Utility": 0.020238460947876406,
+          "JavaScript Carrier": 0.015153687390190835,
+          "Grammar Utility": 0.0103579987783858,
+          "code": 200
+        },
+        "naive": {
+          "Auxiliary Utility": 0.2939969517896877,
+          "Numeric Utility": 0.23541269158623765,
+          "Image Processing Utility": 0.22178926244417332,
+          "Cryptographic Utility": 0.09023310377265792,
+          "Other Applications": 0.053787289340954614,
+          "Grammar Utility": 0.04348293999946217,
+          "WebAssembly Support Tester": 0.030693975715103322,
+          "JavaScript Carrier": 0.014770595594323114,
+          "Compression Utility": 0.012757846390922771,
+          "Cryptominer": 0.003073931027840541,
+          "Game": 1.4123386368034571e-6,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 891462,
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "v8": {
+      "file": "/app/binaries/pong/unobfuscated/pong.v8",
+      "liftoff_size": 530608,
+      "turbofan_size": 466988
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499d9f1ba64107c5103d81"
+    },
+    "name": "breakout",
+    "file": "breakout/unobfuscated/breakout.wasm",
+    "category": "games",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Auxiliary Utility": 0.9447428584098816,
+          "Image Processing Utility": 0.04863838106393814,
+          "Other Applications": 0.003245084546506405,
+          "Game": 0.002571986522525549,
+          "Compression Utility": 0.00044703116873279214,
+          "Cryptominer": 0.0002044218563241884,
+          "Grammar Utility": 5.5942880862858146e-5,
+          "Cryptographic Utility": 4.1773804696276784e-5,
+          "JavaScript Carrier": 1.964804505405482e-5,
+          "WebAssembly Support Tester": 1.7474616470281035e-5,
+          "Numeric Utility": 1.5424942830577493e-5,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.34,
+          "Image Processing Utility": 0.22,
+          "Auxiliary Utility": 0.16,
+          "Game": 0.14,
+          "Cryptographic Utility": 0.07,
+          "Cryptominer": 0.03,
+          "Grammar Utility": 0.02,
+          "Compression Utility": 0.02,
+          "Numeric Utility": 0,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.27917403283658315,
+          "Cryptographic Utility": 0.1738657893294795,
+          "Cryptominer": 0.1457314731594582,
+          "Other Applications": 0.13471777757345035,
+          "Numeric Utility": 0.11345138866573928,
+          "Image Processing Utility": 0.047922623138760556,
+          "Game": 0.04240724451409341,
+          "WebAssembly Support Tester": 0.021057535804920438,
+          "Compression Utility": 0.016887363963960414,
+          "JavaScript Carrier": 0.015060734559856275,
+          "Grammar Utility": 0.009724036453698633,
+          "code": 200
+        },
+        "naive": {
+          "Image Processing Utility": 0.39402368506270796,
+          "Auxiliary Utility": 0.2071785076041469,
+          "Numeric Utility": 0.17381438700209662,
+          "Other Applications": 0.12266788200933235,
+          "Cryptographic Utility": 0.03410171836427162,
+          "Compression Utility": 0.022847940843368074,
+          "Grammar Utility": 0.0215757626279046,
+          "WebAssembly Support Tester": 0.016897948620248956,
+          "JavaScript Carrier": 0.005151107893054456,
+          "Cryptominer": 0.0017381346507856082,
+          "Game": 2.9253220828338404e-6,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 678507,
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 15,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 8,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 51
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "v8": {
+      "file": "/app/binaries/breakout/unobfuscated/breakout.v8",
+      "liftoff_size": 199608,
+      "turbofan_size": 178932
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499d9e1ba64107c5103d7d"
+    },
+    "name": "needleman_wunsch",
+    "file": "needleman_wunsch/unobfuscated/needleman_wunsch.wasm",
+    "category": "utilities",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.9081031084060669,
+          "Auxiliary Utility": 0.07406655699014664,
+          "Compression Utility": 0.015799203887581825,
+          "Numeric Utility": 0.001831071451306343,
+          "Cryptographic Utility": 8.541657734895125e-5,
+          "Grammar Utility": 7.876301242504269e-5,
+          "Other Applications": 1.7566460883244872e-5,
+          "JavaScript Carrier": 1.3575408956967294e-5,
+          "Image Processing Utility": 2.828741571647697e-6,
+          "WebAssembly Support Tester": 1.97652275346627e-6,
+          "Cryptominer": 2.2265025378942482e-8,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.28,
+          "Other Applications": 0.22,
+          "Cryptominer": 0.15,
+          "Image Processing Utility": 0.15,
+          "Cryptographic Utility": 0.09,
+          "Game": 0.06,
+          "Compression Utility": 0.03,
+          "Numeric Utility": 0.02,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.2325224079939634,
+          "Other Applications": 0.1853284610340686,
+          "Numeric Utility": 0.1281921034799967,
+          "Cryptominer": 0.10191636009328732,
+          "Auxiliary Utility": 0.09487717047831795,
+          "Game": 0.08320168076611452,
+          "Image Processing Utility": 0.07389448472388514,
+          "WebAssembly Support Tester": 0.039089701954888194,
+          "JavaScript Carrier": 0.028567483182169503,
+          "Grammar Utility": 0.01808734889495842,
+          "Compression Utility": 0.014322797398350231,
+          "code": 200
+        },
+        "naive": {
+          "Other Applications": 0.4205829747718908,
+          "Auxiliary Utility": 0.29578283682364825,
+          "Cryptominer": 0.13319095771077058,
+          "Image Processing Utility": 0.1178285259186871,
+          "Compression Utility": 0.026218190859947837,
+          "Cryptographic Utility": 0.002682892962122641,
+          "Numeric Utility": 0.0025869258825928195,
+          "Grammar Utility": 0.0005486566568273927,
+          "WebAssembly Support Tester": 0.0004410834755351378,
+          "JavaScript Carrier": 0.00012878364803528918,
+          "Game": 8.171289942175504e-6,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 187347,
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "v8": {
+      "file": "/app/binaries/needleman_wunsch/unobfuscated/needleman_wunsch.v8",
+      "liftoff_size": 99144,
+      "turbofan_size": 99144
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499daf1ba64107c5103d9d"
+    },
+    "name": "cn-lite-2",
+    "file": "cn-lite-2/unobfuscated/cn-lite-2.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 50, 107, 164, 223, 280, 338, 395, 452, 508, 564, 621, 678,
+        736, 792, 849, 906, 963, 1021, 1078, 1135, 1192, 1249, 1305, 1362, 1419,
+        1475, 1532, 1589, 1647, 1702, 1758, 1815, 1872, 1929, 1986, 2043, 2099,
+        2156, 2213, 2267, 2324, 2380, 2438, 2495, 2552, 2608, 2664, 2719, 2776,
+        2834, 2891, 2947, 3004, 3061, 3118, 3174, 3230, 3285, 3342, 3399, 3455,
+        3512, 3568, 3625, 3682, 3740, 3796, 3853, 3910, 3967, 4023, 4081, 4138,
+        4195, 4251, 4307, 4364, 4421, 4478, 4534, 4591, 4648, 4705, 4761, 4818,
+        4875, 4932, 4987, 5044, 5101, 5157, 5214, 5271, 5329, 5385, 5442
+      ],
+      "tth": 4120
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.9930391907691956,
+          "Cryptographic Utility": 0.0064150867983698845,
+          "Cryptominer": 0.00046979228500276804,
+          "JavaScript Carrier": 5.0156402721768245e-5,
+          "Compression Utility": 1.1054284186684527e-5,
+          "Grammar Utility": 7.56078725316911e-6,
+          "WebAssembly Support Tester": 2.9947741495561786e-6,
+          "Image Processing Utility": 1.8530449779063929e-6,
+          "Other Applications": 1.423595904270769e-6,
+          "Auxiliary Utility": 5.007204890716821e-7,
+          "Numeric Utility": 4.4568736257133423e-7,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.26,
+          "Other Applications": 0.21,
+          "Cryptographic Utility": 0.16,
+          "Cryptominer": 0.16,
+          "Image Processing Utility": 0.12,
+          "Compression Utility": 0.04,
+          "Game": 0.03,
+          "Grammar Utility": 0.01,
+          "Numeric Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.22209111214011293,
+          "Other Applications": 0.16551474601058275,
+          "Auxiliary Utility": 0.1537760764454544,
+          "Cryptominer": 0.12219818368130426,
+          "Numeric Utility": 0.11773167224180826,
+          "Game": 0.06788265880102529,
+          "Image Processing Utility": 0.06499402518789126,
+          "WebAssembly Support Tester": 0.032438342933466535,
+          "JavaScript Carrier": 0.023581528936627037,
+          "Grammar Utility": 0.01526582377689945,
+          "Compression Utility": 0.014525829844827757,
+          "code": 200
+        },
+        "naive": {
+          "Auxiliary Utility": 0.2912815475960812,
+          "Other Applications": 0.2658320921075613,
+          "Cryptominer": 0.21843503002670603,
+          "Compression Utility": 0.12486389647373285,
+          "Image Processing Utility": 0.09703196273451771,
+          "Numeric Utility": 0.0010683547640171456,
+          "Cryptographic Utility": 0.0010090072272298427,
+          "WebAssembly Support Tester": 0.0003352642950653,
+          "Grammar Utility": 0.00012841437787925784,
+          "JavaScript Carrier": 1.2230481208059533e-5,
+          "Game": 2.1999160012278627e-6,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 320989,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-lite-2/unobfuscated/cn-lite-2.v8",
+      "liftoff_size": 537864,
+      "turbofan_size": 205072
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499dac1ba64107c5103d99"
+    },
+    "name": "cn-0",
+    "file": "cn-0/unobfuscated/cn-0.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 28, 63, 99, 134, 169, 204, 239, 275, 310, 345, 381, 416,
+        451, 486, 522, 558, 594, 629, 664, 699, 734, 771, 807, 842, 877, 912,
+        947, 982, 1018, 1053, 1090, 1125, 1160, 1194, 1229, 1264, 1301, 1336,
+        1372, 1407, 1442, 1477, 1512, 1549, 1583, 1619, 1654, 1689, 1725, 1760,
+        1796, 1832, 1867, 1902, 1937, 1973, 2009, 2044, 2079, 2114, 2149, 2186,
+        2221, 2256, 2291, 2326, 2361, 2397, 2432, 2467, 2502, 2537, 2573, 2609,
+        2644, 2680, 2715, 2750, 2785, 2821, 2855, 2889, 2924, 2959, 2994, 3029,
+        3064, 3100, 3136, 3171, 3206, 3241, 3276, 3311, 3346, 3382
+      ],
+      "tth": 4210
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Cryptographic Utility": 0.9481756687164307,
+          "Game": 0.044508274644613266,
+          "Cryptominer": 0.006956309080123901,
+          "Other Applications": 0.0002575737307779491,
+          "Image Processing Utility": 4.644605360226706e-5,
+          "JavaScript Carrier": 3.0115730623947456e-5,
+          "WebAssembly Support Tester": 1.519523448223481e-5,
+          "Grammar Utility": 9.55785799305886e-6,
+          "Compression Utility": 7.121099088180927e-7,
+          "Numeric Utility": 1.163547764804207e-7,
+          "Auxiliary Utility": 6.698306265207066e-8,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.24,
+          "Other Applications": 0.23,
+          "Cryptographic Utility": 0.15,
+          "Cryptominer": 0.15,
+          "Image Processing Utility": 0.12,
+          "Game": 0.04,
+          "Compression Utility": 0.04,
+          "Numeric Utility": 0.02,
+          "Grammar Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.22251886187775868,
+          "Other Applications": 0.16641208944034544,
+          "Auxiliary Utility": 0.14855305346668102,
+          "Numeric Utility": 0.12121297903394912,
+          "Cryptominer": 0.12068514278172292,
+          "Game": 0.0686901076388289,
+          "Image Processing Utility": 0.0654214291983159,
+          "WebAssembly Support Tester": 0.032786637555572526,
+          "JavaScript Carrier": 0.02384391425059645,
+          "Grammar Utility": 0.015386664301105296,
+          "Compression Utility": 0.014489120455123725,
+          "code": 200
+        },
+        "naive": {
+          "Image Processing Utility": 0.23352307328873975,
+          "Other Applications": 0.22649413162814752,
+          "Auxiliary Utility": 0.18289822289533295,
+          "Cryptominer": 0.17718467610704194,
+          "Compression Utility": 0.17517067427592428,
+          "Numeric Utility": 0.002695779621808123,
+          "WebAssembly Support Tester": 0.001122807187492236,
+          "Grammar Utility": 0.000387502490878038,
+          "JavaScript Carrier": 0.00034070838159751704,
+          "Cryptographic Utility": 0.0001660996452487978,
+          "Game": 1.6324477788722653e-5,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 310503,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 15,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 2,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 57
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-0/unobfuscated/cn-0.v8",
+      "liftoff_size": 537876,
+      "turbofan_size": 211016
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499d9a1ba64107c5103d75"
+    },
+    "name": "smith_waterman",
+    "file": "smith_waterman/unobfuscated/smith_waterman.wasm",
+    "category": "utilities",
+    "code": 0,
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.7157078385353088,
+          "Auxiliary Utility": 0.18072178959846497,
+          "Compression Utility": 0.09060518443584442,
+          "Numeric Utility": 0.011818339116871357,
+          "Other Applications": 0.0008369694696739316,
+          "Grammar Utility": 0.00023666844936087728,
+          "JavaScript Carrier": 3.8308782677631825e-5,
+          "Image Processing Utility": 1.783740663086064e-5,
+          "WebAssembly Support Tester": 1.4821304830547888e-5,
+          "Cryptographic Utility": 2.1023045064794132e-6,
+          "Cryptominer": 9.033188774765222e-8,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.28,
+          "Other Applications": 0.21,
+          "Image Processing Utility": 0.15,
+          "Cryptominer": 0.14,
+          "Cryptographic Utility": 0.1,
+          "Game": 0.06,
+          "Compression Utility": 0.05,
+          "Numeric Utility": 0.01,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.23217799286648916,
+          "Other Applications": 0.1821425572804626,
+          "Numeric Utility": 0.12255585647609209,
+          "Cryptominer": 0.106502087474037,
+          "Auxiliary Utility": 0.10621096520794872,
+          "Game": 0.08036218609827263,
+          "Image Processing Utility": 0.07245443632481721,
+          "WebAssembly Support Tester": 0.03788369187091077,
+          "JavaScript Carrier": 0.02765809919596183,
+          "Grammar Utility": 0.01764083399458929,
+          "Compression Utility": 0.01441129321041878,
+          "code": 200
+        },
+        "naive": {
+          "Image Processing Utility": 0.31571586633658255,
+          "Cryptominer": 0.22359628186209402,
+          "Auxiliary Utility": 0.19343245983550503,
+          "Other Applications": 0.17000071018453747,
+          "Compression Utility": 0.09330804387672141,
+          "Numeric Utility": 0.002361927658573918,
+          "WebAssembly Support Tester": 0.0005241938022320275,
+          "Cryptographic Utility": 0.00046614868538120735,
+          "Grammar Utility": 0.00025468445609926765,
+          "JavaScript Carrier": 0.00022391793940149156,
+          "Game": 0.00011576536287170987,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 212140,
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "v8": {
+      "file": "/app/binaries/smith_waterman/unobfuscated/smith_waterman.v8",
+      "liftoff_size": 173844,
+      "turbofan_size": 173844
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da91ba64107c5103d93"
+    },
+    "name": "cn-1",
+    "file": "cn-1/unobfuscated/cn-1.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 28, 64, 100, 133, 167, 199, 236, 271, 307, 343, 377, 413,
+        449, 485, 521, 556, 592, 628, 662, 698, 734, 770, 805, 841, 876, 910,
+        947, 983, 1018, 1052, 1088, 1122, 1159, 1195, 1230, 1266, 1300, 1336,
+        1371, 1407, 1441, 1477, 1514, 1549, 1584, 1619, 1654, 1690, 1725, 1760,
+        1796, 1832, 1869, 1907, 1942, 1978, 2013, 2049, 2084, 2121, 2156, 2192,
+        2229, 2264, 2300, 2335, 2371, 2407, 2442, 2478, 2514, 2551, 2586, 2623,
+        2659, 2695, 2731, 2767, 2803, 2840, 2876, 2912, 2949, 2985, 3021, 3057,
+        3094, 3130, 3166, 3202, 3238, 3274, 3312, 3348, 3384, 3420
+      ],
+      "tth": 4230
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Cryptographic Utility": 0.9179083108901978,
+          "Game": 0.06992201507091522,
+          "Cryptominer": 0.01087422389537096,
+          "Other Applications": 0.0011914942879229784,
+          "Image Processing Utility": 3.876218033838086e-5,
+          "JavaScript Carrier": 3.2948435546131805e-5,
+          "WebAssembly Support Tester": 1.8158581951865926e-5,
+          "Grammar Utility": 1.2740277270495426e-5,
+          "Compression Utility": 9.192457923745678e-7,
+          "Numeric Utility": 2.1864819643724331e-7,
+          "Auxiliary Utility": 2.1389897142398695e-7,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.25,
+          "Other Applications": 0.25,
+          "Cryptographic Utility": 0.17,
+          "Cryptominer": 0.12,
+          "Image Processing Utility": 0.11,
+          "Compression Utility": 0.05,
+          "Game": 0.04,
+          "Grammar Utility": 0.01,
+          "Numeric Utility": 0,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.22217552646694777,
+          "Other Applications": 0.16610596129647606,
+          "Auxiliary Utility": 0.1485191283691347,
+          "Numeric Utility": 0.12239471251805101,
+          "Cryptominer": 0.12065456791581962,
+          "Game": 0.0685280595787083,
+          "Image Processing Utility": 0.0653007894377598,
+          "WebAssembly Support Tester": 0.03271242503477299,
+          "JavaScript Carrier": 0.023789289948611,
+          "Grammar Utility": 0.015340121697248734,
+          "Compression Utility": 0.014479417736469906,
+          "code": 200
+        },
+        "naive": {
+          "Other Applications": 0.6373536089460401,
+          "Auxiliary Utility": 0.22101812883914987,
+          "Cryptominer": 0.12723226587500713,
+          "Image Processing Utility": 0.007327688313609761,
+          "Compression Utility": 0.004837138454560624,
+          "Cryptographic Utility": 0.0010856752396782262,
+          "Game": 0.0008208714897043721,
+          "Numeric Utility": 0.00015253567853942325,
+          "Grammar Utility": 0.00012176521360397626,
+          "WebAssembly Support Tester": 4.907067247276081e-5,
+          "JavaScript Carrier": 1.2512776337094355e-6,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 311420,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-1/unobfuscated/cn-1.v8",
+      "liftoff_size": 513992,
+      "turbofan_size": 200504
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499d9d1ba64107c5103d7b"
+    },
+    "name": "lcs",
+    "file": "lcs/unobfuscated/lcs.wasm",
+    "category": "utilities",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.9987719655036926,
+          "Cryptographic Utility": 0.000996735179796815,
+          "Auxiliary Utility": 0.00013820694584865123,
+          "Compression Utility": 6.981480692047626e-5,
+          "Grammar Utility": 9.238464372174349e-6,
+          "Image Processing Utility": 4.4050148062524386e-6,
+          "Other Applications": 3.56857231054164e-6,
+          "Numeric Utility": 3.547064125086763e-6,
+          "JavaScript Carrier": 2.2673145849694265e-6,
+          "WebAssembly Support Tester": 2.3696928508343262e-7,
+          "Cryptominer": 4.020377275537612e-8,
+          "code": 200
+        },
+        "random": {
+          "Cryptographic Utility": 0.26,
+          "Other Applications": 0.2,
+          "Cryptominer": 0.19,
+          "Auxiliary Utility": 0.15,
+          "Numeric Utility": 0.07,
+          "Game": 0.06,
+          "Compression Utility": 0.05,
+          "Image Processing Utility": 0.02,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.2311912946893595,
+          "Other Applications": 0.2040696984885597,
+          "Numeric Utility": 0.13323439671106116,
+          "Game": 0.1001080343315875,
+          "Image Processing Utility": 0.08203728847926967,
+          "Cryptominer": 0.08197650049926683,
+          "Auxiliary Utility": 0.05252031078840509,
+          "WebAssembly Support Tester": 0.04618655993597609,
+          "JavaScript Carrier": 0.03392444438229579,
+          "Grammar Utility": 0.020893391744132662,
+          "Compression Utility": 0.01385807995008598,
+          "code": 200
+        },
+        "naive": {
+          "Compression Utility": 0.26907451830063983,
+          "Other Applications": 0.2474723750452033,
+          "Auxiliary Utility": 0.1985563504258863,
+          "Image Processing Utility": 0.19181286282857538,
+          "Cryptominer": 0.09065594208808296,
+          "Numeric Utility": 0.0010365279367507564,
+          "WebAssembly Support Tester": 0.00043187676850360617,
+          "Game": 0.00042165602113339935,
+          "Cryptographic Utility": 0.0002992895774051096,
+          "Grammar Utility": 0.0001760018719442136,
+          "JavaScript Carrier": 6.259913587518848e-5,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 55407,
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 7,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 52
+      }
+    },
+    "v8": {
+      "file": "/app/binaries/lcs/unobfuscated/lcs.v8",
+      "liftoff_size": 122540,
+      "turbofan_size": 122540
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da61ba64107c5103d8d"
+    },
+    "name": "cn-rwz",
+    "file": "cn-rwz/unobfuscated/cn-rwz.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 13, 49, 86, 122, 158, 194, 230, 266, 301, 337, 373, 408,
+        444, 480, 516, 552, 588, 624, 659, 695, 731, 767, 803, 839, 875, 910,
+        946, 983, 1018, 1054, 1090, 1126, 1162, 1199, 1235, 1271, 1306, 1342,
+        1378, 1414, 1451, 1486, 1523, 1560, 1596, 1632, 1668, 1704, 1741, 1776,
+        1812, 1848, 1884, 1922, 1958, 1994, 2029, 2065, 2101, 2138, 2174, 2210,
+        2246, 2282, 2318, 2354, 2390, 2428, 2463, 2499, 2535, 2571, 2607, 2644,
+        2680, 2716, 2753, 2788, 2824, 2860, 2896, 2932, 2968, 3004, 3040, 3077,
+        3113, 3149, 3185, 3221, 3257, 3293, 3329, 3365, 3400, 3437
+      ],
+      "tth": 4550
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Cryptominer": 0.706261157989502,
+          "Cryptographic Utility": 0.22180870175361633,
+          "Game": 0.05539273843169212,
+          "Auxiliary Utility": 0.011591748334467411,
+          "Numeric Utility": 0.00386119750328362,
+          "Other Applications": 0.00037539235199801624,
+          "WebAssembly Support Tester": 0.0003472491807769984,
+          "JavaScript Carrier": 0.0002937882672995329,
+          "Compression Utility": 3.993055361206643e-5,
+          "Grammar Utility": 2.8128082703915425e-5,
+          "Image Processing Utility": 6.382256145798237e-8,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.28,
+          "Auxiliary Utility": 0.2,
+          "Cryptographic Utility": 0.15,
+          "Cryptominer": 0.14,
+          "Image Processing Utility": 0.13,
+          "Game": 0.05,
+          "Compression Utility": 0.03,
+          "Numeric Utility": 0.02,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.21881678623983908,
+          "Cryptographic Utility": 0.21708554443236366,
+          "Other Applications": 0.1578878851837091,
+          "Cryptominer": 0.13760519584827668,
+          "Numeric Utility": 0.07014749870147745,
+          "Game": 0.06033807392810552,
+          "Image Processing Utility": 0.05851036952151407,
+          "WebAssembly Support Tester": 0.029178683604392314,
+          "JavaScript Carrier": 0.021120011362053055,
+          "Compression Utility": 0.014986478189382034,
+          "Grammar Utility": 0.01432347298888696,
+          "code": 200
+        },
+        "naive": {
+          "Game": 0.7390558496083641,
+          "Other Applications": 0.09167915551207531,
+          "Cryptominer": 0.09075582839540987,
+          "Auxiliary Utility": 0.036970855370923816,
+          "Compression Utility": 0.024145620603858328,
+          "Image Processing Utility": 0.01738391640258328,
+          "Numeric Utility": 2.9888635637152663e-6,
+          "Cryptographic Utility": 2.9776991191699086e-6,
+          "WebAssembly Support Tester": 1.421426581561585e-6,
+          "Grammar Utility": 1.3348332946734335e-6,
+          "JavaScript Carrier": 5.1284226353992086e-8,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 434719,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-rwz/unobfuscated/cn-rwz.v8",
+      "liftoff_size": 513992,
+      "turbofan_size": 200148
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499dab1ba64107c5103d97"
+    },
+    "name": "cn-2",
+    "file": "cn-2/unobfuscated/cn-2.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 20, 49, 79, 108, 138, 167, 198, 226, 256, 284, 314, 343,
+        372, 401, 429, 458, 487, 517, 546, 575, 606, 635, 666, 695, 726, 755,
+        785, 815, 844, 874, 904, 933, 964, 993, 1024, 1053, 1084, 1113, 1144,
+        1173, 1204, 1232, 1263, 1291, 1322, 1351, 1382, 1411, 1442, 1471, 1502,
+        1531, 1561, 1590, 1620, 1649, 1679, 1708, 1737, 1766, 1796, 1826, 1856,
+        1886, 1915, 1944, 1975, 2004, 2034, 2064, 2094, 2123, 2154, 2183, 2214,
+        2243, 2274, 2303, 2334, 2363, 2394, 2423, 2454, 2483, 2514, 2543, 2574,
+        2603, 2634, 2663, 2694, 2723, 2753, 2782, 2813, 2841
+      ],
+      "tth": 4350
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.9931343793869019,
+          "Cryptographic Utility": 0.006326604634523392,
+          "Cryptominer": 0.00046343094436451793,
+          "JavaScript Carrier": 4.9805563321569934e-5,
+          "Compression Utility": 1.1069217180192936e-5,
+          "Grammar Utility": 7.506804195145378e-6,
+          "WebAssembly Support Tester": 2.965327212223201e-6,
+          "Image Processing Utility": 1.8282480596099049e-6,
+          "Other Applications": 1.4000081591802882e-6,
+          "Auxiliary Utility": 5.049622586739133e-7,
+          "Numeric Utility": 4.4638858298640116e-7,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.29,
+          "Other Applications": 0.22,
+          "Cryptominer": 0.15,
+          "Cryptographic Utility": 0.14,
+          "Image Processing Utility": 0.1,
+          "Game": 0.04,
+          "Compression Utility": 0.04,
+          "Grammar Utility": 0.01,
+          "Numeric Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.222090866566259,
+          "Other Applications": 0.16551426581063947,
+          "Auxiliary Utility": 0.15377886693244694,
+          "Cryptominer": 0.12219898415160253,
+          "Numeric Utility": 0.11772983736038944,
+          "Game": 0.06788223075586437,
+          "Image Processing Utility": 0.06499379284301242,
+          "WebAssembly Support Tester": 0.03243815797340764,
+          "JavaScript Carrier": 0.023581389664875448,
+          "Grammar Utility": 0.015265759296631778,
+          "Compression Utility": 0.014525848644871152,
+          "code": 200
+        },
+        "naive": {
+          "Other Applications": 0.6093261521693252,
+          "Auxiliary Utility": 0.26527769868500045,
+          "Cryptominer": 0.08673322428511947,
+          "Image Processing Utility": 0.027269364727123022,
+          "Compression Utility": 0.009051237915261313,
+          "Cryptographic Utility": 0.0014051556164306487,
+          "Numeric Utility": 0.000426570542548631,
+          "Grammar Utility": 0.00028948570985433587,
+          "WebAssembly Support Tester": 0.0001251763517119539,
+          "Game": 8.481901842962277e-5,
+          "JavaScript Carrier": 1.1114979195365568e-5,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 320994,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 15,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 2,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 57
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-2/unobfuscated/cn-2.v8",
+      "liftoff_size": 875336,
+      "turbofan_size": 349728
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499db11ba64107c5103da1"
+    },
+    "name": "cn-lite-0",
+    "file": "cn-lite-0/unobfuscated/cn-lite-0.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 62, 134, 206, 279, 350, 421, 492, 562, 634, 706, 777, 849,
+        921, 993, 1064, 1136, 1207, 1278, 1348, 1420, 1492, 1563, 1634, 1707,
+        1780, 1851, 1923, 1992, 2062, 2133, 2205, 2275, 2347, 2418, 2488, 2560,
+        2633, 2703, 2775, 2848, 2919, 2991, 3063, 3133, 3206, 3277, 3349, 3420,
+        3493, 3564, 3636, 3707, 3779, 3850, 3922, 3993, 4065, 4137, 4208, 4281,
+        4352, 4423, 4495, 4565, 4638, 4710, 4782, 4853, 4924, 4995, 5068, 5139,
+        5211, 5283, 5355, 5427, 5498, 5569, 5641, 5712, 5784, 5854, 5926, 5998,
+        6070, 6141, 6214, 6285, 6357, 6430, 6500, 6571, 6644, 6715, 6788, 6860
+      ],
+      "tth": 4090
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Cryptographic Utility": 0.945207417011261,
+          "Game": 0.04702041298151016,
+          "Cryptominer": 0.0073588574305176735,
+          "Other Applications": 0.0003113547863904387,
+          "Image Processing Utility": 4.526590055320412e-5,
+          "JavaScript Carrier": 3.0301387596409768e-5,
+          "WebAssembly Support Tester": 1.546144630992785e-5,
+          "Grammar Utility": 9.852357834461145e-6,
+          "Compression Utility": 7.295703881027293e-7,
+          "Numeric Utility": 1.2476574795527995e-7,
+          "Auxiliary Utility": 7.67273746760111e-8,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.26,
+          "Other Applications": 0.24,
+          "Cryptographic Utility": 0.15,
+          "Cryptominer": 0.13,
+          "Image Processing Utility": 0.12,
+          "Game": 0.04,
+          "Compression Utility": 0.04,
+          "Grammar Utility": 0.01,
+          "Numeric Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.2225171667927249,
+          "Other Applications": 0.16641294582699498,
+          "Auxiliary Utility": 0.14852975607151148,
+          "Numeric Utility": 0.12124040518097629,
+          "Cryptominer": 0.12067803179326216,
+          "Game": 0.06869203754292376,
+          "Image Processing Utility": 0.06542212573152699,
+          "WebAssembly Support Tester": 0.03278742495274751,
+          "JavaScript Carrier": 0.023844520663269784,
+          "Grammar Utility": 0.015386724067473604,
+          "Compression Utility": 0.014488861376588544,
+          "code": 200
+        },
+        "naive": {
+          "Other Applications": 0.35141807413863047,
+          "Auxiliary Utility": 0.2875380996177639,
+          "Cryptominer": 0.26475350527246677,
+          "Compression Utility": 0.06527789156286239,
+          "Image Processing Utility": 0.022909810142441145,
+          "Game": 0.007445082716082503,
+          "Numeric Utility": 0.00031101892297021044,
+          "WebAssembly Support Tester": 0.0001330180926152615,
+          "Cryptographic Utility": 0.00012029973146614576,
+          "Grammar Utility": 8.509705106364206e-5,
+          "JavaScript Carrier": 8.102751637577875e-6,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 310476,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 15,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 2,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 57
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-lite-0/unobfuscated/cn-lite-0.v8",
+      "liftoff_size": 513992,
+      "turbofan_size": 200720
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da31ba64107c5103d89"
+    },
+    "name": "snake",
+    "file": "snake/unobfuscated/snake.wasm",
+    "category": "games",
+    "code": 0,
+    "wasim": {
+      "result": {
+        "neural": {
+          "Other Applications": 0.5677695274353027,
+          "Game": 0.2902299761772156,
+          "Image Processing Utility": 0.12801407277584076,
+          "Cryptographic Utility": 0.0064205205999314785,
+          "Auxiliary Utility": 0.0031800998840481043,
+          "Cryptominer": 0.002133224857971072,
+          "Compression Utility": 0.0008665661443956196,
+          "Grammar Utility": 0.0007258593686856329,
+          "JavaScript Carrier": 0.000430561340181157,
+          "WebAssembly Support Tester": 0.00015204923693090677,
+          "Numeric Utility": 7.757602725178003e-5,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.3,
+          "Image Processing Utility": 0.25,
+          "Game": 0.16,
+          "Auxiliary Utility": 0.15,
+          "Cryptographic Utility": 0.06,
+          "Cryptominer": 0.03,
+          "Grammar Utility": 0.03,
+          "Compression Utility": 0.02,
+          "JavaScript Carrier": 0,
+          "Numeric Utility": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.27345941164442117,
+          "Cryptographic Utility": 0.17264935140127557,
+          "Cryptominer": 0.1444257704005246,
+          "Other Applications": 0.13330908473265893,
+          "Numeric Utility": 0.12440544795626297,
+          "Image Processing Utility": 0.04749977356911784,
+          "Game": 0.0421031590856349,
+          "WebAssembly Support Tester": 0.020900265910740467,
+          "Compression Utility": 0.016714584381261006,
+          "JavaScript Carrier": 0.014951946859280951,
+          "Grammar Utility": 0.009581204058821546,
+          "code": 200
+        },
+        "naive": {
+          "Auxiliary Utility": 0.3682964706497515,
+          "Image Processing Utility": 0.25115987660125,
+          "Numeric Utility": 0.1728939812468776,
+          "Other Applications": 0.12778320323194092,
+          "Cryptographic Utility": 0.045038156598095506,
+          "Grammar Utility": 0.014871045530607536,
+          "WebAssembly Support Tester": 0.008258617624502704,
+          "Compression Utility": 0.005571247756976661,
+          "JavaScript Carrier": 0.0035149159108235598,
+          "Cryptominer": 0.0025909257186649015,
+          "Game": 2.155913050917419e-5,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 674611,
+    "minos": {
+      "result": 0
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "v8": {
+      "file": "/app/binaries/snake/unobfuscated/snake.v8",
+      "liftoff_size": 249224,
+      "turbofan_size": 238328
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499daa1ba64107c5103d95"
+    },
+    "name": "cn-half",
+    "file": "cn-half/unobfuscated/cn-half.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 32, 72, 110, 147, 187, 224, 264, 303, 342, 381, 421, 459,
+        498, 536, 577, 615, 655, 693, 733, 771, 810, 850, 888, 928, 966, 1006,
+        1046, 1085, 1124, 1163, 1203, 1242, 1280, 1320, 1359, 1398, 1438, 1477,
+        1515, 1555, 1593, 1633, 1672, 1711, 1750, 1789, 1828, 1867, 1905, 1945,
+        1983, 2021, 2060, 2098, 2137, 2175, 2214, 2252, 2290, 2329, 2367, 2406,
+        2444, 2483, 2522, 2562, 2601, 2640, 2679, 2719, 2758, 2797, 2837, 2876,
+        2916, 2956, 2996, 3036, 3074, 3114, 3152, 3192, 3231, 3271, 3310, 3350,
+        3389, 3429, 3468, 3508, 3548, 3588, 3628, 3668, 3708, 3747
+      ],
+      "tth": 4220
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.9930328130722046,
+          "Cryptographic Utility": 0.006420985795557499,
+          "Cryptominer": 0.0004702177830040455,
+          "JavaScript Carrier": 5.0179907702840865e-5,
+          "Compression Utility": 1.1053379239456262e-5,
+          "Grammar Utility": 7.564409770566272e-6,
+          "WebAssembly Support Tester": 2.996743205585517e-6,
+          "Image Processing Utility": 1.8547002582636196e-6,
+          "Other Applications": 1.4251733091441565e-6,
+          "Auxiliary Utility": 5.004441732125997e-7,
+          "Numeric Utility": 4.456445310552226e-7,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.25,
+          "Auxiliary Utility": 0.24,
+          "Cryptographic Utility": 0.18,
+          "Cryptominer": 0.12,
+          "Image Processing Utility": 0.11,
+          "Game": 0.04,
+          "Compression Utility": 0.03,
+          "Numeric Utility": 0.02,
+          "Grammar Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.22209086656155616,
+          "Other Applications": 0.16551426581613748,
+          "Auxiliary Utility": 0.15377886706006663,
+          "Cryptominer": 0.12219898416369343,
+          "Numeric Utility": 0.11772983713507655,
+          "Game": 0.06788223075811098,
+          "Image Processing Utility": 0.06499379284946699,
+          "WebAssembly Support Tester": 0.03243815805314353,
+          "JavaScript Carrier": 0.02358138966019021,
+          "Grammar Utility": 0.015265759297350544,
+          "Compression Utility": 0.014525848645207354,
+          "code": 200
+        },
+        "naive": {
+          "Auxiliary Utility": 0.42501027157822163,
+          "Other Applications": 0.29978045498978184,
+          "Image Processing Utility": 0.2212711659841213,
+          "Compression Utility": 0.017114410203283862,
+          "Cryptominer": 0.015514530198576997,
+          "Numeric Utility": 0.012106160257702878,
+          "Cryptographic Utility": 0.00635110206640869,
+          "Grammar Utility": 0.0014457826061358527,
+          "WebAssembly Support Tester": 0.0012600999207240374,
+          "JavaScript Carrier": 0.00013743445275747943,
+          "Game": 8.587742285304865e-6,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 320994,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-half/unobfuscated/cn-half.v8",
+      "liftoff_size": 537876,
+      "turbofan_size": 218328
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499d991ba64107c5103d73"
+    },
+    "name": "seqtk",
+    "file": "seqtk/unobfuscated/seqtk.wasm",
+    "category": "utilities",
+    "code": 0,
+    "miner_ray": {
+      "result": 0,
+      "error": "MinerRay failed"
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Auxiliary Utility": 0.7801352143287659,
+          "Game": 0.20594577491283417,
+          "Other Applications": 0.009302208200097084,
+          "Numeric Utility": 0.004488248378038406,
+          "Compression Utility": 9.062162280315533e-5,
+          "Grammar Utility": 1.435647027392406e-5,
+          "Cryptographic Utility": 7.460756933141965e-6,
+          "JavaScript Carrier": 6.9978459578123875e-6,
+          "WebAssembly Support Tester": 5.551760750677204e-6,
+          "Cryptominer": 3.547688947946881e-6,
+          "Image Processing Utility": 8.047675947864263e-8,
+          "code": 200
+        },
+        "random": {
+          "Auxiliary Utility": 0.3,
+          "Other Applications": 0.24,
+          "Cryptominer": 0.12,
+          "Cryptographic Utility": 0.11,
+          "Image Processing Utility": 0.11,
+          "Game": 0.06,
+          "Compression Utility": 0.05,
+          "Numeric Utility": 0.01,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.2345206862948792,
+          "Other Applications": 0.18207523568859285,
+          "Auxiliary Utility": 0.11799808973320026,
+          "Cryptominer": 0.11094314989029971,
+          "Numeric Utility": 0.10576662117581945,
+          "Game": 0.07935190904064081,
+          "Image Processing Utility": 0.07222461128702994,
+          "WebAssembly Support Tester": 0.037494945200296344,
+          "JavaScript Carrier": 0.027353600769603838,
+          "Grammar Utility": 0.017696469621895142,
+          "Compression Utility": 0.014574681297742458,
+          "code": 200
+        },
+        "naive": {
+          "Auxiliary Utility": 0.36467374419515897,
+          "Other Applications": 0.2782508727622382,
+          "Cryptominer": 0.27276982340061917,
+          "Image Processing Utility": 0.04057881782887207,
+          "Compression Utility": 0.04009653570810861,
+          "Numeric Utility": 0.0018146734901025394,
+          "Cryptographic Utility": 0.0005979454793888764,
+          "WebAssembly Support Tester": 0.000506052545972245,
+          "JavaScript Carrier": 0.00048647783159210054,
+          "Grammar Utility": 0.00022387505552697417,
+          "Game": 1.1817024202092065e-6,
+          "code": 200
+        }
+      }
+    },
+    "minos": {
+      "result": 0
+    },
+    "file_size": 232396,
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "v8": {
+      "file": "/app/binaries/seqtk/unobfuscated/seqtk.v8",
+      "liftoff_size": 104564,
+      "turbofan_size": 104564
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499db01ba64107c5103d9f"
+    },
+    "name": "cn-pico-trtl",
+    "file": "cn-pico-trtl/unobfuscated/cn-pico-trtl.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 215, 451, 676, 902, 1133, 1366, 1603, 1839, 2075, 2308,
+        2545, 2781, 3014, 3250, 3486, 3720, 3956, 4192, 4429, 4663, 4894, 5130,
+        5364, 5600, 5835, 6070, 6306, 6539, 6769, 6998, 7229, 7465, 7697, 7931,
+        8164, 8401, 8638, 8872, 9109, 9344, 9579, 9816, 10052, 10287, 10523,
+        10756, 10993, 11228, 11465, 11701, 11936, 12174, 12409, 12645, 12880,
+        13117, 13352, 13585, 13819, 14056, 14292, 14526, 14761, 14995, 15226,
+        15461, 15697, 15934, 16168, 16403, 16640, 16875, 17112, 17347, 17584,
+        17818, 18054, 18292, 18529, 18766, 19004, 19239, 19476, 19712, 19948,
+        20184, 20420, 20659, 20894, 21130, 21367, 21604, 21842, 22078, 22312,
+        22549
+      ],
+      "tth": 4050
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Game": 0.992976188659668,
+          "Cryptographic Utility": 0.0064736343920230865,
+          "Cryptominer": 0.00047399805043824017,
+          "JavaScript Carrier": 5.0387319788569584e-5,
+          "Compression Utility": 1.1044646271329839e-5,
+          "Grammar Utility": 7.596349860250484e-6,
+          "WebAssembly Support Tester": 3.014202320628101e-6,
+          "Image Processing Utility": 1.8694469190450036e-6,
+          "Other Applications": 1.439233642486215e-6,
+          "Auxiliary Utility": 4.979743835065165e-7,
+          "Numeric Utility": 4.4523511633087764e-7,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.27,
+          "Auxiliary Utility": 0.22,
+          "Cryptographic Utility": 0.16,
+          "Cryptominer": 0.12,
+          "Image Processing Utility": 0.11,
+          "Game": 0.04,
+          "Compression Utility": 0.04,
+          "Numeric Utility": 0.03,
+          "Grammar Utility": 0.01,
+          "JavaScript Carrier": 0,
+          "WebAssembly Support Tester": 0,
+          "code": 200
+        },
+        "svm": {
+          "Cryptographic Utility": 0.22209111162957895,
+          "Other Applications": 0.16551474596598587,
+          "Auxiliary Utility": 0.15377607833801896,
+          "Cryptominer": 0.12219818554454161,
+          "Numeric Utility": 0.11773166984363756,
+          "Game": 0.06788265879013933,
+          "Image Processing Utility": 0.06499402438320862,
+          "WebAssembly Support Tester": 0.03243834295766673,
+          "JavaScript Carrier": 0.023581528947475623,
+          "Grammar Utility": 0.015265823786738969,
+          "Compression Utility": 0.014525829813007702,
+          "code": 200
+        },
+        "naive": {
+          "Cryptominer": 0.3017280142940637,
+          "Other Applications": 0.2700986374294964,
+          "Auxiliary Utility": 0.1874635080388325,
+          "Compression Utility": 0.13378525045291922,
+          "Image Processing Utility": 0.10460811222469586,
+          "Numeric Utility": 0.0011815483033106415,
+          "WebAssembly Support Tester": 0.0005386684132172194,
+          "Grammar Utility": 0.00019929868159451568,
+          "Game": 0.00019322393633487426,
+          "Cryptographic Utility": 0.00015682669343906557,
+          "JavaScript Carrier": 4.691153209583798e-5,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 320988,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 15,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-pico-trtl/unobfuscated/cn-pico-trtl.v8",
+      "liftoff_size": 537864,
+      "turbofan_size": 205768
+    }
+  },
+  {
+    "_id": {
+      "$oid": "64499da71ba64107c5103d8f"
+    },
+    "name": "cn-r",
+    "file": "cn-r/unobfuscated/cn-r.wasm",
+    "category": "miners",
+    "code": 0,
+    "hash_rate": {
+      "hash_count": [
+        0, 0, 0, 0, 0, 12, 25, 37, 51, 63, 75, 90, 102, 115, 129, 142, 155, 169,
+        181, 194, 208, 220, 233, 247, 259, 273, 287, 299, 312, 325, 338, 352,
+        364, 378, 391, 404, 418, 431, 443, 458, 470, 483, 497, 509, 523, 537,
+        549, 563, 576, 588, 603, 615, 628, 642, 655, 668, 682, 694, 707, 721,
+        733, 747, 760, 773, 788, 800, 813, 827, 839, 853, 866, 878, 893, 906,
+        919, 932, 945, 958, 971, 984, 998, 1011, 1025, 1038, 1050, 1064, 1077,
+        1089, 1103, 1116, 1129, 1143, 1155, 1169, 1183, 1195, 1209, 1222, 1234,
+        1247
+      ],
+      "tth": 5201
+    },
+    "wasim": {
+      "result": {
+        "neural": {
+          "Cryptominer": 0.7064048051834106,
+          "Cryptographic Utility": 0.22174108028411865,
+          "Game": 0.05533847585320473,
+          "Auxiliary Utility": 0.011574992910027504,
+          "Numeric Utility": 0.003856849856674671,
+          "Other Applications": 0.0003750662144739181,
+          "WebAssembly Support Tester": 0.0003470529627520591,
+          "JavaScript Carrier": 0.00029362039640545845,
+          "Compression Utility": 3.988519529229961e-5,
+          "Grammar Utility": 2.810352816595696e-5,
+          "Image Processing Utility": 6.377614880648252e-8,
+          "code": 200
+        },
+        "random": {
+          "Other Applications": 0.28,
+          "Auxiliary Utility": 0.24,
+          "Cryptominer": 0.15,
+          "Image Processing Utility": 0.11,
+          "Cryptographic Utility": 0.1,
+          "Game": 0.05,
+          "Compression Utility": 0.05,
+          "Numeric Utility": 0.02,
+          "WebAssembly Support Tester": 0,
+          "JavaScript Carrier": 0,
+          "Grammar Utility": 0,
+          "code": 200
+        },
+        "svm": {
+          "Auxiliary Utility": 0.21881678622076767,
+          "Cryptographic Utility": 0.2170855445122779,
+          "Other Applications": 0.15788788512446772,
+          "Cryptominer": 0.13760519581531633,
+          "Numeric Utility": 0.0701474988344648,
+          "Game": 0.06033807390553325,
+          "Image Processing Utility": 0.058510369502045016,
+          "WebAssembly Support Tester": 0.029178683558942632,
+          "JavaScript Carrier": 0.021120011359050037,
+          "Compression Utility": 0.014986478183518687,
+          "Grammar Utility": 0.01432347298361598,
+          "code": 200
+        },
+        "naive": {
+          "Other Applications": 0.6423913374049782,
+          "Auxiliary Utility": 0.17724628028636255,
+          "Cryptominer": 0.08998584737972523,
+          "Game": 0.044748556648223484,
+          "Image Processing Utility": 0.024556759158453043,
+          "Compression Utility": 0.02018497909571355,
+          "Numeric Utility": 0.0003880811790398539,
+          "Cryptographic Utility": 0.00021241156056153496,
+          "Grammar Utility": 0.00018244220025759477,
+          "WebAssembly Support Tester": 0.00010143037987480011,
+          "JavaScript Carrier": 1.8747068101975045e-6,
+          "code": 200
+        }
+      }
+    },
+    "file_size": 434719,
+    "minos": {
+      "result": 1
+    },
+    "virustotal": {
+      "result": 0,
+      "last_analysis_stats": {
+        "harmless": 0,
+        "type-unsupported": 16,
+        "suspicious": 0,
+        "confirmed-timeout": 0,
+        "timeout": 0,
+        "failure": 0,
+        "malicious": 0,
+        "undetected": 59
+      }
+    },
+    "miner_ray": {
+      "result": 0,
+      "error": "Timeout"
+    },
+    "v8": {
+      "file": "/app/binaries/cn-r/unobfuscated/cn-r.v8",
+      "liftoff_size": 875336,
+      "turbofan_size": 344220
+    }
+  }
+]
