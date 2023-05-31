@@ -59,7 +59,7 @@ def update_document(data):
     result = None
     for collection_name in ['unobfuscated', 'llvm', 'tigress', 'wasm-mutate']:
         collection = db[collection_name]
-        filter_ = {"_id": data["_id"]}
+        filter_ = {"file": data["file"]}
         update_ = {"$set": data}
         result = collection.update_one(filter_, update_)
     return result
