@@ -1,4 +1,4 @@
-# wasm-obf: WebAssembly Obfuscation Experimentation 
+# wasm-obf: WebAssembly obfuscation
 
 
 This repository contains the source code and experimental data derived from research on WebAssembly obfuscation. 
