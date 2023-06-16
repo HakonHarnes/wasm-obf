@@ -1,4 +1,5 @@
 import os
+import time
 
 from termcolor import colored
 from mongodb.utils import get_unoptimized_documents, update_document
@@ -23,13 +24,17 @@ def handle_result(code, document):
 
 
 def optimize_wasm_file(file):
+    start_time = time.time()
     code = os.system(
         f'wasm-opt {file} -O3 -o {file} --enable-reference-types --enable-multivalue --enable-simd')
-    return code
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    return code, elapsed_time
 
 
 def main():
     error_count = 0
+    times = []
 
     documents = get_unoptimized_documents()
     print(colored(f'Optimizing {len(documents)} binaries', 'yellow'))
@@ -37,10 +42,16 @@ def main():
     for i, document in enumerate(documents):
         print_file(i + 1, len(documents), document['file'])
         file_path = os.path.join(binary_path, document['file'])
-        code = optimize_wasm_file(file_path)
+        code, elapsed_time = optimize_wasm_file(file_path)
         handle_result(code, document)
         if code != 0:
             error_count += 1
+
+        times.append(elapsed_time)
+        print(f'Time elapsed: {elapsed_time} seconds')
+        print(f'Average time: {sum(times) / len(times)} seconds')
+        print(f'Min time: {min(times)} seconds')
+        print(f'Max time: {max(times)} seconds')
 
     color = 'green' if error_count == 0 else 'red'
     print(colored(f'\nErrors: {error_count}', color))
