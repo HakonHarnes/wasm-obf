@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   miner-ray:
     build: ./miner-ray
