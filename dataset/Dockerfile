@@ -52,6 +52,10 @@ RUN echo 'int main() { return 0; }' | \
 WORKDIR /app
 COPY requirements.txt ./ 
 COPY tigress.h /usr/local/bin/tigress/3.3.2/tigress.h
-RUN pip install -r requirements.txt
+RUN python -m venv venv && \
+    . venv/bin/activate && \
+    pip install -r requirements.txt
+
 COPY . .
-CMD ["python", "main.py"]
+
+CMD ["venv/bin/python", "main.py"]
