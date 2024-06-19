@@ -25,6 +25,10 @@ RUN apt-get remove -y git cmake build-essential && \
 # Configure app
 WORKDIR /app
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m venv venv && \
+    . venv/bin/activate && \
+    pip install --no-cache-dir -r requirements.txt
+
 COPY . .
-CMD ["python", "main.py"]
+
+CMD ["venv/bin/python", "main.py"]

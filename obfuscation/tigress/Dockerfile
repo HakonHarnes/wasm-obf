@@ -31,6 +31,8 @@ RUN echo 'int main() { return 0; }' | \
 # Configure app
 WORKDIR /app
 COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN python -m venv venv && \
+    . venv/bin/activate && \
+    pip install -r requirements.txt
 COPY main.py .
-CMD ["python", "main.py"]
+CMD ["venv/bin/python", "main.py"]
