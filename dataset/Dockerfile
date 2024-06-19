@@ -1,4 +1,4 @@
-FROM archlinux:base-devel-20230312.0.133040
+FROM archlinux:base-devel
 
 RUN pacman -Syyu vim git nodejs gcc cmake ninja python3 npm python-pip --noconfirm
 
