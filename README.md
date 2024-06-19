@@ -2,6 +2,7 @@
 
 This repository contains the source code and experimental data derived from research on WebAssembly obfuscation.
 It has been developed as a part of my Master's thesis in Computer Science at the Norwegian University of Science and Technology (NTNU).
+The thesis can be found [here](https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/3118533) and the paper can be found [here](https://arxiv.org/abs/2403.15197).
 The experimental data, containing close to 50,000 WebAssembly binaries, can be found under the [releases](https://github.com/HakonHarnes/wasm-obf/releases/tag/v1.0).
 
 ## Structure
